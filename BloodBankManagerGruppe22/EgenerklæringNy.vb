@@ -1,4 +1,5 @@
-﻿Public Class EgenerklæringNy
+﻿'versjon2
+Public Class EgenerklæringNy
     'Bolk 1: Vennligst besvar
     Dim infoBlodgivning As Boolean
     Dim følerFrisk As Boolean
