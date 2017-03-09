@@ -40,9 +40,12 @@ Partial Class Form1
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
+        Me.OmOssToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
         'Label3
@@ -63,7 +66,7 @@ Partial Class Form1
         Me.Panel1.Controls.Add(Me.Label4)
         Me.Panel1.Controls.Add(Me.TextBoxRegPword)
         Me.Panel1.Controls.Add(Me.TextBoxRegUsername)
-        Me.Panel1.Location = New System.Drawing.Point(12, 163)
+        Me.Panel1.Location = New System.Drawing.Point(13, 200)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(200, 168)
         Me.Panel1.TabIndex = 16
@@ -158,7 +161,7 @@ Partial Class Form1
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Comic Sans MS", 40.0!)
         Me.Label6.ForeColor = System.Drawing.Color.Red
-        Me.Label6.Location = New System.Drawing.Point(-5, -2)
+        Me.Label6.Location = New System.Drawing.Point(-4, 35)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(683, 76)
         Me.Label6.TabIndex = 17
@@ -182,7 +185,7 @@ Partial Class Form1
         Me.Panel2.Controls.Add(Me.Label1)
         Me.Panel2.Controls.Add(Me.Label2)
         Me.Panel2.Controls.Add(Me.Button1)
-        Me.Panel2.Location = New System.Drawing.Point(12, 346)
+        Me.Panel2.Location = New System.Drawing.Point(13, 383)
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(200, 173)
         Me.Panel2.TabIndex = 19
@@ -190,7 +193,7 @@ Partial Class Form1
         'PictureBox1
         '
         Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
-        Me.PictureBox1.Location = New System.Drawing.Point(342, 163)
+        Me.PictureBox1.Location = New System.Drawing.Point(343, 200)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(243, 367)
         Me.PictureBox1.TabIndex = 20
@@ -199,7 +202,7 @@ Partial Class Form1
         'TextBox1
         '
         Me.TextBox1.Font = New System.Drawing.Font("Comic Sans MS", 12.0!)
-        Me.TextBox1.Location = New System.Drawing.Point(12, 77)
+        Me.TextBox1.Location = New System.Drawing.Point(13, 114)
         Me.TextBox1.Multiline = True
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(585, 52)
@@ -207,16 +210,34 @@ Partial Class Form1
         Me.TextBox1.Text = "Det tar kun en halv time å gi blod. Den halve literen du gir kan redde tre liv. E" &
     "r du frisk og mellom 18 og 60 år, kan du melde deg som blodgiver."
         '
+        'MenuStrip1
+        '
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.OmOssToolStripMenuItem})
+        Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
+        Me.MenuStrip1.Name = "MenuStrip1"
+        Me.MenuStrip1.Size = New System.Drawing.Size(677, 24)
+        Me.MenuStrip1.TabIndex = 23
+        Me.MenuStrip1.Text = "MenuStrip1"
+        '
+        'OmOssToolStripMenuItem
+        '
+        Me.OmOssToolStripMenuItem.Name = "OmOssToolStripMenuItem"
+        Me.OmOssToolStripMenuItem.Size = New System.Drawing.Size(61, 20)
+        Me.OmOssToolStripMenuItem.Text = "Om Oss"
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(683, 550)
+        Me.BackColor = System.Drawing.Color.Cornsilk
+        Me.ClientSize = New System.Drawing.Size(677, 587)
         Me.Controls.Add(Me.TextBox1)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.Panel1)
+        Me.Controls.Add(Me.MenuStrip1)
+        Me.MainMenuStrip = Me.MenuStrip1
         Me.Name = "Form1"
         Me.Text = "Form1"
         Me.Panel1.ResumeLayout(False)
@@ -224,6 +245,8 @@ Partial Class Form1
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.MenuStrip1.ResumeLayout(False)
+        Me.MenuStrip1.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -246,4 +269,6 @@ Partial Class Form1
     Friend WithEvents Panel2 As Panel
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents MenuStrip1 As MenuStrip
+    Friend WithEvents OmOssToolStripMenuItem As ToolStripMenuItem
 End Class

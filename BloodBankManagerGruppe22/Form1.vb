@@ -46,14 +46,14 @@ Public Class Form1
             Return table
         End Function
 
-        'Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        '    connstring = "Server=" & server & ";" & "Database=" & databasename & ";" & "Uid=" & username & ";" & "Pwd=" & password & ";"
-        '    connection.ConnectionString = connstring
-        '    userinfo = Query("SELECT bruker_id, brukernavn, passord FROM bruker")
-        '    For Each row As DataRow In userinfo.Rows
-        '        ListBox1.Items.Add(row("bruker_id") & " " & row("brukernavn") & " " & row("passord"))
-        '    Next
-        'End Sub
+        Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+            connstring = "Server=" & server & ";" & "Database=" & databasename & ";" & "Uid=" & username & ";" & "Pwd=" & password & ";"
+            connection.ConnectionString = connstring
+            userinfo = Query("SELECT bruker_id, brukernavn, passord FROM bruker")
+            For Each row As DataRow In userinfo.Rows
+                ListBox1.Items.Add(row("bruker_id") & " " & row("brukernavn") & " " & row("passord"))
+            Next
+        End Sub
 
         Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
             Dim gotmatch As Boolean = False
@@ -88,34 +88,34 @@ Public Class Form1
 
 
 
-        'Query("INSERT INTO `login_form_forside`(`brukernavn`, `passord`) VALUES ('ola','hallo')")
+        Query("INSERT INTO `login_form_forside`(`brukernavn`, `passord`) VALUES ('ola','hallo')")
 
-        '    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        '   Dim tabell As New DataTable
-        '      ListBox1.Items.Clear()
-        '     tabell = Sporring("SELECT * FROM person ORDER BY fornavn")
-        'For Each rad As DataRow In tabell.Rows
-        '       ListBox1.Items.Add(rad("person_id") & " " & rad("fornavn") & " " & rad("etternavn") & rad("epost") & rad("dato"))
-        'Next
-        'End Sub
+            Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+            Dim tabell As New DataTable
+            ListBox1.Items.Clear()
+            tabell = Sporring("SELECT * FROM person ORDER BY fornavn")
+            For Each rad As DataRow In tabell.Rows
+                ListBox1.Items.Add(rad("person_id") & " " & rad("fornavn") & " " & rad("etternavn") & rad("epost") & rad("dato"))
+            Next
+        End Sub
 
-        '   Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
-        '  Dim tabell As New DataTable
-        '     ListBox1.Items.Clear()
-        '    tabell = Sporring("SELECT * FROM person WHERE fornavn='" & txtPerson.Text & "' OR etternavn='" & txtPerson.Text & "';")
-        'For Each rad As DataRow In tabell.Rows
-        '       ListBox1.Items.Add(rad("person_id") & " " & rad("fornavn") & " " & rad("etternavn") & " " & rad("epost") & " " & rad("dato"))
-        'Next
-        'End Sub
+        Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+            Dim tabell As New DataTable
+            ListBox1.Items.Clear()
+            tabell = Sporring("SELECT * FROM person WHERE fornavn='" & txtPerson.Text & "' OR etternavn='" & txtPerson.Text & "';")
+            For Each rad As DataRow In tabell.Rows
+                ListBox1.Items.Add(rad("person_id") & " " & rad("fornavn") & " " & rad("etternavn") & " " & rad("epost") & " " & rad("dato"))
+            Next
+        End Sub
 
-        '    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
-        '   Dim tabell As New DataTable
-        '      ListBox1.Items.Clear()
-        '     tabell = Sporring("SELECT * FROM person WHERE epost LIKE '%" & txtEpost.Text & "%';")
-        'For Each rad As DataRow In tabell.Rows
-        '       ListBox1.Items.Add(rad("person_id") & " " & rad("fornavn") & " " & rad("etternavn") & " " & rad("epost") & " " & rad("dato"))
-        'Next
-        'End Sub
+        Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+            Dim tabell As New DataTable
+            ListBox1.Items.Clear()
+            tabell = Sporring("SELECT * FROM person WHERE epost LIKE '%" & txtEpost.Text & "%';")
+            For Each rad As DataRow In tabell.Rows
+                ListBox1.Items.Add(rad("person_id") & " " & rad("fornavn") & " " & rad("etternavn") & " " & rad("epost") & " " & rad("dato"))
+            Next
+        End Sub
     End Class
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -123,10 +123,18 @@ Public Class Form1
     End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
-        egenerklæring.Show()
+        egenerklæringForm.Show() 'legge inn opplysninger om den aktuelle blodgiver i en annen som først blir linket når denne knappen klikkes, eks:fornavn,etternavn,fødselsdato osv.. deretter en annen form(egenerklæringform),
     End Sub
 
     Private Sub ListBox1_SelectedIndexChanged(sender As Object, e As EventArgs)
 
+    End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        minSideForm.Show()
+    End Sub
+
+    Private Sub OmOssToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles OmOssToolStripMenuItem.Click
+        MsgBox("Blodbank Register Applikasjonen er utviklet av Charlotte Halmrast, Marius Myhre og Naren Yogarajah.")
     End Sub
 End Class
