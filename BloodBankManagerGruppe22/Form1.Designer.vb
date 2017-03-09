@@ -41,10 +41,9 @@ Partial Class Form1
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(476, 91)
-        Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label3.Location = New System.Drawing.Point(357, 74)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(85, 17)
+        Me.Label3.Size = New System.Drawing.Size(63, 13)
         Me.Label3.TabIndex = 15
         Me.Label3.Text = "Registrering"
         '
@@ -56,18 +55,16 @@ Partial Class Form1
         Me.Panel1.Controls.Add(Me.Label4)
         Me.Panel1.Controls.Add(Me.TextBoxRegPword)
         Me.Panel1.Controls.Add(Me.TextBoxRegUsername)
-        Me.Panel1.Location = New System.Drawing.Point(393, 110)
-        Me.Panel1.Margin = New System.Windows.Forms.Padding(4)
+        Me.Panel1.Location = New System.Drawing.Point(295, 89)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(265, 147)
+        Me.Panel1.Size = New System.Drawing.Size(200, 120)
         Me.Panel1.TabIndex = 16
         '
         'Button2
         '
-        Me.Button2.Location = New System.Drawing.Point(4, 105)
-        Me.Button2.Margin = New System.Windows.Forms.Padding(4)
+        Me.Button2.Location = New System.Drawing.Point(3, 85)
         Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(100, 28)
+        Me.Button2.Size = New System.Drawing.Size(75, 23)
         Me.Button2.TabIndex = 10
         Me.Button2.Text = "Utfør"
         Me.Button2.UseVisualStyleBackColor = True
@@ -75,55 +72,48 @@ Partial Class Form1
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(4, 53)
-        Me.Label5.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label5.Location = New System.Drawing.Point(3, 43)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(60, 17)
+        Me.Label5.Size = New System.Drawing.Size(45, 13)
         Me.Label5.TabIndex = 9
         Me.Label5.Text = "Passord"
         '
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(4, 5)
-        Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label4.Location = New System.Drawing.Point(3, 4)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(81, 17)
+        Me.Label4.Size = New System.Drawing.Size(62, 13)
         Me.Label4.TabIndex = 8
         Me.Label4.Text = "Brukernavn"
         '
         'TextBoxRegPword
         '
-        Me.TextBoxRegPword.Location = New System.Drawing.Point(4, 73)
-        Me.TextBoxRegPword.Margin = New System.Windows.Forms.Padding(4)
+        Me.TextBoxRegPword.Location = New System.Drawing.Point(3, 59)
         Me.TextBoxRegPword.Name = "TextBoxRegPword"
-        Me.TextBoxRegPword.Size = New System.Drawing.Size(200, 22)
+        Me.TextBoxRegPword.Size = New System.Drawing.Size(151, 20)
         Me.TextBoxRegPword.TabIndex = 7
         '
         'TextBoxRegUsername
         '
-        Me.TextBoxRegUsername.Location = New System.Drawing.Point(4, 25)
-        Me.TextBoxRegUsername.Margin = New System.Windows.Forms.Padding(4)
+        Me.TextBoxRegUsername.Location = New System.Drawing.Point(3, 20)
         Me.TextBoxRegUsername.Name = "TextBoxRegUsername"
-        Me.TextBoxRegUsername.Size = New System.Drawing.Size(200, 22)
+        Me.TextBoxRegUsername.Size = New System.Drawing.Size(151, 20)
         Me.TextBoxRegUsername.TabIndex = 6
         '
         'ListBox1
         '
         Me.ListBox1.FormattingEnabled = True
-        Me.ListBox1.ItemHeight = 16
-        Me.ListBox1.Location = New System.Drawing.Point(112, 296)
-        Me.ListBox1.Margin = New System.Windows.Forms.Padding(4)
+        Me.ListBox1.Location = New System.Drawing.Point(84, 240)
         Me.ListBox1.Name = "ListBox1"
-        Me.ListBox1.Size = New System.Drawing.Size(159, 116)
+        Me.ListBox1.Size = New System.Drawing.Size(120, 95)
         Me.ListBox1.TabIndex = 14
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(28, 182)
-        Me.Button1.Margin = New System.Windows.Forms.Padding(4)
+        Me.Button1.Location = New System.Drawing.Point(21, 148)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(100, 28)
+        Me.Button1.Size = New System.Drawing.Size(75, 23)
         Me.Button1.TabIndex = 13
         Me.Button1.Text = "Logg inn"
         Me.Button1.UseVisualStyleBackColor = True
@@ -131,45 +121,41 @@ Partial Class Form1
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(24, 118)
-        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label2.Location = New System.Drawing.Point(18, 96)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(60, 17)
+        Me.Label2.Size = New System.Drawing.Size(45, 13)
         Me.Label2.TabIndex = 12
         Me.Label2.Text = "Passord"
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(24, 56)
-        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label1.Location = New System.Drawing.Point(18, 46)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(81, 17)
+        Me.Label1.Size = New System.Drawing.Size(62, 13)
         Me.Label1.TabIndex = 11
         Me.Label1.Text = "Brukernavn"
         '
         'TextBoxPassword
         '
-        Me.TextBoxPassword.Location = New System.Drawing.Point(28, 137)
-        Me.TextBoxPassword.Margin = New System.Windows.Forms.Padding(4)
+        Me.TextBoxPassword.Location = New System.Drawing.Point(21, 111)
         Me.TextBoxPassword.Name = "TextBoxPassword"
-        Me.TextBoxPassword.Size = New System.Drawing.Size(212, 22)
+        Me.TextBoxPassword.Size = New System.Drawing.Size(160, 20)
         Me.TextBoxPassword.TabIndex = 10
         Me.TextBoxPassword.UseSystemPasswordChar = True
         '
         'TextBoxUsername
         '
-        Me.TextBoxUsername.Location = New System.Drawing.Point(28, 76)
-        Me.TextBoxUsername.Margin = New System.Windows.Forms.Padding(4)
+        Me.TextBoxUsername.Location = New System.Drawing.Point(21, 62)
         Me.TextBoxUsername.Name = "TextBoxUsername"
-        Me.TextBoxUsername.Size = New System.Drawing.Size(212, 22)
+        Me.TextBoxUsername.Size = New System.Drawing.Size(160, 20)
         Me.TextBoxUsername.TabIndex = 9
         '
         'Form1
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(683, 468)
+        Me.ClientSize = New System.Drawing.Size(512, 380)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.ListBox1)
@@ -178,7 +164,6 @@ Partial Class Form1
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.TextBoxPassword)
         Me.Controls.Add(Me.TextBoxUsername)
-        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "Form1"
         Me.Text = "Form1"
         Me.Panel1.ResumeLayout(False)

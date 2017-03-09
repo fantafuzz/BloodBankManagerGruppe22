@@ -1,12 +1,13 @@
-﻿Public Class Form1
-    Imports MySql.Data.MySqlClient
+﻿Imports MySql.Data.MySqlClient
+Public Class Form1
+
     Public Class Form1
         Public currentuser As Integer
         Private salt As String = "detteErEnVeldigLangHashSomGjorAtVaarePassordBlirMyeSikrere"
         Private username As String
         Private password As String
         Private databasename As String
-        Private server As String =
+        Private server As String
         Private userinfo As New DataTable
 
         Private connstring As String
@@ -45,43 +46,46 @@
             Return table
         End Function
 
-        Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-            connstring = "Server=" & server & ";" & "Database=" & databasename & ";" & "Uid=" & username & ";" & "Pwd=" & password & ";"
-            connection.ConnectionString = connstring
-            userinfo = Query("SELECT bruker_id, brukernavn, passord FROM bruker")
-            For Each row As DataRow In userinfo.Rows
-                ListBox1.Items.Add(row("bruker_id") & " " & row("brukernavn") & " " & row("passord"))
-            Next
-        End Sub
+        'Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        '    connstring = "Server=" & server & ";" & "Database=" & databasename & ";" & "Uid=" & username & ";" & "Pwd=" & password & ";"
+        '    connection.ConnectionString = connstring
+        '    userinfo = Query("SELECT bruker_id, brukernavn, passord FROM bruker")
+        '    For Each row As DataRow In userinfo.Rows
+        '        ListBox1.Items.Add(row("bruker_id") & " " & row("brukernavn") & " " & row("passord"))
+        '    Next
+        'End Sub
 
-        Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-            Dim gotmatch As Boolean = False
-            Dim inputname As String = TextBoxUsername.Text
-            Dim inputpword As String = TextBoxPassword.Text
-            Dim hashedpword As String = hash(inputpword, salt)
+        'Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        '    Dim gotmatch As Boolean = False
+        '    Dim inputname As String = TextBoxUsername.Text
+        '    Dim inputpword As String = TextBoxPassword.Text
+        '    Dim hashedpword As String = hash(inputpword, salt)
 
-            For Each row As DataRow In userinfo.Rows
-                If row("brukernavn") = inputname And row("passord") = hashedpword Then
-                    gotmatch = True
-                    currentuser = row("bruker_id")
-                End If
-            Next
-            If gotmatch Then
-                MsgBox(currentuser)
-            End If
-        End Sub
+        '    For Each row As DataRow In userinfo.Rows
+        '        If row("brukernavn") = inputname And row("passord") = hashedpword Then
+        '            gotmatch = True
+        '            currentuser = row("bruker_id")
+        '        End If
+        '    Next
+        '    If gotmatch Then
+        '        MsgBox(currentuser)
+        '    End If
+        'End Sub
 
-        Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
-            Dim inputname As String = TextBoxRegUsername.Text
-            Dim inputpword As String = TextBoxRegPword.Text
-            inputpword = hash(inputpword, salt)
-            MsgBox(inputpword)
+        'Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        '    Dim inputname As String = TextBoxRegUsername.Text
+        '    Dim inputpword As String = TextBoxRegPword.Text
+        '    inputpword = hash(inputpword, salt)
+        '    MsgBox(inputpword)
 
-            If inputname <> "" And inputpword <> "" Then
-                Query("INSERT INTO `login_form_forside`(`brukernavn`, `passord`) VALUES ('" & inputname & "','" & inputpword & "');")
-                'Query("INSERT INTO `login_form_forside`(`brukernavn`, `passord`) VALUES ('ola','hallo')")
-            End If
-        End Sub
+        '    If inputname <> "" And inputpword <> "" Then
+        '        Query("INSERT INTO `login_form_forside`(`brukernavn`, `passord`) VALUES ('" & inputname & "','" & inputpword & "');")
+
+
+        '    End If
+        'End Sub
+
+        'Query("INSERT INTO `login_form_forside`(`brukernavn`, `passord`) VALUES ('ola','hallo')")
 
         '    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         '   Dim tabell As New DataTable
@@ -110,4 +114,12 @@
         'Next
         'End Sub
     End Class
+
+    Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+    End Sub
+
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        egenerklæring.Show()
+    End Sub
 End Class
