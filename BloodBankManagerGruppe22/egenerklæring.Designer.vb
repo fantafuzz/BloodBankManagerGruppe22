@@ -25,9 +25,10 @@ Partial Class egenerklæring
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.ListView1 = New System.Windows.Forms.ListView()
         Me.ListBox1 = New System.Windows.Forms.ListBox()
         Me.Button1 = New System.Windows.Forms.Button()
+        Me.CheckedListBox1 = New System.Windows.Forms.CheckedListBox()
+        Me.MonthCalendar1 = New System.Windows.Forms.MonthCalendar()
         Me.SuspendLayout()
         '
         'Label1
@@ -58,18 +59,10 @@ Partial Class egenerklæring
         Me.Label3.Text = "1_3: Hvis du har gitt blod tidligere, har du vært frisk i perioden fra forrige bl" &
     "odgivning og til nå?"
         '
-        'ListView1
-        '
-        Me.ListView1.Location = New System.Drawing.Point(402, 222)
-        Me.ListView1.Name = "ListView1"
-        Me.ListView1.Size = New System.Drawing.Size(649, 303)
-        Me.ListView1.TabIndex = 3
-        Me.ListView1.UseCompatibleStateImageBehavior = False
-        '
         'ListBox1
         '
         Me.ListBox1.FormattingEnabled = True
-        Me.ListBox1.Location = New System.Drawing.Point(15, 164)
+        Me.ListBox1.Location = New System.Drawing.Point(12, 131)
         Me.ListBox1.Name = "ListBox1"
         Me.ListBox1.Size = New System.Drawing.Size(351, 394)
         Me.ListBox1.TabIndex = 4
@@ -83,14 +76,29 @@ Partial Class egenerklæring
         Me.Button1.Text = "Button1"
         Me.Button1.UseVisualStyleBackColor = True
         '
+        'CheckedListBox1
+        '
+        Me.CheckedListBox1.FormattingEnabled = True
+        Me.CheckedListBox1.Location = New System.Drawing.Point(497, 172)
+        Me.CheckedListBox1.Name = "CheckedListBox1"
+        Me.CheckedListBox1.Size = New System.Drawing.Size(120, 94)
+        Me.CheckedListBox1.TabIndex = 6
+        '
+        'MonthCalendar1
+        '
+        Me.MonthCalendar1.Location = New System.Drawing.Point(576, 333)
+        Me.MonthCalendar1.Name = "MonthCalendar1"
+        Me.MonthCalendar1.TabIndex = 7
+        '
         'egenerklæring
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1169, 640)
+        Me.Controls.Add(Me.MonthCalendar1)
+        Me.Controls.Add(Me.CheckedListBox1)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.ListBox1)
-        Me.Controls.Add(Me.ListView1)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
@@ -104,7 +112,8 @@ Partial Class egenerklæring
     Friend WithEvents Label1 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents Label3 As Label
-    Friend WithEvents ListView1 As ListView
     Friend WithEvents ListBox1 As ListBox
     Friend WithEvents Button1 As Button
+    Friend WithEvents CheckedListBox1 As CheckedListBox
+    Friend WithEvents MonthCalendar1 As MonthCalendar
 End Class

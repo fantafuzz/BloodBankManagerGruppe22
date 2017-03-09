@@ -55,35 +55,38 @@ Public Class Form1
         '    Next
         'End Sub
 
-        'Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        '    Dim gotmatch As Boolean = False
-        '    Dim inputname As String = TextBoxUsername.Text
-        '    Dim inputpword As String = TextBoxPassword.Text
-        '    Dim hashedpword As String = hash(inputpword, salt)
+        Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+            Dim gotmatch As Boolean = False
+            Dim inputname As String = TextBoxUsername.Text
+            Dim inputpword As String = TextBoxPassword.Text
+            Dim hashedpword As String = hash(inputpword, salt)
 
-        '    For Each row As DataRow In userinfo.Rows
-        '        If row("brukernavn") = inputname And row("passord") = hashedpword Then
-        '            gotmatch = True
-        '            currentuser = row("bruker_id")
-        '        End If
-        '    Next
-        '    If gotmatch Then
-        '        MsgBox(currentuser)
-        '    End If
-        'End Sub
+            For Each row As DataRow In userinfo.Rows
+                If row("brukernavn") = inputname And row("passord") = hashedpword Then
+                    gotmatch = True
+                    currentuser = row("bruker_id")
+                End If
+            Next
+            If gotmatch Then
+                MsgBox(currentuser)
+            End If
+        End Sub
 
-        'Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
-        '    Dim inputname As String = TextBoxRegUsername.Text
-        '    Dim inputpword As String = TextBoxRegPword.Text
-        '    inputpword = hash(inputpword, salt)
-        '    MsgBox(inputpword)
+        Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+            Dim inputname As String = TextBoxRegUsername.Text
+            Dim inputpword As String = TextBoxRegPword.Text
+            inputpword = hash(inputpword, salt)
+            MsgBox(inputpword)
 
-        '    If inputname <> "" And inputpword <> "" Then
-        '        Query("INSERT INTO `login_form_forside`(`brukernavn`, `passord`) VALUES ('" & inputname & "','" & inputpword & "');")
+            If inputname <> "" And inputpword <> "" Then
+                Query("INSERT INTO `login_form_forside`(`brukernavn`, `passord`) VALUES ('" & inputname & "','" & inputpword & "');")
 
 
-        '    End If
-        'End Sub
+            End If
+        End Sub
+
+
+
 
         'Query("INSERT INTO `login_form_forside`(`brukernavn`, `passord`) VALUES ('ola','hallo')")
 
@@ -121,5 +124,9 @@ Public Class Form1
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
         egenerklæring.Show()
+    End Sub
+
+    Private Sub ListBox1_SelectedIndexChanged(sender As Object, e As EventArgs)
+
     End Sub
 End Class
