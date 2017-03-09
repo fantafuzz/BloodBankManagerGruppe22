@@ -1,5 +1,5 @@
 ﻿'versjon2
-'8
+'chalololo
 Public Class EgenerklæringNy
     'Bolk 1: Vennligst besvar
     Dim infoBlodgivning As Boolean
