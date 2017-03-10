@@ -46,17 +46,17 @@ Public Class SQL_hookup
         Return table
     End Function
 
-    Public Function logInQuery(ByVal)
-    '    Public Function QueryRead(ByVal whatToGet As String, ByVal fromTable As String, wherewhat As String) As DataTable
-    '   Dim returntable As New DataTable
-    '  Try
-    ' Dim command As New MySqlCommand("SELECT ")
-    '        command.CommandType = CommandType.StoredProcedure
-    '       command.Parameters.Add(New SqlParameter("@CustomerName", CustomerName.Text))
-    'Dim reader As SqlDataReader = command.ExecuteReader()
-    'Catch se As SqlException
-    '       MsgBox("En feil oppstått i 'Public function QueryRead', i 'SQL-hookub.vb' klassen")
-    'End Try
-    'Return returntable
+    'Public Function logInQuery(ByVal)
+    '    '    Public Function QueryRead(ByVal whatToGet As String, ByVal fromTable As String, wherewhat As String) As DataTable
+    '    '   Dim returntable As New DataTable
+    '    '  Try
+    '    ' Dim command As New MySqlCommand("SELECT ")
+    '    '        command.CommandType = CommandType.StoredProcedure
+    '    '       command.Parameters.Add(New SqlParameter("@CustomerName", CustomerName.Text))
+    '    'Dim reader As SqlDataReader = command.ExecuteReader()
+    '    'Catch se As SqlException
+    '    '       MsgBox("En feil oppstått i 'Public function QueryRead', i 'SQL-hookub.vb' klassen")
+    '    'End Try
+    '    'Return returntable
     'End Function
 End Class

@@ -86,7 +86,7 @@ Public Class Form1
     End Sub
 
     Private Sub ButtonRegistrer_Click(sender As Object, e As EventArgs) Handles ButtonRegistrer.Click
-
+        registering_av_nye_blodgivere.Show()
 
     End Sub
 
