@@ -22,78 +22,122 @@ Partial Class egenSkjemaBolk1
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.ListBox1 = New System.Windows.Forms.ListBox()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.CheckBox14 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox15 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox16 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox17 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox18 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox19 = New System.Windows.Forms.CheckBox()
+        Me.Button2 = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
-        'Label1
+        'Label7
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(12, 32)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(217, 13)
-        Me.Label1.TabIndex = 0
-        Me.Label1.Text = "1_1: Har du fått informasjon om blodgivning?"
+        Me.Label7.AutoSize = True
+        Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label7.Location = New System.Drawing.Point(12, 21)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(105, 13)
+        Me.Label7.TabIndex = 31
+        Me.Label7.Text = "Vennligst besvar:"
         '
-        'Label2
+        'CheckBox14
         '
-        Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(12, 56)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(133, 13)
-        Me.Label2.TabIndex = 1
-        Me.Label2.Text = "1_2: Føler du deg frisk nå?"
+        Me.CheckBox14.AutoSize = True
+        Me.CheckBox14.Location = New System.Drawing.Point(15, 164)
+        Me.CheckBox14.Name = "CheckBox14"
+        Me.CheckBox14.Size = New System.Drawing.Size(155, 17)
+        Me.CheckBox14.TabIndex = 72
+        Me.CheckBox14.Text = "Har du piercing i slimhinne?"
+        Me.CheckBox14.UseVisualStyleBackColor = True
         '
-        'Label3
+        'CheckBox15
         '
-        Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(12, 112)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(446, 13)
-        Me.Label3.TabIndex = 2
-        Me.Label3.Text = "1_3: Hvis du har gitt blod tidligere, har du vært frisk i perioden fra forrige bl" &
-    "odgivning og til nå?"
+        Me.CheckBox15.AutoSize = True
+        Me.CheckBox15.Location = New System.Drawing.Point(15, 141)
+        Me.CheckBox15.Name = "CheckBox15"
+        Me.CheckBox15.Size = New System.Drawing.Size(224, 17)
+        Me.CheckBox15.TabIndex = 71
+        Me.CheckBox15.Text = "Har du åpne sår, eksem eller hudsykdom?"
+        Me.CheckBox15.UseVisualStyleBackColor = True
         '
-        'ListBox1
+        'CheckBox16
         '
-        Me.ListBox1.FormattingEnabled = True
-        Me.ListBox1.Location = New System.Drawing.Point(12, 131)
-        Me.ListBox1.Name = "ListBox1"
-        Me.ListBox1.Size = New System.Drawing.Size(351, 394)
-        Me.ListBox1.TabIndex = 4
+        Me.CheckBox16.AutoSize = True
+        Me.CheckBox16.Location = New System.Drawing.Point(15, 118)
+        Me.CheckBox16.Name = "CheckBox16"
+        Me.CheckBox16.Size = New System.Drawing.Size(140, 17)
+        Me.CheckBox16.TabIndex = 70
+        Me.CheckBox16.Text = "Veier du 50kg eller mer?"
+        Me.CheckBox16.UseVisualStyleBackColor = True
         '
-        'Button1
+        'CheckBox17
         '
-        Me.Button1.Location = New System.Drawing.Point(15, 580)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 23)
-        Me.Button1.TabIndex = 5
-        Me.Button1.Text = "Button1"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.CheckBox17.AutoSize = True
+        Me.CheckBox17.Location = New System.Drawing.Point(15, 95)
+        Me.CheckBox17.Name = "CheckBox17"
+        Me.CheckBox17.Size = New System.Drawing.Size(441, 17)
+        Me.CheckBox17.TabIndex = 69
+        Me.CheckBox17.Text = "Hvis du har gitt blod tidligere, har du vært frisk i perioden fra forrige blodgiv" &
+    "ning og til nå?"
+        Me.CheckBox17.UseVisualStyleBackColor = True
         '
-        'egenerklæringForm
+        'CheckBox18
+        '
+        Me.CheckBox18.AutoSize = True
+        Me.CheckBox18.Location = New System.Drawing.Point(15, 72)
+        Me.CheckBox18.Name = "CheckBox18"
+        Me.CheckBox18.Size = New System.Drawing.Size(128, 17)
+        Me.CheckBox18.TabIndex = 68
+        Me.CheckBox18.Text = "Føler du deg frisk nå?"
+        Me.CheckBox18.UseVisualStyleBackColor = True
+        '
+        'CheckBox19
+        '
+        Me.CheckBox19.AutoSize = True
+        Me.CheckBox19.Location = New System.Drawing.Point(15, 49)
+        Me.CheckBox19.Name = "CheckBox19"
+        Me.CheckBox19.Size = New System.Drawing.Size(212, 17)
+        Me.CheckBox19.TabIndex = 67
+        Me.CheckBox19.Text = "Har du fått informasjon om blodgivning?"
+        Me.CheckBox19.UseVisualStyleBackColor = True
+        '
+        'Button2
+        '
+        Me.Button2.Location = New System.Drawing.Point(15, 196)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(130, 23)
+        Me.Button2.TabIndex = 65
+        Me.Button2.Text = "Gå videre til neste bolk"
+        Me.Button2.UseVisualStyleBackColor = True
+        '
+        'egenSkjemaBolk1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1169, 640)
-        Me.Controls.Add(Me.Button1)
-        Me.Controls.Add(Me.ListBox1)
-        Me.Controls.Add(Me.Label3)
-        Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.Label1)
-        Me.Name = "egenerklæringForm"
+        Me.BackColor = System.Drawing.Color.Cornsilk
+        Me.ClientSize = New System.Drawing.Size(519, 246)
+        Me.Controls.Add(Me.CheckBox14)
+        Me.Controls.Add(Me.CheckBox15)
+        Me.Controls.Add(Me.CheckBox16)
+        Me.Controls.Add(Me.CheckBox17)
+        Me.Controls.Add(Me.CheckBox18)
+        Me.Controls.Add(Me.CheckBox19)
+        Me.Controls.Add(Me.Button2)
+        Me.Controls.Add(Me.Label7)
+        Me.Name = "egenSkjemaBolk1"
         Me.Text = "egenerklæring"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
-
-    Friend WithEvents Label1 As Label
-    Friend WithEvents Label2 As Label
-    Friend WithEvents Label3 As Label
-    Friend WithEvents ListBox1 As ListBox
-    Friend WithEvents Button1 As Button
+    Friend WithEvents Label7 As Label
+    Friend WithEvents CheckBox14 As CheckBox
+    Friend WithEvents CheckBox15 As CheckBox
+    Friend WithEvents CheckBox16 As CheckBox
+    Friend WithEvents CheckBox17 As CheckBox
+    Friend WithEvents CheckBox18 As CheckBox
+    Friend WithEvents CheckBox19 As CheckBox
+    Friend WithEvents Button2 As Button
 End Class

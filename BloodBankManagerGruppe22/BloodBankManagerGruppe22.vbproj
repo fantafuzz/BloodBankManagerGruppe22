@@ -83,6 +83,24 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="EgenerklæringNy.vb" />
+    <Compile Include="egenSkjemaBolk2.Designer.vb">
+      <DependentUpon>egenSkjemaBolk2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="egenSkjemaBolk2.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="egenSkjemaBolk3.Designer.vb">
+      <DependentUpon>egenSkjemaBolk3.vb</DependentUpon>
+    </Compile>
+    <Compile Include="egenSkjemaBolk3.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="egenSkjemaBolk4.Designer.vb">
+      <DependentUpon>egenSkjemaBolk4.vb</DependentUpon>
+    </Compile>
+    <Compile Include="egenSkjemaBolk4.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Form1.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -122,6 +140,15 @@
   <ItemGroup>
     <EmbeddedResource Include="egenSkjemaBolk1.resx">
       <DependentUpon>egenSkjemaBolk1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="egenSkjemaBolk2.resx">
+      <DependentUpon>egenSkjemaBolk2.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="egenSkjemaBolk3.resx">
+      <DependentUpon>egenSkjemaBolk3.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="egenSkjemaBolk4.resx">
+      <DependentUpon>egenSkjemaBolk4.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.vb</DependentUpon>
