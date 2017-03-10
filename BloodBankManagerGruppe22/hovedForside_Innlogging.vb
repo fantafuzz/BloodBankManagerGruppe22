@@ -1,4 +1,5 @@
-﻿Imports MySql.Data.MySqlClient
+﻿'forside ligger inne
+Imports MySql.Data.MySqlClient
 Public Class hovedForside_Innlogging
     Public currentuser As Integer
     Private salt As String = "detteErEnVeldigLangHashSomGjorAtVaarePassordBlirMyeSikrere"
@@ -100,8 +101,6 @@ Public Class hovedForside_Innlogging
         'Huske å programmere i objekt orientert form.
 
     End Sub
-
-
 
 
 End Class
