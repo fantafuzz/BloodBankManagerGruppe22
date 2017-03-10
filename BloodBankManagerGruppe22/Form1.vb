@@ -11,6 +11,11 @@ Public Class Form1
     Private connstring As String
     Private connection As New MySqlConnection()
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        loadLogInfo()
+
+    End Sub
+
+    Private Sub loadLogInfo()
         connstring = "Server=" & server & ";" & "Database=" & databasename & ";" & "Uid=" & username & ";" & "Pwd=" & password & ";"
         connection.ConnectionString = connstring
         userinfo = Query("SELECT bruker_id, brukernavn, passord FROM bruker")
@@ -18,8 +23,6 @@ Public Class Form1
         '    ListBox1.Items.Add(row("bruker_id") & " " & row("brukernavn") & " " & row("passord"))
         'Next
     End Sub
-
-
 
 
     Private Function hash(passord As String, salt As String) As String
@@ -62,6 +65,8 @@ Public Class Form1
         Dim inputpword As String = TextBoxPassword.Text
         Dim hashedpword As String = hash(inputpword, salt)
 
+        loadLogInfo()
+
         For Each row As DataRow In userinfo.Rows
             If row("brukernavn") = inputname And row("passord") = hashedpword Then
                 gotmatch = True
@@ -72,23 +77,16 @@ Public Class Form1
             MessageBox.Show("Du er logget inn. Velkommen til blodbanken.")
             minSideForm.Show()
         ElseIf gotmatch = False Then
-            MessageBox.Show("Du er ikke registrert blodgiver. Register deg som blodgiver.")
+            MessageBox.Show("Feil brukernavn eller passord.")
         End If
         'Etter at du har registrert deg første gang, fungerer det ikke å logge inn med det aktuelle brukernavnet og passordet.
         'Men etter at du har registrert deg og avsluttet applikasjonen og starter på nytt, fungerer det å få logget inn i applikasjonen. Vi må finne ut av hva som er årsaken til dette.
+        'SVAR: Det er på grunn av måten jeg skrev den første koden, den henter inn all login-informasjon når formen lastes. Kan kjøre en kjapp fiks nå
 
     End Sub
 
-    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
-        Dim inputname As String = TextBoxRegUsername.Text
-        Dim inputpword As String = TextBoxRegPword.Text
-        inputpword = hash(inputpword, salt)
-        MsgBox(inputpword)
+    Private Sub ButtonRegistrer_Click(sender As Object, e As EventArgs) Handles ButtonRegistrer.Click
 
-        If inputname <> "" And inputpword <> "" = True Then
-            Query("INSERT INTO `bruker`(`brukernavn`, `passord`) VALUES ('" & inputname & "','" & inputpword & "');")
-            egenerklæringForm.Show()
-        End If
 
     End Sub
 

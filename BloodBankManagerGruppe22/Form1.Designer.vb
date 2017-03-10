@@ -23,13 +23,8 @@ Partial Class Form1
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form1))
-        Me.Label3 = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.TextBoxRegPword = New System.Windows.Forms.TextBox()
-        Me.TextBoxRegUsername = New System.Windows.Forms.TextBox()
+        Me.ButtonRegistrer = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
@@ -42,76 +37,31 @@ Partial Class Form1
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.OmOssToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.Label3 = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(3, 26)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(82, 13)
-        Me.Label3.TabIndex = 15
-        Me.Label3.Text = "Bli blodgiver nå:"
-        '
         'Panel1
         '
         Me.Panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.Panel1.Controls.Add(Me.Button2)
-        Me.Panel1.Controls.Add(Me.Label5)
         Me.Panel1.Controls.Add(Me.Label3)
-        Me.Panel1.Controls.Add(Me.Label4)
-        Me.Panel1.Controls.Add(Me.TextBoxRegPword)
-        Me.Panel1.Controls.Add(Me.TextBoxRegUsername)
+        Me.Panel1.Controls.Add(Me.ButtonRegistrer)
         Me.Panel1.Location = New System.Drawing.Point(13, 200)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(200, 168)
+        Me.Panel1.Size = New System.Drawing.Size(150, 111)
         Me.Panel1.TabIndex = 16
         '
-        'Button2
+        'ButtonRegistrer
         '
-        Me.Button2.Location = New System.Drawing.Point(3, 130)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(75, 23)
-        Me.Button2.TabIndex = 10
-        Me.Button2.Text = "Register"
-        Me.Button2.UseVisualStyleBackColor = True
-        '
-        'Label5
-        '
-        Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(3, 88)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(45, 13)
-        Me.Label5.TabIndex = 9
-        Me.Label5.Text = "Passord"
-        '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(3, 49)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(62, 13)
-        Me.Label4.TabIndex = 8
-        Me.Label4.Text = "Brukernavn"
-        '
-        'TextBoxRegPword
-        '
-        Me.TextBoxRegPword.Location = New System.Drawing.Point(3, 104)
-        Me.TextBoxRegPword.Name = "TextBoxRegPword"
-        Me.TextBoxRegPword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
-        Me.TextBoxRegPword.Size = New System.Drawing.Size(151, 20)
-        Me.TextBoxRegPword.TabIndex = 7
-        '
-        'TextBoxRegUsername
-        '
-        Me.TextBoxRegUsername.Location = New System.Drawing.Point(3, 65)
-        Me.TextBoxRegUsername.Name = "TextBoxRegUsername"
-        Me.TextBoxRegUsername.Size = New System.Drawing.Size(151, 20)
-        Me.TextBoxRegUsername.TabIndex = 6
+        Me.ButtonRegistrer.Location = New System.Drawing.Point(6, 63)
+        Me.ButtonRegistrer.Name = "ButtonRegistrer"
+        Me.ButtonRegistrer.Size = New System.Drawing.Size(75, 23)
+        Me.ButtonRegistrer.TabIndex = 10
+        Me.ButtonRegistrer.Text = "Register"
+        Me.ButtonRegistrer.UseVisualStyleBackColor = True
         '
         'Button1
         '
@@ -179,13 +129,14 @@ Partial Class Form1
         '
         'Panel2
         '
+        Me.Panel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.Panel2.Controls.Add(Me.TextBoxUsername)
         Me.Panel2.Controls.Add(Me.Label7)
         Me.Panel2.Controls.Add(Me.TextBoxPassword)
         Me.Panel2.Controls.Add(Me.Label1)
         Me.Panel2.Controls.Add(Me.Label2)
         Me.Panel2.Controls.Add(Me.Button1)
-        Me.Panel2.Location = New System.Drawing.Point(13, 383)
+        Me.Panel2.Location = New System.Drawing.Point(13, 328)
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(200, 173)
         Me.Panel2.TabIndex = 19
@@ -226,6 +177,14 @@ Partial Class Form1
         Me.OmOssToolStripMenuItem.Size = New System.Drawing.Size(61, 20)
         Me.OmOssToolStripMenuItem.Text = "Om Oss"
         '
+        'Label3
+        '
+        Me.Label3.Location = New System.Drawing.Point(3, 9)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(148, 51)
+        Me.Label3.TabIndex = 11
+        Me.Label3.Text = "Er du ikke blodgiver enda? Trykk knappen under for å starte registreringen!"
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -242,7 +201,6 @@ Partial Class Form1
         Me.Name = "Form1"
         Me.Text = "Form1"
         Me.Panel1.ResumeLayout(False)
-        Me.Panel1.PerformLayout()
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
@@ -252,14 +210,8 @@ Partial Class Form1
         Me.PerformLayout()
 
     End Sub
-
-    Friend WithEvents Label3 As Label
     Friend WithEvents Panel1 As Panel
-    Friend WithEvents Button2 As Button
-    Friend WithEvents Label5 As Label
-    Friend WithEvents Label4 As Label
-    Friend WithEvents TextBoxRegPword As TextBox
-    Friend WithEvents TextBoxRegUsername As TextBox
+    Friend WithEvents ButtonRegistrer As Button
     Friend WithEvents Button1 As Button
     Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
@@ -272,4 +224,5 @@ Partial Class Form1
     Friend WithEvents TextBox1 As TextBox
     Friend WithEvents MenuStrip1 As MenuStrip
     Friend WithEvents OmOssToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents Label3 As Label
 End Class
