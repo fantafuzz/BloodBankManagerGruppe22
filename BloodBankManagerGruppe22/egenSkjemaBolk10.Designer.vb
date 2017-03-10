@@ -76,7 +76,7 @@ Partial Class egenSkjemaBolk10
         Me.Controls.Add(Me.TextBox1)
         Me.Controls.Add(Me.Label1)
         Me.Name = "egenSkjemaBolk10"
-        Me.Text = "egenSkjemaBolk10"
+        Me.Text = "Egenerklæring Skjema"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

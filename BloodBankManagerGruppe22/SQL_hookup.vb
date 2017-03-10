@@ -1,6 +1,7 @@
 ﻿Imports MySql.Data.MySqlClient
 'This class is used for all SQL-interaction.
 'Spørsmål? Skal vi bruke en "public" versjon av denne, som vi lager i form1? Eller skal vi konstruere en egen i hver?
+'Svar: Hvis vi tenker på sikkerhet, er det mye mindre sikkert å legge inn dette i form1?
 Public Class SQL_hookup
     Private username As String
     Private password As String
