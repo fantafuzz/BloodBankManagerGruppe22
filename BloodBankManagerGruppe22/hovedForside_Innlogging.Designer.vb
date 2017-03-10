@@ -50,7 +50,7 @@ Partial Class hovedForside_Innlogging
         Me.Panel1.Controls.Add(Me.Label3)
         Me.Panel1.Controls.Add(Me.ButtonRegistrer)
         Me.Panel1.Location = New System.Drawing.Point(17, 246)
-        Me.Panel1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Panel1.Margin = New System.Windows.Forms.Padding(4)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(199, 136)
         Me.Panel1.TabIndex = 16
@@ -67,7 +67,7 @@ Partial Class hovedForside_Innlogging
         'ButtonRegistrer
         '
         Me.ButtonRegistrer.Location = New System.Drawing.Point(8, 78)
-        Me.ButtonRegistrer.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.ButtonRegistrer.Margin = New System.Windows.Forms.Padding(4)
         Me.ButtonRegistrer.Name = "ButtonRegistrer"
         Me.ButtonRegistrer.Size = New System.Drawing.Size(100, 28)
         Me.ButtonRegistrer.TabIndex = 10
@@ -77,7 +77,7 @@ Partial Class hovedForside_Innlogging
         'Button1
         '
         Me.Button1.Location = New System.Drawing.Point(8, 164)
-        Me.Button1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Button1.Margin = New System.Windows.Forms.Padding(4)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(100, 28)
         Me.Button1.TabIndex = 13
@@ -107,7 +107,7 @@ Partial Class hovedForside_Innlogging
         'TextBoxPassword
         '
         Me.TextBoxPassword.Location = New System.Drawing.Point(8, 132)
-        Me.TextBoxPassword.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.TextBoxPassword.Margin = New System.Windows.Forms.Padding(4)
         Me.TextBoxPassword.Name = "TextBoxPassword"
         Me.TextBoxPassword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.TextBoxPassword.Size = New System.Drawing.Size(212, 22)
@@ -117,7 +117,7 @@ Partial Class hovedForside_Innlogging
         'TextBoxUsername
         '
         Me.TextBoxUsername.Location = New System.Drawing.Point(8, 71)
-        Me.TextBoxUsername.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.TextBoxUsername.Margin = New System.Windows.Forms.Padding(4)
         Me.TextBoxUsername.Name = "TextBoxUsername"
         Me.TextBoxUsername.Size = New System.Drawing.Size(212, 22)
         Me.TextBoxUsername.TabIndex = 9
@@ -155,7 +155,7 @@ Partial Class hovedForside_Innlogging
         Me.Panel2.Controls.Add(Me.Label2)
         Me.Panel2.Controls.Add(Me.Button1)
         Me.Panel2.Location = New System.Drawing.Point(17, 404)
-        Me.Panel2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Panel2.Margin = New System.Windows.Forms.Padding(4)
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(265, 212)
         Me.Panel2.TabIndex = 19
@@ -163,10 +163,10 @@ Partial Class hovedForside_Innlogging
         'PictureBox1
         '
         Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
-        Me.PictureBox1.Location = New System.Drawing.Point(457, 246)
-        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.PictureBox1.Location = New System.Drawing.Point(437, 246)
+        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(4)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(324, 452)
+        Me.PictureBox1.Size = New System.Drawing.Size(340, 452)
         Me.PictureBox1.TabIndex = 20
         Me.PictureBox1.TabStop = False
         '
@@ -174,7 +174,7 @@ Partial Class hovedForside_Innlogging
         '
         Me.TextBox1.Font = New System.Drawing.Font("Comic Sans MS", 12.0!)
         Me.TextBox1.Location = New System.Drawing.Point(17, 127)
-        Me.TextBox1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.TextBox1.Margin = New System.Windows.Forms.Padding(4)
         Me.TextBox1.Multiline = True
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(737, 98)
@@ -213,7 +213,7 @@ Partial Class hovedForside_Innlogging
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.MenuStrip1)
         Me.MainMenuStrip = Me.MenuStrip1
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "hovedForside_Innlogging"
         Me.Text = "Form1"
         Me.Panel1.ResumeLayout(False)
