@@ -13,6 +13,9 @@ Public Class Form1
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         loadLogInfo()
 
+
+
+
     End Sub
 
     Private Sub loadLogInfo()
@@ -88,6 +91,7 @@ Public Class Form1
     Private Sub ButtonRegistrer_Click(sender As Object, e As EventArgs) Handles ButtonRegistrer.Click
         registering_av_nye_blodgivere.Show()
 
+
     End Sub
 
 
@@ -96,6 +100,8 @@ Public Class Form1
         'Huske å programmere i objekt orientert form.
 
     End Sub
+
+
 
 
 End Class

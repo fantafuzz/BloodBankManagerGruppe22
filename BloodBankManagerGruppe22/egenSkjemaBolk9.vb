@@ -1,8 +1,8 @@
-﻿Public Class egenSkjemaBolk3
+﻿Public Class egenSkjemaBolk9
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
 
 
         Me.Close()
-        egenSkjemaBolk4.Show()
+        egenSkjemaBolk10.Show()
     End Sub
 End Class

@@ -24,5 +24,6 @@
 
 
         egenSkjemaBolk1.Show()
+        Me.Close()
     End Sub
 End Class
