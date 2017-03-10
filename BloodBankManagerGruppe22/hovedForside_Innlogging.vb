@@ -1,4 +1,5 @@
 ﻿'forside ligger inne
+'test1
 Imports MySql.Data.MySqlClient
 Public Class hovedForside_Innlogging
     Public currentuser As Integer
