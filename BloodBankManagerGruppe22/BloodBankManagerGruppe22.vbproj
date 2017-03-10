@@ -137,11 +137,11 @@
     <Compile Include="egenSkjemaBolk9.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.vb">
+    <Compile Include="hovedForside_Innlogging.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.vb">
-      <DependentUpon>Form1.vb</DependentUpon>
+    <Compile Include="hovedForside_Innlogging.Designer.vb">
+      <DependentUpon>hovedForside_Innlogging.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="registeringAvNyeBlodgivere.Designer.vb">
@@ -204,8 +204,8 @@
     <EmbeddedResource Include="egenSkjemaBolk9.resx">
       <DependentUpon>egenSkjemaBolk9.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.vb</DependentUpon>
+    <EmbeddedResource Include="hovedForside_Innlogging.resx">
+      <DependentUpon>hovedForside_Innlogging.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="minSideForm.resx">
       <DependentUpon>minSideForm.vb</DependentUpon>

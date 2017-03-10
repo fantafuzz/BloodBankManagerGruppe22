@@ -1,6 +1,6 @@
 ﻿'forside ligger inne
 Imports MySql.Data.MySqlClient
-Public Class Form1
+Public Class hovedForside_Innlogging
     Public currentuser As Integer
     Private salt As String = "detteErEnVeldigLangHashSomGjorAtVaarePassordBlirMyeSikrere"
     Private username As String
