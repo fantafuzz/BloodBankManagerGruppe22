@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class registering_av_nye_blodgivere
+Partial Class registeringAvNyeBlodgivere
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.

@@ -1,5 +1,5 @@
 ﻿Imports MySql.Data.MySqlClient
-Public Class Form1
+Public Class hovedForside_Innlogging
     Public currentuser As Integer
     Private salt As String = "detteErEnVeldigLangHashSomGjorAtVaarePassordBlirMyeSikrere"
     Private username As String
@@ -89,7 +89,7 @@ Public Class Form1
     End Sub
 
     Private Sub ButtonRegistrer_Click(sender As Object, e As EventArgs) Handles ButtonRegistrer.Click
-        registering_av_nye_blodgivere.Show()
+        registeringAvNyeBlodgivere.Show()
 
 
     End Sub

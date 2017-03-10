@@ -1,4 +1,4 @@
-﻿Public Class registering_av_nye_blodgivere
+﻿Public Class registeringAvNyeBlodgivere
     Private Sub ComboBox1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox1.SelectedIndexChanged
 
     End Sub
