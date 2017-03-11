@@ -22,6 +22,7 @@ Partial Class egenSkjemaBolk2
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(egenSkjemaBolk2))
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.CheckBox1 = New System.Windows.Forms.CheckBox()
@@ -113,6 +114,7 @@ Partial Class egenSkjemaBolk2
         Me.Controls.Add(Me.CheckBox1)
         Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.Button1)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "egenSkjemaBolk2"
         Me.Text = "egenSkjemaBolk2"
         Me.ResumeLayout(False)

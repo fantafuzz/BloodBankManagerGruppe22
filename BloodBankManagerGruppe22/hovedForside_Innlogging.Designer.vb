@@ -37,10 +37,10 @@ Partial Class hovedForside_Innlogging
         Me.Button2 = New System.Windows.Forms.Button()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
-        Me.OmOssToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.OmBlodToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.RetningslinjerToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.OmOssToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.TextBox2 = New System.Windows.Forms.TextBox()
@@ -187,6 +187,18 @@ Partial Class hovedForside_Innlogging
         Me.MenuStrip1.TabIndex = 23
         Me.MenuStrip1.Text = "MenuStrip1"
         '
+        'OmBlodToolStripMenuItem
+        '
+        Me.OmBlodToolStripMenuItem.Name = "OmBlodToolStripMenuItem"
+        Me.OmBlodToolStripMenuItem.Size = New System.Drawing.Size(66, 20)
+        Me.OmBlodToolStripMenuItem.Text = "Om Blod"
+        '
+        'RetningslinjerToolStripMenuItem
+        '
+        Me.RetningslinjerToolStripMenuItem.Name = "RetningslinjerToolStripMenuItem"
+        Me.RetningslinjerToolStripMenuItem.Size = New System.Drawing.Size(91, 20)
+        Me.RetningslinjerToolStripMenuItem.Text = "Retningslinjer"
+        '
         'OmOssToolStripMenuItem
         '
         Me.OmOssToolStripMenuItem.Name = "OmOssToolStripMenuItem"
@@ -202,18 +214,6 @@ Partial Class hovedForside_Innlogging
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.PictureBox1.TabIndex = 20
         Me.PictureBox1.TabStop = False
-        '
-        'OmBlodToolStripMenuItem
-        '
-        Me.OmBlodToolStripMenuItem.Name = "OmBlodToolStripMenuItem"
-        Me.OmBlodToolStripMenuItem.Size = New System.Drawing.Size(66, 20)
-        Me.OmBlodToolStripMenuItem.Text = "Om Blod"
-        '
-        'RetningslinjerToolStripMenuItem
-        '
-        Me.RetningslinjerToolStripMenuItem.Name = "RetningslinjerToolStripMenuItem"
-        Me.RetningslinjerToolStripMenuItem.Size = New System.Drawing.Size(91, 20)
-        Me.RetningslinjerToolStripMenuItem.Text = "Retningslinjer"
         '
         'Label4
         '
@@ -258,6 +258,7 @@ Partial Class hovedForside_Innlogging
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.MenuStrip1)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MainMenuStrip = Me.MenuStrip1
         Me.Name = "hovedForside_Innlogging"
         Me.Text = "Form1"

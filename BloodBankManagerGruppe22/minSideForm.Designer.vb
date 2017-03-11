@@ -22,6 +22,7 @@ Partial Class minSideForm
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(minSideForm))
         Me.Label1 = New System.Windows.Forms.Label()
         Me.TextBox10 = New System.Windows.Forms.TextBox()
         Me.Label11 = New System.Windows.Forms.Label()
@@ -44,11 +45,12 @@ Partial Class minSideForm
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label12 = New System.Windows.Forms.Label()
         Me.Button1 = New System.Windows.Forms.Button()
-        Me.MonthCalendar1 = New System.Windows.Forms.MonthCalendar()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.ListBox1 = New System.Windows.Forms.ListBox()
         Me.TextBox11 = New System.Windows.Forms.TextBox()
         Me.Label13 = New System.Windows.Forms.Label()
+        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
+        Me.Button2 = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'Label1
@@ -217,7 +219,7 @@ Partial Class minSideForm
         'Label12
         '
         Me.Label12.AutoSize = True
-        Me.Label12.Location = New System.Drawing.Point(15, 391)
+        Me.Label12.Location = New System.Drawing.Point(11, 455)
         Me.Label12.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label12.Name = "Label12"
         Me.Label12.Size = New System.Drawing.Size(123, 13)
@@ -226,19 +228,13 @@ Partial Class minSideForm
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(18, 586)
+        Me.Button1.Location = New System.Drawing.Point(14, 497)
         Me.Button1.Margin = New System.Windows.Forms.Padding(2)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(241, 19)
+        Me.Button1.Size = New System.Drawing.Size(114, 19)
         Me.Button1.TabIndex = 44
         Me.Button1.Text = "Bestill time"
         Me.Button1.UseVisualStyleBackColor = True
-        '
-        'MonthCalendar1
-        '
-        Me.MonthCalendar1.Location = New System.Drawing.Point(18, 413)
-        Me.MonthCalendar1.Name = "MonthCalendar1"
-        Me.MonthCalendar1.TabIndex = 45
         '
         'Label10
         '
@@ -254,7 +250,7 @@ Partial Class minSideForm
         Me.ListBox1.FormattingEnabled = True
         Me.ListBox1.Location = New System.Drawing.Point(498, 63)
         Me.ListBox1.Name = "ListBox1"
-        Me.ListBox1.Size = New System.Drawing.Size(367, 524)
+        Me.ListBox1.Size = New System.Drawing.Size(367, 485)
         Me.ListBox1.TabIndex = 47
         '
         'TextBox11
@@ -274,17 +270,36 @@ Partial Class minSideForm
         Me.Label13.TabIndex = 48
         Me.Label13.Text = "Siste Blodgivning Dato:"
         '
+        'DateTimePicker1
+        '
+        Me.DateTimePicker1.CustomFormat = "dd-MM-yyyy"
+        Me.DateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom
+        Me.DateTimePicker1.Location = New System.Drawing.Point(14, 472)
+        Me.DateTimePicker1.Name = "DateTimePicker1"
+        Me.DateTimePicker1.Size = New System.Drawing.Size(114, 20)
+        Me.DateTimePicker1.TabIndex = 50
+        '
+        'Button2
+        '
+        Me.Button2.Location = New System.Drawing.Point(9, 557)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(856, 23)
+        Me.Button2.TabIndex = 51
+        Me.Button2.Text = "Lagre Informasjon"
+        Me.Button2.UseVisualStyleBackColor = True
+        '
         'minSideForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Cornsilk
         Me.ClientSize = New System.Drawing.Size(891, 630)
+        Me.Controls.Add(Me.Button2)
+        Me.Controls.Add(Me.DateTimePicker1)
         Me.Controls.Add(Me.TextBox11)
         Me.Controls.Add(Me.Label13)
         Me.Controls.Add(Me.ListBox1)
         Me.Controls.Add(Me.Label10)
-        Me.Controls.Add(Me.MonthCalendar1)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.Label12)
         Me.Controls.Add(Me.TextBox10)
@@ -307,6 +322,7 @@ Partial Class minSideForm
         Me.Controls.Add(Me.TextBox1)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "minSideForm"
         Me.Text = "minSideForm"
         Me.ResumeLayout(False)
@@ -336,9 +352,10 @@ Partial Class minSideForm
     Friend WithEvents Label2 As Label
     Friend WithEvents Label12 As Label
     Friend WithEvents Button1 As Button
-    Friend WithEvents MonthCalendar1 As MonthCalendar
     Friend WithEvents Label10 As Label
     Friend WithEvents ListBox1 As ListBox
     Friend WithEvents TextBox11 As TextBox
     Friend WithEvents Label13 As Label
+    Friend WithEvents DateTimePicker1 As DateTimePicker
+    Friend WithEvents Button2 As Button
 End Class
