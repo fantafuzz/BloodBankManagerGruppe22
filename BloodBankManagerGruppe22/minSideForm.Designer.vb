@@ -47,6 +47,8 @@ Partial Class minSideForm
         Me.MonthCalendar1 = New System.Windows.Forms.MonthCalendar()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.ListBox1 = New System.Windows.Forms.ListBox()
+        Me.TextBox11 = New System.Windows.Forms.TextBox()
+        Me.Label13 = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'Label1
@@ -215,7 +217,7 @@ Partial Class minSideForm
         'Label12
         '
         Me.Label12.AutoSize = True
-        Me.Label12.Location = New System.Drawing.Point(15, 377)
+        Me.Label12.Location = New System.Drawing.Point(15, 391)
         Me.Label12.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label12.Name = "Label12"
         Me.Label12.Size = New System.Drawing.Size(123, 13)
@@ -224,8 +226,8 @@ Partial Class minSideForm
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(18, 572)
-        Me.Button1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Button1.Location = New System.Drawing.Point(18, 586)
+        Me.Button1.Margin = New System.Windows.Forms.Padding(2)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(241, 19)
         Me.Button1.TabIndex = 44
@@ -234,7 +236,7 @@ Partial Class minSideForm
         '
         'MonthCalendar1
         '
-        Me.MonthCalendar1.Location = New System.Drawing.Point(18, 399)
+        Me.MonthCalendar1.Location = New System.Drawing.Point(18, 413)
         Me.MonthCalendar1.Name = "MonthCalendar1"
         Me.MonthCalendar1.TabIndex = 45
         '
@@ -255,12 +257,31 @@ Partial Class minSideForm
         Me.ListBox1.Size = New System.Drawing.Size(367, 524)
         Me.ListBox1.TabIndex = 47
         '
+        'TextBox11
+        '
+        Me.TextBox11.Location = New System.Drawing.Point(134, 358)
+        Me.TextBox11.Name = "TextBox11"
+        Me.TextBox11.Size = New System.Drawing.Size(148, 20)
+        Me.TextBox11.TabIndex = 49
+        '
+        'Label13
+        '
+        Me.Label13.AutoSize = True
+        Me.Label13.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
+        Me.Label13.Location = New System.Drawing.Point(11, 358)
+        Me.Label13.Name = "Label13"
+        Me.Label13.Size = New System.Drawing.Size(117, 13)
+        Me.Label13.TabIndex = 48
+        Me.Label13.Text = "Siste Blodgivning Dato:"
+        '
         'minSideForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Cornsilk
         Me.ClientSize = New System.Drawing.Size(891, 630)
+        Me.Controls.Add(Me.TextBox11)
+        Me.Controls.Add(Me.Label13)
         Me.Controls.Add(Me.ListBox1)
         Me.Controls.Add(Me.Label10)
         Me.Controls.Add(Me.MonthCalendar1)
@@ -318,4 +339,6 @@ Partial Class minSideForm
     Friend WithEvents MonthCalendar1 As MonthCalendar
     Friend WithEvents Label10 As Label
     Friend WithEvents ListBox1 As ListBox
+    Friend WithEvents TextBox11 As TextBox
+    Friend WithEvents Label13 As Label
 End Class
