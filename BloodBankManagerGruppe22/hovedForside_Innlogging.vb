@@ -1,5 +1,4 @@
-﻿'forside ligger inne
-'test1
+﻿
 Imports MySql.Data.MySqlClient
 Public Class hovedForside_Innlogging
     Public currentuser As Integer
@@ -103,7 +102,37 @@ Public Class hovedForside_Innlogging
 
     End Sub
 
+    Private Sub OmBlodToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles OmBlodToolStripMenuItem.Click
+        MessageBox.Show("Blodet består av...
 
+Røde blodlegemer
+
+De røde blodlegemene transporterer surstoff rundt i kroppen
+
+Hvite blodlegmer
+
+Det er disse som bekjemper infeksjoner i kroppen
+
+Blodplater
+
+Blodplatene stopper blødninger
+
+Plasma
+
+Dette er væsken som blodlegemene og blodplatene flyter i. Plasma inneholder blant annet livsviktige proteiner og stoffer som er nødvendige for å stanse blødninger.    ")
+    End Sub
+
+    Private Sub RetningslinjerToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles RetningslinjerToolStripMenuItem.Click
+        MessageBox.Show("Reglene for å bli blodgiver i Norge finnes i  Veileder for transfusjonstjenesten i Norge (se Retningslinjer / Dokumenter) som er utarbeidet av Helsedirektoratet i Norge).
+
+Transfusjonstjenesten omfatter blodbankene og alt arbeid rundt blod og blodprodukter ved norske sykehus.
+
+Transfusjonstjenesten har et ansvar overfor de som melder seg som blodgivere, at disse behandles med respekt, at eventuelle funn som blir gjort blir håndtert til blodgiverens beste, og at selve blodgivningen gjennomføres under trygge forhold. 
+
+Transfusjonstjenesten har et overordnet ansvar overfor blodmottakere, at behandling med blod og blodprodukter er trygt og hensiktsmessig.
+
+Kriteriene for utvelgelse av blodgivere og en rekke av de laboratorieundersøkelser som anbefales, har til hensikt å beskytte både blodgiveren om han/hun heller burde beholde blodet sitt selv, og blodmottakerne mot infeksjonssykdommer som kan overføres med blod eller blodprodukter.")
+    End Sub
 End Class
 
 

@@ -34,15 +34,20 @@ Partial Class hovedForside_Innlogging
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.Button2 = New System.Windows.Forms.Button()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.OmOssToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.Button2 = New System.Windows.Forms.Button()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.OmBlodToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.RetningslinjerToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.TextBox2 = New System.Windows.Forms.TextBox()
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.MenuStrip1.SuspendLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Panel1
@@ -50,9 +55,9 @@ Partial Class hovedForside_Innlogging
         Me.Panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.Panel1.Controls.Add(Me.Label3)
         Me.Panel1.Controls.Add(Me.ButtonRegistrer)
-        Me.Panel1.Location = New System.Drawing.Point(13, 200)
+        Me.Panel1.Location = New System.Drawing.Point(9, 211)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(150, 111)
+        Me.Panel1.Size = New System.Drawing.Size(200, 122)
         Me.Panel1.TabIndex = 16
         '
         'Label3
@@ -146,19 +151,19 @@ Partial Class hovedForside_Innlogging
         Me.Panel2.Controls.Add(Me.Label1)
         Me.Panel2.Controls.Add(Me.Label2)
         Me.Panel2.Controls.Add(Me.Button1)
-        Me.Panel2.Location = New System.Drawing.Point(13, 328)
+        Me.Panel2.Location = New System.Drawing.Point(9, 373)
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(200, 205)
         Me.Panel2.TabIndex = 19
         '
-        'PictureBox1
+        'Button2
         '
-        Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
-        Me.PictureBox1.Location = New System.Drawing.Point(328, 200)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(255, 367)
-        Me.PictureBox1.TabIndex = 20
-        Me.PictureBox1.TabStop = False
+        Me.Button2.Location = New System.Drawing.Point(6, 163)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(160, 23)
+        Me.Button2.TabIndex = 19
+        Me.Button2.Text = "Innlogging for ansatte"
+        Me.Button2.UseVisualStyleBackColor = True
         '
         'TextBox1
         '
@@ -175,7 +180,7 @@ Partial Class hovedForside_Innlogging
         'MenuStrip1
         '
         Me.MenuStrip1.ImageScalingSize = New System.Drawing.Size(20, 20)
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.OmOssToolStripMenuItem})
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.OmBlodToolStripMenuItem, Me.RetningslinjerToolStripMenuItem, Me.OmOssToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
         Me.MenuStrip1.Size = New System.Drawing.Size(667, 24)
@@ -188,21 +193,65 @@ Partial Class hovedForside_Innlogging
         Me.OmOssToolStripMenuItem.Size = New System.Drawing.Size(61, 20)
         Me.OmOssToolStripMenuItem.Text = "Om Oss"
         '
-        'Button2
+        'PictureBox1
         '
-        Me.Button2.Location = New System.Drawing.Point(6, 163)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(160, 23)
-        Me.Button2.TabIndex = 19
-        Me.Button2.Text = "Innlogging for ansatte"
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
+        Me.PictureBox1.Location = New System.Drawing.Point(376, 279)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(191, 309)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox1.TabIndex = 20
+        Me.PictureBox1.TabStop = False
+        '
+        'OmBlodToolStripMenuItem
+        '
+        Me.OmBlodToolStripMenuItem.Name = "OmBlodToolStripMenuItem"
+        Me.OmBlodToolStripMenuItem.Size = New System.Drawing.Size(66, 20)
+        Me.OmBlodToolStripMenuItem.Text = "Om Blod"
+        '
+        'RetningslinjerToolStripMenuItem
+        '
+        Me.RetningslinjerToolStripMenuItem.Name = "RetningslinjerToolStripMenuItem"
+        Me.RetningslinjerToolStripMenuItem.Size = New System.Drawing.Size(91, 20)
+        Me.RetningslinjerToolStripMenuItem.Text = "Retningslinjer"
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.25!)
+        Me.Label4.Location = New System.Drawing.Point(373, 211)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(86, 16)
+        Me.Label4.TabIndex = 24
+        Me.Label4.Text = "Visste du at..."
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
+        Me.Label5.Location = New System.Drawing.Point(373, 227)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(0, 13)
+        Me.Label5.TabIndex = 25
+        '
+        'TextBox2
+        '
+        Me.TextBox2.Location = New System.Drawing.Point(376, 230)
+        Me.TextBox2.Multiline = True
+        Me.TextBox2.Name = "TextBox2"
+        Me.TextBox2.Size = New System.Drawing.Size(191, 43)
+        Me.TextBox2.TabIndex = 26
+        Me.TextBox2.Text = "I gjennomsnitt tapper hver blodgiver i Norge 2,1 ganger i året."
         '
         'hovedForside_Innlogging
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Cornsilk
-        Me.ClientSize = New System.Drawing.Size(667, 587)
+        Me.ClientSize = New System.Drawing.Size(667, 632)
+        Me.Controls.Add(Me.TextBox2)
+        Me.Controls.Add(Me.Label5)
+        Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.TextBox1)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.Panel2)
@@ -215,9 +264,9 @@ Partial Class hovedForside_Innlogging
         Me.Panel1.ResumeLayout(False)
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -232,10 +281,15 @@ Partial Class hovedForside_Innlogging
     Friend WithEvents Label6 As Label
     Friend WithEvents Label7 As Label
     Friend WithEvents Panel2 As Panel
-    Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents TextBox1 As TextBox
     Friend WithEvents MenuStrip1 As MenuStrip
     Friend WithEvents OmOssToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents Label3 As Label
     Friend WithEvents Button2 As Button
+    Friend WithEvents OmBlodToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents RetningslinjerToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents Label4 As Label
+    Friend WithEvents Label5 As Label
+    Friend WithEvents TextBox2 As TextBox
 End Class

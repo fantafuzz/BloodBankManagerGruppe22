@@ -144,6 +144,12 @@
       <DependentUpon>hovedForside_Innlogging.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="minSideAnsatte.Designer.vb">
+      <DependentUpon>minSideAnsatte.vb</DependentUpon>
+    </Compile>
+    <Compile Include="minSideAnsatte.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="registeringAvNyeBlodgivere.Designer.vb">
       <DependentUpon>registeringAvNyeBlodgivere.vb</DependentUpon>
     </Compile>
@@ -206,6 +212,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="hovedForside_Innlogging.resx">
       <DependentUpon>hovedForside_Innlogging.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="minSideAnsatte.resx">
+      <DependentUpon>minSideAnsatte.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="minSideForm.resx">
       <DependentUpon>minSideForm.vb</DependentUpon>
