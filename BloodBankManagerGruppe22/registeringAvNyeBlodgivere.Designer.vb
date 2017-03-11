@@ -310,7 +310,7 @@ Partial Class registeringAvNyeBlodgivere
         Me.Label14.Text = "Ved å sende inn dette skjema samtykker jeg i at BloodBank Manager kan lagre min i" &
     "nformasjon i 3 måneder og at min blodbank registerer meg i sitt system."
         '
-        'registering_av_nye_blodgivere
+        'registeringAvNyeBlodgivere
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -346,7 +346,7 @@ Partial Class registeringAvNyeBlodgivere
         Me.Controls.Add(Me.ComboBox1)
         Me.Controls.Add(Me.TextBox1)
         Me.Controls.Add(Me.Label1)
-        Me.Name = "registering_av_nye_blodgivere"
+        Me.Name = "registeringAvNyeBlodgivere"
         Me.Text = "Form2"
         Me.ResumeLayout(False)
         Me.PerformLayout()
