@@ -72,7 +72,7 @@ Public Class registeringAvNyeBlodgivere
     End Sub
 
     Private Sub registeringAvNyeBlodgivere_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        tilkobling = New MySqlConnection("Server=mysql.stud.iie.ntnu.no;Database=g_oops_22;Uid=g_oops_22;Pwd=BtUDpVoR")
+        tilkobling = New MySqlConnection("Server=;Database=;Uid=;Pwd=")
         tilkobling.Open()
     End Sub
 End Class
