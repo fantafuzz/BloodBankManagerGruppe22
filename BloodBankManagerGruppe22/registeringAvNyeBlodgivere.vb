@@ -1,6 +1,11 @@
 ﻿Imports MySql.Data.MySqlClient
+
 Public Class registeringAvNyeBlodgivere
+
+
     Dim tilkobling As MySqlConnection
+
+
 
     'Update: Har nå lagt til en del tilkoblinger til databasen med de ulike objektene i minside form. Har forsatt en del å legge til, har oprettet en ny minSide tabell
     ' i databasen. Jeg tenkte vi kunne ha en hel minside tabell i databasen hvor vi sender opplysninger fra vb.net minside form til denne tabell. Hva tenker dere om det?
@@ -12,7 +17,8 @@ Public Class registeringAvNyeBlodgivere
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
 
-        'Dim blodgivningLokasjon As String = ComboBox1.Text
+
+        Dim blodgivningLokasjon As String = ComboBox1.Text
         Dim fornavn As String = TextBox1.Text
         Dim etternavn As String = TextBox2.Text
         'Dim fødselsdato As Date = TextBox3.Text  'skal vi deklare fødselsdato datatype som en date, eller en vanlig integer?
@@ -65,15 +71,24 @@ Public Class registeringAvNyeBlodgivere
         End If
 
 
-        'DirectCast(ComboBox1.SelectedItem, String)
 
         egenSkjemaBolk1.Show()
         Me.Close()
     End Sub
 
     Private Sub registeringAvNyeBlodgivere_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
         tilkobling = New MySqlConnection("Server=;Database=;Uid=;Pwd=")
         tilkobling.Open()
+
+
+
+
+
+
+
+
+
     End Sub
 End Class
 

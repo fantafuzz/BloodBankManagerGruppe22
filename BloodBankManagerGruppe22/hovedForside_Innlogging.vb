@@ -1,6 +1,8 @@
 ﻿
 Imports MySql.Data.MySqlClient
+
 Public Class hovedForside_Innlogging
+
     Public currentuser As Integer
     Private salt As String = "detteErEnVeldigLangHashSomGjorAtVaarePassordBlirMyeSikrere"
     Private username As String
@@ -12,8 +14,6 @@ Public Class hovedForside_Innlogging
     Private connstring As String
     Private connection As New MySqlConnection()
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        loadLogInfo()
-
 
 
 
@@ -132,6 +132,10 @@ Transfusjonstjenesten har et ansvar overfor de som melder seg som blodgivere, at
 Transfusjonstjenesten har et overordnet ansvar overfor blodmottakere, at behandling med blod og blodprodukter er trygt og hensiktsmessig.
 
 Kriteriene for utvelgelse av blodgivere og en rekke av de laboratorieundersøkelser som anbefales, har til hensikt å beskytte både blodgiveren om han/hun heller burde beholde blodet sitt selv, og blodmottakerne mot infeksjonssykdommer som kan overføres med blod eller blodprodukter.")
+    End Sub
+
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        minSideAnsatte.Show()
     End Sub
 End Class
 
