@@ -23,35 +23,42 @@ Partial Class registeringAvNyeBlodgivere
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.TextBoxFirstName = New System.Windows.Forms.TextBox()
+        Me.ComboBoxLok = New System.Windows.Forms.ComboBox()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.TextBoxLastName = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
-        Me.TextBox4 = New System.Windows.Forms.TextBox()
+        Me.TextBoxPersonNum = New System.Windows.Forms.TextBox()
         Me.Label6 = New System.Windows.Forms.Label()
-        Me.TextBox5 = New System.Windows.Forms.TextBox()
+        Me.TextBoxAdr = New System.Windows.Forms.TextBox()
         Me.Label7 = New System.Windows.Forms.Label()
-        Me.TextBox6 = New System.Windows.Forms.TextBox()
+        Me.TextBoxPostNr = New System.Windows.Forms.TextBox()
         Me.Label8 = New System.Windows.Forms.Label()
-        Me.TextBox7 = New System.Windows.Forms.TextBox()
-        Me.TextBox9 = New System.Windows.Forms.TextBox()
+        Me.TextBoxPostSt = New System.Windows.Forms.TextBox()
+        Me.TextBoxPhone1 = New System.Windows.Forms.TextBox()
         Me.Label9 = New System.Windows.Forms.Label()
-        Me.TextBox8 = New System.Windows.Forms.TextBox()
+        Me.TextBoxPhone2 = New System.Windows.Forms.TextBox()
         Me.Label10 = New System.Windows.Forms.Label()
-        Me.TextBox10 = New System.Windows.Forms.TextBox()
+        Me.TextBoxEmail = New System.Windows.Forms.TextBox()
         Me.Label11 = New System.Windows.Forms.Label()
-        Me.CheckBox1 = New System.Windows.Forms.CheckBox()
-        Me.TextBox11 = New System.Windows.Forms.TextBox()
+        Me.CheckBoxGiveBefore = New System.Windows.Forms.CheckBox()
+        Me.TextBoxPrevBank = New System.Windows.Forms.TextBox()
         Me.Label12 = New System.Windows.Forms.Label()
-        Me.CheckBox2 = New System.Windows.Forms.CheckBox()
+        Me.CheckBoxPrevGet = New System.Windows.Forms.CheckBox()
         Me.Label13 = New System.Windows.Forms.Label()
-        Me.CheckBox3 = New System.Windows.Forms.CheckBox()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.CheckBoxGetInfo = New System.Windows.Forms.CheckBox()
+        Me.ButtonSend = New System.Windows.Forms.Button()
         Me.Label14 = New System.Windows.Forms.Label()
+        Me.TextBoxDoB = New System.Windows.Forms.MaskedTextBox()
+        Me.LabelFeilMelding = New System.Windows.Forms.Label()
+        Me.TextBoxBrukernavn = New System.Windows.Forms.TextBox()
+        Me.Label15 = New System.Windows.Forms.Label()
+        Me.TextBoxPassord = New System.Windows.Forms.TextBox()
+        Me.Label16 = New System.Windows.Forms.Label()
+        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.Label17 = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'Label1
@@ -63,21 +70,21 @@ Partial Class registeringAvNyeBlodgivere
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Fornavn:"
         '
-        'TextBox1
+        'TextBoxFirstName
         '
-        Me.TextBox1.Location = New System.Drawing.Point(86, 76)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(294, 20)
-        Me.TextBox1.TabIndex = 1
+        Me.TextBoxFirstName.Location = New System.Drawing.Point(86, 76)
+        Me.TextBoxFirstName.Name = "TextBoxFirstName"
+        Me.TextBoxFirstName.Size = New System.Drawing.Size(294, 20)
+        Me.TextBoxFirstName.TabIndex = 1
         '
-        'ComboBox1
+        'ComboBoxLok
         '
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Items.AddRange(New Object() {"St. Olavs Hospital Orkdal", "St. Olavs Hospital Trondheim"})
-        Me.ComboBox1.Location = New System.Drawing.Point(12, 36)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(231, 21)
-        Me.ComboBox1.TabIndex = 2
+        Me.ComboBoxLok.FormattingEnabled = True
+        Me.ComboBoxLok.Items.AddRange(New Object() {"St. Olavs Hospital Orkdal", "St. Olavs Hospital Trondheim"})
+        Me.ComboBoxLok.Location = New System.Drawing.Point(12, 36)
+        Me.ComboBoxLok.Name = "ComboBoxLok"
+        Me.ComboBoxLok.Size = New System.Drawing.Size(231, 21)
+        Me.ComboBoxLok.TabIndex = 2
         '
         'Label2
         '
@@ -88,12 +95,12 @@ Partial Class registeringAvNyeBlodgivere
         Me.Label2.TabIndex = 3
         Me.Label2.Text = "Hvor ønsker du å gi blod?"
         '
-        'TextBox2
+        'TextBoxLastName
         '
-        Me.TextBox2.Location = New System.Drawing.Point(86, 102)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(294, 20)
-        Me.TextBox2.TabIndex = 5
+        Me.TextBoxLastName.Location = New System.Drawing.Point(86, 102)
+        Me.TextBoxLastName.Name = "TextBoxLastName"
+        Me.TextBoxLastName.Size = New System.Drawing.Size(294, 20)
+        Me.TextBoxLastName.TabIndex = 5
         '
         'Label3
         '
@@ -103,13 +110,6 @@ Partial Class registeringAvNyeBlodgivere
         Me.Label3.Size = New System.Drawing.Size(56, 13)
         Me.Label3.TabIndex = 4
         Me.Label3.Text = "Etternavn:"
-        '
-        'TextBox3
-        '
-        Me.TextBox3.Location = New System.Drawing.Point(86, 137)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(113, 20)
-        Me.TextBox3.TabIndex = 7
         '
         'Label4
         '
@@ -123,18 +123,18 @@ Partial Class registeringAvNyeBlodgivere
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(205, 144)
+        Me.Label5.Location = New System.Drawing.Point(205, 140)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(53, 13)
+        Me.Label5.Size = New System.Drawing.Size(81, 13)
         Me.Label5.TabIndex = 8
-        Me.Label5.Text = "(ddmmåå)"
+        Me.Label5.Text = "(YYYY-MM-DD)"
         '
-        'TextBox4
+        'TextBoxPersonNum
         '
-        Me.TextBox4.Location = New System.Drawing.Point(86, 172)
-        Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(113, 20)
-        Me.TextBox4.TabIndex = 10
+        Me.TextBoxPersonNum.Location = New System.Drawing.Point(86, 172)
+        Me.TextBoxPersonNum.Name = "TextBoxPersonNum"
+        Me.TextBoxPersonNum.Size = New System.Drawing.Size(113, 20)
+        Me.TextBoxPersonNum.TabIndex = 10
         '
         'Label6
         '
@@ -145,12 +145,12 @@ Partial Class registeringAvNyeBlodgivere
         Me.Label6.TabIndex = 9
         Me.Label6.Text = "Personnummer:"
         '
-        'TextBox5
+        'TextBoxAdr
         '
-        Me.TextBox5.Location = New System.Drawing.Point(86, 208)
-        Me.TextBox5.Name = "TextBox5"
-        Me.TextBox5.Size = New System.Drawing.Size(294, 20)
-        Me.TextBox5.TabIndex = 12
+        Me.TextBoxAdr.Location = New System.Drawing.Point(86, 208)
+        Me.TextBoxAdr.Name = "TextBoxAdr"
+        Me.TextBoxAdr.Size = New System.Drawing.Size(294, 20)
+        Me.TextBoxAdr.TabIndex = 12
         '
         'Label7
         '
@@ -161,12 +161,12 @@ Partial Class registeringAvNyeBlodgivere
         Me.Label7.TabIndex = 11
         Me.Label7.Text = "Adresse:"
         '
-        'TextBox6
+        'TextBoxPostNr
         '
-        Me.TextBox6.Location = New System.Drawing.Point(87, 250)
-        Me.TextBox6.Name = "TextBox6"
-        Me.TextBox6.Size = New System.Drawing.Size(78, 20)
-        Me.TextBox6.TabIndex = 14
+        Me.TextBoxPostNr.Location = New System.Drawing.Point(87, 250)
+        Me.TextBoxPostNr.Name = "TextBoxPostNr"
+        Me.TextBoxPostNr.Size = New System.Drawing.Size(78, 20)
+        Me.TextBoxPostNr.TabIndex = 14
         '
         'Label8
         '
@@ -177,19 +177,19 @@ Partial Class registeringAvNyeBlodgivere
         Me.Label8.TabIndex = 13
         Me.Label8.Text = "Postnr/sted:"
         '
-        'TextBox7
+        'TextBoxPostSt
         '
-        Me.TextBox7.Location = New System.Drawing.Point(195, 250)
-        Me.TextBox7.Name = "TextBox7"
-        Me.TextBox7.Size = New System.Drawing.Size(154, 20)
-        Me.TextBox7.TabIndex = 15
+        Me.TextBoxPostSt.Location = New System.Drawing.Point(195, 250)
+        Me.TextBoxPostSt.Name = "TextBoxPostSt"
+        Me.TextBoxPostSt.Size = New System.Drawing.Size(154, 20)
+        Me.TextBoxPostSt.TabIndex = 15
         '
-        'TextBox9
+        'TextBoxPhone1
         '
-        Me.TextBox9.Location = New System.Drawing.Point(86, 292)
-        Me.TextBox9.Name = "TextBox9"
-        Me.TextBox9.Size = New System.Drawing.Size(134, 20)
-        Me.TextBox9.TabIndex = 17
+        Me.TextBoxPhone1.Location = New System.Drawing.Point(86, 292)
+        Me.TextBoxPhone1.Name = "TextBoxPhone1"
+        Me.TextBoxPhone1.Size = New System.Drawing.Size(134, 20)
+        Me.TextBoxPhone1.TabIndex = 17
         '
         'Label9
         '
@@ -200,12 +200,12 @@ Partial Class registeringAvNyeBlodgivere
         Me.Label9.TabIndex = 16
         Me.Label9.Text = "Telefonnummer:"
         '
-        'TextBox8
+        'TextBoxPhone2
         '
-        Me.TextBox8.Location = New System.Drawing.Point(236, 292)
-        Me.TextBox8.Name = "TextBox8"
-        Me.TextBox8.Size = New System.Drawing.Size(134, 20)
-        Me.TextBox8.TabIndex = 18
+        Me.TextBoxPhone2.Location = New System.Drawing.Point(236, 292)
+        Me.TextBoxPhone2.Name = "TextBoxPhone2"
+        Me.TextBoxPhone2.Size = New System.Drawing.Size(134, 20)
+        Me.TextBoxPhone2.TabIndex = 18
         '
         'Label10
         '
@@ -217,12 +217,12 @@ Partial Class registeringAvNyeBlodgivere
         Me.Label10.TabIndex = 19
         Me.Label10.Text = "Minst ett telefonnummer må oppgis:"
         '
-        'TextBox10
+        'TextBoxEmail
         '
-        Me.TextBox10.Location = New System.Drawing.Point(86, 329)
-        Me.TextBox10.Name = "TextBox10"
-        Me.TextBox10.Size = New System.Drawing.Size(294, 20)
-        Me.TextBox10.TabIndex = 21
+        Me.TextBoxEmail.Location = New System.Drawing.Point(86, 329)
+        Me.TextBoxEmail.Name = "TextBoxEmail"
+        Me.TextBoxEmail.Size = New System.Drawing.Size(294, 20)
+        Me.TextBoxEmail.TabIndex = 21
         '
         'Label11
         '
@@ -234,22 +234,22 @@ Partial Class registeringAvNyeBlodgivere
         Me.Label11.TabIndex = 20
         Me.Label11.Text = "Epost:"
         '
-        'CheckBox1
+        'CheckBoxGiveBefore
         '
-        Me.CheckBox1.AutoSize = True
-        Me.CheckBox1.Location = New System.Drawing.Point(12, 364)
-        Me.CheckBox1.Name = "CheckBox1"
-        Me.CheckBox1.Size = New System.Drawing.Size(192, 17)
-        Me.CheckBox1.TabIndex = 22
-        Me.CheckBox1.Text = "Kryss av her om du har gitt blod før:"
-        Me.CheckBox1.UseVisualStyleBackColor = True
+        Me.CheckBoxGiveBefore.AutoSize = True
+        Me.CheckBoxGiveBefore.Location = New System.Drawing.Point(12, 364)
+        Me.CheckBoxGiveBefore.Name = "CheckBoxGiveBefore"
+        Me.CheckBoxGiveBefore.Size = New System.Drawing.Size(192, 17)
+        Me.CheckBoxGiveBefore.TabIndex = 22
+        Me.CheckBoxGiveBefore.Text = "Kryss av her om du har gitt blod før:"
+        Me.CheckBoxGiveBefore.UseVisualStyleBackColor = True
         '
-        'TextBox11
+        'TextBoxPrevBank
         '
-        Me.TextBox11.Location = New System.Drawing.Point(12, 410)
-        Me.TextBox11.Name = "TextBox11"
-        Me.TextBox11.Size = New System.Drawing.Size(309, 20)
-        Me.TextBox11.TabIndex = 24
+        Me.TextBoxPrevBank.Location = New System.Drawing.Point(12, 410)
+        Me.TextBoxPrevBank.Name = "TextBoxPrevBank"
+        Me.TextBoxPrevBank.Size = New System.Drawing.Size(309, 20)
+        Me.TextBoxPrevBank.TabIndex = 24
         '
         'Label12
         '
@@ -260,16 +260,16 @@ Partial Class registeringAvNyeBlodgivere
         Me.Label12.TabIndex = 23
         Me.Label12.Text = "Hvilken blodbank:"
         '
-        'CheckBox2
+        'CheckBoxPrevGet
         '
-        Me.CheckBox2.AutoSize = True
-        Me.CheckBox2.Location = New System.Drawing.Point(12, 447)
-        Me.CheckBox2.Name = "CheckBox2"
-        Me.CheckBox2.Size = New System.Drawing.Size(516, 17)
-        Me.CheckBox2.TabIndex = 25
-        Me.CheckBox2.Text = "Jeg samtykker i at blodbanken kan hendvende seg til min tidligere blodbank for å " &
+        Me.CheckBoxPrevGet.AutoSize = True
+        Me.CheckBoxPrevGet.Location = New System.Drawing.Point(12, 447)
+        Me.CheckBoxPrevGet.Name = "CheckBoxPrevGet"
+        Me.CheckBoxPrevGet.Size = New System.Drawing.Size(516, 17)
+        Me.CheckBoxPrevGet.TabIndex = 25
+        Me.CheckBoxPrevGet.Text = "Jeg samtykker i at blodbanken kan hendvende seg til min tidligere blodbank for å " &
     "innhente opplysninger."
-        Me.CheckBox2.UseVisualStyleBackColor = True
+        Me.CheckBoxPrevGet.UseVisualStyleBackColor = True
         '
         'Label13
         '
@@ -280,24 +280,24 @@ Partial Class registeringAvNyeBlodgivere
         Me.Label13.TabIndex = 26
         Me.Label13.Text = "Har du spørsmål av medisinsk karakter, ta direkte kontakt med blodbanken."
         '
-        'CheckBox3
+        'CheckBoxGetInfo
         '
-        Me.CheckBox3.AutoSize = True
-        Me.CheckBox3.Location = New System.Drawing.Point(11, 508)
-        Me.CheckBox3.Name = "CheckBox3"
-        Me.CheckBox3.Size = New System.Drawing.Size(244, 17)
-        Me.CheckBox3.TabIndex = 27
-        Me.CheckBox3.Text = "Jeg vil gjerne motta informasjon fra Røde Kors."
-        Me.CheckBox3.UseVisualStyleBackColor = True
+        Me.CheckBoxGetInfo.AutoSize = True
+        Me.CheckBoxGetInfo.Location = New System.Drawing.Point(11, 508)
+        Me.CheckBoxGetInfo.Name = "CheckBoxGetInfo"
+        Me.CheckBoxGetInfo.Size = New System.Drawing.Size(244, 17)
+        Me.CheckBoxGetInfo.TabIndex = 27
+        Me.CheckBoxGetInfo.Text = "Jeg vil gjerne motta informasjon fra Røde Kors."
+        Me.CheckBoxGetInfo.UseVisualStyleBackColor = True
         '
-        'Button1
+        'ButtonSend
         '
-        Me.Button1.Location = New System.Drawing.Point(11, 554)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 23)
-        Me.Button1.TabIndex = 28
-        Me.Button1.Text = "Send"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.ButtonSend.Location = New System.Drawing.Point(11, 554)
+        Me.ButtonSend.Name = "ButtonSend"
+        Me.ButtonSend.Size = New System.Drawing.Size(75, 23)
+        Me.ButtonSend.TabIndex = 28
+        Me.ButtonSend.Text = "Send"
+        Me.ButtonSend.UseVisualStyleBackColor = True
         '
         'Label14
         '
@@ -310,41 +310,116 @@ Partial Class registeringAvNyeBlodgivere
         Me.Label14.Text = "Ved å sende inn dette skjema samtykker jeg i at BloodBank Manager kan lagre min i" &
     "nformasjon i 3 måneder og at min blodbank registerer meg i sitt system."
         '
+        'TextBoxDoB
+        '
+        Me.TextBoxDoB.Location = New System.Drawing.Point(87, 137)
+        Me.TextBoxDoB.Mask = "0000-00-00"
+        Me.TextBoxDoB.Name = "TextBoxDoB"
+        Me.TextBoxDoB.Size = New System.Drawing.Size(112, 20)
+        Me.TextBoxDoB.TabIndex = 30
+        '
+        'LabelFeilMelding
+        '
+        Me.LabelFeilMelding.AutoSize = True
+        Me.LabelFeilMelding.BackColor = System.Drawing.SystemColors.Control
+        Me.LabelFeilMelding.ForeColor = System.Drawing.Color.DarkRed
+        Me.LabelFeilMelding.Location = New System.Drawing.Point(327, 413)
+        Me.LabelFeilMelding.Name = "LabelFeilMelding"
+        Me.LabelFeilMelding.Size = New System.Drawing.Size(80, 13)
+        Me.LabelFeilMelding.TabIndex = 31
+        Me.LabelFeilMelding.Text = "PLACEHOLDer"
+        '
+        'TextBoxBrukernavn
+        '
+        Me.TextBoxBrukernavn.Location = New System.Drawing.Point(591, 76)
+        Me.TextBoxBrukernavn.Name = "TextBoxBrukernavn"
+        Me.TextBoxBrukernavn.Size = New System.Drawing.Size(136, 20)
+        Me.TextBoxBrukernavn.TabIndex = 32
+        '
+        'Label15
+        '
+        Me.Label15.AutoSize = True
+        Me.Label15.Location = New System.Drawing.Point(484, 79)
+        Me.Label15.Name = "Label15"
+        Me.Label15.Size = New System.Drawing.Size(101, 13)
+        Me.Label15.TabIndex = 33
+        Me.Label15.Text = "Ønsket brukernavn:"
+        '
+        'TextBoxPassord
+        '
+        Me.TextBoxPassord.Location = New System.Drawing.Point(591, 102)
+        Me.TextBoxPassord.Name = "TextBoxPassord"
+        Me.TextBoxPassord.Size = New System.Drawing.Size(136, 20)
+        Me.TextBoxPassord.TabIndex = 34
+        '
+        'Label16
+        '
+        Me.Label16.AutoSize = True
+        Me.Label16.Location = New System.Drawing.Point(501, 105)
+        Me.Label16.Name = "Label16"
+        Me.Label16.Size = New System.Drawing.Size(84, 13)
+        Me.Label16.TabIndex = 35
+        Me.Label16.Text = "Ønsket passord:"
+        '
+        'ComboBox1
+        '
+        Me.ComboBox1.FormattingEnabled = True
+        Me.ComboBox1.Location = New System.Drawing.Point(259, 36)
+        Me.ComboBox1.Name = "ComboBox1"
+        Me.ComboBox1.Size = New System.Drawing.Size(121, 21)
+        Me.ComboBox1.TabIndex = 36
+        '
+        'Label17
+        '
+        Me.Label17.AutoSize = True
+        Me.Label17.Location = New System.Drawing.Point(256, 20)
+        Me.Label17.Name = "Label17"
+        Me.Label17.Size = New System.Drawing.Size(125, 13)
+        Me.Label17.TabIndex = 37
+        Me.Label17.Text = "Hvilken blodtype har du?"
+        '
         'registeringAvNyeBlodgivere
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Cornsilk
         Me.ClientSize = New System.Drawing.Size(997, 596)
+        Me.Controls.Add(Me.Label17)
+        Me.Controls.Add(Me.ComboBox1)
+        Me.Controls.Add(Me.Label16)
+        Me.Controls.Add(Me.TextBoxPassord)
+        Me.Controls.Add(Me.Label15)
+        Me.Controls.Add(Me.TextBoxBrukernavn)
+        Me.Controls.Add(Me.LabelFeilMelding)
+        Me.Controls.Add(Me.TextBoxDoB)
         Me.Controls.Add(Me.Label14)
-        Me.Controls.Add(Me.Button1)
-        Me.Controls.Add(Me.CheckBox3)
+        Me.Controls.Add(Me.ButtonSend)
+        Me.Controls.Add(Me.CheckBoxGetInfo)
         Me.Controls.Add(Me.Label13)
-        Me.Controls.Add(Me.CheckBox2)
-        Me.Controls.Add(Me.TextBox11)
+        Me.Controls.Add(Me.CheckBoxPrevGet)
+        Me.Controls.Add(Me.TextBoxPrevBank)
         Me.Controls.Add(Me.Label12)
-        Me.Controls.Add(Me.CheckBox1)
-        Me.Controls.Add(Me.TextBox10)
+        Me.Controls.Add(Me.CheckBoxGiveBefore)
+        Me.Controls.Add(Me.TextBoxEmail)
         Me.Controls.Add(Me.Label11)
         Me.Controls.Add(Me.Label10)
-        Me.Controls.Add(Me.TextBox8)
-        Me.Controls.Add(Me.TextBox9)
+        Me.Controls.Add(Me.TextBoxPhone2)
+        Me.Controls.Add(Me.TextBoxPhone1)
         Me.Controls.Add(Me.Label9)
-        Me.Controls.Add(Me.TextBox7)
-        Me.Controls.Add(Me.TextBox6)
+        Me.Controls.Add(Me.TextBoxPostSt)
+        Me.Controls.Add(Me.TextBoxPostNr)
         Me.Controls.Add(Me.Label8)
-        Me.Controls.Add(Me.TextBox5)
+        Me.Controls.Add(Me.TextBoxAdr)
         Me.Controls.Add(Me.Label7)
-        Me.Controls.Add(Me.TextBox4)
+        Me.Controls.Add(Me.TextBoxPersonNum)
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.Label5)
-        Me.Controls.Add(Me.TextBox3)
         Me.Controls.Add(Me.Label4)
-        Me.Controls.Add(Me.TextBox2)
+        Me.Controls.Add(Me.TextBoxLastName)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.ComboBox1)
-        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.ComboBoxLok)
+        Me.Controls.Add(Me.TextBoxFirstName)
         Me.Controls.Add(Me.Label1)
         Me.Name = "registeringAvNyeBlodgivere"
         Me.Text = "Form2"
@@ -354,33 +429,40 @@ Partial Class registeringAvNyeBlodgivere
     End Sub
 
     Friend WithEvents Label1 As Label
-    Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents ComboBox1 As ComboBox
+    Friend WithEvents TextBoxFirstName As TextBox
+    Friend WithEvents ComboBoxLok As ComboBox
     Friend WithEvents Label2 As Label
-    Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents TextBoxLastName As TextBox
     Friend WithEvents Label3 As Label
-    Friend WithEvents TextBox3 As TextBox
     Friend WithEvents Label4 As Label
     Friend WithEvents Label5 As Label
-    Friend WithEvents TextBox4 As TextBox
+    Friend WithEvents TextBoxPersonNum As TextBox
     Friend WithEvents Label6 As Label
-    Friend WithEvents TextBox5 As TextBox
+    Friend WithEvents TextBoxAdr As TextBox
     Friend WithEvents Label7 As Label
-    Friend WithEvents TextBox6 As TextBox
+    Friend WithEvents TextBoxPostNr As TextBox
     Friend WithEvents Label8 As Label
-    Friend WithEvents TextBox7 As TextBox
-    Friend WithEvents TextBox9 As TextBox
+    Friend WithEvents TextBoxPostSt As TextBox
+    Friend WithEvents TextBoxPhone1 As TextBox
     Friend WithEvents Label9 As Label
-    Friend WithEvents TextBox8 As TextBox
+    Friend WithEvents TextBoxPhone2 As TextBox
     Friend WithEvents Label10 As Label
-    Friend WithEvents TextBox10 As TextBox
+    Friend WithEvents TextBoxEmail As TextBox
     Friend WithEvents Label11 As Label
-    Friend WithEvents CheckBox1 As CheckBox
-    Friend WithEvents TextBox11 As TextBox
+    Friend WithEvents CheckBoxGiveBefore As CheckBox
+    Friend WithEvents TextBoxPrevBank As TextBox
     Friend WithEvents Label12 As Label
-    Friend WithEvents CheckBox2 As CheckBox
+    Friend WithEvents CheckBoxPrevGet As CheckBox
     Friend WithEvents Label13 As Label
-    Friend WithEvents CheckBox3 As CheckBox
-    Friend WithEvents Button1 As Button
+    Friend WithEvents CheckBoxGetInfo As CheckBox
+    Friend WithEvents ButtonSend As Button
     Friend WithEvents Label14 As Label
+    Friend WithEvents TextBoxDoB As MaskedTextBox
+    Friend WithEvents LabelFeilMelding As Label
+    Friend WithEvents TextBoxBrukernavn As TextBox
+    Friend WithEvents Label15 As Label
+    Friend WithEvents TextBoxPassord As TextBox
+    Friend WithEvents Label16 As Label
+    Friend WithEvents ComboBox1 As ComboBox
+    Friend WithEvents Label17 As Label
 End Class
