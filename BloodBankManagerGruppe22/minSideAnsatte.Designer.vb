@@ -47,6 +47,7 @@ Partial Class minSideAnsatte
         Me.Label9 = New System.Windows.Forms.Label()
         Me.Button4 = New System.Windows.Forms.Button()
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.DateTimePicker1_DOB = New System.Windows.Forms.DateTimePicker()
         Me.SuspendLayout()
         '
         'TextBox_Pnummer
@@ -265,12 +266,22 @@ Partial Class minSideAnsatte
         Me.ComboBox1.Size = New System.Drawing.Size(256, 26)
         Me.ComboBox1.TabIndex = 42
         '
+        'DateTimePicker1_DOB
+        '
+        Me.DateTimePicker1_DOB.CustomFormat = "yyyy-MM-dd"
+        Me.DateTimePicker1_DOB.Format = System.Windows.Forms.DateTimePickerFormat.Custom
+        Me.DateTimePicker1_DOB.Location = New System.Drawing.Point(641, 290)
+        Me.DateTimePicker1_DOB.Name = "DateTimePicker1_DOB"
+        Me.DateTimePicker1_DOB.Size = New System.Drawing.Size(200, 20)
+        Me.DateTimePicker1_DOB.TabIndex = 43
+        '
         'minSideAnsatte
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Cornsilk
         Me.ClientSize = New System.Drawing.Size(1266, 723)
+        Me.Controls.Add(Me.DateTimePicker1_DOB)
         Me.Controls.Add(Me.ComboBox1)
         Me.Controls.Add(Me.Button4)
         Me.Controls.Add(Me.TextBox_ID)
@@ -328,4 +339,5 @@ Partial Class minSideAnsatte
     Friend WithEvents Label9 As Label
     Friend WithEvents Button4 As Button
     Friend WithEvents ComboBox1 As ComboBox
+    Friend WithEvents DateTimePicker1_DOB As DateTimePicker
 End Class

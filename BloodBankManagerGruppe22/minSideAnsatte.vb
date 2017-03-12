@@ -1,4 +1,6 @@
 ﻿Imports MySql.Data.MySqlClient
+
+'huske å koble hver form og knapper hvor det trengs tilkboling til database, da vil det fungere å hente inn database verdier
 Public Class minSideAnsatte
     Dim MysqlConn As MySqlConnection
     Dim COMMAND As MySqlCommand
@@ -46,7 +48,7 @@ Public Class minSideAnsatte
         Try
             MysqlConn.Open()
             Dim Query As String
-            Query = "insert into g_oops_22.minsideAnsatte(ID,fornavn, etternavn, fødselsdato, personnummer, adresse, postnummer, poststed, telefonnummerEn, telefonnummerTo, epost) values ('" & TextBox_ID.Text & "','" & TextBox_Fnavn.Text & "','" & TextBox_Enavn.Text & "','" & TextBox_Fdato.Text & "','" & TextBox_Pnummer.Text & "', '" & TextBox_Adresse.Text & "','" & TextBox_PostNr.Text & "','" & TextBox_PostSted.Text & "','" & TextBox_TlfEn.Text & "','" & TextBox_TlfTo.Text & "', '" & TextBox_Epost.Text & "')"
+            Query = "INSERT INTO g_oops_22.minsideAnsatte(ID,fornavn, etternavn, fødselsdato, personnummer, adresse, postnummer, poststed, telefonnummerEn, telefonnummerTo, epost, DOB) values ('" & TextBox_ID.Text & "','" & TextBox_Fnavn.Text & "','" & TextBox_Enavn.Text & "','" & TextBox_Fdato.Text & "','" & TextBox_Pnummer.Text & "', '" & TextBox_Adresse.Text & "','" & TextBox_PostNr.Text & "','" & TextBox_PostSted.Text & "','" & TextBox_TlfEn.Text & "','" & TextBox_TlfTo.Text & "', '" & TextBox_Epost.Text & "','" & DateTimePicker1_DOB.Text & "')"
             COMMAND = New MySqlCommand(Query, MysqlConn)
             READER = COMMAND.ExecuteReader
 
@@ -61,7 +63,7 @@ Public Class minSideAnsatte
             MysqlConn.Dispose()
         End Try
 
-    End Sub
+    End Sub 'save knapp
 
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
         MysqlConn = New MySqlConnection
@@ -86,7 +88,7 @@ Public Class minSideAnsatte
         Finally
             MysqlConn.Dispose()
         End Try
-    End Sub
+    End Sub 'update knapp
 
     Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
         MysqlConn = New MySqlConnection
@@ -111,7 +113,7 @@ Public Class minSideAnsatte
         Finally
             MysqlConn.Dispose()
         End Try
-    End Sub
+    End Sub 'delete knapp
 
     Private Sub ComboBox1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox1.SelectedIndexChanged
         'her henter den inn verdier fra databasen til comboboxen, deretter når vi velger det aktuelle navnet/bruker vises informasjon om den aktuelle bruker.

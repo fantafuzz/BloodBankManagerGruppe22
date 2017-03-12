@@ -49,7 +49,7 @@ Partial Class minSideForm
         Me.ListBox1 = New System.Windows.Forms.ListBox()
         Me.TextBox11 = New System.Windows.Forms.TextBox()
         Me.Label13 = New System.Windows.Forms.Label()
-        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
+        Me.DateTimePicker1_nesteTime = New System.Windows.Forms.DateTimePicker()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
@@ -231,7 +231,7 @@ Partial Class minSideForm
         Me.Button1.Location = New System.Drawing.Point(14, 497)
         Me.Button1.Margin = New System.Windows.Forms.Padding(2)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(114, 19)
+        Me.Button1.Size = New System.Drawing.Size(207, 19)
         Me.Button1.TabIndex = 44
         Me.Button1.Text = "Bestill time"
         Me.Button1.UseVisualStyleBackColor = True
@@ -270,14 +270,14 @@ Partial Class minSideForm
         Me.Label13.TabIndex = 48
         Me.Label13.Text = "Siste Blodgivning Dato:"
         '
-        'DateTimePicker1
+        'DateTimePicker1_nesteTime
         '
-        Me.DateTimePicker1.CustomFormat = "dd-MM-yyyy"
-        Me.DateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom
-        Me.DateTimePicker1.Location = New System.Drawing.Point(14, 472)
-        Me.DateTimePicker1.Name = "DateTimePicker1"
-        Me.DateTimePicker1.Size = New System.Drawing.Size(114, 20)
-        Me.DateTimePicker1.TabIndex = 50
+        Me.DateTimePicker1_nesteTime.CustomFormat = "yyyy-MM-dd"
+        Me.DateTimePicker1_nesteTime.Format = System.Windows.Forms.DateTimePickerFormat.Custom
+        Me.DateTimePicker1_nesteTime.Location = New System.Drawing.Point(14, 472)
+        Me.DateTimePicker1_nesteTime.Name = "DateTimePicker1_nesteTime"
+        Me.DateTimePicker1_nesteTime.Size = New System.Drawing.Size(207, 20)
+        Me.DateTimePicker1_nesteTime.TabIndex = 50
         '
         'Button2
         '
@@ -295,7 +295,7 @@ Partial Class minSideForm
         Me.BackColor = System.Drawing.Color.Cornsilk
         Me.ClientSize = New System.Drawing.Size(891, 630)
         Me.Controls.Add(Me.Button2)
-        Me.Controls.Add(Me.DateTimePicker1)
+        Me.Controls.Add(Me.DateTimePicker1_nesteTime)
         Me.Controls.Add(Me.TextBox11)
         Me.Controls.Add(Me.Label13)
         Me.Controls.Add(Me.ListBox1)
@@ -356,6 +356,6 @@ Partial Class minSideForm
     Friend WithEvents ListBox1 As ListBox
     Friend WithEvents TextBox11 As TextBox
     Friend WithEvents Label13 As Label
-    Friend WithEvents DateTimePicker1 As DateTimePicker
+    Friend WithEvents DateTimePicker1_nesteTime As DateTimePicker
     Friend WithEvents Button2 As Button
 End Class
