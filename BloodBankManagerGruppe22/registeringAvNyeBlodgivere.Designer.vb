@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class registeringAvNyeBlodgivere
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class registeringAvNyeBlodgivere
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.TextBoxFirstName = New System.Windows.Forms.TextBox()
@@ -202,6 +202,7 @@ Partial Class registeringAvNyeBlodgivere
         '
         'TextBoxPhone2
         '
+        Me.TextBoxPhone2.Enabled = False
         Me.TextBoxPhone2.Location = New System.Drawing.Point(236, 292)
         Me.TextBoxPhone2.Name = "TextBoxPhone2"
         Me.TextBoxPhone2.Size = New System.Drawing.Size(134, 20)

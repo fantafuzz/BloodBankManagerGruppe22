@@ -25,12 +25,13 @@ Public Class registeringAvNyeBlodgivere
         ElseIf comboBoxBlodType.SelectedIndex = -1 Then
             LabelFeilMelding.Text = "Du må velge blodtype. Om du er usikker, spør en ansatt"
             LabelFeilMelding.Location = New Point(623, 39)
+            Exit Sub
         ElseIf TextBoxFirstName.Text = "" Or TextBoxLastName.Text = "" Then
             LabelFeilMelding.Text = "Du må skrive inn fornavn og etternavn"
             LabelFeilMelding.Location = New Point(386, 93)
             TextBoxFirstName.Focus()
             Exit Sub
-        ElseIf TextBoxDoB.Text = "" Or IsNumeric(TextBoxDoB.Text) = False Then
+        ElseIf TextBoxDoB.Text = "" Then
             LabelFeilMelding.Text = "Du må skrive inn gyldig fødselsdato"
             LabelFeilMelding.Location = New Point(292, 140)
             TextBoxDoB.Focus()
@@ -45,21 +46,16 @@ Public Class registeringAvNyeBlodgivere
             LabelFeilMelding.Location = New Point(386, 211)
             TextBoxAdr.Focus()
             Exit Sub
-        ElseIf TextBoxPostNr.Text = "" Or IsNumeric(TextBoxPostNr.Text) Or TextBoxPostSt.Text = "" = False Then
+        ElseIf TextBoxPostNr.Text = "" Or IsNumeric(TextBoxPostNr.Text) = False Or TextBoxPostSt.Text = "" Then
             LabelFeilMelding.Text = "Du må skrive inn gyldig postnummer og poststed"
             LabelFeilMelding.Location = New Point(355, 253)
             TextBoxPostNr.Focus()
             Exit Sub
         ElseIf TextBoxPhone1.Text = "" Or IsNumeric(TextBoxPhone1.Text) = False Then
-            If TextBoxPhone2.Text = "" Or IsNumeric(TextBoxPhone2.Text) = False Then
-                LabelFeilMelding.Text = "Du må skrive inn et gyldig telefonnummer"
+            LabelFeilMelding.Text = "Du må skrive inn et gyldig telefonnummer"
                 LabelFeilMelding.Location = New Point(376, 295)
                 TextBoxPhone1.Focus()
-                Exit Sub
-            Else
-                TextBoxPhone1.Text = TextBoxPhone2.Text
-                TextBoxPhone2.Text = ""
-            End If
+            Exit Sub
         ElseIf TextBoxEmail.Text = "" Then
             LabelFeilMelding.Text = "Du må skrive inn en gyldig epostadresse"
             LabelFeilMelding.Location = New Point(386, 332)
@@ -80,12 +76,15 @@ Public Class registeringAvNyeBlodgivere
         Dim fornavn As String = TextBoxFirstName.Text
         Dim etternavn As String = TextBoxLastName.Text
         Dim fodselsdato As String = TextBoxDoB.Text  'Har bare daten som en string, siden du kan legge inn en date som en riktig formatert string.
-        Dim personnummer As Integer = (TextBoxPersonNum.Text)
+        Dim personnummer As String = TextBoxPersonNum.Text
         Dim adresse As String = TextBoxAdr.Text   'String er alle tegn, som "!#"%&/321426asdfasdfa" er en godkjent string.
         Dim postnummer As Integer = CInt(TextBoxPostNr.Text)
         Dim poststed As String = TextBoxPostSt.Text
         Dim telefonnummerEn As Integer = CInt(TextBoxPhone1.Text)
-        Dim telefonnummerTo As Integer = CInt(TextBoxPhone2.Text)
+        Dim telefonnummerTo As Integer
+        If TextBoxPhone2.Text <> "" Then
+            telefonnummerTo = CInt(TextBoxPhone2.Text)
+        End If
         Dim epost As String = TextBoxEmail.Text
         Dim kjonn As String
         If RadioButtonKvinne.Checked Then
@@ -141,7 +140,6 @@ Public Class registeringAvNyeBlodgivere
         sqlAddBlodgiver.Parameters.AddWithValue("@adresse", adresse)
         sqlAddBlodgiver.Parameters.AddWithValue("@telefonnummerEn", telefonnummerEn)
         sqlAddBlodgiver.Parameters.AddWithValue("@telefonnummerTo", telefonnummerTo)
-        sqlAddBlodgiver.Parameters.AddWithValue("@epost", epost)
         sqlAddBlodgiver.Parameters.AddWithValue("@kjonn", kjonn)
         sqlAddBlodgiver.Parameters.AddWithValue("@blodtype", blodtype)
         sqlAddBlodgiver.Parameters.AddWithValue("@onsket_lok", blodgivningLokasjon)
@@ -156,8 +154,16 @@ Public Class registeringAvNyeBlodgivere
     End Sub
 
     Private Sub registeringAvNyeBlodgivere_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        tilkobling = New MySqlConnection("Server=;Database=;Uid=;Pwd=")
+        tilkobling = New MySqlConnection("Server=mysql.stud.iie.ntnu.no;Database=g_oops_22;Uid=g_oops_22;Pwd=BtUDpVoR")
         tilkobling.Open()
+    End Sub
+
+    Private Sub TextBoxPhone1_TextChanged(sender As Object, e As EventArgs) Handles TextBoxPhone1.TextChanged
+        If TextBoxPhone1.Text = "" Then
+            TextBoxPhone2.Enabled = False
+        ElseIf TextBoxPhone1.Text <> "" Then
+            TextBoxPhone2.Enabled = True
+        End If
     End Sub
 End Class
 
