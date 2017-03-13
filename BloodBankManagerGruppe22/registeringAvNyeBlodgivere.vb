@@ -7,10 +7,6 @@ Public Class registeringAvNyeBlodgivere
 
 
 
-    'Update: Har nå lagt til en del tilkoblinger til databasen med de ulike objektene i minside form. Har forsatt en del å legge til, har oprettet en ny minSide tabell
-    ' i databasen. Jeg tenkte vi kunne ha en hel minside tabell i databasen hvor vi sender opplysninger fra vb.net minside form til denne tabell. Hva tenker dere om det?
-
-    'får ikke konvertert integer som en string, og når jeg prøver å kjøre får jeg en melding om dette.
 
 
 
@@ -121,7 +117,7 @@ Public Class registeringAvNyeBlodgivere
         sql1.Parameters.AddWithValue("@telefonnummerEn", telefonnummerEn)
         sql1.Parameters.AddWithValue("@telefonnummerTo", telefonnummerTo)
         sql1.Parameters.AddWithValue("@epost", epost)
-        sql1.Parameters.AddWithValue("@hvilkenBlodbank", hvilkenBlodbank)
+        'sql1.Parameters.AddWithValue("@hvilkenBlodbank", hvilkenBlodbank)
         sql1.ExecuteNonQuery()
 
 
@@ -149,9 +145,45 @@ Public Class registeringAvNyeBlodgivere
         Me.Close()
     End Sub
 
-    Private Sub registeringAvNyeBlodgivere_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        tilkobling = New MySqlConnection("Server=;Database=;Uid=;Pwd=")
-        tilkobling.Open()
+
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        Dim MysqlConn As MySqlConnection
+        Dim COMMAND As MySqlCommand
+
+
+
+        Dim nyBrukernavn As String = TextBoxBrukernavn.Text
+        Dim nyPassord As String = TextBoxPassord.Text
+
+        MysqlConn = New MySqlConnection
+        MysqlConn.ConnectionString =
+            "Server=;Database=;Uid=;Pwd="
+        Dim READER As MySqlDataReader
+
+        Try
+            MysqlConn.Open()
+            Dim Query As String
+            Query = "INSERT INTO g_oops_22.bruker(brukernavn, passord) values ('" & TextBoxBrukernavn.Text & "','" & TextBoxPassord.Text & "')"
+            COMMAND = New MySqlCommand(Query, MysqlConn)
+            READER = Command.ExecuteReader
+
+
+
+            MessageBox.Show("Brukernavn og Passord er oprettet.")
+            MysqlConn.Close()
+
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+        Finally
+            MysqlConn.Dispose()
+        End Try
+
+        If TextBoxBrukernavn.Text = "" And TextBoxPassord.Text = "" Then
+            MessageBox.Show("Du må fylle inn brukernavn og passord!")
+        End If
+
+
     End Sub
 End Class
 
