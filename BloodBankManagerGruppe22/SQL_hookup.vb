@@ -2,6 +2,7 @@
 'This class is used for all SQL-interaction.
 'Spørsmål? Skal vi bruke en "public" versjon av denne, som vi lager i form1? Eller skal vi konstruere en egen i hver?
 Public Class SQL_hookup
+    Private salt As String = "detteErEnVeldigLangHashSomGjorAtVaarePassordBlirMyeSikrere"
     Private username As String
     Private password As String
     Private databasename As String
@@ -22,6 +23,19 @@ Public Class SQL_hookup
         connstring = "Server=" & server & ";" & "Database=" & databasename & ";" & "Uid=" & username & ";" & "Pwd=" & password & ";"
         connection.ConnectionString = connstring
     End Sub
+
+    Public Function hash(passord As String, salt As String) As String
+        Dim hashObject = New Security.Cryptography.SHA256Managed()
+        Dim bytes = System.Text.Encoding.ASCII.GetBytes(passord & salt)
+        bytes = hashObject.ComputeHash(bytes)
+
+        Dim hexString As String = ""
+        For Each aByte In bytes
+            hexString &= aByte.ToString("x2")
+        Next
+
+        Return hexString
+    End Function
     Public Function Query(ByVal sql As String) As DataTable
         'Denne tar hvilken som helst SQL-query, og returnerer en "DataTable" som inneholder tabellen med resultatet av queryen. Den kan også brukes for å legge inn info, men er usikker på hva som returneres. Det er ikke så viktig.
         'Ikke bruk denne om du skal ha bruker-input i SQL-queryen. Denne skal kun brukes der hele queryen er hardkodet.

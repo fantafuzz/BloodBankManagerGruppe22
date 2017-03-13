@@ -19,9 +19,12 @@ Public Class registeringAvNyeBlodgivere
 
         If ComboBoxLok.SelectedIndex = -1 Then
             LabelFeilMelding.Text = "Du må velge avdeling du ønsker å gi blod hos"
-            LabelFeilMelding.Location = New Point(249, 39)
+            LabelFeilMelding.Location = New Point(163, 20)
             ComboBoxLok.Focus()
             Exit Sub
+        ElseIf comboBoxBlodType.SelectedIndex = -1 Then
+            LabelFeilMelding.Text = "Du må velge blodtype. Om du er usikker, spør en ansatt"
+            LabelFeilMelding.Location = New Point(623, 39)
         ElseIf TextBoxFirstName.Text = "" Or TextBoxLastName.Text = "" Then
             LabelFeilMelding.Text = "Du må skrive inn fornavn og etternavn"
             LabelFeilMelding.Location = New Point(386, 93)
@@ -62,15 +65,14 @@ Public Class registeringAvNyeBlodgivere
             LabelFeilMelding.Location = New Point(386, 332)
             TextBoxEmail.Focus()
             Exit Sub
-        ElseIf TextBoxBrukernavn.Text = "" Then
-            LabelFeilMelding.Text = "Du må skrive inn et ønsket brukernavn"
-            LabelFeilMelding.Location = New Point(733, 79)
-            TextBoxBrukernavn.Focus()
-            Exit Sub
         ElseIf TextBoxPassord.Text = "" Then
             LabelFeilMelding.Text = "Du må skrive inn ønsket passord"
             LabelFeilMelding.Location = New Point(733, 105)
             TextBoxPassord.Focus()
+            Exit Sub
+        ElseIf RadioButtonMann.Checked = False And RadioButtonKvinne.Checked = False Then
+            LabelFeilMelding.Text = "Du må velge et kjønn"
+            LabelFeilMelding.Location = New Point(458, 93)
             Exit Sub
         End If
 
@@ -85,8 +87,17 @@ Public Class registeringAvNyeBlodgivere
         Dim telefonnummerEn As Integer = CInt(TextBoxPhone1.Text)
         Dim telefonnummerTo As Integer = CInt(TextBoxPhone2.Text)
         Dim epost As String = TextBoxEmail.Text
+        Dim kjonn As String
+        If RadioButtonKvinne.Checked Then
+            kjonn = "kvinne"
+        ElseIf RadioButtonMann.Checked Then
+            kjonn = "mann"
+        Else
+            kjonn = ":("
+        End If
+        Dim blodtype As String = ComboBoxBlodType.SelectedIndex
         Dim blodBefore As Boolean = False
-        Dim hvilkenBlodbank As String
+        Dim hvilkenBlodbank As String = ""
         Dim samtykke As Boolean = False
         If CheckBoxGiveBefore.Checked Then
             blodBefore = True
@@ -101,49 +112,44 @@ Public Class registeringAvNyeBlodgivere
             samtykke = CheckBoxGetInfo.Checked
         End If
         Dim infoRodekors As Boolean = CheckBoxGetInfo.Checked
-        Dim brukernavn As String = TextBoxBrukernavn.Text
         Dim passord As String = TextBoxPassord.Text
 
 
 
+        Dim sqlAddBruker As New MySqlCommand("INSERT INTO bruker (fornavn, etternavn, epost, passord) values (@fornavn, @etternavn, @epost, @passord)", tilkobling) 'skal vi legge til denne data i samme tabell som minside for mer oversikt? Nei, for det fjerner integriteten til tabellen.
+        sqlAddBruker.Parameters.AddWithValue("@fornavn", fornavn)
+        sqlAddBruker.Parameters.AddWithValue("@etternavn", etternavn)
+        sqlAddBruker.Parameters.AddWithValue("@epost", epost)
+        sqlAddBruker.Parameters.AddWithValue("@passord", passord)
+        sqlAddBruker.ExecuteNonQuery()
 
-        Dim sql As New MySqlCommand("INSERT INTO bruker (fornavn, etternavn, brukernavn, passord) values (@fornavn, @etternavn, @brukernavn, @passord)", tilkobling) 'skal vi legge til denne data i samme tabell som minside for mer oversikt? Nei, for det fjerner integriteten til tabellen.
-        sql.Parameters.AddWithValue("@fornavn", fornavn)
-        sql.Parameters.AddWithValue("@etternavn", etternavn)
-        sql.Parameters.AddWithValue("@brukernavn", brukernavn)
-        sql.Parameters.AddWithValue("@passord", passord)
-        sql.ExecuteNonQuery()
-
-        Dim sql1 As New MySqlCommand("INSERT INTO blodgiver (fodselsdato, personnummer, adresse, , postnr, poststed, telefon_1, telefon_2, epost, kjonn, ) values (@personnummer, @adresse, @telefonnummerEn, @telefonnummerTo, @epost, @hvilkenBlodbank)", tilkobling)
-        'sql1.Parameters.AddWithValue("@birthdate", fødselsdato) ' JEG KOM HIT I GÅR SØNDAG LUL
-        sql1.Parameters.AddWithValue("@personnummer", personnummer)
-        sql1.Parameters.AddWithValue("@adresse", adresse)
-        sql1.Parameters.AddWithValue("@telefonnummerEn", telefonnummerEn)
-        sql1.Parameters.AddWithValue("@telefonnummerTo", telefonnummerTo)
-        sql1.Parameters.AddWithValue("@epost", epost)
-        sql1.Parameters.AddWithValue("@hvilkenBlodbank", hvilkenBlodbank)
-        sql1.ExecuteNonQuery()
-
-
-        If CheckBoxGiveBefore.Checked Then 'har du gitt blod før - checkbox
-            Dim sql2 As New MySqlCommand("INSERT INTO minsideNy(gittBlodFør) values(@gittBlodFør)", tilkobling)
-            sql2.Parameters.AddWithValue("@gittBlodFør", blodBefore)
-            sql2.ExecuteNonQuery()
-        End If
-
-        If CheckBoxPrevGet.Checked Then 'samtykke av blodgiver
-            Dim sql3 As New MySqlCommand("INSERT INTO minsideNy(samtykke) values(@samtykke)", tilkobling)
-            sql3.Parameters.AddWithValue("@samtykke", samtykke)
-            sql3.ExecuteNonQuery()
-        End If
-
-        If CheckBoxGetInfo.Checked Then 'vil du motta informasjon fra Røde kors
-            Dim sql4 As New MySqlCommand("INSERT INTO minsideNy(rødekorsInfo) values(@rødekorsInfo)", tilkobling)
-            sql4.Parameters.AddWithValue("@rødekorsInfo", infoRodekors)
-            sql4.ExecuteNonQuery()
-        End If
-
-
+        '      Dim sqlGetBrukerId As New MySqlCommand("SELECT bruker_id FROM bruker WHERE fornavn = @fornavn AND etternavn = @etternavn AND epost = @epost AND passord = @passord")
+        '      Dim brukerid As Integer
+        '       sqlGetBrukerId.Parameters.AddWithValue("@fornavn", fornavn)
+        '      sqlGetBrukerId.Parameters.AddWithValue("@etternavn", etternavn)
+        '      sqlGetBrukerId.Parameters.AddWithValue("@epost", epost)
+        '      sqlGetBrukerId.Parameters.AddWithValue("@passord", passord)
+        '       Dim reader = sqlGetBrukerId.ExecuteReader()
+        '          brukerid = reader("bruker_id")
+        '       End While
+        Dim sqlAddBlodgiver As New MySqlCommand("INSERT INTO blodgiver (blodgiver_bruker_id, fodselsdato, personnummer, adresse, , postnr, poststed, telefon_1, telefon_2, epost, kjonn, blodgiver_blodtype_id, onkset_lok, gitt_for, hvor_gitt, samtykke_for, modta_rode_kors) values ((SELECT bruker_id FROM bruker WHERE @fornavn AND etternavn = @etternavn AND epost = @epost AND passord = @passord), @personnummer, @adresse, @telefonnummerEn, @telefonnummerTo, @epost, @kjonn, (SELECT blodtype_id FROM blodtype WHERE blodtype_id = @blodtype), @onsket_lok, @gitt_for, @hvor_gitt, @samtykke_for, @modta_rode_kors)", tilkobling)
+        sqlAddBlodgiver.Parameters.AddWithValue("@fornavn", fornavn)
+        sqlAddBlodgiver.Parameters.AddWithValue("@etternavn", etternavn)
+        sqlAddBlodgiver.Parameters.AddWithValue("@epost", epost)
+        sqlAddBlodgiver.Parameters.AddWithValue("@passord", passord)
+        sqlAddBlodgiver.Parameters.AddWithValue("@personnummer", personnummer)
+        sqlAddBlodgiver.Parameters.AddWithValue("@adresse", adresse)
+        sqlAddBlodgiver.Parameters.AddWithValue("@telefonnummerEn", telefonnummerEn)
+        sqlAddBlodgiver.Parameters.AddWithValue("@telefonnummerTo", telefonnummerTo)
+        sqlAddBlodgiver.Parameters.AddWithValue("@epost", epost)
+        sqlAddBlodgiver.Parameters.AddWithValue("@kjonn", kjonn)
+        sqlAddBlodgiver.Parameters.AddWithValue("@blodtype", blodtype)
+        sqlAddBlodgiver.Parameters.AddWithValue("@onsket_lok", blodgivningLokasjon)
+        sqlAddBlodgiver.Parameters.AddWithValue("@gitt_for", blodBefore)
+        sqlAddBlodgiver.Parameters.AddWithValue("@hvor_gitt", hvilkenBlodbank)
+        sqlAddBlodgiver.Parameters.AddWithValue("@samtykke_for", samtykke)
+        sqlAddBlodgiver.Parameters.AddWithValue("@modta_rode_kors", infoRodekors)
+        sqlAddBlodgiver.ExecuteNonQuery()
 
         egenSkjemaBolk1.Show()
         Me.Close()

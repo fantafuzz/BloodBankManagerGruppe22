@@ -53,12 +53,12 @@ Partial Class registeringAvNyeBlodgivere
         Me.Label14 = New System.Windows.Forms.Label()
         Me.TextBoxDoB = New System.Windows.Forms.MaskedTextBox()
         Me.LabelFeilMelding = New System.Windows.Forms.Label()
-        Me.TextBoxBrukernavn = New System.Windows.Forms.TextBox()
-        Me.Label15 = New System.Windows.Forms.Label()
         Me.TextBoxPassord = New System.Windows.Forms.TextBox()
         Me.Label16 = New System.Windows.Forms.Label()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.ComboBoxBlodType = New System.Windows.Forms.ComboBox()
         Me.Label17 = New System.Windows.Forms.Label()
+        Me.RadioButtonMann = New System.Windows.Forms.RadioButton()
+        Me.RadioButtonKvinne = New System.Windows.Forms.RadioButton()
         Me.SuspendLayout()
         '
         'Label1
@@ -323,31 +323,15 @@ Partial Class registeringAvNyeBlodgivere
         Me.LabelFeilMelding.AutoSize = True
         Me.LabelFeilMelding.BackColor = System.Drawing.SystemColors.Control
         Me.LabelFeilMelding.ForeColor = System.Drawing.Color.DarkRed
-        Me.LabelFeilMelding.Location = New System.Drawing.Point(327, 413)
+        Me.LabelFeilMelding.Location = New System.Drawing.Point(458, 93)
         Me.LabelFeilMelding.Name = "LabelFeilMelding"
         Me.LabelFeilMelding.Size = New System.Drawing.Size(80, 13)
         Me.LabelFeilMelding.TabIndex = 31
         Me.LabelFeilMelding.Text = "PLACEHOLDer"
         '
-        'TextBoxBrukernavn
-        '
-        Me.TextBoxBrukernavn.Location = New System.Drawing.Point(591, 76)
-        Me.TextBoxBrukernavn.Name = "TextBoxBrukernavn"
-        Me.TextBoxBrukernavn.Size = New System.Drawing.Size(136, 20)
-        Me.TextBoxBrukernavn.TabIndex = 32
-        '
-        'Label15
-        '
-        Me.Label15.AutoSize = True
-        Me.Label15.Location = New System.Drawing.Point(484, 79)
-        Me.Label15.Name = "Label15"
-        Me.Label15.Size = New System.Drawing.Size(101, 13)
-        Me.Label15.TabIndex = 33
-        Me.Label15.Text = "Ønsket brukernavn:"
-        '
         'TextBoxPassord
         '
-        Me.TextBoxPassord.Location = New System.Drawing.Point(591, 102)
+        Me.TextBoxPassord.Location = New System.Drawing.Point(481, 37)
         Me.TextBoxPassord.Name = "TextBoxPassord"
         Me.TextBoxPassord.Size = New System.Drawing.Size(136, 20)
         Me.TextBoxPassord.TabIndex = 34
@@ -355,19 +339,20 @@ Partial Class registeringAvNyeBlodgivere
         'Label16
         '
         Me.Label16.AutoSize = True
-        Me.Label16.Location = New System.Drawing.Point(501, 105)
+        Me.Label16.Location = New System.Drawing.Point(391, 40)
         Me.Label16.Name = "Label16"
         Me.Label16.Size = New System.Drawing.Size(84, 13)
         Me.Label16.TabIndex = 35
         Me.Label16.Text = "Ønsket passord:"
         '
-        'ComboBox1
+        'ComboBoxBlodType
         '
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(259, 36)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(121, 21)
-        Me.ComboBox1.TabIndex = 36
+        Me.ComboBoxBlodType.FormattingEnabled = True
+        Me.ComboBoxBlodType.Items.AddRange(New Object() {"A+", "O+", "B+", "AB+", "A-", "O-", "B-", "AB-"})
+        Me.ComboBoxBlodType.Location = New System.Drawing.Point(259, 36)
+        Me.ComboBoxBlodType.Name = "ComboBoxBlodType"
+        Me.ComboBoxBlodType.Size = New System.Drawing.Size(121, 21)
+        Me.ComboBoxBlodType.TabIndex = 36
         '
         'Label17
         '
@@ -378,18 +363,42 @@ Partial Class registeringAvNyeBlodgivere
         Me.Label17.TabIndex = 37
         Me.Label17.Text = "Hvilken blodtype har du?"
         '
+        'RadioButtonMann
+        '
+        Me.RadioButtonMann.AutoSize = True
+        Me.RadioButtonMann.Location = New System.Drawing.Point(394, 77)
+        Me.RadioButtonMann.Name = "RadioButtonMann"
+        Me.RadioButtonMann.Size = New System.Drawing.Size(52, 17)
+        Me.RadioButtonMann.TabIndex = 38
+        Me.RadioButtonMann.TabStop = True
+        Me.RadioButtonMann.Tag = "1"
+        Me.RadioButtonMann.Text = "Mann"
+        Me.RadioButtonMann.UseVisualStyleBackColor = True
+        '
+        'RadioButtonKvinne
+        '
+        Me.RadioButtonKvinne.AutoSize = True
+        Me.RadioButtonKvinne.Location = New System.Drawing.Point(394, 102)
+        Me.RadioButtonKvinne.Name = "RadioButtonKvinne"
+        Me.RadioButtonKvinne.Size = New System.Drawing.Size(58, 17)
+        Me.RadioButtonKvinne.TabIndex = 39
+        Me.RadioButtonKvinne.TabStop = True
+        Me.RadioButtonKvinne.Tag = "1"
+        Me.RadioButtonKvinne.Text = "Kvinne"
+        Me.RadioButtonKvinne.UseVisualStyleBackColor = True
+        '
         'registeringAvNyeBlodgivere
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Cornsilk
         Me.ClientSize = New System.Drawing.Size(997, 596)
+        Me.Controls.Add(Me.RadioButtonKvinne)
+        Me.Controls.Add(Me.RadioButtonMann)
         Me.Controls.Add(Me.Label17)
-        Me.Controls.Add(Me.ComboBox1)
+        Me.Controls.Add(Me.ComboBoxBlodType)
         Me.Controls.Add(Me.Label16)
         Me.Controls.Add(Me.TextBoxPassord)
-        Me.Controls.Add(Me.Label15)
-        Me.Controls.Add(Me.TextBoxBrukernavn)
         Me.Controls.Add(Me.LabelFeilMelding)
         Me.Controls.Add(Me.TextBoxDoB)
         Me.Controls.Add(Me.Label14)
@@ -459,10 +468,10 @@ Partial Class registeringAvNyeBlodgivere
     Friend WithEvents Label14 As Label
     Friend WithEvents TextBoxDoB As MaskedTextBox
     Friend WithEvents LabelFeilMelding As Label
-    Friend WithEvents TextBoxBrukernavn As TextBox
-    Friend WithEvents Label15 As Label
     Friend WithEvents TextBoxPassord As TextBox
     Friend WithEvents Label16 As Label
-    Friend WithEvents ComboBox1 As ComboBox
+    Friend WithEvents ComboBoxBlodType As ComboBox
     Friend WithEvents Label17 As Label
+    Friend WithEvents RadioButtonMann As RadioButton
+    Friend WithEvents RadioButtonKvinne As RadioButton
 End Class
