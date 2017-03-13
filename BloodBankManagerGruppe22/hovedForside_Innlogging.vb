@@ -87,6 +87,8 @@ Public Class hovedForside_Innlogging
         'Men etter at du har registrert deg og avsluttet applikasjonen og starter på nytt, fungerer det å få logget inn i applikasjonen. Vi må finne ut av hva som er årsaken til dette.
         'SVAR: Det er på grunn av måten jeg skrev den første koden, den henter inn all login-informasjon når formen lastes. Kan kjøre en kjapp fiks nå
 
+
+        MINSIDENAVIGASJON.Show()
     End Sub
 
     Private Sub ButtonRegistrer_Click(sender As Object, e As EventArgs) Handles ButtonRegistrer.Click
