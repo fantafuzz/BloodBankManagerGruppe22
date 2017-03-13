@@ -17,9 +17,9 @@ Public Class minSideAnsatte
     Public Sub FilterData(valueToSeach As String)
 
 
-        'SELECT * FROM bruker WHERE CONCAT(bruker_id, brukernavn, passord)
-        'Dim searchQuery As String = "SELECT * FROM bruker WHERE CONCAT(bruker_id, brukernavn, passord) like '%" & valueToSeach & "%'"
-        Dim searchQuery As String = "SELECT bruker.bruker_id, bruker.fornavn, bruker.etternavn, blodgiver.personnummer FROM bruker, blodgiver WHERE bruker.bruker_id = blodgiver.blodgiver_bruker_id;"
+        'UPDATE: Vi må bruke nedenfor lagt seachQuery for å få søke knappen til fungere slik at den kan søke seg rundt i databasen.
+        Dim searchQuery As String = "SELECT * FROM bruker WHERE CONCAT(bruker_id, fornavn, etternavn, epost) like '%" & valueToSeach & "%'"
+
         Dim command As New MySqlCommand(searchQuery, MysqlConn)
         Dim adapter As New MySqlDataAdapter(command)
         Dim table As New DataTable()
@@ -38,7 +38,7 @@ Public Class minSideAnsatte
 
 
 
-    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+    Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
         FilterData(TextBox1.Text)
     End Sub
 End Class
