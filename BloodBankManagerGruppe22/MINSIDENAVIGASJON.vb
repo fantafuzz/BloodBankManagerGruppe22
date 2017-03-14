@@ -15,10 +15,11 @@ Public Class MINSIDENAVIGASJON
         Try
             MysqlConn.Open()
             Dim Query As String
-            Query = "INSERT INTO g_oops_22.blodtapping(dato) values ('" & DateTimePicker1_nyBlodTime.Text & "')"
+            Query = "insert into g_oops_22.test(dato) values ('" & DateTimePicker1_nyBlodTime.Text & "')"
             COMMAND = New MySqlCommand(Query, MysqlConn)
             READER = COMMAND.ExecuteReader
-
+            'noe i tabellen til blodtapping fører til at jeg får feilmelding når jeg prøver å bestille ny time
+            'prøvde å lage en ny tabell kalt test og dato, da fikk jeg lagt inn bestilt time. 
 
 
             MessageBox.Show("Ny time er bestilt.")
@@ -33,5 +34,10 @@ Public Class MINSIDENAVIGASJON
 
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
 
+    End Sub
+
+    Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
+        hovedForside_Innlogging.Show()
+        Me.Close()
     End Sub
 End Class

@@ -13,11 +13,6 @@ Public Class hovedForside_Innlogging
 
     Private connstring As String
     Private connection As New MySqlConnection()
-    Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
-
-
-    End Sub
 
     Private Sub loadLogInfo()
         connstring = "Server=" & server & ";" & "Database=" & databasename & ";" & "Uid=" & username & ";" & "Pwd=" & password & ";"
@@ -79,16 +74,13 @@ Public Class hovedForside_Innlogging
         Next
         If gotmatch = True Then
             MessageBox.Show("Du er logget inn. Velkommen til blodbanken.")
-            minSideForm.Show()
+            MINSIDENAVIGASJON.Show()
         ElseIf gotmatch = False Then
             MessageBox.Show("Feil brukernavn eller passord.")
         End If
-        'Etter at du har registrert deg første gang, fungerer det ikke å logge inn med det aktuelle brukernavnet og passordet.
-        'Men etter at du har registrert deg og avsluttet applikasjonen og starter på nytt, fungerer det å få logget inn i applikasjonen. Vi må finne ut av hva som er årsaken til dette.
-        'SVAR: Det er på grunn av måten jeg skrev den første koden, den henter inn all login-informasjon når formen lastes. Kan kjøre en kjapp fiks nå
 
 
-        MINSIDENAVIGASJON.Show()
+
     End Sub
 
     Private Sub ButtonRegistrer_Click(sender As Object, e As EventArgs) Handles ButtonRegistrer.Click

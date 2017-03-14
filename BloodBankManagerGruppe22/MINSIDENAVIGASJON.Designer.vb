@@ -27,25 +27,26 @@ Partial Class MINSIDENAVIGASJON
         Me.Button3 = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.DateTimePicker1_nyBlodTime = New System.Windows.Forms.DateTimePicker()
+        Me.Button4 = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'Label1
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.0!, System.Drawing.FontStyle.Bold)
-        Me.Label1.Location = New System.Drawing.Point(12, 24)
+        Me.Label1.Location = New System.Drawing.Point(9, 20)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(379, 39)
+        Me.Label1.Size = New System.Drawing.Size(304, 31)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Velkommen til Minside"
         '
         'Button2
         '
         Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button2.Location = New System.Drawing.Point(19, 67)
-        Me.Button2.Margin = New System.Windows.Forms.Padding(4)
+        Me.Button2.Location = New System.Drawing.Point(14, 54)
         Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(430, 47)
+        Me.Button2.Size = New System.Drawing.Size(322, 38)
         Me.Button2.TabIndex = 25
         Me.Button2.Text = "Endre Mine Opplysninger"
         Me.Button2.UseVisualStyleBackColor = True
@@ -53,10 +54,9 @@ Partial Class MINSIDENAVIGASJON
         'Button3
         '
         Me.Button3.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button3.Location = New System.Drawing.Point(19, 122)
-        Me.Button3.Margin = New System.Windows.Forms.Padding(4)
+        Me.Button3.Location = New System.Drawing.Point(14, 99)
         Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(430, 64)
+        Me.Button3.Size = New System.Drawing.Size(322, 52)
         Me.Button3.TabIndex = 27
         Me.Button3.Text = "Hvor mye blod har jeg gitt til blodbanken?"
         Me.Button3.UseVisualStyleBackColor = True
@@ -64,10 +64,9 @@ Partial Class MINSIDENAVIGASJON
         'Button1
         '
         Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.Location = New System.Drawing.Point(19, 211)
-        Me.Button1.Margin = New System.Windows.Forms.Padding(4)
+        Me.Button1.Location = New System.Drawing.Point(15, 157)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(430, 64)
+        Me.Button1.Size = New System.Drawing.Size(322, 52)
         Me.Button1.TabIndex = 28
         Me.Button1.Text = "Bestill ny blodgivning"
         Me.Button1.UseVisualStyleBackColor = True
@@ -76,22 +75,35 @@ Partial Class MINSIDENAVIGASJON
         '
         Me.DateTimePicker1_nyBlodTime.CustomFormat = "yyyy-MM-dd"
         Me.DateTimePicker1_nyBlodTime.Format = System.Windows.Forms.DateTimePickerFormat.Custom
-        Me.DateTimePicker1_nyBlodTime.Location = New System.Drawing.Point(19, 282)
+        Me.DateTimePicker1_nyBlodTime.Location = New System.Drawing.Point(13, 214)
+        Me.DateTimePicker1_nyBlodTime.Margin = New System.Windows.Forms.Padding(2)
         Me.DateTimePicker1_nyBlodTime.Name = "DateTimePicker1_nyBlodTime"
-        Me.DateTimePicker1_nyBlodTime.Size = New System.Drawing.Size(430, 22)
+        Me.DateTimePicker1_nyBlodTime.Size = New System.Drawing.Size(324, 20)
         Me.DateTimePicker1_nyBlodTime.TabIndex = 29
+        '
+        'Button4
+        '
+        Me.Button4.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button4.Location = New System.Drawing.Point(464, 12)
+        Me.Button4.Name = "Button4"
+        Me.Button4.Size = New System.Drawing.Size(78, 29)
+        Me.Button4.TabIndex = 30
+        Me.Button4.Text = "Logg Ut"
+        Me.Button4.UseVisualStyleBackColor = True
         '
         'MINSIDENAVIGASJON
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Cornsilk
-        Me.ClientSize = New System.Drawing.Size(1039, 385)
+        Me.ClientSize = New System.Drawing.Size(554, 318)
+        Me.Controls.Add(Me.Button4)
         Me.Controls.Add(Me.DateTimePicker1_nyBlodTime)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Label1)
+        Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "MINSIDENAVIGASJON"
         Me.Text = "MINSIDENAVIGASJON"
         Me.ResumeLayout(False)
@@ -104,4 +116,5 @@ Partial Class MINSIDENAVIGASJON
     Friend WithEvents Button3 As Button
     Friend WithEvents Button1 As Button
     Friend WithEvents DateTimePicker1_nyBlodTime As DateTimePicker
+    Friend WithEvents Button4 As Button
 End Class
