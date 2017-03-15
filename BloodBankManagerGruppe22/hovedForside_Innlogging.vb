@@ -5,10 +5,10 @@ Public Class hovedForside_Innlogging
 
     Public currentuser As Integer
     Private salt As String = "detteErEnVeldigLangHashSomGjorAtVaarePassordBlirMyeSikrere"
-    Private username As String
-    Private password As String
-    Private databasename As String
-    Private server As String
+    Private username As String = ""
+    Private password As String = ""
+    Private databasename As String = ""
+    Private server As String = ""
     Private userinfo As New DataTable
 
     Private connstring As String
@@ -17,10 +17,8 @@ Public Class hovedForside_Innlogging
     Private Sub loadLogInfo()
         connstring = "Server=" & server & ";" & "Database=" & databasename & ";" & "Uid=" & username & ";" & "Pwd=" & password & ";"
         connection.ConnectionString = connstring
-        userinfo = Query("SELECT bruker_id, brukernavn, passord FROM bruker")
-        'For Each row As DataRow In userinfo.Rows
-        '    ListBox1.Items.Add(row("bruker_id") & " " & row("brukernavn") & " " & row("passord"))
-        'Next
+        userinfo = Query("SELECT bruker_id, epost, passord FROM bruker")
+
     End Sub
 
 
@@ -67,7 +65,7 @@ Public Class hovedForside_Innlogging
         loadLogInfo()
 
         For Each row As DataRow In userinfo.Rows
-            If row("brukernavn") = inputname And row("passord") = hashedpword Then
+            If row("epost") = inputname And row("passord") = hashedpword Then
                 gotmatch = True
                 currentuser = row("bruker_id")
             End If
@@ -129,7 +127,47 @@ Kriteriene for utvelgelse av blodgivere og en rekke av de laboratorieundersøkel
     End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
-        minSideAnsatte.Show()
+        Dim gotmatch As Boolean = False
+        Dim inputname As String = TextBoxUsername.Text
+        Dim inputpword As String = TextBoxPassword.Text
+        Dim hashedpword As String = hash(inputpword, salt)
+
+        loadLogInfo()
+
+        For Each row As DataRow In userinfo.Rows
+            If row("epost") = inputname And row("passord") = hashedpword Then
+                gotmatch = True
+                currentuser = row("bruker_id")
+            End If
+        Next
+        If gotmatch = True Then
+            MessageBox.Show("Du er logget inn. Velkommen til blodbanken.")
+            minSideAnsatte.Show()
+        ElseIf gotmatch = False Then
+            MessageBox.Show("Feil brukernavn eller passord.")
+        End If
+
+
+
+
+
+
+    End Sub
+
+    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+        MINSIDENAVIGASJON.Show()
+    End Sub
+
+    Private Sub hovedForside_Innlogging_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Timer1.Enabled = True
+    End Sub
+
+    Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
+        Label8.Text = Date.Now.ToString("dd-MM-yyyy hh:mm:ss")
+    End Sub
+
+    Private Sub Label8_Click(sender As Object, e As EventArgs) Handles Label8.Click
+
     End Sub
 End Class
 

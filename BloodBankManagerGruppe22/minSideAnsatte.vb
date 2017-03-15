@@ -6,7 +6,7 @@ Public Class minSideAnsatte
     Private Sub minSideAnsatte_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         MysqlConn = New MySqlConnection
         MysqlConn.ConnectionString =
-            "Server=;Database=;Uid=;Pwd="
+            "Server=mysql.stud.iie.ntnu.no;Database=g_oops_22;Uid=g_oops_22;Pwd=BtUDpVoR"
 
 
 
@@ -17,8 +17,8 @@ Public Class minSideAnsatte
     Public Sub FilterData(valueToSeach As String)
 
 
-        'UPDATE: Vi må bruke nedenfor lagt seachQuery for å få søke knappen til fungere slik at den kan søke seg rundt i databasen.
-        Dim searchQuery As String = "SELECT * FROM bruker WHERE CONCAT(bruker_id, fornavn, etternavn, epost) like '%" & valueToSeach & "%'"
+
+        Dim searchQuery As String = "SELECT bruker.bruker_id, bruker.fornavn, bruker.etternavn, bruker.epost, blodgiver.personnummer FROM bruker, blodgiver WHERE bruker.bruker_id = blodgiver.blodgiver_bruker_id AND CONCAT(bruker_id,fornavn, etternavn, epost) like '%" & valueToSeach & "%';"
 
         Dim command As New MySqlCommand(searchQuery, MysqlConn)
         Dim adapter As New MySqlDataAdapter(command)
@@ -43,9 +43,17 @@ Public Class minSideAnsatte
     End Sub
 
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
-        Dim utleveringAvBlodProdukter As String
-        Dim bestillingAvBlodProdukter As String
+        'Dim utleveringAvBlodProdukter As String
+        'Dim bestillingAvBlodProdukter As String
 
+
+    End Sub
+
+    Private Sub DateTimePicker1_ValueChanged(sender As Object, e As EventArgs) Handles DateTimePicker1.ValueChanged
+
+    End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
 
     End Sub
 End Class
