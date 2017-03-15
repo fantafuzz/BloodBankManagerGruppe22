@@ -7,14 +7,15 @@
     Public Function getSvar() As Boolean
         Return svar
     End Function
+    Public Sub setSvar(ByVal sv As Boolean)
+        svar = sv
+    End Sub
 
-    Public Sub New(ByVal text As String)
+    Public Sub New(ByVal text As String, ByVal nr As String)
         spmtext = text
+        spmnr = nr
     End Sub
 
-    Public Sub New(ByVal nr As Double)
-        nr = spmnr
-    End Sub
 
 
 End Class
