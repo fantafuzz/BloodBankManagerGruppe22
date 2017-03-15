@@ -22,6 +22,7 @@ Partial Class hovedForside_Innlogging
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(hovedForside_Innlogging))
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Label3 = New System.Windows.Forms.Label()
@@ -45,6 +46,8 @@ Partial Class hovedForside_Innlogging
         Me.TextBox2 = New System.Windows.Forms.TextBox()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.Button3 = New System.Windows.Forms.Button()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
         Me.MenuStrip1.SuspendLayout()
@@ -254,8 +257,21 @@ Partial Class hovedForside_Innlogging
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(75, 23)
         Me.Button3.TabIndex = 28
-        Me.Button3.Text = "Button3"
+        Me.Button3.Text = "testKnapp"
         Me.Button3.UseVisualStyleBackColor = True
+        '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label8.Location = New System.Drawing.Point(622, 24)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(85, 18)
+        Me.Label8.TabIndex = 29
+        Me.Label8.Text = "Date Time"
+        '
+        'Timer1
+        '
         '
         'hovedForside_Innlogging
         '
@@ -263,6 +279,7 @@ Partial Class hovedForside_Innlogging
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(784, 561)
+        Me.Controls.Add(Me.Label8)
         Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.PictureBox2)
         Me.Controls.Add(Me.TextBox2)
@@ -309,4 +326,6 @@ Partial Class hovedForside_Innlogging
     Friend WithEvents TextBox2 As TextBox
     Friend WithEvents PictureBox2 As PictureBox
     Friend WithEvents Button3 As Button
+    Friend WithEvents Label8 As Label
+    Friend WithEvents Timer1 As Timer
 End Class

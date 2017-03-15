@@ -9,7 +9,7 @@ Public Class labSvar
 
         'MysqlConn = New MySqlConnection
         'MysqlConn.ConnectionString =
-        '    "Server=mysql.stud.iie.ntnu.no;Database=g_oops_22;Uid=g_oops_22;Pwd=BtUDpVoR"
+        '    "Server=;Database=;Uid=;Pwd="
 
 
         'Dim command As New SqlCommand("select * from lab_svar")
@@ -26,8 +26,4 @@ Public Class labSvar
         'ListBox1.ValueMember = "svar_id"
 
     End Sub
-
-    '    Private Sub print_resultat_Click(sender As Object, e As EventArgs) Handles print_resultat.Click
-    '
-    'End Sub
 End Class

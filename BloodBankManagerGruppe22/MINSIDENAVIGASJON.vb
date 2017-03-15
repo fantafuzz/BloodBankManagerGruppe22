@@ -8,7 +8,7 @@ Public Class MINSIDENAVIGASJON
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Bestill_Ny_BlodTime.Click
         kalender_bestilling.Show()
-        Me.Close()
+
     End Sub
 
     Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Logg_ut.Click
