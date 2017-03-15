@@ -25,7 +25,6 @@ Partial Class egenSkjemaBolk1
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(egenSkjemaBolk1))
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Button2 = New System.Windows.Forms.Button()
-        Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Panel9 = New System.Windows.Forms.Panel()
         Me.RadioButtonN2 = New System.Windows.Forms.RadioButton()
         Me.RadioButtonJ2 = New System.Windows.Forms.RadioButton()
@@ -52,7 +51,6 @@ Partial Class egenSkjemaBolk1
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.Panel1.SuspendLayout()
         Me.Panel9.SuspendLayout()
         Me.Panel5.SuspendLayout()
         Me.Panel4.SuspendLayout()
@@ -65,7 +63,7 @@ Partial Class egenSkjemaBolk1
         '
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(10, 8)
+        Me.Label7.Location = New System.Drawing.Point(51, 22)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(105, 13)
         Me.Label7.TabIndex = 31
@@ -80,34 +78,12 @@ Partial Class egenSkjemaBolk1
         Me.Button2.Text = "Gå videre til neste bolk"
         Me.Button2.UseVisualStyleBackColor = True
         '
-        'Panel1
-        '
-        Me.Panel1.Controls.Add(Me.Panel9)
-        Me.Panel1.Controls.Add(Me.Panel5)
-        Me.Panel1.Controls.Add(Me.Panel4)
-        Me.Panel1.Controls.Add(Me.Panel3)
-        Me.Panel1.Controls.Add(Me.Panel2)
-        Me.Panel1.Controls.Add(Me.Panel7)
-        Me.Panel1.Controls.Add(Me.Label9)
-        Me.Panel1.Controls.Add(Me.Label8)
-        Me.Panel1.Controls.Add(Me.Label5)
-        Me.Panel1.Controls.Add(Me.Label6)
-        Me.Panel1.Controls.Add(Me.Label4)
-        Me.Panel1.Controls.Add(Me.Label3)
-        Me.Panel1.Controls.Add(Me.Label2)
-        Me.Panel1.Controls.Add(Me.Label1)
-        Me.Panel1.Controls.Add(Me.Label7)
-        Me.Panel1.Location = New System.Drawing.Point(54, 50)
-        Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(652, 185)
-        Me.Panel1.TabIndex = 66
-        '
         'Panel9
         '
         Me.Panel9.BackColor = System.Drawing.Color.White
         Me.Panel9.Controls.Add(Me.RadioButtonN2)
         Me.Panel9.Controls.Add(Me.RadioButtonJ2)
-        Me.Panel9.Location = New System.Drawing.Point(576, 52)
+        Me.Panel9.Location = New System.Drawing.Point(617, 66)
         Me.Panel9.Name = "Panel9"
         Me.Panel9.Size = New System.Drawing.Size(66, 25)
         Me.Panel9.TabIndex = 69
@@ -139,7 +115,7 @@ Partial Class egenSkjemaBolk1
         Me.Panel5.BackColor = System.Drawing.Color.White
         Me.Panel5.Controls.Add(Me.RadioButtonN4)
         Me.Panel5.Controls.Add(Me.RadioButtonJ4)
-        Me.Panel5.Location = New System.Drawing.Point(576, 102)
+        Me.Panel5.Location = New System.Drawing.Point(617, 116)
         Me.Panel5.Name = "Panel5"
         Me.Panel5.Size = New System.Drawing.Size(66, 25)
         Me.Panel5.TabIndex = 68
@@ -171,7 +147,7 @@ Partial Class egenSkjemaBolk1
         Me.Panel4.BackColor = System.Drawing.Color.WhiteSmoke
         Me.Panel4.Controls.Add(Me.RadioButtonN5)
         Me.Panel4.Controls.Add(Me.RadioButtonJ5)
-        Me.Panel4.Location = New System.Drawing.Point(576, 127)
+        Me.Panel4.Location = New System.Drawing.Point(617, 141)
         Me.Panel4.Name = "Panel4"
         Me.Panel4.Size = New System.Drawing.Size(66, 25)
         Me.Panel4.TabIndex = 68
@@ -203,7 +179,7 @@ Partial Class egenSkjemaBolk1
         Me.Panel3.BackColor = System.Drawing.Color.WhiteSmoke
         Me.Panel3.Controls.Add(Me.RadioButtonN3)
         Me.Panel3.Controls.Add(Me.RadioButtonJ3)
-        Me.Panel3.Location = New System.Drawing.Point(576, 77)
+        Me.Panel3.Location = New System.Drawing.Point(617, 91)
         Me.Panel3.Name = "Panel3"
         Me.Panel3.Size = New System.Drawing.Size(66, 25)
         Me.Panel3.TabIndex = 68
@@ -235,7 +211,7 @@ Partial Class egenSkjemaBolk1
         Me.Panel2.BackColor = System.Drawing.Color.WhiteSmoke
         Me.Panel2.Controls.Add(Me.RadioButtonN1)
         Me.Panel2.Controls.Add(Me.RadioButtonJ1)
-        Me.Panel2.Location = New System.Drawing.Point(576, 27)
+        Me.Panel2.Location = New System.Drawing.Point(617, 41)
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(66, 25)
         Me.Panel2.TabIndex = 67
@@ -267,7 +243,7 @@ Partial Class egenSkjemaBolk1
         Me.Panel7.BackColor = System.Drawing.Color.White
         Me.Panel7.Controls.Add(Me.RadioButtonN6)
         Me.Panel7.Controls.Add(Me.RadioButtonJ6)
-        Me.Panel7.Location = New System.Drawing.Point(576, 152)
+        Me.Panel7.Location = New System.Drawing.Point(617, 166)
         Me.Panel7.Name = "Panel7"
         Me.Panel7.Size = New System.Drawing.Size(66, 25)
         Me.Panel7.TabIndex = 69
@@ -297,7 +273,7 @@ Partial Class egenSkjemaBolk1
         'Label9
         '
         Me.Label9.AutoSize = True
-        Me.Label9.Location = New System.Drawing.Point(625, 8)
+        Me.Label9.Location = New System.Drawing.Point(666, 22)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(23, 13)
         Me.Label9.TabIndex = 44
@@ -306,7 +282,7 @@ Partial Class egenSkjemaBolk1
         'Label8
         '
         Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(573, 8)
+        Me.Label8.Location = New System.Drawing.Point(614, 22)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(18, 13)
         Me.Label8.TabIndex = 43
@@ -315,7 +291,7 @@ Partial Class egenSkjemaBolk1
         'Label5
         '
         Me.Label5.BackColor = System.Drawing.Color.WhiteSmoke
-        Me.Label5.Location = New System.Drawing.Point(10, 127)
+        Me.Label5.Location = New System.Drawing.Point(51, 141)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(642, 25)
         Me.Label5.TabIndex = 36
@@ -324,7 +300,7 @@ Partial Class egenSkjemaBolk1
         '
         'Label6
         '
-        Me.Label6.Location = New System.Drawing.Point(10, 152)
+        Me.Label6.Location = New System.Drawing.Point(51, 166)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(642, 25)
         Me.Label6.TabIndex = 35
@@ -333,7 +309,7 @@ Partial Class egenSkjemaBolk1
         '
         'Label4
         '
-        Me.Label4.Location = New System.Drawing.Point(10, 102)
+        Me.Label4.Location = New System.Drawing.Point(51, 116)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(642, 25)
         Me.Label4.TabIndex = 34
@@ -343,7 +319,7 @@ Partial Class egenSkjemaBolk1
         'Label3
         '
         Me.Label3.BackColor = System.Drawing.Color.WhiteSmoke
-        Me.Label3.Location = New System.Drawing.Point(10, 77)
+        Me.Label3.Location = New System.Drawing.Point(51, 91)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(642, 25)
         Me.Label3.TabIndex = 33
@@ -352,7 +328,7 @@ Partial Class egenSkjemaBolk1
         '
         'Label2
         '
-        Me.Label2.Location = New System.Drawing.Point(10, 52)
+        Me.Label2.Location = New System.Drawing.Point(51, 66)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(642, 25)
         Me.Label2.TabIndex = 32
@@ -362,7 +338,7 @@ Partial Class egenSkjemaBolk1
         'Label1
         '
         Me.Label1.BackColor = System.Drawing.Color.WhiteSmoke
-        Me.Label1.Location = New System.Drawing.Point(10, 27)
+        Me.Label1.Location = New System.Drawing.Point(51, 41)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(642, 25)
         Me.Label1.TabIndex = 0
@@ -375,13 +351,25 @@ Partial Class egenSkjemaBolk1
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(784, 561)
-        Me.Controls.Add(Me.Panel1)
+        Me.Controls.Add(Me.Panel9)
+        Me.Controls.Add(Me.Panel5)
         Me.Controls.Add(Me.Button2)
+        Me.Controls.Add(Me.Panel4)
+        Me.Controls.Add(Me.Panel2)
+        Me.Controls.Add(Me.Panel3)
+        Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.Panel7)
+        Me.Controls.Add(Me.Label7)
+        Me.Controls.Add(Me.Label9)
+        Me.Controls.Add(Me.Label2)
+        Me.Controls.Add(Me.Label8)
+        Me.Controls.Add(Me.Label3)
+        Me.Controls.Add(Me.Label5)
+        Me.Controls.Add(Me.Label4)
+        Me.Controls.Add(Me.Label6)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "egenSkjemaBolk1"
         Me.Text = "egenerklæring"
-        Me.Panel1.ResumeLayout(False)
-        Me.Panel1.PerformLayout()
         Me.Panel9.ResumeLayout(False)
         Me.Panel9.PerformLayout()
         Me.Panel5.ResumeLayout(False)
@@ -395,11 +383,11 @@ Partial Class egenSkjemaBolk1
         Me.Panel7.ResumeLayout(False)
         Me.Panel7.PerformLayout()
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
     Friend WithEvents Label7 As Label
     Friend WithEvents Button2 As Button
-    Friend WithEvents Panel1 As Panel
     Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
     Friend WithEvents Label5 As Label

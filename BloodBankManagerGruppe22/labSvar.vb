@@ -27,7 +27,7 @@ Public Class labSvar
 
     End Sub
 
-    Private Sub print_resultat_Click(sender As Object, e As EventArgs) Handles print_resultat.Click
-
-    End Sub
+    '    Private Sub print_resultat_Click(sender As Object, e As EventArgs) Handles print_resultat.Click
+    '
+    'End Sub
 End Class

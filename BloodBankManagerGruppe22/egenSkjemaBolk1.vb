@@ -14,21 +14,26 @@
     Dim spm5 As New Sporsmaal("Har du åpne sår, eksem eller hudsykdom?", "1_5")
     Dim spm6 As New Sporsmaal("Har du piercing i slimhinne?", "1_6")
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
-        Dim uncheckedradios = From radio In Me.Panel2.Controls.OfType(Of RadioButton)()
-                              Where Not radio.Checked
-                              Select radio.Name
-        Dim anyunchecked As Integer = uncheckedradios.Count
+        valider(6)
 
-        If anyunchecked <> 1 Then
-            Dim uncheckedNames = String.Join(",", uncheckedradios)
-            MessageBox.Show("Please check all radio-buttons, these are not checked: " & uncheckedNames, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
-            Return
-        End If
         Me.Close()
         egenSkjemaBolk2.Show()
 
     End Sub
-    Private Function valider(ByVal panel As String)
+    Private Sub valider(ByVal antallSpm As Integer)
+        Dim listPanel As List(Of Panel) = From panel In Me.Controls.OfType(Of Panel)
+        For Each panel In listPanel
+            Dim uncheckedRadios = From radio In panel.Controls.OfType(Of RadioButton)()
+                                  Where Not radio.Checked
+                                  Select radio.Name
+            Dim anyUnchecked As Integer = uncheckedRadios.Count
+            If anyUnchecked > 1 Then
+                MsgBox("nice")
+            End If
+        Next
+    End Sub
+
+    Private Sub lagredenne()
         Dim uncheckedradios = From radio In Me.Panel2.Controls.OfType(Of RadioButton)()
                               Where Not radio.Checked
                               Select radio.Name
@@ -39,11 +44,7 @@
             MessageBox.Show("Please check all radio-buttons, these are not checked: " & uncheckedNames, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
             Return
         End If
-        Me.Close()
-        egenSkjemaBolk2.Show()
-    End Function
-
-
+    End Sub
 
     Private Sub egenSkjemaBolk1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Label1.Text = spm1.getText
