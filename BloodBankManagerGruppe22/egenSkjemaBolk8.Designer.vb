@@ -31,9 +31,10 @@ Partial Class egenSkjemaBolk8
         'CheckBox1
         '
         Me.CheckBox1.AutoSize = True
-        Me.CheckBox1.Location = New System.Drawing.Point(15, 48)
+        Me.CheckBox1.Location = New System.Drawing.Point(30, 92)
+        Me.CheckBox1.Margin = New System.Windows.Forms.Padding(6, 6, 6, 6)
         Me.CheckBox1.Name = "CheckBox1"
-        Me.CheckBox1.Size = New System.Drawing.Size(281, 17)
+        Me.CheckBox1.Size = New System.Drawing.Size(562, 29)
         Me.CheckBox1.TabIndex = 102
         Me.CheckBox1.Text = "Har eller har du hatt seksuell kontakt med andre menn"
         Me.CheckBox1.UseVisualStyleBackColor = True
@@ -42,31 +43,34 @@ Partial Class egenSkjemaBolk8
         '
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(12, 23)
+        Me.Label7.Location = New System.Drawing.Point(24, 44)
+        Me.Label7.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(111, 13)
+        Me.Label7.Size = New System.Drawing.Size(209, 26)
         Me.Label7.TabIndex = 101
         Me.Label7.Text = "Besvares av menn"
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(15, 71)
+        Me.Button1.Location = New System.Drawing.Point(30, 137)
+        Me.Button1.Margin = New System.Windows.Forms.Padding(6, 6, 6, 6)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(130, 23)
+        Me.Button1.Size = New System.Drawing.Size(260, 44)
         Me.Button1.TabIndex = 100
         Me.Button1.Text = "Gå videre til neste bolk"
         Me.Button1.UseVisualStyleBackColor = True
         '
         'egenSkjemaBolk8
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(12.0!, 25.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Cornsilk
-        Me.ClientSize = New System.Drawing.Size(339, 110)
+        Me.ClientSize = New System.Drawing.Size(678, 212)
         Me.Controls.Add(Me.CheckBox1)
         Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.Button1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.Margin = New System.Windows.Forms.Padding(6, 6, 6, 6)
         Me.Name = "egenSkjemaBolk8"
         Me.Text = "egenSkjemaBolk8"
         Me.ResumeLayout(False)

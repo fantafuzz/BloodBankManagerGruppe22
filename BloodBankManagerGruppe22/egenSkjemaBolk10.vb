@@ -4,7 +4,8 @@
     'Public tillatelseBlodgiverEpostSms As String = TextBox1.Text
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
 
-
+        Dim spm60 As New Sporsmaal("Samtykker du til epost/sms forbindelse", "10_1")
+        Dim sp
 
 
 
