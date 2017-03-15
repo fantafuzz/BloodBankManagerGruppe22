@@ -177,6 +177,7 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="Sporsmaal.vb" />
     <Compile Include="SQL_hookup.vb" />
   </ItemGroup>
   <ItemGroup>

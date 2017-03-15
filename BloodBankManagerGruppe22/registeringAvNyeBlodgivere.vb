@@ -153,6 +153,10 @@ Public Class registeringAvNyeBlodgivere
         tilkobling = New MySqlConnection("Server=;Database=;Uid=;Pwd=")
         tilkobling.Open()
     End Sub
+
+    Private Sub TextBoxDoB_MaskInputRejected(sender As Object, e As MaskInputRejectedEventArgs) Handles TextBoxDoB.MaskInputRejected
+
+    End Sub
 End Class
 
 
