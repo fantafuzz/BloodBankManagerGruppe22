@@ -131,6 +131,7 @@ Kriteriene for utvelgelse av blodgivere og en rekke av de laboratorieundersøkel
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
         minSideAnsatte.Show()
     End Sub
+
 End Class
 
 

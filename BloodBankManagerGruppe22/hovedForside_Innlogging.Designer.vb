@@ -55,33 +55,37 @@ Partial Class hovedForside_Innlogging
         Me.Panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.Panel1.Controls.Add(Me.Label3)
         Me.Panel1.Controls.Add(Me.ButtonRegistrer)
-        Me.Panel1.Location = New System.Drawing.Point(9, 211)
+        Me.Panel1.Location = New System.Drawing.Point(18, 406)
+        Me.Panel1.Margin = New System.Windows.Forms.Padding(6)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(200, 122)
+        Me.Panel1.Size = New System.Drawing.Size(396, 231)
         Me.Panel1.TabIndex = 16
         '
         'Label3
         '
-        Me.Label3.Location = New System.Drawing.Point(3, 9)
+        Me.Label3.Location = New System.Drawing.Point(6, 17)
+        Me.Label3.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(148, 51)
+        Me.Label3.Size = New System.Drawing.Size(296, 98)
         Me.Label3.TabIndex = 11
         Me.Label3.Text = "Er du ikke blodgiver enda? Trykk knappen under for å starte registreringen!"
         '
         'ButtonRegistrer
         '
-        Me.ButtonRegistrer.Location = New System.Drawing.Point(6, 63)
+        Me.ButtonRegistrer.Location = New System.Drawing.Point(12, 121)
+        Me.ButtonRegistrer.Margin = New System.Windows.Forms.Padding(6)
         Me.ButtonRegistrer.Name = "ButtonRegistrer"
-        Me.ButtonRegistrer.Size = New System.Drawing.Size(75, 23)
+        Me.ButtonRegistrer.Size = New System.Drawing.Size(150, 44)
         Me.ButtonRegistrer.TabIndex = 10
         Me.ButtonRegistrer.Text = "Register"
         Me.ButtonRegistrer.UseVisualStyleBackColor = True
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(6, 133)
+        Me.Button1.Location = New System.Drawing.Point(12, 256)
+        Me.Button1.Margin = New System.Windows.Forms.Padding(6)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(160, 23)
+        Me.Button1.Size = New System.Drawing.Size(320, 44)
         Me.Button1.TabIndex = 13
         Me.Button1.Text = "Logg inn"
         Me.Button1.UseVisualStyleBackColor = True
@@ -89,45 +93,51 @@ Partial Class hovedForside_Innlogging
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(3, 92)
+        Me.Label2.Location = New System.Drawing.Point(6, 177)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(48, 13)
+        Me.Label2.Size = New System.Drawing.Size(97, 25)
         Me.Label2.TabIndex = 12
         Me.Label2.Text = "Passord:"
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(3, 42)
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
+        Me.Label1.Location = New System.Drawing.Point(6, 81)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(65, 13)
+        Me.Label1.Size = New System.Drawing.Size(80, 26)
         Me.Label1.TabIndex = 11
-        Me.Label1.Text = "Brukernavn:"
+        Me.Label1.Text = "Epost: "
         '
         'TextBoxPassword
         '
-        Me.TextBoxPassword.Location = New System.Drawing.Point(6, 107)
+        Me.TextBoxPassword.Location = New System.Drawing.Point(12, 206)
+        Me.TextBoxPassword.Margin = New System.Windows.Forms.Padding(6)
         Me.TextBoxPassword.Name = "TextBoxPassword"
         Me.TextBoxPassword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
-        Me.TextBoxPassword.Size = New System.Drawing.Size(160, 20)
+        Me.TextBoxPassword.Size = New System.Drawing.Size(316, 31)
         Me.TextBoxPassword.TabIndex = 10
         Me.TextBoxPassword.UseSystemPasswordChar = True
         '
         'TextBoxUsername
         '
-        Me.TextBoxUsername.Location = New System.Drawing.Point(6, 58)
+        Me.TextBoxUsername.Location = New System.Drawing.Point(12, 112)
+        Me.TextBoxUsername.Margin = New System.Windows.Forms.Padding(6)
         Me.TextBoxUsername.Name = "TextBoxUsername"
-        Me.TextBoxUsername.Size = New System.Drawing.Size(160, 20)
+        Me.TextBoxUsername.Size = New System.Drawing.Size(316, 31)
         Me.TextBoxUsername.TabIndex = 9
         '
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Font = New System.Drawing.Font("Comic Sans MS", 40.0!)
-        Me.Label6.ForeColor = System.Drawing.Color.Red
-        Me.Label6.Location = New System.Drawing.Point(-4, 35)
+        Me.Label6.Font = New System.Drawing.Font("Georgia", 40.125!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.ForeColor = System.Drawing.Color.Crimson
+        Me.Label6.Location = New System.Drawing.Point(-8, 67)
+        Me.Label6.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(683, 76)
+        Me.Label6.Size = New System.Drawing.Size(1344, 122)
         Me.Label6.TabIndex = 17
         Me.Label6.Text = "Velkommen til Blodbanken"
         Me.Label6.TextAlign = System.Drawing.ContentAlignment.TopCenter
@@ -135,9 +145,10 @@ Partial Class hovedForside_Innlogging
         'Label7
         '
         Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(3, 23)
+        Me.Label7.Location = New System.Drawing.Point(6, 44)
+        Me.Label7.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(145, 13)
+        Me.Label7.Size = New System.Drawing.Size(294, 25)
         Me.Label7.TabIndex = 18
         Me.Label7.Text = "Allerede Blodgiver? Logg inn:"
         '
@@ -151,27 +162,30 @@ Partial Class hovedForside_Innlogging
         Me.Panel2.Controls.Add(Me.Label1)
         Me.Panel2.Controls.Add(Me.Label2)
         Me.Panel2.Controls.Add(Me.Button1)
-        Me.Panel2.Location = New System.Drawing.Point(9, 365)
+        Me.Panel2.Location = New System.Drawing.Point(18, 702)
+        Me.Panel2.Margin = New System.Windows.Forms.Padding(6)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(200, 205)
+        Me.Panel2.Size = New System.Drawing.Size(396, 391)
         Me.Panel2.TabIndex = 19
         '
         'Button2
         '
-        Me.Button2.Location = New System.Drawing.Point(6, 163)
+        Me.Button2.Location = New System.Drawing.Point(12, 313)
+        Me.Button2.Margin = New System.Windows.Forms.Padding(6)
         Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(160, 23)
+        Me.Button2.Size = New System.Drawing.Size(320, 44)
         Me.Button2.TabIndex = 19
         Me.Button2.Text = "Innlogging for ansatte"
         Me.Button2.UseVisualStyleBackColor = True
         '
         'TextBox1
         '
-        Me.TextBox1.Font = New System.Drawing.Font("Comic Sans MS", 12.0!)
-        Me.TextBox1.Location = New System.Drawing.Point(13, 114)
+        Me.TextBox1.Font = New System.Drawing.Font("Century", 10.875!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox1.Location = New System.Drawing.Point(26, 219)
+        Me.TextBox1.Margin = New System.Windows.Forms.Padding(6)
         Me.TextBox1.Multiline = True
         Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(554, 80)
+        Me.TextBox1.Size = New System.Drawing.Size(1018, 150)
         Me.TextBox1.TabIndex = 22
         Me.TextBox1.Text = "Det tar kun en halv time å gi blod. Den halve literen du gir kan redde tre liv. E" &
     "r du frisk og mellom 18 og 60 år, kan du melde deg som blodgiver.  Husk at BLOD " &
@@ -183,35 +197,40 @@ Partial Class hovedForside_Innlogging
         Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.OmBlodToolStripMenuItem, Me.RetningslinjerToolStripMenuItem, Me.OmOssToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(685, 24)
+        Me.MenuStrip1.Padding = New System.Windows.Forms.Padding(12, 4, 0, 4)
+        Me.MenuStrip1.Size = New System.Drawing.Size(1370, 40)
         Me.MenuStrip1.TabIndex = 23
         Me.MenuStrip1.Text = "MenuStrip1"
         '
         'OmBlodToolStripMenuItem
         '
+        Me.OmBlodToolStripMenuItem.Font = New System.Drawing.Font("Century", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.OmBlodToolStripMenuItem.Name = "OmBlodToolStripMenuItem"
-        Me.OmBlodToolStripMenuItem.Size = New System.Drawing.Size(66, 20)
+        Me.OmBlodToolStripMenuItem.Size = New System.Drawing.Size(122, 32)
         Me.OmBlodToolStripMenuItem.Text = "Om Blod"
         '
         'RetningslinjerToolStripMenuItem
         '
+        Me.RetningslinjerToolStripMenuItem.Font = New System.Drawing.Font("Century", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.RetningslinjerToolStripMenuItem.Name = "RetningslinjerToolStripMenuItem"
-        Me.RetningslinjerToolStripMenuItem.Size = New System.Drawing.Size(91, 20)
+        Me.RetningslinjerToolStripMenuItem.Size = New System.Drawing.Size(185, 32)
         Me.RetningslinjerToolStripMenuItem.Text = "Retningslinjer"
         '
         'OmOssToolStripMenuItem
         '
+        Me.OmOssToolStripMenuItem.Font = New System.Drawing.Font("Century", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.OmOssToolStripMenuItem.Name = "OmOssToolStripMenuItem"
-        Me.OmOssToolStripMenuItem.Size = New System.Drawing.Size(61, 20)
+        Me.OmOssToolStripMenuItem.Size = New System.Drawing.Size(112, 32)
         Me.OmOssToolStripMenuItem.Text = "Om Oss"
         '
         'Label4
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.25!)
-        Me.Label4.Location = New System.Drawing.Point(373, 211)
+        Me.Label4.Location = New System.Drawing.Point(746, 406)
+        Me.Label4.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(86, 16)
+        Me.Label4.Size = New System.Drawing.Size(167, 29)
         Me.Label4.TabIndex = 24
         Me.Label4.Text = "Visste du at..."
         '
@@ -219,36 +238,39 @@ Partial Class hovedForside_Innlogging
         '
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
-        Me.Label5.Location = New System.Drawing.Point(373, 227)
+        Me.Label5.Location = New System.Drawing.Point(746, 437)
+        Me.Label5.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(0, 13)
+        Me.Label5.Size = New System.Drawing.Size(0, 26)
         Me.Label5.TabIndex = 25
         '
         'TextBox2
         '
-        Me.TextBox2.Location = New System.Drawing.Point(376, 230)
+        Me.TextBox2.Location = New System.Drawing.Point(752, 442)
+        Me.TextBox2.Margin = New System.Windows.Forms.Padding(6)
         Me.TextBox2.Multiline = True
         Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(191, 43)
+        Me.TextBox2.Size = New System.Drawing.Size(378, 79)
         Me.TextBox2.TabIndex = 26
         Me.TextBox2.Text = "I gjennomsnitt tapper hver blodgiver i Norge 2,1 ganger i året."
         '
         'PictureBox2
         '
         Me.PictureBox2.Image = CType(resources.GetObject("PictureBox2.Image"), System.Drawing.Image)
-        Me.PictureBox2.Location = New System.Drawing.Point(376, 276)
+        Me.PictureBox2.Location = New System.Drawing.Point(752, 531)
+        Me.PictureBox2.Margin = New System.Windows.Forms.Padding(6)
         Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(191, 282)
+        Me.PictureBox2.Size = New System.Drawing.Size(382, 542)
         Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.PictureBox2.TabIndex = 27
         Me.PictureBox2.TabStop = False
         '
         'hovedForside_Innlogging
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(12.0!, 25.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.Color.Cornsilk
-        Me.ClientSize = New System.Drawing.Size(685, 600)
+        Me.BackColor = System.Drawing.Color.White
+        Me.ClientSize = New System.Drawing.Size(1370, 1154)
         Me.Controls.Add(Me.PictureBox2)
         Me.Controls.Add(Me.TextBox2)
         Me.Controls.Add(Me.Label5)
@@ -260,6 +282,7 @@ Partial Class hovedForside_Innlogging
         Me.Controls.Add(Me.MenuStrip1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MainMenuStrip = Me.MenuStrip1
+        Me.Margin = New System.Windows.Forms.Padding(6)
         Me.Name = "hovedForside_Innlogging"
         Me.Text = "Form1"
         Me.Panel1.ResumeLayout(False)
