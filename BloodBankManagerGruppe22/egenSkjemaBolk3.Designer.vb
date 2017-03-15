@@ -37,9 +37,9 @@ Partial Class egenSkjemaBolk3
         'CheckBox5
         '
         Me.CheckBox5.AutoSize = True
-        Me.CheckBox5.Location = New System.Drawing.Point(12, 134)
+        Me.CheckBox5.Location = New System.Drawing.Point(14, 144)
         Me.CheckBox5.Name = "CheckBox5"
-        Me.CheckBox5.Size = New System.Drawing.Size(617, 17)
+        Me.CheckBox5.Size = New System.Drawing.Size(774, 18)
         Me.CheckBox5.TabIndex = 62
         Me.CheckBox5.Text = "hatt seksuell kontakt med person som bruker eller har brukt dopingmidler eller na" &
     "rkotiske midler som sprøyter eller ved sniffing?"
@@ -48,9 +48,9 @@ Partial Class egenSkjemaBolk3
         'CheckBox4
         '
         Me.CheckBox4.AutoSize = True
-        Me.CheckBox4.Location = New System.Drawing.Point(12, 111)
+        Me.CheckBox4.Location = New System.Drawing.Point(14, 120)
         Me.CheckBox4.Name = "CheckBox4"
-        Me.CheckBox4.Size = New System.Drawing.Size(754, 17)
+        Me.CheckBox4.Size = New System.Drawing.Size(924, 18)
         Me.CheckBox4.TabIndex = 61
         Me.CheckBox4.Text = "hatt seksuell kontakt med person med HIV-infeksjon eller hepatitt B eller hepatit" &
     "t C, eller med person som har hatt positiv test for en av disse sykdommene? "
@@ -59,9 +59,9 @@ Partial Class egenSkjemaBolk3
         'CheckBox3
         '
         Me.CheckBox3.AutoSize = True
-        Me.CheckBox3.Location = New System.Drawing.Point(12, 88)
+        Me.CheckBox3.Location = New System.Drawing.Point(14, 95)
         Me.CheckBox3.Name = "CheckBox3"
-        Me.CheckBox3.Size = New System.Drawing.Size(303, 17)
+        Me.CheckBox3.Size = New System.Drawing.Size(374, 18)
         Me.CheckBox3.TabIndex = 60
         Me.CheckBox3.Text = "hatt kjønnssykdom, eller fått behandling for kjønnssykdom?"
         Me.CheckBox3.UseVisualStyleBackColor = True
@@ -69,9 +69,9 @@ Partial Class egenSkjemaBolk3
         'CheckBox2
         '
         Me.CheckBox2.AutoSize = True
-        Me.CheckBox2.Location = New System.Drawing.Point(12, 65)
+        Me.CheckBox2.Location = New System.Drawing.Point(14, 70)
         Me.CheckBox2.Name = "CheckBox2"
-        Me.CheckBox2.Size = New System.Drawing.Size(168, 17)
+        Me.CheckBox2.Size = New System.Drawing.Size(205, 18)
         Me.CheckBox2.TabIndex = 59
         Me.CheckBox2.Text = "fått behandling med sprøyter? "
         Me.CheckBox2.UseVisualStyleBackColor = True
@@ -79,9 +79,9 @@ Partial Class egenSkjemaBolk3
         'CheckBox1
         '
         Me.CheckBox1.AutoSize = True
-        Me.CheckBox1.Location = New System.Drawing.Point(12, 42)
+        Me.CheckBox1.Location = New System.Drawing.Point(14, 45)
         Me.CheckBox1.Name = "CheckBox1"
-        Me.CheckBox1.Size = New System.Drawing.Size(408, 17)
+        Me.CheckBox1.Size = New System.Drawing.Size(497, 18)
         Me.CheckBox1.TabIndex = 58
         Me.CheckBox1.Text = "vært til legeundersøkelse eller på sykehus, eller fått behandling for noen sykdom" &
     "?"
@@ -91,7 +91,7 @@ Partial Class egenSkjemaBolk3
         '
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(9, 16)
+        Me.Label7.Location = New System.Drawing.Point(10, 17)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(236, 13)
         Me.Label7.TabIndex = 57
@@ -99,9 +99,9 @@ Partial Class egenSkjemaBolk3
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(12, 212)
+        Me.Button1.Location = New System.Drawing.Point(14, 228)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(130, 23)
+        Me.Button1.Size = New System.Drawing.Size(152, 25)
         Me.Button1.TabIndex = 56
         Me.Button1.Text = "Gå videre til neste bolk"
         Me.Button1.UseVisualStyleBackColor = True
@@ -109,9 +109,9 @@ Partial Class egenSkjemaBolk3
         'CheckBox9
         '
         Me.CheckBox9.AutoSize = True
-        Me.CheckBox9.Location = New System.Drawing.Point(12, 180)
+        Me.CheckBox9.Location = New System.Drawing.Point(14, 194)
         Me.CheckBox9.Name = "CheckBox9"
-        Me.CheckBox9.Size = New System.Drawing.Size(245, 17)
+        Me.CheckBox9.Size = New System.Drawing.Size(313, 18)
         Me.CheckBox9.TabIndex = 64
         Me.CheckBox9.Text = "blitt tatovert, fått piercing eller tatt hull i ørene? "
         Me.CheckBox9.UseVisualStyleBackColor = True
@@ -119,19 +119,19 @@ Partial Class egenSkjemaBolk3
         'CheckBox10
         '
         Me.CheckBox10.AutoSize = True
-        Me.CheckBox10.Location = New System.Drawing.Point(12, 157)
+        Me.CheckBox10.Location = New System.Drawing.Point(14, 169)
         Me.CheckBox10.Name = "CheckBox10"
-        Me.CheckBox10.Size = New System.Drawing.Size(327, 17)
+        Me.CheckBox10.Size = New System.Drawing.Size(409, 18)
         Me.CheckBox10.TabIndex = 63
         Me.CheckBox10.Text = "hatt seksuell kontakt med prostituerte eller tidligere prostituerte? "
         Me.CheckBox10.UseVisualStyleBackColor = True
         '
         'egenSkjemaBolk3
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 14.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.Color.Cornsilk
-        Me.ClientSize = New System.Drawing.Size(815, 249)
+        Me.BackColor = System.Drawing.Color.White
+        Me.ClientSize = New System.Drawing.Size(951, 268)
         Me.Controls.Add(Me.CheckBox9)
         Me.Controls.Add(Me.CheckBox10)
         Me.Controls.Add(Me.CheckBox5)
@@ -141,6 +141,7 @@ Partial Class egenSkjemaBolk3
         Me.Controls.Add(Me.CheckBox1)
         Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.Button1)
+        Me.Font = New System.Drawing.Font("Georgia", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "egenSkjemaBolk3"
         Me.Text = "egenSkjemaBolk3"

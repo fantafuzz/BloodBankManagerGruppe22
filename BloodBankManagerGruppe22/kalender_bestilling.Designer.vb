@@ -22,41 +22,46 @@ Partial Class kalender_bestilling
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.MonthCalendar1 = New System.Windows.Forms.MonthCalendar()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(kalender_bestilling))
         Me.Button1 = New System.Windows.Forms.Button()
+        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
         Me.SuspendLayout()
-        '
-        'MonthCalendar1
-        '
-        Me.MonthCalendar1.CalendarDimensions = New System.Drawing.Size(4, 3)
-        Me.MonthCalendar1.Location = New System.Drawing.Point(14, 18)
-        Me.MonthCalendar1.Name = "MonthCalendar1"
-        Me.MonthCalendar1.TabIndex = 0
         '
         'Button1
         '
         Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.Location = New System.Drawing.Point(31, 606)
-        Me.Button1.Margin = New System.Windows.Forms.Padding(4)
+        Me.Button1.Location = New System.Drawing.Point(12, 82)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(429, 64)
+        Me.Button1.Size = New System.Drawing.Size(376, 56)
         Me.Button1.TabIndex = 29
         Me.Button1.Text = "Bestill ny blodgivning"
         Me.Button1.UseVisualStyleBackColor = True
         '
+        'DateTimePicker1
+        '
+        Me.DateTimePicker1.CustomFormat = "yyyy-MM-dd"
+        Me.DateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom
+        Me.DateTimePicker1.Location = New System.Drawing.Point(14, 39)
+        Me.DateTimePicker1.Name = "DateTimePicker1"
+        Me.DateTimePicker1.Size = New System.Drawing.Size(374, 20)
+        Me.DateTimePicker1.TabIndex = 30
+        '
         'kalender_bestilling
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 14.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1148, 721)
+        Me.BackColor = System.Drawing.Color.White
+        Me.ClientSize = New System.Drawing.Size(421, 169)
+        Me.Controls.Add(Me.DateTimePicker1)
         Me.Controls.Add(Me.Button1)
-        Me.Controls.Add(Me.MonthCalendar1)
+        Me.Font = New System.Drawing.Font("Georgia", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Name = "kalender_bestilling"
         Me.Text = "kalender_bestilling"
         Me.ResumeLayout(False)
 
     End Sub
-
-    Friend WithEvents MonthCalendar1 As MonthCalendar
     Friend WithEvents Button1 As Button
+    Friend WithEvents DateTimePicker1 As DateTimePicker
 End Class

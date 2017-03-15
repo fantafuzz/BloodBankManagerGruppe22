@@ -11,7 +11,7 @@ Public Class kalender_bestilling
         Try
             MysqlConn.Open()
             Dim Query As String
-            Query = "insert into g_oops_22.time_bestilling(bestilling_bruker_id, bestilling_dato) values (27, '" & MonthCalendar1.Text & "')"
+            Query = "insert into g_oops_22.time_bestilling(bestilling_bruker_id, dato) values (27, '" & DateTimePicker1.Text & "')"
             COMMAND = New MySqlCommand(Query, MysqlConn)
             READER = Command.ExecuteReader
 
@@ -26,4 +26,5 @@ Public Class kalender_bestilling
             MysqlConn.Dispose()
         End Try
     End Sub
+
 End Class

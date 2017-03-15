@@ -48,6 +48,8 @@ Partial Class hovedForside_Innlogging
         Me.Button3 = New System.Windows.Forms.Button()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
+        Me.ÅpninstiderToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.KontaktOssToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
         Me.MenuStrip1.SuspendLayout()
@@ -185,7 +187,7 @@ Partial Class hovedForside_Innlogging
         'MenuStrip1
         '
         Me.MenuStrip1.ImageScalingSize = New System.Drawing.Size(20, 20)
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.OmBlodToolStripMenuItem, Me.RetningslinjerToolStripMenuItem, Me.OmOssToolStripMenuItem})
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.OmBlodToolStripMenuItem, Me.RetningslinjerToolStripMenuItem, Me.ÅpninstiderToolStripMenuItem, Me.KontaktOssToolStripMenuItem, Me.OmOssToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
         Me.MenuStrip1.Size = New System.Drawing.Size(784, 24)
@@ -273,6 +275,18 @@ Partial Class hovedForside_Innlogging
         'Timer1
         '
         '
+        'ÅpninstiderToolStripMenuItem
+        '
+        Me.ÅpninstiderToolStripMenuItem.Name = "ÅpninstiderToolStripMenuItem"
+        Me.ÅpninstiderToolStripMenuItem.Size = New System.Drawing.Size(87, 20)
+        Me.ÅpninstiderToolStripMenuItem.Text = "Åpningstider"
+        '
+        'KontaktOssToolStripMenuItem
+        '
+        Me.KontaktOssToolStripMenuItem.Name = "KontaktOssToolStripMenuItem"
+        Me.KontaktOssToolStripMenuItem.Size = New System.Drawing.Size(82, 20)
+        Me.KontaktOssToolStripMenuItem.Text = "Kontakt Oss"
+        '
         'hovedForside_Innlogging
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -328,4 +342,6 @@ Partial Class hovedForside_Innlogging
     Friend WithEvents Button3 As Button
     Friend WithEvents Label8 As Label
     Friend WithEvents Timer1 As Timer
+    Friend WithEvents ÅpninstiderToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents KontaktOssToolStripMenuItem As ToolStripMenuItem
 End Class

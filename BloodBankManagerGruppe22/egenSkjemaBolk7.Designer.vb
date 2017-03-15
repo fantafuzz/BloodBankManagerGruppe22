@@ -34,9 +34,9 @@ Partial Class egenSkjemaBolk7
         'CheckBox4
         '
         Me.CheckBox4.AutoSize = True
-        Me.CheckBox4.Location = New System.Drawing.Point(15, 124)
+        Me.CheckBox4.Location = New System.Drawing.Point(17, 134)
         Me.CheckBox4.Name = "CheckBox4"
-        Me.CheckBox4.Size = New System.Drawing.Size(636, 17)
+        Me.CheckBox4.Size = New System.Drawing.Size(771, 18)
         Me.CheckBox4.TabIndex = 99
         Me.CheckBox4.Text = "Har du i løpet av de siste seks måneder hatt seksuell kontakt med en mann som du " &
     "vet har hatt seksuell kontakt med andre menn"
@@ -45,9 +45,9 @@ Partial Class egenSkjemaBolk7
         'CheckBox3
         '
         Me.CheckBox3.AutoSize = True
-        Me.CheckBox3.Location = New System.Drawing.Point(15, 101)
+        Me.CheckBox3.Location = New System.Drawing.Point(17, 109)
         Me.CheckBox3.Name = "CheckBox3"
-        Me.CheckBox3.Size = New System.Drawing.Size(369, 17)
+        Me.CheckBox3.Size = New System.Drawing.Size(466, 18)
         Me.CheckBox3.TabIndex = 98
         Me.CheckBox3.Text = "Hvis du har gitt blod tidligere, har du vært gravid siden forrige blodgivning"
         Me.CheckBox3.UseVisualStyleBackColor = True
@@ -55,9 +55,9 @@ Partial Class egenSkjemaBolk7
         'CheckBox2
         '
         Me.CheckBox2.AutoSize = True
-        Me.CheckBox2.Location = New System.Drawing.Point(15, 78)
+        Me.CheckBox2.Location = New System.Drawing.Point(17, 84)
         Me.CheckBox2.Name = "CheckBox2"
-        Me.CheckBox2.Size = New System.Drawing.Size(353, 17)
+        Me.CheckBox2.Size = New System.Drawing.Size(437, 18)
         Me.CheckBox2.TabIndex = 97
         Me.CheckBox2.Text = "Har du vært gravid i løpet av de siste tolv måneder, eller ammer du nå"
         Me.CheckBox2.UseVisualStyleBackColor = True
@@ -65,9 +65,9 @@ Partial Class egenSkjemaBolk7
         'CheckBox1
         '
         Me.CheckBox1.AutoSize = True
-        Me.CheckBox1.Location = New System.Drawing.Point(15, 55)
+        Me.CheckBox1.Location = New System.Drawing.Point(17, 59)
         Me.CheckBox1.Name = "CheckBox1"
-        Me.CheckBox1.Size = New System.Drawing.Size(83, 17)
+        Me.CheckBox1.Size = New System.Drawing.Size(99, 18)
         Me.CheckBox1.TabIndex = 96
         Me.CheckBox1.Text = "Er du gravid"
         Me.CheckBox1.UseVisualStyleBackColor = True
@@ -76,7 +76,7 @@ Partial Class egenSkjemaBolk7
         '
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(12, 29)
+        Me.Label7.Location = New System.Drawing.Point(14, 31)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(123, 13)
         Me.Label7.TabIndex = 95
@@ -84,25 +84,26 @@ Partial Class egenSkjemaBolk7
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(15, 147)
+        Me.Button1.Location = New System.Drawing.Point(17, 158)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(130, 23)
+        Me.Button1.Size = New System.Drawing.Size(152, 25)
         Me.Button1.TabIndex = 94
         Me.Button1.Text = "Gå videre til neste bolk"
         Me.Button1.UseVisualStyleBackColor = True
         '
         'egenSkjemaBolk7
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 14.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.Color.Cornsilk
-        Me.ClientSize = New System.Drawing.Size(711, 186)
+        Me.BackColor = System.Drawing.Color.White
+        Me.ClientSize = New System.Drawing.Size(829, 200)
         Me.Controls.Add(Me.CheckBox4)
         Me.Controls.Add(Me.CheckBox3)
         Me.Controls.Add(Me.CheckBox2)
         Me.Controls.Add(Me.CheckBox1)
         Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.Button1)
+        Me.Font = New System.Drawing.Font("Georgia", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "egenSkjemaBolk7"
         Me.Text = "egenSkjemaBolk7"

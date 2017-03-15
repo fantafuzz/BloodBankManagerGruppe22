@@ -197,10 +197,10 @@
     </Compile>
     <Compile Include="Sporsmaal.vb" />
     <Compile Include="SQL_hookup.vb" />
-    <Compile Include="statistikk.Designer.vb">
-      <DependentUpon>statistikk.vb</DependentUpon>
+    <Compile Include="statistics.Designer.vb">
+      <DependentUpon>statistics.vb</DependentUpon>
     </Compile>
-    <Compile Include="statistikk.vb">
+    <Compile Include="statistics.vb">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>
@@ -262,8 +262,8 @@
     <EmbeddedResource Include="registeringAvNyeBlodgivere.resx">
       <DependentUpon>registeringAvNyeBlodgivere.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="statistikk.resx">
-      <DependentUpon>statistikk.vb</DependentUpon>
+    <EmbeddedResource Include="statistics.resx">
+      <DependentUpon>statistics.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

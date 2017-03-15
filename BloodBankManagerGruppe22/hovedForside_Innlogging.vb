@@ -159,7 +159,7 @@ Kriteriene for utvelgelse av blodgivere og en rekke av de laboratorieundersøkel
     End Sub
 
 
-    Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
+    Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick 'live time update
         Label8.Text = Date.Now.ToString("dd-MMM-yyyy hh:mm:ss tt")
     End Sub
 
@@ -177,6 +177,38 @@ Kriteriene for utvelgelse av blodgivere og en rekke av de laboratorieundersøkel
 
     Private Sub Label8_Click(sender As Object, e As EventArgs) Handles Label8.Click
 
+    End Sub
+
+    Private Sub ÅpninstiderToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ÅpninstiderToolStripMenuItem.Click
+        MessageBox.Show("Mandag:	0730 - 1530
+Tirsdag:	0730 - 1530
+Onsdag:	0730 - 1530
+Torsdag:	0730 - 1530
+Fredag:	0730 - 1530
+")
+    End Sub
+
+    Private Sub KontaktOssToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles KontaktOssToolStripMenuItem.Click
+        MessageBox.Show("
+St. Olavs Hospital, Universitetssykehuset i Trondheim
+
+
+Besøksadresse:
+Blodbanken, Laboratoriesenteret, Erling Skjalgssons gt. 1
+7006 Trondheim
+
+Telefon:
+72 57 31 00
+
+
+E-post:
+blodgiver@stolav.no
+
+
+Url:
+www.stolav.no/blodgiver
+
+")
     End Sub
 End Class
 

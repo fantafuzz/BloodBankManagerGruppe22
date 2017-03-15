@@ -21,6 +21,7 @@ Public Class MINSIDENAVIGASJON
     End Sub
 
     Private Sub Statistikk_Click(sender As Object, e As EventArgs) Handles Statistikk.Click
-        Statistikk.Show()
+        statistics.Show()
     End Sub
+
 End Class

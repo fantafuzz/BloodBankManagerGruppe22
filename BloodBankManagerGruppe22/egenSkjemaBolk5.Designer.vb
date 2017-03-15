@@ -31,9 +31,9 @@ Partial Class egenSkjemaBolk5
         'CheckBox1
         '
         Me.CheckBox1.AutoSize = True
-        Me.CheckBox1.Location = New System.Drawing.Point(15, 50)
+        Me.CheckBox1.Location = New System.Drawing.Point(17, 54)
         Me.CheckBox1.Name = "CheckBox1"
-        Me.CheckBox1.Size = New System.Drawing.Size(247, 17)
+        Me.CheckBox1.Size = New System.Drawing.Size(307, 18)
         Me.CheckBox1.TabIndex = 79
         Me.CheckBox1.Text = "hatt sjeldne eller alvorlige infeksjonssykdommer"
         Me.CheckBox1.UseVisualStyleBackColor = True
@@ -42,7 +42,7 @@ Partial Class egenSkjemaBolk5
         '
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(12, 25)
+        Me.Label7.Location = New System.Drawing.Point(14, 27)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(180, 13)
         Me.Label7.TabIndex = 78
@@ -50,22 +50,23 @@ Partial Class egenSkjemaBolk5
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(15, 73)
+        Me.Button1.Location = New System.Drawing.Point(17, 79)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(130, 23)
+        Me.Button1.Size = New System.Drawing.Size(152, 25)
         Me.Button1.TabIndex = 77
         Me.Button1.Text = "Gå videre til neste bolk"
         Me.Button1.UseVisualStyleBackColor = True
         '
         'egenSkjemaBolk5
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 14.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.Color.Cornsilk
-        Me.ClientSize = New System.Drawing.Size(300, 114)
+        Me.BackColor = System.Drawing.Color.White
+        Me.ClientSize = New System.Drawing.Size(350, 123)
         Me.Controls.Add(Me.CheckBox1)
         Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.Button1)
+        Me.Font = New System.Drawing.Font("Georgia", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "egenSkjemaBolk5"
         Me.Text = "egenSkjemaBolk5"
