@@ -90,7 +90,7 @@ Public Class hovedForside_Innlogging
 
     Private Sub OmOssToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles OmOssToolStripMenuItem.Click
         MessageBox.Show("Blodbanken produserer blodprodukt og utfører transfusjonsmedisinske analyser. I tillegg blir det utført en rekke immunologiske analyser, diagnostikk av blodkreft og stamcelletransplantasjoner. Det finst ingen erstatning for blod. Blod er et levende materiale, og selv med moderne og avansert teknologi kan ikke blod framstillest kunstig. Det kan heller ikke lagres lenge. Derfor trenger vi jevnt påfyll for at Blodbanken ikke ​skal gå tom. Blodet frå blodgiverene våre blir bearbeidet og delt i ulike blodprodukt; røde blodceller, blodplater og plasma. Blodbank Register Applikasjonen er utviklet av Charlotte Halmrast, Marius Myhre og Naren Yogarajah.")
-
+        'Huske å programmere i objekt orientert form.
 
     End Sub
 
@@ -156,22 +156,21 @@ Kriteriene for utvelgelse av blodgivere og en rekke av de laboratorieundersøkel
 
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
         MINSIDENAVIGASJON.Show()
-        'TEST KNAPP
     End Sub
 
-    Private Sub hovedForside_Innlogging_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Timer1.Enabled = True
-    End Sub
+    '   Private Sub hovedForside_Innlogging_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+    '      Timer1.Enabled = True
+    ' End Sub
 
-    Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
-        Label8.Text = Date.Now.ToString("dd-MM-yyyy hh:mm:ss")
-    End Sub
+    'Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
+    '   Label8.Text = Date.Now.ToString("dd-MM-yyyy hh:mm:ss")
+    'End Sub
 
-    Private Sub Label8_Click(sender As Object, e As EventArgs) Handles Label8.Click
 
-    End Sub
 
-    Private Sub Label8_Click_1(sender As Object, e As EventArgs) Handles Label8.Click
+    Private Sub Button3_Click_1(sender As Object, e As EventArgs) Handles Button3.Click
+        Me.Hide()
+        egenSkjemaBolk1.Show()
 
     End Sub
 End Class
