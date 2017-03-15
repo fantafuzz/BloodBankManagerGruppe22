@@ -326,9 +326,8 @@ Partial Class registeringAvNyeBlodgivere
         Me.LabelFeilMelding.ForeColor = System.Drawing.Color.DarkRed
         Me.LabelFeilMelding.Location = New System.Drawing.Point(458, 93)
         Me.LabelFeilMelding.Name = "LabelFeilMelding"
-        Me.LabelFeilMelding.Size = New System.Drawing.Size(80, 13)
+        Me.LabelFeilMelding.Size = New System.Drawing.Size(0, 13)
         Me.LabelFeilMelding.TabIndex = 31
-        Me.LabelFeilMelding.Text = "PLACEHOLDer"
         '
         'TextBoxPassord
         '

@@ -1,19 +1,9 @@
 ﻿Imports MySql.Data.MySqlClient
 
 Public Class registeringAvNyeBlodgivere
+    Dim sql As New SQL_hookup("g_oops_22", "BtUDpVoR", "g_oops_22", "mysql.stud.iie.ntnu.no")
 
-
-    Dim tilkobling As MySqlConnection
-
-
-
-    'Update: Har nå lagt til en del tilkoblinger til databasen med de ulike objektene i minside form. Har forsatt en del å legge til, har oprettet en ny minSide tabell
-    ' i databasen. Jeg tenkte vi kunne ha en hel minside tabell i databasen hvor vi sender opplysninger fra vb.net minside form til denne tabell. Hva tenker dere om det?
-
-    'får ikke konvertert integer som en string, og når jeg prøver å kjøre får jeg en melding om dette.
-
-
-
+    'dim tilkobling as new mysqlconnection()
 
     Private Sub ButtonSend_Click(sender As Object, e As EventArgs) Handles ButtonSend.Click
 
@@ -80,8 +70,8 @@ Public Class registeringAvNyeBlodgivere
         Dim adresse As String = TextBoxAdr.Text   'String er alle tegn, som "!#"%&/321426asdfasdfa" er en godkjent string.
         Dim postnummer As Integer = CInt(TextBoxPostNr.Text)
         Dim poststed As String = TextBoxPostSt.Text
-        Dim telefonnummerEn As Integer = CInt(TextBoxPhone1.Text)
-        Dim telefonnummerTo As Integer
+        Dim telefonnummerEn As String = TextBoxPhone1.Text
+        Dim telefonnummerTo As String = ""
         If TextBoxPhone2.Text <> "" Then
             telefonnummerTo = CInt(TextBoxPhone2.Text)
         End If
@@ -94,7 +84,7 @@ Public Class registeringAvNyeBlodgivere
         Else
             kjonn = ":("
         End If
-        Dim blodtype As String = ComboBoxBlodType.SelectedIndex
+        Dim blodtype As Integer = ComboBoxBlodType.SelectedIndex
         Dim blodBefore As Boolean = False
         Dim hvilkenBlodbank As String = ""
         Dim samtykke As Boolean = False
@@ -113,50 +103,16 @@ Public Class registeringAvNyeBlodgivere
         Dim infoRodekors As Boolean = CheckBoxGetInfo.Checked
         Dim passord As String = TextBoxPassord.Text
 
-
-
-        Dim sqlAddBruker As New MySqlCommand("INSERT INTO bruker (fornavn, etternavn, epost, passord) values (@fornavn, @etternavn, @epost, @passord)", tilkobling) 'skal vi legge til denne data i samme tabell som minside for mer oversikt? Nei, for det fjerner integriteten til tabellen.
-        sqlAddBruker.Parameters.AddWithValue("@fornavn", fornavn)
-        sqlAddBruker.Parameters.AddWithValue("@etternavn", etternavn)
-        sqlAddBruker.Parameters.AddWithValue("@epost", epost)
-        sqlAddBruker.Parameters.AddWithValue("@passord", passord)
-        sqlAddBruker.ExecuteNonQuery()
-
-        '      Dim sqlGetBrukerId As New MySqlCommand("SELECT bruker_id FROM bruker WHERE fornavn = @fornavn AND etternavn = @etternavn AND epost = @epost AND passord = @passord")
-        '      Dim brukerid As Integer
-        '       sqlGetBrukerId.Parameters.AddWithValue("@fornavn", fornavn)
-        '      sqlGetBrukerId.Parameters.AddWithValue("@etternavn", etternavn)
-        '      sqlGetBrukerId.Parameters.AddWithValue("@epost", epost)
-        '      sqlGetBrukerId.Parameters.AddWithValue("@passord", passord)
-        '       Dim reader = sqlGetBrukerId.ExecuteReader()
-        '          brukerid = reader("bruker_id")
-        '       End While
-        Dim sqlAddBlodgiver As New MySqlCommand("INSERT INTO blodgiver (blodgiver_bruker_id, fodselsdato, personnummer, adresse, , postnr, poststed, telefon_1, telefon_2, epost, kjonn, blodgiver_blodtype_id, onkset_lok, gitt_for, hvor_gitt, samtykke_for, modta_rode_kors) values ((SELECT bruker_id FROM bruker WHERE @fornavn AND etternavn = @etternavn AND epost = @epost AND passord = @passord), @personnummer, @adresse, @telefonnummerEn, @telefonnummerTo, @epost, @kjonn, (SELECT blodtype_id FROM blodtype WHERE blodtype_id = @blodtype), @onsket_lok, @gitt_for, @hvor_gitt, @samtykke_for, @modta_rode_kors)", tilkobling)
-        sqlAddBlodgiver.Parameters.AddWithValue("@fornavn", fornavn)
-        sqlAddBlodgiver.Parameters.AddWithValue("@etternavn", etternavn)
-        sqlAddBlodgiver.Parameters.AddWithValue("@epost", epost)
-        sqlAddBlodgiver.Parameters.AddWithValue("@passord", passord)
-        sqlAddBlodgiver.Parameters.AddWithValue("@personnummer", personnummer)
-        sqlAddBlodgiver.Parameters.AddWithValue("@adresse", adresse)
-        sqlAddBlodgiver.Parameters.AddWithValue("@telefonnummerEn", telefonnummerEn)
-        sqlAddBlodgiver.Parameters.AddWithValue("@telefonnummerTo", telefonnummerTo)
-        sqlAddBlodgiver.Parameters.AddWithValue("@kjonn", kjonn)
-        sqlAddBlodgiver.Parameters.AddWithValue("@blodtype", blodtype)
-        sqlAddBlodgiver.Parameters.AddWithValue("@onsket_lok", blodgivningLokasjon)
-        sqlAddBlodgiver.Parameters.AddWithValue("@gitt_for", blodBefore)
-        sqlAddBlodgiver.Parameters.AddWithValue("@hvor_gitt", hvilkenBlodbank)
-        sqlAddBlodgiver.Parameters.AddWithValue("@samtykke_for", samtykke)
-        sqlAddBlodgiver.Parameters.AddWithValue("@modta_rode_kors", infoRodekors)
-        sqlAddBlodgiver.ExecuteNonQuery()
+        sql.registrerNy(fornavn, etternavn, epost, passord, fodselsdato, personnummer, adresse, postnummer, poststed, telefonnummerEn, telefonnummerTo, kjonn, blodtype, blodgivningLokasjon, blodBefore, hvilkenBlodbank, samtykke, infoRodekors)
 
         egenSkjemaBolk1.Show()
         Me.Close()
     End Sub
 
-    Private Sub registeringAvNyeBlodgivere_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        tilkobling = New MySqlConnection("Server=mysql.stud.iie.ntnu.no;Database=g_oops_22;Uid=g_oops_22;Pwd=BtUDpVoR")
-        tilkobling.Open()
-    End Sub
+    '  Private Sub registeringAvNyeBlodgivere_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+    '       tilkobling = New MySqlConnection("Server=mysql.stud.iie.ntnu.no;Database=g_oops_22;Uid=g_oops_22;Pwd=BtUDpVoR")
+    '       tilkobling.Open()
+    '   End Sub
 
     Private Sub TextBoxPhone1_TextChanged(sender As Object, e As EventArgs) Handles TextBoxPhone1.TextChanged
         If TextBoxPhone1.Text = "" Then
