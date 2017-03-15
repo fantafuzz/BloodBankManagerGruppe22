@@ -24,13 +24,14 @@ Partial Class labSvar
     Private Sub InitializeComponent()
         Me.ListBox1 = New System.Windows.Forms.ListBox()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.print_resultat = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'ListBox1
         '
         Me.ListBox1.FormattingEnabled = True
         Me.ListBox1.ItemHeight = 16
-        Me.ListBox1.Location = New System.Drawing.Point(12, 60)
+        Me.ListBox1.Location = New System.Drawing.Point(12, 89)
         Me.ListBox1.Name = "ListBox1"
         Me.ListBox1.Size = New System.Drawing.Size(1003, 676)
         Me.ListBox1.TabIndex = 0
@@ -45,11 +46,21 @@ Partial Class labSvar
         Me.Label1.TabIndex = 1
         Me.Label1.Text = "Labratorie Prøve Resultater"
         '
+        'print_resultat
+        '
+        Me.print_resultat.Location = New System.Drawing.Point(13, 60)
+        Me.print_resultat.Name = "print_resultat"
+        Me.print_resultat.Size = New System.Drawing.Size(268, 23)
+        Me.print_resultat.TabIndex = 2
+        Me.print_resultat.Text = "Se Resultat"
+        Me.print_resultat.UseVisualStyleBackColor = True
+        '
         'labSvar
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1037, 748)
+        Me.ClientSize = New System.Drawing.Size(1037, 793)
+        Me.Controls.Add(Me.print_resultat)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.ListBox1)
         Me.Name = "labSvar"
@@ -61,4 +72,5 @@ Partial Class labSvar
 
     Friend WithEvents ListBox1 As ListBox
     Friend WithEvents Label1 As Label
+    Friend WithEvents print_resultat As Button
 End Class
