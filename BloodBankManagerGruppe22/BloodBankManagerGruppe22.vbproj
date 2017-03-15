@@ -144,6 +144,18 @@
       <DependentUpon>hovedForside_Innlogging.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="kalender_bestilling.Designer.vb">
+      <DependentUpon>kalender_bestilling.vb</DependentUpon>
+    </Compile>
+    <Compile Include="kalender_bestilling.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="labSvar.Designer.vb">
+      <DependentUpon>labSvar.vb</DependentUpon>
+    </Compile>
+    <Compile Include="labSvar.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="minSideAnsatte.Designer.vb">
       <DependentUpon>minSideAnsatte.vb</DependentUpon>
     </Compile>
@@ -185,6 +197,12 @@
     </Compile>
     <Compile Include="Sporsmaal.vb" />
     <Compile Include="SQL_hookup.vb" />
+    <Compile Include="statistikk.Designer.vb">
+      <DependentUpon>statistikk.vb</DependentUpon>
+    </Compile>
+    <Compile Include="statistikk.vb">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="egenSkjemaBolk1.resx">
@@ -220,6 +238,12 @@
     <EmbeddedResource Include="hovedForside_Innlogging.resx">
       <DependentUpon>hovedForside_Innlogging.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="kalender_bestilling.resx">
+      <DependentUpon>kalender_bestilling.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="labSvar.resx">
+      <DependentUpon>labSvar.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="minSideAnsatte.resx">
       <DependentUpon>minSideAnsatte.vb</DependentUpon>
     </EmbeddedResource>
@@ -237,6 +261,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="registeringAvNyeBlodgivere.resx">
       <DependentUpon>registeringAvNyeBlodgivere.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="statistikk.resx">
+      <DependentUpon>statistikk.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
