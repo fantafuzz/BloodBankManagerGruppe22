@@ -57,7 +57,7 @@ Partial Class minSideForm
         Me.Label1.Location = New System.Drawing.Point(6, 24)
         Me.Label1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(293, 38)
+        Me.Label1.Size = New System.Drawing.Size(358, 46)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Velkommen til minside"
         '
@@ -65,7 +65,7 @@ Partial Class minSideForm
         '
         Me.TextBox10.Location = New System.Drawing.Point(101, 354)
         Me.TextBox10.Name = "TextBox10"
-        Me.TextBox10.Size = New System.Drawing.Size(342, 20)
+        Me.TextBox10.Size = New System.Drawing.Size(342, 23)
         Me.TextBox10.TabIndex = 41
         '
         'Label11
@@ -74,7 +74,7 @@ Partial Class minSideForm
         Me.Label11.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
         Me.Label11.Location = New System.Drawing.Point(12, 358)
         Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(37, 13)
+        Me.Label11.Size = New System.Drawing.Size(48, 17)
         Me.Label11.TabIndex = 40
         Me.Label11.Text = "Epost:"
         '
@@ -82,14 +82,14 @@ Partial Class minSideForm
         '
         Me.TextBox8.Location = New System.Drawing.Point(276, 314)
         Me.TextBox8.Name = "TextBox8"
-        Me.TextBox8.Size = New System.Drawing.Size(156, 20)
+        Me.TextBox8.Size = New System.Drawing.Size(156, 23)
         Me.TextBox8.TabIndex = 38
         '
         'TextBox9
         '
         Me.TextBox9.Location = New System.Drawing.Point(101, 314)
         Me.TextBox9.Name = "TextBox9"
-        Me.TextBox9.Size = New System.Drawing.Size(156, 20)
+        Me.TextBox9.Size = New System.Drawing.Size(156, 23)
         Me.TextBox9.TabIndex = 37
         '
         'Label9
@@ -97,7 +97,7 @@ Partial Class minSideForm
         Me.Label9.AutoSize = True
         Me.Label9.Location = New System.Drawing.Point(7, 318)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(105, 14)
+        Me.Label9.Size = New System.Drawing.Size(114, 17)
         Me.Label9.TabIndex = 36
         Me.Label9.Text = "Telefonnummer:"
         '
@@ -105,14 +105,14 @@ Partial Class minSideForm
         '
         Me.TextBox7.Location = New System.Drawing.Point(229, 269)
         Me.TextBox7.Name = "TextBox7"
-        Me.TextBox7.Size = New System.Drawing.Size(179, 20)
+        Me.TextBox7.Size = New System.Drawing.Size(179, 23)
         Me.TextBox7.TabIndex = 35
         '
         'TextBox6
         '
         Me.TextBox6.Location = New System.Drawing.Point(103, 269)
         Me.TextBox6.Name = "TextBox6"
-        Me.TextBox6.Size = New System.Drawing.Size(90, 20)
+        Me.TextBox6.Size = New System.Drawing.Size(90, 23)
         Me.TextBox6.TabIndex = 34
         '
         'Label8
@@ -120,7 +120,7 @@ Partial Class minSideForm
         Me.Label8.AutoSize = True
         Me.Label8.Location = New System.Drawing.Point(12, 272)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(76, 14)
+        Me.Label8.Size = New System.Drawing.Size(87, 17)
         Me.Label8.TabIndex = 33
         Me.Label8.Text = "Postnr/sted:"
         '
@@ -128,7 +128,7 @@ Partial Class minSideForm
         '
         Me.TextBox5.Location = New System.Drawing.Point(101, 224)
         Me.TextBox5.Name = "TextBox5"
-        Me.TextBox5.Size = New System.Drawing.Size(342, 20)
+        Me.TextBox5.Size = New System.Drawing.Size(342, 23)
         Me.TextBox5.TabIndex = 32
         '
         'Label7
@@ -136,7 +136,7 @@ Partial Class minSideForm
         Me.Label7.AutoSize = True
         Me.Label7.Location = New System.Drawing.Point(10, 227)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(55, 14)
+        Me.Label7.Size = New System.Drawing.Size(62, 17)
         Me.Label7.TabIndex = 31
         Me.Label7.Text = "Adresse:"
         '
@@ -144,7 +144,7 @@ Partial Class minSideForm
         '
         Me.TextBox4.Location = New System.Drawing.Point(101, 185)
         Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(131, 20)
+        Me.TextBox4.Size = New System.Drawing.Size(131, 23)
         Me.TextBox4.TabIndex = 30
         '
         'Label6
@@ -152,7 +152,7 @@ Partial Class minSideForm
         Me.Label6.AutoSize = True
         Me.Label6.Location = New System.Drawing.Point(10, 188)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(101, 14)
+        Me.Label6.Size = New System.Drawing.Size(109, 17)
         Me.Label6.TabIndex = 29
         Me.Label6.Text = "Personnummer:"
         '
@@ -161,7 +161,7 @@ Partial Class minSideForm
         Me.Label5.AutoSize = True
         Me.Label5.Location = New System.Drawing.Point(240, 155)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(69, 14)
+        Me.Label5.Size = New System.Drawing.Size(72, 17)
         Me.Label5.TabIndex = 28
         Me.Label5.Text = "(ddmmåå)"
         '
@@ -169,7 +169,7 @@ Partial Class minSideForm
         '
         Me.TextBox3.Location = New System.Drawing.Point(101, 148)
         Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(131, 20)
+        Me.TextBox3.Size = New System.Drawing.Size(131, 23)
         Me.TextBox3.TabIndex = 27
         '
         'Label4
@@ -177,7 +177,7 @@ Partial Class minSideForm
         Me.Label4.AutoSize = True
         Me.Label4.Location = New System.Drawing.Point(10, 151)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(81, 14)
+        Me.Label4.Size = New System.Drawing.Size(93, 17)
         Me.Label4.TabIndex = 26
         Me.Label4.Text = "Føsdselsdato:"
         '
@@ -185,7 +185,7 @@ Partial Class minSideForm
         '
         Me.TextBox2.Location = New System.Drawing.Point(101, 110)
         Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(342, 20)
+        Me.TextBox2.Size = New System.Drawing.Size(342, 23)
         Me.TextBox2.TabIndex = 25
         '
         'Label3
@@ -193,7 +193,7 @@ Partial Class minSideForm
         Me.Label3.AutoSize = True
         Me.Label3.Location = New System.Drawing.Point(12, 113)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(71, 14)
+        Me.Label3.Size = New System.Drawing.Size(75, 17)
         Me.Label3.TabIndex = 24
         Me.Label3.Text = "Etternavn:"
         '
@@ -201,7 +201,7 @@ Partial Class minSideForm
         '
         Me.TextBox1.Location = New System.Drawing.Point(101, 82)
         Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(342, 20)
+        Me.TextBox1.Size = New System.Drawing.Size(342, 23)
         Me.TextBox1.TabIndex = 23
         '
         'Label2
@@ -209,7 +209,7 @@ Partial Class minSideForm
         Me.Label2.AutoSize = True
         Me.Label2.Location = New System.Drawing.Point(12, 85)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(61, 14)
+        Me.Label2.Size = New System.Drawing.Size(65, 17)
         Me.Label2.TabIndex = 22
         Me.Label2.Text = "Fornavn:"
         '
@@ -218,24 +218,24 @@ Partial Class minSideForm
         Me.Label10.AutoSize = True
         Me.Label10.Location = New System.Drawing.Point(577, 51)
         Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(110, 14)
+        Me.Label10.Size = New System.Drawing.Size(117, 17)
         Me.Label10.TabIndex = 46
         Me.Label10.Text = "Labaratorie Svar:"
         '
         'ListBox1
         '
         Me.ListBox1.FormattingEnabled = True
-        Me.ListBox1.ItemHeight = 14
+        Me.ListBox1.ItemHeight = 17
         Me.ListBox1.Location = New System.Drawing.Point(581, 68)
         Me.ListBox1.Name = "ListBox1"
-        Me.ListBox1.Size = New System.Drawing.Size(427, 522)
+        Me.ListBox1.Size = New System.Drawing.Size(427, 514)
         Me.ListBox1.TabIndex = 47
         '
         'TextBox11
         '
         Me.TextBox11.Location = New System.Drawing.Point(156, 386)
         Me.TextBox11.Name = "TextBox11"
-        Me.TextBox11.Size = New System.Drawing.Size(172, 20)
+        Me.TextBox11.Size = New System.Drawing.Size(172, 23)
         Me.TextBox11.TabIndex = 49
         '
         'Label13
@@ -244,7 +244,7 @@ Partial Class minSideForm
         Me.Label13.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
         Me.Label13.Location = New System.Drawing.Point(12, 388)
         Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(117, 13)
+        Me.Label13.Size = New System.Drawing.Size(154, 17)
         Me.Label13.TabIndex = 48
         Me.Label13.Text = "Siste Blodgivning Dato:"
         '
@@ -259,7 +259,7 @@ Partial Class minSideForm
         '
         'minSideForm
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 14.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 17.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(1036, 664)

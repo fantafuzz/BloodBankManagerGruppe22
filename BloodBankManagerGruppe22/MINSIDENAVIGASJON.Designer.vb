@@ -36,10 +36,10 @@ Partial Class MINSIDENAVIGASJON
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.0!, System.Drawing.FontStyle.Bold)
-        Me.Label1.Location = New System.Drawing.Point(36, 26)
+        Me.Label1.Location = New System.Drawing.Point(11, 20)
         Me.Label1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(304, 31)
+        Me.Label1.Size = New System.Drawing.Size(379, 39)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Velkommen til Minside"
         '
@@ -105,7 +105,7 @@ Partial Class MINSIDENAVIGASJON
         '
         'MINSIDENAVIGASJON
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 14.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 17.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(691, 353)

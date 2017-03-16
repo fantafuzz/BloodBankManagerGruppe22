@@ -1,12 +1,8 @@
 ﻿Imports MySql.Data.MySqlClient
-Public Class labSvar
-
+Public Class hvorMyeBlodGitt
     Dim MysqlConn As MySqlConnection
     Dim COMMAND As MySqlCommand
-
-
-
-    Private Sub labSvar_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+    Private Sub hvorMyeBlodGitt_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         MysqlConn = New MySqlConnection
         MysqlConn.ConnectionString = "server=; database=; Uid=; password="
         Dim READER As MySqlDataReader
@@ -14,11 +10,11 @@ Public Class labSvar
         Try
             MysqlConn.Open()
             Dim Query As String
-            Query = "select * from g_oops_22.lab_svar"
+            Query = "select * from g_oops_22.blodbeholdning"
             COMMAND = New MySqlCommand(Query, MysqlConn)
-            READER = COMMAND.ExecuteReader
+            READER = Command.ExecuteReader
             While READER.Read
-                Dim sName = READER.GetString("svar")
+                Dim sName = READER.GetString("beholdningstype_mengde")
                 ListBox1.Items.Add(sName)
             End While
             MysqlConn.Close()
@@ -26,9 +22,5 @@ Public Class labSvar
 
         End Try
 
-
-
     End Sub
-
-
 End Class
