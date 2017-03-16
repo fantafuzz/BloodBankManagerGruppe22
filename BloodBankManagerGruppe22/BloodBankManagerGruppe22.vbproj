@@ -169,10 +169,16 @@
     <Compile Include="minSideAnsatte.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MINSIDENAVIGASJON.Designer.vb">
-      <DependentUpon>MINSIDENAVIGASJON.vb</DependentUpon>
+    <Compile Include="MINSIDENAVIGASJONbrukere.Designer.vb">
+      <DependentUpon>MINSIDENAVIGASJONbrukere.vb</DependentUpon>
     </Compile>
-    <Compile Include="MINSIDENAVIGASJON.vb">
+    <Compile Include="MINSIDENAVIGASJONbrukere.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="minSideNavigasjonansatte.Designer.vb">
+      <DependentUpon>minSideNavigasjonansatte.vb</DependentUpon>
+    </Compile>
+    <Compile Include="minSideNavigasjonansatte.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="registeringAvNyeBlodgivere.Designer.vb">
@@ -260,8 +266,11 @@
     <EmbeddedResource Include="minSideForm.resx">
       <DependentUpon>minSideForm.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MINSIDENAVIGASJON.resx">
-      <DependentUpon>MINSIDENAVIGASJON.vb</DependentUpon>
+    <EmbeddedResource Include="MINSIDENAVIGASJONbrukere.resx">
+      <DependentUpon>MINSIDENAVIGASJONbrukere.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="minSideNavigasjonansatte.resx">
+      <DependentUpon>minSideNavigasjonansatte.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>

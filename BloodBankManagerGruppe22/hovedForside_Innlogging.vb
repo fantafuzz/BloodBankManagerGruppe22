@@ -72,7 +72,7 @@ Public Class hovedForside_Innlogging
         Next
         If gotmatch = True Then
             MessageBox.Show("Du er logget inn. Velkommen til blodbanken.")
-            MINSIDENAVIGASJON.Show()
+            MINSIDENAVIGASJONbrukere.Show()
         ElseIf gotmatch = False Then
             MessageBox.Show("Feil brukernavn eller passord.")
         End If
@@ -154,8 +154,8 @@ Kriteriene for utvelgelse av blodgivere og en rekke av de laboratorieundersøkel
 
     End Sub
 
-    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
-        MINSIDENAVIGASJON.Show()
+    Private Sub Button3_Click(sender As Object, e As EventArgs)
+        MINSIDENAVIGASJONbrukere.Show()
     End Sub
 
 
@@ -211,8 +211,16 @@ www.stolav.no/blodgiver
 ")
     End Sub
 
-    Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
+    Private Sub Button4_Click(sender As Object, e As EventArgs)
         minSideAnsatte.Show()
+    End Sub
+
+    Private Sub Button3_Click_2(sender As Object, e As EventArgs) Handles Button3.Click
+        minSideNavigasjonansatte.Show()
+    End Sub
+
+    Private Sub Button4_Click_1(sender As Object, e As EventArgs) Handles Button4.Click
+        MINSIDENAVIGASJONbrukere.Show()
     End Sub
 End Class
 

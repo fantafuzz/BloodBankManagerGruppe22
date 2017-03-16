@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
-Partial Class MINSIDENAVIGASJON
+Partial Class MINSIDENAVIGASJONbrukere
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -22,7 +22,7 @@ Partial Class MINSIDENAVIGASJON
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(MINSIDENAVIGASJON))
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(MINSIDENAVIGASJONbrukere))
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Endre_mine_opplysninger = New System.Windows.Forms.Button()
         Me.Hvor_Mye_Blod_Har_jeg_gitt_til_blodbanken = New System.Windows.Forms.Button()
@@ -103,12 +103,12 @@ Partial Class MINSIDENAVIGASJON
         Me.Statistikk.Text = "Statistikk"
         Me.Statistikk.UseVisualStyleBackColor = True
         '
-        'MINSIDENAVIGASJON
+        'MINSIDENAVIGASJONbrukere
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 17.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(691, 353)
+        Me.ClientSize = New System.Drawing.Size(707, 357)
         Me.Controls.Add(Me.Statistikk)
         Me.Controls.Add(Me.Lab_Svar)
         Me.Controls.Add(Me.Logg_ut)
@@ -119,7 +119,7 @@ Partial Class MINSIDENAVIGASJON
         Me.Font = New System.Drawing.Font("Georgia", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Margin = New System.Windows.Forms.Padding(2)
-        Me.Name = "MINSIDENAVIGASJON"
+        Me.Name = "MINSIDENAVIGASJONbrukere"
         Me.Text = "MINSIDENAVIGASJON"
         Me.ResumeLayout(False)
         Me.PerformLayout()

@@ -47,9 +47,9 @@ Partial Class hovedForside_Innlogging
         Me.Label5 = New System.Windows.Forms.Label()
         Me.TextBox2 = New System.Windows.Forms.TextBox()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
-        Me.Button3 = New System.Windows.Forms.Button()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
+        Me.Button3 = New System.Windows.Forms.Button()
         Me.Button4 = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
@@ -63,7 +63,7 @@ Partial Class hovedForside_Innlogging
         Me.Panel1.Controls.Add(Me.Label3)
         Me.Panel1.Controls.Add(Me.ButtonRegistrer)
         Me.Panel1.Location = New System.Drawing.Point(12, 260)
-        Me.Panel1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Panel1.Margin = New System.Windows.Forms.Padding(4)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(265, 149)
         Me.Panel1.TabIndex = 16
@@ -80,7 +80,7 @@ Partial Class hovedForside_Innlogging
         'ButtonRegistrer
         '
         Me.ButtonRegistrer.Location = New System.Drawing.Point(8, 78)
-        Me.ButtonRegistrer.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.ButtonRegistrer.Margin = New System.Windows.Forms.Padding(4)
         Me.ButtonRegistrer.Name = "ButtonRegistrer"
         Me.ButtonRegistrer.Size = New System.Drawing.Size(100, 28)
         Me.ButtonRegistrer.TabIndex = 10
@@ -90,7 +90,7 @@ Partial Class hovedForside_Innlogging
         'Button1
         '
         Me.Button1.Location = New System.Drawing.Point(8, 164)
-        Me.Button1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Button1.Margin = New System.Windows.Forms.Padding(4)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(213, 28)
         Me.Button1.TabIndex = 13
@@ -121,7 +121,7 @@ Partial Class hovedForside_Innlogging
         'TextBoxPassword
         '
         Me.TextBoxPassword.Location = New System.Drawing.Point(8, 132)
-        Me.TextBoxPassword.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.TextBoxPassword.Margin = New System.Windows.Forms.Padding(4)
         Me.TextBoxPassword.Name = "TextBoxPassword"
         Me.TextBoxPassword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.TextBoxPassword.Size = New System.Drawing.Size(212, 22)
@@ -131,7 +131,7 @@ Partial Class hovedForside_Innlogging
         'TextBoxUsername
         '
         Me.TextBoxUsername.Location = New System.Drawing.Point(8, 71)
-        Me.TextBoxUsername.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.TextBoxUsername.Margin = New System.Windows.Forms.Padding(4)
         Me.TextBoxUsername.Name = "TextBoxUsername"
         Me.TextBoxUsername.Size = New System.Drawing.Size(212, 22)
         Me.TextBoxUsername.TabIndex = 9
@@ -170,7 +170,7 @@ Partial Class hovedForside_Innlogging
         Me.Panel2.Controls.Add(Me.Label2)
         Me.Panel2.Controls.Add(Me.Button1)
         Me.Panel2.Location = New System.Drawing.Point(12, 417)
-        Me.Panel2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Panel2.Margin = New System.Windows.Forms.Padding(4)
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(265, 242)
         Me.Panel2.TabIndex = 19
@@ -178,7 +178,7 @@ Partial Class hovedForside_Innlogging
         'Button2
         '
         Me.Button2.Location = New System.Drawing.Point(8, 201)
-        Me.Button2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Button2.Margin = New System.Windows.Forms.Padding(4)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(213, 28)
         Me.Button2.TabIndex = 19
@@ -189,7 +189,7 @@ Partial Class hovedForside_Innlogging
         '
         Me.TextBox1.Font = New System.Drawing.Font("Century", 10.875!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBox1.Location = New System.Drawing.Point(17, 140)
-        Me.TextBox1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.TextBox1.Margin = New System.Windows.Forms.Padding(4)
         Me.TextBox1.Multiline = True
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(680, 98)
@@ -266,7 +266,7 @@ Partial Class hovedForside_Innlogging
         'TextBox2
         '
         Me.TextBox2.Location = New System.Drawing.Point(501, 283)
-        Me.TextBox2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.TextBox2.Margin = New System.Windows.Forms.Padding(4)
         Me.TextBox2.Multiline = True
         Me.TextBox2.Name = "TextBox2"
         Me.TextBox2.Size = New System.Drawing.Size(253, 52)
@@ -277,22 +277,12 @@ Partial Class hovedForside_Innlogging
         '
         Me.PictureBox2.Image = CType(resources.GetObject("PictureBox2.Image"), System.Drawing.Image)
         Me.PictureBox2.Location = New System.Drawing.Point(501, 340)
-        Me.PictureBox2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.PictureBox2.Margin = New System.Windows.Forms.Padding(4)
         Me.PictureBox2.Name = "PictureBox2"
         Me.PictureBox2.Size = New System.Drawing.Size(255, 309)
         Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.PictureBox2.TabIndex = 27
         Me.PictureBox2.TabStop = False
-        '
-        'Button3
-        '
-        Me.Button3.Location = New System.Drawing.Point(335, 306)
-        Me.Button3.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(100, 28)
-        Me.Button3.TabIndex = 28
-        Me.Button3.Text = "testKnapp"
-        Me.Button3.UseVisualStyleBackColor = True
         '
         'Label8
         '
@@ -308,13 +298,22 @@ Partial Class hovedForside_Innlogging
         'Timer1
         '
         '
+        'Button3
+        '
+        Me.Button3.Location = New System.Drawing.Point(843, 360)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(75, 23)
+        Me.Button3.TabIndex = 31
+        Me.Button3.Text = "Ansatte"
+        Me.Button3.UseVisualStyleBackColor = True
+        '
         'Button4
         '
-        Me.Button4.Location = New System.Drawing.Point(865, 273)
+        Me.Button4.Location = New System.Drawing.Point(858, 283)
         Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(121, 33)
-        Me.Button4.TabIndex = 30
-        Me.Button4.Text = "testAnsatteSide"
+        Me.Button4.Size = New System.Drawing.Size(75, 23)
+        Me.Button4.TabIndex = 32
+        Me.Button4.Text = "Brukere"
         Me.Button4.UseVisualStyleBackColor = True
         '
         'hovedForside_Innlogging
@@ -324,8 +323,8 @@ Partial Class hovedForside_Innlogging
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(1045, 690)
         Me.Controls.Add(Me.Button4)
-        Me.Controls.Add(Me.Label8)
         Me.Controls.Add(Me.Button3)
+        Me.Controls.Add(Me.Label8)
         Me.Controls.Add(Me.PictureBox2)
         Me.Controls.Add(Me.TextBox2)
         Me.Controls.Add(Me.Label5)
@@ -337,7 +336,7 @@ Partial Class hovedForside_Innlogging
         Me.Controls.Add(Me.MenuStrip1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MainMenuStrip = Me.MenuStrip1
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "hovedForside_Innlogging"
         Me.Text = "Form1"
         Me.Panel1.ResumeLayout(False)
@@ -371,10 +370,10 @@ Partial Class hovedForside_Innlogging
     Friend WithEvents Label5 As Label
     Friend WithEvents TextBox2 As TextBox
     Friend WithEvents PictureBox2 As PictureBox
-    Friend WithEvents Button3 As Button
     Friend WithEvents Label8 As Label
     Friend WithEvents Timer1 As Timer
     Friend WithEvents ÅpninstiderToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents KontaktOssToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents Button3 As Button
     Friend WithEvents Button4 As Button
 End Class

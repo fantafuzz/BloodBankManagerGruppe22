@@ -42,16 +42,18 @@ Public Class minSideAnsatte
         FilterData(TextBox1.Text)
     End Sub
 
-    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+    Private Sub Button3_Click(sender As Object, e As EventArgs)
         'Dim utleveringAvBlodProdukter As String
         'Dim bestillingAvBlodProdukter As String
 
 
     End Sub
 
-    Private Sub DateTimePicker1_ValueChanged(sender As Object, e As EventArgs) Handles DateTimePicker1.ValueChanged
+    Private Sub DateTimePicker1_ValueChanged(sender As Object, e As EventArgs)
 
     End Sub
 
+    Private Sub Button1_Click(sender As Object, e As EventArgs)
 
+    End Sub
 End Class

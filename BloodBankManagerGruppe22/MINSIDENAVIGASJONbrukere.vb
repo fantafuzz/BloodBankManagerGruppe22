@@ -1,5 +1,5 @@
 ﻿Imports MySql.Data.MySqlClient
-Public Class MINSIDENAVIGASJON
+Public Class MINSIDENAVIGASJONbrukere
     Dim MysqlConn As MySqlConnection
     Dim COMMAND As MySqlCommand
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Endre_mine_opplysninger.Click
