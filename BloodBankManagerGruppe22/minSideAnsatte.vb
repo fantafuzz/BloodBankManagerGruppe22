@@ -6,7 +6,7 @@ Public Class minSideAnsatte
     Private Sub minSideAnsatte_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         MysqlConn = New MySqlConnection
         MysqlConn.ConnectionString =
-            "Server=;Database=;Uid=;Pwd="
+            "Server= ;Database=;Uid=;Pwd="
 
 
 
@@ -42,18 +42,34 @@ Public Class minSideAnsatte
         FilterData(TextBox1.Text)
     End Sub
 
-    Private Sub Button3_Click(sender As Object, e As EventArgs)
-        'Dim utleveringAvBlodProdukter As String
-        'Dim bestillingAvBlodProdukter As String
+    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+        If Not DataGridView1.CurrentRow Is Nothing Then
+            Dim bruker_id As Integer = DataGridView1.CurrentRow.Cells("bruker_id").Value
+            Dim fornavn As String = DataGridView1.CurrentRow.Cells("fornavn").Value
+            Dim etternavn As String = DataGridView1.CurrentRow.Cells("etternavn").Value
+            Dim epost As String = DataGridView1.CurrentRow.Cells("epost").Value
+            Dim personnummer As Integer = DataGridView1.CurrentRow.Cells("personnummer").Value
+        End If
+
+        Dim READER As MySqlDataReader
+            Try
+                MysqlConn.Open()
+                Dim Query As String
+            Query = "insert into g_oops_22.time_bestilling(bestilling_bruker_id, dato) values ('" & DataGridView1.Text & "')"
+            COMMAND = New MySqlCommand(Query, MysqlConn)
+                READER = COMMAND.ExecuteReader
 
 
-    End Sub
 
-    Private Sub DateTimePicker1_ValueChanged(sender As Object, e As EventArgs)
+                MessageBox.Show("Ny time er bestilt.")
+                MysqlConn.Close()
 
-    End Sub
+            Catch ex As Exception
+                MessageBox.Show(ex.Message)
+            Finally
+                MysqlConn.Dispose()
+            End Try
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs)
 
     End Sub
 End Class

@@ -180,7 +180,7 @@ Partial Class hovedForside_Innlogging
         Me.TextBox1.Location = New System.Drawing.Point(13, 114)
         Me.TextBox1.Multiline = True
         Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(511, 80)
+        Me.TextBox1.Size = New System.Drawing.Size(644, 80)
         Me.TextBox1.TabIndex = 22
         Me.TextBox1.Text = "Det tar kun en halv time å gi blod. Den halve literen du gir kan redde tre liv. E" &
     "r du frisk og mellom 18 og 60 år, kan du melde deg som blodgiver.  Husk at BLOD " &
@@ -283,7 +283,7 @@ Partial Class hovedForside_Innlogging
         'Button3
         '
         Me.Button3.Location = New System.Drawing.Point(632, 292)
-        Me.Button3.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Button3.Margin = New System.Windows.Forms.Padding(2)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(56, 19)
         Me.Button3.TabIndex = 31
@@ -293,7 +293,7 @@ Partial Class hovedForside_Innlogging
         'Button4
         '
         Me.Button4.Location = New System.Drawing.Point(644, 230)
-        Me.Button4.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Button4.Margin = New System.Windows.Forms.Padding(2)
         Me.Button4.Name = "Button4"
         Me.Button4.Size = New System.Drawing.Size(56, 19)
         Me.Button4.TabIndex = 32
