@@ -3,10 +3,10 @@
 'Spørsmål? Skal vi bruke en "public" versjon av denne, som vi lager i form1? Eller skal vi konstruere en egen i hver?
 Public Class SQL_hookup
     Private salt As String = "detteErEnVeldigLangHashSomGjorAtVaarePassordBlirMyeSikrere"
-    Private username As String
-    Private password As String
-    Private databasename As String
-    Private server As String
+    Private username As String = "g_oops_22"
+    Private password As String = "BtUDpVoR"
+    Private databasename As String = "g_oops_22"
+    Private server As String = "mysql.stud.iie.ntnu.no"
 
     'Her kan vi legge inn brukernavn/passord osv, og ikke ha det i constructoren. Men det kan være lurt å ha det åpent i constructor, så kan vi ha den menyen for å
     '   legge inn database fra programmet.

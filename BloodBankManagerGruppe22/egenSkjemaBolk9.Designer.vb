@@ -83,19 +83,17 @@ Partial Class egenSkjemaBolk9
         '
         Me.Label11.AutoSize = True
         Me.Label11.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label11.Location = New System.Drawing.Point(24, 52)
-        Me.Label11.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
+        Me.Label11.Location = New System.Drawing.Point(12, 27)
         Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(144, 26)
+        Me.Label11.Size = New System.Drawing.Size(77, 13)
         Me.Label11.TabIndex = 101
         Me.Label11.Text = "Besvar også"
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(30, 692)
-        Me.Button1.Margin = New System.Windows.Forms.Padding(6)
+        Me.Button1.Location = New System.Drawing.Point(15, 360)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(260, 44)
+        Me.Button1.Size = New System.Drawing.Size(130, 23)
         Me.Button1.TabIndex = 100
         Me.Button1.Text = "Gå videre til neste bolk"
         Me.Button1.UseVisualStyleBackColor = True
@@ -103,10 +101,9 @@ Partial Class egenSkjemaBolk9
         'Label1
         '
         Me.Label1.BackColor = System.Drawing.Color.WhiteSmoke
-        Me.Label1.Location = New System.Drawing.Point(26, 102)
-        Me.Label1.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
+        Me.Label1.Location = New System.Drawing.Point(13, 53)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(1284, 48)
+        Me.Label1.Size = New System.Drawing.Size(642, 25)
         Me.Label1.TabIndex = 102
         Me.Label1.Text = "spm50"
         Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -114,10 +111,9 @@ Partial Class egenSkjemaBolk9
         'Label5
         '
         Me.Label5.BackColor = System.Drawing.Color.WhiteSmoke
-        Me.Label5.Location = New System.Drawing.Point(25, 294)
-        Me.Label5.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
+        Me.Label5.Location = New System.Drawing.Point(12, 153)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(1284, 48)
+        Me.Label5.Size = New System.Drawing.Size(642, 25)
         Me.Label5.TabIndex = 103
         Me.Label5.Text = "spm54"
         Me.Label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -125,10 +121,9 @@ Partial Class egenSkjemaBolk9
         'Label7
         '
         Me.Label7.BackColor = System.Drawing.Color.WhiteSmoke
-        Me.Label7.Location = New System.Drawing.Point(25, 387)
-        Me.Label7.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
+        Me.Label7.Location = New System.Drawing.Point(12, 201)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(1284, 48)
+        Me.Label7.Size = New System.Drawing.Size(642, 25)
         Me.Label7.TabIndex = 104
         Me.Label7.Text = "spm56"
         Me.Label7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -136,10 +131,9 @@ Partial Class egenSkjemaBolk9
         'Label9
         '
         Me.Label9.BackColor = System.Drawing.Color.WhiteSmoke
-        Me.Label9.Location = New System.Drawing.Point(26, 476)
-        Me.Label9.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
+        Me.Label9.Location = New System.Drawing.Point(13, 248)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(1284, 48)
+        Me.Label9.Size = New System.Drawing.Size(642, 25)
         Me.Label9.TabIndex = 105
         Me.Label9.Text = "spm58"
         Me.Label9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -147,10 +141,9 @@ Partial Class egenSkjemaBolk9
         'Label3
         '
         Me.Label3.BackColor = System.Drawing.Color.WhiteSmoke
-        Me.Label3.Location = New System.Drawing.Point(26, 198)
-        Me.Label3.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
+        Me.Label3.Location = New System.Drawing.Point(13, 103)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(1284, 48)
+        Me.Label3.Size = New System.Drawing.Size(642, 25)
         Me.Label3.TabIndex = 106
         Me.Label3.Text = "spm52"
         Me.Label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -158,10 +151,9 @@ Partial Class egenSkjemaBolk9
         'Label2
         '
         Me.Label2.BackColor = System.Drawing.Color.White
-        Me.Label2.Location = New System.Drawing.Point(26, 150)
-        Me.Label2.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
+        Me.Label2.Location = New System.Drawing.Point(13, 78)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(1284, 48)
+        Me.Label2.Size = New System.Drawing.Size(642, 25)
         Me.Label2.TabIndex = 107
         Me.Label2.Text = "spm51"
         Me.Label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -169,10 +161,9 @@ Partial Class egenSkjemaBolk9
         'Label10
         '
         Me.Label10.BackColor = System.Drawing.Color.White
-        Me.Label10.Location = New System.Drawing.Point(26, 524)
-        Me.Label10.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
+        Me.Label10.Location = New System.Drawing.Point(13, 272)
         Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(1284, 48)
+        Me.Label10.Size = New System.Drawing.Size(642, 25)
         Me.Label10.TabIndex = 108
         Me.Label10.Text = "spm59"
         Me.Label10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -180,10 +171,9 @@ Partial Class egenSkjemaBolk9
         'Label8
         '
         Me.Label8.BackColor = System.Drawing.Color.White
-        Me.Label8.Location = New System.Drawing.Point(26, 434)
-        Me.Label8.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
+        Me.Label8.Location = New System.Drawing.Point(13, 226)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(1284, 48)
+        Me.Label8.Size = New System.Drawing.Size(642, 25)
         Me.Label8.TabIndex = 109
         Me.Label8.Text = "spm57"
         Me.Label8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -191,10 +181,9 @@ Partial Class egenSkjemaBolk9
         'Label6
         '
         Me.Label6.BackColor = System.Drawing.Color.White
-        Me.Label6.Location = New System.Drawing.Point(26, 342)
-        Me.Label6.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
+        Me.Label6.Location = New System.Drawing.Point(13, 178)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(1284, 48)
+        Me.Label6.Size = New System.Drawing.Size(642, 25)
         Me.Label6.TabIndex = 110
         Me.Label6.Text = "spm55"
         Me.Label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -202,10 +191,9 @@ Partial Class egenSkjemaBolk9
         'Label4
         '
         Me.Label4.BackColor = System.Drawing.Color.White
-        Me.Label4.Location = New System.Drawing.Point(26, 246)
-        Me.Label4.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
+        Me.Label4.Location = New System.Drawing.Point(13, 128)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(1284, 48)
+        Me.Label4.Size = New System.Drawing.Size(642, 25)
         Me.Label4.TabIndex = 111
         Me.Label4.Text = "spm53"
         Me.Label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -215,19 +203,17 @@ Partial Class egenSkjemaBolk9
         Me.Panel9.BackColor = System.Drawing.Color.White
         Me.Panel9.Controls.Add(Me.RadioButtonN2)
         Me.Panel9.Controls.Add(Me.RadioButtonJ2)
-        Me.Panel9.Location = New System.Drawing.Point(1177, 150)
-        Me.Panel9.Margin = New System.Windows.Forms.Padding(6)
+        Me.Panel9.Location = New System.Drawing.Point(588, 78)
         Me.Panel9.Name = "Panel9"
-        Me.Panel9.Size = New System.Drawing.Size(132, 48)
+        Me.Panel9.Size = New System.Drawing.Size(66, 25)
         Me.Panel9.TabIndex = 116
         '
         'RadioButtonN2
         '
         Me.RadioButtonN2.AutoSize = True
-        Me.RadioButtonN2.Location = New System.Drawing.Point(104, 12)
-        Me.RadioButtonN2.Margin = New System.Windows.Forms.Padding(6)
+        Me.RadioButtonN2.Location = New System.Drawing.Point(52, 6)
         Me.RadioButtonN2.Name = "RadioButtonN2"
-        Me.RadioButtonN2.Size = New System.Drawing.Size(27, 26)
+        Me.RadioButtonN2.Size = New System.Drawing.Size(14, 13)
         Me.RadioButtonN2.TabIndex = 37
         Me.RadioButtonN2.TabStop = True
         Me.RadioButtonN2.Tag = "1"
@@ -236,10 +222,9 @@ Partial Class egenSkjemaBolk9
         'RadioButtonJ2
         '
         Me.RadioButtonJ2.AutoSize = True
-        Me.RadioButtonJ2.Location = New System.Drawing.Point(0, 12)
-        Me.RadioButtonJ2.Margin = New System.Windows.Forms.Padding(6)
+        Me.RadioButtonJ2.Location = New System.Drawing.Point(0, 6)
         Me.RadioButtonJ2.Name = "RadioButtonJ2"
-        Me.RadioButtonJ2.Size = New System.Drawing.Size(27, 26)
+        Me.RadioButtonJ2.Size = New System.Drawing.Size(14, 13)
         Me.RadioButtonJ2.TabIndex = 38
         Me.RadioButtonJ2.TabStop = True
         Me.RadioButtonJ2.Tag = "1"
@@ -250,19 +235,17 @@ Partial Class egenSkjemaBolk9
         Me.Panel5.BackColor = System.Drawing.Color.White
         Me.Panel5.Controls.Add(Me.RadioButtonN4)
         Me.Panel5.Controls.Add(Me.RadioButtonJ4)
-        Me.Panel5.Location = New System.Drawing.Point(1177, 246)
-        Me.Panel5.Margin = New System.Windows.Forms.Padding(6)
+        Me.Panel5.Location = New System.Drawing.Point(588, 128)
         Me.Panel5.Name = "Panel5"
-        Me.Panel5.Size = New System.Drawing.Size(132, 48)
+        Me.Panel5.Size = New System.Drawing.Size(66, 25)
         Me.Panel5.TabIndex = 113
         '
         'RadioButtonN4
         '
         Me.RadioButtonN4.AutoSize = True
-        Me.RadioButtonN4.Location = New System.Drawing.Point(104, 12)
-        Me.RadioButtonN4.Margin = New System.Windows.Forms.Padding(6)
+        Me.RadioButtonN4.Location = New System.Drawing.Point(52, 6)
         Me.RadioButtonN4.Name = "RadioButtonN4"
-        Me.RadioButtonN4.Size = New System.Drawing.Size(27, 26)
+        Me.RadioButtonN4.Size = New System.Drawing.Size(14, 13)
         Me.RadioButtonN4.TabIndex = 37
         Me.RadioButtonN4.TabStop = True
         Me.RadioButtonN4.Tag = "1"
@@ -271,10 +254,9 @@ Partial Class egenSkjemaBolk9
         'RadioButtonJ4
         '
         Me.RadioButtonJ4.AutoSize = True
-        Me.RadioButtonJ4.Location = New System.Drawing.Point(0, 12)
-        Me.RadioButtonJ4.Margin = New System.Windows.Forms.Padding(6)
+        Me.RadioButtonJ4.Location = New System.Drawing.Point(0, 6)
         Me.RadioButtonJ4.Name = "RadioButtonJ4"
-        Me.RadioButtonJ4.Size = New System.Drawing.Size(27, 26)
+        Me.RadioButtonJ4.Size = New System.Drawing.Size(14, 13)
         Me.RadioButtonJ4.TabIndex = 38
         Me.RadioButtonJ4.TabStop = True
         Me.RadioButtonJ4.Tag = "1"
@@ -285,19 +267,17 @@ Partial Class egenSkjemaBolk9
         Me.Panel4.BackColor = System.Drawing.Color.WhiteSmoke
         Me.Panel4.Controls.Add(Me.RadioButtonN5)
         Me.Panel4.Controls.Add(Me.RadioButtonJ5)
-        Me.Panel4.Location = New System.Drawing.Point(1177, 294)
-        Me.Panel4.Margin = New System.Windows.Forms.Padding(6)
+        Me.Panel4.Location = New System.Drawing.Point(588, 153)
         Me.Panel4.Name = "Panel4"
-        Me.Panel4.Size = New System.Drawing.Size(132, 48)
+        Me.Panel4.Size = New System.Drawing.Size(66, 25)
         Me.Panel4.TabIndex = 114
         '
         'RadioButtonN5
         '
         Me.RadioButtonN5.AutoSize = True
-        Me.RadioButtonN5.Location = New System.Drawing.Point(104, 12)
-        Me.RadioButtonN5.Margin = New System.Windows.Forms.Padding(6)
+        Me.RadioButtonN5.Location = New System.Drawing.Point(52, 6)
         Me.RadioButtonN5.Name = "RadioButtonN5"
-        Me.RadioButtonN5.Size = New System.Drawing.Size(27, 26)
+        Me.RadioButtonN5.Size = New System.Drawing.Size(14, 13)
         Me.RadioButtonN5.TabIndex = 37
         Me.RadioButtonN5.TabStop = True
         Me.RadioButtonN5.Tag = "1"
@@ -306,10 +286,9 @@ Partial Class egenSkjemaBolk9
         'RadioButtonJ5
         '
         Me.RadioButtonJ5.AutoSize = True
-        Me.RadioButtonJ5.Location = New System.Drawing.Point(0, 12)
-        Me.RadioButtonJ5.Margin = New System.Windows.Forms.Padding(6)
+        Me.RadioButtonJ5.Location = New System.Drawing.Point(0, 6)
         Me.RadioButtonJ5.Name = "RadioButtonJ5"
-        Me.RadioButtonJ5.Size = New System.Drawing.Size(27, 26)
+        Me.RadioButtonJ5.Size = New System.Drawing.Size(14, 13)
         Me.RadioButtonJ5.TabIndex = 38
         Me.RadioButtonJ5.TabStop = True
         Me.RadioButtonJ5.Tag = "1"
@@ -320,19 +299,17 @@ Partial Class egenSkjemaBolk9
         Me.Panel3.BackColor = System.Drawing.Color.WhiteSmoke
         Me.Panel3.Controls.Add(Me.RadioButtonN3)
         Me.Panel3.Controls.Add(Me.RadioButtonJ3)
-        Me.Panel3.Location = New System.Drawing.Point(1177, 198)
-        Me.Panel3.Margin = New System.Windows.Forms.Padding(6)
+        Me.Panel3.Location = New System.Drawing.Point(588, 103)
         Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(132, 48)
+        Me.Panel3.Size = New System.Drawing.Size(66, 25)
         Me.Panel3.TabIndex = 115
         '
         'RadioButtonN3
         '
         Me.RadioButtonN3.AutoSize = True
-        Me.RadioButtonN3.Location = New System.Drawing.Point(104, 12)
-        Me.RadioButtonN3.Margin = New System.Windows.Forms.Padding(6)
+        Me.RadioButtonN3.Location = New System.Drawing.Point(52, 6)
         Me.RadioButtonN3.Name = "RadioButtonN3"
-        Me.RadioButtonN3.Size = New System.Drawing.Size(27, 26)
+        Me.RadioButtonN3.Size = New System.Drawing.Size(14, 13)
         Me.RadioButtonN3.TabIndex = 37
         Me.RadioButtonN3.TabStop = True
         Me.RadioButtonN3.Tag = "1"
@@ -341,10 +318,9 @@ Partial Class egenSkjemaBolk9
         'RadioButtonJ3
         '
         Me.RadioButtonJ3.AutoSize = True
-        Me.RadioButtonJ3.Location = New System.Drawing.Point(0, 12)
-        Me.RadioButtonJ3.Margin = New System.Windows.Forms.Padding(6)
+        Me.RadioButtonJ3.Location = New System.Drawing.Point(0, 6)
         Me.RadioButtonJ3.Name = "RadioButtonJ3"
-        Me.RadioButtonJ3.Size = New System.Drawing.Size(27, 26)
+        Me.RadioButtonJ3.Size = New System.Drawing.Size(14, 13)
         Me.RadioButtonJ3.TabIndex = 38
         Me.RadioButtonJ3.TabStop = True
         Me.RadioButtonJ3.Tag = "1"
@@ -355,19 +331,17 @@ Partial Class egenSkjemaBolk9
         Me.Panel2.BackColor = System.Drawing.Color.WhiteSmoke
         Me.Panel2.Controls.Add(Me.RadioButtonN1)
         Me.Panel2.Controls.Add(Me.RadioButtonJ1)
-        Me.Panel2.Location = New System.Drawing.Point(1177, 102)
-        Me.Panel2.Margin = New System.Windows.Forms.Padding(6)
+        Me.Panel2.Location = New System.Drawing.Point(588, 53)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(132, 48)
+        Me.Panel2.Size = New System.Drawing.Size(66, 25)
         Me.Panel2.TabIndex = 112
         '
         'RadioButtonN1
         '
         Me.RadioButtonN1.AutoSize = True
-        Me.RadioButtonN1.Location = New System.Drawing.Point(104, 12)
-        Me.RadioButtonN1.Margin = New System.Windows.Forms.Padding(6)
+        Me.RadioButtonN1.Location = New System.Drawing.Point(52, 6)
         Me.RadioButtonN1.Name = "RadioButtonN1"
-        Me.RadioButtonN1.Size = New System.Drawing.Size(27, 26)
+        Me.RadioButtonN1.Size = New System.Drawing.Size(14, 13)
         Me.RadioButtonN1.TabIndex = 37
         Me.RadioButtonN1.TabStop = True
         Me.RadioButtonN1.Tag = "1"
@@ -376,10 +350,9 @@ Partial Class egenSkjemaBolk9
         'RadioButtonJ1
         '
         Me.RadioButtonJ1.AutoSize = True
-        Me.RadioButtonJ1.Location = New System.Drawing.Point(0, 12)
-        Me.RadioButtonJ1.Margin = New System.Windows.Forms.Padding(6)
+        Me.RadioButtonJ1.Location = New System.Drawing.Point(0, 6)
         Me.RadioButtonJ1.Name = "RadioButtonJ1"
-        Me.RadioButtonJ1.Size = New System.Drawing.Size(27, 26)
+        Me.RadioButtonJ1.Size = New System.Drawing.Size(14, 13)
         Me.RadioButtonJ1.TabIndex = 38
         Me.RadioButtonJ1.TabStop = True
         Me.RadioButtonJ1.Tag = "1"
@@ -390,19 +363,17 @@ Partial Class egenSkjemaBolk9
         Me.Panel7.BackColor = System.Drawing.Color.White
         Me.Panel7.Controls.Add(Me.RadioButtonN6)
         Me.Panel7.Controls.Add(Me.RadioButtonJ6)
-        Me.Panel7.Location = New System.Drawing.Point(1177, 342)
-        Me.Panel7.Margin = New System.Windows.Forms.Padding(6)
+        Me.Panel7.Location = New System.Drawing.Point(588, 178)
         Me.Panel7.Name = "Panel7"
-        Me.Panel7.Size = New System.Drawing.Size(132, 48)
+        Me.Panel7.Size = New System.Drawing.Size(66, 25)
         Me.Panel7.TabIndex = 117
         '
         'RadioButtonN6
         '
         Me.RadioButtonN6.AutoSize = True
-        Me.RadioButtonN6.Location = New System.Drawing.Point(104, 12)
-        Me.RadioButtonN6.Margin = New System.Windows.Forms.Padding(6)
+        Me.RadioButtonN6.Location = New System.Drawing.Point(52, 6)
         Me.RadioButtonN6.Name = "RadioButtonN6"
-        Me.RadioButtonN6.Size = New System.Drawing.Size(27, 26)
+        Me.RadioButtonN6.Size = New System.Drawing.Size(14, 13)
         Me.RadioButtonN6.TabIndex = 37
         Me.RadioButtonN6.TabStop = True
         Me.RadioButtonN6.Tag = "1"
@@ -411,10 +382,9 @@ Partial Class egenSkjemaBolk9
         'RadioButtonJ6
         '
         Me.RadioButtonJ6.AutoSize = True
-        Me.RadioButtonJ6.Location = New System.Drawing.Point(0, 12)
-        Me.RadioButtonJ6.Margin = New System.Windows.Forms.Padding(6)
+        Me.RadioButtonJ6.Location = New System.Drawing.Point(0, 6)
         Me.RadioButtonJ6.Name = "RadioButtonJ6"
-        Me.RadioButtonJ6.Size = New System.Drawing.Size(27, 26)
+        Me.RadioButtonJ6.Size = New System.Drawing.Size(14, 13)
         Me.RadioButtonJ6.TabIndex = 38
         Me.RadioButtonJ6.TabStop = True
         Me.RadioButtonJ6.Tag = "1"
@@ -425,19 +395,17 @@ Partial Class egenSkjemaBolk9
         Me.Panel1.BackColor = System.Drawing.Color.White
         Me.Panel1.Controls.Add(Me.RadioButton1)
         Me.Panel1.Controls.Add(Me.RadioButton2)
-        Me.Panel1.Location = New System.Drawing.Point(1178, 434)
-        Me.Panel1.Margin = New System.Windows.Forms.Padding(6)
+        Me.Panel1.Location = New System.Drawing.Point(588, 228)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(132, 48)
+        Me.Panel1.Size = New System.Drawing.Size(66, 25)
         Me.Panel1.TabIndex = 122
         '
         'RadioButton1
         '
         Me.RadioButton1.AutoSize = True
-        Me.RadioButton1.Location = New System.Drawing.Point(104, 12)
-        Me.RadioButton1.Margin = New System.Windows.Forms.Padding(6)
+        Me.RadioButton1.Location = New System.Drawing.Point(52, 6)
         Me.RadioButton1.Name = "RadioButton1"
-        Me.RadioButton1.Size = New System.Drawing.Size(27, 26)
+        Me.RadioButton1.Size = New System.Drawing.Size(14, 13)
         Me.RadioButton1.TabIndex = 37
         Me.RadioButton1.TabStop = True
         Me.RadioButton1.Tag = "1"
@@ -446,10 +414,9 @@ Partial Class egenSkjemaBolk9
         'RadioButton2
         '
         Me.RadioButton2.AutoSize = True
-        Me.RadioButton2.Location = New System.Drawing.Point(0, 12)
-        Me.RadioButton2.Margin = New System.Windows.Forms.Padding(6)
+        Me.RadioButton2.Location = New System.Drawing.Point(0, 6)
         Me.RadioButton2.Name = "RadioButton2"
-        Me.RadioButton2.Size = New System.Drawing.Size(27, 26)
+        Me.RadioButton2.Size = New System.Drawing.Size(14, 13)
         Me.RadioButton2.TabIndex = 38
         Me.RadioButton2.TabStop = True
         Me.RadioButton2.Tag = "1"
@@ -460,19 +427,17 @@ Partial Class egenSkjemaBolk9
         Me.Panel6.BackColor = System.Drawing.Color.White
         Me.Panel6.Controls.Add(Me.RadioButton3)
         Me.Panel6.Controls.Add(Me.RadioButton4)
-        Me.Panel6.Location = New System.Drawing.Point(1178, 530)
-        Me.Panel6.Margin = New System.Windows.Forms.Padding(6)
+        Me.Panel6.Location = New System.Drawing.Point(588, 278)
         Me.Panel6.Name = "Panel6"
-        Me.Panel6.Size = New System.Drawing.Size(132, 48)
+        Me.Panel6.Size = New System.Drawing.Size(66, 25)
         Me.Panel6.TabIndex = 119
         '
         'RadioButton3
         '
         Me.RadioButton3.AutoSize = True
-        Me.RadioButton3.Location = New System.Drawing.Point(104, 12)
-        Me.RadioButton3.Margin = New System.Windows.Forms.Padding(6)
+        Me.RadioButton3.Location = New System.Drawing.Point(52, 6)
         Me.RadioButton3.Name = "RadioButton3"
-        Me.RadioButton3.Size = New System.Drawing.Size(27, 26)
+        Me.RadioButton3.Size = New System.Drawing.Size(14, 13)
         Me.RadioButton3.TabIndex = 37
         Me.RadioButton3.TabStop = True
         Me.RadioButton3.Tag = "1"
@@ -481,10 +446,9 @@ Partial Class egenSkjemaBolk9
         'RadioButton4
         '
         Me.RadioButton4.AutoSize = True
-        Me.RadioButton4.Location = New System.Drawing.Point(0, 12)
-        Me.RadioButton4.Margin = New System.Windows.Forms.Padding(6)
+        Me.RadioButton4.Location = New System.Drawing.Point(0, 6)
         Me.RadioButton4.Name = "RadioButton4"
-        Me.RadioButton4.Size = New System.Drawing.Size(27, 26)
+        Me.RadioButton4.Size = New System.Drawing.Size(14, 13)
         Me.RadioButton4.TabIndex = 38
         Me.RadioButton4.TabStop = True
         Me.RadioButton4.Tag = "1"
@@ -495,19 +459,17 @@ Partial Class egenSkjemaBolk9
         Me.Panel10.BackColor = System.Drawing.Color.WhiteSmoke
         Me.Panel10.Controls.Add(Me.RadioButton7)
         Me.Panel10.Controls.Add(Me.RadioButton8)
-        Me.Panel10.Location = New System.Drawing.Point(1178, 482)
-        Me.Panel10.Margin = New System.Windows.Forms.Padding(6)
+        Me.Panel10.Location = New System.Drawing.Point(588, 253)
         Me.Panel10.Name = "Panel10"
-        Me.Panel10.Size = New System.Drawing.Size(132, 42)
+        Me.Panel10.Size = New System.Drawing.Size(67, 25)
         Me.Panel10.TabIndex = 121
         '
         'RadioButton7
         '
         Me.RadioButton7.AutoSize = True
-        Me.RadioButton7.Location = New System.Drawing.Point(104, 12)
-        Me.RadioButton7.Margin = New System.Windows.Forms.Padding(6)
+        Me.RadioButton7.Location = New System.Drawing.Point(52, 6)
         Me.RadioButton7.Name = "RadioButton7"
-        Me.RadioButton7.Size = New System.Drawing.Size(27, 26)
+        Me.RadioButton7.Size = New System.Drawing.Size(14, 13)
         Me.RadioButton7.TabIndex = 37
         Me.RadioButton7.TabStop = True
         Me.RadioButton7.Tag = "1"
@@ -516,10 +478,9 @@ Partial Class egenSkjemaBolk9
         'RadioButton8
         '
         Me.RadioButton8.AutoSize = True
-        Me.RadioButton8.Location = New System.Drawing.Point(0, 12)
-        Me.RadioButton8.Margin = New System.Windows.Forms.Padding(6)
+        Me.RadioButton8.Location = New System.Drawing.Point(0, 6)
         Me.RadioButton8.Name = "RadioButton8"
-        Me.RadioButton8.Size = New System.Drawing.Size(27, 26)
+        Me.RadioButton8.Size = New System.Drawing.Size(14, 13)
         Me.RadioButton8.TabIndex = 38
         Me.RadioButton8.TabStop = True
         Me.RadioButton8.Tag = "1"
@@ -530,19 +491,17 @@ Partial Class egenSkjemaBolk9
         Me.Panel11.BackColor = System.Drawing.Color.WhiteSmoke
         Me.Panel11.Controls.Add(Me.RadioButton9)
         Me.Panel11.Controls.Add(Me.RadioButton10)
-        Me.Panel11.Location = New System.Drawing.Point(1178, 386)
-        Me.Panel11.Margin = New System.Windows.Forms.Padding(6)
+        Me.Panel11.Location = New System.Drawing.Point(588, 203)
         Me.Panel11.Name = "Panel11"
-        Me.Panel11.Size = New System.Drawing.Size(132, 48)
+        Me.Panel11.Size = New System.Drawing.Size(66, 25)
         Me.Panel11.TabIndex = 118
         '
         'RadioButton9
         '
         Me.RadioButton9.AutoSize = True
-        Me.RadioButton9.Location = New System.Drawing.Point(104, 12)
-        Me.RadioButton9.Margin = New System.Windows.Forms.Padding(6)
+        Me.RadioButton9.Location = New System.Drawing.Point(52, 6)
         Me.RadioButton9.Name = "RadioButton9"
-        Me.RadioButton9.Size = New System.Drawing.Size(27, 26)
+        Me.RadioButton9.Size = New System.Drawing.Size(14, 13)
         Me.RadioButton9.TabIndex = 37
         Me.RadioButton9.TabStop = True
         Me.RadioButton9.Tag = "1"
@@ -551,10 +510,9 @@ Partial Class egenSkjemaBolk9
         'RadioButton10
         '
         Me.RadioButton10.AutoSize = True
-        Me.RadioButton10.Location = New System.Drawing.Point(0, 12)
-        Me.RadioButton10.Margin = New System.Windows.Forms.Padding(6)
+        Me.RadioButton10.Location = New System.Drawing.Point(0, 6)
         Me.RadioButton10.Name = "RadioButton10"
-        Me.RadioButton10.Size = New System.Drawing.Size(27, 26)
+        Me.RadioButton10.Size = New System.Drawing.Size(14, 13)
         Me.RadioButton10.TabIndex = 38
         Me.RadioButton10.TabStop = True
         Me.RadioButton10.Tag = "1"
@@ -563,29 +521,27 @@ Partial Class egenSkjemaBolk9
         'Label12
         '
         Me.Label12.AutoSize = True
-        Me.Label12.Location = New System.Drawing.Point(1273, 52)
-        Me.Label12.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
+        Me.Label12.Location = New System.Drawing.Point(636, 27)
         Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(44, 25)
+        Me.Label12.Size = New System.Drawing.Size(23, 13)
         Me.Label12.TabIndex = 124
         Me.Label12.Text = "Nei"
         '
         'Label13
         '
         Me.Label13.AutoSize = True
-        Me.Label13.Location = New System.Drawing.Point(1169, 52)
-        Me.Label13.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
+        Me.Label13.Location = New System.Drawing.Point(584, 27)
         Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(35, 25)
+        Me.Label13.Size = New System.Drawing.Size(18, 13)
         Me.Label13.TabIndex = 123
         Me.Label13.Text = "Ja"
         '
         'egenSkjemaBolk9
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(12.0!, 25.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(1976, 784)
+        Me.ClientSize = New System.Drawing.Size(988, 408)
         Me.Controls.Add(Me.Label12)
         Me.Controls.Add(Me.Label13)
         Me.Controls.Add(Me.Panel1)
@@ -611,7 +567,6 @@ Partial Class egenSkjemaBolk9
         Me.Controls.Add(Me.Label11)
         Me.Controls.Add(Me.Button1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
-        Me.Margin = New System.Windows.Forms.Padding(6)
         Me.Name = "egenSkjemaBolk9"
         Me.Text = "egenSkjemaBolk9"
         Me.Panel9.ResumeLayout(False)

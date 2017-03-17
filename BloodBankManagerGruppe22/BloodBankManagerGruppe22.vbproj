@@ -138,6 +138,12 @@
     <Compile Include="egenSkjemaBolk9.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="egenSkjemaTempStorage.Designer.vb">
+      <DependentUpon>egenSkjemaTempStorage.vb</DependentUpon>
+    </Compile>
+    <Compile Include="egenSkjemaTempStorage.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="hovedForside_Innlogging.vb">
       <SubType>Form</SubType>
     </Compile>
