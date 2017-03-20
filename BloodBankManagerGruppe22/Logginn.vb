@@ -3,88 +3,24 @@ Imports MySql.Data.MySqlClient
 
 Public Class Logginn
 
-    Public currentuser As Integer
-    Private salt As String = "detteErEnVeldigLangHashSomGjorAtVaarePassordBlirMyeSikrere"
-    Private username As String = ""
-    Private password As String = ""
-    Private databasename As String = ""
-    Private server As String = ""
-    Private userinfo As New DataTable
+    Public currentuser As Integer = -1
+    Public currentuserType As Integer = -1
+    Dim sql As New SQL_hookup("g_oops_22", "BtUDpVoR", "g_oops_22", "mysql.stud.iie.ntnu.no")
 
-    Private connstring As String
-    Private connection As New MySqlConnection()
-
-    Private Sub loadLogInfo()
-        connstring = "Server=" & server & ";" & "Database=" & databasename & ";" & "Uid=" & username & ";" & "Pwd=" & password & ";"
-        connection.ConnectionString = connstring
-        userinfo = Query("SELECT bruker_id, epost, passord FROM bruker")
-
-    End Sub
-
-
-    Private Function hash(passord As String, salt As String) As String
-        Dim hashObject = New Security.Cryptography.SHA256Managed()
-        Dim bytes = System.Text.Encoding.ASCII.GetBytes(passord & salt)
-        bytes = hashObject.ComputeHash(bytes)
-
-        Dim hexString As String = ""
-        For Each aByte In bytes
-            hexString &= aByte.ToString("x2")
-        Next
-
-        Return hexString
-    End Function
-    Private Function Query(ByVal sql As String) As DataTable
-        Dim table As New DataTable
-        Try
-            connection.Open()
-
-            ' Do the query, and fill a table with data
-
-            Dim command As New MySqlCommand(sql, connection)
-
-            Dim da As New MySqlDataAdapter
-            da.SelectCommand = command
-            da.Fill(table)
-
-            connection.Close()
-
-        Catch ex As MySqlException
-            MessageBox.Show("En feil oppstått - " & ex.Message)
-        End Try
-        Return table
-    End Function
-
-
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        Dim gotmatch As Boolean = False
-        Dim inputname As String = TextBoxUsername.Text
-        Dim inputpword As String = TextBoxPassword.Text
-        Dim hashedpword As String = hash(inputpword, salt)
-
-        loadLogInfo()
-
-        For Each row As DataRow In userinfo.Rows
-            If row("epost") = inputname And row("passord") = hashedpword Then
-                gotmatch = True
-                currentuser = row("bruker_id")
-            End If
-        Next
-        If gotmatch = True Then
-            MessageBox.Show("Du er logget inn. Velkommen til blodbanken.")
+    Private Sub ButtonLogInn_Click(sender As Object, e As EventArgs) Handles ButtonLogInn.Click
+        Dim sjekkLog As Tuple(Of Integer, String) = sql.logInn(TextBoxEpost.Text, TextBoxPassword.Text, "bruker")
+        currentuser = sjekkLog.Item1
+        If currentuser = -1 Then
+            MsgBox("Feil brukernavn eller passord", MsgBoxStyle.Critical, MsgBoxStyle.OkOnly)
+        Else
+            Me.Hide()
             BrukerMinSide.Show()
-        ElseIf gotmatch = False Then
-            MessageBox.Show("Feil brukernavn eller passord.")
         End If
-
-
-
     End Sub
 
     Private Sub ButtonRegistrer_Click(sender As Object, e As EventArgs) Handles ButtonRegistrer.Click
         Registrering.Show()
-
-
+        Me.Hide()
     End Sub
 
 
@@ -126,32 +62,16 @@ Transfusjonstjenesten har et overordnet ansvar overfor blodmottakere, at behandl
 Kriteriene for utvelgelse av blodgivere og en rekke av de laboratorieundersøkelser som anbefales, har til hensikt å beskytte både blodgiveren om han/hun heller burde beholde blodet sitt selv, og blodmottakerne mot infeksjonssykdommer som kan overføres med blod eller blodprodukter.")
     End Sub
 
-    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
-        Dim gotmatch As Boolean = False
-        Dim inputname As String = TextBoxUsername.Text
-        Dim inputpword As String = TextBoxPassword.Text
-        Dim hashedpword As String = hash(inputpword, salt)
-
-        loadLogInfo()
-
-        For Each row As DataRow In userinfo.Rows
-            If row("epost") = inputname And row("passord") = hashedpword Then
-                gotmatch = True
-                currentuser = row("bruker_id")
-            End If
-        Next
-        If gotmatch = True Then
-            MessageBox.Show("Du er logget inn. Velkommen til blodbanken.")
-            AnsattInkalling.Show()
-        ElseIf gotmatch = False Then
-            MessageBox.Show("Feil brukernavn eller passord.")
+    Private Sub ButtonLogInnAnsatt_Click(sender As Object, e As EventArgs) Handles ButtonLogInnAnsatt.Click
+        Dim sjekkLog As Tuple(Of Integer, String) = sql.logInn(TextBoxEpost.Text, TextBoxPassword.Text, "ansatt")
+        currentuser = sjekkLog.Item1
+        currentuserType = CInt(sjekkLog.Item2)
+        If currentuser = -1 Then
+            MsgBox("Feil brukernavn eller passord", MsgBoxStyle.Critical, MsgBoxStyle.OkOnly)
+        Else
+            Me.Hide()
+            AnsattMinSide.Show()
         End If
-
-
-
-
-
-
     End Sub
 
     Private Sub Button3_Click(sender As Object, e As EventArgs)

@@ -56,11 +56,61 @@ Public Class SQL_hookup
         Return table
     End Function
 
-    Public Sub logInn(ByVal brukernavn As String, ByVal passord As String, ByVal type As String)
-        Dim b = brukernavn
+    Public Function logInn(ByVal epost As String, ByVal passord As String, ByVal type As String) As Tuple(Of Integer, String)
+        Dim e = epost
         Dim p = hash(passord, salt)
+        Dim fail As Boolean = False
 
-    End Sub
+        Select Case type
+            Case "ansatt"
+                Try
+                    connection.Open()
+                    Dim sqlLogInn As New MySqlCommand("SELECT bruker_id, ansatt_type FROM bruker, ansatt WHERE bruker.epost = @epost AND bruker.passord = @passord AND bruker.bruker_id = ansatt.ansatt_bruker_id", connection)
+                    sqlLogInn.Parameters.AddWithValue("@epost", e)
+                    sqlLogInn.Parameters.AddWithValue("@passord", p)
+                    Dim reader As MySqlDataReader = sqlLogInn.ExecuteReader
+                    If reader.HasRows Then
+                        reader.Read()
+                        Dim bruker_id As Integer = reader("bruker_id")
+                        Dim ansatt_type As String = CStr(reader("ansatt_type"))
+                        Return Tuple.Create(bruker_id, ansatt_type)
+                    Else
+                        fail = True
+                    End If
+                Catch ex As MySqlException
+                    MsgBox("Feil ved tilkobling av databasen: " & ex.Message)
+                Finally
+                    connection.Close()
+                End Try
+            Case "bruker"
+                Try
+                    connection.Open()
+                    Dim sqlLogInn As New MySqlCommand("SELECT bruker_id, personnummer FROM bruker, blodgiver WHERE bruker.epost = @epost AND bruker.passord = @passord AND bruker.bruker_id = blodgiver.blodgiver_bruker_id", connection)
+                    sqlLogInn.Parameters.AddWithValue("@epost", e)
+                    sqlLogInn.Parameters.AddWithValue("@passord", p)
+                    Dim reader As MySqlDataReader = sqlLogInn.ExecuteReader
+                    If reader.HasRows Then
+                        reader.Read()
+                        Dim bruker_id As Integer = reader("bruker_id")
+                        Dim personnummer As String = reader("personnummer")
+                        Return Tuple.Create(bruker_id, personnummer)
+                    Else
+                        fail = True
+                    End If
+                Catch ex As MySqlException
+                    MsgBox("Feil ved tilkobling av database: " & ex.Message)
+                Finally
+                    connection.Close()
+                End Try
+            Case Else
+                MsgBox("Fikse koden din. Om du ser denne er ikke koden riktig.")
+                Return Tuple.Create(-1, "feil")
+        End Select
+
+        If fail Then
+            Return Tuple.Create(-1, "feil")
+        End If
+    End Function
 
     Public Sub registrerNy(ByVal fornavn As String, ByVal etternavn As String, ByVal epost As String, ByVal passord As String, ByVal fodselsdato As String, ByVal personnummer As String, ByVal adresse As String, ByVal postnummer As Integer, ByVal poststed As String, ByVal telefonnummerEn As String, ByVal telefonnummerTo As String, ByVal kjonn As String, ByVal blodtype As Integer, ByVal blodgivningLokasjon As String, ByVal blodbefore As Boolean, ByVal hvilkenBlodbank As String, ByVal samtykke As Boolean, ByVal infoRodekors As Boolean)
 
