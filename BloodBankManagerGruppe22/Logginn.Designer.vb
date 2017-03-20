@@ -46,12 +46,13 @@ Partial Class Logginn
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.Button3 = New System.Windows.Forms.Button()
         Me.Button4 = New System.Windows.Forms.Button()
         Me.Button5 = New System.Windows.Forms.Button()
+        Me.HvaSkjerNårDuGirBlodToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
         Me.MenuStrip1.SuspendLayout()
@@ -64,7 +65,7 @@ Partial Class Logginn
         Me.Panel1.Controls.Add(Me.Label3)
         Me.Panel1.Controls.Add(Me.ButtonRegistrer)
         Me.Panel1.Location = New System.Drawing.Point(12, 260)
-        Me.Panel1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Panel1.Margin = New System.Windows.Forms.Padding(4)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(265, 149)
         Me.Panel1.TabIndex = 16
@@ -81,7 +82,7 @@ Partial Class Logginn
         'ButtonRegistrer
         '
         Me.ButtonRegistrer.Location = New System.Drawing.Point(8, 78)
-        Me.ButtonRegistrer.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.ButtonRegistrer.Margin = New System.Windows.Forms.Padding(4)
         Me.ButtonRegistrer.Name = "ButtonRegistrer"
         Me.ButtonRegistrer.Size = New System.Drawing.Size(100, 28)
         Me.ButtonRegistrer.TabIndex = 10
@@ -91,7 +92,7 @@ Partial Class Logginn
         'Button1
         '
         Me.Button1.Location = New System.Drawing.Point(8, 164)
-        Me.Button1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Button1.Margin = New System.Windows.Forms.Padding(4)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(213, 28)
         Me.Button1.TabIndex = 13
@@ -122,7 +123,7 @@ Partial Class Logginn
         'TextBoxPassword
         '
         Me.TextBoxPassword.Location = New System.Drawing.Point(8, 132)
-        Me.TextBoxPassword.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.TextBoxPassword.Margin = New System.Windows.Forms.Padding(4)
         Me.TextBoxPassword.Name = "TextBoxPassword"
         Me.TextBoxPassword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.TextBoxPassword.Size = New System.Drawing.Size(212, 22)
@@ -132,7 +133,7 @@ Partial Class Logginn
         'TextBoxUsername
         '
         Me.TextBoxUsername.Location = New System.Drawing.Point(8, 71)
-        Me.TextBoxUsername.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.TextBoxUsername.Margin = New System.Windows.Forms.Padding(4)
         Me.TextBoxUsername.Name = "TextBoxUsername"
         Me.TextBoxUsername.Size = New System.Drawing.Size(212, 22)
         Me.TextBoxUsername.TabIndex = 9
@@ -171,7 +172,7 @@ Partial Class Logginn
         Me.Panel2.Controls.Add(Me.Label2)
         Me.Panel2.Controls.Add(Me.Button1)
         Me.Panel2.Location = New System.Drawing.Point(12, 417)
-        Me.Panel2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Panel2.Margin = New System.Windows.Forms.Padding(4)
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(265, 242)
         Me.Panel2.TabIndex = 19
@@ -179,7 +180,7 @@ Partial Class Logginn
         'Button2
         '
         Me.Button2.Location = New System.Drawing.Point(8, 201)
-        Me.Button2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Button2.Margin = New System.Windows.Forms.Padding(4)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(213, 28)
         Me.Button2.TabIndex = 19
@@ -190,7 +191,7 @@ Partial Class Logginn
         '
         Me.TextBox1.Font = New System.Drawing.Font("Century", 10.875!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBox1.Location = New System.Drawing.Point(17, 140)
-        Me.TextBox1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.TextBox1.Margin = New System.Windows.Forms.Padding(4)
         Me.TextBox1.Multiline = True
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(857, 98)
@@ -202,7 +203,7 @@ Partial Class Logginn
         'MenuStrip1
         '
         Me.MenuStrip1.ImageScalingSize = New System.Drawing.Size(20, 20)
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.OmBlodToolStripMenuItem, Me.RetningslinjerToolStripMenuItem, Me.ÅpninstiderToolStripMenuItem, Me.KontaktOssToolStripMenuItem, Me.OmOssToolStripMenuItem})
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.OmBlodToolStripMenuItem, Me.RetningslinjerToolStripMenuItem, Me.HvaSkjerNårDuGirBlodToolStripMenuItem, Me.ÅpninstiderToolStripMenuItem, Me.KontaktOssToolStripMenuItem, Me.OmOssToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
         Me.MenuStrip1.Padding = New System.Windows.Forms.Padding(8, 2, 0, 2)
@@ -267,23 +268,12 @@ Partial Class Logginn
         'TextBox2
         '
         Me.TextBox2.Location = New System.Drawing.Point(501, 283)
-        Me.TextBox2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.TextBox2.Margin = New System.Windows.Forms.Padding(4)
         Me.TextBox2.Multiline = True
         Me.TextBox2.Name = "TextBox2"
         Me.TextBox2.Size = New System.Drawing.Size(253, 52)
         Me.TextBox2.TabIndex = 26
         Me.TextBox2.Text = "I gjennomsnitt tapper hver blodgiver i Norge 2,1 ganger i året."
-        '
-        'PictureBox2
-        '
-        Me.PictureBox2.Image = CType(resources.GetObject("PictureBox2.Image"), System.Drawing.Image)
-        Me.PictureBox2.Location = New System.Drawing.Point(501, 340)
-        Me.PictureBox2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(255, 309)
-        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox2.TabIndex = 27
-        Me.PictureBox2.TabStop = False
         '
         'Label8
         '
@@ -322,14 +312,31 @@ Partial Class Logginn
         'Button5
         '
         Me.Button5.Location = New System.Drawing.Point(352, 320)
-        Me.Button5.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Button5.Margin = New System.Windows.Forms.Padding(4)
         Me.Button5.Name = "Button5"
         Me.Button5.Size = New System.Drawing.Size(100, 28)
         Me.Button5.TabIndex = 33
         Me.Button5.Text = "Button5"
         Me.Button5.UseVisualStyleBackColor = True
         '
-        'hovedForside_Innlogging
+        'HvaSkjerNårDuGirBlodToolStripMenuItem
+        '
+        Me.HvaSkjerNårDuGirBlodToolStripMenuItem.Name = "HvaSkjerNårDuGirBlodToolStripMenuItem"
+        Me.HvaSkjerNårDuGirBlodToolStripMenuItem.Size = New System.Drawing.Size(191, 24)
+        Me.HvaSkjerNårDuGirBlodToolStripMenuItem.Text = "Hva skjer når du gir blod?"
+        '
+        'PictureBox2
+        '
+        Me.PictureBox2.Image = CType(resources.GetObject("PictureBox2.Image"), System.Drawing.Image)
+        Me.PictureBox2.Location = New System.Drawing.Point(501, 340)
+        Me.PictureBox2.Margin = New System.Windows.Forms.Padding(4)
+        Me.PictureBox2.Name = "PictureBox2"
+        Me.PictureBox2.Size = New System.Drawing.Size(255, 309)
+        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox2.TabIndex = 27
+        Me.PictureBox2.TabStop = False
+        '
+        'Logginn
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -350,8 +357,8 @@ Partial Class Logginn
         Me.Controls.Add(Me.MenuStrip1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MainMenuStrip = Me.MenuStrip1
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.Name = "hovedForside_Innlogging"
+        Me.Margin = New System.Windows.Forms.Padding(4)
+        Me.Name = "Logginn"
         Me.Text = "Form1"
         Me.Panel1.ResumeLayout(False)
         Me.Panel2.ResumeLayout(False)
@@ -391,4 +398,5 @@ Partial Class Logginn
     Friend WithEvents Button3 As Button
     Friend WithEvents Button4 As Button
     Friend WithEvents Button5 As Button
+    Friend WithEvents HvaSkjerNårDuGirBlodToolStripMenuItem As ToolStripMenuItem
 End Class

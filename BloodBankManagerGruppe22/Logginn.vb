@@ -226,6 +226,10 @@ www.stolav.no/blodgiver
     Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Button5.Click
         egenSkjemaBolk1.Show()
     End Sub
+
+    Private Sub HvaSkjerNårDuGirBlodToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles HvaSkjerNårDuGirBlodToolStripMenuItem.Click
+        hvaSkjerNårDuGirBlod.Show()
+    End Sub
 End Class
 
 
