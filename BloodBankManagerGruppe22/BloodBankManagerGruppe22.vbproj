@@ -78,6 +78,12 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AnsattBlodProdukter.Designer.vb">
+      <DependentUpon>AnsattBlodProdukter.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AnsattBlodProdukter.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="egenSkjemaBolk1.Designer.vb">
       <DependentUpon>egenSkjemaBolk1.vb</DependentUpon>
     </Compile>
@@ -230,6 +236,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="AnsattBlodProdukter.resx">
+      <DependentUpon>AnsattBlodProdukter.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="egenSkjemaBolk1.resx">
       <DependentUpon>egenSkjemaBolk1.vb</DependentUpon>
     </EmbeddedResource>

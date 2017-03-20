@@ -24,7 +24,7 @@ Public Class SQL_hookup
         connection.ConnectionString = connstring
     End Sub
 
-    Public Function hash(passord As String, salt As String) As String
+    Private Function hash(passord As String, salt As String) As String
         Dim hashObject = New Security.Cryptography.SHA256Managed()
         Dim bytes = System.Text.Encoding.ASCII.GetBytes(passord & salt)
         bytes = hashObject.ComputeHash(bytes)
@@ -55,6 +55,12 @@ Public Class SQL_hookup
         End Try
         Return table
     End Function
+
+    Public Sub logInn(ByVal brukernavn As String, ByVal passord As String, ByVal type As String)
+        Dim b = brukernavn
+        Dim p = hash(passord, salt)
+
+    End Sub
 
     Public Sub registrerNy(ByVal fornavn As String, ByVal etternavn As String, ByVal epost As String, ByVal passord As String, ByVal fodselsdato As String, ByVal personnummer As String, ByVal adresse As String, ByVal postnummer As Integer, ByVal poststed As String, ByVal telefonnummerEn As String, ByVal telefonnummerTo As String, ByVal kjonn As String, ByVal blodtype As Integer, ByVal blodgivningLokasjon As String, ByVal blodbefore As Boolean, ByVal hvilkenBlodbank As String, ByVal samtykke As Boolean, ByVal infoRodekors As Boolean)
 
