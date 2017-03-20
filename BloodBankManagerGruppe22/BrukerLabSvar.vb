@@ -1,5 +1,5 @@
 ﻿Imports MySql.Data.MySqlClient
-Public Class labSvar
+Public Class BrukerLabSvar
 
     Dim MysqlConn As MySqlConnection
     Dim COMMAND As MySqlCommand

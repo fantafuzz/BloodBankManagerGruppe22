@@ -1,6 +1,6 @@
 ﻿Imports MySql.Data.MySqlClient
 
-Public Class registeringAvNyeBlodgivere
+Public Class Registrering
     Dim sql As New SQL_hookup("g_oops_22", "BtUDpVoR", "g_oops_22", "mysql.stud.iie.ntnu.no")
 
     'dim tilkobling as new mysqlconnection()

@@ -144,59 +144,59 @@
     <Compile Include="egenSkjemaTempStorage.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="hovedForside_Innlogging.vb">
+    <Compile Include="Logginn.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="hovedForside_Innlogging.Designer.vb">
-      <DependentUpon>hovedForside_Innlogging.vb</DependentUpon>
+    <Compile Include="Logginn.Designer.vb">
+      <DependentUpon>Logginn.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="hvorMyeBlodGitt.Designer.vb">
-      <DependentUpon>hvorMyeBlodGitt.vb</DependentUpon>
+    <Compile Include="BrukerStatistikk.Designer.vb">
+      <DependentUpon>BrukerStatistikk.vb</DependentUpon>
     </Compile>
-    <Compile Include="hvorMyeBlodGitt.vb">
+    <Compile Include="BrukerStatistikk.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="kalender_bestilling.Designer.vb">
-      <DependentUpon>kalender_bestilling.vb</DependentUpon>
+    <Compile Include="BrukerBestill.Designer.vb">
+      <DependentUpon>BrukerBestill.vb</DependentUpon>
     </Compile>
-    <Compile Include="kalender_bestilling.vb">
+    <Compile Include="BrukerBestill.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="labSvar.Designer.vb">
-      <DependentUpon>labSvar.vb</DependentUpon>
+    <Compile Include="BrukerLabSvar.Designer.vb">
+      <DependentUpon>BrukerLabSvar.vb</DependentUpon>
     </Compile>
-    <Compile Include="labSvar.vb">
+    <Compile Include="BrukerLabSvar.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="minSideAnsatte.Designer.vb">
-      <DependentUpon>minSideAnsatte.vb</DependentUpon>
+    <Compile Include="AnsattInkalling.Designer.vb">
+      <DependentUpon>AnsattInkalling.vb</DependentUpon>
     </Compile>
-    <Compile Include="minSideAnsatte.vb">
+    <Compile Include="AnsattInkalling.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MINSIDENAVIGASJONbrukere.Designer.vb">
-      <DependentUpon>MINSIDENAVIGASJONbrukere.vb</DependentUpon>
+    <Compile Include="BrukerMinSide.Designer.vb">
+      <DependentUpon>BrukerMinSide.vb</DependentUpon>
     </Compile>
-    <Compile Include="MINSIDENAVIGASJONbrukere.vb">
+    <Compile Include="BrukerMinSide.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="minSideNavigasjonansatte.Designer.vb">
-      <DependentUpon>minSideNavigasjonansatte.vb</DependentUpon>
+    <Compile Include="AnsattMinSide.Designer.vb">
+      <DependentUpon>AnsattMinSide.vb</DependentUpon>
     </Compile>
-    <Compile Include="minSideNavigasjonansatte.vb">
+    <Compile Include="AnsattMinSide.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="registeringAvNyeBlodgivere.Designer.vb">
-      <DependentUpon>registeringAvNyeBlodgivere.vb</DependentUpon>
+    <Compile Include="Registrering.Designer.vb">
+      <DependentUpon>Registrering.vb</DependentUpon>
     </Compile>
-    <Compile Include="registeringAvNyeBlodgivere.vb">
+    <Compile Include="Registrering.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="minSideForm.Designer.vb">
-      <DependentUpon>minSideForm.vb</DependentUpon>
+    <Compile Include="BrukerAllInfo.Designer.vb">
+      <DependentUpon>BrukerAllInfo.vb</DependentUpon>
     </Compile>
-    <Compile Include="minSideForm.vb">
+    <Compile Include="BrukerAllInfo.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -216,10 +216,10 @@
     </Compile>
     <Compile Include="Sporsmaal.vb" />
     <Compile Include="SQL_hookup.vb" />
-    <Compile Include="statistics.Designer.vb">
-      <DependentUpon>statistics.vb</DependentUpon>
+    <Compile Include="AnsattStatistikk.Designer.vb">
+      <DependentUpon>AnsattStatistikk.vb</DependentUpon>
     </Compile>
-    <Compile Include="statistics.vb">
+    <Compile Include="AnsattStatistikk.vb">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>
@@ -254,29 +254,29 @@
     <EmbeddedResource Include="egenSkjemaBolk9.resx">
       <DependentUpon>egenSkjemaBolk9.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="hovedForside_Innlogging.resx">
-      <DependentUpon>hovedForside_Innlogging.vb</DependentUpon>
+    <EmbeddedResource Include="Logginn.resx">
+      <DependentUpon>Logginn.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="hvorMyeBlodGitt.resx">
-      <DependentUpon>hvorMyeBlodGitt.vb</DependentUpon>
+    <EmbeddedResource Include="BrukerStatistikk.resx">
+      <DependentUpon>BrukerStatistikk.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="kalender_bestilling.resx">
-      <DependentUpon>kalender_bestilling.vb</DependentUpon>
+    <EmbeddedResource Include="BrukerBestill.resx">
+      <DependentUpon>BrukerBestill.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="labSvar.resx">
-      <DependentUpon>labSvar.vb</DependentUpon>
+    <EmbeddedResource Include="BrukerLabSvar.resx">
+      <DependentUpon>BrukerLabSvar.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="minSideAnsatte.resx">
-      <DependentUpon>minSideAnsatte.vb</DependentUpon>
+    <EmbeddedResource Include="AnsattInkalling.resx">
+      <DependentUpon>AnsattInkalling.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="minSideForm.resx">
-      <DependentUpon>minSideForm.vb</DependentUpon>
+    <EmbeddedResource Include="BrukerAllInfo.resx">
+      <DependentUpon>BrukerAllInfo.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MINSIDENAVIGASJONbrukere.resx">
-      <DependentUpon>MINSIDENAVIGASJONbrukere.vb</DependentUpon>
+    <EmbeddedResource Include="BrukerMinSide.resx">
+      <DependentUpon>BrukerMinSide.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="minSideNavigasjonansatte.resx">
-      <DependentUpon>minSideNavigasjonansatte.vb</DependentUpon>
+    <EmbeddedResource Include="AnsattMinSide.resx">
+      <DependentUpon>AnsattMinSide.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
@@ -284,11 +284,11 @@
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="registeringAvNyeBlodgivere.resx">
-      <DependentUpon>registeringAvNyeBlodgivere.vb</DependentUpon>
+    <EmbeddedResource Include="Registrering.resx">
+      <DependentUpon>Registrering.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="statistics.resx">
-      <DependentUpon>statistics.vb</DependentUpon>
+    <EmbeddedResource Include="AnsattStatistikk.resx">
+      <DependentUpon>AnsattStatistikk.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

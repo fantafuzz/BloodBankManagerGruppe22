@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class minSideNavigasjonansatte
+Partial Class AnsattMinSide
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -65,13 +65,13 @@ Partial Class minSideNavigasjonansatte
         Me.Label1.Location = New System.Drawing.Point(22, 42)
         Me.Label1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(379, 39)
+        Me.Label1.Size = New System.Drawing.Size(304, 31)
         Me.Label1.TabIndex = 33
         Me.Label1.Text = "Velkommen til Minside"
         '
-        'minSideNavigasjonansatte
+        'AnsattMinSide
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(10.0!, 20.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 17.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(751, 399)
@@ -81,7 +81,7 @@ Partial Class minSideNavigasjonansatte
         Me.Controls.Add(Me.Label1)
         Me.Font = New System.Drawing.Font("Georgia", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Margin = New System.Windows.Forms.Padding(4)
-        Me.Name = "minSideNavigasjonansatte"
+        Me.Name = "AnsattMinSide"
         Me.Text = "minSideNavigasjonAnsatte"
         Me.ResumeLayout(False)
         Me.PerformLayout()

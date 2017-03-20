@@ -12,7 +12,7 @@
 
 
         MessageBox.Show("Tusen takk for ditt bidrag til blodbanken. Vi setter veldig stor pris på det !")
-        minSideForm.Show()
+        BrukerAllInfo.Show()
         Me.Close()
     End Sub
 End Class

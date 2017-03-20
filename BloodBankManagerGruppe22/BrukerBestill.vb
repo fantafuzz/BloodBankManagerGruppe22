@@ -1,5 +1,5 @@
 ﻿Imports MySql.Data.MySqlClient
-Public Class kalender_bestilling
+Public Class BrukerBestill
     Dim MysqlConn As MySqlConnection
     Dim COMMAND As MySqlCommand
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
@@ -13,7 +13,7 @@ Public Class kalender_bestilling
             Dim Query As String
             Query = "insert into g_oops_22.time_bestilling(bestilling_bruker_id, dato) values (27, '" & DateTimePicker1.Text & "')"
             COMMAND = New MySqlCommand(Query, MysqlConn)
-            READER = Command.ExecuteReader
+            READER = COMMAND.ExecuteReader
 
 
 

@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
-Partial Class MINSIDENAVIGASJONbrukere
+Partial Class BrukerMinSide
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -22,7 +22,7 @@ Partial Class MINSIDENAVIGASJONbrukere
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(MINSIDENAVIGASJONbrukere))
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(BrukerMinSide))
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Endre_mine_opplysninger = New System.Windows.Forms.Button()
         Me.Hvor_Mye_Blod_Har_jeg_gitt_til_blodbanken = New System.Windows.Forms.Button()

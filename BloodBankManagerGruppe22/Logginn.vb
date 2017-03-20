@@ -1,7 +1,7 @@
 ﻿
 Imports MySql.Data.MySqlClient
 
-Public Class hovedForside_Innlogging
+Public Class Logginn
 
     Public currentuser As Integer
     Private salt As String = "detteErEnVeldigLangHashSomGjorAtVaarePassordBlirMyeSikrere"
@@ -72,7 +72,7 @@ Public Class hovedForside_Innlogging
         Next
         If gotmatch = True Then
             MessageBox.Show("Du er logget inn. Velkommen til blodbanken.")
-            MINSIDENAVIGASJONbrukere.Show()
+            BrukerMinSide.Show()
         ElseIf gotmatch = False Then
             MessageBox.Show("Feil brukernavn eller passord.")
         End If
@@ -82,7 +82,7 @@ Public Class hovedForside_Innlogging
     End Sub
 
     Private Sub ButtonRegistrer_Click(sender As Object, e As EventArgs) Handles ButtonRegistrer.Click
-        registeringAvNyeBlodgivere.Show()
+        Registrering.Show()
 
 
     End Sub
@@ -142,7 +142,7 @@ Kriteriene for utvelgelse av blodgivere og en rekke av de laboratorieundersøkel
         Next
         If gotmatch = True Then
             MessageBox.Show("Du er logget inn. Velkommen til blodbanken.")
-            minSideAnsatte.Show()
+            AnsattInkalling.Show()
         ElseIf gotmatch = False Then
             MessageBox.Show("Feil brukernavn eller passord.")
         End If
@@ -155,7 +155,7 @@ Kriteriene for utvelgelse av blodgivere og en rekke av de laboratorieundersøkel
     End Sub
 
     Private Sub Button3_Click(sender As Object, e As EventArgs)
-        MINSIDENAVIGASJONbrukere.Show()
+        BrukerMinSide.Show()
     End Sub
 
 
@@ -212,15 +212,15 @@ www.stolav.no/blodgiver
     End Sub
 
     Private Sub Button4_Click(sender As Object, e As EventArgs)
-        minSideAnsatte.Show()
+        AnsattInkalling.Show()
     End Sub
 
     Private Sub Button3_Click_2(sender As Object, e As EventArgs) Handles Button3.Click
-        minSideNavigasjonansatte.Show()
+        AnsattMinSide.Show()
     End Sub
 
     Private Sub Button4_Click_1(sender As Object, e As EventArgs) Handles Button4.Click
-        MINSIDENAVIGASJONbrukere.Show()
+        BrukerMinSide.Show()
     End Sub
 
     Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Button5.Click
