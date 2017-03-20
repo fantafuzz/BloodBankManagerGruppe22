@@ -11,6 +11,7 @@
     Dim spm9 As New Sporsmaal("hatt løs avføring", "2_3")
     Dim spm10 As New Sporsmaal("fått vaksine", "2_4")
     Dim spm11 As New Sporsmaal("vært hos tannlege eller tannpleier", "2_5")
+    Public svar As New ArrayList()
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
 
