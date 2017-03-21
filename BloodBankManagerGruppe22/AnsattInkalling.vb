@@ -6,7 +6,7 @@ Public Class AnsattInkalling
     Private Sub minSideAnsatte_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         MysqlConn = New MySqlConnection
         MysqlConn.ConnectionString =
-            "Server=mysql.stud.iie.ntnu.no ;Database=g_oops_22;Uid=g_oops_22;Pwd=BtUDpVoR"
+            "Server=mysql.stud.iie.ntnu.no;Database=g_oops_22;Uid=g_oops_22;Pwd=BtUDpVoR"
 
 
 
