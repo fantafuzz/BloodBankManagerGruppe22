@@ -16,7 +16,7 @@
 
 
         Me.Close()
-        egenSkjemaBolk2.svar
+        'egenSkjemaBolk2.svar
         egenSkjemaBolk2.Show()
 
     End Sub

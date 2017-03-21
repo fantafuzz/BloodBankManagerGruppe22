@@ -5,13 +5,17 @@ Public Class BrukerAllInfo
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
         MysqlConn = New MySqlConnection
-        MysqlConn.ConnectionString = "server=mysql.stud.iie.ntnu.no;database=g_oops_22; userid=g_oops_22; password=BtUDpVoR;"
+        MysqlConn.ConnectionString = "server=mysql.stud.iie.ntnu.no;database=g_oops_22; Uid=g_oops_22; password=BtUDpVoR;"
         Dim READER As MySqlDataReader
 
         Try
             MysqlConn.Open()
             Dim Query As String
-            Query = "insert into g_oops_22.bruker (fornavn, etternavn, epost) values('" & TextBox_fornavn & "', )"
+
+            Query = "update g_oops_22.bruker set bruker_id='" & TextBox_Brukerid.Text & "',fornavn='" & TextBox_fornavn.Text & "', etternavn='" & TextBox_etternavn.Text & "',epost='" & TextBox_epost.Text & "' where bruker_id ='" & TextBox_Brukerid.Text & "'"
+
+
+
             COMMAND = New MySqlCommand(Query, MysqlConn)
             READER = COMMAND.ExecuteReader
 
