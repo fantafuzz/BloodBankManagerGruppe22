@@ -50,7 +50,7 @@ Partial Class BrukerAllInfo
         Me.Label1.Location = New System.Drawing.Point(6, 24)
         Me.Label1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(293, 38)
+        Me.Label1.Size = New System.Drawing.Size(358, 46)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Velkommen til minside"
         '
@@ -58,7 +58,7 @@ Partial Class BrukerAllInfo
         '
         Me.TextBox_epost.Location = New System.Drawing.Point(103, 291)
         Me.TextBox_epost.Name = "TextBox_epost"
-        Me.TextBox_epost.Size = New System.Drawing.Size(342, 20)
+        Me.TextBox_epost.Size = New System.Drawing.Size(342, 23)
         Me.TextBox_epost.TabIndex = 41
         '
         'Label11
@@ -67,7 +67,7 @@ Partial Class BrukerAllInfo
         Me.Label11.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
         Me.Label11.Location = New System.Drawing.Point(14, 291)
         Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(37, 13)
+        Me.Label11.Size = New System.Drawing.Size(48, 17)
         Me.Label11.TabIndex = 40
         Me.Label11.Text = "Epost:"
         '
@@ -75,14 +75,14 @@ Partial Class BrukerAllInfo
         '
         Me.TextBox_tlf2.Location = New System.Drawing.Point(304, 250)
         Me.TextBox_tlf2.Name = "TextBox_tlf2"
-        Me.TextBox_tlf2.Size = New System.Drawing.Size(141, 20)
+        Me.TextBox_tlf2.Size = New System.Drawing.Size(141, 23)
         Me.TextBox_tlf2.TabIndex = 38
         '
         'TextBox_Tlf1
         '
         Me.TextBox_Tlf1.Location = New System.Drawing.Point(136, 250)
         Me.TextBox_Tlf1.Name = "TextBox_Tlf1"
-        Me.TextBox_Tlf1.Size = New System.Drawing.Size(156, 20)
+        Me.TextBox_Tlf1.Size = New System.Drawing.Size(156, 23)
         Me.TextBox_Tlf1.TabIndex = 37
         '
         'Label9
@@ -90,7 +90,7 @@ Partial Class BrukerAllInfo
         Me.Label9.AutoSize = True
         Me.Label9.Location = New System.Drawing.Point(13, 250)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(105, 14)
+        Me.Label9.Size = New System.Drawing.Size(114, 17)
         Me.Label9.TabIndex = 36
         Me.Label9.Text = "Telefonnummer:"
         '
@@ -98,14 +98,14 @@ Partial Class BrukerAllInfo
         '
         Me.TextBox_poststed.Location = New System.Drawing.Point(213, 212)
         Me.TextBox_poststed.Name = "TextBox_poststed"
-        Me.TextBox_poststed.Size = New System.Drawing.Size(179, 20)
+        Me.TextBox_poststed.Size = New System.Drawing.Size(179, 23)
         Me.TextBox_poststed.TabIndex = 35
         '
         'TextBox_postnr
         '
         Me.TextBox_postnr.Location = New System.Drawing.Point(103, 212)
         Me.TextBox_postnr.Name = "TextBox_postnr"
-        Me.TextBox_postnr.Size = New System.Drawing.Size(90, 20)
+        Me.TextBox_postnr.Size = New System.Drawing.Size(90, 23)
         Me.TextBox_postnr.TabIndex = 34
         '
         'Label8
@@ -113,7 +113,7 @@ Partial Class BrukerAllInfo
         Me.Label8.AutoSize = True
         Me.Label8.Location = New System.Drawing.Point(13, 212)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(76, 14)
+        Me.Label8.Size = New System.Drawing.Size(87, 17)
         Me.Label8.TabIndex = 33
         Me.Label8.Text = "Postnr/sted:"
         '
@@ -121,7 +121,7 @@ Partial Class BrukerAllInfo
         '
         Me.TextBox_adresse.Location = New System.Drawing.Point(94, 174)
         Me.TextBox_adresse.Name = "TextBox_adresse"
-        Me.TextBox_adresse.Size = New System.Drawing.Size(342, 20)
+        Me.TextBox_adresse.Size = New System.Drawing.Size(342, 23)
         Me.TextBox_adresse.TabIndex = 32
         '
         'Label7
@@ -129,7 +129,7 @@ Partial Class BrukerAllInfo
         Me.Label7.AutoSize = True
         Me.Label7.Location = New System.Drawing.Point(13, 174)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(55, 14)
+        Me.Label7.Size = New System.Drawing.Size(62, 17)
         Me.Label7.TabIndex = 31
         Me.Label7.Text = "Adresse:"
         '
@@ -137,7 +137,7 @@ Partial Class BrukerAllInfo
         '
         Me.TextBox_etternavn.Location = New System.Drawing.Point(94, 136)
         Me.TextBox_etternavn.Name = "TextBox_etternavn"
-        Me.TextBox_etternavn.Size = New System.Drawing.Size(342, 20)
+        Me.TextBox_etternavn.Size = New System.Drawing.Size(342, 23)
         Me.TextBox_etternavn.TabIndex = 25
         '
         'Label3
@@ -145,7 +145,7 @@ Partial Class BrukerAllInfo
         Me.Label3.AutoSize = True
         Me.Label3.Location = New System.Drawing.Point(13, 138)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(71, 14)
+        Me.Label3.Size = New System.Drawing.Size(75, 17)
         Me.Label3.TabIndex = 24
         Me.Label3.Text = "Etternavn:"
         '
@@ -153,7 +153,7 @@ Partial Class BrukerAllInfo
         '
         Me.TextBox_fornavn.Location = New System.Drawing.Point(93, 107)
         Me.TextBox_fornavn.Name = "TextBox_fornavn"
-        Me.TextBox_fornavn.Size = New System.Drawing.Size(342, 20)
+        Me.TextBox_fornavn.Size = New System.Drawing.Size(342, 23)
         Me.TextBox_fornavn.TabIndex = 23
         '
         'Label2
@@ -161,7 +161,7 @@ Partial Class BrukerAllInfo
         Me.Label2.AutoSize = True
         Me.Label2.Location = New System.Drawing.Point(10, 110)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(61, 14)
+        Me.Label2.Size = New System.Drawing.Size(65, 17)
         Me.Label2.TabIndex = 22
         Me.Label2.Text = "Fornavn:"
         '
@@ -178,7 +178,7 @@ Partial Class BrukerAllInfo
         '
         Me.TextBox_Brukerid.Location = New System.Drawing.Point(94, 81)
         Me.TextBox_Brukerid.Name = "TextBox_Brukerid"
-        Me.TextBox_Brukerid.Size = New System.Drawing.Size(99, 20)
+        Me.TextBox_Brukerid.Size = New System.Drawing.Size(99, 23)
         Me.TextBox_Brukerid.TabIndex = 53
         '
         'Label4
@@ -186,13 +186,13 @@ Partial Class BrukerAllInfo
         Me.Label4.AutoSize = True
         Me.Label4.Location = New System.Drawing.Point(11, 84)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(66, 14)
+        Me.Label4.Size = New System.Drawing.Size(75, 17)
         Me.Label4.TabIndex = 52
         Me.Label4.Text = "Bruker ID:"
         '
         'BrukerAllInfo
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 14.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 17.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(805, 477)
@@ -215,6 +215,7 @@ Partial Class BrukerAllInfo
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.Font = New System.Drawing.Font("Georgia", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "BrukerAllInfo"
         Me.Text = "Svar fra Labben"
