@@ -8,7 +8,7 @@ Public Class AnsattStatistikk
 
     Private Sub statistics_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         MysqlConn = New MySqlConnection
-        MysqlConn.ConnectionString = "server=; database=; Uid=; password="
+        MysqlConn.ConnectionString = "server=mysql.stud.iie.ntnu.no; database=g_oops_22; Uid=g_oops_22; password=BtUDpVoR"
         Dim READER As MySqlDataReader
 
         Try

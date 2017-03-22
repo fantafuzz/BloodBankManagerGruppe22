@@ -14,4 +14,12 @@
         Me.Close()
         AnsattBlodProdukter.Show()
     End Sub
+
+    Private Sub AnsattMinSide_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+    End Sub
+
+    Private Sub Statistikk_Click(sender As Object, e As EventArgs) Handles Statistikk.Click
+        AnsattStatistikk.Show()
+    End Sub
 End Class

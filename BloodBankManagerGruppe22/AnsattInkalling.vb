@@ -14,11 +14,11 @@ Public Class AnsattInkalling
         FilterData("")
 
     End Sub
-    Public Sub FilterData(valueToSeach As String)
+    Public Sub FilterData(valueToSearch As String)
 
 
 
-        Dim searchQuery As String = "SELECT bruker.bruker_id, bruker.fornavn, bruker.etternavn, bruker.epost, blodgiver.personnummer FROM bruker, blodgiver WHERE bruker.bruker_id = blodgiver.blodgiver_bruker_id AND CONCAT(bruker_id,fornavn, etternavn, epost) like '%" & valueToSeach & "%';"
+        Dim searchQuery As String = "SELECT bruker.bruker_id, bruker.fornavn, bruker.etternavn, bruker.epost, blodgiver.personnummer FROM bruker, blodgiver WHERE bruker.bruker_id = blodgiver.blodgiver_bruker_id AND CONCAT(bruker_id,fornavn, etternavn, epost) like '%" & valueToSearch & "%';"
 
         Dim command As New MySqlCommand(searchQuery, MysqlConn)
         Dim adapter As New MySqlDataAdapter(command)
