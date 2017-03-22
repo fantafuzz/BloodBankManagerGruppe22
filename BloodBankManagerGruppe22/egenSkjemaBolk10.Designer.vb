@@ -24,64 +24,72 @@ Partial Class egenSkjemaBolk10
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(egenSkjemaBolk10))
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.CheckBox1 = New System.Windows.Forms.CheckBox()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.TextBoxEvt = New System.Windows.Forms.TextBox()
+        Me.CheckBoxEpost = New System.Windows.Forms.CheckBox()
+        Me.ButtonSend = New System.Windows.Forms.Button()
+        Me.CheckBoxSms = New System.Windows.Forms.CheckBox()
         Me.SuspendLayout()
         '
         'Label1
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(18, 115)
-        Me.Label1.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
+        Me.Label1.Location = New System.Drawing.Point(9, 60)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(608, 26)
+        Me.Label1.Size = New System.Drawing.Size(327, 13)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Er det noen andre eventuelle opplysninger du vil tilføye?"
         '
-        'TextBox1
+        'TextBoxEvt
         '
-        Me.TextBox1.Location = New System.Drawing.Point(24, 165)
-        Me.TextBox1.Margin = New System.Windows.Forms.Padding(6, 6, 6, 6)
-        Me.TextBox1.Multiline = True
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(644, 156)
-        Me.TextBox1.TabIndex = 1
+        Me.TextBoxEvt.Location = New System.Drawing.Point(12, 86)
+        Me.TextBoxEvt.MaxLength = 256
+        Me.TextBoxEvt.Multiline = True
+        Me.TextBoxEvt.Name = "TextBoxEvt"
+        Me.TextBoxEvt.Size = New System.Drawing.Size(324, 83)
+        Me.TextBoxEvt.TabIndex = 1
         '
-        'CheckBox1
+        'CheckBoxEpost
         '
-        Me.CheckBox1.AutoSize = True
-        Me.CheckBox1.Location = New System.Drawing.Point(24, 60)
-        Me.CheckBox1.Margin = New System.Windows.Forms.Padding(6, 6, 6, 6)
-        Me.CheckBox1.Name = "CheckBox1"
-        Me.CheckBox1.Size = New System.Drawing.Size(413, 29)
-        Me.CheckBox1.TabIndex = 2
-        Me.CheckBox1.Text = "Samtykker du til epost/sms forbindelse"
-        Me.CheckBox1.UseVisualStyleBackColor = True
+        Me.CheckBoxEpost.AutoSize = True
+        Me.CheckBoxEpost.Location = New System.Drawing.Point(12, 12)
+        Me.CheckBoxEpost.Name = "CheckBoxEpost"
+        Me.CheckBoxEpost.Size = New System.Drawing.Size(57, 17)
+        Me.CheckBoxEpost.TabIndex = 2
+        Me.CheckBoxEpost.Text = "spm60"
+        Me.CheckBoxEpost.UseVisualStyleBackColor = True
         '
-        'Button1
+        'ButtonSend
         '
-        Me.Button1.Location = New System.Drawing.Point(24, 358)
-        Me.Button1.Margin = New System.Windows.Forms.Padding(6, 6, 6, 6)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(178, 44)
-        Me.Button1.TabIndex = 3
-        Me.Button1.Text = "Send"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.ButtonSend.Location = New System.Drawing.Point(12, 186)
+        Me.ButtonSend.Name = "ButtonSend"
+        Me.ButtonSend.Size = New System.Drawing.Size(89, 23)
+        Me.ButtonSend.TabIndex = 3
+        Me.ButtonSend.Text = "Send"
+        Me.ButtonSend.UseVisualStyleBackColor = True
+        '
+        'CheckBoxSms
+        '
+        Me.CheckBoxSms.AutoSize = True
+        Me.CheckBoxSms.Location = New System.Drawing.Point(12, 35)
+        Me.CheckBoxSms.Name = "CheckBoxSms"
+        Me.CheckBoxSms.Size = New System.Drawing.Size(57, 17)
+        Me.CheckBoxSms.TabIndex = 4
+        Me.CheckBoxSms.Text = "spm61"
+        Me.CheckBoxSms.UseVisualStyleBackColor = True
         '
         'egenSkjemaBolk10
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(12.0!, 25.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(798, 425)
-        Me.Controls.Add(Me.Button1)
-        Me.Controls.Add(Me.CheckBox1)
-        Me.Controls.Add(Me.TextBox1)
+        Me.ClientSize = New System.Drawing.Size(399, 221)
+        Me.Controls.Add(Me.CheckBoxSms)
+        Me.Controls.Add(Me.ButtonSend)
+        Me.Controls.Add(Me.CheckBoxEpost)
+        Me.Controls.Add(Me.TextBoxEvt)
         Me.Controls.Add(Me.Label1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
-        Me.Margin = New System.Windows.Forms.Padding(6, 6, 6, 6)
         Me.Name = "egenSkjemaBolk10"
         Me.Text = "egenSkjemaBolk10"
         Me.ResumeLayout(False)
@@ -90,7 +98,8 @@ Partial Class egenSkjemaBolk10
     End Sub
 
     Friend WithEvents Label1 As Label
-    Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents CheckBox1 As CheckBox
-    Friend WithEvents Button1 As Button
+    Friend WithEvents TextBoxEvt As TextBox
+    Friend WithEvents CheckBoxEpost As CheckBox
+    Friend WithEvents ButtonSend As Button
+    Friend WithEvents CheckBoxSms As CheckBox
 End Class

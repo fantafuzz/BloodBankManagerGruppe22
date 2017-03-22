@@ -269,6 +269,9 @@
     <EmbeddedResource Include="egenSkjemaBolk9.resx">
       <DependentUpon>egenSkjemaBolk9.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="egenSkjemaTempStorage.resx">
+      <DependentUpon>egenSkjemaTempStorage.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="hvaSkjerNårDuGirBlod.resx">
       <DependentUpon>hvaSkjerNårDuGirBlod.vb</DependentUpon>
     </EmbeddedResource>

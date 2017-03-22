@@ -23,7 +23,7 @@ Partial Class egenSkjemaBolk2
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(egenSkjemaBolk2))
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.ButtonNeste = New System.Windows.Forms.Button()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
@@ -55,15 +55,15 @@ Partial Class egenSkjemaBolk2
         Me.Panel3.SuspendLayout()
         Me.SuspendLayout()
         '
-        'Button1
+        'ButtonNeste
         '
-        Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
-        Me.Button1.Location = New System.Drawing.Point(545, 175)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(130, 23)
-        Me.Button1.TabIndex = 37
-        Me.Button1.Text = "Gå videre til neste bolk"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.ButtonNeste.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
+        Me.ButtonNeste.Location = New System.Drawing.Point(545, 175)
+        Me.ButtonNeste.Name = "ButtonNeste"
+        Me.ButtonNeste.Size = New System.Drawing.Size(130, 23)
+        Me.ButtonNeste.TabIndex = 37
+        Me.ButtonNeste.Text = "Gå videre til neste bolk"
+        Me.ButtonNeste.UseVisualStyleBackColor = True
         '
         'Label7
         '
@@ -371,7 +371,7 @@ Partial Class egenSkjemaBolk2
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label7)
-        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.ButtonNeste)
         Me.Font = New System.Drawing.Font("Georgia", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "egenSkjemaBolk2"
@@ -391,7 +391,7 @@ Partial Class egenSkjemaBolk2
 
     End Sub
 
-    Friend WithEvents Button1 As Button
+    Friend WithEvents ButtonNeste As Button
     Friend WithEvents Label7 As Label
     Friend WithEvents Label1 As Label
     Friend WithEvents Label2 As Label

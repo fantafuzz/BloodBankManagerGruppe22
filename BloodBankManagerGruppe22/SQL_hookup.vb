@@ -14,6 +14,10 @@ Public Class SQL_hookup
     Private connstring As String
     Private connection As New MySqlConnection()
 
+    Public Sub New()
+        connstring = "Server=" & server & ";" & "Database=" & databasename & ";" & "Uid=" & username & ";" & "Pwd=" & password & ";"
+        connection.ConnectionString = connstring
+    End Sub
     Public Sub New(ByVal uname As String, pword As String, dbname As String, sv As String)
         username = uname
         password = pword
@@ -113,7 +117,7 @@ Public Class SQL_hookup
     End Function
 
     Public Sub registrerNy(ByVal fornavn As String, ByVal etternavn As String, ByVal epost As String, ByVal passord As String, ByVal fodselsdato As String, ByVal personnummer As String, ByVal adresse As String, ByVal postnummer As Integer, ByVal poststed As String, ByVal telefonnummerEn As String, ByVal telefonnummerTo As String, ByVal kjonn As String, ByVal blodtype As Integer, ByVal blodgivningLokasjon As String, ByVal blodbefore As Boolean, ByVal hvilkenBlodbank As String, ByVal samtykke As Boolean, ByVal infoRodekors As Boolean)
-
+        Dim hashedPassord = hash(passord, salt)
 
         Try
             connection.Open()
@@ -121,7 +125,7 @@ Public Class SQL_hookup
             sqlAddBruker.Parameters.AddWithValue("@fornavn", fornavn)
             sqlAddBruker.Parameters.AddWithValue("@etternavn", etternavn)
             sqlAddBruker.Parameters.AddWithValue("@epost", epost)
-            sqlAddBruker.Parameters.AddWithValue("@passord", passord)
+            sqlAddBruker.Parameters.AddWithValue("@passord", hashedPassord)
             sqlAddBruker.ExecuteNonQuery()
 
             Dim sqlAddBlodgiver As New MySqlCommand("INSERT INTO blodgiver (blodgiver_bruker_id, fodselsdato, personnummer, adresse, postnr, poststed, telefon_1, telefon_2, kjonn, blodgiver_blodtype_id, onsket_lok, gitt_for, hvor_gitt, samtykke_for, modta_rode_kors) values ((SELECT bruker_id FROM bruker WHERE fornavn = @fornavn AND etternavn = @etternavn AND epost = @epost), @fodselsdato, @personnummer, @adresse, @postnr, @poststed, @telefonnummerEn, @telefonnummerTo, @kjonn, (SELECT blodtype_id FROM blodtype WHERE blodtype_id = @blodtype), @onsket_lok, @gitt_for, @hvor_gitt, @samtykke_for, @modta_rode_kors)", connection)
@@ -144,8 +148,98 @@ Public Class SQL_hookup
             sqlAddBlodgiver.Parameters.AddWithValue("@modta_rode_kors", infoRodekors)
             sqlAddBlodgiver.ExecuteNonQuery()
 
-        Catch exception As MySqlException
-            MsgBox("Feil ved tilkobling til databasen: " & exception.Message)
+        Catch ex As MySqlException
+            MsgBox("Feil ved tilkobling til databasen: " & ex.Message)
+        Finally
+            connection.Close()
+        End Try
+    End Sub
+    Public Sub SendSvar(ByVal currentUser As Integer, ByVal tempsvar() As Boolean, ByVal evt As String)
+        Dim currDate As Date = Date.Now
+        Dim currDateString As String = currDate.ToString("YYYY-mm-dd")
+        Dim svar(60) As Integer
+        Dim index = 0
+        For Each s In tempsvar
+            If s = True Then
+                svar(index) = 1
+            ElseIf s = False Then
+                svar(index) = 0
+            End If
+            index += 1
+        Next
+        For Each s In svar
+            MsgBox(s)
+        Next
+        Try
+            connection.Open()
+            Dim sqlSendSvar As New MySqlCommand("INSERT INTO egenerklaeringsskjema(skjema_bruker_id, dato, tillat_epost, tillat_sms, evt_info, 1_1, 1_2, 1_3, 1_4, 1_5, 1_6, 2_1, 2_2, 2_3, 2_4, 2_5, 3_1, 3_2, 3_3, 3_4, 3_5, 3_6, 3_7, 4_1, 4_2, 4_3, 4_4, 4_5, 4_6, 4_7, 4_8, 4_9, 4_10, 5_1, 6_1, 6_2, 6_3, 6_4, 6_5, 6_6, 6_7, 6_8, 6_9, 6_10, 6_11, 6_12, 6_13, 6_14, 6_15, 7_1, 7_2, 7_3, 7_4, 8_1, 9_1, 9_2, 9_3, 9_4, 9_5, 9_6, 9_7, 9_8, 9_9, 9_10) VALUES ((SELECT blodgiver_bruker_id FROM blodgiver WHERE blodgiver_bruker_id = @currentuser), @dato, @tillat_epost, @tillat_sms, @evt_info, @1_1, @1_2, @1_3, @1_4, @1_5, @1_6, @2_1, @2_2, @2_3, @2_4, @2_5, @3_1, @3_2, @3_3, @3_4, @3_5, @3_6, @3_7, @4_1, @4_2, @4_3, @4_4, @4_5, @4_6, @4_7, @4_8, @4_9, @4_10, @5_1, @6_1, @6_2, @6_3, @6_4, @6_5, @6_6, @6_7, @6_8, @6_9, @6_10, @6_11, @6_12, @6_13, @6_14, @6_16, @7_1, @7_2, @7_3, @7_4, @8_1, @9_1, @9_2, @9_3, @9_4, @9_5, @9_6, @9_7, @9_8, @9_9, @9_10)")
+            sqlSendSvar.Parameters.AddWithValue("@currentuser", currentUser)
+            sqlSendSvar.Parameters.AddWithValue("@dato", currDateString)
+            sqlSendSvar.Parameters.AddWithValue("@tillat_epost", svar(59))
+            sqlSendSvar.Parameters.AddWithValue("@tillat_sms", svar(60))
+            sqlSendSvar.Parameters.AddWithValue("@evt_info", evt)
+            sqlSendSvar.Parameters.AddWithValue("@1_1", svar(0))
+            sqlSendSvar.Parameters.AddWithValue("@1_2", svar(1))
+            sqlSendSvar.Parameters.AddWithValue("@1_3", svar(2))
+            sqlSendSvar.Parameters.AddWithValue("@1_4", svar(3))
+            sqlSendSvar.Parameters.AddWithValue("@1_5", svar(4))
+            sqlSendSvar.Parameters.AddWithValue("@1_6", svar(5))
+            sqlSendSvar.Parameters.AddWithValue("@2_1", svar(6))
+            sqlSendSvar.Parameters.AddWithValue("@2_2", svar(7))
+            sqlSendSvar.Parameters.AddWithValue("@2_3", svar(8))
+            sqlSendSvar.Parameters.AddWithValue("@2_4", svar(9))
+            sqlSendSvar.Parameters.AddWithValue("@2_5", svar(10))
+            sqlSendSvar.Parameters.AddWithValue("@3_1", svar(11))
+            sqlSendSvar.Parameters.AddWithValue("@3_2", svar(12))
+            sqlSendSvar.Parameters.AddWithValue("@3_3", svar(13))
+            sqlSendSvar.Parameters.AddWithValue("@3_4", svar(14))
+            sqlSendSvar.Parameters.AddWithValue("@3_5", svar(15))
+            sqlSendSvar.Parameters.AddWithValue("@3_6", svar(16))
+            sqlSendSvar.Parameters.AddWithValue("@3_7", svar(17))
+            sqlSendSvar.Parameters.AddWithValue("@4_1", svar(18))
+            sqlSendSvar.Parameters.AddWithValue("@4_2", svar(19))
+            sqlSendSvar.Parameters.AddWithValue("@4_3", svar(20))
+            sqlSendSvar.Parameters.AddWithValue("@4_4", svar(21))
+            sqlSendSvar.Parameters.AddWithValue("@4_5", svar(22))
+            sqlSendSvar.Parameters.AddWithValue("@4_6", svar(23))
+            sqlSendSvar.Parameters.AddWithValue("@4_7", svar(24))
+            sqlSendSvar.Parameters.AddWithValue("@4_8", svar(25))
+            sqlSendSvar.Parameters.AddWithValue("@4_9", svar(26))
+            sqlSendSvar.Parameters.AddWithValue("@4_10", svar(27))
+            sqlSendSvar.Parameters.AddWithValue("@5_1", svar(28))
+            sqlSendSvar.Parameters.AddWithValue("@6_1", svar(29))
+            sqlSendSvar.Parameters.AddWithValue("@6_2", svar(30))
+            sqlSendSvar.Parameters.AddWithValue("@6_3", svar(31))
+            sqlSendSvar.Parameters.AddWithValue("@6_4", svar(32))
+            sqlSendSvar.Parameters.AddWithValue("@6_5", svar(33))
+            sqlSendSvar.Parameters.AddWithValue("@6_6", svar(34))
+            sqlSendSvar.Parameters.AddWithValue("@6_7", svar(35))
+            sqlSendSvar.Parameters.AddWithValue("@6_8", svar(36))
+            sqlSendSvar.Parameters.AddWithValue("@6_9", svar(37))
+            sqlSendSvar.Parameters.AddWithValue("@6_10", svar(38))
+            sqlSendSvar.Parameters.AddWithValue("@6_11", svar(39))
+            sqlSendSvar.Parameters.AddWithValue("@6_12", svar(40))
+            sqlSendSvar.Parameters.AddWithValue("@6_13", svar(41))
+            sqlSendSvar.Parameters.AddWithValue("@6_14", svar(42))
+            sqlSendSvar.Parameters.AddWithValue("@6_15", svar(43))
+            sqlSendSvar.Parameters.AddWithValue("@7_1", svar(44))
+            sqlSendSvar.Parameters.AddWithValue("@7_2", svar(45))
+            sqlSendSvar.Parameters.AddWithValue("@7_3", svar(46))
+            sqlSendSvar.Parameters.AddWithValue("@7_4", svar(47))
+            sqlSendSvar.Parameters.AddWithValue("@8_1", svar(48))
+            sqlSendSvar.Parameters.AddWithValue("9_1", svar(49))
+            sqlSendSvar.Parameters.AddWithValue("9_2", svar(50))
+            sqlSendSvar.Parameters.AddWithValue("9_3", svar(51))
+            sqlSendSvar.Parameters.AddWithValue("9_4", svar(52))
+            sqlSendSvar.Parameters.AddWithValue("9_5", svar(53))
+            sqlSendSvar.Parameters.AddWithValue("9_6", svar(54))
+            sqlSendSvar.Parameters.AddWithValue("9_7", svar(55))
+            sqlSendSvar.Parameters.AddWithValue("9_8", svar(56))
+            sqlSendSvar.Parameters.AddWithValue("9_9", svar(57))
+            sqlSendSvar.Parameters.AddWithValue("9_10", svar(58))
+            sqlSendSvar.ExecuteNonQuery()
+        Catch ex As MySqlException
+            MsgBox("Feil ved tilkobling til databasen: " & ex.Message)
         Finally
             connection.Close()
         End Try
