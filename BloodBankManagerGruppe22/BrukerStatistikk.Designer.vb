@@ -22,6 +22,7 @@ Partial Class BrukerStatistikk
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(BrukerStatistikk))
         Me.Label1 = New System.Windows.Forms.Label()
         Me.ListBox1 = New System.Windows.Forms.ListBox()
         Me.SuspendLayout()
@@ -30,31 +31,36 @@ Partial Class BrukerStatistikk
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Georgia", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(18, 26)
+        Me.Label1.Location = New System.Drawing.Point(14, 21)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(389, 20)
+        Me.Label1.Size = New System.Drawing.Size(318, 17)
         Me.Label1.TabIndex = 1
         Me.Label1.Text = "Hvor mye blod har jeg gitt til blodbanken?"
         '
         'ListBox1
         '
         Me.ListBox1.FormattingEnabled = True
-        Me.ListBox1.ItemHeight = 20
-        Me.ListBox1.Location = New System.Drawing.Point(22, 62)
+        Me.ListBox1.ItemHeight = 17
+        Me.ListBox1.Location = New System.Drawing.Point(18, 50)
+        Me.ListBox1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.ListBox1.Name = "ListBox1"
-        Me.ListBox1.Size = New System.Drawing.Size(943, 624)
+        Me.ListBox1.Size = New System.Drawing.Size(755, 497)
         Me.ListBox1.TabIndex = 0
         '
-        'hvorMyeBlodGitt
+        'BrukerStatistikk
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(120.0!, 120.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(96.0!, 96.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(1163, 762)
+        Me.ClientSize = New System.Drawing.Size(930, 610)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.ListBox1)
         Me.Font = New System.Drawing.Font("Georgia", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Name = "hvorMyeBlodGitt"
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Name = "BrukerStatistikk"
         Me.Text = "hvorMyeBlodGitt"
         Me.ResumeLayout(False)
         Me.PerformLayout()

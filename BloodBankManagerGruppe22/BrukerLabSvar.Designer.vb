@@ -47,7 +47,7 @@ Partial Class BrukerLabSvar
         Me.Label1.TabIndex = 1
         Me.Label1.Text = "Labratorie Prøve Resultater"
         '
-        'labSvar
+        'BrukerLabSvar
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 14.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -56,9 +56,10 @@ Partial Class BrukerLabSvar
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.ListBox1)
         Me.Font = New System.Drawing.Font("Georgia", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.Name = "labSvar"
+        Me.Name = "BrukerLabSvar"
         Me.Text = "lab_svar"
         Me.ResumeLayout(False)
         Me.PerformLayout()

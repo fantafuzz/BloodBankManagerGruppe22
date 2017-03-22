@@ -22,6 +22,7 @@ Partial Class AnsattMinSide
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(AnsattMinSide))
         Me.Statistikk = New System.Windows.Forms.Button()
         Me.Logg_ut = New System.Windows.Forms.Button()
         Me.Bestill_Ny_BlodTime = New System.Windows.Forms.Button()
@@ -66,7 +67,7 @@ Partial Class AnsattMinSide
         Me.Label1.Location = New System.Drawing.Point(22, 42)
         Me.Label1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(379, 39)
+        Me.Label1.Size = New System.Drawing.Size(304, 31)
         Me.Label1.TabIndex = 33
         Me.Label1.Text = "Velkommen til Minside"
         '
@@ -82,7 +83,7 @@ Partial Class AnsattMinSide
         '
         'AnsattMinSide
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(10.0!, 20.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 17.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(751, 345)
@@ -93,6 +94,7 @@ Partial Class AnsattMinSide
         Me.Controls.Add(Me.Label1)
         Me.Font = New System.Drawing.Font("Georgia", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "AnsattMinSide"
         Me.Text = "minSideNavigasjonAnsatte"

@@ -374,7 +374,7 @@ Partial Class egenSkjemaBolk1
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(784, 561)
+        Me.ClientSize = New System.Drawing.Size(784, 367)
         Me.Controls.Add(Me.LabelFeilMelding)
         Me.Controls.Add(Me.PanelSpm2)
         Me.Controls.Add(Me.PanelSpm4)
@@ -392,6 +392,7 @@ Partial Class egenSkjemaBolk1
         Me.Controls.Add(Me.LabelSpm5)
         Me.Controls.Add(Me.LabelSpm4)
         Me.Controls.Add(Me.LabelSpm6)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "egenSkjemaBolk1"
         Me.Text = "egenerklæring"

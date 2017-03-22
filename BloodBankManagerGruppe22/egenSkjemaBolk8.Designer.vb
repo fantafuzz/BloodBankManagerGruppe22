@@ -139,6 +139,7 @@ Partial Class egenSkjemaBolk8
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.ButtonNeste)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "egenSkjemaBolk8"
         Me.Text = "egenSkjemaBolk8"

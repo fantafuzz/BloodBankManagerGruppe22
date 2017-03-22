@@ -120,7 +120,7 @@ Partial Class egenSkjemaBolk7
         'Label12
         '
         Me.Label12.AutoSize = True
-        Me.Label12.Location = New System.Drawing.Point(627, 12)
+        Me.Label12.Location = New System.Drawing.Point(621, 12)
         Me.Label12.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
         Me.Label12.Name = "Label12"
         Me.Label12.Size = New System.Drawing.Size(23, 13)

@@ -542,7 +542,7 @@ Partial Class egenSkjemaBolk9
         'Label12
         '
         Me.Label12.AutoSize = True
-        Me.Label12.Location = New System.Drawing.Point(627, 12)
+        Me.Label12.Location = New System.Drawing.Point(614, 12)
         Me.Label12.Name = "Label12"
         Me.Label12.Size = New System.Drawing.Size(23, 13)
         Me.Label12.TabIndex = 124
@@ -551,7 +551,7 @@ Partial Class egenSkjemaBolk9
         'Label13
         '
         Me.Label13.AutoSize = True
-        Me.Label13.Location = New System.Drawing.Point(588, 12)
+        Me.Label13.Location = New System.Drawing.Point(575, 12)
         Me.Label13.Name = "Label13"
         Me.Label13.Size = New System.Drawing.Size(18, 13)
         Me.Label13.TabIndex = 123

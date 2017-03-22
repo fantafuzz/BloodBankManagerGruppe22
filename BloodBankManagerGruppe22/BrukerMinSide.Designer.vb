@@ -39,7 +39,7 @@ Partial Class BrukerMinSide
         Me.Label1.Location = New System.Drawing.Point(11, 20)
         Me.Label1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(379, 39)
+        Me.Label1.Size = New System.Drawing.Size(304, 31)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Velkommen til Minside"
         '
@@ -103,9 +103,9 @@ Partial Class BrukerMinSide
         Me.Statistikk.Text = "Statistikk"
         Me.Statistikk.UseVisualStyleBackColor = True
         '
-        'MINSIDENAVIGASJONbrukere
+        'BrukerMinSide
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 17.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 14.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(707, 357)
@@ -117,9 +117,10 @@ Partial Class BrukerMinSide
         Me.Controls.Add(Me.Endre_mine_opplysninger)
         Me.Controls.Add(Me.Label1)
         Me.Font = New System.Drawing.Font("Georgia", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Margin = New System.Windows.Forms.Padding(2)
-        Me.Name = "MINSIDENAVIGASJONbrukere"
+        Me.Name = "BrukerMinSide"
         Me.Text = "MINSIDENAVIGASJON"
         Me.ResumeLayout(False)
         Me.PerformLayout()

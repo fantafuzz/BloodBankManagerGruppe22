@@ -1,4 +1,8 @@
 ﻿Public Class egenSkjemaBolk3
+    'Update: 22.03.17 , 17.45
+    'Bolk 3: Spørsmål 15 og 16
+
+
     'Bolk 3: Har du i løpet av de siste seks måneder
     'Public legeUndersøkelseEllerBehandlingForSykdom As Boolean = CheckBox1.Text
     'Public behandlingMedSprøyter As Boolean = CheckBox2.Text

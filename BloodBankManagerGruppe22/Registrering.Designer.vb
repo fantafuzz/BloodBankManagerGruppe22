@@ -22,6 +22,7 @@ Partial Class Registrering
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Registrering))
         Me.Label1 = New System.Windows.Forms.Label()
         Me.TextBoxFirstName = New System.Windows.Forms.TextBox()
         Me.ComboBoxLok = New System.Windows.Forms.ComboBox()
@@ -387,7 +388,7 @@ Partial Class Registrering
         Me.RadioButtonKvinne.Text = "Kvinne"
         Me.RadioButtonKvinne.UseVisualStyleBackColor = True
         '
-        'registeringAvNyeBlodgivere
+        'Registrering
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 14.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -431,7 +432,9 @@ Partial Class Registrering
         Me.Controls.Add(Me.TextBoxFirstName)
         Me.Controls.Add(Me.Label1)
         Me.Font = New System.Drawing.Font("Georgia", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Name = "registeringAvNyeBlodgivere"
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.Name = "Registrering"
         Me.Text = "Form2"
         Me.ResumeLayout(False)
         Me.PerformLayout()

@@ -464,7 +464,7 @@ Partial Class egenSkjemaBolk3
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 14.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(1107, 540)
+        Me.ClientSize = New System.Drawing.Size(890, 461)
         Me.Controls.Add(Me.LabelFeilMelding)
         Me.Controls.Add(Me.Label9)
         Me.Controls.Add(Me.Label10)

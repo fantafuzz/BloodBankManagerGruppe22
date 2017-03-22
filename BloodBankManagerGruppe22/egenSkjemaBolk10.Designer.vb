@@ -89,6 +89,7 @@ Partial Class egenSkjemaBolk10
         Me.Controls.Add(Me.CheckBoxEpost)
         Me.Controls.Add(Me.TextBoxEvt)
         Me.Controls.Add(Me.Label1)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "egenSkjemaBolk10"
         Me.Text = "egenSkjemaBolk10"
