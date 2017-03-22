@@ -4,18 +4,10 @@
     Public svar(60) As Boolean
     Dim spm29 As New Sporsmaal("hatt sjeldne eller alvorlige infeksjonssykdommer", "5_1")
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button_nesteBolk6.Click
-
-
-        Me.Close()
-        egenSkjemaBolk6.Show()
-    End Sub
-
     Private Sub egenSkjemaBolk5_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
         Label1.Text = spm29.getText
     End Sub
-    Private Sub ButtonNeste_Click(sender As Object, e As EventArgs) Handles Button_nesteBolk6.Click
+    Private Sub ButtonNeste_Click(sender As Object, e As EventArgs) Handles ButtonNeste.Click
 
         Dim feil As Boolean = valider()
         If feil Then
@@ -26,8 +18,8 @@
         mellomLagre()
 
         Me.Close()
-        egenSkjemaBolk2.svar = svar
-        egenSkjemaBolk2.Show()
+        egenSkjemaBolk6.svar = svar
+        egenSkjemaBolk6.Show()
 
     End Sub
     ' ▲ Ta med denne men gjør den om slik at den passer 

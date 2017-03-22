@@ -10,29 +10,17 @@
     Dim spm46 As New Sporsmaal("Har du vært gravid i løpet av de siste tolv måneder, eller ammer du nå", "7_2")
     Dim spm47 As New Sporsmaal("Hvis du har gitt blod tidligere, har du vært gravid siden forrige blodgivning", "7_3")
     Dim spm48 As New Sporsmaal("Har du i løpet av de siste seks måneder hatt seksuell kontakt med en mann som du vet har hatt seksuell kontakt med andre menn", "7_4")
-    Public svar As Boolean()
-
-
-
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button_nesteBolk8.Click
-
-
-        Me.Close()
-        egenSkjemaBolk8.Show()
-    End Sub
+    Public svar(60) As Boolean
 
     Private Sub egenSkjemaBolk7_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
         Label1.Text = spm45.getText
         Label2.Text = spm46.getText
         Label3.Text = spm47.getText
         Label4.Text = spm48.getText
-
-
     End Sub
 
 
-    Private Sub ButtonNeste_Click(sender As Object, e As EventArgs) Handles Button_nesteBolk8.Click
+    Private Sub ButtonNeste_Click(sender As Object, e As EventArgs) Handles ButtonNeste.Click
         Dim feil As Boolean = valider()
         If feil Then
             LabelFeilMelding.Visible = True
@@ -42,8 +30,8 @@
         mellomLagre()
 
         Me.Close()
-        egenSkjemaBolk2.svar = svar
-        egenSkjemaBolk2.Show()
+        egenSkjemaBolk8.svar = svar
+        egenSkjemaBolk8.Show()
 
     End Sub
     ' ▲ Ta med denne men gjør den om slik at den passer 

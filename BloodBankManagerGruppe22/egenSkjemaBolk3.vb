@@ -16,11 +16,6 @@
     Dim spm17 As New Sporsmaal("hatt seksuell kontakt med prostituerte eller tidligere prostituerte?", "3_6")
     Dim spm18 As New Sporsmaal("blitt tatovert, fått piercing eller tatt hull i ørene? ", "3_7")
     Public svar(60) As Boolean
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button_nesteBolk4.Click
-
-        Me.Close()
-        egenSkjemaBolk4.Show()
-    End Sub
 
     Private Sub egenSkjemaBolk3_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Label1.Text = spm12.getText
@@ -31,7 +26,7 @@
         Label6.Text = spm17.getText
         Label7.Text = spm18.getText
     End Sub
-    Private Sub ButtonNeste_Click(sender As Object, e As EventArgs) Handles Button_nesteBolk4.Click
+    Private Sub ButtonNeste_Click(sender As Object, e As EventArgs) Handles ButtonNeste.Click
         Dim feil As Boolean = valider()
         If feil Then
             LabelFeilMelding.Visible = True
@@ -41,8 +36,8 @@
         mellomLagre()
 
         Me.Close()
-        egenSkjemaBolk2.svar = svar
-        egenSkjemaBolk2.Show()
+        egenSkjemaBolk4.svar = svar
+        egenSkjemaBolk4.Show()
 
     End Sub
     ' ▲ Ta med denne men gjør den om slik at den passer 
@@ -123,7 +118,7 @@
     End Sub
     ' Alt over her skal kopieres ▲
     'denne kopier ▼
-    Private Sub RadioButtonChanged(sender As Object, e As EventArgs) Handles RadioButtonJ1.CheckedChanged, RadioButtonJ2.CheckedChanged, RadioButtonJ3.CheckedChanged, RadioButtonJ4.CheckedChanged, RadioButtonJ5.CheckedChanged, RadioButtonJ6.CheckedChanged, RadioButtonN1.CheckedChanged, RadioButtonN2.CheckedChanged, RadioButtonN3.CheckedChanged, RadioButtonN4.CheckedChanged, RadioButtonN5.CheckedChanged, RadioButtonN6.CheckedChanged
+    Private Sub RadioButtonChanged(sender As Object, e As EventArgs) Handles RadioButtonJ1.CheckedChanged, RadioButtonJ2.CheckedChanged, RadioButtonJ3.CheckedChanged, RadioButtonJ4.CheckedChanged, RadioButtonJ5.CheckedChanged, RadioButtonJ6.CheckedChanged, RadioButtonJ7.CheckedChanged, RadioButtonN1.CheckedChanged, RadioButtonN2.CheckedChanged, RadioButtonN3.CheckedChanged, RadioButtonN4.CheckedChanged, RadioButtonN5.CheckedChanged, RadioButtonN6.CheckedChanged, RadioButtonN7.CheckedChanged
         changeToDefault(sender.Tag)
     End Sub
     'Denne kopier ▲

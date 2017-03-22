@@ -23,15 +23,7 @@
     Dim spm58 As New Sporsmaal("Har du deltatt i medikamentforsøk de siste 12 måneder", "9_9")
     Dim spm59 As New Sporsmaal("Jeg samtykker til at mitt plasma føres ut av Norge for legemiddelproduksjon", "9_10")
 
-    Public svar As Boolean()
-
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button_FINAL_REGISTER.Click
-
-
-
-        Me.Close()
-        egenSkjemaBolk10.Show()
-    End Sub
+    Public svar(60) As Boolean
 
     Private Sub egenSkjemaBolk9_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Label1.Text = spm50.getText
@@ -48,8 +40,7 @@
 
     End Sub
 
-
-    Private Sub ButtonNeste_Click(sender As Object, e As EventArgs) Handles Button_FINAL_REGISTER.Click
+    Private Sub ButtonNeste_Click(sender As Object, e As EventArgs) Handles ButtonNeste.Click
         Dim feil As Boolean = valider()
         If feil Then
             LabelFeilMelding.Visible = True
@@ -59,8 +50,9 @@
         mellomLagre()
 
         Me.Close()
-        egenSkjemaBolk2.svar = svar
-        egenSkjemaBolk2.Show()
+        egenSkjemaTempStorage.Show()
+        egenSkjemaBolk10.svar = svar
+        egenSkjemaBolk10.Show()
 
     End Sub
     ' ▲ Ta med denne men gjør den om slik at den passer 

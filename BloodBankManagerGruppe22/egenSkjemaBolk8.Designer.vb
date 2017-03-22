@@ -61,6 +61,7 @@ Partial Class egenSkjemaBolk8
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(642, 25)
         Me.Label1.TabIndex = 103
+        Me.Label1.Tag = "50"
         Me.Label1.Text = "spm50"
         Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
@@ -73,6 +74,7 @@ Partial Class egenSkjemaBolk8
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(66, 25)
         Me.Panel2.TabIndex = 104
+        Me.Panel2.Tag = "50"
         '
         'RadioButtonN1
         '
@@ -82,7 +84,7 @@ Partial Class egenSkjemaBolk8
         Me.RadioButtonN1.Size = New System.Drawing.Size(14, 13)
         Me.RadioButtonN1.TabIndex = 37
         Me.RadioButtonN1.TabStop = True
-        Me.RadioButtonN1.Tag = "1"
+        Me.RadioButtonN1.Tag = "50"
         Me.RadioButtonN1.UseVisualStyleBackColor = True
         '
         'RadioButtonJ1
@@ -93,7 +95,7 @@ Partial Class egenSkjemaBolk8
         Me.RadioButtonJ1.Size = New System.Drawing.Size(14, 13)
         Me.RadioButtonJ1.TabIndex = 38
         Me.RadioButtonJ1.TabStop = True
-        Me.RadioButtonJ1.Tag = "1"
+        Me.RadioButtonJ1.Tag = "50"
         Me.RadioButtonJ1.UseVisualStyleBackColor = True
         '
         'Label9

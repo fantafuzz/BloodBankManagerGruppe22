@@ -13,7 +13,7 @@
     Dim spm11 As New Sporsmaal("vært hos tannlege eller tannpleier", "2_5")
     Public svar(60) As Boolean
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+    Private Sub ButtonNeste_Click(sender As Object, e As EventArgs) Handles ButtonNeste.Click
         Dim feil As Boolean = valider()
         If feil Then
             LabelFeilMelding.Visible = True
