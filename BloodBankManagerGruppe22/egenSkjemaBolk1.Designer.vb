@@ -24,7 +24,7 @@ Partial Class egenSkjemaBolk1
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(egenSkjemaBolk1))
         Me.Label7 = New System.Windows.Forms.Label()
-        Me.Button2 = New System.Windows.Forms.Button()
+        Me.ButtonNeste = New System.Windows.Forms.Button()
         Me.PanelSpm2 = New System.Windows.Forms.Panel()
         Me.RadioButtonN2 = New System.Windows.Forms.RadioButton()
         Me.RadioButtonJ2 = New System.Windows.Forms.RadioButton()
@@ -70,14 +70,14 @@ Partial Class egenSkjemaBolk1
         Me.Label7.TabIndex = 31
         Me.Label7.Text = "Vennligst besvar:"
         '
-        'Button2
+        'ButtonNeste
         '
-        Me.Button2.Location = New System.Drawing.Point(15, 199)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(130, 23)
-        Me.Button2.TabIndex = 65
-        Me.Button2.Text = "Gå videre til neste bolk"
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.ButtonNeste.Location = New System.Drawing.Point(15, 199)
+        Me.ButtonNeste.Name = "ButtonNeste"
+        Me.ButtonNeste.Size = New System.Drawing.Size(130, 23)
+        Me.ButtonNeste.TabIndex = 0
+        Me.ButtonNeste.Text = "Gå videre til neste bolk"
+        Me.ButtonNeste.UseVisualStyleBackColor = True
         '
         'PanelSpm2
         '
@@ -87,7 +87,7 @@ Partial Class egenSkjemaBolk1
         Me.PanelSpm2.Location = New System.Drawing.Point(578, 56)
         Me.PanelSpm2.Name = "PanelSpm2"
         Me.PanelSpm2.Size = New System.Drawing.Size(66, 25)
-        Me.PanelSpm2.TabIndex = 69
+        Me.PanelSpm2.TabIndex = 4
         Me.PanelSpm2.Tag = "2"
         '
         'RadioButtonN2
@@ -96,7 +96,7 @@ Partial Class egenSkjemaBolk1
         Me.RadioButtonN2.Location = New System.Drawing.Point(52, 6)
         Me.RadioButtonN2.Name = "RadioButtonN2"
         Me.RadioButtonN2.Size = New System.Drawing.Size(14, 13)
-        Me.RadioButtonN2.TabIndex = 37
+        Me.RadioButtonN2.TabIndex = 6
         Me.RadioButtonN2.TabStop = True
         Me.RadioButtonN2.Tag = "2"
         Me.RadioButtonN2.UseVisualStyleBackColor = True
@@ -107,7 +107,7 @@ Partial Class egenSkjemaBolk1
         Me.RadioButtonJ2.Location = New System.Drawing.Point(0, 6)
         Me.RadioButtonJ2.Name = "RadioButtonJ2"
         Me.RadioButtonJ2.Size = New System.Drawing.Size(14, 13)
-        Me.RadioButtonJ2.TabIndex = 38
+        Me.RadioButtonJ2.TabIndex = 5
         Me.RadioButtonJ2.TabStop = True
         Me.RadioButtonJ2.Tag = "2"
         Me.RadioButtonJ2.UseVisualStyleBackColor = True
@@ -120,7 +120,7 @@ Partial Class egenSkjemaBolk1
         Me.PanelSpm4.Location = New System.Drawing.Point(578, 106)
         Me.PanelSpm4.Name = "PanelSpm4"
         Me.PanelSpm4.Size = New System.Drawing.Size(66, 25)
-        Me.PanelSpm4.TabIndex = 68
+        Me.PanelSpm4.TabIndex = 10
         Me.PanelSpm4.Tag = "4"
         '
         'RadioButtonN4
@@ -129,7 +129,7 @@ Partial Class egenSkjemaBolk1
         Me.RadioButtonN4.Location = New System.Drawing.Point(52, 6)
         Me.RadioButtonN4.Name = "RadioButtonN4"
         Me.RadioButtonN4.Size = New System.Drawing.Size(14, 13)
-        Me.RadioButtonN4.TabIndex = 37
+        Me.RadioButtonN4.TabIndex = 12
         Me.RadioButtonN4.TabStop = True
         Me.RadioButtonN4.Tag = "4"
         Me.RadioButtonN4.UseVisualStyleBackColor = True
@@ -140,7 +140,7 @@ Partial Class egenSkjemaBolk1
         Me.RadioButtonJ4.Location = New System.Drawing.Point(0, 6)
         Me.RadioButtonJ4.Name = "RadioButtonJ4"
         Me.RadioButtonJ4.Size = New System.Drawing.Size(14, 13)
-        Me.RadioButtonJ4.TabIndex = 38
+        Me.RadioButtonJ4.TabIndex = 11
         Me.RadioButtonJ4.TabStop = True
         Me.RadioButtonJ4.Tag = "4"
         Me.RadioButtonJ4.UseVisualStyleBackColor = True
@@ -153,7 +153,7 @@ Partial Class egenSkjemaBolk1
         Me.PanelSpm5.Location = New System.Drawing.Point(578, 131)
         Me.PanelSpm5.Name = "PanelSpm5"
         Me.PanelSpm5.Size = New System.Drawing.Size(66, 25)
-        Me.PanelSpm5.TabIndex = 68
+        Me.PanelSpm5.TabIndex = 13
         Me.PanelSpm5.Tag = "5"
         '
         'RadioButtonN5
@@ -162,7 +162,7 @@ Partial Class egenSkjemaBolk1
         Me.RadioButtonN5.Location = New System.Drawing.Point(52, 6)
         Me.RadioButtonN5.Name = "RadioButtonN5"
         Me.RadioButtonN5.Size = New System.Drawing.Size(14, 13)
-        Me.RadioButtonN5.TabIndex = 37
+        Me.RadioButtonN5.TabIndex = 151
         Me.RadioButtonN5.TabStop = True
         Me.RadioButtonN5.Tag = "5"
         Me.RadioButtonN5.UseVisualStyleBackColor = True
@@ -173,7 +173,7 @@ Partial Class egenSkjemaBolk1
         Me.RadioButtonJ5.Location = New System.Drawing.Point(0, 6)
         Me.RadioButtonJ5.Name = "RadioButtonJ5"
         Me.RadioButtonJ5.Size = New System.Drawing.Size(14, 13)
-        Me.RadioButtonJ5.TabIndex = 38
+        Me.RadioButtonJ5.TabIndex = 14
         Me.RadioButtonJ5.TabStop = True
         Me.RadioButtonJ5.Tag = "5"
         Me.RadioButtonJ5.UseVisualStyleBackColor = True
@@ -186,7 +186,7 @@ Partial Class egenSkjemaBolk1
         Me.PanelSpm3.Location = New System.Drawing.Point(578, 81)
         Me.PanelSpm3.Name = "PanelSpm3"
         Me.PanelSpm3.Size = New System.Drawing.Size(66, 25)
-        Me.PanelSpm3.TabIndex = 68
+        Me.PanelSpm3.TabIndex = 7
         Me.PanelSpm3.Tag = "3"
         '
         'RadioButtonN3
@@ -195,7 +195,7 @@ Partial Class egenSkjemaBolk1
         Me.RadioButtonN3.Location = New System.Drawing.Point(52, 6)
         Me.RadioButtonN3.Name = "RadioButtonN3"
         Me.RadioButtonN3.Size = New System.Drawing.Size(14, 13)
-        Me.RadioButtonN3.TabIndex = 37
+        Me.RadioButtonN3.TabIndex = 9
         Me.RadioButtonN3.TabStop = True
         Me.RadioButtonN3.Tag = "3"
         Me.RadioButtonN3.UseVisualStyleBackColor = True
@@ -206,7 +206,7 @@ Partial Class egenSkjemaBolk1
         Me.RadioButtonJ3.Location = New System.Drawing.Point(0, 6)
         Me.RadioButtonJ3.Name = "RadioButtonJ3"
         Me.RadioButtonJ3.Size = New System.Drawing.Size(14, 13)
-        Me.RadioButtonJ3.TabIndex = 38
+        Me.RadioButtonJ3.TabIndex = 8
         Me.RadioButtonJ3.TabStop = True
         Me.RadioButtonJ3.Tag = "3"
         Me.RadioButtonJ3.UseVisualStyleBackColor = True
@@ -219,7 +219,7 @@ Partial Class egenSkjemaBolk1
         Me.PanelSpm1.Location = New System.Drawing.Point(578, 31)
         Me.PanelSpm1.Name = "PanelSpm1"
         Me.PanelSpm1.Size = New System.Drawing.Size(66, 25)
-        Me.PanelSpm1.TabIndex = 67
+        Me.PanelSpm1.TabIndex = 1
         Me.PanelSpm1.Tag = "1"
         '
         'RadioButtonN1
@@ -228,7 +228,7 @@ Partial Class egenSkjemaBolk1
         Me.RadioButtonN1.Location = New System.Drawing.Point(52, 6)
         Me.RadioButtonN1.Name = "RadioButtonN1"
         Me.RadioButtonN1.Size = New System.Drawing.Size(14, 13)
-        Me.RadioButtonN1.TabIndex = 37
+        Me.RadioButtonN1.TabIndex = 3
         Me.RadioButtonN1.TabStop = True
         Me.RadioButtonN1.Tag = "1"
         Me.RadioButtonN1.UseVisualStyleBackColor = True
@@ -239,7 +239,7 @@ Partial Class egenSkjemaBolk1
         Me.RadioButtonJ1.Location = New System.Drawing.Point(0, 6)
         Me.RadioButtonJ1.Name = "RadioButtonJ1"
         Me.RadioButtonJ1.Size = New System.Drawing.Size(14, 13)
-        Me.RadioButtonJ1.TabIndex = 38
+        Me.RadioButtonJ1.TabIndex = 2
         Me.RadioButtonJ1.TabStop = True
         Me.RadioButtonJ1.Tag = "1"
         Me.RadioButtonJ1.UseVisualStyleBackColor = True
@@ -252,7 +252,7 @@ Partial Class egenSkjemaBolk1
         Me.PanelSpm6.Location = New System.Drawing.Point(578, 156)
         Me.PanelSpm6.Name = "PanelSpm6"
         Me.PanelSpm6.Size = New System.Drawing.Size(66, 25)
-        Me.PanelSpm6.TabIndex = 69
+        Me.PanelSpm6.TabIndex = 16
         Me.PanelSpm6.Tag = "6"
         '
         'RadioButtonN6
@@ -261,7 +261,7 @@ Partial Class egenSkjemaBolk1
         Me.RadioButtonN6.Location = New System.Drawing.Point(52, 6)
         Me.RadioButtonN6.Name = "RadioButtonN6"
         Me.RadioButtonN6.Size = New System.Drawing.Size(14, 13)
-        Me.RadioButtonN6.TabIndex = 37
+        Me.RadioButtonN6.TabIndex = 18
         Me.RadioButtonN6.TabStop = True
         Me.RadioButtonN6.Tag = "6"
         Me.RadioButtonN6.UseVisualStyleBackColor = True
@@ -272,7 +272,7 @@ Partial Class egenSkjemaBolk1
         Me.RadioButtonJ6.Location = New System.Drawing.Point(0, 6)
         Me.RadioButtonJ6.Name = "RadioButtonJ6"
         Me.RadioButtonJ6.Size = New System.Drawing.Size(14, 13)
-        Me.RadioButtonJ6.TabIndex = 38
+        Me.RadioButtonJ6.TabIndex = 17
         Me.RadioButtonJ6.TabStop = True
         Me.RadioButtonJ6.Tag = "6"
         Me.RadioButtonJ6.UseVisualStyleBackColor = True
@@ -378,7 +378,7 @@ Partial Class egenSkjemaBolk1
         Me.Controls.Add(Me.LabelFeilMelding)
         Me.Controls.Add(Me.PanelSpm2)
         Me.Controls.Add(Me.PanelSpm4)
-        Me.Controls.Add(Me.Button2)
+        Me.Controls.Add(Me.ButtonNeste)
         Me.Controls.Add(Me.PanelSpm5)
         Me.Controls.Add(Me.PanelSpm1)
         Me.Controls.Add(Me.PanelSpm3)
@@ -412,7 +412,7 @@ Partial Class egenSkjemaBolk1
 
     End Sub
     Friend WithEvents Label7 As Label
-    Friend WithEvents Button2 As Button
+    Friend WithEvents ButtonNeste As Button
     Friend WithEvents LabelSpm2 As Label
     Friend WithEvents LabelSpm1 As Label
     Friend WithEvents LabelSpm5 As Label

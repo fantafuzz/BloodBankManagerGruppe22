@@ -5,22 +5,25 @@
     Dim spm4 As New Sporsmaal("Veier du 50kg eller mer?", "1_4")
     Dim spm5 As New Sporsmaal("Har du åpne sår, eksem eller hudsykdom?", "1_5")
     Dim spm6 As New Sporsmaal("Har du piercing i slimhinne?", "1_6")
-    Public svar As New ArrayList()
-    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+    Public svar(60) As Boolean
+    ' ▼ Ta med denne men gjør den om slik at den passer.
+    Private Sub ButtonNeste_Click(sender As Object, e As EventArgs) Handles ButtonNeste.Click
         Dim feil As Boolean = valider()
         If feil Then
             LabelFeilMelding.Visible = True
             Exit Sub
         End If
 
-
+        mellomLagre()
 
         Me.Close()
-        egenSkjemaBolk2.svar
+        egenSkjemaBolk2.svar = svar
         egenSkjemaBolk2.Show()
 
     End Sub
+    ' ▲ Ta med denne men gjør den om slik at den passer 
 
+    ' Alt inni her skal kopieres ▼
     Private Sub mellomLagre()
         For Each ctrl As Control In Me.Controls
             If ctrl.GetType() Is GetType(System.Windows.Forms.Panel) Then
@@ -32,9 +35,9 @@
                     mellomlagerPoints = item
                 Next
                 If mellomlagerPoints = New Point(0, 6) Then
-                    svar.Add(True)
-                Else
-                    svar.Add(False)
+                    svar(ctrl.Tag - 1) = True
+                ElseIf mellomlagerPoints = New Point(52, 6) Then
+                    svar(ctrl.Tag - 1) = False
                 End If
             End If
         Next
@@ -94,7 +97,7 @@
             End If
         Next
     End Sub
-
+    ' Alt over her skal kopieres ▲
     Private Sub egenSkjemaBolk1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         LabelSpm1.Text = spm1.getText
         LabelSpm2.Text = spm2.getText
@@ -104,7 +107,9 @@
         LabelSpm6.Text = spm6.getText
     End Sub
 
+    'denne kopier ▼
     Private Sub RadioButtonChanged(sender As Object, e As EventArgs) Handles RadioButtonJ1.CheckedChanged, RadioButtonJ2.CheckedChanged, RadioButtonJ3.CheckedChanged, RadioButtonJ4.CheckedChanged, RadioButtonJ5.CheckedChanged, RadioButtonJ6.CheckedChanged, RadioButtonN1.CheckedChanged, RadioButtonN2.CheckedChanged, RadioButtonN3.CheckedChanged, RadioButtonN4.CheckedChanged, RadioButtonN5.CheckedChanged, RadioButtonN6.CheckedChanged
         changeToDefault(sender.Tag)
     End Sub
+    'Denne kopier ▲
 End Class
