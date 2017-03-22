@@ -15,7 +15,7 @@
     Dim spm16 As New Sporsmaal("hatt seksuell kontakt med person som bruker eller har brukt dopingmidler eller narkotiske midler som sprøyter eller ved sniffing?", "3_5")
     Dim spm17 As New Sporsmaal("hatt seksuell kontakt med prostituerte eller tidligere prostituerte?", "3_6")
     Dim spm18 As New Sporsmaal("blitt tatovert, fått piercing eller tatt hull i ørene? ", "3_7")
-
+    Public svar(60) As Boolean
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
 
 
