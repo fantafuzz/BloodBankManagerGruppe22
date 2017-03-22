@@ -8,7 +8,10 @@
         Logginn.Show()
     End Sub
 
-    Private Sub Statistikk_Click(sender As Object, e As EventArgs) Handles Statistikk.Click
 
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        Me.Close()
+        AnsattBlodProdukter.Show()
     End Sub
 End Class

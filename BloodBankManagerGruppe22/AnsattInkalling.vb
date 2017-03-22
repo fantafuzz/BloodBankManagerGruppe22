@@ -87,4 +87,8 @@ Public Class AnsattInkalling
         sokeValue = TextBoxSok.Text
         FilterData(sokeValue)
     End Sub
+
+    Private Sub GridBrukere_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles GridBrukere.CellContentClick
+
+    End Sub
 End Class

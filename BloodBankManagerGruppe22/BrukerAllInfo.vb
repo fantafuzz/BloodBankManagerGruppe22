@@ -28,4 +28,8 @@ Public Class BrukerAllInfo
         End Try
 
     End Sub
+
+    Private Sub BrukerAllInfo_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+    End Sub
 End Class

@@ -34,9 +34,10 @@ Partial Class AnsattInkalling
         'ButtonLogUt
         '
         Me.ButtonLogUt.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ButtonLogUt.Location = New System.Drawing.Point(11, 11)
+        Me.ButtonLogUt.Location = New System.Drawing.Point(15, 14)
+        Me.ButtonLogUt.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.ButtonLogUt.Name = "ButtonLogUt"
-        Me.ButtonLogUt.Size = New System.Drawing.Size(85, 34)
+        Me.ButtonLogUt.Size = New System.Drawing.Size(113, 42)
         Me.ButtonLogUt.TabIndex = 25
         Me.ButtonLogUt.Text = "Logg Ut"
         Me.ButtonLogUt.UseVisualStyleBackColor = True
@@ -44,28 +45,29 @@ Partial Class AnsattInkalling
         'GridBrukere
         '
         Me.GridBrukere.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.GridBrukere.Location = New System.Drawing.Point(11, 136)
-        Me.GridBrukere.Margin = New System.Windows.Forms.Padding(2)
+        Me.GridBrukere.Location = New System.Drawing.Point(15, 167)
+        Me.GridBrukere.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.GridBrukere.Name = "GridBrukere"
         Me.GridBrukere.RowTemplate.Height = 24
-        Me.GridBrukere.Size = New System.Drawing.Size(888, 429)
+        Me.GridBrukere.Size = New System.Drawing.Size(1184, 528)
         Me.GridBrukere.TabIndex = 30
         '
         'TextBoxSok
         '
-        Me.TextBoxSok.Location = New System.Drawing.Point(11, 97)
-        Me.TextBoxSok.Margin = New System.Windows.Forms.Padding(2)
+        Me.TextBoxSok.Location = New System.Drawing.Point(15, 119)
+        Me.TextBoxSok.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.TextBoxSok.Multiline = True
         Me.TextBoxSok.Name = "TextBoxSok"
-        Me.TextBoxSok.Size = New System.Drawing.Size(796, 35)
+        Me.TextBoxSok.Size = New System.Drawing.Size(1060, 42)
         Me.TextBoxSok.TabIndex = 31
         '
         'Button4
         '
         Me.Button4.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button4.Location = New System.Drawing.Point(1128, 122)
+        Me.Button4.Location = New System.Drawing.Point(1504, 150)
+        Me.Button4.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(85, 34)
+        Me.Button4.Size = New System.Drawing.Size(113, 42)
         Me.Button4.TabIndex = 33
         Me.Button4.Text = "Søk"
         Me.Button4.UseVisualStyleBackColor = True
@@ -73,9 +75,10 @@ Partial Class AnsattInkalling
         'ButtonSok
         '
         Me.ButtonSok.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ButtonSok.Location = New System.Drawing.Point(812, 96)
+        Me.ButtonSok.Location = New System.Drawing.Point(1083, 118)
+        Me.ButtonSok.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.ButtonSok.Name = "ButtonSok"
-        Me.ButtonSok.Size = New System.Drawing.Size(87, 35)
+        Me.ButtonSok.Size = New System.Drawing.Size(116, 43)
         Me.ButtonSok.TabIndex = 37
         Me.ButtonSok.Text = "Søk"
         Me.ButtonSok.UseVisualStyleBackColor = True
@@ -83,26 +86,28 @@ Partial Class AnsattInkalling
         'ButtonInnkall
         '
         Me.ButtonInnkall.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ButtonInnkall.Location = New System.Drawing.Point(11, 51)
+        Me.ButtonInnkall.Location = New System.Drawing.Point(15, 63)
+        Me.ButtonInnkall.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.ButtonInnkall.Name = "ButtonInnkall"
-        Me.ButtonInnkall.Size = New System.Drawing.Size(242, 40)
+        Me.ButtonInnkall.Size = New System.Drawing.Size(323, 49)
         Me.ButtonInnkall.TabIndex = 39
         Me.ButtonInnkall.Text = "Innkall til ny blodgivningstime"
         Me.ButtonInnkall.UseVisualStyleBackColor = True
         '
-        'minSideAnsatte
+        'AnsattInkalling
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(910, 601)
+        Me.ClientSize = New System.Drawing.Size(1213, 740)
         Me.Controls.Add(Me.ButtonInnkall)
         Me.Controls.Add(Me.ButtonSok)
         Me.Controls.Add(Me.Button4)
         Me.Controls.Add(Me.TextBoxSok)
         Me.Controls.Add(Me.GridBrukere)
         Me.Controls.Add(Me.ButtonLogUt)
-        Me.Name = "minSideAnsatte"
+        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Name = "AnsattInkalling"
         Me.Text = "minSideAnsatte"
         CType(Me.GridBrukere, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
