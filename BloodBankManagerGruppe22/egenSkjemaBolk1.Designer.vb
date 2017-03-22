@@ -72,7 +72,7 @@ Partial Class egenSkjemaBolk1
         '
         'ButtonNeste
         '
-        Me.ButtonNeste.Location = New System.Drawing.Point(15, 199)
+        Me.ButtonNeste.Location = New System.Drawing.Point(545, 200)
         Me.ButtonNeste.Name = "ButtonNeste"
         Me.ButtonNeste.Size = New System.Drawing.Size(130, 23)
         Me.ButtonNeste.TabIndex = 0
@@ -362,7 +362,7 @@ Partial Class egenSkjemaBolk1
         'LabelFeilMelding
         '
         Me.LabelFeilMelding.AutoSize = True
-        Me.LabelFeilMelding.Location = New System.Drawing.Point(529, 184)
+        Me.LabelFeilMelding.Location = New System.Drawing.Point(540, 185)
         Me.LabelFeilMelding.Name = "LabelFeilMelding"
         Me.LabelFeilMelding.Size = New System.Drawing.Size(145, 13)
         Me.LabelFeilMelding.TabIndex = 70
