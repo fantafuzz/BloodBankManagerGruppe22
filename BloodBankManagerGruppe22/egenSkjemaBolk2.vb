@@ -23,9 +23,8 @@
         mellomLagre()
 
         egenSkjemaBolk3.svar = svar
-        For Each item In svar
-            MsgBox(item)
-        Next
+        egenSkjemaBolk3.Show()
+        Me.Close()
     End Sub
 
     Private Sub mellomLagre()

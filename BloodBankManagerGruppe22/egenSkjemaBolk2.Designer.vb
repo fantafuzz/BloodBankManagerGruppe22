@@ -58,9 +58,9 @@ Partial Class egenSkjemaBolk2
         'Button1
         '
         Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
-        Me.Button1.Location = New System.Drawing.Point(586, 506)
+        Me.Button1.Location = New System.Drawing.Point(545, 175)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(185, 43)
+        Me.Button1.Size = New System.Drawing.Size(130, 23)
         Me.Button1.TabIndex = 37
         Me.Button1.Text = "Gå videre til neste bolk"
         Me.Button1.UseVisualStyleBackColor = True
@@ -84,6 +84,7 @@ Partial Class egenSkjemaBolk2
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(642, 25)
         Me.Label1.TabIndex = 51
+        Me.Label1.Tag = "7"
         Me.Label1.Text = "Spm7"
         Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
@@ -95,6 +96,7 @@ Partial Class egenSkjemaBolk2
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(642, 25)
         Me.Label2.TabIndex = 52
+        Me.Label2.Tag = "8"
         Me.Label2.Text = "spm8"
         Me.Label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
@@ -107,6 +109,7 @@ Partial Class egenSkjemaBolk2
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(642, 25)
         Me.Label3.TabIndex = 53
+        Me.Label3.Tag = "9"
         Me.Label3.Text = "spm9"
         Me.Label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
@@ -119,6 +122,7 @@ Partial Class egenSkjemaBolk2
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(642, 25)
         Me.Label5.TabIndex = 55
+        Me.Label5.Tag = "11"
         Me.Label5.Text = "spm11"
         Me.Label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
@@ -130,6 +134,7 @@ Partial Class egenSkjemaBolk2
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(642, 25)
         Me.Label4.TabIndex = 54
+        Me.Label4.Tag = "10"
         Me.Label4.Text = "spm10"
         Me.Label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
@@ -154,7 +159,7 @@ Partial Class egenSkjemaBolk2
         Me.RadioButtonN2.Size = New System.Drawing.Size(14, 13)
         Me.RadioButtonN2.TabIndex = 37
         Me.RadioButtonN2.TabStop = True
-        Me.RadioButtonN2.Tag = "2"
+        Me.RadioButtonN2.Tag = "8"
         Me.RadioButtonN2.UseVisualStyleBackColor = True
         '
         'RadioButtonJ2
@@ -166,7 +171,7 @@ Partial Class egenSkjemaBolk2
         Me.RadioButtonJ2.Size = New System.Drawing.Size(14, 13)
         Me.RadioButtonJ2.TabIndex = 38
         Me.RadioButtonJ2.TabStop = True
-        Me.RadioButtonJ2.Tag = "2"
+        Me.RadioButtonJ2.Tag = "8"
         Me.RadioButtonJ2.UseVisualStyleBackColor = True
         '
         'Panel5
@@ -190,7 +195,7 @@ Partial Class egenSkjemaBolk2
         Me.RadioButtonN4.Size = New System.Drawing.Size(14, 13)
         Me.RadioButtonN4.TabIndex = 37
         Me.RadioButtonN4.TabStop = True
-        Me.RadioButtonN4.Tag = "4"
+        Me.RadioButtonN4.Tag = "10"
         Me.RadioButtonN4.UseVisualStyleBackColor = True
         '
         'RadioButtonJ4
@@ -202,7 +207,7 @@ Partial Class egenSkjemaBolk2
         Me.RadioButtonJ4.Size = New System.Drawing.Size(14, 13)
         Me.RadioButtonJ4.TabIndex = 38
         Me.RadioButtonJ4.TabStop = True
-        Me.RadioButtonJ4.Tag = "4"
+        Me.RadioButtonJ4.Tag = "10"
         Me.RadioButtonJ4.UseVisualStyleBackColor = True
         '
         'Panel4
@@ -226,7 +231,7 @@ Partial Class egenSkjemaBolk2
         Me.RadioButtonN5.Size = New System.Drawing.Size(14, 13)
         Me.RadioButtonN5.TabIndex = 37
         Me.RadioButtonN5.TabStop = True
-        Me.RadioButtonN5.Tag = "5"
+        Me.RadioButtonN5.Tag = "11"
         Me.RadioButtonN5.UseVisualStyleBackColor = True
         '
         'RadioButtonJ5
@@ -238,7 +243,7 @@ Partial Class egenSkjemaBolk2
         Me.RadioButtonJ5.Size = New System.Drawing.Size(14, 13)
         Me.RadioButtonJ5.TabIndex = 38
         Me.RadioButtonJ5.TabStop = True
-        Me.RadioButtonJ5.Tag = "5"
+        Me.RadioButtonJ5.Tag = "11"
         Me.RadioButtonJ5.UseVisualStyleBackColor = True
         '
         'Panel2
@@ -262,7 +267,7 @@ Partial Class egenSkjemaBolk2
         Me.RadioButtonN1.Size = New System.Drawing.Size(14, 13)
         Me.RadioButtonN1.TabIndex = 37
         Me.RadioButtonN1.TabStop = True
-        Me.RadioButtonN1.Tag = "1"
+        Me.RadioButtonN1.Tag = "7"
         Me.RadioButtonN1.UseVisualStyleBackColor = True
         '
         'RadioButtonJ1
@@ -274,7 +279,7 @@ Partial Class egenSkjemaBolk2
         Me.RadioButtonJ1.Size = New System.Drawing.Size(14, 13)
         Me.RadioButtonJ1.TabIndex = 38
         Me.RadioButtonJ1.TabStop = True
-        Me.RadioButtonJ1.Tag = "1"
+        Me.RadioButtonJ1.Tag = "7"
         Me.RadioButtonJ1.UseVisualStyleBackColor = True
         '
         'Panel3
@@ -298,7 +303,7 @@ Partial Class egenSkjemaBolk2
         Me.RadioButtonN3.Size = New System.Drawing.Size(14, 13)
         Me.RadioButtonN3.TabIndex = 37
         Me.RadioButtonN3.TabStop = True
-        Me.RadioButtonN3.Tag = "3"
+        Me.RadioButtonN3.Tag = "9"
         Me.RadioButtonN3.UseVisualStyleBackColor = True
         '
         'RadioButtonJ3
@@ -310,7 +315,7 @@ Partial Class egenSkjemaBolk2
         Me.RadioButtonJ3.Size = New System.Drawing.Size(14, 13)
         Me.RadioButtonJ3.TabIndex = 38
         Me.RadioButtonJ3.TabStop = True
-        Me.RadioButtonJ3.Tag = "3"
+        Me.RadioButtonJ3.Tag = "9"
         Me.RadioButtonJ3.UseVisualStyleBackColor = True
         '
         'Label12
@@ -339,7 +344,7 @@ Partial Class egenSkjemaBolk2
         '
         Me.LabelFeilMelding.AutoSize = True
         Me.LabelFeilMelding.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LabelFeilMelding.Location = New System.Drawing.Point(529, 162)
+        Me.LabelFeilMelding.Location = New System.Drawing.Point(540, 160)
         Me.LabelFeilMelding.Name = "LabelFeilMelding"
         Me.LabelFeilMelding.Size = New System.Drawing.Size(145, 13)
         Me.LabelFeilMelding.TabIndex = 127
