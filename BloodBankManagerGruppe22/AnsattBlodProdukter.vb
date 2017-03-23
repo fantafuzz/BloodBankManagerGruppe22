@@ -19,7 +19,7 @@ Public Class AnsattBlodProdukter
     End Sub
     Public Sub FilterData(valueToSearch As String)
 
-        Dim searchQuery As String = "SELECT blodbeholdning.beholdningstype_id, blodbeholdning.blodbeholdning_navn, blodbeholdning.blodbeholdning_mengde, blodbeholdning_endring.endring_aarsak, FROM blodbeholdning, blodbeholdning_endring WHERE blodbeholdning.beholdningstype_id = blodbeholdning_endring.endring_blodbeholdning_id AND CONCAT(beholdningstype_id,beholdningstype_navn,beholdningstype_mengde) like '%" & valueToSearch & "%';"
+        Dim searchQuery As String = "select * from blodbeholdning"
 
         Dim command As New MySqlCommand(searchQuery, MysqlConn)
         Dim adapter As New MySqlDataAdapter(command)
@@ -35,39 +35,63 @@ Public Class AnsattBlodProdukter
     Private Sub Button_utlevering_av_blodprodukter_Click_1(sender As Object, e As EventArgs) Handles Button_utlevering_av_blodprodukter.Click
         Dim beholdningstype_id As Integer
         Dim beholdningstype_navn As String = ""
-        Dim beholdningstype_mengde As String = ""
+        Dim current_mengde As Integer
 
         If Not DataGridView1.CurrentRow Is Nothing Then
             beholdningstype_id = DataGridView1.CurrentRow.Cells("beholdningstype_id").Value
             beholdningstype_navn = DataGridView1.CurrentRow.Cells("beholdningstype_navn").Value
-            beholdningstype_mengde = DataGridView1.CurrentRow.Cells("beholdningstype_mengde").Value
+            current_mengde = DataGridView1.CurrentRow.Cells("beholdningstype_mengde").Value
         End If
 
-        MessageBox.Show(beholdningstype_id & " " & beholdningstype_navn & " " & beholdningstype_mengde)
 
-        Dim READER As MySqlDataReader
+
+
+        Dim mengdeViTar As Integer
+        If IsNumeric(TextBox_mengde_blod.Text) Then
+            mengdeViTar = current_mengde - mengdeViTar
+        End If
+
+        Dim gjenstaaendeMengde As Integer = current_mengde - mengdeViTar
+        If gjenstaaendeMengde < 0 Then
+            MessageBox.Show("Det er ikke mer tilgjenglig blod.")
+        End If
+        Dim mengdeViTarNegativ = -mengdeViTar
+        Dim dato As Date
+        dato = Date.Now
+        Dim datostring As String = dato.ToString("YYYY-mm-dd")
+
         Try
             MysqlConn.Open()
-            Dim Query As String
-            Query = "insert into g_oops_22.test(test1,test2,test3) values ('" & beholdningstype_id & "', '" & beholdningstype_navn & "', '" & beholdningstype_mengde & "')"
-            COMMAND = New MySqlCommand(Query, MysqlConn)
-            READER = COMMAND.ExecuteReader
+            Dim utleverBlod As New MySqlCommand("INSERT INTO blodbeholdning_endring (endring_aarsak,endring_mengde,endring_blodbeholdning_id,dato) VALUES (@aarsak, @mengde, @dato, (SELECT blodbeholningstype_id FROM blodbeholdning WHERE blodbeholdningstype_id = @beholdningstype))", MysqlConn)
 
-            MessageBox.Show("Bestilt blodprodukt")
-
-            MysqlConn.Close()
-        Catch ex As Exception
-            MessageBox.Show(ex.Message)
+            utleverBlod.Parameters.AddWithValue("@endrmengde", mengdeViTarNegativ)
+            utleverBlod.Parameters.AddWithValue("@beholdningstype", beholdningstype_id)
+            utleverBlod.Parameters.AddWithValue("@dato", datostring)
+        Catch ex As MySqlException
+            MsgBox(ex.Message)
         Finally
             MysqlConn.Dispose()
         End Try
 
 
+        Try
+            MysqlConn.Open()
+            Dim utleverblod2 As New MySqlCommand("update blodbeholdning set beholdningstype_mengde = @endring where beholdningstype_id = @id")
+            utleverblod2.Parameters.AddWithValue("@endring", gjenstaaendeMengde)
+            utleverblod2.Parameters.AddWithValue("@id", beholdningstype_id)
+
+
+            MessageBox.Show("Blodprodukt bestilt.")
+        Catch ex As MySqlException
+            MessageBox.Show(ex.Message)
+        Finally
+            MysqlConn.Dispose()
+        End Try
+
     End Sub
 
-    Private Sub ButtonSok_Click(sender As Object, e As EventArgs) Handles ButtonSok.Click
-        Dim sokeValue As String = ""
-        sokeValue = TextBoxSok.Text
-        FilterData(sokeValue)
-    End Sub
+
+
+
+
 End Class

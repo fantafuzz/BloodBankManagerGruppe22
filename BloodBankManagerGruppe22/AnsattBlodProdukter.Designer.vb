@@ -27,15 +27,15 @@ Partial Class AnsattBlodProdukter
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Button_utlevering_av_blodprodukter = New System.Windows.Forms.Button()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.ButtonSok = New System.Windows.Forms.Button()
-        Me.TextBoxSok = New System.Windows.Forms.TextBox()
+        Me.TextBox_mengde_blod = New System.Windows.Forms.TextBox()
+        Me.Label2 = New System.Windows.Forms.Label()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Button_Tilbake_AnsattMinSide
         '
         Me.Button_Tilbake_AnsattMinSide.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button_Tilbake_AnsattMinSide.Location = New System.Drawing.Point(761, 550)
+        Me.Button_Tilbake_AnsattMinSide.Location = New System.Drawing.Point(761, 661)
         Me.Button_Tilbake_AnsattMinSide.Margin = New System.Windows.Forms.Padding(2)
         Me.Button_Tilbake_AnsattMinSide.Name = "Button_Tilbake_AnsattMinSide"
         Me.Button_Tilbake_AnsattMinSide.Size = New System.Drawing.Size(143, 43)
@@ -47,58 +47,59 @@ Partial Class AnsattBlodProdukter
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Georgia", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(8, 21)
+        Me.Label1.Location = New System.Drawing.Point(7, 9)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(204, 18)
+        Me.Label1.Size = New System.Drawing.Size(253, 24)
         Me.Label1.TabIndex = 43
         Me.Label1.Text = "Lager av blodprodukter"
         '
         'Button_utlevering_av_blodprodukter
         '
         Me.Button_utlevering_av_blodprodukter.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button_utlevering_av_blodprodukter.Location = New System.Drawing.Point(11, 505)
+        Me.Button_utlevering_av_blodprodukter.Location = New System.Drawing.Point(16, 541)
         Me.Button_utlevering_av_blodprodukter.Margin = New System.Windows.Forms.Padding(2)
         Me.Button_utlevering_av_blodprodukter.Name = "Button_utlevering_av_blodprodukter"
-        Me.Button_utlevering_av_blodprodukter.Size = New System.Drawing.Size(212, 37)
+        Me.Button_utlevering_av_blodprodukter.Size = New System.Drawing.Size(260, 37)
         Me.Button_utlevering_av_blodprodukter.TabIndex = 44
-        Me.Button_utlevering_av_blodprodukter.Text = "Utlevere blodprodukter"
+        Me.Button_utlevering_av_blodprodukter.Text = "Utlever"
         Me.Button_utlevering_av_blodprodukter.UseVisualStyleBackColor = True
         '
         'DataGridView1
         '
+        Me.DataGridView1.BackgroundColor = System.Drawing.SystemColors.ActiveCaption
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(11, 101)
+        Me.DataGridView1.Location = New System.Drawing.Point(11, 36)
         Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(563, 399)
+        Me.DataGridView1.Size = New System.Drawing.Size(892, 399)
         Me.DataGridView1.TabIndex = 46
         '
-        'ButtonSok
+        'TextBox_mengde_blod
         '
-        Me.ButtonSok.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ButtonSok.Location = New System.Drawing.Point(487, 60)
-        Me.ButtonSok.Name = "ButtonSok"
-        Me.ButtonSok.Size = New System.Drawing.Size(87, 35)
-        Me.ButtonSok.TabIndex = 47
-        Me.ButtonSok.Text = "Søk"
-        Me.ButtonSok.UseVisualStyleBackColor = True
+        Me.TextBox_mengde_blod.Location = New System.Drawing.Point(16, 488)
+        Me.TextBox_mengde_blod.Margin = New System.Windows.Forms.Padding(2)
+        Me.TextBox_mengde_blod.Multiline = True
+        Me.TextBox_mengde_blod.Name = "TextBox_mengde_blod"
+        Me.TextBox_mengde_blod.Size = New System.Drawing.Size(260, 35)
+        Me.TextBox_mengde_blod.TabIndex = 49
         '
-        'TextBoxSok
+        'Label2
         '
-        Me.TextBoxSok.Location = New System.Drawing.Point(11, 61)
-        Me.TextBoxSok.Margin = New System.Windows.Forms.Padding(2)
-        Me.TextBoxSok.Multiline = True
-        Me.TextBoxSok.Name = "TextBoxSok"
-        Me.TextBoxSok.Size = New System.Drawing.Size(459, 35)
-        Me.TextBoxSok.TabIndex = 48
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Georgia", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Location = New System.Drawing.Point(12, 453)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(264, 24)
+        Me.Label2.TabIndex = 50
+        Me.Label2.Text = "Hvor mye blod vil du ha?"
         '
         'AnsattBlodProdukter
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 14.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 17.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(915, 604)
-        Me.Controls.Add(Me.TextBoxSok)
-        Me.Controls.Add(Me.ButtonSok)
+        Me.ClientSize = New System.Drawing.Size(915, 715)
+        Me.Controls.Add(Me.Label2)
+        Me.Controls.Add(Me.TextBox_mengde_blod)
         Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.Button_utlevering_av_blodprodukter)
         Me.Controls.Add(Me.Label1)
@@ -118,6 +119,6 @@ Partial Class AnsattBlodProdukter
     Friend WithEvents Label1 As Label
     Friend WithEvents Button_utlevering_av_blodprodukter As Button
     Friend WithEvents DataGridView1 As DataGridView
-    Friend WithEvents ButtonSok As Button
-    Friend WithEvents TextBoxSok As TextBox
+    Friend WithEvents TextBox_mengde_blod As TextBox
+    Friend WithEvents Label2 As Label
 End Class
