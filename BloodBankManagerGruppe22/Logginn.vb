@@ -93,6 +93,8 @@ Kriteriene for utvelgelse av blodgivere og en rekke av de laboratorieundersøkel
 
     Private Sub hovedForside_Innlogging_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Timer1.Enabled = True
+
+
     End Sub
 
     Private Sub Label8_Click(sender As Object, e As EventArgs) Handles Label8.Click

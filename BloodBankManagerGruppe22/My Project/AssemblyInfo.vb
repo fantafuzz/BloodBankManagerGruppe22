@@ -8,11 +8,11 @@ Imports System.Runtime.InteropServices
 
 ' Review the values of the assembly attributes
 
-<Assembly: AssemblyTitle("BloodBankManagerGruppe22")>
+<Assembly: AssemblyTitle("Velkommen Til Blodbanken")>
 <Assembly: AssemblyDescription("")>
 <Assembly: AssemblyCompany("")>
-<Assembly: AssemblyProduct("BloodBankManagerGruppe22")>
-<Assembly: AssemblyCopyright("Copyright ©  2017")>
+<Assembly: AssemblyProduct("")>
+<Assembly: AssemblyCopyright("")>
 <Assembly: AssemblyTrademark("")>
 
 <Assembly: ComVisible(False)>

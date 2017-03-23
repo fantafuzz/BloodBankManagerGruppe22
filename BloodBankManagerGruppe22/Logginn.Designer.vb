@@ -52,8 +52,8 @@ Partial Class Logginn
         Me.Button3 = New System.Windows.Forms.Button()
         Me.Button4 = New System.Windows.Forms.Button()
         Me.Button5 = New System.Windows.Forms.Button()
-        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.Button1 = New System.Windows.Forms.Button()
+        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
         Me.MenuStrip1.SuspendLayout()
@@ -281,7 +281,7 @@ Partial Class Logginn
         'Button3
         '
         Me.Button3.Location = New System.Drawing.Point(632, 292)
-        Me.Button3.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Button3.Margin = New System.Windows.Forms.Padding(2)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(56, 19)
         Me.Button3.TabIndex = 31
@@ -291,7 +291,7 @@ Partial Class Logginn
         'Button4
         '
         Me.Button4.Location = New System.Drawing.Point(644, 230)
-        Me.Button4.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Button4.Margin = New System.Windows.Forms.Padding(2)
         Me.Button4.Name = "Button4"
         Me.Button4.Size = New System.Drawing.Size(56, 19)
         Me.Button4.TabIndex = 32
@@ -307,6 +307,15 @@ Partial Class Logginn
         Me.Button5.Text = "Registrering"
         Me.Button5.UseVisualStyleBackColor = True
         '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(264, 309)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(75, 23)
+        Me.Button1.TabIndex = 34
+        Me.Button1.Text = "Egenskjema"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
         'PictureBox2
         '
         Me.PictureBox2.Image = CType(resources.GetObject("PictureBox2.Image"), System.Drawing.Image)
@@ -316,15 +325,6 @@ Partial Class Logginn
         Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.PictureBox2.TabIndex = 27
         Me.PictureBox2.TabStop = False
-        '
-        'Button1
-        '
-        Me.Button1.Location = New System.Drawing.Point(264, 309)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 23)
-        Me.Button1.TabIndex = 34
-        Me.Button1.Text = "Egenskjema"
-        Me.Button1.UseVisualStyleBackColor = True
         '
         'Logginn
         '
@@ -350,7 +350,7 @@ Partial Class Logginn
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MainMenuStrip = Me.MenuStrip1
         Me.Name = "Logginn"
-        Me.Text = "Form1"
+        Me.Text = "Velkommen Til Blodbanken"
         Me.Panel1.ResumeLayout(False)
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
