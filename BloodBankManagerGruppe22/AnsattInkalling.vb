@@ -13,13 +13,26 @@ Public Class AnsattInkalling
 
         FilterData("")
 
+
+        Dim column As DataGridViewColumn = GridBrukere.Columns(0)
+        column.Width = 160
+
+        Dim column1 As DataGridViewColumn = GridBrukere.Columns(1)
+        column1.Width = 160
+
+        Dim column2 As DataGridViewColumn = GridBrukere.Columns(2)
+        column2.Width = 160
+
+
+
+
     End Sub
     Public Sub FilterData(valueToSearch As String)
 
 
 
-        Dim searchQuery As String = "SELECT bruker.bruker_id, bruker.fornavn, bruker.etternavn, bruker.epost, blodgiver.personnummer FROM bruker, blodgiver WHERE bruker.bruker_id = blodgiver.blodgiver_bruker_id AND CONCAT(bruker_id,fornavn, etternavn, epost) like '%" & valueToSearch & "%';"
-
+        'Dim searchQuery As String = "SELECT bruker.bruker_id, bruker.fornavn, bruker.etternavn, bruker.epost, blodgiver.personnummer FROM bruker, blodgiver WHERE bruker.bruker_id = blodgiver.blodgiver_bruker_id AND CONCAT(bruker_id,fornavn, etternavn, epost) like '%" & valueToSearch & "%';"
+        Dim searchQuery As String = "Select * from bruker"
         Dim command As New MySqlCommand(searchQuery, MysqlConn)
         Dim adapter As New MySqlDataAdapter(command)
         Dim table As New DataTable()
@@ -31,14 +44,10 @@ Public Class AnsattInkalling
 
     End Sub
 
-    Private Sub ButtonLogUt_Click(sender As Object, e As EventArgs) Handles ButtonLogUt.Click
-        Logginn.Show()
+    Private Sub ButtonLogUt_Click(sender As Object, e As EventArgs) Handles ButtonTilbake.Click
+        AnsattMinSide.Show()
         Me.Close()
     End Sub 'logg ut
-
-
-
-
 
     Private Sub ButtonInnkall_Click(sender As Object, e As EventArgs) Handles ButtonInnkall.Click
         Dim bruker_id As Integer
@@ -88,7 +97,5 @@ Public Class AnsattInkalling
         FilterData(sokeValue)
     End Sub
 
-    Private Sub GridBrukere_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles GridBrukere.CellContentClick
 
-    End Sub
 End Class

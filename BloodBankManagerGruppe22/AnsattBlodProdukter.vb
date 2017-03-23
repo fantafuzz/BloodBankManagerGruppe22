@@ -16,6 +16,15 @@ Public Class AnsattBlodProdukter
 
         FilterData("")
 
+        'column size - datagridview
+        Dim column As DataGridViewColumn = DataGridView1.Columns(0)
+        column.Width = 160
+
+        Dim column1 As DataGridViewColumn = DataGridView1.Columns(1)
+        column1.Width = 160
+
+        Dim column2 As DataGridViewColumn = DataGridView1.Columns(2)
+        column2.Width = 160
     End Sub
     Public Sub FilterData(valueToSearch As String)
 
@@ -55,6 +64,7 @@ Public Class AnsattBlodProdukter
         If gjenstaaendeMengde < 0 Then
             MessageBox.Show("Det er ikke mer tilgjenglig blod.")
         End If
+
         Dim mengdeViTarNegativ = -mengdeViTar
         Dim dato As Date
         dato = Date.Now

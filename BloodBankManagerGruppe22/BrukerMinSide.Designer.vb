@@ -36,7 +36,7 @@ Partial Class BrukerMinSide
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.0!, System.Drawing.FontStyle.Bold)
-        Me.Label1.Location = New System.Drawing.Point(11, 20)
+        Me.Label1.Location = New System.Drawing.Point(238, 31)
         Me.Label1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(304, 31)
@@ -46,7 +46,7 @@ Partial Class BrukerMinSide
         'Endre_mine_opplysninger
         '
         Me.Endre_mine_opplysninger.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Endre_mine_opplysninger.Location = New System.Drawing.Point(13, 62)
+        Me.Endre_mine_opplysninger.Location = New System.Drawing.Point(199, 75)
         Me.Endre_mine_opplysninger.Name = "Endre_mine_opplysninger"
         Me.Endre_mine_opplysninger.Size = New System.Drawing.Size(376, 51)
         Me.Endre_mine_opplysninger.TabIndex = 25
@@ -56,7 +56,7 @@ Partial Class BrukerMinSide
         'Hvor_Mye_Blod_Har_jeg_gitt_til_blodbanken
         '
         Me.Hvor_Mye_Blod_Har_jeg_gitt_til_blodbanken.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Hvor_Mye_Blod_Har_jeg_gitt_til_blodbanken.Location = New System.Drawing.Point(13, 110)
+        Me.Hvor_Mye_Blod_Har_jeg_gitt_til_blodbanken.Location = New System.Drawing.Point(199, 123)
         Me.Hvor_Mye_Blod_Har_jeg_gitt_til_blodbanken.Name = "Hvor_Mye_Blod_Har_jeg_gitt_til_blodbanken"
         Me.Hvor_Mye_Blod_Har_jeg_gitt_til_blodbanken.Size = New System.Drawing.Size(376, 56)
         Me.Hvor_Mye_Blod_Har_jeg_gitt_til_blodbanken.TabIndex = 27
@@ -66,7 +66,7 @@ Partial Class BrukerMinSide
         'Logg_ut
         '
         Me.Logg_ut.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Logg_ut.Location = New System.Drawing.Point(541, 12)
+        Me.Logg_ut.Location = New System.Drawing.Point(632, 373)
         Me.Logg_ut.Name = "Logg_ut"
         Me.Logg_ut.Size = New System.Drawing.Size(138, 31)
         Me.Logg_ut.TabIndex = 30
@@ -76,7 +76,7 @@ Partial Class BrukerMinSide
         'Bestill_Ny_BlodTime
         '
         Me.Bestill_Ny_BlodTime.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Bestill_Ny_BlodTime.Location = New System.Drawing.Point(13, 164)
+        Me.Bestill_Ny_BlodTime.Location = New System.Drawing.Point(199, 177)
         Me.Bestill_Ny_BlodTime.Name = "Bestill_Ny_BlodTime"
         Me.Bestill_Ny_BlodTime.Size = New System.Drawing.Size(376, 56)
         Me.Bestill_Ny_BlodTime.TabIndex = 28
@@ -86,7 +86,7 @@ Partial Class BrukerMinSide
         'Lab_Svar
         '
         Me.Lab_Svar.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Lab_Svar.Location = New System.Drawing.Point(13, 219)
+        Me.Lab_Svar.Location = New System.Drawing.Point(199, 232)
         Me.Lab_Svar.Name = "Lab_Svar"
         Me.Lab_Svar.Size = New System.Drawing.Size(376, 56)
         Me.Lab_Svar.TabIndex = 31
@@ -96,7 +96,7 @@ Partial Class BrukerMinSide
         'Statistikk
         '
         Me.Statistikk.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Statistikk.Location = New System.Drawing.Point(13, 271)
+        Me.Statistikk.Location = New System.Drawing.Point(199, 284)
         Me.Statistikk.Name = "Statistikk"
         Me.Statistikk.Size = New System.Drawing.Size(376, 56)
         Me.Statistikk.TabIndex = 32
@@ -108,7 +108,7 @@ Partial Class BrukerMinSide
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 14.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(707, 357)
+        Me.ClientSize = New System.Drawing.Size(782, 416)
         Me.Controls.Add(Me.Statistikk)
         Me.Controls.Add(Me.Lab_Svar)
         Me.Controls.Add(Me.Logg_ut)

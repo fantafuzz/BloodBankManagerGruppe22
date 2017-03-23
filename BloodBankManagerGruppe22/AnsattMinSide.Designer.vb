@@ -33,7 +33,7 @@ Partial Class AnsattMinSide
         'Statistikk
         '
         Me.Statistikk.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Statistikk.Location = New System.Drawing.Point(25, 221)
+        Me.Statistikk.Location = New System.Drawing.Point(198, 227)
         Me.Statistikk.Name = "Statistikk"
         Me.Statistikk.Size = New System.Drawing.Size(376, 56)
         Me.Statistikk.TabIndex = 39
@@ -43,7 +43,7 @@ Partial Class AnsattMinSide
         'Logg_ut
         '
         Me.Logg_ut.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Logg_ut.Location = New System.Drawing.Point(601, 12)
+        Me.Logg_ut.Location = New System.Drawing.Point(626, 349)
         Me.Logg_ut.Name = "Logg_ut"
         Me.Logg_ut.Size = New System.Drawing.Size(138, 31)
         Me.Logg_ut.TabIndex = 37
@@ -53,7 +53,7 @@ Partial Class AnsattMinSide
         'Bestill_Ny_BlodTime
         '
         Me.Bestill_Ny_BlodTime.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Bestill_Ny_BlodTime.Location = New System.Drawing.Point(25, 97)
+        Me.Bestill_Ny_BlodTime.Location = New System.Drawing.Point(198, 103)
         Me.Bestill_Ny_BlodTime.Name = "Bestill_Ny_BlodTime"
         Me.Bestill_Ny_BlodTime.Size = New System.Drawing.Size(376, 56)
         Me.Bestill_Ny_BlodTime.TabIndex = 36
@@ -64,7 +64,7 @@ Partial Class AnsattMinSide
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.0!, System.Drawing.FontStyle.Bold)
-        Me.Label1.Location = New System.Drawing.Point(63, 46)
+        Me.Label1.Location = New System.Drawing.Point(236, 52)
         Me.Label1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(304, 31)
@@ -74,7 +74,7 @@ Partial Class AnsattMinSide
         'Button1
         '
         Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.Location = New System.Drawing.Point(25, 159)
+        Me.Button1.Location = New System.Drawing.Point(198, 165)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(376, 56)
         Me.Button1.TabIndex = 40
@@ -86,7 +86,7 @@ Partial Class AnsattMinSide
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 17.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(751, 345)
+        Me.ClientSize = New System.Drawing.Size(776, 392)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.Statistikk)
         Me.Controls.Add(Me.Logg_ut)

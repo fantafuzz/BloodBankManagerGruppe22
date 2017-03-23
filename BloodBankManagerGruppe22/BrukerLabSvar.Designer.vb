@@ -25,34 +25,47 @@ Partial Class BrukerLabSvar
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(BrukerLabSvar))
         Me.ListBox1 = New System.Windows.Forms.ListBox()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.Button_tilbake_fra_lab_svar = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'ListBox1
         '
+        Me.ListBox1.Font = New System.Drawing.Font("Georgia", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ListBox1.FormattingEnabled = True
-        Me.ListBox1.ItemHeight = 14
-        Me.ListBox1.Location = New System.Drawing.Point(12, 52)
+        Me.ListBox1.ItemHeight = 23
+        Me.ListBox1.Location = New System.Drawing.Point(12, 42)
         Me.ListBox1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.ListBox1.Name = "ListBox1"
-        Me.ListBox1.Size = New System.Drawing.Size(1003, 620)
+        Me.ListBox1.Size = New System.Drawing.Size(1003, 602)
         Me.ListBox1.TabIndex = 0
         '
         'Label1
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(7, 28)
+        Me.Label1.Location = New System.Drawing.Point(8, 20)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(230, 20)
         Me.Label1.TabIndex = 1
         Me.Label1.Text = "Labratorie Prøve Resultater"
+        '
+        'Button_tilbake_fra_lab_svar
+        '
+        Me.Button_tilbake_fra_lab_svar.Font = New System.Drawing.Font("Georgia", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button_tilbake_fra_lab_svar.Location = New System.Drawing.Point(916, 661)
+        Me.Button_tilbake_fra_lab_svar.Name = "Button_tilbake_fra_lab_svar"
+        Me.Button_tilbake_fra_lab_svar.Size = New System.Drawing.Size(99, 43)
+        Me.Button_tilbake_fra_lab_svar.TabIndex = 2
+        Me.Button_tilbake_fra_lab_svar.Text = "Tilbake"
+        Me.Button_tilbake_fra_lab_svar.UseVisualStyleBackColor = True
         '
         'BrukerLabSvar
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 14.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(1037, 694)
+        Me.ClientSize = New System.Drawing.Size(1037, 716)
+        Me.Controls.Add(Me.Button_tilbake_fra_lab_svar)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.ListBox1)
         Me.Font = New System.Drawing.Font("Georgia", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -68,4 +81,5 @@ Partial Class BrukerLabSvar
 
     Friend WithEvents ListBox1 As ListBox
     Friend WithEvents Label1 As Label
+    Friend WithEvents Button_tilbake_fra_lab_svar As Button
 End Class

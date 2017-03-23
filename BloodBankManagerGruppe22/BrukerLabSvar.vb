@@ -8,7 +8,7 @@ Public Class BrukerLabSvar
 
     Private Sub labSvar_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         MysqlConn = New MySqlConnection
-        MysqlConn.ConnectionString = "server=; database=; Uid=; password="
+        MysqlConn.ConnectionString = "server=mysql.stud.iie.ntnu.no; database=g_oops_22; Uid=g_oops_22; password=BtUDpVoR"
         Dim READER As MySqlDataReader
 
         Try
@@ -26,9 +26,14 @@ Public Class BrukerLabSvar
 
         End Try
 
+        'INSERT INTO `lab_svar`(`svar_id`, `test_utfort`, `svar`, `svar_bruker_id`) VALUES ('1','Ja','Ditt blod er godkjent for donasjon.','2')
+
 
 
     End Sub
 
-
+    Private Sub Button_tilbake_fra_lab_svar_Click(sender As Object, e As EventArgs) Handles Button_tilbake_fra_lab_svar.Click
+        BrukerMinSide.Show()
+        Me.Close()
+    End Sub
 End Class
