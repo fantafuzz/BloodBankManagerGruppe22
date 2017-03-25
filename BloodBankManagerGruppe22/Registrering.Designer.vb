@@ -60,6 +60,8 @@ Partial Class Registrering
         Me.Label17 = New System.Windows.Forms.Label()
         Me.RadioButtonMann = New System.Windows.Forms.RadioButton()
         Me.RadioButtonKvinne = New System.Windows.Forms.RadioButton()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label1
@@ -132,7 +134,7 @@ Partial Class Registrering
         '
         'TextBoxPersonNum
         '
-        Me.TextBoxPersonNum.Location = New System.Drawing.Point(100, 185)
+        Me.TextBoxPersonNum.Location = New System.Drawing.Point(116, 185)
         Me.TextBoxPersonNum.Name = "TextBoxPersonNum"
         Me.TextBoxPersonNum.Size = New System.Drawing.Size(131, 20)
         Me.TextBoxPersonNum.TabIndex = 10
@@ -388,12 +390,23 @@ Partial Class Registrering
         Me.RadioButtonKvinne.Text = "Kvinne"
         Me.RadioButtonKvinne.UseVisualStyleBackColor = True
         '
+        'PictureBox1
+        '
+        Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
+        Me.PictureBox1.Location = New System.Drawing.Point(522, 178)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(600, 260)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize
+        Me.PictureBox1.TabIndex = 40
+        Me.PictureBox1.TabStop = False
+        '
         'Registrering
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 14.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(1163, 642)
+        Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.RadioButtonKvinne)
         Me.Controls.Add(Me.RadioButtonMann)
         Me.Controls.Add(Me.Label17)
@@ -436,6 +449,7 @@ Partial Class Registrering
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "Registrering"
         Me.Text = "Form2"
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -478,4 +492,5 @@ Partial Class Registrering
     Friend WithEvents Label17 As Label
     Friend WithEvents RadioButtonMann As RadioButton
     Friend WithEvents RadioButtonKvinne As RadioButton
+    Friend WithEvents PictureBox1 As PictureBox
 End Class

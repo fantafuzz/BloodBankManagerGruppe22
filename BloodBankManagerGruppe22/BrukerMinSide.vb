@@ -20,15 +20,16 @@ Public Class BrukerMinSide
         BrukerLabSvar.Show()
     End Sub
 
-    Private Sub Statistikk_Click(sender As Object, e As EventArgs) Handles Statistikk.Click
-        AnsattStatistikk.Show()
+    Private Sub Statistikk_Click(sender As Object, e As EventArgs)
+        AnsattStatistikkNy.Show()
+        Me.Close()
     End Sub
 
     Private Sub MINSIDENAVIGASJON_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
     End Sub
 
-    Private Sub Hvor_Mye_Blod_Har_jeg_gitt_til_blodbanken_Click(sender As Object, e As EventArgs) Handles Hvor_Mye_Blod_Har_jeg_gitt_til_blodbanken.Click
-        BrukerStatistikk.Show()
+    Private Sub Hvor_Mye_Blod_Har_jeg_gitt_til_blodbanken_Click(sender As Object, e As EventArgs)
+        AnsattStatistikkNy.Show()
     End Sub
 End Class

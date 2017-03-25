@@ -14,6 +14,7 @@
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <TargetFrameworkProfile />
+    <IsWebBootstrapper>false</IsWebBootstrapper>
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -26,7 +27,6 @@
     <MapFileExtensions>true</MapFileExtensions>
     <ApplicationRevision>0</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
-    <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
@@ -171,6 +171,12 @@
     <Compile Include="egenSkjemaTempStorage.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Form1.Designer.vb">
+      <DependentUpon>Form1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="hvaSkjerNårDuGirBlod.Designer.vb">
       <DependentUpon>hvaSkjerNårDuGirBlod.vb</DependentUpon>
     </Compile>
@@ -184,10 +190,10 @@
       <DependentUpon>Logginn.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="BrukerStatistikk.Designer.vb">
-      <DependentUpon>BrukerStatistikk.vb</DependentUpon>
+    <Compile Include="AnsattStatistikkNy.Designer.vb">
+      <DependentUpon>AnsattStatistikkNy.vb</DependentUpon>
     </Compile>
-    <Compile Include="BrukerStatistikk.vb">
+    <Compile Include="AnsattStatistikkNy.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="BrukerBestill.Designer.vb">
@@ -247,20 +253,8 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="SplashScreen1.Designer.vb">
-      <DependentUpon>SplashScreen1.vb</DependentUpon>
-    </Compile>
-    <Compile Include="SplashScreen1.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="Sporsmaal.vb" />
     <Compile Include="SQL_hookup.vb" />
-    <Compile Include="AnsattStatistikk.Designer.vb">
-      <DependentUpon>AnsattStatistikk.vb</DependentUpon>
-    </Compile>
-    <Compile Include="AnsattStatistikk.vb">
-      <SubType>Form</SubType>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="AnsattBlodProdukter.resx">
@@ -299,14 +293,17 @@
     <EmbeddedResource Include="egenSkjemaTempStorage.resx">
       <DependentUpon>egenSkjemaTempStorage.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="hvaSkjerNårDuGirBlod.resx">
       <DependentUpon>hvaSkjerNårDuGirBlod.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Logginn.resx">
       <DependentUpon>Logginn.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="BrukerStatistikk.resx">
-      <DependentUpon>BrukerStatistikk.vb</DependentUpon>
+    <EmbeddedResource Include="AnsattStatistikkNy.resx">
+      <DependentUpon>AnsattStatistikkNy.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="BrukerBestill.resx">
       <DependentUpon>BrukerBestill.vb</DependentUpon>
@@ -334,12 +331,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Registrering.resx">
       <DependentUpon>Registrering.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="AnsattStatistikk.resx">
-      <DependentUpon>AnsattStatistikk.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="SplashScreen1.resx">
-      <DependentUpon>SplashScreen1.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

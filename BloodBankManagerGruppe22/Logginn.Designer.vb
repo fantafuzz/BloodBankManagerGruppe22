@@ -280,7 +280,7 @@ Partial Class Logginn
         '
         'Button3
         '
-        Me.Button3.Location = New System.Drawing.Point(632, 292)
+        Me.Button3.Location = New System.Drawing.Point(710, 326)
         Me.Button3.Margin = New System.Windows.Forms.Padding(2)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(56, 19)
@@ -290,7 +290,7 @@ Partial Class Logginn
         '
         'Button4
         '
-        Me.Button4.Location = New System.Drawing.Point(644, 230)
+        Me.Button4.Location = New System.Drawing.Point(722, 264)
         Me.Button4.Margin = New System.Windows.Forms.Padding(2)
         Me.Button4.Name = "Button4"
         Me.Button4.Size = New System.Drawing.Size(56, 19)

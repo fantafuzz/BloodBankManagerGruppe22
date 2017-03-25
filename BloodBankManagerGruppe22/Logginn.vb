@@ -94,6 +94,19 @@ Kriteriene for utvelgelse av blodgivere og en rekke av de laboratorieundersøkel
     Private Sub hovedForside_Innlogging_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Timer1.Enabled = True
 
+        'setting standard form size
+        'format:(width,height)
+        AnsattMinSide.Size = New System.Drawing.Size(775, 425)
+        BrukerMinSide.Size = New System.Drawing.Size(775, 425)
+        AnsattBlodProdukter.Size = New System.Drawing.Size(775, 425)
+        AnsattInkalling.Size = New System.Drawing.Size(775, 425)
+        AnsattStatistikkNy.Size = New System.Drawing.Size(775, 425)
+        BrukerAllInfo.Size = New System.Drawing.Size(775, 425)
+        BrukerBestill.Size = New System.Drawing.Size(775, 425)
+        BrukerLabSvar.Size = New System.Drawing.Size(775, 425)
+        egenSkjemaBolk1.Size = New System.Drawing.Size(775, 425)
+        Registrering.Size = New System.Drawing.Size(1200, 700)
+        'Logginn.Size = New System.Drawing.Size(1200, 700)
 
     End Sub
 
@@ -156,6 +169,10 @@ www.stolav.no/blodgiver
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         Me.Hide()
         egenSkjemaBolk1.Show()
+    End Sub
+
+    Private Sub PictureBox1_Click(sender As Object, e As EventArgs)
+
     End Sub
 End Class
 
