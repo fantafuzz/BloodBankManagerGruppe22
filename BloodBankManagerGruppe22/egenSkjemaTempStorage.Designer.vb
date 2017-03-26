@@ -22,7 +22,7 @@ Partial Class egenSkjemaTempStorage
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Me.TabControl1 = New System.Windows.Forms.TabControl()
+        Me.TabControlEgenskjema = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
         Me.PanelSpm2 = New System.Windows.Forms.Panel()
@@ -53,15 +53,6 @@ Partial Class egenSkjemaTempStorage
         Me.LabelSpm4 = New System.Windows.Forms.Label()
         Me.LabelSpm6 = New System.Windows.Forms.Label()
         Me.TabPage3 = New System.Windows.Forms.TabPage()
-        Me.TabPage4 = New System.Windows.Forms.TabPage()
-        Me.TabPage5 = New System.Windows.Forms.TabPage()
-        Me.TabPage6 = New System.Windows.Forms.TabPage()
-        Me.TabPage7 = New System.Windows.Forms.TabPage()
-        Me.TabPage8 = New System.Windows.Forms.TabPage()
-        Me.TabPage9 = New System.Windows.Forms.TabPage()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.LabelFeilMelding = New System.Windows.Forms.Label()
         Me.Label12 = New System.Windows.Forms.Label()
         Me.Label13 = New System.Windows.Forms.Label()
         Me.Panel9 = New System.Windows.Forms.Panel()
@@ -79,17 +70,18 @@ Partial Class egenSkjemaTempStorage
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.RadioButton9 = New System.Windows.Forms.RadioButton()
         Me.RadioButton10 = New System.Windows.Forms.RadioButton()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.Label4 = New System.Windows.Forms.Label()
+        Me.LabelSpm7 = New System.Windows.Forms.Label()
+        Me.LabelSpm8 = New System.Windows.Forms.Label()
+        Me.LabelSpm9 = New System.Windows.Forms.Label()
+        Me.LabelSpm11 = New System.Windows.Forms.Label()
+        Me.LabelSpm10 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
+        Me.TabPage4 = New System.Windows.Forms.TabPage()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.Label11 = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.RadioButtonN7 = New System.Windows.Forms.RadioButton()
-        Me.RadioButtonJ7 = New System.Windows.Forms.RadioButton()
+        Me.RadioButtonN7dd = New System.Windows.Forms.RadioButton()
+        Me.RadioButtonJ7dd = New System.Windows.Forms.RadioButton()
         Me.Panel6 = New System.Windows.Forms.Panel()
         Me.RadioButton11 = New System.Windows.Forms.RadioButton()
         Me.RadioButton12 = New System.Windows.Forms.RadioButton()
@@ -108,14 +100,15 @@ Partial Class egenSkjemaTempStorage
         Me.Panel12 = New System.Windows.Forms.Panel()
         Me.RadioButton21 = New System.Windows.Forms.RadioButton()
         Me.RadioButton22 = New System.Windows.Forms.RadioButton()
-        Me.Label14 = New System.Windows.Forms.Label()
-        Me.Label15 = New System.Windows.Forms.Label()
-        Me.Label16 = New System.Windows.Forms.Label()
-        Me.Label17 = New System.Windows.Forms.Label()
-        Me.Label18 = New System.Windows.Forms.Label()
-        Me.Label19 = New System.Windows.Forms.Label()
-        Me.Label20 = New System.Windows.Forms.Label()
+        Me.LabelSpm18 = New System.Windows.Forms.Label()
+        Me.LabelSpm12 = New System.Windows.Forms.Label()
+        Me.LabelSpm13 = New System.Windows.Forms.Label()
+        Me.LabelSpm14 = New System.Windows.Forms.Label()
+        Me.LabelSpm16 = New System.Windows.Forms.Label()
+        Me.LabelSpm15 = New System.Windows.Forms.Label()
+        Me.LabelSpm17 = New System.Windows.Forms.Label()
         Me.Label21 = New System.Windows.Forms.Label()
+        Me.TabPage5 = New System.Windows.Forms.TabPage()
         Me.Label22 = New System.Windows.Forms.Label()
         Me.Label23 = New System.Windows.Forms.Label()
         Me.Panel13 = New System.Windows.Forms.Panel()
@@ -148,24 +141,26 @@ Partial Class egenSkjemaTempStorage
         Me.Panel22 = New System.Windows.Forms.Panel()
         Me.RadioButton35 = New System.Windows.Forms.RadioButton()
         Me.RadioButton36 = New System.Windows.Forms.RadioButton()
-        Me.Label24 = New System.Windows.Forms.Label()
-        Me.Label25 = New System.Windows.Forms.Label()
-        Me.Label26 = New System.Windows.Forms.Label()
-        Me.Label27 = New System.Windows.Forms.Label()
-        Me.Label28 = New System.Windows.Forms.Label()
-        Me.Label29 = New System.Windows.Forms.Label()
-        Me.Label30 = New System.Windows.Forms.Label()
-        Me.Label31 = New System.Windows.Forms.Label()
-        Me.Label32 = New System.Windows.Forms.Label()
-        Me.Label33 = New System.Windows.Forms.Label()
+        Me.LabelSpm26 = New System.Windows.Forms.Label()
+        Me.LabelSpm27 = New System.Windows.Forms.Label()
+        Me.LabelSpm28 = New System.Windows.Forms.Label()
+        Me.LabelSpm19 = New System.Windows.Forms.Label()
+        Me.LabelSpm25 = New System.Windows.Forms.Label()
+        Me.LabelSpm20 = New System.Windows.Forms.Label()
+        Me.LabelSpm21 = New System.Windows.Forms.Label()
+        Me.LabelSpm23 = New System.Windows.Forms.Label()
+        Me.LabelSpm22 = New System.Windows.Forms.Label()
+        Me.LabelSpm24 = New System.Windows.Forms.Label()
         Me.Label1000 = New System.Windows.Forms.Label()
+        Me.TabPage6 = New System.Windows.Forms.TabPage()
         Me.Label34 = New System.Windows.Forms.Label()
         Me.Panel23 = New System.Windows.Forms.Panel()
         Me.RadioButton37 = New System.Windows.Forms.RadioButton()
         Me.RadioButton38 = New System.Windows.Forms.RadioButton()
         Me.Label35 = New System.Windows.Forms.Label()
-        Me.Label36 = New System.Windows.Forms.Label()
+        Me.LabelSpm29 = New System.Windows.Forms.Label()
         Me.Label37 = New System.Windows.Forms.Label()
+        Me.TabPage7 = New System.Windows.Forms.TabPage()
         Me.Label38 = New System.Windows.Forms.Label()
         Me.Label39 = New System.Windows.Forms.Label()
         Me.Panel24 = New System.Windows.Forms.Panel()
@@ -213,22 +208,30 @@ Partial Class egenSkjemaTempStorage
         Me.Panel38 = New System.Windows.Forms.Panel()
         Me.RadioButton57 = New System.Windows.Forms.RadioButton()
         Me.RadioButton58 = New System.Windows.Forms.RadioButton()
-        Me.Label40 = New System.Windows.Forms.Label()
-        Me.Label41 = New System.Windows.Forms.Label()
-        Me.Label42 = New System.Windows.Forms.Label()
-        Me.Label43 = New System.Windows.Forms.Label()
-        Me.Label44 = New System.Windows.Forms.Label()
-        Me.Label45 = New System.Windows.Forms.Label()
-        Me.Label46 = New System.Windows.Forms.Label()
-        Me.Label47 = New System.Windows.Forms.Label()
-        Me.Label48 = New System.Windows.Forms.Label()
-        Me.Label49 = New System.Windows.Forms.Label()
-        Me.Label50 = New System.Windows.Forms.Label()
-        Me.Label51 = New System.Windows.Forms.Label()
-        Me.Label52 = New System.Windows.Forms.Label()
-        Me.Label53 = New System.Windows.Forms.Label()
-        Me.Label54 = New System.Windows.Forms.Label()
+        Me.LabelSpm44 = New System.Windows.Forms.Label()
+        Me.LabelSpm43 = New System.Windows.Forms.Label()
+        Me.LabelSpm41 = New System.Windows.Forms.Label()
+        Me.LabelSpm42 = New System.Windows.Forms.Label()
+        Me.LabelSpm40 = New System.Windows.Forms.Label()
+        Me.LabelSpm33 = New System.Windows.Forms.Label()
+        Me.LabelSpm35 = New System.Windows.Forms.Label()
+        Me.LabelSpm37 = New System.Windows.Forms.Label()
+        Me.LabelSpm39 = New System.Windows.Forms.Label()
+        Me.LabelSpm31 = New System.Windows.Forms.Label()
+        Me.LabelSpm32 = New System.Windows.Forms.Label()
+        Me.LabelSpm38 = New System.Windows.Forms.Label()
+        Me.LabelSpm36 = New System.Windows.Forms.Label()
+        Me.LabelSpm34 = New System.Windows.Forms.Label()
+        Me.LabelSpm30 = New System.Windows.Forms.Label()
         Me.Label100 = New System.Windows.Forms.Label()
+        Me.TabPage8 = New System.Windows.Forms.TabPage()
+        Me.Label62 = New System.Windows.Forms.Label()
+        Me.Label63 = New System.Windows.Forms.Label()
+        Me.Panel43 = New System.Windows.Forms.Panel()
+        Me.RadioButton67 = New System.Windows.Forms.RadioButton()
+        Me.RadioButton68 = New System.Windows.Forms.RadioButton()
+        Me.LabelSpm49 = New System.Windows.Forms.Label()
+        Me.Label65 = New System.Windows.Forms.Label()
         Me.Panel39 = New System.Windows.Forms.Panel()
         Me.RadioButton59 = New System.Windows.Forms.RadioButton()
         Me.RadioButton60 = New System.Windows.Forms.RadioButton()
@@ -243,18 +246,12 @@ Partial Class egenSkjemaTempStorage
         Me.RadioButton66 = New System.Windows.Forms.RadioButton()
         Me.Label55 = New System.Windows.Forms.Label()
         Me.Label56 = New System.Windows.Forms.Label()
-        Me.Label57 = New System.Windows.Forms.Label()
-        Me.Label58 = New System.Windows.Forms.Label()
-        Me.Label59 = New System.Windows.Forms.Label()
-        Me.Label60 = New System.Windows.Forms.Label()
+        Me.LabelSpm48 = New System.Windows.Forms.Label()
+        Me.LabelSpm46 = New System.Windows.Forms.Label()
+        Me.LabelSpm47 = New System.Windows.Forms.Label()
+        Me.LabelSpm45 = New System.Windows.Forms.Label()
         Me.Label61 = New System.Windows.Forms.Label()
-        Me.Label62 = New System.Windows.Forms.Label()
-        Me.Label63 = New System.Windows.Forms.Label()
-        Me.Panel43 = New System.Windows.Forms.Panel()
-        Me.RadioButton67 = New System.Windows.Forms.RadioButton()
-        Me.RadioButton68 = New System.Windows.Forms.RadioButton()
-        Me.Label64 = New System.Windows.Forms.Label()
-        Me.Label65 = New System.Windows.Forms.Label()
+        Me.TabPage9 = New System.Windows.Forms.TabPage()
         Me.Label66 = New System.Windows.Forms.Label()
         Me.Label67 = New System.Windows.Forms.Label()
         Me.Panel44 = New System.Windows.Forms.Panel()
@@ -287,23 +284,27 @@ Partial Class egenSkjemaTempStorage
         Me.Panel53 = New System.Windows.Forms.Panel()
         Me.RadioButton87 = New System.Windows.Forms.RadioButton()
         Me.RadioButton88 = New System.Windows.Forms.RadioButton()
-        Me.Label68 = New System.Windows.Forms.Label()
-        Me.Label69 = New System.Windows.Forms.Label()
-        Me.Label70 = New System.Windows.Forms.Label()
-        Me.Label71 = New System.Windows.Forms.Label()
-        Me.Label72 = New System.Windows.Forms.Label()
-        Me.Label73 = New System.Windows.Forms.Label()
-        Me.Label74 = New System.Windows.Forms.Label()
-        Me.Label75 = New System.Windows.Forms.Label()
-        Me.Label76 = New System.Windows.Forms.Label()
-        Me.Label77 = New System.Windows.Forms.Label()
+        Me.LabelSpm53 = New System.Windows.Forms.Label()
+        Me.LabelSpm55 = New System.Windows.Forms.Label()
+        Me.LabelSpm57 = New System.Windows.Forms.Label()
+        Me.LabelSpm59 = New System.Windows.Forms.Label()
+        Me.LabelSpm51 = New System.Windows.Forms.Label()
+        Me.LabelSpm52 = New System.Windows.Forms.Label()
+        Me.LabelSpm58 = New System.Windows.Forms.Label()
+        Me.LabelSpm56 = New System.Windows.Forms.Label()
+        Me.LabelSpm54 = New System.Windows.Forms.Label()
+        Me.LabelSpm50 = New System.Windows.Forms.Label()
         Me.Label78 = New System.Windows.Forms.Label()
         Me.TabPage10 = New System.Windows.Forms.TabPage()
         Me.CheckBoxSms = New System.Windows.Forms.CheckBox()
         Me.CheckBoxEpost = New System.Windows.Forms.CheckBox()
         Me.TextBoxEvt = New System.Windows.Forms.TextBox()
         Me.Label79 = New System.Windows.Forms.Label()
-        Me.TabControl1.SuspendLayout()
+        Me.ButtonNeste = New System.Windows.Forms.Button()
+        Me.ButtonForrige = New System.Windows.Forms.Button()
+        Me.LabelFeilMelding = New System.Windows.Forms.Label()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.TabControlEgenskjema.SuspendLayout()
         Me.TabPage2.SuspendLayout()
         Me.PanelSpm2.SuspendLayout()
         Me.PanelSpm4.SuspendLayout()
@@ -312,17 +313,12 @@ Partial Class egenSkjemaTempStorage
         Me.PanelSpm3.SuspendLayout()
         Me.PanelSpm6.SuspendLayout()
         Me.TabPage3.SuspendLayout()
-        Me.TabPage4.SuspendLayout()
-        Me.TabPage5.SuspendLayout()
-        Me.TabPage6.SuspendLayout()
-        Me.TabPage7.SuspendLayout()
-        Me.TabPage8.SuspendLayout()
-        Me.TabPage9.SuspendLayout()
         Me.Panel9.SuspendLayout()
         Me.Panel5.SuspendLayout()
         Me.Panel4.SuspendLayout()
         Me.Panel2.SuspendLayout()
         Me.Panel3.SuspendLayout()
+        Me.TabPage4.SuspendLayout()
         Me.Panel1.SuspendLayout()
         Me.Panel6.SuspendLayout()
         Me.Panel7.SuspendLayout()
@@ -330,6 +326,7 @@ Partial Class egenSkjemaTempStorage
         Me.Panel10.SuspendLayout()
         Me.Panel11.SuspendLayout()
         Me.Panel12.SuspendLayout()
+        Me.TabPage5.SuspendLayout()
         Me.Panel13.SuspendLayout()
         Me.Panel14.SuspendLayout()
         Me.Panel15.SuspendLayout()
@@ -340,7 +337,9 @@ Partial Class egenSkjemaTempStorage
         Me.Panel20.SuspendLayout()
         Me.Panel21.SuspendLayout()
         Me.Panel22.SuspendLayout()
+        Me.TabPage6.SuspendLayout()
         Me.Panel23.SuspendLayout()
+        Me.TabPage7.SuspendLayout()
         Me.Panel24.SuspendLayout()
         Me.Panel25.SuspendLayout()
         Me.Panel26.SuspendLayout()
@@ -356,11 +355,13 @@ Partial Class egenSkjemaTempStorage
         Me.Panel36.SuspendLayout()
         Me.Panel37.SuspendLayout()
         Me.Panel38.SuspendLayout()
+        Me.TabPage8.SuspendLayout()
+        Me.Panel43.SuspendLayout()
         Me.Panel39.SuspendLayout()
         Me.Panel40.SuspendLayout()
         Me.Panel41.SuspendLayout()
         Me.Panel42.SuspendLayout()
-        Me.Panel43.SuspendLayout()
+        Me.TabPage9.SuspendLayout()
         Me.Panel44.SuspendLayout()
         Me.Panel45.SuspendLayout()
         Me.Panel46.SuspendLayout()
@@ -374,23 +375,23 @@ Partial Class egenSkjemaTempStorage
         Me.TabPage10.SuspendLayout()
         Me.SuspendLayout()
         '
-        'TabControl1
+        'TabControlEgenskjema
         '
-        Me.TabControl1.Controls.Add(Me.TabPage1)
-        Me.TabControl1.Controls.Add(Me.TabPage2)
-        Me.TabControl1.Controls.Add(Me.TabPage3)
-        Me.TabControl1.Controls.Add(Me.TabPage4)
-        Me.TabControl1.Controls.Add(Me.TabPage5)
-        Me.TabControl1.Controls.Add(Me.TabPage6)
-        Me.TabControl1.Controls.Add(Me.TabPage7)
-        Me.TabControl1.Controls.Add(Me.TabPage8)
-        Me.TabControl1.Controls.Add(Me.TabPage9)
-        Me.TabControl1.Controls.Add(Me.TabPage10)
-        Me.TabControl1.Location = New System.Drawing.Point(12, 2)
-        Me.TabControl1.Name = "TabControl1"
-        Me.TabControl1.SelectedIndex = 0
-        Me.TabControl1.Size = New System.Drawing.Size(771, 466)
-        Me.TabControl1.TabIndex = 0
+        Me.TabControlEgenskjema.Controls.Add(Me.TabPage1)
+        Me.TabControlEgenskjema.Controls.Add(Me.TabPage2)
+        Me.TabControlEgenskjema.Controls.Add(Me.TabPage3)
+        Me.TabControlEgenskjema.Controls.Add(Me.TabPage4)
+        Me.TabControlEgenskjema.Controls.Add(Me.TabPage5)
+        Me.TabControlEgenskjema.Controls.Add(Me.TabPage6)
+        Me.TabControlEgenskjema.Controls.Add(Me.TabPage7)
+        Me.TabControlEgenskjema.Controls.Add(Me.TabPage8)
+        Me.TabControlEgenskjema.Controls.Add(Me.TabPage9)
+        Me.TabControlEgenskjema.Controls.Add(Me.TabPage10)
+        Me.TabControlEgenskjema.Location = New System.Drawing.Point(12, 2)
+        Me.TabControlEgenskjema.Name = "TabControlEgenskjema"
+        Me.TabControlEgenskjema.SelectedIndex = 0
+        Me.TabControlEgenskjema.Size = New System.Drawing.Size(771, 466)
+        Me.TabControlEgenskjema.TabIndex = 0
         '
         'TabPage1
         '
@@ -404,6 +405,7 @@ Partial Class egenSkjemaTempStorage
         '
         'TabPage2
         '
+        Me.TabPage2.Controls.Add(Me.Button1)
         Me.TabPage2.Controls.Add(Me.PanelSpm2)
         Me.TabPage2.Controls.Add(Me.PanelSpm4)
         Me.TabPage2.Controls.Add(Me.PanelSpm5)
@@ -725,11 +727,11 @@ Partial Class egenSkjemaTempStorage
         Me.TabPage3.Controls.Add(Me.Panel4)
         Me.TabPage3.Controls.Add(Me.Panel2)
         Me.TabPage3.Controls.Add(Me.Panel3)
-        Me.TabPage3.Controls.Add(Me.Label1)
-        Me.TabPage3.Controls.Add(Me.Label2)
-        Me.TabPage3.Controls.Add(Me.Label3)
-        Me.TabPage3.Controls.Add(Me.Label5)
-        Me.TabPage3.Controls.Add(Me.Label4)
+        Me.TabPage3.Controls.Add(Me.LabelSpm7)
+        Me.TabPage3.Controls.Add(Me.LabelSpm8)
+        Me.TabPage3.Controls.Add(Me.LabelSpm9)
+        Me.TabPage3.Controls.Add(Me.LabelSpm11)
+        Me.TabPage3.Controls.Add(Me.LabelSpm10)
         Me.TabPage3.Controls.Add(Me.Label6)
         Me.TabPage3.Location = New System.Drawing.Point(4, 22)
         Me.TabPage3.Name = "TabPage3"
@@ -737,205 +739,6 @@ Partial Class egenSkjemaTempStorage
         Me.TabPage3.TabIndex = 2
         Me.TabPage3.Text = "Side 2"
         Me.TabPage3.UseVisualStyleBackColor = True
-        '
-        'TabPage4
-        '
-        Me.TabPage4.Controls.Add(Me.Label10)
-        Me.TabPage4.Controls.Add(Me.Label11)
-        Me.TabPage4.Controls.Add(Me.Panel1)
-        Me.TabPage4.Controls.Add(Me.Panel6)
-        Me.TabPage4.Controls.Add(Me.Panel7)
-        Me.TabPage4.Controls.Add(Me.Panel8)
-        Me.TabPage4.Controls.Add(Me.Panel10)
-        Me.TabPage4.Controls.Add(Me.Panel11)
-        Me.TabPage4.Controls.Add(Me.Panel12)
-        Me.TabPage4.Controls.Add(Me.Label14)
-        Me.TabPage4.Controls.Add(Me.Label15)
-        Me.TabPage4.Controls.Add(Me.Label16)
-        Me.TabPage4.Controls.Add(Me.Label17)
-        Me.TabPage4.Controls.Add(Me.Label18)
-        Me.TabPage4.Controls.Add(Me.Label19)
-        Me.TabPage4.Controls.Add(Me.Label20)
-        Me.TabPage4.Controls.Add(Me.Label21)
-        Me.TabPage4.Location = New System.Drawing.Point(4, 22)
-        Me.TabPage4.Name = "TabPage4"
-        Me.TabPage4.Size = New System.Drawing.Size(763, 440)
-        Me.TabPage4.TabIndex = 3
-        Me.TabPage4.Text = "Side 3"
-        Me.TabPage4.UseVisualStyleBackColor = True
-        '
-        'TabPage5
-        '
-        Me.TabPage5.Controls.Add(Me.Label22)
-        Me.TabPage5.Controls.Add(Me.Label23)
-        Me.TabPage5.Controls.Add(Me.Panel13)
-        Me.TabPage5.Controls.Add(Me.Panel14)
-        Me.TabPage5.Controls.Add(Me.Panel15)
-        Me.TabPage5.Controls.Add(Me.Panel16)
-        Me.TabPage5.Controls.Add(Me.Panel17)
-        Me.TabPage5.Controls.Add(Me.Panel18)
-        Me.TabPage5.Controls.Add(Me.Panel19)
-        Me.TabPage5.Controls.Add(Me.Panel20)
-        Me.TabPage5.Controls.Add(Me.Panel21)
-        Me.TabPage5.Controls.Add(Me.Panel22)
-        Me.TabPage5.Controls.Add(Me.Label24)
-        Me.TabPage5.Controls.Add(Me.Label25)
-        Me.TabPage5.Controls.Add(Me.Label26)
-        Me.TabPage5.Controls.Add(Me.Label27)
-        Me.TabPage5.Controls.Add(Me.Label28)
-        Me.TabPage5.Controls.Add(Me.Label29)
-        Me.TabPage5.Controls.Add(Me.Label30)
-        Me.TabPage5.Controls.Add(Me.Label31)
-        Me.TabPage5.Controls.Add(Me.Label32)
-        Me.TabPage5.Controls.Add(Me.Label33)
-        Me.TabPage5.Controls.Add(Me.Label1000)
-        Me.TabPage5.Location = New System.Drawing.Point(4, 22)
-        Me.TabPage5.Name = "TabPage5"
-        Me.TabPage5.Size = New System.Drawing.Size(763, 440)
-        Me.TabPage5.TabIndex = 4
-        Me.TabPage5.Text = "Side 4"
-        Me.TabPage5.UseVisualStyleBackColor = True
-        '
-        'TabPage6
-        '
-        Me.TabPage6.Controls.Add(Me.Label34)
-        Me.TabPage6.Controls.Add(Me.Panel23)
-        Me.TabPage6.Controls.Add(Me.Label35)
-        Me.TabPage6.Controls.Add(Me.Label36)
-        Me.TabPage6.Controls.Add(Me.Label37)
-        Me.TabPage6.Location = New System.Drawing.Point(4, 22)
-        Me.TabPage6.Name = "TabPage6"
-        Me.TabPage6.Size = New System.Drawing.Size(763, 440)
-        Me.TabPage6.TabIndex = 5
-        Me.TabPage6.Text = "Side 5"
-        Me.TabPage6.UseVisualStyleBackColor = True
-        '
-        'TabPage7
-        '
-        Me.TabPage7.Controls.Add(Me.Label38)
-        Me.TabPage7.Controls.Add(Me.Label39)
-        Me.TabPage7.Controls.Add(Me.Panel24)
-        Me.TabPage7.Controls.Add(Me.Panel25)
-        Me.TabPage7.Controls.Add(Me.Panel26)
-        Me.TabPage7.Controls.Add(Me.Panel27)
-        Me.TabPage7.Controls.Add(Me.Panel28)
-        Me.TabPage7.Controls.Add(Me.Panel29)
-        Me.TabPage7.Controls.Add(Me.Panel30)
-        Me.TabPage7.Controls.Add(Me.Panel31)
-        Me.TabPage7.Controls.Add(Me.Panel32)
-        Me.TabPage7.Controls.Add(Me.Panel33)
-        Me.TabPage7.Controls.Add(Me.Panel34)
-        Me.TabPage7.Controls.Add(Me.Panel35)
-        Me.TabPage7.Controls.Add(Me.Panel36)
-        Me.TabPage7.Controls.Add(Me.Panel37)
-        Me.TabPage7.Controls.Add(Me.Panel38)
-        Me.TabPage7.Controls.Add(Me.Label40)
-        Me.TabPage7.Controls.Add(Me.Label41)
-        Me.TabPage7.Controls.Add(Me.Label42)
-        Me.TabPage7.Controls.Add(Me.Label43)
-        Me.TabPage7.Controls.Add(Me.Label44)
-        Me.TabPage7.Controls.Add(Me.Label45)
-        Me.TabPage7.Controls.Add(Me.Label46)
-        Me.TabPage7.Controls.Add(Me.Label47)
-        Me.TabPage7.Controls.Add(Me.Label48)
-        Me.TabPage7.Controls.Add(Me.Label49)
-        Me.TabPage7.Controls.Add(Me.Label50)
-        Me.TabPage7.Controls.Add(Me.Label51)
-        Me.TabPage7.Controls.Add(Me.Label52)
-        Me.TabPage7.Controls.Add(Me.Label53)
-        Me.TabPage7.Controls.Add(Me.Label54)
-        Me.TabPage7.Controls.Add(Me.Label100)
-        Me.TabPage7.Location = New System.Drawing.Point(4, 22)
-        Me.TabPage7.Name = "TabPage7"
-        Me.TabPage7.Size = New System.Drawing.Size(763, 440)
-        Me.TabPage7.TabIndex = 6
-        Me.TabPage7.Text = "Side 6"
-        Me.TabPage7.UseVisualStyleBackColor = True
-        '
-        'TabPage8
-        '
-        Me.TabPage8.Controls.Add(Me.Label62)
-        Me.TabPage8.Controls.Add(Me.Label63)
-        Me.TabPage8.Controls.Add(Me.Panel43)
-        Me.TabPage8.Controls.Add(Me.Label64)
-        Me.TabPage8.Controls.Add(Me.Label65)
-        Me.TabPage8.Controls.Add(Me.Panel39)
-        Me.TabPage8.Controls.Add(Me.Panel40)
-        Me.TabPage8.Controls.Add(Me.Panel41)
-        Me.TabPage8.Controls.Add(Me.Panel42)
-        Me.TabPage8.Controls.Add(Me.Label55)
-        Me.TabPage8.Controls.Add(Me.Label56)
-        Me.TabPage8.Controls.Add(Me.Label57)
-        Me.TabPage8.Controls.Add(Me.Label58)
-        Me.TabPage8.Controls.Add(Me.Label59)
-        Me.TabPage8.Controls.Add(Me.Label60)
-        Me.TabPage8.Controls.Add(Me.Label61)
-        Me.TabPage8.Location = New System.Drawing.Point(4, 22)
-        Me.TabPage8.Name = "TabPage8"
-        Me.TabPage8.Size = New System.Drawing.Size(763, 440)
-        Me.TabPage8.TabIndex = 7
-        Me.TabPage8.Text = "Side 7"
-        Me.TabPage8.UseVisualStyleBackColor = True
-        '
-        'TabPage9
-        '
-        Me.TabPage9.Controls.Add(Me.Label66)
-        Me.TabPage9.Controls.Add(Me.Label67)
-        Me.TabPage9.Controls.Add(Me.Panel44)
-        Me.TabPage9.Controls.Add(Me.Panel45)
-        Me.TabPage9.Controls.Add(Me.Panel46)
-        Me.TabPage9.Controls.Add(Me.Panel47)
-        Me.TabPage9.Controls.Add(Me.Panel48)
-        Me.TabPage9.Controls.Add(Me.Panel49)
-        Me.TabPage9.Controls.Add(Me.Panel50)
-        Me.TabPage9.Controls.Add(Me.Panel51)
-        Me.TabPage9.Controls.Add(Me.Panel52)
-        Me.TabPage9.Controls.Add(Me.Panel53)
-        Me.TabPage9.Controls.Add(Me.Label68)
-        Me.TabPage9.Controls.Add(Me.Label69)
-        Me.TabPage9.Controls.Add(Me.Label70)
-        Me.TabPage9.Controls.Add(Me.Label71)
-        Me.TabPage9.Controls.Add(Me.Label72)
-        Me.TabPage9.Controls.Add(Me.Label73)
-        Me.TabPage9.Controls.Add(Me.Label74)
-        Me.TabPage9.Controls.Add(Me.Label75)
-        Me.TabPage9.Controls.Add(Me.Label76)
-        Me.TabPage9.Controls.Add(Me.Label77)
-        Me.TabPage9.Controls.Add(Me.Label78)
-        Me.TabPage9.Location = New System.Drawing.Point(4, 22)
-        Me.TabPage9.Name = "TabPage9"
-        Me.TabPage9.Size = New System.Drawing.Size(763, 440)
-        Me.TabPage9.TabIndex = 8
-        Me.TabPage9.Text = "Side 8"
-        Me.TabPage9.UseVisualStyleBackColor = True
-        '
-        'Button1
-        '
-        Me.Button1.Location = New System.Drawing.Point(697, 531)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 23)
-        Me.Button1.TabIndex = 0
-        Me.Button1.Text = "Neste side"
-        Me.Button1.UseVisualStyleBackColor = True
-        '
-        'Button2
-        '
-        Me.Button2.Location = New System.Drawing.Point(12, 531)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(75, 23)
-        Me.Button2.TabIndex = 1
-        Me.Button2.Text = "Forrige side"
-        Me.Button2.UseVisualStyleBackColor = True
-        '
-        'LabelFeilMelding
-        '
-        Me.LabelFeilMelding.AutoSize = True
-        Me.LabelFeilMelding.Location = New System.Drawing.Point(627, 515)
-        Me.LabelFeilMelding.Name = "LabelFeilMelding"
-        Me.LabelFeilMelding.Size = New System.Drawing.Size(145, 13)
-        Me.LabelFeilMelding.TabIndex = 87
-        Me.LabelFeilMelding.Text = "Du må svare på alle spørsmål"
-        Me.LabelFeilMelding.Visible = False
         '
         'Label12
         '
@@ -1139,68 +942,68 @@ Partial Class egenSkjemaTempStorage
         Me.RadioButton10.Tag = "9"
         Me.RadioButton10.UseVisualStyleBackColor = True
         '
-        'Label1
+        'LabelSpm7
         '
-        Me.Label1.BackColor = System.Drawing.Color.WhiteSmoke
-        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
-        Me.Label1.Location = New System.Drawing.Point(6, 26)
-        Me.Label1.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(642, 25)
-        Me.Label1.TabIndex = 128
-        Me.Label1.Tag = "7"
-        Me.Label1.Text = "Spm7"
-        Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.LabelSpm7.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.LabelSpm7.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
+        Me.LabelSpm7.Location = New System.Drawing.Point(6, 26)
+        Me.LabelSpm7.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
+        Me.LabelSpm7.Name = "LabelSpm7"
+        Me.LabelSpm7.Size = New System.Drawing.Size(642, 25)
+        Me.LabelSpm7.TabIndex = 128
+        Me.LabelSpm7.Tag = "7"
+        Me.LabelSpm7.Text = "Spm7"
+        Me.LabelSpm7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'Label2
+        'LabelSpm8
         '
-        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
-        Me.Label2.Location = New System.Drawing.Point(6, 51)
-        Me.Label2.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(642, 25)
-        Me.Label2.TabIndex = 129
-        Me.Label2.Tag = "8"
-        Me.Label2.Text = "spm8"
-        Me.Label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.LabelSpm8.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
+        Me.LabelSpm8.Location = New System.Drawing.Point(6, 51)
+        Me.LabelSpm8.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
+        Me.LabelSpm8.Name = "LabelSpm8"
+        Me.LabelSpm8.Size = New System.Drawing.Size(642, 25)
+        Me.LabelSpm8.TabIndex = 129
+        Me.LabelSpm8.Tag = "8"
+        Me.LabelSpm8.Text = "spm8"
+        Me.LabelSpm8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'Label3
+        'LabelSpm9
         '
-        Me.Label3.BackColor = System.Drawing.Color.WhiteSmoke
-        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
-        Me.Label3.Location = New System.Drawing.Point(6, 76)
-        Me.Label3.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(642, 25)
-        Me.Label3.TabIndex = 130
-        Me.Label3.Tag = "9"
-        Me.Label3.Text = "spm9"
-        Me.Label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.LabelSpm9.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.LabelSpm9.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
+        Me.LabelSpm9.Location = New System.Drawing.Point(6, 76)
+        Me.LabelSpm9.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
+        Me.LabelSpm9.Name = "LabelSpm9"
+        Me.LabelSpm9.Size = New System.Drawing.Size(642, 25)
+        Me.LabelSpm9.TabIndex = 130
+        Me.LabelSpm9.Tag = "9"
+        Me.LabelSpm9.Text = "spm9"
+        Me.LabelSpm9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'Label5
+        'LabelSpm11
         '
-        Me.Label5.BackColor = System.Drawing.Color.WhiteSmoke
-        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
-        Me.Label5.Location = New System.Drawing.Point(6, 126)
-        Me.Label5.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(642, 25)
-        Me.Label5.TabIndex = 132
-        Me.Label5.Tag = "11"
-        Me.Label5.Text = "spm11"
-        Me.Label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.LabelSpm11.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.LabelSpm11.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
+        Me.LabelSpm11.Location = New System.Drawing.Point(6, 126)
+        Me.LabelSpm11.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
+        Me.LabelSpm11.Name = "LabelSpm11"
+        Me.LabelSpm11.Size = New System.Drawing.Size(642, 25)
+        Me.LabelSpm11.TabIndex = 132
+        Me.LabelSpm11.Tag = "11"
+        Me.LabelSpm11.Text = "spm11"
+        Me.LabelSpm11.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'Label4
+        'LabelSpm10
         '
-        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
-        Me.Label4.Location = New System.Drawing.Point(6, 101)
-        Me.Label4.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(642, 25)
-        Me.Label4.TabIndex = 131
-        Me.Label4.Tag = "10"
-        Me.Label4.Text = "spm10"
-        Me.Label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.LabelSpm10.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
+        Me.LabelSpm10.Location = New System.Drawing.Point(6, 101)
+        Me.LabelSpm10.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
+        Me.LabelSpm10.Name = "LabelSpm10"
+        Me.LabelSpm10.Size = New System.Drawing.Size(642, 25)
+        Me.LabelSpm10.TabIndex = 131
+        Me.LabelSpm10.Tag = "10"
+        Me.LabelSpm10.Text = "spm10"
+        Me.LabelSpm10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'Label6
         '
@@ -1211,6 +1014,32 @@ Partial Class egenSkjemaTempStorage
         Me.Label6.Size = New System.Drawing.Size(205, 13)
         Me.Label6.TabIndex = 127
         Me.Label6.Text = "Har du i løpet av de siste fire uker:"
+        '
+        'TabPage4
+        '
+        Me.TabPage4.Controls.Add(Me.Label10)
+        Me.TabPage4.Controls.Add(Me.Label11)
+        Me.TabPage4.Controls.Add(Me.Panel1)
+        Me.TabPage4.Controls.Add(Me.Panel6)
+        Me.TabPage4.Controls.Add(Me.Panel7)
+        Me.TabPage4.Controls.Add(Me.Panel8)
+        Me.TabPage4.Controls.Add(Me.Panel10)
+        Me.TabPage4.Controls.Add(Me.Panel11)
+        Me.TabPage4.Controls.Add(Me.Panel12)
+        Me.TabPage4.Controls.Add(Me.LabelSpm18)
+        Me.TabPage4.Controls.Add(Me.LabelSpm12)
+        Me.TabPage4.Controls.Add(Me.LabelSpm13)
+        Me.TabPage4.Controls.Add(Me.LabelSpm14)
+        Me.TabPage4.Controls.Add(Me.LabelSpm16)
+        Me.TabPage4.Controls.Add(Me.LabelSpm15)
+        Me.TabPage4.Controls.Add(Me.LabelSpm17)
+        Me.TabPage4.Controls.Add(Me.Label21)
+        Me.TabPage4.Location = New System.Drawing.Point(4, 22)
+        Me.TabPage4.Name = "TabPage4"
+        Me.TabPage4.Size = New System.Drawing.Size(763, 440)
+        Me.TabPage4.TabIndex = 3
+        Me.TabPage4.Text = "Side 3"
+        Me.TabPage4.UseVisualStyleBackColor = True
         '
         'Label10
         '
@@ -1237,8 +1066,8 @@ Partial Class egenSkjemaTempStorage
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.WhiteSmoke
-        Me.Panel1.Controls.Add(Me.RadioButtonN7)
-        Me.Panel1.Controls.Add(Me.RadioButtonJ7)
+        Me.Panel1.Controls.Add(Me.RadioButtonN7dd)
+        Me.Panel1.Controls.Add(Me.RadioButtonJ7dd)
         Me.Panel1.Location = New System.Drawing.Point(572, 175)
         Me.Panel1.Margin = New System.Windows.Forms.Padding(6)
         Me.Panel1.Name = "Panel1"
@@ -1246,29 +1075,29 @@ Partial Class egenSkjemaTempStorage
         Me.Panel1.TabIndex = 93
         Me.Panel1.Tag = "18"
         '
-        'RadioButtonN7
+        'RadioButtonN7dd
         '
-        Me.RadioButtonN7.AutoSize = True
-        Me.RadioButtonN7.Location = New System.Drawing.Point(52, 6)
-        Me.RadioButtonN7.Margin = New System.Windows.Forms.Padding(6)
-        Me.RadioButtonN7.Name = "RadioButtonN7"
-        Me.RadioButtonN7.Size = New System.Drawing.Size(14, 13)
-        Me.RadioButtonN7.TabIndex = 37
-        Me.RadioButtonN7.TabStop = True
-        Me.RadioButtonN7.Tag = "18"
-        Me.RadioButtonN7.UseVisualStyleBackColor = True
+        Me.RadioButtonN7dd.AutoSize = True
+        Me.RadioButtonN7dd.Location = New System.Drawing.Point(52, 6)
+        Me.RadioButtonN7dd.Margin = New System.Windows.Forms.Padding(6)
+        Me.RadioButtonN7dd.Name = "RadioButtonN7dd"
+        Me.RadioButtonN7dd.Size = New System.Drawing.Size(14, 13)
+        Me.RadioButtonN7dd.TabIndex = 37
+        Me.RadioButtonN7dd.TabStop = True
+        Me.RadioButtonN7dd.Tag = "18"
+        Me.RadioButtonN7dd.UseVisualStyleBackColor = True
         '
-        'RadioButtonJ7
+        'RadioButtonJ7dd
         '
-        Me.RadioButtonJ7.AutoSize = True
-        Me.RadioButtonJ7.Location = New System.Drawing.Point(0, 6)
-        Me.RadioButtonJ7.Margin = New System.Windows.Forms.Padding(6)
-        Me.RadioButtonJ7.Name = "RadioButtonJ7"
-        Me.RadioButtonJ7.Size = New System.Drawing.Size(14, 13)
-        Me.RadioButtonJ7.TabIndex = 38
-        Me.RadioButtonJ7.TabStop = True
-        Me.RadioButtonJ7.Tag = "18"
-        Me.RadioButtonJ7.UseVisualStyleBackColor = True
+        Me.RadioButtonJ7dd.AutoSize = True
+        Me.RadioButtonJ7dd.Location = New System.Drawing.Point(0, 6)
+        Me.RadioButtonJ7dd.Margin = New System.Windows.Forms.Padding(6)
+        Me.RadioButtonJ7dd.Name = "RadioButtonJ7dd"
+        Me.RadioButtonJ7dd.Size = New System.Drawing.Size(14, 13)
+        Me.RadioButtonJ7dd.TabIndex = 38
+        Me.RadioButtonJ7dd.TabStop = True
+        Me.RadioButtonJ7dd.Tag = "18"
+        Me.RadioButtonJ7dd.UseVisualStyleBackColor = True
         '
         'Panel6
         '
@@ -1486,93 +1315,93 @@ Partial Class egenSkjemaTempStorage
         Me.RadioButton22.Tag = "17"
         Me.RadioButton22.UseVisualStyleBackColor = True
         '
-        'Label14
+        'LabelSpm18
         '
-        Me.Label14.BackColor = System.Drawing.Color.WhiteSmoke
-        Me.Label14.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
-        Me.Label14.Location = New System.Drawing.Point(6, 175)
-        Me.Label14.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
-        Me.Label14.Name = "Label14"
-        Me.Label14.Size = New System.Drawing.Size(642, 25)
-        Me.Label14.TabIndex = 86
-        Me.Label14.Tag = "18"
-        Me.Label14.Text = "spm18"
-        Me.Label14.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.LabelSpm18.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.LabelSpm18.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
+        Me.LabelSpm18.Location = New System.Drawing.Point(6, 175)
+        Me.LabelSpm18.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
+        Me.LabelSpm18.Name = "LabelSpm18"
+        Me.LabelSpm18.Size = New System.Drawing.Size(642, 25)
+        Me.LabelSpm18.TabIndex = 86
+        Me.LabelSpm18.Tag = "18"
+        Me.LabelSpm18.Text = "spm18"
+        Me.LabelSpm18.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'Label15
+        'LabelSpm12
         '
-        Me.Label15.BackColor = System.Drawing.Color.WhiteSmoke
-        Me.Label15.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
-        Me.Label15.Location = New System.Drawing.Point(6, 25)
-        Me.Label15.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
-        Me.Label15.Name = "Label15"
-        Me.Label15.Size = New System.Drawing.Size(642, 25)
-        Me.Label15.TabIndex = 80
-        Me.Label15.Tag = "12"
-        Me.Label15.Text = "spm12"
-        Me.Label15.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.LabelSpm12.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.LabelSpm12.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
+        Me.LabelSpm12.Location = New System.Drawing.Point(6, 25)
+        Me.LabelSpm12.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
+        Me.LabelSpm12.Name = "LabelSpm12"
+        Me.LabelSpm12.Size = New System.Drawing.Size(642, 25)
+        Me.LabelSpm12.TabIndex = 80
+        Me.LabelSpm12.Tag = "12"
+        Me.LabelSpm12.Text = "spm12"
+        Me.LabelSpm12.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'Label16
+        'LabelSpm13
         '
-        Me.Label16.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
-        Me.Label16.Location = New System.Drawing.Point(6, 50)
-        Me.Label16.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
-        Me.Label16.Name = "Label16"
-        Me.Label16.Size = New System.Drawing.Size(642, 25)
-        Me.Label16.TabIndex = 81
-        Me.Label16.Tag = "13"
-        Me.Label16.Text = "spm13"
-        Me.Label16.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.LabelSpm13.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
+        Me.LabelSpm13.Location = New System.Drawing.Point(6, 50)
+        Me.LabelSpm13.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
+        Me.LabelSpm13.Name = "LabelSpm13"
+        Me.LabelSpm13.Size = New System.Drawing.Size(642, 25)
+        Me.LabelSpm13.TabIndex = 81
+        Me.LabelSpm13.Tag = "13"
+        Me.LabelSpm13.Text = "spm13"
+        Me.LabelSpm13.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'Label17
+        'LabelSpm14
         '
-        Me.Label17.BackColor = System.Drawing.Color.WhiteSmoke
-        Me.Label17.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
-        Me.Label17.Location = New System.Drawing.Point(6, 75)
-        Me.Label17.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
-        Me.Label17.Name = "Label17"
-        Me.Label17.Size = New System.Drawing.Size(642, 25)
-        Me.Label17.TabIndex = 82
-        Me.Label17.Tag = "14"
-        Me.Label17.Text = "spm14"
-        Me.Label17.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.LabelSpm14.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.LabelSpm14.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
+        Me.LabelSpm14.Location = New System.Drawing.Point(6, 75)
+        Me.LabelSpm14.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
+        Me.LabelSpm14.Name = "LabelSpm14"
+        Me.LabelSpm14.Size = New System.Drawing.Size(642, 25)
+        Me.LabelSpm14.TabIndex = 82
+        Me.LabelSpm14.Tag = "14"
+        Me.LabelSpm14.Text = "spm14"
+        Me.LabelSpm14.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'Label18
+        'LabelSpm16
         '
-        Me.Label18.BackColor = System.Drawing.Color.WhiteSmoke
-        Me.Label18.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
-        Me.Label18.Location = New System.Drawing.Point(6, 125)
-        Me.Label18.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
-        Me.Label18.Name = "Label18"
-        Me.Label18.Size = New System.Drawing.Size(642, 25)
-        Me.Label18.TabIndex = 85
-        Me.Label18.Tag = "16"
-        Me.Label18.Text = "spm16"
-        Me.Label18.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.LabelSpm16.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.LabelSpm16.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
+        Me.LabelSpm16.Location = New System.Drawing.Point(6, 125)
+        Me.LabelSpm16.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
+        Me.LabelSpm16.Name = "LabelSpm16"
+        Me.LabelSpm16.Size = New System.Drawing.Size(642, 25)
+        Me.LabelSpm16.TabIndex = 85
+        Me.LabelSpm16.Tag = "16"
+        Me.LabelSpm16.Text = "spm16"
+        Me.LabelSpm16.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'Label19
+        'LabelSpm15
         '
-        Me.Label19.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
-        Me.Label19.Location = New System.Drawing.Point(6, 100)
-        Me.Label19.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
-        Me.Label19.Name = "Label19"
-        Me.Label19.Size = New System.Drawing.Size(642, 25)
-        Me.Label19.TabIndex = 83
-        Me.Label19.Tag = "15"
-        Me.Label19.Text = "spm15"
-        Me.Label19.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.LabelSpm15.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
+        Me.LabelSpm15.Location = New System.Drawing.Point(6, 100)
+        Me.LabelSpm15.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
+        Me.LabelSpm15.Name = "LabelSpm15"
+        Me.LabelSpm15.Size = New System.Drawing.Size(642, 25)
+        Me.LabelSpm15.TabIndex = 83
+        Me.LabelSpm15.Tag = "15"
+        Me.LabelSpm15.Text = "spm15"
+        Me.LabelSpm15.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'Label20
+        'LabelSpm17
         '
-        Me.Label20.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
-        Me.Label20.Location = New System.Drawing.Point(6, 150)
-        Me.Label20.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
-        Me.Label20.Name = "Label20"
-        Me.Label20.Size = New System.Drawing.Size(642, 25)
-        Me.Label20.TabIndex = 84
-        Me.Label20.Tag = "17"
-        Me.Label20.Text = "spm17"
-        Me.Label20.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.LabelSpm17.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
+        Me.LabelSpm17.Location = New System.Drawing.Point(6, 150)
+        Me.LabelSpm17.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
+        Me.LabelSpm17.Name = "LabelSpm17"
+        Me.LabelSpm17.Size = New System.Drawing.Size(642, 25)
+        Me.LabelSpm17.TabIndex = 84
+        Me.LabelSpm17.Tag = "17"
+        Me.LabelSpm17.Text = "spm17"
+        Me.LabelSpm17.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'Label21
         '
@@ -1583,6 +1412,38 @@ Partial Class egenSkjemaTempStorage
         Me.Label21.Size = New System.Drawing.Size(236, 13)
         Me.Label21.TabIndex = 79
         Me.Label21.Text = "Har du i løpet av de siste seks måneder:"
+        '
+        'TabPage5
+        '
+        Me.TabPage5.Controls.Add(Me.Label22)
+        Me.TabPage5.Controls.Add(Me.Label23)
+        Me.TabPage5.Controls.Add(Me.Panel13)
+        Me.TabPage5.Controls.Add(Me.Panel14)
+        Me.TabPage5.Controls.Add(Me.Panel15)
+        Me.TabPage5.Controls.Add(Me.Panel16)
+        Me.TabPage5.Controls.Add(Me.Panel17)
+        Me.TabPage5.Controls.Add(Me.Panel18)
+        Me.TabPage5.Controls.Add(Me.Panel19)
+        Me.TabPage5.Controls.Add(Me.Panel20)
+        Me.TabPage5.Controls.Add(Me.Panel21)
+        Me.TabPage5.Controls.Add(Me.Panel22)
+        Me.TabPage5.Controls.Add(Me.LabelSpm26)
+        Me.TabPage5.Controls.Add(Me.LabelSpm27)
+        Me.TabPage5.Controls.Add(Me.LabelSpm28)
+        Me.TabPage5.Controls.Add(Me.LabelSpm19)
+        Me.TabPage5.Controls.Add(Me.LabelSpm25)
+        Me.TabPage5.Controls.Add(Me.LabelSpm20)
+        Me.TabPage5.Controls.Add(Me.LabelSpm21)
+        Me.TabPage5.Controls.Add(Me.LabelSpm23)
+        Me.TabPage5.Controls.Add(Me.LabelSpm22)
+        Me.TabPage5.Controls.Add(Me.LabelSpm24)
+        Me.TabPage5.Controls.Add(Me.Label1000)
+        Me.TabPage5.Location = New System.Drawing.Point(4, 22)
+        Me.TabPage5.Name = "TabPage5"
+        Me.TabPage5.Size = New System.Drawing.Size(763, 440)
+        Me.TabPage5.TabIndex = 4
+        Me.TabPage5.Text = "Side 4"
+        Me.TabPage5.UseVisualStyleBackColor = True
         '
         'Label22
         '
@@ -1966,130 +1827,130 @@ Partial Class egenSkjemaTempStorage
         Me.RadioButton36.Tag = "24"
         Me.RadioButton36.UseVisualStyleBackColor = True
         '
-        'Label24
+        'LabelSpm26
         '
-        Me.Label24.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
-        Me.Label24.Location = New System.Drawing.Point(6, 203)
-        Me.Label24.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
-        Me.Label24.Name = "Label24"
-        Me.Label24.Size = New System.Drawing.Size(642, 25)
-        Me.Label24.TabIndex = 137
-        Me.Label24.Tag = "26"
-        Me.Label24.Text = "spm26"
-        Me.Label24.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.LabelSpm26.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
+        Me.LabelSpm26.Location = New System.Drawing.Point(6, 203)
+        Me.LabelSpm26.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
+        Me.LabelSpm26.Name = "LabelSpm26"
+        Me.LabelSpm26.Size = New System.Drawing.Size(642, 25)
+        Me.LabelSpm26.TabIndex = 137
+        Me.LabelSpm26.Tag = "26"
+        Me.LabelSpm26.Text = "spm26"
+        Me.LabelSpm26.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'Label25
+        'LabelSpm27
         '
-        Me.Label25.BackColor = System.Drawing.Color.WhiteSmoke
-        Me.Label25.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
-        Me.Label25.Location = New System.Drawing.Point(6, 228)
-        Me.Label25.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
-        Me.Label25.Name = "Label25"
-        Me.Label25.Size = New System.Drawing.Size(642, 25)
-        Me.Label25.TabIndex = 138
-        Me.Label25.Tag = "27"
-        Me.Label25.Text = "spm27"
-        Me.Label25.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.LabelSpm27.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.LabelSpm27.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
+        Me.LabelSpm27.Location = New System.Drawing.Point(6, 228)
+        Me.LabelSpm27.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
+        Me.LabelSpm27.Name = "LabelSpm27"
+        Me.LabelSpm27.Size = New System.Drawing.Size(642, 25)
+        Me.LabelSpm27.TabIndex = 138
+        Me.LabelSpm27.Tag = "27"
+        Me.LabelSpm27.Text = "spm27"
+        Me.LabelSpm27.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'Label26
+        'LabelSpm28
         '
-        Me.Label26.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
-        Me.Label26.Location = New System.Drawing.Point(6, 253)
-        Me.Label26.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
-        Me.Label26.Name = "Label26"
-        Me.Label26.Size = New System.Drawing.Size(642, 25)
-        Me.Label26.TabIndex = 139
-        Me.Label26.Tag = "28"
-        Me.Label26.Text = "spm28"
-        Me.Label26.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.LabelSpm28.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
+        Me.LabelSpm28.Location = New System.Drawing.Point(6, 253)
+        Me.LabelSpm28.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
+        Me.LabelSpm28.Name = "LabelSpm28"
+        Me.LabelSpm28.Size = New System.Drawing.Size(642, 25)
+        Me.LabelSpm28.TabIndex = 139
+        Me.LabelSpm28.Tag = "28"
+        Me.LabelSpm28.Text = "spm28"
+        Me.LabelSpm28.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'Label27
+        'LabelSpm19
         '
-        Me.Label27.BackColor = System.Drawing.Color.WhiteSmoke
-        Me.Label27.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
-        Me.Label27.Location = New System.Drawing.Point(6, 28)
-        Me.Label27.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
-        Me.Label27.Name = "Label27"
-        Me.Label27.Size = New System.Drawing.Size(642, 25)
-        Me.Label27.TabIndex = 136
-        Me.Label27.Tag = "19"
-        Me.Label27.Text = "spm19"
-        Me.Label27.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.LabelSpm19.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.LabelSpm19.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
+        Me.LabelSpm19.Location = New System.Drawing.Point(6, 28)
+        Me.LabelSpm19.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
+        Me.LabelSpm19.Name = "LabelSpm19"
+        Me.LabelSpm19.Size = New System.Drawing.Size(642, 25)
+        Me.LabelSpm19.TabIndex = 136
+        Me.LabelSpm19.Tag = "19"
+        Me.LabelSpm19.Text = "spm19"
+        Me.LabelSpm19.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'Label28
+        'LabelSpm25
         '
-        Me.Label28.BackColor = System.Drawing.Color.WhiteSmoke
-        Me.Label28.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
-        Me.Label28.Location = New System.Drawing.Point(6, 178)
-        Me.Label28.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
-        Me.Label28.Name = "Label28"
-        Me.Label28.Size = New System.Drawing.Size(642, 25)
-        Me.Label28.TabIndex = 130
-        Me.Label28.Tag = "25"
-        Me.Label28.Text = "spm25"
-        Me.Label28.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.LabelSpm25.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.LabelSpm25.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
+        Me.LabelSpm25.Location = New System.Drawing.Point(6, 178)
+        Me.LabelSpm25.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
+        Me.LabelSpm25.Name = "LabelSpm25"
+        Me.LabelSpm25.Size = New System.Drawing.Size(642, 25)
+        Me.LabelSpm25.TabIndex = 130
+        Me.LabelSpm25.Tag = "25"
+        Me.LabelSpm25.Text = "spm25"
+        Me.LabelSpm25.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'Label29
+        'LabelSpm20
         '
-        Me.Label29.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label29.Location = New System.Drawing.Point(6, 53)
-        Me.Label29.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
-        Me.Label29.Name = "Label29"
-        Me.Label29.Size = New System.Drawing.Size(642, 25)
-        Me.Label29.TabIndex = 131
-        Me.Label29.Tag = "20"
-        Me.Label29.Text = "spm20"
-        Me.Label29.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.LabelSpm20.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LabelSpm20.Location = New System.Drawing.Point(6, 53)
+        Me.LabelSpm20.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
+        Me.LabelSpm20.Name = "LabelSpm20"
+        Me.LabelSpm20.Size = New System.Drawing.Size(642, 25)
+        Me.LabelSpm20.TabIndex = 131
+        Me.LabelSpm20.Tag = "20"
+        Me.LabelSpm20.Text = "spm20"
+        Me.LabelSpm20.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'Label30
+        'LabelSpm21
         '
-        Me.Label30.BackColor = System.Drawing.Color.WhiteSmoke
-        Me.Label30.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
-        Me.Label30.Location = New System.Drawing.Point(6, 78)
-        Me.Label30.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
-        Me.Label30.Name = "Label30"
-        Me.Label30.Size = New System.Drawing.Size(642, 25)
-        Me.Label30.TabIndex = 132
-        Me.Label30.Tag = "21"
-        Me.Label30.Text = "spm21"
-        Me.Label30.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.LabelSpm21.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.LabelSpm21.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
+        Me.LabelSpm21.Location = New System.Drawing.Point(6, 78)
+        Me.LabelSpm21.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
+        Me.LabelSpm21.Name = "LabelSpm21"
+        Me.LabelSpm21.Size = New System.Drawing.Size(642, 25)
+        Me.LabelSpm21.TabIndex = 132
+        Me.LabelSpm21.Tag = "21"
+        Me.LabelSpm21.Text = "spm21"
+        Me.LabelSpm21.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'Label31
+        'LabelSpm23
         '
-        Me.Label31.BackColor = System.Drawing.Color.WhiteSmoke
-        Me.Label31.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
-        Me.Label31.Location = New System.Drawing.Point(6, 128)
-        Me.Label31.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
-        Me.Label31.Name = "Label31"
-        Me.Label31.Size = New System.Drawing.Size(642, 25)
-        Me.Label31.TabIndex = 135
-        Me.Label31.Tag = "23"
-        Me.Label31.Text = "spm23"
-        Me.Label31.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.LabelSpm23.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.LabelSpm23.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
+        Me.LabelSpm23.Location = New System.Drawing.Point(6, 128)
+        Me.LabelSpm23.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
+        Me.LabelSpm23.Name = "LabelSpm23"
+        Me.LabelSpm23.Size = New System.Drawing.Size(642, 25)
+        Me.LabelSpm23.TabIndex = 135
+        Me.LabelSpm23.Tag = "23"
+        Me.LabelSpm23.Text = "spm23"
+        Me.LabelSpm23.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'Label32
+        'LabelSpm22
         '
-        Me.Label32.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
-        Me.Label32.Location = New System.Drawing.Point(6, 103)
-        Me.Label32.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
-        Me.Label32.Name = "Label32"
-        Me.Label32.Size = New System.Drawing.Size(642, 25)
-        Me.Label32.TabIndex = 133
-        Me.Label32.Tag = "22"
-        Me.Label32.Text = "spm22"
-        Me.Label32.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.LabelSpm22.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
+        Me.LabelSpm22.Location = New System.Drawing.Point(6, 103)
+        Me.LabelSpm22.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
+        Me.LabelSpm22.Name = "LabelSpm22"
+        Me.LabelSpm22.Size = New System.Drawing.Size(642, 25)
+        Me.LabelSpm22.TabIndex = 133
+        Me.LabelSpm22.Tag = "22"
+        Me.LabelSpm22.Text = "spm22"
+        Me.LabelSpm22.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'Label33
+        'LabelSpm24
         '
-        Me.Label33.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
-        Me.Label33.Location = New System.Drawing.Point(6, 153)
-        Me.Label33.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
-        Me.Label33.Name = "Label33"
-        Me.Label33.Size = New System.Drawing.Size(642, 25)
-        Me.Label33.TabIndex = 134
-        Me.Label33.Tag = "24"
-        Me.Label33.Text = "spm24"
-        Me.Label33.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.LabelSpm24.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
+        Me.LabelSpm24.Location = New System.Drawing.Point(6, 153)
+        Me.LabelSpm24.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
+        Me.LabelSpm24.Name = "LabelSpm24"
+        Me.LabelSpm24.Size = New System.Drawing.Size(642, 25)
+        Me.LabelSpm24.TabIndex = 134
+        Me.LabelSpm24.Tag = "24"
+        Me.LabelSpm24.Text = "spm24"
+        Me.LabelSpm24.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'Label1000
         '
@@ -2100,6 +1961,20 @@ Partial Class egenSkjemaTempStorage
         Me.Label1000.Size = New System.Drawing.Size(232, 13)
         Me.Label1000.TabIndex = 129
         Me.Label1000.Text = "Har du i løpet av de siste seks måneder"
+        '
+        'TabPage6
+        '
+        Me.TabPage6.Controls.Add(Me.Label34)
+        Me.TabPage6.Controls.Add(Me.Panel23)
+        Me.TabPage6.Controls.Add(Me.Label35)
+        Me.TabPage6.Controls.Add(Me.LabelSpm29)
+        Me.TabPage6.Controls.Add(Me.Label37)
+        Me.TabPage6.Location = New System.Drawing.Point(4, 22)
+        Me.TabPage6.Name = "TabPage6"
+        Me.TabPage6.Size = New System.Drawing.Size(763, 440)
+        Me.TabPage6.TabIndex = 5
+        Me.TabPage6.Text = "Side 5"
+        Me.TabPage6.UseVisualStyleBackColor = True
         '
         'Label34
         '
@@ -2157,17 +2032,17 @@ Partial Class egenSkjemaTempStorage
         Me.Label35.TabIndex = 130
         Me.Label35.Text = "Ja"
         '
-        'Label36
+        'LabelSpm29
         '
-        Me.Label36.BackColor = System.Drawing.Color.WhiteSmoke
-        Me.Label36.Location = New System.Drawing.Point(5, 26)
-        Me.Label36.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
-        Me.Label36.Name = "Label36"
-        Me.Label36.Size = New System.Drawing.Size(642, 25)
-        Me.Label36.TabIndex = 128
-        Me.Label36.Tag = "29"
-        Me.Label36.Text = "spm29"
-        Me.Label36.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.LabelSpm29.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.LabelSpm29.Location = New System.Drawing.Point(5, 26)
+        Me.LabelSpm29.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
+        Me.LabelSpm29.Name = "LabelSpm29"
+        Me.LabelSpm29.Size = New System.Drawing.Size(642, 25)
+        Me.LabelSpm29.TabIndex = 128
+        Me.LabelSpm29.Tag = "29"
+        Me.LabelSpm29.Text = "spm29"
+        Me.LabelSpm29.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'Label37
         '
@@ -2178,6 +2053,48 @@ Partial Class egenSkjemaTempStorage
         Me.Label37.Size = New System.Drawing.Size(180, 13)
         Me.Label37.TabIndex = 127
         Me.Label37.Text = "Har du i løpet av de siste to år"
+        '
+        'TabPage7
+        '
+        Me.TabPage7.Controls.Add(Me.Label38)
+        Me.TabPage7.Controls.Add(Me.Label39)
+        Me.TabPage7.Controls.Add(Me.Panel24)
+        Me.TabPage7.Controls.Add(Me.Panel25)
+        Me.TabPage7.Controls.Add(Me.Panel26)
+        Me.TabPage7.Controls.Add(Me.Panel27)
+        Me.TabPage7.Controls.Add(Me.Panel28)
+        Me.TabPage7.Controls.Add(Me.Panel29)
+        Me.TabPage7.Controls.Add(Me.Panel30)
+        Me.TabPage7.Controls.Add(Me.Panel31)
+        Me.TabPage7.Controls.Add(Me.Panel32)
+        Me.TabPage7.Controls.Add(Me.Panel33)
+        Me.TabPage7.Controls.Add(Me.Panel34)
+        Me.TabPage7.Controls.Add(Me.Panel35)
+        Me.TabPage7.Controls.Add(Me.Panel36)
+        Me.TabPage7.Controls.Add(Me.Panel37)
+        Me.TabPage7.Controls.Add(Me.Panel38)
+        Me.TabPage7.Controls.Add(Me.LabelSpm44)
+        Me.TabPage7.Controls.Add(Me.LabelSpm43)
+        Me.TabPage7.Controls.Add(Me.LabelSpm41)
+        Me.TabPage7.Controls.Add(Me.LabelSpm42)
+        Me.TabPage7.Controls.Add(Me.LabelSpm40)
+        Me.TabPage7.Controls.Add(Me.LabelSpm33)
+        Me.TabPage7.Controls.Add(Me.LabelSpm35)
+        Me.TabPage7.Controls.Add(Me.LabelSpm37)
+        Me.TabPage7.Controls.Add(Me.LabelSpm39)
+        Me.TabPage7.Controls.Add(Me.LabelSpm31)
+        Me.TabPage7.Controls.Add(Me.LabelSpm32)
+        Me.TabPage7.Controls.Add(Me.LabelSpm38)
+        Me.TabPage7.Controls.Add(Me.LabelSpm36)
+        Me.TabPage7.Controls.Add(Me.LabelSpm34)
+        Me.TabPage7.Controls.Add(Me.LabelSpm30)
+        Me.TabPage7.Controls.Add(Me.Label100)
+        Me.TabPage7.Location = New System.Drawing.Point(4, 22)
+        Me.TabPage7.Name = "TabPage7"
+        Me.TabPage7.Size = New System.Drawing.Size(763, 440)
+        Me.TabPage7.TabIndex = 6
+        Me.TabPage7.Text = "Side 6"
+        Me.TabPage7.UseVisualStyleBackColor = True
         '
         'Label38
         '
@@ -2741,200 +2658,200 @@ Partial Class egenSkjemaTempStorage
         Me.RadioButton58.Tag = "35"
         Me.RadioButton58.UseVisualStyleBackColor = True
         '
-        'Label40
+        'LabelSpm44
         '
-        Me.Label40.BackColor = System.Drawing.Color.WhiteSmoke
-        Me.Label40.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
-        Me.Label40.Location = New System.Drawing.Point(6, 373)
-        Me.Label40.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
-        Me.Label40.Name = "Label40"
-        Me.Label40.Size = New System.Drawing.Size(642, 25)
-        Me.Label40.TabIndex = 159
-        Me.Label40.Tag = "44"
-        Me.Label40.Text = "spm44"
-        Me.Label40.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.LabelSpm44.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.LabelSpm44.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
+        Me.LabelSpm44.Location = New System.Drawing.Point(6, 373)
+        Me.LabelSpm44.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
+        Me.LabelSpm44.Name = "LabelSpm44"
+        Me.LabelSpm44.Size = New System.Drawing.Size(642, 25)
+        Me.LabelSpm44.TabIndex = 159
+        Me.LabelSpm44.Tag = "44"
+        Me.LabelSpm44.Text = "spm44"
+        Me.LabelSpm44.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'Label41
+        'LabelSpm43
         '
-        Me.Label41.BackColor = System.Drawing.Color.White
-        Me.Label41.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
-        Me.Label41.Location = New System.Drawing.Point(6, 348)
-        Me.Label41.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
-        Me.Label41.Name = "Label41"
-        Me.Label41.Size = New System.Drawing.Size(642, 25)
-        Me.Label41.TabIndex = 158
-        Me.Label41.Tag = "43"
-        Me.Label41.Text = "spm43"
-        Me.Label41.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.LabelSpm43.BackColor = System.Drawing.Color.White
+        Me.LabelSpm43.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
+        Me.LabelSpm43.Location = New System.Drawing.Point(6, 348)
+        Me.LabelSpm43.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
+        Me.LabelSpm43.Name = "LabelSpm43"
+        Me.LabelSpm43.Size = New System.Drawing.Size(642, 25)
+        Me.LabelSpm43.TabIndex = 158
+        Me.LabelSpm43.Tag = "43"
+        Me.LabelSpm43.Text = "spm43"
+        Me.LabelSpm43.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'Label42
+        'LabelSpm41
         '
-        Me.Label42.BackColor = System.Drawing.Color.White
-        Me.Label42.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
-        Me.Label42.Location = New System.Drawing.Point(6, 298)
-        Me.Label42.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
-        Me.Label42.Name = "Label42"
-        Me.Label42.Size = New System.Drawing.Size(642, 25)
-        Me.Label42.TabIndex = 157
-        Me.Label42.Tag = "41"
-        Me.Label42.Text = "spm41"
-        Me.Label42.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.LabelSpm41.BackColor = System.Drawing.Color.White
+        Me.LabelSpm41.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
+        Me.LabelSpm41.Location = New System.Drawing.Point(6, 298)
+        Me.LabelSpm41.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
+        Me.LabelSpm41.Name = "LabelSpm41"
+        Me.LabelSpm41.Size = New System.Drawing.Size(642, 25)
+        Me.LabelSpm41.TabIndex = 157
+        Me.LabelSpm41.Tag = "41"
+        Me.LabelSpm41.Text = "spm41"
+        Me.LabelSpm41.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'Label43
+        'LabelSpm42
         '
-        Me.Label43.BackColor = System.Drawing.Color.WhiteSmoke
-        Me.Label43.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
-        Me.Label43.Location = New System.Drawing.Point(6, 323)
-        Me.Label43.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
-        Me.Label43.Name = "Label43"
-        Me.Label43.Size = New System.Drawing.Size(642, 25)
-        Me.Label43.TabIndex = 156
-        Me.Label43.Tag = "42"
-        Me.Label43.Text = "spm42"
-        Me.Label43.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.LabelSpm42.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.LabelSpm42.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
+        Me.LabelSpm42.Location = New System.Drawing.Point(6, 323)
+        Me.LabelSpm42.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
+        Me.LabelSpm42.Name = "LabelSpm42"
+        Me.LabelSpm42.Size = New System.Drawing.Size(642, 25)
+        Me.LabelSpm42.TabIndex = 156
+        Me.LabelSpm42.Tag = "42"
+        Me.LabelSpm42.Text = "spm42"
+        Me.LabelSpm42.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'Label44
+        'LabelSpm40
         '
-        Me.Label44.BackColor = System.Drawing.Color.WhiteSmoke
-        Me.Label44.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
-        Me.Label44.Location = New System.Drawing.Point(6, 273)
-        Me.Label44.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
-        Me.Label44.Name = "Label44"
-        Me.Label44.Size = New System.Drawing.Size(642, 25)
-        Me.Label44.TabIndex = 155
-        Me.Label44.Tag = "40"
-        Me.Label44.Text = "spm40"
-        Me.Label44.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.LabelSpm40.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.LabelSpm40.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
+        Me.LabelSpm40.Location = New System.Drawing.Point(6, 273)
+        Me.LabelSpm40.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
+        Me.LabelSpm40.Name = "LabelSpm40"
+        Me.LabelSpm40.Size = New System.Drawing.Size(642, 25)
+        Me.LabelSpm40.TabIndex = 155
+        Me.LabelSpm40.Tag = "40"
+        Me.LabelSpm40.Text = "spm40"
+        Me.LabelSpm40.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'Label45
+        'LabelSpm33
         '
-        Me.Label45.BackColor = System.Drawing.Color.White
-        Me.Label45.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
-        Me.Label45.Location = New System.Drawing.Point(6, 98)
-        Me.Label45.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
-        Me.Label45.Name = "Label45"
-        Me.Label45.Size = New System.Drawing.Size(642, 25)
-        Me.Label45.TabIndex = 154
-        Me.Label45.Tag = "33"
-        Me.Label45.Text = "spm33"
-        Me.Label45.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.LabelSpm33.BackColor = System.Drawing.Color.White
+        Me.LabelSpm33.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
+        Me.LabelSpm33.Location = New System.Drawing.Point(6, 98)
+        Me.LabelSpm33.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
+        Me.LabelSpm33.Name = "LabelSpm33"
+        Me.LabelSpm33.Size = New System.Drawing.Size(642, 25)
+        Me.LabelSpm33.TabIndex = 154
+        Me.LabelSpm33.Tag = "33"
+        Me.LabelSpm33.Text = "spm33"
+        Me.LabelSpm33.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'Label46
+        'LabelSpm35
         '
-        Me.Label46.BackColor = System.Drawing.Color.White
-        Me.Label46.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
-        Me.Label46.Location = New System.Drawing.Point(6, 148)
-        Me.Label46.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
-        Me.Label46.Name = "Label46"
-        Me.Label46.Size = New System.Drawing.Size(642, 25)
-        Me.Label46.TabIndex = 153
-        Me.Label46.Tag = "35"
-        Me.Label46.Text = "spm35"
-        Me.Label46.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.LabelSpm35.BackColor = System.Drawing.Color.White
+        Me.LabelSpm35.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
+        Me.LabelSpm35.Location = New System.Drawing.Point(6, 148)
+        Me.LabelSpm35.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
+        Me.LabelSpm35.Name = "LabelSpm35"
+        Me.LabelSpm35.Size = New System.Drawing.Size(642, 25)
+        Me.LabelSpm35.TabIndex = 153
+        Me.LabelSpm35.Tag = "35"
+        Me.LabelSpm35.Text = "spm35"
+        Me.LabelSpm35.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'Label47
+        'LabelSpm37
         '
-        Me.Label47.BackColor = System.Drawing.Color.White
-        Me.Label47.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
-        Me.Label47.Location = New System.Drawing.Point(6, 198)
-        Me.Label47.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
-        Me.Label47.Name = "Label47"
-        Me.Label47.Size = New System.Drawing.Size(642, 25)
-        Me.Label47.TabIndex = 152
-        Me.Label47.Tag = "37"
-        Me.Label47.Text = "spm37"
-        Me.Label47.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.LabelSpm37.BackColor = System.Drawing.Color.White
+        Me.LabelSpm37.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
+        Me.LabelSpm37.Location = New System.Drawing.Point(6, 198)
+        Me.LabelSpm37.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
+        Me.LabelSpm37.Name = "LabelSpm37"
+        Me.LabelSpm37.Size = New System.Drawing.Size(642, 25)
+        Me.LabelSpm37.TabIndex = 152
+        Me.LabelSpm37.Tag = "37"
+        Me.LabelSpm37.Text = "spm37"
+        Me.LabelSpm37.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'Label48
+        'LabelSpm39
         '
-        Me.Label48.BackColor = System.Drawing.Color.White
-        Me.Label48.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
-        Me.Label48.Location = New System.Drawing.Point(6, 248)
-        Me.Label48.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
-        Me.Label48.Name = "Label48"
-        Me.Label48.Size = New System.Drawing.Size(642, 25)
-        Me.Label48.TabIndex = 151
-        Me.Label48.Tag = "39"
-        Me.Label48.Text = "spm39"
-        Me.Label48.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.LabelSpm39.BackColor = System.Drawing.Color.White
+        Me.LabelSpm39.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
+        Me.LabelSpm39.Location = New System.Drawing.Point(6, 248)
+        Me.LabelSpm39.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
+        Me.LabelSpm39.Name = "LabelSpm39"
+        Me.LabelSpm39.Size = New System.Drawing.Size(642, 25)
+        Me.LabelSpm39.TabIndex = 151
+        Me.LabelSpm39.Tag = "39"
+        Me.LabelSpm39.Text = "spm39"
+        Me.LabelSpm39.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'Label49
+        'LabelSpm31
         '
-        Me.Label49.BackColor = System.Drawing.Color.White
-        Me.Label49.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
-        Me.Label49.Location = New System.Drawing.Point(6, 48)
-        Me.Label49.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
-        Me.Label49.Name = "Label49"
-        Me.Label49.Size = New System.Drawing.Size(642, 25)
-        Me.Label49.TabIndex = 150
-        Me.Label49.Tag = "31"
-        Me.Label49.Text = "spm31"
-        Me.Label49.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.LabelSpm31.BackColor = System.Drawing.Color.White
+        Me.LabelSpm31.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
+        Me.LabelSpm31.Location = New System.Drawing.Point(6, 48)
+        Me.LabelSpm31.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
+        Me.LabelSpm31.Name = "LabelSpm31"
+        Me.LabelSpm31.Size = New System.Drawing.Size(642, 25)
+        Me.LabelSpm31.TabIndex = 150
+        Me.LabelSpm31.Tag = "31"
+        Me.LabelSpm31.Text = "spm31"
+        Me.LabelSpm31.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'Label50
+        'LabelSpm32
         '
-        Me.Label50.BackColor = System.Drawing.Color.WhiteSmoke
-        Me.Label50.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
-        Me.Label50.Location = New System.Drawing.Point(6, 73)
-        Me.Label50.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
-        Me.Label50.Name = "Label50"
-        Me.Label50.Size = New System.Drawing.Size(642, 25)
-        Me.Label50.TabIndex = 149
-        Me.Label50.Tag = "32"
-        Me.Label50.Text = "spm32"
-        Me.Label50.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.LabelSpm32.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.LabelSpm32.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
+        Me.LabelSpm32.Location = New System.Drawing.Point(6, 73)
+        Me.LabelSpm32.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
+        Me.LabelSpm32.Name = "LabelSpm32"
+        Me.LabelSpm32.Size = New System.Drawing.Size(642, 25)
+        Me.LabelSpm32.TabIndex = 149
+        Me.LabelSpm32.Tag = "32"
+        Me.LabelSpm32.Text = "spm32"
+        Me.LabelSpm32.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'Label51
+        'LabelSpm38
         '
-        Me.Label51.BackColor = System.Drawing.Color.WhiteSmoke
-        Me.Label51.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
-        Me.Label51.Location = New System.Drawing.Point(6, 223)
-        Me.Label51.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
-        Me.Label51.Name = "Label51"
-        Me.Label51.Size = New System.Drawing.Size(642, 25)
-        Me.Label51.TabIndex = 148
-        Me.Label51.Tag = "38"
-        Me.Label51.Text = "spm38"
-        Me.Label51.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.LabelSpm38.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.LabelSpm38.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
+        Me.LabelSpm38.Location = New System.Drawing.Point(6, 223)
+        Me.LabelSpm38.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
+        Me.LabelSpm38.Name = "LabelSpm38"
+        Me.LabelSpm38.Size = New System.Drawing.Size(642, 25)
+        Me.LabelSpm38.TabIndex = 148
+        Me.LabelSpm38.Tag = "38"
+        Me.LabelSpm38.Text = "spm38"
+        Me.LabelSpm38.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'Label52
+        'LabelSpm36
         '
-        Me.Label52.BackColor = System.Drawing.Color.WhiteSmoke
-        Me.Label52.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
-        Me.Label52.Location = New System.Drawing.Point(6, 173)
-        Me.Label52.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
-        Me.Label52.Name = "Label52"
-        Me.Label52.Size = New System.Drawing.Size(642, 25)
-        Me.Label52.TabIndex = 147
-        Me.Label52.Tag = "36"
-        Me.Label52.Text = "spm36"
-        Me.Label52.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.LabelSpm36.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.LabelSpm36.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
+        Me.LabelSpm36.Location = New System.Drawing.Point(6, 173)
+        Me.LabelSpm36.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
+        Me.LabelSpm36.Name = "LabelSpm36"
+        Me.LabelSpm36.Size = New System.Drawing.Size(642, 25)
+        Me.LabelSpm36.TabIndex = 147
+        Me.LabelSpm36.Tag = "36"
+        Me.LabelSpm36.Text = "spm36"
+        Me.LabelSpm36.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'Label53
+        'LabelSpm34
         '
-        Me.Label53.BackColor = System.Drawing.Color.WhiteSmoke
-        Me.Label53.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
-        Me.Label53.Location = New System.Drawing.Point(6, 123)
-        Me.Label53.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
-        Me.Label53.Name = "Label53"
-        Me.Label53.Size = New System.Drawing.Size(642, 25)
-        Me.Label53.TabIndex = 146
-        Me.Label53.Tag = "34"
-        Me.Label53.Text = "spm34"
-        Me.Label53.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.LabelSpm34.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.LabelSpm34.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
+        Me.LabelSpm34.Location = New System.Drawing.Point(6, 123)
+        Me.LabelSpm34.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
+        Me.LabelSpm34.Name = "LabelSpm34"
+        Me.LabelSpm34.Size = New System.Drawing.Size(642, 25)
+        Me.LabelSpm34.TabIndex = 146
+        Me.LabelSpm34.Tag = "34"
+        Me.LabelSpm34.Text = "spm34"
+        Me.LabelSpm34.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'Label54
+        'LabelSpm30
         '
-        Me.Label54.BackColor = System.Drawing.Color.WhiteSmoke
-        Me.Label54.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
-        Me.Label54.Location = New System.Drawing.Point(6, 23)
-        Me.Label54.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
-        Me.Label54.Name = "Label54"
-        Me.Label54.Size = New System.Drawing.Size(642, 25)
-        Me.Label54.TabIndex = 145
-        Me.Label54.Tag = "30"
-        Me.Label54.Text = "spm30"
-        Me.Label54.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.LabelSpm30.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.LabelSpm30.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
+        Me.LabelSpm30.Location = New System.Drawing.Point(6, 23)
+        Me.LabelSpm30.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
+        Me.LabelSpm30.Name = "LabelSpm30"
+        Me.LabelSpm30.Size = New System.Drawing.Size(642, 25)
+        Me.LabelSpm30.TabIndex = 145
+        Me.LabelSpm30.Tag = "30"
+        Me.LabelSpm30.Text = "spm30"
+        Me.LabelSpm30.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'Label100
         '
@@ -2945,6 +2862,103 @@ Partial Class egenSkjemaTempStorage
         Me.Label100.Size = New System.Drawing.Size(223, 13)
         Me.Label100.TabIndex = 144
         Me.Label100.Text = "Har du på noe tidspunkt gjennom livet"
+        '
+        'TabPage8
+        '
+        Me.TabPage8.Controls.Add(Me.Label62)
+        Me.TabPage8.Controls.Add(Me.Label63)
+        Me.TabPage8.Controls.Add(Me.Panel43)
+        Me.TabPage8.Controls.Add(Me.LabelSpm49)
+        Me.TabPage8.Controls.Add(Me.Label65)
+        Me.TabPage8.Controls.Add(Me.Panel39)
+        Me.TabPage8.Controls.Add(Me.Panel40)
+        Me.TabPage8.Controls.Add(Me.Panel41)
+        Me.TabPage8.Controls.Add(Me.Panel42)
+        Me.TabPage8.Controls.Add(Me.Label55)
+        Me.TabPage8.Controls.Add(Me.Label56)
+        Me.TabPage8.Controls.Add(Me.LabelSpm48)
+        Me.TabPage8.Controls.Add(Me.LabelSpm46)
+        Me.TabPage8.Controls.Add(Me.LabelSpm47)
+        Me.TabPage8.Controls.Add(Me.LabelSpm45)
+        Me.TabPage8.Controls.Add(Me.Label61)
+        Me.TabPage8.Location = New System.Drawing.Point(4, 22)
+        Me.TabPage8.Name = "TabPage8"
+        Me.TabPage8.Size = New System.Drawing.Size(763, 440)
+        Me.TabPage8.TabIndex = 7
+        Me.TabPage8.Text = "Side 7"
+        Me.TabPage8.UseVisualStyleBackColor = True
+        '
+        'Label62
+        '
+        Me.Label62.AutoSize = True
+        Me.Label62.Location = New System.Drawing.Point(620, 143)
+        Me.Label62.Name = "Label62"
+        Me.Label62.Size = New System.Drawing.Size(23, 13)
+        Me.Label62.TabIndex = 148
+        Me.Label62.Text = "Nei"
+        '
+        'Label63
+        '
+        Me.Label63.AutoSize = True
+        Me.Label63.Location = New System.Drawing.Point(568, 143)
+        Me.Label63.Name = "Label63"
+        Me.Label63.Size = New System.Drawing.Size(18, 13)
+        Me.Label63.TabIndex = 147
+        Me.Label63.Text = "Ja"
+        '
+        'Panel43
+        '
+        Me.Panel43.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.Panel43.Controls.Add(Me.RadioButton67)
+        Me.Panel43.Controls.Add(Me.RadioButton68)
+        Me.Panel43.Location = New System.Drawing.Point(571, 162)
+        Me.Panel43.Name = "Panel43"
+        Me.Panel43.Size = New System.Drawing.Size(66, 25)
+        Me.Panel43.TabIndex = 146
+        Me.Panel43.Tag = "50"
+        '
+        'RadioButton67
+        '
+        Me.RadioButton67.AutoSize = True
+        Me.RadioButton67.Location = New System.Drawing.Point(52, 6)
+        Me.RadioButton67.Name = "RadioButton67"
+        Me.RadioButton67.Size = New System.Drawing.Size(14, 13)
+        Me.RadioButton67.TabIndex = 37
+        Me.RadioButton67.TabStop = True
+        Me.RadioButton67.Tag = "50"
+        Me.RadioButton67.UseVisualStyleBackColor = True
+        '
+        'RadioButton68
+        '
+        Me.RadioButton68.AutoSize = True
+        Me.RadioButton68.Location = New System.Drawing.Point(0, 6)
+        Me.RadioButton68.Name = "RadioButton68"
+        Me.RadioButton68.Size = New System.Drawing.Size(14, 13)
+        Me.RadioButton68.TabIndex = 38
+        Me.RadioButton68.TabStop = True
+        Me.RadioButton68.Tag = "50"
+        Me.RadioButton68.UseVisualStyleBackColor = True
+        '
+        'LabelSpm49
+        '
+        Me.LabelSpm49.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.LabelSpm49.Location = New System.Drawing.Point(5, 162)
+        Me.LabelSpm49.Name = "LabelSpm49"
+        Me.LabelSpm49.Size = New System.Drawing.Size(642, 25)
+        Me.LabelSpm49.TabIndex = 145
+        Me.LabelSpm49.Tag = "49"
+        Me.LabelSpm49.Text = "spm49"
+        Me.LabelSpm49.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'Label65
+        '
+        Me.Label65.AutoSize = True
+        Me.Label65.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label65.Location = New System.Drawing.Point(5, 143)
+        Me.Label65.Name = "Label65"
+        Me.Label65.Size = New System.Drawing.Size(111, 13)
+        Me.Label65.TabIndex = 144
+        Me.Label65.Text = "Besvares av menn"
         '
         'Panel39
         '
@@ -3110,53 +3124,53 @@ Partial Class egenSkjemaTempStorage
         Me.Label56.TabIndex = 138
         Me.Label56.Text = "Ja"
         '
-        'Label57
+        'LabelSpm48
         '
-        Me.Label57.BackColor = System.Drawing.Color.White
-        Me.Label57.Location = New System.Drawing.Point(5, 101)
-        Me.Label57.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
-        Me.Label57.Name = "Label57"
-        Me.Label57.Size = New System.Drawing.Size(642, 25)
-        Me.Label57.TabIndex = 137
-        Me.Label57.Tag = "48"
-        Me.Label57.Text = "spm48"
-        Me.Label57.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.LabelSpm48.BackColor = System.Drawing.Color.White
+        Me.LabelSpm48.Location = New System.Drawing.Point(5, 101)
+        Me.LabelSpm48.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
+        Me.LabelSpm48.Name = "LabelSpm48"
+        Me.LabelSpm48.Size = New System.Drawing.Size(642, 25)
+        Me.LabelSpm48.TabIndex = 137
+        Me.LabelSpm48.Tag = "48"
+        Me.LabelSpm48.Text = "spm48"
+        Me.LabelSpm48.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'Label58
+        'LabelSpm46
         '
-        Me.Label58.BackColor = System.Drawing.Color.White
-        Me.Label58.Location = New System.Drawing.Point(5, 51)
-        Me.Label58.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
-        Me.Label58.Name = "Label58"
-        Me.Label58.Size = New System.Drawing.Size(642, 25)
-        Me.Label58.TabIndex = 136
-        Me.Label58.Tag = "46"
-        Me.Label58.Text = "spm46"
-        Me.Label58.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.LabelSpm46.BackColor = System.Drawing.Color.White
+        Me.LabelSpm46.Location = New System.Drawing.Point(5, 51)
+        Me.LabelSpm46.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
+        Me.LabelSpm46.Name = "LabelSpm46"
+        Me.LabelSpm46.Size = New System.Drawing.Size(642, 25)
+        Me.LabelSpm46.TabIndex = 136
+        Me.LabelSpm46.Tag = "46"
+        Me.LabelSpm46.Text = "spm46"
+        Me.LabelSpm46.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'Label59
+        'LabelSpm47
         '
-        Me.Label59.BackColor = System.Drawing.Color.WhiteSmoke
-        Me.Label59.Location = New System.Drawing.Point(5, 76)
-        Me.Label59.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
-        Me.Label59.Name = "Label59"
-        Me.Label59.Size = New System.Drawing.Size(642, 25)
-        Me.Label59.TabIndex = 135
-        Me.Label59.Tag = "47"
-        Me.Label59.Text = "spm47"
-        Me.Label59.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.LabelSpm47.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.LabelSpm47.Location = New System.Drawing.Point(5, 76)
+        Me.LabelSpm47.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
+        Me.LabelSpm47.Name = "LabelSpm47"
+        Me.LabelSpm47.Size = New System.Drawing.Size(642, 25)
+        Me.LabelSpm47.TabIndex = 135
+        Me.LabelSpm47.Tag = "47"
+        Me.LabelSpm47.Text = "spm47"
+        Me.LabelSpm47.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'Label60
+        'LabelSpm45
         '
-        Me.Label60.BackColor = System.Drawing.Color.WhiteSmoke
-        Me.Label60.Location = New System.Drawing.Point(5, 26)
-        Me.Label60.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
-        Me.Label60.Name = "Label60"
-        Me.Label60.Size = New System.Drawing.Size(642, 25)
-        Me.Label60.TabIndex = 134
-        Me.Label60.Tag = "45"
-        Me.Label60.Text = "spm45"
-        Me.Label60.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.LabelSpm45.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.LabelSpm45.Location = New System.Drawing.Point(5, 26)
+        Me.LabelSpm45.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
+        Me.LabelSpm45.Name = "LabelSpm45"
+        Me.LabelSpm45.Size = New System.Drawing.Size(642, 25)
+        Me.LabelSpm45.TabIndex = 134
+        Me.LabelSpm45.Tag = "45"
+        Me.LabelSpm45.Text = "spm45"
+        Me.LabelSpm45.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'Label61
         '
@@ -3168,77 +3182,37 @@ Partial Class egenSkjemaTempStorage
         Me.Label61.TabIndex = 133
         Me.Label61.Text = "Besvares av kvinner"
         '
-        'Label62
+        'TabPage9
         '
-        Me.Label62.AutoSize = True
-        Me.Label62.Location = New System.Drawing.Point(620, 143)
-        Me.Label62.Name = "Label62"
-        Me.Label62.Size = New System.Drawing.Size(23, 13)
-        Me.Label62.TabIndex = 148
-        Me.Label62.Text = "Nei"
-        '
-        'Label63
-        '
-        Me.Label63.AutoSize = True
-        Me.Label63.Location = New System.Drawing.Point(568, 143)
-        Me.Label63.Name = "Label63"
-        Me.Label63.Size = New System.Drawing.Size(18, 13)
-        Me.Label63.TabIndex = 147
-        Me.Label63.Text = "Ja"
-        '
-        'Panel43
-        '
-        Me.Panel43.BackColor = System.Drawing.Color.WhiteSmoke
-        Me.Panel43.Controls.Add(Me.RadioButton67)
-        Me.Panel43.Controls.Add(Me.RadioButton68)
-        Me.Panel43.Location = New System.Drawing.Point(571, 162)
-        Me.Panel43.Name = "Panel43"
-        Me.Panel43.Size = New System.Drawing.Size(66, 25)
-        Me.Panel43.TabIndex = 146
-        Me.Panel43.Tag = "50"
-        '
-        'RadioButton67
-        '
-        Me.RadioButton67.AutoSize = True
-        Me.RadioButton67.Location = New System.Drawing.Point(52, 6)
-        Me.RadioButton67.Name = "RadioButton67"
-        Me.RadioButton67.Size = New System.Drawing.Size(14, 13)
-        Me.RadioButton67.TabIndex = 37
-        Me.RadioButton67.TabStop = True
-        Me.RadioButton67.Tag = "50"
-        Me.RadioButton67.UseVisualStyleBackColor = True
-        '
-        'RadioButton68
-        '
-        Me.RadioButton68.AutoSize = True
-        Me.RadioButton68.Location = New System.Drawing.Point(0, 6)
-        Me.RadioButton68.Name = "RadioButton68"
-        Me.RadioButton68.Size = New System.Drawing.Size(14, 13)
-        Me.RadioButton68.TabIndex = 38
-        Me.RadioButton68.TabStop = True
-        Me.RadioButton68.Tag = "50"
-        Me.RadioButton68.UseVisualStyleBackColor = True
-        '
-        'Label64
-        '
-        Me.Label64.BackColor = System.Drawing.Color.WhiteSmoke
-        Me.Label64.Location = New System.Drawing.Point(5, 162)
-        Me.Label64.Name = "Label64"
-        Me.Label64.Size = New System.Drawing.Size(642, 25)
-        Me.Label64.TabIndex = 145
-        Me.Label64.Tag = "50"
-        Me.Label64.Text = "spm50"
-        Me.Label64.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        '
-        'Label65
-        '
-        Me.Label65.AutoSize = True
-        Me.Label65.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label65.Location = New System.Drawing.Point(5, 143)
-        Me.Label65.Name = "Label65"
-        Me.Label65.Size = New System.Drawing.Size(111, 13)
-        Me.Label65.TabIndex = 144
-        Me.Label65.Text = "Besvares av menn"
+        Me.TabPage9.Controls.Add(Me.Label66)
+        Me.TabPage9.Controls.Add(Me.Label67)
+        Me.TabPage9.Controls.Add(Me.Panel44)
+        Me.TabPage9.Controls.Add(Me.Panel45)
+        Me.TabPage9.Controls.Add(Me.Panel46)
+        Me.TabPage9.Controls.Add(Me.Panel47)
+        Me.TabPage9.Controls.Add(Me.Panel48)
+        Me.TabPage9.Controls.Add(Me.Panel49)
+        Me.TabPage9.Controls.Add(Me.Panel50)
+        Me.TabPage9.Controls.Add(Me.Panel51)
+        Me.TabPage9.Controls.Add(Me.Panel52)
+        Me.TabPage9.Controls.Add(Me.Panel53)
+        Me.TabPage9.Controls.Add(Me.LabelSpm53)
+        Me.TabPage9.Controls.Add(Me.LabelSpm55)
+        Me.TabPage9.Controls.Add(Me.LabelSpm57)
+        Me.TabPage9.Controls.Add(Me.LabelSpm59)
+        Me.TabPage9.Controls.Add(Me.LabelSpm51)
+        Me.TabPage9.Controls.Add(Me.LabelSpm52)
+        Me.TabPage9.Controls.Add(Me.LabelSpm58)
+        Me.TabPage9.Controls.Add(Me.LabelSpm56)
+        Me.TabPage9.Controls.Add(Me.LabelSpm54)
+        Me.TabPage9.Controls.Add(Me.LabelSpm50)
+        Me.TabPage9.Controls.Add(Me.Label78)
+        Me.TabPage9.Location = New System.Drawing.Point(4, 22)
+        Me.TabPage9.Name = "TabPage9"
+        Me.TabPage9.Size = New System.Drawing.Size(763, 440)
+        Me.TabPage9.TabIndex = 8
+        Me.TabPage9.Text = "Side 8"
+        Me.TabPage9.UseVisualStyleBackColor = True
         '
         'Label66
         '
@@ -3588,115 +3562,115 @@ Partial Class egenSkjemaTempStorage
         Me.RadioButton88.Tag = "55"
         Me.RadioButton88.UseVisualStyleBackColor = True
         '
-        'Label68
+        'LabelSpm53
         '
-        Me.Label68.BackColor = System.Drawing.Color.White
-        Me.Label68.Location = New System.Drawing.Point(3, 99)
-        Me.Label68.Name = "Label68"
-        Me.Label68.Size = New System.Drawing.Size(642, 25)
-        Me.Label68.TabIndex = 135
-        Me.Label68.Tag = "53"
-        Me.Label68.Text = "spm53"
-        Me.Label68.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.LabelSpm53.BackColor = System.Drawing.Color.White
+        Me.LabelSpm53.Location = New System.Drawing.Point(3, 99)
+        Me.LabelSpm53.Name = "LabelSpm53"
+        Me.LabelSpm53.Size = New System.Drawing.Size(642, 25)
+        Me.LabelSpm53.TabIndex = 135
+        Me.LabelSpm53.Tag = "53"
+        Me.LabelSpm53.Text = "spm53"
+        Me.LabelSpm53.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'Label69
+        'LabelSpm55
         '
-        Me.Label69.BackColor = System.Drawing.Color.White
-        Me.Label69.Location = New System.Drawing.Point(3, 149)
-        Me.Label69.Name = "Label69"
-        Me.Label69.Size = New System.Drawing.Size(642, 25)
-        Me.Label69.TabIndex = 134
-        Me.Label69.Tag = "55"
-        Me.Label69.Text = "spm55"
-        Me.Label69.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.LabelSpm55.BackColor = System.Drawing.Color.White
+        Me.LabelSpm55.Location = New System.Drawing.Point(3, 149)
+        Me.LabelSpm55.Name = "LabelSpm55"
+        Me.LabelSpm55.Size = New System.Drawing.Size(642, 25)
+        Me.LabelSpm55.TabIndex = 134
+        Me.LabelSpm55.Tag = "55"
+        Me.LabelSpm55.Text = "spm55"
+        Me.LabelSpm55.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'Label70
+        'LabelSpm57
         '
-        Me.Label70.BackColor = System.Drawing.Color.White
-        Me.Label70.Location = New System.Drawing.Point(3, 199)
-        Me.Label70.Name = "Label70"
-        Me.Label70.Size = New System.Drawing.Size(642, 25)
-        Me.Label70.TabIndex = 133
-        Me.Label70.Tag = "57"
-        Me.Label70.Text = "spm57"
-        Me.Label70.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.LabelSpm57.BackColor = System.Drawing.Color.White
+        Me.LabelSpm57.Location = New System.Drawing.Point(3, 199)
+        Me.LabelSpm57.Name = "LabelSpm57"
+        Me.LabelSpm57.Size = New System.Drawing.Size(642, 25)
+        Me.LabelSpm57.TabIndex = 133
+        Me.LabelSpm57.Tag = "57"
+        Me.LabelSpm57.Text = "spm57"
+        Me.LabelSpm57.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'Label71
+        'LabelSpm59
         '
-        Me.Label71.BackColor = System.Drawing.Color.White
-        Me.Label71.Location = New System.Drawing.Point(3, 249)
-        Me.Label71.Name = "Label71"
-        Me.Label71.Size = New System.Drawing.Size(642, 25)
-        Me.Label71.TabIndex = 132
-        Me.Label71.Tag = "59"
-        Me.Label71.Text = "spm59"
-        Me.Label71.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.LabelSpm59.BackColor = System.Drawing.Color.White
+        Me.LabelSpm59.Location = New System.Drawing.Point(3, 249)
+        Me.LabelSpm59.Name = "LabelSpm59"
+        Me.LabelSpm59.Size = New System.Drawing.Size(642, 25)
+        Me.LabelSpm59.TabIndex = 132
+        Me.LabelSpm59.Tag = "59"
+        Me.LabelSpm59.Text = "spm59"
+        Me.LabelSpm59.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'Label72
+        'LabelSpm51
         '
-        Me.Label72.BackColor = System.Drawing.Color.White
-        Me.Label72.Location = New System.Drawing.Point(3, 49)
-        Me.Label72.Name = "Label72"
-        Me.Label72.Size = New System.Drawing.Size(642, 25)
-        Me.Label72.TabIndex = 131
-        Me.Label72.Tag = "51"
-        Me.Label72.Text = "spm51"
-        Me.Label72.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.LabelSpm51.BackColor = System.Drawing.Color.White
+        Me.LabelSpm51.Location = New System.Drawing.Point(3, 49)
+        Me.LabelSpm51.Name = "LabelSpm51"
+        Me.LabelSpm51.Size = New System.Drawing.Size(642, 25)
+        Me.LabelSpm51.TabIndex = 131
+        Me.LabelSpm51.Tag = "51"
+        Me.LabelSpm51.Text = "spm51"
+        Me.LabelSpm51.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'Label73
+        'LabelSpm52
         '
-        Me.Label73.BackColor = System.Drawing.Color.WhiteSmoke
-        Me.Label73.Location = New System.Drawing.Point(3, 74)
-        Me.Label73.Name = "Label73"
-        Me.Label73.Size = New System.Drawing.Size(642, 25)
-        Me.Label73.TabIndex = 130
-        Me.Label73.Tag = "52"
-        Me.Label73.Text = "spm52"
-        Me.Label73.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.LabelSpm52.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.LabelSpm52.Location = New System.Drawing.Point(3, 74)
+        Me.LabelSpm52.Name = "LabelSpm52"
+        Me.LabelSpm52.Size = New System.Drawing.Size(642, 25)
+        Me.LabelSpm52.TabIndex = 130
+        Me.LabelSpm52.Tag = "52"
+        Me.LabelSpm52.Text = "spm52"
+        Me.LabelSpm52.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'Label74
+        'LabelSpm58
         '
-        Me.Label74.BackColor = System.Drawing.Color.WhiteSmoke
-        Me.Label74.Location = New System.Drawing.Point(3, 224)
-        Me.Label74.Name = "Label74"
-        Me.Label74.Size = New System.Drawing.Size(642, 25)
-        Me.Label74.TabIndex = 129
-        Me.Label74.Tag = "58"
-        Me.Label74.Text = "spm58"
-        Me.Label74.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.LabelSpm58.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.LabelSpm58.Location = New System.Drawing.Point(3, 224)
+        Me.LabelSpm58.Name = "LabelSpm58"
+        Me.LabelSpm58.Size = New System.Drawing.Size(642, 25)
+        Me.LabelSpm58.TabIndex = 129
+        Me.LabelSpm58.Tag = "58"
+        Me.LabelSpm58.Text = "spm58"
+        Me.LabelSpm58.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'Label75
+        'LabelSpm56
         '
-        Me.Label75.BackColor = System.Drawing.Color.WhiteSmoke
-        Me.Label75.Location = New System.Drawing.Point(3, 174)
-        Me.Label75.Name = "Label75"
-        Me.Label75.Size = New System.Drawing.Size(642, 25)
-        Me.Label75.TabIndex = 128
-        Me.Label75.Tag = "56"
-        Me.Label75.Text = "spm56"
-        Me.Label75.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.LabelSpm56.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.LabelSpm56.Location = New System.Drawing.Point(3, 174)
+        Me.LabelSpm56.Name = "LabelSpm56"
+        Me.LabelSpm56.Size = New System.Drawing.Size(642, 25)
+        Me.LabelSpm56.TabIndex = 128
+        Me.LabelSpm56.Tag = "56"
+        Me.LabelSpm56.Text = "spm56"
+        Me.LabelSpm56.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'Label76
+        'LabelSpm54
         '
-        Me.Label76.BackColor = System.Drawing.Color.WhiteSmoke
-        Me.Label76.Location = New System.Drawing.Point(3, 124)
-        Me.Label76.Name = "Label76"
-        Me.Label76.Size = New System.Drawing.Size(642, 25)
-        Me.Label76.TabIndex = 127
-        Me.Label76.Tag = "54"
-        Me.Label76.Text = "spm54"
-        Me.Label76.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.LabelSpm54.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.LabelSpm54.Location = New System.Drawing.Point(3, 124)
+        Me.LabelSpm54.Name = "LabelSpm54"
+        Me.LabelSpm54.Size = New System.Drawing.Size(642, 25)
+        Me.LabelSpm54.TabIndex = 127
+        Me.LabelSpm54.Tag = "54"
+        Me.LabelSpm54.Text = "spm54"
+        Me.LabelSpm54.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'Label77
+        'LabelSpm50
         '
-        Me.Label77.BackColor = System.Drawing.Color.WhiteSmoke
-        Me.Label77.Location = New System.Drawing.Point(3, 24)
-        Me.Label77.Name = "Label77"
-        Me.Label77.Size = New System.Drawing.Size(642, 25)
-        Me.Label77.TabIndex = 126
-        Me.Label77.Tag = "50"
-        Me.Label77.Text = "spm50"
-        Me.Label77.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.LabelSpm50.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.LabelSpm50.Location = New System.Drawing.Point(3, 24)
+        Me.LabelSpm50.Name = "LabelSpm50"
+        Me.LabelSpm50.Size = New System.Drawing.Size(642, 25)
+        Me.LabelSpm50.TabIndex = 126
+        Me.LabelSpm50.Tag = "50"
+        Me.LabelSpm50.Text = "spm50"
+        Me.LabelSpm50.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'Label78
         '
@@ -3760,18 +3734,55 @@ Partial Class egenSkjemaTempStorage
         Me.Label79.TabIndex = 5
         Me.Label79.Text = "Er det noen andre eventuelle opplysninger du vil tilføye?"
         '
+        'ButtonNeste
+        '
+        Me.ButtonNeste.Location = New System.Drawing.Point(697, 531)
+        Me.ButtonNeste.Name = "ButtonNeste"
+        Me.ButtonNeste.Size = New System.Drawing.Size(75, 23)
+        Me.ButtonNeste.TabIndex = 0
+        Me.ButtonNeste.Text = "Neste side"
+        Me.ButtonNeste.UseVisualStyleBackColor = True
+        '
+        'ButtonForrige
+        '
+        Me.ButtonForrige.Location = New System.Drawing.Point(12, 531)
+        Me.ButtonForrige.Name = "ButtonForrige"
+        Me.ButtonForrige.Size = New System.Drawing.Size(75, 23)
+        Me.ButtonForrige.TabIndex = 1
+        Me.ButtonForrige.Text = "Forrige side"
+        Me.ButtonForrige.UseVisualStyleBackColor = True
+        '
+        'LabelFeilMelding
+        '
+        Me.LabelFeilMelding.AutoSize = True
+        Me.LabelFeilMelding.Location = New System.Drawing.Point(627, 515)
+        Me.LabelFeilMelding.Name = "LabelFeilMelding"
+        Me.LabelFeilMelding.Size = New System.Drawing.Size(145, 13)
+        Me.LabelFeilMelding.TabIndex = 87
+        Me.LabelFeilMelding.Text = "Du må svare på alle spørsmål"
+        Me.LabelFeilMelding.Visible = False
+        '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(341, 318)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(75, 23)
+        Me.Button1.TabIndex = 102
+        Me.Button1.Text = "Button1"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
         'egenSkjemaTempStorage
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(784, 561)
         Me.Controls.Add(Me.LabelFeilMelding)
-        Me.Controls.Add(Me.TabControl1)
-        Me.Controls.Add(Me.Button2)
-        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.TabControlEgenskjema)
+        Me.Controls.Add(Me.ButtonForrige)
+        Me.Controls.Add(Me.ButtonNeste)
         Me.Name = "egenSkjemaTempStorage"
         Me.Text = "egenSkjemaTempStorage"
-        Me.TabControl1.ResumeLayout(False)
+        Me.TabControlEgenskjema.ResumeLayout(False)
         Me.TabPage2.ResumeLayout(False)
         Me.TabPage2.PerformLayout()
         Me.PanelSpm2.ResumeLayout(False)
@@ -3788,18 +3799,6 @@ Partial Class egenSkjemaTempStorage
         Me.PanelSpm6.PerformLayout()
         Me.TabPage3.ResumeLayout(False)
         Me.TabPage3.PerformLayout()
-        Me.TabPage4.ResumeLayout(False)
-        Me.TabPage4.PerformLayout()
-        Me.TabPage5.ResumeLayout(False)
-        Me.TabPage5.PerformLayout()
-        Me.TabPage6.ResumeLayout(False)
-        Me.TabPage6.PerformLayout()
-        Me.TabPage7.ResumeLayout(False)
-        Me.TabPage7.PerformLayout()
-        Me.TabPage8.ResumeLayout(False)
-        Me.TabPage8.PerformLayout()
-        Me.TabPage9.ResumeLayout(False)
-        Me.TabPage9.PerformLayout()
         Me.Panel9.ResumeLayout(False)
         Me.Panel9.PerformLayout()
         Me.Panel5.ResumeLayout(False)
@@ -3810,6 +3809,8 @@ Partial Class egenSkjemaTempStorage
         Me.Panel2.PerformLayout()
         Me.Panel3.ResumeLayout(False)
         Me.Panel3.PerformLayout()
+        Me.TabPage4.ResumeLayout(False)
+        Me.TabPage4.PerformLayout()
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
         Me.Panel6.ResumeLayout(False)
@@ -3824,6 +3825,8 @@ Partial Class egenSkjemaTempStorage
         Me.Panel11.PerformLayout()
         Me.Panel12.ResumeLayout(False)
         Me.Panel12.PerformLayout()
+        Me.TabPage5.ResumeLayout(False)
+        Me.TabPage5.PerformLayout()
         Me.Panel13.ResumeLayout(False)
         Me.Panel13.PerformLayout()
         Me.Panel14.ResumeLayout(False)
@@ -3844,8 +3847,12 @@ Partial Class egenSkjemaTempStorage
         Me.Panel21.PerformLayout()
         Me.Panel22.ResumeLayout(False)
         Me.Panel22.PerformLayout()
+        Me.TabPage6.ResumeLayout(False)
+        Me.TabPage6.PerformLayout()
         Me.Panel23.ResumeLayout(False)
         Me.Panel23.PerformLayout()
+        Me.TabPage7.ResumeLayout(False)
+        Me.TabPage7.PerformLayout()
         Me.Panel24.ResumeLayout(False)
         Me.Panel24.PerformLayout()
         Me.Panel25.ResumeLayout(False)
@@ -3876,6 +3883,10 @@ Partial Class egenSkjemaTempStorage
         Me.Panel37.PerformLayout()
         Me.Panel38.ResumeLayout(False)
         Me.Panel38.PerformLayout()
+        Me.TabPage8.ResumeLayout(False)
+        Me.TabPage8.PerformLayout()
+        Me.Panel43.ResumeLayout(False)
+        Me.Panel43.PerformLayout()
         Me.Panel39.ResumeLayout(False)
         Me.Panel39.PerformLayout()
         Me.Panel40.ResumeLayout(False)
@@ -3884,8 +3895,8 @@ Partial Class egenSkjemaTempStorage
         Me.Panel41.PerformLayout()
         Me.Panel42.ResumeLayout(False)
         Me.Panel42.PerformLayout()
-        Me.Panel43.ResumeLayout(False)
-        Me.Panel43.PerformLayout()
+        Me.TabPage9.ResumeLayout(False)
+        Me.TabPage9.PerformLayout()
         Me.Panel44.ResumeLayout(False)
         Me.Panel44.PerformLayout()
         Me.Panel45.ResumeLayout(False)
@@ -3913,10 +3924,10 @@ Partial Class egenSkjemaTempStorage
 
     End Sub
 
-    Friend WithEvents TabControl1 As TabControl
+    Friend WithEvents TabControlEgenskjema As TabControl
     Friend WithEvents TabPage1 As TabPage
-    Friend WithEvents Button2 As Button
-    Friend WithEvents Button1 As Button
+    Friend WithEvents ButtonForrige As Button
+    Friend WithEvents ButtonNeste As Button
     Friend WithEvents TabPage2 As TabPage
     Friend WithEvents TabPage3 As TabPage
     Friend WithEvents TabPage4 As TabPage
@@ -3970,17 +3981,17 @@ Partial Class egenSkjemaTempStorage
     Friend WithEvents Panel3 As Panel
     Friend WithEvents RadioButton9 As RadioButton
     Friend WithEvents RadioButton10 As RadioButton
-    Friend WithEvents Label1 As Label
-    Friend WithEvents Label2 As Label
-    Friend WithEvents Label3 As Label
-    Friend WithEvents Label5 As Label
-    Friend WithEvents Label4 As Label
+    Friend WithEvents LabelSpm7 As Label
+    Friend WithEvents LabelSpm8 As Label
+    Friend WithEvents LabelSpm9 As Label
+    Friend WithEvents LabelSpm11 As Label
+    Friend WithEvents LabelSpm10 As Label
     Friend WithEvents Label6 As Label
     Friend WithEvents Label10 As Label
     Friend WithEvents Label11 As Label
     Friend WithEvents Panel1 As Panel
-    Friend WithEvents RadioButtonN7 As RadioButton
-    Friend WithEvents RadioButtonJ7 As RadioButton
+    Friend WithEvents RadioButtonN7dd As RadioButton
+    Friend WithEvents RadioButtonJ7dd As RadioButton
     Friend WithEvents Panel6 As Panel
     Friend WithEvents RadioButton11 As RadioButton
     Friend WithEvents RadioButton12 As RadioButton
@@ -3999,13 +4010,13 @@ Partial Class egenSkjemaTempStorage
     Friend WithEvents Panel12 As Panel
     Friend WithEvents RadioButton21 As RadioButton
     Friend WithEvents RadioButton22 As RadioButton
-    Friend WithEvents Label14 As Label
-    Friend WithEvents Label15 As Label
-    Friend WithEvents Label16 As Label
-    Friend WithEvents Label17 As Label
-    Friend WithEvents Label18 As Label
-    Friend WithEvents Label19 As Label
-    Friend WithEvents Label20 As Label
+    Friend WithEvents LabelSpm18 As Label
+    Friend WithEvents LabelSpm12 As Label
+    Friend WithEvents LabelSpm13 As Label
+    Friend WithEvents LabelSpm14 As Label
+    Friend WithEvents LabelSpm16 As Label
+    Friend WithEvents LabelSpm15 As Label
+    Friend WithEvents LabelSpm17 As Label
     Friend WithEvents Label21 As Label
     Friend WithEvents Label22 As Label
     Friend WithEvents Label23 As Label
@@ -4039,23 +4050,23 @@ Partial Class egenSkjemaTempStorage
     Friend WithEvents Panel22 As Panel
     Friend WithEvents RadioButton35 As RadioButton
     Friend WithEvents RadioButton36 As RadioButton
-    Friend WithEvents Label24 As Label
-    Friend WithEvents Label25 As Label
-    Friend WithEvents Label26 As Label
-    Friend WithEvents Label27 As Label
-    Friend WithEvents Label28 As Label
-    Friend WithEvents Label29 As Label
-    Friend WithEvents Label30 As Label
-    Friend WithEvents Label31 As Label
-    Friend WithEvents Label32 As Label
-    Friend WithEvents Label33 As Label
+    Friend WithEvents LabelSpm26 As Label
+    Friend WithEvents LabelSpm27 As Label
+    Friend WithEvents LabelSpm28 As Label
+    Friend WithEvents LabelSpm19 As Label
+    Friend WithEvents LabelSpm25 As Label
+    Friend WithEvents LabelSpm20 As Label
+    Friend WithEvents LabelSpm21 As Label
+    Friend WithEvents LabelSpm23 As Label
+    Friend WithEvents LabelSpm22 As Label
+    Friend WithEvents LabelSpm24 As Label
     Friend WithEvents Label1000 As Label
     Friend WithEvents Label34 As Label
     Friend WithEvents Panel23 As Panel
     Friend WithEvents RadioButton37 As RadioButton
     Friend WithEvents RadioButton38 As RadioButton
     Friend WithEvents Label35 As Label
-    Friend WithEvents Label36 As Label
+    Friend WithEvents LabelSpm29 As Label
     Friend WithEvents Label37 As Label
     Friend WithEvents Label38 As Label
     Friend WithEvents Label39 As Label
@@ -4104,21 +4115,21 @@ Partial Class egenSkjemaTempStorage
     Friend WithEvents Panel38 As Panel
     Friend WithEvents RadioButton57 As RadioButton
     Friend WithEvents RadioButton58 As RadioButton
-    Friend WithEvents Label40 As Label
-    Friend WithEvents Label41 As Label
-    Friend WithEvents Label42 As Label
-    Friend WithEvents Label43 As Label
-    Friend WithEvents Label44 As Label
-    Friend WithEvents Label45 As Label
-    Friend WithEvents Label46 As Label
-    Friend WithEvents Label47 As Label
-    Friend WithEvents Label48 As Label
-    Friend WithEvents Label49 As Label
-    Friend WithEvents Label50 As Label
-    Friend WithEvents Label51 As Label
-    Friend WithEvents Label52 As Label
-    Friend WithEvents Label53 As Label
-    Friend WithEvents Label54 As Label
+    Friend WithEvents LabelSpm44 As Label
+    Friend WithEvents LabelSpm43 As Label
+    Friend WithEvents LabelSpm41 As Label
+    Friend WithEvents LabelSpm42 As Label
+    Friend WithEvents LabelSpm40 As Label
+    Friend WithEvents LabelSpm33 As Label
+    Friend WithEvents LabelSpm35 As Label
+    Friend WithEvents LabelSpm37 As Label
+    Friend WithEvents LabelSpm39 As Label
+    Friend WithEvents LabelSpm31 As Label
+    Friend WithEvents LabelSpm32 As Label
+    Friend WithEvents LabelSpm38 As Label
+    Friend WithEvents LabelSpm36 As Label
+    Friend WithEvents LabelSpm34 As Label
+    Friend WithEvents LabelSpm30 As Label
     Friend WithEvents Label100 As Label
     Friend WithEvents Panel39 As Panel
     Friend WithEvents RadioButton59 As RadioButton
@@ -4134,17 +4145,17 @@ Partial Class egenSkjemaTempStorage
     Friend WithEvents RadioButton66 As RadioButton
     Friend WithEvents Label55 As Label
     Friend WithEvents Label56 As Label
-    Friend WithEvents Label57 As Label
-    Friend WithEvents Label58 As Label
-    Friend WithEvents Label59 As Label
-    Friend WithEvents Label60 As Label
+    Friend WithEvents LabelSpm48 As Label
+    Friend WithEvents LabelSpm46 As Label
+    Friend WithEvents LabelSpm47 As Label
+    Friend WithEvents LabelSpm45 As Label
     Friend WithEvents Label61 As Label
     Friend WithEvents Label62 As Label
     Friend WithEvents Label63 As Label
     Friend WithEvents Panel43 As Panel
     Friend WithEvents RadioButton67 As RadioButton
     Friend WithEvents RadioButton68 As RadioButton
-    Friend WithEvents Label64 As Label
+    Friend WithEvents LabelSpm49 As Label
     Friend WithEvents Label65 As Label
     Friend WithEvents Label66 As Label
     Friend WithEvents Label67 As Label
@@ -4178,20 +4189,21 @@ Partial Class egenSkjemaTempStorage
     Friend WithEvents Panel53 As Panel
     Friend WithEvents RadioButton87 As RadioButton
     Friend WithEvents RadioButton88 As RadioButton
-    Friend WithEvents Label68 As Label
-    Friend WithEvents Label69 As Label
-    Friend WithEvents Label70 As Label
-    Friend WithEvents Label71 As Label
-    Friend WithEvents Label72 As Label
-    Friend WithEvents Label73 As Label
-    Friend WithEvents Label74 As Label
-    Friend WithEvents Label75 As Label
-    Friend WithEvents Label76 As Label
-    Friend WithEvents Label77 As Label
+    Friend WithEvents LabelSpm53 As Label
+    Friend WithEvents LabelSpm55 As Label
+    Friend WithEvents LabelSpm57 As Label
+    Friend WithEvents LabelSpm59 As Label
+    Friend WithEvents LabelSpm51 As Label
+    Friend WithEvents LabelSpm52 As Label
+    Friend WithEvents LabelSpm58 As Label
+    Friend WithEvents LabelSpm56 As Label
+    Friend WithEvents LabelSpm54 As Label
+    Friend WithEvents LabelSpm50 As Label
     Friend WithEvents Label78 As Label
     Friend WithEvents TabPage10 As TabPage
     Friend WithEvents CheckBoxSms As CheckBox
     Friend WithEvents CheckBoxEpost As CheckBox
     Friend WithEvents TextBoxEvt As TextBox
     Friend WithEvents Label79 As Label
+    Friend WithEvents Button1 As Button
 End Class

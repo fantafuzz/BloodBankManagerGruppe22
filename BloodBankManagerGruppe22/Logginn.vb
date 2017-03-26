@@ -168,7 +168,7 @@ www.stolav.no/blodgiver
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         Me.Hide()
-        egenSkjemaBolk1.Show()
+        egenSkjemaTempStorage.Show()
     End Sub
 
     Private Sub PictureBox1_Click(sender As Object, e As EventArgs)
