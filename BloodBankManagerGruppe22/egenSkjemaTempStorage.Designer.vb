@@ -405,7 +405,6 @@ Partial Class egenSkjemaTempStorage
         '
         'TabPage2
         '
-        Me.TabPage2.Controls.Add(Me.Button1)
         Me.TabPage2.Controls.Add(Me.PanelSpm2)
         Me.TabPage2.Controls.Add(Me.PanelSpm4)
         Me.TabPage2.Controls.Add(Me.PanelSpm5)
@@ -2915,7 +2914,7 @@ Partial Class egenSkjemaTempStorage
         Me.Panel43.Name = "Panel43"
         Me.Panel43.Size = New System.Drawing.Size(66, 25)
         Me.Panel43.TabIndex = 146
-        Me.Panel43.Tag = "50"
+        Me.Panel43.Tag = "49"
         '
         'RadioButton67
         '
@@ -2925,7 +2924,7 @@ Partial Class egenSkjemaTempStorage
         Me.RadioButton67.Size = New System.Drawing.Size(14, 13)
         Me.RadioButton67.TabIndex = 37
         Me.RadioButton67.TabStop = True
-        Me.RadioButton67.Tag = "50"
+        Me.RadioButton67.Tag = "49"
         Me.RadioButton67.UseVisualStyleBackColor = True
         '
         'RadioButton68
@@ -2936,7 +2935,7 @@ Partial Class egenSkjemaTempStorage
         Me.RadioButton68.Size = New System.Drawing.Size(14, 13)
         Me.RadioButton68.TabIndex = 38
         Me.RadioButton68.TabStop = True
-        Me.RadioButton68.Tag = "50"
+        Me.RadioButton68.Tag = "49"
         Me.RadioButton68.UseVisualStyleBackColor = True
         '
         'LabelSpm49
@@ -3684,6 +3683,7 @@ Partial Class egenSkjemaTempStorage
         '
         'TabPage10
         '
+        Me.TabPage10.Controls.Add(Me.Button1)
         Me.TabPage10.Controls.Add(Me.CheckBoxSms)
         Me.TabPage10.Controls.Add(Me.CheckBoxEpost)
         Me.TabPage10.Controls.Add(Me.TextBoxEvt)
@@ -3702,6 +3702,7 @@ Partial Class egenSkjemaTempStorage
         Me.CheckBoxSms.Name = "CheckBoxSms"
         Me.CheckBoxSms.Size = New System.Drawing.Size(57, 17)
         Me.CheckBoxSms.TabIndex = 8
+        Me.CheckBoxSms.Tag = ""
         Me.CheckBoxSms.Text = "spm61"
         Me.CheckBoxSms.UseVisualStyleBackColor = True
         '
@@ -3712,6 +3713,7 @@ Partial Class egenSkjemaTempStorage
         Me.CheckBoxEpost.Name = "CheckBoxEpost"
         Me.CheckBoxEpost.Size = New System.Drawing.Size(57, 17)
         Me.CheckBoxEpost.TabIndex = 7
+        Me.CheckBoxEpost.Tag = ""
         Me.CheckBoxEpost.Text = "spm60"
         Me.CheckBoxEpost.UseVisualStyleBackColor = True
         '
@@ -3764,10 +3766,10 @@ Partial Class egenSkjemaTempStorage
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(341, 318)
+        Me.Button1.Location = New System.Drawing.Point(477, 302)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(75, 23)
-        Me.Button1.TabIndex = 102
+        Me.Button1.TabIndex = 9
         Me.Button1.Text = "Button1"
         Me.Button1.UseVisualStyleBackColor = True
         '

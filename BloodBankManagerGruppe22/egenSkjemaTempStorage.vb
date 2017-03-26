@@ -109,8 +109,6 @@
         Return anyError 'Returnerer true om det er funnet et spørsmål som ikke er svart på.
     End Function
     Private Sub changeToDefault(ByVal tag As Integer) ' Endrer fargene tilbake til white og whitesmoke når du svarer.
-        MsgBox("pls")
-
         For Each tab As TabPage In TabControlEgenskjema.TabPages
             For Each ctrl As Control In tab.Controls
                 If ctrl.GetType() Is GetType(System.Windows.Forms.Label) Or ctrl.GetType() Is GetType(System.Windows.Forms.Panel) Then
@@ -127,19 +125,58 @@
         Next
     End Sub
 
+    Private Sub sendInn()
+        Dim svarArray As New Hashtable()
+        Dim sortedArray As New ArrayList
+        For Each tab As TabPage In TabControlEgenskjema.TabPages
+            For Each ctrl As Control In tab.Controls
+                If ctrl.GetType Is GetType(Panel) Then
+                    Dim checkedRadios = From radio In ctrl.Controls.OfType(Of RadioButton)()
+                                        Where radio.Checked
+                                        Select radio.Location.X, radio.Tag
+                    For Each item In checkedRadios
+                        svarArray.Add(item.Tag, item.X.ToString)
+                    Next
+                    For i = 1 To 59 Step 1
+                        If svarArray(i) = 0 Then
+                            sortedArray.Add(1)
+                        ElseIf svarArray(i) = 52 Then
+                            sortedArray.Add(0)
+                        Else
+                            sortedArray.Add("Feil hos radioknapp til spm nr: " & i)
+                        End If
+                    Next
+                End If
+            Next
+        Next
+        MsgBox("svarArray har " & CStr(svarArray.Count) & " entries")
+        MsgBox(svarArray(1))
+        Dim printout As String = ""
+        '  For Each item In sortedArray
+        ' printout &= CStr(item) & " "
+        ' Next
+        'MsgBox(printout)
+    End Sub
     Private Sub ButtonNeste_Click(sender As Object, e As EventArgs) Handles ButtonNeste.Click
-        valider()
+        Dim feil As Boolean = valider()
+        If feil Then
+            LabelFeilMelding.Show()
+        Else
+            If TabControlEgenskjema.SelectedIndex < 9 Then
+                TabControlEgenskjema.SelectedIndex += 1
+            End If
+        End If
     End Sub
 
     Private Sub RadioButtonAll_CheckedChanged(sender As Object, e As EventArgs)
         changeToDefault(DirectCast(sender, RadioButton).Tag)
     End Sub
 
-    Private Sub HandleMyButtonClicksPlease(ByVal sender As System.Object, ByVal e As System.EventArgs)
-        MsgBox(DirectCast(sender, Button).Name & " was clicked!")
-    End Sub
-
     Private Sub egenSkjemaTempStorage_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        For i = 1 To 59
+            changeToDefault(i)
+        Next
+
         LabelSpm1.Text = spm1.getText
         LabelSpm2.Text = spm2.getText
         LabelSpm3.Text = spm3.getText
@@ -212,6 +249,10 @@
                     Next
                 End If
             Next
-        Next
+        Next 'Denne sparer masse skriving, der alternativet er å skriver private sub x(sender as object, e as eventargs) handles radiobutton1, radiobutton2 ... radiobutton 120.
+    End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        sendInn()
     End Sub
 End Class
