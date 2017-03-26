@@ -1,4 +1,4 @@
-﻿Public Class AnsattMinSide
+﻿Public Class AnsattNavigasjon
 
     Private Sub Bestill_Ny_BlodTime_Click(sender As Object, e As EventArgs) Handles Bestill_Ny_BlodTime.Click
         AnsattInkalling.Show()
@@ -16,9 +16,7 @@
         AnsattBlodProdukter.Show()
     End Sub
 
-    Private Sub AnsattMinSide_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
-    End Sub
 
     Private Sub Statistikk_Click(sender As Object, e As EventArgs) Handles Statistikk.Click
         AnsattStatistikkNy.Show()

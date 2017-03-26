@@ -45,7 +45,7 @@ Public Class AnsattInkalling
     End Sub
 
     Private Sub ButtonLogUt_Click(sender As Object, e As EventArgs) Handles ButtonTilbake.Click
-        AnsattMinSide.Show()
+        AnsattNavigasjon.Show()
         Me.Close()
     End Sub 'logg ut
 
@@ -64,7 +64,7 @@ Public Class AnsattInkalling
             fornavn = GridBrukere.CurrentRow.Cells("fornavn").Value
             etternavn = GridBrukere.CurrentRow.Cells("etternavn").Value
             epost = GridBrukere.CurrentRow.Cells("epost").Value
-            personnummer = GridBrukere.CurrentRow.Cells("personnummer").Value
+            'personnummer = GridBrukere.CurrentRow.Cells("personnummer").Value
         End If
 
         MsgBox(bruker_id & " " & fornavn & " " & etternavn & " " & epost & " " & personnummer)
@@ -91,7 +91,7 @@ Public Class AnsattInkalling
 
     End Sub
 
-    Private Sub ButtonSok_Click(sender As Object, e As EventArgs) Handles ButtonSok.Click
+    Private Sub ButtonSok_Click(sender As Object, e As EventArgs) 
         Dim sokeValue As String = ""
         sokeValue = TextBoxSok.Text
         FilterData(sokeValue)

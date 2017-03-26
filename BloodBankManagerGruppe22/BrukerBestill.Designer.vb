@@ -41,7 +41,7 @@ Partial Class BrukerBestill
         '
         'MonthCalendar1
         '
-        Me.MonthCalendar1.CalendarDimensions = New System.Drawing.Size(5, 3)
+        Me.MonthCalendar1.CalendarDimensions = New System.Drawing.Size(4, 3)
         Me.MonthCalendar1.Location = New System.Drawing.Point(2, 56)
         Me.MonthCalendar1.Name = "MonthCalendar1"
         Me.MonthCalendar1.TabIndex = 31
@@ -81,7 +81,7 @@ Partial Class BrukerBestill
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "BrukerBestill"
-        Me.Text = "kalender_bestilling"
+        Me.Text = "Blood Bank Administrator 2k17™ - xTreme Edition"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

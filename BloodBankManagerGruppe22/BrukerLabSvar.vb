@@ -7,10 +7,13 @@ Public Class BrukerLabSvar
 
     Public Function hentLabSvar(ByVal brukerid As Integer) As ArrayList
         Dim id As Integer = brukerid
-        Dim sqlLabSvar As New MySqlCommand("SELECT test_utfort, svar FROM lab_svar, blodgiver WHERE lab_svar.svar_bruker_id = blodigver.blodgiver_bruker_id AND blodgiver.blodgiver_bruker_id = (SELECT blodgiver_bruker_id FROM blodgiver WHERE blodgiver.bruker_id = @id)", connection)
+        Dim sqlLabSvar As New MySqlCommand("SELECT test_utfort, svar FROM lab_svar, blodgiver WHERE lab_svar.svar_bruker_id = blodigver.blodgiver_bruker_id AND blodgiver.blodgiver_bruker_id = (SELECT blodgiver_bruker_id FROM blodgiver WHERE blodgiver.bruker_id = @id)", MysqlConn)
         Dim reader As MySqlDataReader = sqlLabSvar.ExecuteReader
-        If reader.HasRows Then
-      End Function
+        'If reader.HasRows Then
+
+        'End If
+
+    End Function
 
     Private Sub labSvar_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         MysqlConn = New MySqlConnection

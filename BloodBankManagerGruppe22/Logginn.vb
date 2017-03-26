@@ -70,7 +70,7 @@ Kriteriene for utvelgelse av blodgivere og en rekke av de laboratorieundersøkel
             MsgBox("Feil brukernavn eller passord", MsgBoxStyle.Critical, MsgBoxStyle.OkOnly)
         Else
             Me.Hide()
-            AnsattMinSide.Show()
+            AnsattNavigasjon.Show()
         End If
     End Sub
 
@@ -87,25 +87,25 @@ Kriteriene for utvelgelse av blodgivere og en rekke av de laboratorieundersøkel
 
     Private Sub Button3_Click_1(sender As Object, e As EventArgs) Handles Button3.Click
         Me.Hide()
-        AnsattMinSide.Show()
+        AnsattNavigasjon.Show()
 
     End Sub
 
     Private Sub hovedForside_Innlogging_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Timer1.Enabled = True
 
-        'setting standard form size
-        'format:(width,height)
-        AnsattMinSide.Size = New System.Drawing.Size(775, 425)
-        BrukerMinSide.Size = New System.Drawing.Size(775, 425)
-        AnsattBlodProdukter.Size = New System.Drawing.Size(775, 425)
-        AnsattInkalling.Size = New System.Drawing.Size(775, 425)
-        AnsattStatistikkNy.Size = New System.Drawing.Size(775, 425)
-        BrukerAllInfo.Size = New System.Drawing.Size(775, 425)
-        BrukerBestill.Size = New System.Drawing.Size(775, 425)
-        BrukerLabSvar.Size = New System.Drawing.Size(775, 425)
-        egenSkjemaBolk1.Size = New System.Drawing.Size(775, 425)
-        Registrering.Size = New System.Drawing.Size(1200, 700)
+        ''setting standard form size
+        ''format:(width,height)
+        'AnsattMinSide.Size = New System.Drawing.Size(775, 425)
+        'BrukerMinSide.Size = New System.Drawing.Size(775, 425)
+        'AnsattBlodProdukter.Size = New System.Drawing.Size(775, 425)
+        'AnsattInkalling.Size = New System.Drawing.Size(775, 425)
+        'AnsattStatistikkNy.Size = New System.Drawing.Size(900, 600)
+        'BrukerAllInfo.Size = New System.Drawing.Size(775, 425)
+        'BrukerBestill.Size = New System.Drawing.Size(775, 425)
+        'BrukerLabSvar.Size = New System.Drawing.Size(775, 425)
+        'egenSkjemaBolk1.Size = New System.Drawing.Size(775, 425)
+        'Registrering.Size = New System.Drawing.Size(1200, 700)
         'Logginn.Size = New System.Drawing.Size(1200, 700)
 
     End Sub
@@ -151,7 +151,7 @@ www.stolav.no/blodgiver
     End Sub
 
     Private Sub Button3_Click_2(sender As Object, e As EventArgs) Handles Button3.Click
-        AnsattMinSide.Show()
+        AnsattNavigasjon.Show()
     End Sub
 
     Private Sub Button4_Click_1(sender As Object, e As EventArgs) Handles Button4.Click
@@ -171,8 +171,77 @@ www.stolav.no/blodgiver
         egenSkjemaBolk1.Show()
     End Sub
 
-    Private Sub PictureBox1_Click(sender As Object, e As EventArgs)
+    Private Sub HarDuNettoppGittBlodToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles HarDuNettoppGittBlodToolStripMenuItem.Click
+        MessageBox.Show("Dersom du etter blodgivningen kommer på viktig informasjon som du har glemt å gi, er det viktig at du tar kontakt med blodbanken og informerer om dette. Gi beskjed så fort som mulig, helst innen 48 timer etter blodgivning, om du skulle bli syk med enten oppkast, diaré eller høy feber.
 
+Du kan når som helst ringe blodbanken og gi beskjed om at blodet ikke skal brukes uten å oppgi årsak.")
+    End Sub
+
+    Private Sub NårKanDuIkkeGiBlodToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles NårKanDuIkkeGiBlodToolStripMenuItem.Click
+        MessageBox.Show("For at du ikke skal komme forgjeves til blodbanken, vil vi minne om følgende:
+
+Bruk av medikamenter inkludert reseptfrie kan gi karantene
+Bruker du medisiner/smertestillende, kan det hende du ikke kan gi blod. Det vil i de fleste tilfeller være avhengig av hva som er årsaken til at du bruker medisiner. I andre tilfeller er det legemidlet i seg selv som er avgjørende. Om du kan gi blod må derfor vurderes konkret i den enkelte situasjon. Ved bruk av p-piller eller andre hormonpreparat, kan du vanligvis gi. Ved sporadisk bruk av smertestillende kan du også vanligvis gi, men etter langvarig bruk må du vanligvis vente i 14 dager. 
+Bruker du antibiotika, kan du ikke gi blod. Da må du vente 14 dager etter avsluttet behandling (gjelder ikke lave doser av tetracykliner til behandling av acne).
+
+Sprøyter
+Personer som har fått behandling med sprøyter/injeksjoner må vente minst seks måneder med å gi blod, med mindre det er brukt sterilt engangsutstyr.
+
+Infeksjonssykdom
+Du må vente med å gi blod hvis du har hatt en infeksjonssykdom som for eksempel:
+
+Influensa, forkjølelse, bronkitt eller sår hals (se også nedenfor)
+Forkjølelsessår (Herpes Simplex). Åpne eller infiserte sår
+Diaré, omgangssyke eller urinveisinfeksjon
+Soppinfeksjon (behandling med tabletter eller vagitorier)
+Selv etter relativt ubetydelige infeksjoner må du ha vært frisk i to uker før du gir blod
+
+Du må også vente med å gi blod i 6 mnd. hvis du har:
+Byttet seksualpartner
+Fått tatovering
+Fått piercing. Dersom det er satt hull i slimhinner (nese, munn, leppe og kjønnsorganer), skal man som hovedregel ikke gi blod før en måned etter at nålen er tatt ut.
+Forkjølelse og sår hals
+Har du vært forkjølet, men ikke hatt feber, må du vente en uke etter at du er blitt frisk og symptomfri.
+Har du hatt sår hals, men ikke hatt feber, må du vente en uke etter at du er blitt frisk og symptomfri.
+MERK: Ved feber må du vente 14 dager etter at du er blitt frisk og symptomfri.
+
+Akupunktur
+Årsaken til at blodgiveren har fått akupunkturbehandling er viktig. Dersom årsaken er av slik art at den i seg selv ikke har betydning for blodgivningen, gjelder følgende regel: Hvis utført av autorisert helsepersonell i Norge og med engangsnåler/sterile nåler: Kan gi blod. Hvis ikke: Karantene i 6 måneder. 
+
+Tannlege
+Du skal ikke gi blod de første 24 timene etter tannlegebesøk. Ved rotfylling må du vente en uke etter avsluttet behandlingen før du kan gi blod. Ved ukomplisert tanntrekking må du også vente en uke.
+
+Flåttbitt
+Blodbanken har karantene på 4 uker etter et ukomplisert flåttbitt. Har du fått utslett eller reaksjoner vil karantenetiden være 6 måneder. Etter behandling for flåttbitt vil karantenetiden også være 6 måneder.
+
+Graviditet
+Du skal ikke gi blod når du er gravid. Etter en fødsel skal kvinnen vente minst 12 måneder før hun gir blod igjen.
+
+Allergier
+Er du allergiker, kan du gi blod når du er symptomfri. Det er kun alvorlige allergiske reaksjoner som utelukker for blodgivning. Er du i tvil – ta kontakt med blodbanken.
+
+Opphold i Storbritannia
+Har du oppholdt deg i Storbritannia i mer enn 1 år til sammen i perioden mellom 1980 og 1996 kan du ikke være blodgiver. Dette skyldes faren for smitte ifm Creutzfeldt-Jakob.
+
+Opphold i USA eller Canada
+Har du oppholdt deg i USA eller Canada i tidsrommet 1.4.-30.11., kan du ikke gi blod. Du får da 1 måneds karantene fra du forlot USA/Canada.
+
+Munnsår
+Har du munnsår, skal du ikke gi blod.
+
+Åpne sår
+Du skal ikke gi blod dersom du har åpne sår, dvs. sår som blør eller væsker. Sår skal være tørre og ikke infiserte. Dersom du har blødende hemoroider, regnes det som åpent sår.
+
+Vaksinasjon
+Enkelte vaksinasjoner kan gi 4 uker karantene. Hepatitt-B-vaksine, Hepatitt A + B vaksine (combo) gir 4 ukers karantene. Ved tvil, kontakt blodbanken
+
+Narkotika
+Personer som har hatt sporadisk/engangsbruk av narkotiske midler som ikke injiseres: Ett års karantene. 
+Personer som har brukt narkotiske midler via sprøyter kan ikke være blodgivere.
+
+Er du i tvil om regelverket, ikke nøl med å kontakte blodbanken!
+
+Telefon  72 57 31 00 eller 72 57 31 05")
     End Sub
 End Class
 

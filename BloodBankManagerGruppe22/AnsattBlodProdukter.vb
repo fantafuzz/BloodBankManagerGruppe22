@@ -5,7 +5,7 @@ Public Class AnsattBlodProdukter
 
     Private Sub Statistikk_Click(sender As Object, e As EventArgs) Handles Button_Tilbake_AnsattMinSide.Click
         Me.Close()
-        AnsattMinSide.Show()
+        AnsattNavigasjon.Show()
     End Sub
 
     Private Sub AnsattBlodProdukter_Load(sender As Object, e As EventArgs) Handles MyBase.Load

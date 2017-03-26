@@ -32,9 +32,9 @@ Partial Class AnsattStatistikkNy
         'Button_tilbake_fra_lab_svar
         '
         Me.Button_tilbake_fra_lab_svar.Font = New System.Drawing.Font("Georgia", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button_tilbake_fra_lab_svar.Location = New System.Drawing.Point(704, 498)
+        Me.Button_tilbake_fra_lab_svar.Location = New System.Drawing.Point(938, 523)
         Me.Button_tilbake_fra_lab_svar.Name = "Button_tilbake_fra_lab_svar"
-        Me.Button_tilbake_fra_lab_svar.Size = New System.Drawing.Size(99, 43)
+        Me.Button_tilbake_fra_lab_svar.Size = New System.Drawing.Size(119, 35)
         Me.Button_tilbake_fra_lab_svar.TabIndex = 3
         Me.Button_tilbake_fra_lab_svar.Text = "Tilbake"
         Me.Button_tilbake_fra_lab_svar.UseVisualStyleBackColor = True
@@ -57,21 +57,21 @@ Partial Class AnsattStatistikkNy
         Me.Label1.TabIndex = 5
         Me.Label1.Text = "Statistikk over antall blodgivere som har gitt blod de siste årene"
         '
-        'BrukerStatistikk
+        'AnsattStatistikkNy
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(96.0!, 96.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(815, 553)
+        Me.ClientSize = New System.Drawing.Size(1069, 570)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.Button_tilbake_fra_lab_svar)
         Me.Font = New System.Drawing.Font("Georgia", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Margin = New System.Windows.Forms.Padding(2)
-        Me.Name = "BrukerStatistikk"
-        Me.Text = "hvorMyeBlodGitt"
+        Me.Name = "AnsattStatistikkNy"
+        Me.Text = "Blood Bank Administrator 2k17™ - xTreme Edition"
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
