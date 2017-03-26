@@ -108,7 +108,7 @@ Partial Class AnsattBlodProdukter
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "AnsattBlodProdukter"
-        Me.Text = "AnsattBlodProdukter"
+        Me.Text = "Blood Bank Administrator 2k17™ - xTreme Edition"
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()

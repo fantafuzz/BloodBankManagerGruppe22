@@ -54,6 +54,8 @@ Partial Class Logginn
         Me.Button5 = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
+        Me.HarDuNettoppGittBlodToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.NårKanDuIkkeGiBlodToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
         Me.MenuStrip1.SuspendLayout()
@@ -191,10 +193,10 @@ Partial Class Logginn
         'MenuStrip1
         '
         Me.MenuStrip1.ImageScalingSize = New System.Drawing.Size(20, 20)
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.OmBlodToolStripMenuItem, Me.RetningslinjerToolStripMenuItem, Me.HvaSkjerNårDuGirBlodToolStripMenuItem, Me.ÅpninstiderToolStripMenuItem, Me.KontaktOssToolStripMenuItem, Me.OmOssToolStripMenuItem})
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.OmBlodToolStripMenuItem, Me.RetningslinjerToolStripMenuItem, Me.HvaSkjerNårDuGirBlodToolStripMenuItem, Me.HarDuNettoppGittBlodToolStripMenuItem, Me.NårKanDuIkkeGiBlodToolStripMenuItem, Me.ÅpninstiderToolStripMenuItem, Me.KontaktOssToolStripMenuItem, Me.OmOssToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(854, 24)
+        Me.MenuStrip1.Size = New System.Drawing.Size(952, 24)
         Me.MenuStrip1.TabIndex = 23
         Me.MenuStrip1.Text = "MenuStrip1"
         '
@@ -326,12 +328,24 @@ Partial Class Logginn
         Me.PictureBox2.TabIndex = 27
         Me.PictureBox2.TabStop = False
         '
+        'HarDuNettoppGittBlodToolStripMenuItem
+        '
+        Me.HarDuNettoppGittBlodToolStripMenuItem.Name = "HarDuNettoppGittBlodToolStripMenuItem"
+        Me.HarDuNettoppGittBlodToolStripMenuItem.Size = New System.Drawing.Size(153, 20)
+        Me.HarDuNettoppGittBlodToolStripMenuItem.Text = "Har du nettopp gitt blod?"
+        '
+        'NårKanDuIkkeGiBlodToolStripMenuItem
+        '
+        Me.NårKanDuIkkeGiBlodToolStripMenuItem.Name = "NårKanDuIkkeGiBlodToolStripMenuItem"
+        Me.NårKanDuIkkeGiBlodToolStripMenuItem.Size = New System.Drawing.Size(146, 20)
+        Me.NårKanDuIkkeGiBlodToolStripMenuItem.Text = "Når kan du ikke gi blod?"
+        '
         'Logginn
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(854, 561)
+        Me.ClientSize = New System.Drawing.Size(952, 568)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.Button5)
         Me.Controls.Add(Me.Button4)
@@ -350,7 +364,7 @@ Partial Class Logginn
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MainMenuStrip = Me.MenuStrip1
         Me.Name = "Logginn"
-        Me.Text = "Velkommen Til Blodbanken"
+        Me.Text = "Blood Bank Administrator 2k17™ - xTreme Edition"
         Me.Panel1.ResumeLayout(False)
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
@@ -391,4 +405,6 @@ Partial Class Logginn
     Friend WithEvents Button5 As Button
     Friend WithEvents HvaSkjerNårDuGirBlodToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents Button1 As Button
+    Friend WithEvents HarDuNettoppGittBlodToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents NårKanDuIkkeGiBlodToolStripMenuItem As ToolStripMenuItem
 End Class

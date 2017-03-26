@@ -34,7 +34,7 @@ Partial Class BrukerMinSide
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.0!, System.Drawing.FontStyle.Bold)
-        Me.Label1.Location = New System.Drawing.Point(238, 31)
+        Me.Label1.Location = New System.Drawing.Point(238, 26)
         Me.Label1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(304, 31)
@@ -44,9 +44,9 @@ Partial Class BrukerMinSide
         'Endre_mine_opplysninger
         '
         Me.Endre_mine_opplysninger.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Endre_mine_opplysninger.Location = New System.Drawing.Point(199, 92)
+        Me.Endre_mine_opplysninger.Location = New System.Drawing.Point(197, 71)
         Me.Endre_mine_opplysninger.Name = "Endre_mine_opplysninger"
-        Me.Endre_mine_opplysninger.Size = New System.Drawing.Size(376, 51)
+        Me.Endre_mine_opplysninger.Size = New System.Drawing.Size(376, 78)
         Me.Endre_mine_opplysninger.TabIndex = 25
         Me.Endre_mine_opplysninger.Text = "Endre Mine Opplysninger"
         Me.Endre_mine_opplysninger.UseVisualStyleBackColor = True
@@ -54,7 +54,7 @@ Partial Class BrukerMinSide
         'Logg_ut
         '
         Me.Logg_ut.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Logg_ut.Location = New System.Drawing.Point(595, 311)
+        Me.Logg_ut.Location = New System.Drawing.Point(606, 351)
         Me.Logg_ut.Name = "Logg_ut"
         Me.Logg_ut.Size = New System.Drawing.Size(138, 31)
         Me.Logg_ut.TabIndex = 30
@@ -64,9 +64,9 @@ Partial Class BrukerMinSide
         'Bestill_Ny_BlodTime
         '
         Me.Bestill_Ny_BlodTime.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Bestill_Ny_BlodTime.Location = New System.Drawing.Point(199, 140)
+        Me.Bestill_Ny_BlodTime.Location = New System.Drawing.Point(197, 144)
         Me.Bestill_Ny_BlodTime.Name = "Bestill_Ny_BlodTime"
-        Me.Bestill_Ny_BlodTime.Size = New System.Drawing.Size(376, 56)
+        Me.Bestill_Ny_BlodTime.Size = New System.Drawing.Size(376, 87)
         Me.Bestill_Ny_BlodTime.TabIndex = 28
         Me.Bestill_Ny_BlodTime.Text = "Bestill ny blodgivning"
         Me.Bestill_Ny_BlodTime.UseVisualStyleBackColor = True
@@ -74,9 +74,9 @@ Partial Class BrukerMinSide
         'Lab_Svar
         '
         Me.Lab_Svar.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Lab_Svar.Location = New System.Drawing.Point(199, 195)
+        Me.Lab_Svar.Location = New System.Drawing.Point(197, 229)
         Me.Lab_Svar.Name = "Lab_Svar"
-        Me.Lab_Svar.Size = New System.Drawing.Size(376, 56)
+        Me.Lab_Svar.Size = New System.Drawing.Size(376, 99)
         Me.Lab_Svar.TabIndex = 31
         Me.Lab_Svar.Text = "Labaratorie Svar"
         Me.Lab_Svar.UseVisualStyleBackColor = True
@@ -86,7 +86,7 @@ Partial Class BrukerMinSide
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 14.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(756, 363)
+        Me.ClientSize = New System.Drawing.Size(756, 394)
         Me.Controls.Add(Me.Lab_Svar)
         Me.Controls.Add(Me.Logg_ut)
         Me.Controls.Add(Me.Bestill_Ny_BlodTime)
@@ -97,7 +97,7 @@ Partial Class BrukerMinSide
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "BrukerMinSide"
-        Me.Text = "MINSIDENAVIGASJON"
+        Me.Text = "Blood Bank Administrator 2k17™ - xTreme Edition"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

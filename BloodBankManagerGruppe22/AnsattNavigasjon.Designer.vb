@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class AnsattMinSide
+Partial Class AnsattNavigasjon
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -22,7 +22,7 @@ Partial Class AnsattMinSide
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(AnsattMinSide))
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(AnsattNavigasjon))
         Me.Statistikk = New System.Windows.Forms.Button()
         Me.Logg_ut = New System.Windows.Forms.Button()
         Me.Bestill_Ny_BlodTime = New System.Windows.Forms.Button()
@@ -52,13 +52,14 @@ Partial Class AnsattMinSide
         '
         'Bestill_Ny_BlodTime
         '
+        Me.Bestill_Ny_BlodTime.BackColor = System.Drawing.Color.Transparent
         Me.Bestill_Ny_BlodTime.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Bestill_Ny_BlodTime.Location = New System.Drawing.Point(198, 86)
         Me.Bestill_Ny_BlodTime.Name = "Bestill_Ny_BlodTime"
         Me.Bestill_Ny_BlodTime.Size = New System.Drawing.Size(376, 74)
         Me.Bestill_Ny_BlodTime.TabIndex = 36
         Me.Bestill_Ny_BlodTime.Text = "Bestill ny blodgivning"
-        Me.Bestill_Ny_BlodTime.UseVisualStyleBackColor = True
+        Me.Bestill_Ny_BlodTime.UseVisualStyleBackColor = False
         '
         'Label1
         '

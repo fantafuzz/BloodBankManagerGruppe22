@@ -220,10 +220,10 @@
     <Compile Include="BrukerMinSide.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AnsattMinSide.Designer.vb">
-      <DependentUpon>AnsattMinSide.vb</DependentUpon>
+    <Compile Include="AnsattNavigasjon.Designer.vb">
+      <DependentUpon>AnsattNavigasjon.vb</DependentUpon>
     </Compile>
-    <Compile Include="AnsattMinSide.vb">
+    <Compile Include="AnsattNavigasjon.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Registrering.Designer.vb">
@@ -320,8 +320,8 @@
     <EmbeddedResource Include="BrukerMinSide.resx">
       <DependentUpon>BrukerMinSide.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AnsattMinSide.resx">
-      <DependentUpon>AnsattMinSide.vb</DependentUpon>
+    <EmbeddedResource Include="AnsattNavigasjon.resx">
+      <DependentUpon>AnsattNavigasjon.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>

@@ -13,21 +13,21 @@ Public Class AnsattStatistikkNy
         FilterData("")
 
 
-        Dim column As DataGridViewColumn = DataGridView1.Columns(0)
-        column.Width = 160
+        'Dim column As DataGridViewColumn = DataGridView1.Columns(0)
+        'column.Width = 160
 
-        Dim column1 As DataGridViewColumn = DataGridView1.Columns(1)
-        column1.Width = 160
+        Dim column1 As DataGridViewColumn = DataGridView1.Columns(0)
+        column1.Width = 255
 
-        Dim column2 As DataGridViewColumn = DataGridView1.Columns(2)
-        column2.Width = 160
+        Dim column2 As DataGridViewColumn = DataGridView1.Columns(1)
+        column2.Width = 255
     End Sub
     Public Sub FilterData(valueToSearch As String)
 
 
 
 
-        Dim searchQuery As String = "Select * from statistikk"
+        Dim searchQuery As String = "SELECT Year, Blodgivere FROM statistikk;"
         Dim command As New MySqlCommand(searchQuery, MysqlConn)
         Dim adapter As New MySqlDataAdapter(command)
         Dim table As New DataTable()
@@ -39,8 +39,5 @@ Public Class AnsattStatistikkNy
 
     End Sub
 
-    Private Sub Button_tilbake_fra_lab_svar_Click(sender As Object, e As EventArgs) Handles Button_tilbake_fra_lab_svar.Click
-        BrukerMinSide.Show()
-        Me.Close()
-    End Sub
+
 End Class
