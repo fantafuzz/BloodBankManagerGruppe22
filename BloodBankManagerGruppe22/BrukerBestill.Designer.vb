@@ -52,14 +52,14 @@ Partial Class BrukerBestill
         Me.Label1.Font = New System.Drawing.Font("Georgia", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.Location = New System.Drawing.Point(13, 22)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(562, 25)
+        Me.Label1.Size = New System.Drawing.Size(724, 31)
         Me.Label1.TabIndex = 32
         Me.Label1.Text = "Velg en passende dato i kalenderen for blodgivning"
         '
         'kalender_bestilling_blodgiver_tilbake_
         '
         Me.kalender_bestilling_blodgiver_tilbake_.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.kalender_bestilling_blodgiver_tilbake_.Location = New System.Drawing.Point(1022, 605)
+        Me.kalender_bestilling_blodgiver_tilbake_.Location = New System.Drawing.Point(1064, 662)
         Me.kalender_bestilling_blodgiver_tilbake_.Name = "kalender_bestilling_blodgiver_tilbake_"
         Me.kalender_bestilling_blodgiver_tilbake_.Size = New System.Drawing.Size(138, 31)
         Me.kalender_bestilling_blodgiver_tilbake_.TabIndex = 33
@@ -68,10 +68,10 @@ Partial Class BrukerBestill
         '
         'BrukerBestill
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 14.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 17.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(1172, 648)
+        Me.ClientSize = New System.Drawing.Size(1214, 705)
         Me.Controls.Add(Me.kalender_bestilling_blodgiver_tilbake_)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.MonthCalendar1)
