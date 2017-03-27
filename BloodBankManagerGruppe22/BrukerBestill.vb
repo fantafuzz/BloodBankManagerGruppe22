@@ -21,16 +21,20 @@ Public Class BrukerBestill
             COMMAND = New MySqlCommand(Query, MysqlConn)
             READER = COMMAND.ExecuteReader
 
+            If MonthCalendar1.Text > 3 Then
+                MessageBox.Show("Du kan ikke gi blod før 3 måneder har passert fra siste blodgivning.")
+            Else
+                MessageBox.Show("Ny time er bestilt.")
+                MessageBox.Show("Tusen Takk for din interesse til blod donasjon. Vi i blodbanken setter stor pris på ditt bidrag og håper du forsetter med det!")
+            End If
 
 
 
 
-            MessageBox.Show("Ny time er bestilt.")
-            MessageBox.Show("Tusen Takk for din interesse til blod donasjon. Vi i blodbanken setter stor pris på ditt bidrag og håper du forsetter med det!")
             MysqlConn.Close()
 
         Catch ex As Exception
-            'If MonthCalendar1.va Then
+
             MessageBox.Show(ex.Message)
         Finally
             MysqlConn.Dispose()

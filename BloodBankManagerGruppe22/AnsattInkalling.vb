@@ -91,11 +91,6 @@ Public Class AnsattInkalling
 
     End Sub
 
-    Private Sub ButtonSok_Click(sender As Object, e As EventArgs) 
-        Dim sokeValue As String = ""
-        sokeValue = TextBoxSok.Text
-        FilterData(sokeValue)
-    End Sub
 
 
 End Class

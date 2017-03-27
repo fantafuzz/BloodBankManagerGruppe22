@@ -40,22 +40,19 @@ Public Class BrukerAllInfo
             MysqlConn.Open()
             Dim Query1 As String
 
-            'endre sql syntax slik at man får mottatt data fra både blodgivere tabell og bruker tabell
-            'nå fungerer det å motta bruker data fra bruker tabell i brukerAllinfoform. Det går i tilegg ann å oppdatere infoen.
-            'endre sql syntax slik at den aktuelle logget bruker får inn sin data i form.
 
-            Query1 = "select * from g_oops_22.bruker"
+            Query1 = "select bruker.bruker_id, bruker.fornavn, bruker.etternavn, bruker.epost, bruker.passord, blodgiver.adresse,blodgiver.postnr,blodgiver.poststed,blodgiver.telefon_1,blodgiver.telefon_2 from g_oops_22.bruker,g_oops_22.blodgiver where bruker.bruker_id=blodgiver.blodgiver_bruker_id and bruker.bruker_id = @id "
 
             COMMAND = New MySqlCommand(Query1, MysqlConn)
             READER = COMMAND.ExecuteReader
             While READER.Read
                 TextBox_Brukerid.Text = READER.GetInt32("bruker_id")
                 TextBox_fornavn.Text = READER.GetString("fornavn")
-                'TextBox_adresse.Text = READER.GetString("adresse")
-                'TextBox_postnr.Text = READER.GetInt32("postnr")
-                'TextBox_poststed.Text = READER.GetString("poststed")
-                'TextBox_Tlf1.Text = READER.GetInt32("telefon_1")
-                'TextBox_tlf2.Text = READER.GetInt32("telefon_2")
+                TextBox_adresse.Text = READER.GetString("adresse")
+                TextBox_postnr.Text = READER.GetInt32("postnr")
+                TextBox_poststed.Text = READER.GetString("poststed")
+                TextBox_Tlf1.Text = READER.GetInt32("telefon_1")
+                TextBox_tlf2.Text = READER.GetInt32("telefon_2")
                 TextBox_etternavn.Text = READER.GetString("etternavn")
                 TextBox_epost.Text = READER.GetString("epost")
             End While
@@ -67,5 +64,24 @@ Public Class BrukerAllInfo
         Finally
             MysqlConn.Dispose()
         End Try
+
+        'Dim epost As String
+        'Dim adresse As String
+        'Try
+        '    mysqlConn.Open()
+        '    Dim sqlLogInn As New MySqlCommand("SELECT blogiver.adresse, bruker.epost FROM bruker, blodgiver WHERE blogiver.bruker_id = bruker.bruker_id AND bruker.bruker_id = @id", connection)
+        '    sqlLogInn.Parameters.AddWithValue("@id", 27)
+        '    Dim reader As MySqlDataReader = sqlLogInn.ExecuteReader
+        '    If reader.HasRows Then
+        '        reader.Read()
+        '        epost = reader("epost")
+        '        adresse = reader("adresse")
+        '    End If
+        'Catch ex As MySqlException
+        '    MsgBox(ex)
+        'Finally
+        '    mysqlConn.Close()
+        'End Try
+
     End Sub
 End Class

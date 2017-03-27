@@ -10,13 +10,27 @@ Public Class Logginn
     Private Sub ButtonLogInn_Click(sender As Object, e As EventArgs) Handles ButtonLogInn.Click
         Dim sjekkLog As Tuple(Of Integer, String) = sql.logInn(TextBoxEpost.Text, TextBoxPassword.Text, "bruker")
         currentuser = sjekkLog.Item1
+
+
         If currentuser = -1 Then
-            MsgBox("Feil brukernavn eller passord", MsgBoxStyle.Critical, MsgBoxStyle.OkOnly)
-        Else
-            Me.Hide()
-            BrukerMinSide.Show()
-        End If
+                MsgBox("Feil brukernavn eller passord", MsgBoxStyle.Critical, MsgBoxStyle.OkOnly)
+            Else
+                Me.Hide()
+                BrukerMinSide.Show()
+            End If
+
+
     End Sub
+
+    'Public Function validateEmail(emailAddress) As Boolean 'VALIDERING AV EMAIL?
+    '    ' Dim email As New Regex("^(?<user>[^@]+)@(?<host>.+)$")
+    '    Dim email As New Regex("([\w-+]+(?:\.[\w-+]+)*@(?:[\w-]+\.)+[a-zA-Z]{2,7})")
+    '    If email.IsMatch(emailAddress) Then
+    '        Return True
+    '    Else
+    '        Return False
+    '    End If
+    'End Function
 
     Private Sub ButtonRegistrer_Click(sender As Object, e As EventArgs) Handles ButtonRegistrer.Click
         Registrering.Show()

@@ -69,7 +69,7 @@ Partial Class Registrering
         Me.Label1.AutoSize = True
         Me.Label1.Location = New System.Drawing.Point(10, 85)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(61, 14)
+        Me.Label1.Size = New System.Drawing.Size(65, 17)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Fornavn:"
         '
@@ -77,7 +77,7 @@ Partial Class Registrering
         '
         Me.TextBoxFirstName.Location = New System.Drawing.Point(100, 82)
         Me.TextBoxFirstName.Name = "TextBoxFirstName"
-        Me.TextBoxFirstName.Size = New System.Drawing.Size(342, 20)
+        Me.TextBoxFirstName.Size = New System.Drawing.Size(342, 23)
         Me.TextBoxFirstName.TabIndex = 1
         '
         'ComboBoxLok
@@ -86,7 +86,7 @@ Partial Class Registrering
         Me.ComboBoxLok.Items.AddRange(New Object() {"St. Olavs Hospital Orkdal", "St. Olavs Hospital Trondheim"})
         Me.ComboBoxLok.Location = New System.Drawing.Point(14, 39)
         Me.ComboBoxLok.Name = "ComboBoxLok"
-        Me.ComboBoxLok.Size = New System.Drawing.Size(269, 22)
+        Me.ComboBoxLok.Size = New System.Drawing.Size(269, 25)
         Me.ComboBoxLok.TabIndex = 2
         '
         'Label2
@@ -94,7 +94,7 @@ Partial Class Registrering
         Me.Label2.AutoSize = True
         Me.Label2.Location = New System.Drawing.Point(10, 22)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(153, 14)
+        Me.Label2.Size = New System.Drawing.Size(168, 17)
         Me.Label2.TabIndex = 3
         Me.Label2.Text = "Hvor ønsker du å gi blod?"
         '
@@ -102,7 +102,7 @@ Partial Class Registrering
         '
         Me.TextBoxLastName.Location = New System.Drawing.Point(100, 110)
         Me.TextBoxLastName.Name = "TextBoxLastName"
-        Me.TextBoxLastName.Size = New System.Drawing.Size(342, 20)
+        Me.TextBoxLastName.Size = New System.Drawing.Size(342, 23)
         Me.TextBoxLastName.TabIndex = 5
         '
         'Label3
@@ -110,7 +110,7 @@ Partial Class Registrering
         Me.Label3.AutoSize = True
         Me.Label3.Location = New System.Drawing.Point(10, 113)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(71, 14)
+        Me.Label3.Size = New System.Drawing.Size(75, 17)
         Me.Label3.TabIndex = 4
         Me.Label3.Text = "Etternavn:"
         '
@@ -119,7 +119,7 @@ Partial Class Registrering
         Me.Label4.AutoSize = True
         Me.Label4.Location = New System.Drawing.Point(9, 151)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(81, 14)
+        Me.Label4.Size = New System.Drawing.Size(93, 17)
         Me.Label4.TabIndex = 6
         Me.Label4.Text = "Føsdselsdato:"
         '
@@ -128,7 +128,7 @@ Partial Class Registrering
         Me.Label5.AutoSize = True
         Me.Label5.Location = New System.Drawing.Point(239, 151)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(93, 14)
+        Me.Label5.Size = New System.Drawing.Size(114, 17)
         Me.Label5.TabIndex = 8
         Me.Label5.Text = "(YYYY-MM-DD)"
         '
@@ -136,7 +136,7 @@ Partial Class Registrering
         '
         Me.TextBoxPersonNum.Location = New System.Drawing.Point(116, 185)
         Me.TextBoxPersonNum.Name = "TextBoxPersonNum"
-        Me.TextBoxPersonNum.Size = New System.Drawing.Size(131, 20)
+        Me.TextBoxPersonNum.Size = New System.Drawing.Size(131, 23)
         Me.TextBoxPersonNum.TabIndex = 10
         '
         'Label6
@@ -144,7 +144,7 @@ Partial Class Registrering
         Me.Label6.AutoSize = True
         Me.Label6.Location = New System.Drawing.Point(9, 188)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(101, 14)
+        Me.Label6.Size = New System.Drawing.Size(109, 17)
         Me.Label6.TabIndex = 9
         Me.Label6.Text = "Personnummer:"
         '
@@ -152,7 +152,7 @@ Partial Class Registrering
         '
         Me.TextBoxAdr.Location = New System.Drawing.Point(100, 224)
         Me.TextBoxAdr.Name = "TextBoxAdr"
-        Me.TextBoxAdr.Size = New System.Drawing.Size(342, 20)
+        Me.TextBoxAdr.Size = New System.Drawing.Size(342, 23)
         Me.TextBoxAdr.TabIndex = 12
         '
         'Label7
@@ -160,7 +160,7 @@ Partial Class Registrering
         Me.Label7.AutoSize = True
         Me.Label7.Location = New System.Drawing.Point(9, 227)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(55, 14)
+        Me.Label7.Size = New System.Drawing.Size(62, 17)
         Me.Label7.TabIndex = 11
         Me.Label7.Text = "Adresse:"
         '
@@ -168,7 +168,7 @@ Partial Class Registrering
         '
         Me.TextBoxPostNr.Location = New System.Drawing.Point(101, 269)
         Me.TextBoxPostNr.Name = "TextBoxPostNr"
-        Me.TextBoxPostNr.Size = New System.Drawing.Size(90, 20)
+        Me.TextBoxPostNr.Size = New System.Drawing.Size(90, 23)
         Me.TextBoxPostNr.TabIndex = 14
         '
         'Label8
@@ -176,7 +176,7 @@ Partial Class Registrering
         Me.Label8.AutoSize = True
         Me.Label8.Location = New System.Drawing.Point(10, 272)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(76, 14)
+        Me.Label8.Size = New System.Drawing.Size(87, 17)
         Me.Label8.TabIndex = 13
         Me.Label8.Text = "Postnr/sted:"
         '
@@ -184,14 +184,14 @@ Partial Class Registrering
         '
         Me.TextBoxPostSt.Location = New System.Drawing.Point(227, 269)
         Me.TextBoxPostSt.Name = "TextBoxPostSt"
-        Me.TextBoxPostSt.Size = New System.Drawing.Size(179, 20)
+        Me.TextBoxPostSt.Size = New System.Drawing.Size(179, 23)
         Me.TextBoxPostSt.TabIndex = 15
         '
         'TextBoxPhone1
         '
-        Me.TextBoxPhone1.Location = New System.Drawing.Point(100, 314)
+        Me.TextBoxPhone1.Location = New System.Drawing.Point(116, 318)
         Me.TextBoxPhone1.Name = "TextBoxPhone1"
-        Me.TextBoxPhone1.Size = New System.Drawing.Size(156, 20)
+        Me.TextBoxPhone1.Size = New System.Drawing.Size(156, 23)
         Me.TextBoxPhone1.TabIndex = 17
         '
         'Label9
@@ -199,16 +199,16 @@ Partial Class Registrering
         Me.Label9.AutoSize = True
         Me.Label9.Location = New System.Drawing.Point(6, 318)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(105, 14)
+        Me.Label9.Size = New System.Drawing.Size(114, 17)
         Me.Label9.TabIndex = 16
         Me.Label9.Text = "Telefonnummer:"
         '
         'TextBoxPhone2
         '
         Me.TextBoxPhone2.Enabled = False
-        Me.TextBoxPhone2.Location = New System.Drawing.Point(275, 314)
+        Me.TextBoxPhone2.Location = New System.Drawing.Point(286, 318)
         Me.TextBoxPhone2.Name = "TextBoxPhone2"
-        Me.TextBoxPhone2.Size = New System.Drawing.Size(156, 20)
+        Me.TextBoxPhone2.Size = New System.Drawing.Size(156, 23)
         Me.TextBoxPhone2.TabIndex = 18
         '
         'Label10
@@ -217,7 +217,7 @@ Partial Class Registrering
         Me.Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 6.25!, System.Drawing.FontStyle.Italic)
         Me.Label10.Location = New System.Drawing.Point(10, 298)
         Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(153, 12)
+        Me.Label10.Size = New System.Drawing.Size(173, 13)
         Me.Label10.TabIndex = 19
         Me.Label10.Text = "Minst ett telefonnummer må oppgis:"
         '
@@ -225,7 +225,7 @@ Partial Class Registrering
         '
         Me.TextBoxEmail.Location = New System.Drawing.Point(100, 354)
         Me.TextBoxEmail.Name = "TextBoxEmail"
-        Me.TextBoxEmail.Size = New System.Drawing.Size(342, 20)
+        Me.TextBoxEmail.Size = New System.Drawing.Size(342, 23)
         Me.TextBoxEmail.TabIndex = 21
         '
         'Label11
@@ -234,7 +234,7 @@ Partial Class Registrering
         Me.Label11.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
         Me.Label11.Location = New System.Drawing.Point(10, 358)
         Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(37, 13)
+        Me.Label11.Size = New System.Drawing.Size(48, 17)
         Me.Label11.TabIndex = 20
         Me.Label11.Text = "Epost:"
         '
@@ -243,7 +243,7 @@ Partial Class Registrering
         Me.CheckBoxGiveBefore.AutoSize = True
         Me.CheckBoxGiveBefore.Location = New System.Drawing.Point(14, 392)
         Me.CheckBoxGiveBefore.Name = "CheckBoxGiveBefore"
-        Me.CheckBoxGiveBefore.Size = New System.Drawing.Size(236, 18)
+        Me.CheckBoxGiveBefore.Size = New System.Drawing.Size(255, 21)
         Me.CheckBoxGiveBefore.TabIndex = 22
         Me.CheckBoxGiveBefore.Text = "Kryss av her om du har gitt blod før:"
         Me.CheckBoxGiveBefore.UseVisualStyleBackColor = True
@@ -252,7 +252,7 @@ Partial Class Registrering
         '
         Me.TextBoxPrevBank.Location = New System.Drawing.Point(14, 442)
         Me.TextBoxPrevBank.Name = "TextBoxPrevBank"
-        Me.TextBoxPrevBank.Size = New System.Drawing.Size(360, 20)
+        Me.TextBoxPrevBank.Size = New System.Drawing.Size(360, 23)
         Me.TextBoxPrevBank.TabIndex = 24
         '
         'Label12
@@ -260,7 +260,7 @@ Partial Class Registrering
         Me.Label12.AutoSize = True
         Me.Label12.Location = New System.Drawing.Point(10, 424)
         Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(114, 14)
+        Me.Label12.Size = New System.Drawing.Size(124, 17)
         Me.Label12.TabIndex = 23
         Me.Label12.Text = "Hvilken blodbank:"
         '
@@ -269,7 +269,7 @@ Partial Class Registrering
         Me.CheckBoxPrevGet.AutoSize = True
         Me.CheckBoxPrevGet.Location = New System.Drawing.Point(14, 481)
         Me.CheckBoxPrevGet.Name = "CheckBoxPrevGet"
-        Me.CheckBoxPrevGet.Size = New System.Drawing.Size(635, 18)
+        Me.CheckBoxPrevGet.Size = New System.Drawing.Size(680, 21)
         Me.CheckBoxPrevGet.TabIndex = 25
         Me.CheckBoxPrevGet.Text = "Jeg samtykker i at blodbanken kan hendvende seg til min tidligere blodbank for å " &
     "innhente opplysninger."
@@ -280,7 +280,7 @@ Partial Class Registrering
         Me.Label13.AutoSize = True
         Me.Label13.Location = New System.Drawing.Point(10, 514)
         Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(449, 14)
+        Me.Label13.Size = New System.Drawing.Size(482, 17)
         Me.Label13.TabIndex = 26
         Me.Label13.Text = "Har du spørsmål av medisinsk karakter, ta direkte kontakt med blodbanken."
         '
@@ -289,7 +289,7 @@ Partial Class Registrering
         Me.CheckBoxGetInfo.AutoSize = True
         Me.CheckBoxGetInfo.Location = New System.Drawing.Point(13, 547)
         Me.CheckBoxGetInfo.Name = "CheckBoxGetInfo"
-        Me.CheckBoxGetInfo.Size = New System.Drawing.Size(297, 18)
+        Me.CheckBoxGetInfo.Size = New System.Drawing.Size(325, 21)
         Me.CheckBoxGetInfo.TabIndex = 27
         Me.CheckBoxGetInfo.Text = "Jeg vil gjerne motta informasjon fra Røde Kors."
         Me.CheckBoxGetInfo.UseVisualStyleBackColor = True
@@ -309,7 +309,7 @@ Partial Class Registrering
         Me.Label14.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label14.Location = New System.Drawing.Point(10, 579)
         Me.Label14.Name = "Label14"
-        Me.Label14.Size = New System.Drawing.Size(885, 13)
+        Me.Label14.Size = New System.Drawing.Size(1139, 17)
         Me.Label14.TabIndex = 29
         Me.Label14.Text = "Ved å sende inn dette skjema samtykker jeg i at BloodBank Manager kan lagre min i" &
     "nformasjon i 3 måneder og at min blodbank registerer meg i sitt system."
@@ -319,7 +319,7 @@ Partial Class Registrering
         Me.TextBoxDoB.Location = New System.Drawing.Point(101, 148)
         Me.TextBoxDoB.Mask = "0000-00-00"
         Me.TextBoxDoB.Name = "TextBoxDoB"
-        Me.TextBoxDoB.Size = New System.Drawing.Size(130, 20)
+        Me.TextBoxDoB.Size = New System.Drawing.Size(130, 23)
         Me.TextBoxDoB.TabIndex = 30
         '
         'LabelFeilMelding
@@ -329,14 +329,14 @@ Partial Class Registrering
         Me.LabelFeilMelding.ForeColor = System.Drawing.Color.DarkRed
         Me.LabelFeilMelding.Location = New System.Drawing.Point(534, 100)
         Me.LabelFeilMelding.Name = "LabelFeilMelding"
-        Me.LabelFeilMelding.Size = New System.Drawing.Size(0, 14)
+        Me.LabelFeilMelding.Size = New System.Drawing.Size(0, 17)
         Me.LabelFeilMelding.TabIndex = 31
         '
         'TextBoxPassord
         '
-        Me.TextBoxPassord.Location = New System.Drawing.Point(561, 40)
+        Me.TextBoxPassord.Location = New System.Drawing.Point(570, 39)
         Me.TextBoxPassord.Name = "TextBoxPassord"
-        Me.TextBoxPassord.Size = New System.Drawing.Size(158, 20)
+        Me.TextBoxPassord.Size = New System.Drawing.Size(158, 23)
         Me.TextBoxPassord.TabIndex = 34
         '
         'Label16
@@ -344,7 +344,7 @@ Partial Class Registrering
         Me.Label16.AutoSize = True
         Me.Label16.Location = New System.Drawing.Point(456, 43)
         Me.Label16.Name = "Label16"
-        Me.Label16.Size = New System.Drawing.Size(97, 14)
+        Me.Label16.Size = New System.Drawing.Size(108, 17)
         Me.Label16.TabIndex = 35
         Me.Label16.Text = "Ønsket passord:"
         '
@@ -354,7 +354,7 @@ Partial Class Registrering
         Me.ComboBoxBlodType.Items.AddRange(New Object() {"A+", "O+", "B+", "AB+", "A-", "O-", "B-", "AB-"})
         Me.ComboBoxBlodType.Location = New System.Drawing.Point(302, 39)
         Me.ComboBoxBlodType.Name = "ComboBoxBlodType"
-        Me.ComboBoxBlodType.Size = New System.Drawing.Size(140, 22)
+        Me.ComboBoxBlodType.Size = New System.Drawing.Size(140, 25)
         Me.ComboBoxBlodType.TabIndex = 36
         '
         'Label17
@@ -362,7 +362,7 @@ Partial Class Registrering
         Me.Label17.AutoSize = True
         Me.Label17.Location = New System.Drawing.Point(299, 22)
         Me.Label17.Name = "Label17"
-        Me.Label17.Size = New System.Drawing.Size(155, 14)
+        Me.Label17.Size = New System.Drawing.Size(167, 17)
         Me.Label17.TabIndex = 37
         Me.Label17.Text = "Hvilken blodtype har du?"
         '
@@ -371,7 +371,7 @@ Partial Class Registrering
         Me.RadioButtonMann.AutoSize = True
         Me.RadioButtonMann.Location = New System.Drawing.Point(460, 83)
         Me.RadioButtonMann.Name = "RadioButtonMann"
-        Me.RadioButtonMann.Size = New System.Drawing.Size(58, 18)
+        Me.RadioButtonMann.Size = New System.Drawing.Size(65, 21)
         Me.RadioButtonMann.TabIndex = 38
         Me.RadioButtonMann.TabStop = True
         Me.RadioButtonMann.Tag = "1"
@@ -383,7 +383,7 @@ Partial Class Registrering
         Me.RadioButtonKvinne.AutoSize = True
         Me.RadioButtonKvinne.Location = New System.Drawing.Point(460, 110)
         Me.RadioButtonKvinne.Name = "RadioButtonKvinne"
-        Me.RadioButtonKvinne.Size = New System.Drawing.Size(67, 18)
+        Me.RadioButtonKvinne.Size = New System.Drawing.Size(74, 21)
         Me.RadioButtonKvinne.TabIndex = 39
         Me.RadioButtonKvinne.TabStop = True
         Me.RadioButtonKvinne.Tag = "1"
@@ -402,7 +402,7 @@ Partial Class Registrering
         '
         'Registrering
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 14.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 17.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(1163, 642)

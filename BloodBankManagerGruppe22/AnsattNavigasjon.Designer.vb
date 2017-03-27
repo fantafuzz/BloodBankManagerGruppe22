@@ -28,6 +28,7 @@ Partial Class AnsattNavigasjon
         Me.Bestill_Ny_BlodTime = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Button1 = New System.Windows.Forms.Button()
+        Me.Button2 = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'Statistikk
@@ -43,7 +44,7 @@ Partial Class AnsattNavigasjon
         'Logg_ut
         '
         Me.Logg_ut.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Logg_ut.Location = New System.Drawing.Point(619, 330)
+        Me.Logg_ut.Location = New System.Drawing.Point(619, 435)
         Me.Logg_ut.Name = "Logg_ut"
         Me.Logg_ut.Size = New System.Drawing.Size(138, 31)
         Me.Logg_ut.TabIndex = 37
@@ -65,12 +66,12 @@ Partial Class AnsattNavigasjon
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.0!, System.Drawing.FontStyle.Bold)
-        Me.Label1.Location = New System.Drawing.Point(237, 39)
+        Me.Label1.Location = New System.Drawing.Point(294, 35)
         Me.Label1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(304, 31)
+        Me.Label1.Size = New System.Drawing.Size(216, 39)
         Me.Label1.TabIndex = 33
-        Me.Label1.Text = "Velkommen til Minside"
+        Me.Label1.Text = "Velkommen "
         '
         'Button1
         '
@@ -82,12 +83,23 @@ Partial Class AnsattNavigasjon
         Me.Button1.Text = "Blodprodukter"
         Me.Button1.UseVisualStyleBackColor = True
         '
-        'AnsattMinSide
+        'Button2
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 17.0!)
+        Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button2.Location = New System.Drawing.Point(198, 316)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(376, 90)
+        Me.Button2.TabIndex = 41
+        Me.Button2.Text = "Motta Bestillinger"
+        Me.Button2.UseVisualStyleBackColor = True
+        '
+        'AnsattNavigasjon
+        '
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(10.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(769, 373)
+        Me.ClientSize = New System.Drawing.Size(769, 478)
+        Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.Statistikk)
         Me.Controls.Add(Me.Logg_ut)
@@ -97,7 +109,7 @@ Partial Class AnsattNavigasjon
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Margin = New System.Windows.Forms.Padding(4)
-        Me.Name = "AnsattMinSide"
+        Me.Name = "AnsattNavigasjon"
         Me.Text = "Blood Bank Administrator 2k17™ - xTreme Edition"
         Me.ResumeLayout(False)
         Me.PerformLayout()
@@ -109,4 +121,5 @@ Partial Class AnsattNavigasjon
     Friend WithEvents Bestill_Ny_BlodTime As Button
     Friend WithEvents Label1 As Label
     Friend WithEvents Button1 As Button
+    Friend WithEvents Button2 As Button
 End Class

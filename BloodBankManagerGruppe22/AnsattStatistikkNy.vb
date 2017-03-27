@@ -13,8 +13,8 @@ Public Class AnsattStatistikkNy
         FilterData("")
 
 
-        'Dim column As DataGridViewColumn = DataGridView1.Columns(0)
-        'column.Width = 160
+
+
 
         Dim column1 As DataGridViewColumn = DataGridView1.Columns(0)
         column1.Width = 255
