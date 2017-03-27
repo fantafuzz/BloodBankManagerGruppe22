@@ -5,6 +5,8 @@ Public Class BrukerBestill
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button_bestill_ny_time_blod_bruker_blodgiver.Click
 
 
+        Dim selectedDate As Date = MonthCalendar1.Text
+
 
 
         MysqlConn = New MySqlConnection
@@ -21,11 +23,14 @@ Public Class BrukerBestill
 
 
 
+
+
             MessageBox.Show("Ny time er bestilt.")
             MessageBox.Show("Tusen Takk for din interesse til blod donasjon. Vi i blodbanken setter stor pris på ditt bidrag og håper du forsetter med det!")
             MysqlConn.Close()
 
         Catch ex As Exception
+            'If MonthCalendar1.va Then
             MessageBox.Show(ex.Message)
         Finally
             MysqlConn.Dispose()
@@ -35,5 +40,9 @@ Public Class BrukerBestill
     Private Sub kalender_bestilling_blodgiver_tilbake__Click(sender As Object, e As EventArgs) Handles kalender_bestilling_blodgiver_tilbake_.Click
         BrukerMinSide.Show()
         Me.Close()
+    End Sub
+
+    Private Sub BrukerBestill_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
     End Sub
 End Class
