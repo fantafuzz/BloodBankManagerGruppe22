@@ -14,7 +14,6 @@ Public Class egenSkjemaBolk10
         svar(59) = CheckBoxEpost.CheckState
         svar(60) = CheckBoxSms.CheckState
         evt = TextBoxEvt.Text
-        sql.SendSvar(27, svar, evt)
         Me.Close()
     End Sub
     Private Sub egenSkjemaBolk10_Load(sender As Object, e As EventArgs) Handles MyBase.Load
