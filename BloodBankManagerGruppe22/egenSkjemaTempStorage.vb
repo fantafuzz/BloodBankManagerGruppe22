@@ -126,6 +126,9 @@
     End Sub
 
     Private Sub sendInn()
+        Dim tillatSms As Integer = CheckBoxSms.Checked
+        Dim tillatEpost As Integer = CheckBoxEpost.Checked
+        Dim evt As String = TextBoxEvt.Text
         Dim svarArray As New Hashtable()
         Dim sortedArray As New ArrayList
         For Each tab As TabPage In TabControlEgenskjema.TabPages
@@ -137,25 +140,21 @@
                     For Each item In checkedRadios
                         svarArray.Add(item.Tag, item.X.ToString)
                     Next
-                    For i = 1 To 59 Step 1
-                        If svarArray(i) = 0 Then
-                            sortedArray.Add(1)
-                        ElseIf svarArray(i) = 52 Then
-                            sortedArray.Add(0)
-                        Else
-                            sortedArray.Add("Feil hos radioknapp til spm nr: " & i)
-                        End If
-                    Next
                 End If
             Next
         Next
-        MsgBox("svarArray har " & CStr(svarArray.Count) & " entries")
-        MsgBox(svarArray(1))
-        Dim printout As String = ""
-        '  For Each item In sortedArray
-        ' printout &= CStr(item) & " "
-        ' Next
-        'MsgBox(printout)
+        For i = 1 To 59 Step 1
+            If svarArray(CStr(i)) = 0 Then
+                sortedArray.Add(1)
+            ElseIf svarArray(CStr(i)) = 52 Then
+                sortedArray.Add(0)
+            Else
+                sortedArray.Add("Feil hos radioknapp til spm nr: " & i)
+            End If
+        Next
+        sortedArray.Add(tillatEpost)
+        sortedArray.Add(tillatSms)
+        sql.SendSvar(Logginn.currentuser, sortedArray, evt)
     End Sub
     Private Sub ButtonNeste_Click(sender As Object, e As EventArgs) Handles ButtonNeste.Click
         Dim feil As Boolean = valider()

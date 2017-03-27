@@ -60,7 +60,7 @@ Public Class SQL_hookup
         Return table
     End Function
 
-    Public Function logInn(ByVal epost As String, ByVal passord As String, ByVal type As String) As Tuple(Of Integer, String)
+    Public Function logInnSql(ByVal epost As String, ByVal passord As String, ByVal type As String) As Tuple(Of Integer, String)
         Dim e = epost
         Dim p = hash(passord, salt)
         Dim fail As Boolean = False
@@ -114,7 +114,9 @@ Public Class SQL_hookup
         If fail Then
             Return Tuple.Create(-1, "feil")
         End If
+#Disable Warning BC42105 ' Function doesn't return a value on all code paths
     End Function
+#Enable Warning BC42105 ' Function doesn't return a value on all code paths
 
     Public Sub registrerNy(ByVal fornavn As String, ByVal etternavn As String, ByVal epost As String, ByVal passord As String, ByVal fodselsdato As String, ByVal personnummer As String, ByVal adresse As String, ByVal postnummer As Integer, ByVal poststed As String, ByVal telefonnummerEn As String, ByVal telefonnummerTo As String, ByVal kjonn As String, ByVal blodtype As Integer, ByVal blodgivningLokasjon As String, ByVal blodbefore As Boolean, ByVal hvilkenBlodbank As String, ByVal samtykke As Boolean, ByVal infoRodekors As Boolean)
         Dim hashedPassord = hash(passord, salt)
@@ -154,22 +156,9 @@ Public Class SQL_hookup
             connection.Close()
         End Try
     End Sub
-    Public Sub SendSvar(ByVal currentUser As Integer, ByVal tempsvar() As Boolean, ByVal evt As String)
+    Public Sub SendSvar(ByVal currentUser As Integer, ByVal svar As ArrayList, ByVal evt As String)
         Dim currDate As Date = Date.Now
         Dim currDateString As String = currDate.ToString("YYYY-mm-dd")
-        Dim svar(60) As Integer
-        Dim index = 0
-        For Each s In tempsvar
-            If s = True Then
-                svar(index) = 1
-            ElseIf s = False Then
-                svar(index) = 0
-            End If
-            index += 1
-        Next
-        For Each s In svar
-            MsgBox(s)
-        Next
         Try
             connection.Open()
             Dim sqlSendSvar As New MySqlCommand("INSERT INTO egenerklaeringsskjema(skjema_bruker_id, dato, tillat_epost, tillat_sms, evt_info, 1_1, 1_2, 1_3, 1_4, 1_5, 1_6, 2_1, 2_2, 2_3, 2_4, 2_5, 3_1, 3_2, 3_3, 3_4, 3_5, 3_6, 3_7, 4_1, 4_2, 4_3, 4_4, 4_5, 4_6, 4_7, 4_8, 4_9, 4_10, 5_1, 6_1, 6_2, 6_3, 6_4, 6_5, 6_6, 6_7, 6_8, 6_9, 6_10, 6_11, 6_12, 6_13, 6_14, 6_15, 7_1, 7_2, 7_3, 7_4, 8_1, 9_1, 9_2, 9_3, 9_4, 9_5, 9_6, 9_7, 9_8, 9_9, 9_10) VALUES ((SELECT blodgiver_bruker_id FROM blodgiver WHERE blodgiver_bruker_id = @currentuser), @dato, @tillat_epost, @tillat_sms, @evt_info, @1_1, @1_2, @1_3, @1_4, @1_5, @1_6, @2_1, @2_2, @2_3, @2_4, @2_5, @3_1, @3_2, @3_3, @3_4, @3_5, @3_6, @3_7, @4_1, @4_2, @4_3, @4_4, @4_5, @4_6, @4_7, @4_8, @4_9, @4_10, @5_1, @6_1, @6_2, @6_3, @6_4, @6_5, @6_6, @6_7, @6_8, @6_9, @6_10, @6_11, @6_12, @6_13, @6_14, @6_16, @7_1, @7_2, @7_3, @7_4, @8_1, @9_1, @9_2, @9_3, @9_4, @9_5, @9_6, @9_7, @9_8, @9_9, @9_10)")

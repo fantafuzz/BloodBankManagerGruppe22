@@ -296,6 +296,7 @@ Partial Class egenSkjemaTempStorage
         Me.LabelSpm50 = New System.Windows.Forms.Label()
         Me.Label78 = New System.Windows.Forms.Label()
         Me.TabPage10 = New System.Windows.Forms.TabPage()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.CheckBoxSms = New System.Windows.Forms.CheckBox()
         Me.CheckBoxEpost = New System.Windows.Forms.CheckBox()
         Me.TextBoxEvt = New System.Windows.Forms.TextBox()
@@ -303,7 +304,6 @@ Partial Class egenSkjemaTempStorage
         Me.ButtonNeste = New System.Windows.Forms.Button()
         Me.ButtonForrige = New System.Windows.Forms.Button()
         Me.LabelFeilMelding = New System.Windows.Forms.Label()
-        Me.Button1 = New System.Windows.Forms.Button()
         Me.TabControlEgenskjema.SuspendLayout()
         Me.TabPage2.SuspendLayout()
         Me.PanelSpm2.SuspendLayout()
@@ -2974,7 +2974,7 @@ Partial Class egenSkjemaTempStorage
         'RadioButton59
         '
         Me.RadioButton59.AutoSize = True
-        Me.RadioButton59.Location = New System.Drawing.Point(45, 6)
+        Me.RadioButton59.Location = New System.Drawing.Point(52, 6)
         Me.RadioButton59.Margin = New System.Windows.Forms.Padding(5, 6, 5, 6)
         Me.RadioButton59.Name = "RadioButton59"
         Me.RadioButton59.Size = New System.Drawing.Size(14, 13)
@@ -3010,7 +3010,7 @@ Partial Class egenSkjemaTempStorage
         'RadioButton61
         '
         Me.RadioButton61.AutoSize = True
-        Me.RadioButton61.Location = New System.Drawing.Point(45, 6)
+        Me.RadioButton61.Location = New System.Drawing.Point(52, 6)
         Me.RadioButton61.Margin = New System.Windows.Forms.Padding(5, 6, 5, 6)
         Me.RadioButton61.Name = "RadioButton61"
         Me.RadioButton61.Size = New System.Drawing.Size(14, 13)
@@ -3046,7 +3046,7 @@ Partial Class egenSkjemaTempStorage
         'RadioButton63
         '
         Me.RadioButton63.AutoSize = True
-        Me.RadioButton63.Location = New System.Drawing.Point(45, 6)
+        Me.RadioButton63.Location = New System.Drawing.Point(52, 6)
         Me.RadioButton63.Margin = New System.Windows.Forms.Padding(5, 6, 5, 6)
         Me.RadioButton63.Name = "RadioButton63"
         Me.RadioButton63.Size = New System.Drawing.Size(14, 13)
@@ -3082,7 +3082,7 @@ Partial Class egenSkjemaTempStorage
         'RadioButton65
         '
         Me.RadioButton65.AutoSize = True
-        Me.RadioButton65.Location = New System.Drawing.Point(45, 6)
+        Me.RadioButton65.Location = New System.Drawing.Point(52, 6)
         Me.RadioButton65.Margin = New System.Windows.Forms.Padding(5, 6, 5, 6)
         Me.RadioButton65.Name = "RadioButton65"
         Me.RadioButton65.Size = New System.Drawing.Size(14, 13)
@@ -3245,7 +3245,7 @@ Partial Class egenSkjemaTempStorage
         'RadioButton69
         '
         Me.RadioButton69.AutoSize = True
-        Me.RadioButton69.Location = New System.Drawing.Point(39, 5)
+        Me.RadioButton69.Location = New System.Drawing.Point(52, 6)
         Me.RadioButton69.Name = "RadioButton69"
         Me.RadioButton69.Size = New System.Drawing.Size(14, 13)
         Me.RadioButton69.TabIndex = 37
@@ -3256,7 +3256,7 @@ Partial Class egenSkjemaTempStorage
         'RadioButton70
         '
         Me.RadioButton70.AutoSize = True
-        Me.RadioButton70.Location = New System.Drawing.Point(0, 5)
+        Me.RadioButton70.Location = New System.Drawing.Point(0, 6)
         Me.RadioButton70.Name = "RadioButton70"
         Me.RadioButton70.Size = New System.Drawing.Size(14, 13)
         Me.RadioButton70.TabIndex = 38
@@ -3278,7 +3278,7 @@ Partial Class egenSkjemaTempStorage
         'RadioButton71
         '
         Me.RadioButton71.AutoSize = True
-        Me.RadioButton71.Location = New System.Drawing.Point(39, 5)
+        Me.RadioButton71.Location = New System.Drawing.Point(52, 6)
         Me.RadioButton71.Name = "RadioButton71"
         Me.RadioButton71.Size = New System.Drawing.Size(14, 13)
         Me.RadioButton71.TabIndex = 37
@@ -3289,7 +3289,7 @@ Partial Class egenSkjemaTempStorage
         'RadioButton72
         '
         Me.RadioButton72.AutoSize = True
-        Me.RadioButton72.Location = New System.Drawing.Point(0, 5)
+        Me.RadioButton72.Location = New System.Drawing.Point(0, 6)
         Me.RadioButton72.Name = "RadioButton72"
         Me.RadioButton72.Size = New System.Drawing.Size(14, 13)
         Me.RadioButton72.TabIndex = 38
@@ -3311,7 +3311,7 @@ Partial Class egenSkjemaTempStorage
         'RadioButton73
         '
         Me.RadioButton73.AutoSize = True
-        Me.RadioButton73.Location = New System.Drawing.Point(39, 5)
+        Me.RadioButton73.Location = New System.Drawing.Point(52, 6)
         Me.RadioButton73.Name = "RadioButton73"
         Me.RadioButton73.Size = New System.Drawing.Size(14, 13)
         Me.RadioButton73.TabIndex = 37
@@ -3322,7 +3322,7 @@ Partial Class egenSkjemaTempStorage
         'RadioButton74
         '
         Me.RadioButton74.AutoSize = True
-        Me.RadioButton74.Location = New System.Drawing.Point(0, 5)
+        Me.RadioButton74.Location = New System.Drawing.Point(0, 6)
         Me.RadioButton74.Name = "RadioButton74"
         Me.RadioButton74.Size = New System.Drawing.Size(14, 13)
         Me.RadioButton74.TabIndex = 38
@@ -3344,7 +3344,7 @@ Partial Class egenSkjemaTempStorage
         'RadioButton75
         '
         Me.RadioButton75.AutoSize = True
-        Me.RadioButton75.Location = New System.Drawing.Point(39, 5)
+        Me.RadioButton75.Location = New System.Drawing.Point(52, 6)
         Me.RadioButton75.Name = "RadioButton75"
         Me.RadioButton75.Size = New System.Drawing.Size(14, 13)
         Me.RadioButton75.TabIndex = 37
@@ -3355,7 +3355,7 @@ Partial Class egenSkjemaTempStorage
         'RadioButton76
         '
         Me.RadioButton76.AutoSize = True
-        Me.RadioButton76.Location = New System.Drawing.Point(0, 5)
+        Me.RadioButton76.Location = New System.Drawing.Point(0, 6)
         Me.RadioButton76.Name = "RadioButton76"
         Me.RadioButton76.Size = New System.Drawing.Size(14, 13)
         Me.RadioButton76.TabIndex = 38
@@ -3377,7 +3377,7 @@ Partial Class egenSkjemaTempStorage
         'RadioButton77
         '
         Me.RadioButton77.AutoSize = True
-        Me.RadioButton77.Location = New System.Drawing.Point(39, 5)
+        Me.RadioButton77.Location = New System.Drawing.Point(52, 6)
         Me.RadioButton77.Name = "RadioButton77"
         Me.RadioButton77.Size = New System.Drawing.Size(14, 13)
         Me.RadioButton77.TabIndex = 37
@@ -3388,7 +3388,7 @@ Partial Class egenSkjemaTempStorage
         'RadioButton78
         '
         Me.RadioButton78.AutoSize = True
-        Me.RadioButton78.Location = New System.Drawing.Point(0, 5)
+        Me.RadioButton78.Location = New System.Drawing.Point(0, 6)
         Me.RadioButton78.Name = "RadioButton78"
         Me.RadioButton78.Size = New System.Drawing.Size(14, 13)
         Me.RadioButton78.TabIndex = 38
@@ -3410,7 +3410,7 @@ Partial Class egenSkjemaTempStorage
         'RadioButton79
         '
         Me.RadioButton79.AutoSize = True
-        Me.RadioButton79.Location = New System.Drawing.Point(39, 5)
+        Me.RadioButton79.Location = New System.Drawing.Point(52, 6)
         Me.RadioButton79.Name = "RadioButton79"
         Me.RadioButton79.Size = New System.Drawing.Size(14, 13)
         Me.RadioButton79.TabIndex = 37
@@ -3421,7 +3421,7 @@ Partial Class egenSkjemaTempStorage
         'RadioButton80
         '
         Me.RadioButton80.AutoSize = True
-        Me.RadioButton80.Location = New System.Drawing.Point(0, 5)
+        Me.RadioButton80.Location = New System.Drawing.Point(0, 6)
         Me.RadioButton80.Name = "RadioButton80"
         Me.RadioButton80.Size = New System.Drawing.Size(14, 13)
         Me.RadioButton80.TabIndex = 38
@@ -3443,7 +3443,7 @@ Partial Class egenSkjemaTempStorage
         'RadioButton81
         '
         Me.RadioButton81.AutoSize = True
-        Me.RadioButton81.Location = New System.Drawing.Point(39, 5)
+        Me.RadioButton81.Location = New System.Drawing.Point(52, 6)
         Me.RadioButton81.Name = "RadioButton81"
         Me.RadioButton81.Size = New System.Drawing.Size(14, 13)
         Me.RadioButton81.TabIndex = 37
@@ -3454,7 +3454,7 @@ Partial Class egenSkjemaTempStorage
         'RadioButton82
         '
         Me.RadioButton82.AutoSize = True
-        Me.RadioButton82.Location = New System.Drawing.Point(0, 5)
+        Me.RadioButton82.Location = New System.Drawing.Point(0, 6)
         Me.RadioButton82.Name = "RadioButton82"
         Me.RadioButton82.Size = New System.Drawing.Size(14, 13)
         Me.RadioButton82.TabIndex = 38
@@ -3476,7 +3476,7 @@ Partial Class egenSkjemaTempStorage
         'RadioButton83
         '
         Me.RadioButton83.AutoSize = True
-        Me.RadioButton83.Location = New System.Drawing.Point(39, 5)
+        Me.RadioButton83.Location = New System.Drawing.Point(52, 6)
         Me.RadioButton83.Name = "RadioButton83"
         Me.RadioButton83.Size = New System.Drawing.Size(14, 13)
         Me.RadioButton83.TabIndex = 37
@@ -3487,7 +3487,7 @@ Partial Class egenSkjemaTempStorage
         'RadioButton84
         '
         Me.RadioButton84.AutoSize = True
-        Me.RadioButton84.Location = New System.Drawing.Point(0, 5)
+        Me.RadioButton84.Location = New System.Drawing.Point(0, 6)
         Me.RadioButton84.Name = "RadioButton84"
         Me.RadioButton84.Size = New System.Drawing.Size(14, 13)
         Me.RadioButton84.TabIndex = 38
@@ -3509,7 +3509,7 @@ Partial Class egenSkjemaTempStorage
         'RadioButton85
         '
         Me.RadioButton85.AutoSize = True
-        Me.RadioButton85.Location = New System.Drawing.Point(39, 5)
+        Me.RadioButton85.Location = New System.Drawing.Point(52, 6)
         Me.RadioButton85.Name = "RadioButton85"
         Me.RadioButton85.Size = New System.Drawing.Size(14, 13)
         Me.RadioButton85.TabIndex = 37
@@ -3520,7 +3520,7 @@ Partial Class egenSkjemaTempStorage
         'RadioButton86
         '
         Me.RadioButton86.AutoSize = True
-        Me.RadioButton86.Location = New System.Drawing.Point(0, 5)
+        Me.RadioButton86.Location = New System.Drawing.Point(0, 6)
         Me.RadioButton86.Name = "RadioButton86"
         Me.RadioButton86.Size = New System.Drawing.Size(14, 13)
         Me.RadioButton86.TabIndex = 38
@@ -3542,7 +3542,7 @@ Partial Class egenSkjemaTempStorage
         'RadioButton87
         '
         Me.RadioButton87.AutoSize = True
-        Me.RadioButton87.Location = New System.Drawing.Point(39, 5)
+        Me.RadioButton87.Location = New System.Drawing.Point(52, 6)
         Me.RadioButton87.Name = "RadioButton87"
         Me.RadioButton87.Size = New System.Drawing.Size(14, 13)
         Me.RadioButton87.TabIndex = 37
@@ -3553,7 +3553,7 @@ Partial Class egenSkjemaTempStorage
         'RadioButton88
         '
         Me.RadioButton88.AutoSize = True
-        Me.RadioButton88.Location = New System.Drawing.Point(0, 5)
+        Me.RadioButton88.Location = New System.Drawing.Point(0, 6)
         Me.RadioButton88.Name = "RadioButton88"
         Me.RadioButton88.Size = New System.Drawing.Size(14, 13)
         Me.RadioButton88.TabIndex = 38
@@ -3695,6 +3695,15 @@ Partial Class egenSkjemaTempStorage
         Me.TabPage10.Text = "Side 9"
         Me.TabPage10.UseVisualStyleBackColor = True
         '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(477, 302)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(75, 23)
+        Me.Button1.TabIndex = 9
+        Me.Button1.Text = "Button1"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
         'CheckBoxSms
         '
         Me.CheckBoxSms.AutoSize = True
@@ -3763,15 +3772,6 @@ Partial Class egenSkjemaTempStorage
         Me.LabelFeilMelding.TabIndex = 87
         Me.LabelFeilMelding.Text = "Du må svare på alle spørsmål"
         Me.LabelFeilMelding.Visible = False
-        '
-        'Button1
-        '
-        Me.Button1.Location = New System.Drawing.Point(477, 302)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 23)
-        Me.Button1.TabIndex = 9
-        Me.Button1.Text = "Button1"
-        Me.Button1.UseVisualStyleBackColor = True
         '
         'egenSkjemaTempStorage
         '

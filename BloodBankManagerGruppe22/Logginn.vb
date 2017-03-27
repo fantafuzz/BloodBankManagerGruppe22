@@ -8,7 +8,7 @@ Public Class Logginn
     Dim sql As New SQL_hookup("g_oops_22", "BtUDpVoR", "g_oops_22", "mysql.stud.iie.ntnu.no")
 
     Private Sub ButtonLogInn_Click(sender As Object, e As EventArgs) Handles ButtonLogInn.Click
-        Dim sjekkLog As Tuple(Of Integer, String) = sql.logInn(TextBoxEpost.Text, TextBoxPassword.Text, "bruker")
+        Dim sjekkLog As Tuple(Of Integer, String) = sql.logInnSql(TextBoxEpost.Text, TextBoxPassword.Text, "bruker")
         currentuser = sjekkLog.Item1
 
 
@@ -77,7 +77,7 @@ Kriteriene for utvelgelse av blodgivere og en rekke av de laboratorieundersøkel
     End Sub
 
     Private Sub ButtonLogInnAnsatt_Click(sender As Object, e As EventArgs) Handles ButtonLogInnAnsatt.Click
-        Dim sjekkLog As Tuple(Of Integer, String) = sql.logInn(TextBoxEpost.Text, TextBoxPassword.Text, "ansatt")
+        Dim sjekkLog As Tuple(Of Integer, String) = sql.logInnSql(TextBoxEpost.Text, TextBoxPassword.Text, "ansatt")
         currentuser = sjekkLog.Item1
         currentuserType = CInt(sjekkLog.Item2)
         If currentuser = -1 Then
