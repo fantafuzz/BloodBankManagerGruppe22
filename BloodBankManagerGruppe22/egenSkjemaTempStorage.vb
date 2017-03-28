@@ -126,11 +126,18 @@
     End Sub
 
     Private Sub sendInn()
-        Dim tillatSms As Integer = CheckBoxSms.Checked
-        Dim tillatEpost As Integer = CheckBoxEpost.Checked
+        Dim tillatSms As Integer = 0
+        If CheckBoxSms.Checked Then
+            tillatSms = 1
+        End If
+        Dim tillatEpost As Integer = 0
+        If CheckBoxEpost.Checked Then
+            tillatEpost = 0
+        End If
         Dim evt As String = TextBoxEvt.Text
         Dim svarArray As New Hashtable()
         Dim sortedArray As New ArrayList
+        Dim finalArray As New Hashtable()
         For Each tab As TabPage In TabControlEgenskjema.TabPages
             For Each ctrl As Control In tab.Controls
                 If ctrl.GetType Is GetType(Panel) Then
@@ -249,6 +256,8 @@
                 End If
             Next
         Next 'Denne sparer masse skriving, der alternativet er å skriver private sub x(sender as object, e as eventargs) handles radiobutton1, radiobutton2 ... radiobutton 120.
+
+        Label1.Text = sql.getNavn(Logginn.currentuser)
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click

@@ -304,7 +304,9 @@ Partial Class egenSkjemaTempStorage
         Me.ButtonNeste = New System.Windows.Forms.Button()
         Me.ButtonForrige = New System.Windows.Forms.Button()
         Me.LabelFeilMelding = New System.Windows.Forms.Label()
+        Me.Label1 = New System.Windows.Forms.Label()
         Me.TabControlEgenskjema.SuspendLayout()
+        Me.TabPage1.SuspendLayout()
         Me.TabPage2.SuspendLayout()
         Me.PanelSpm2.SuspendLayout()
         Me.PanelSpm4.SuspendLayout()
@@ -395,6 +397,7 @@ Partial Class egenSkjemaTempStorage
         '
         'TabPage1
         '
+        Me.TabPage1.Controls.Add(Me.Label1)
         Me.TabPage1.Location = New System.Drawing.Point(4, 22)
         Me.TabPage1.Name = "TabPage1"
         Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
@@ -3773,6 +3776,15 @@ Partial Class egenSkjemaTempStorage
         Me.LabelFeilMelding.Text = "Du må svare på alle spørsmål"
         Me.LabelFeilMelding.Visible = False
         '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(155, 90)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(39, 13)
+        Me.Label1.TabIndex = 0
+        Me.Label1.Text = "Label1"
+        '
         'egenSkjemaTempStorage
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -3785,6 +3797,8 @@ Partial Class egenSkjemaTempStorage
         Me.Name = "egenSkjemaTempStorage"
         Me.Text = "egenSkjemaTempStorage"
         Me.TabControlEgenskjema.ResumeLayout(False)
+        Me.TabPage1.ResumeLayout(False)
+        Me.TabPage1.PerformLayout()
         Me.TabPage2.ResumeLayout(False)
         Me.TabPage2.PerformLayout()
         Me.PanelSpm2.ResumeLayout(False)
@@ -4208,4 +4222,5 @@ Partial Class egenSkjemaTempStorage
     Friend WithEvents TextBoxEvt As TextBox
     Friend WithEvents Label79 As Label
     Friend WithEvents Button1 As Button
+    Friend WithEvents Label1 As Label
 End Class
