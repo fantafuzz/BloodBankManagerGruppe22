@@ -233,6 +233,22 @@ Public Class SQL_hookup
             connection.Close()
         End Try
     End Sub
-
-
+    Public Function getNavn(ByVal currentUser As Integer) As String
+        Dim fornavn As String = "Hvis du ser dette, har du gjort noe feil."
+        Try
+            connection.Open()
+            Dim sqlGetNavn As New MySqlCommand("SELECT fornavn FROM bruker WHERE bruker_id = @id", connection)
+            sqlGetNavn.Parameters.AddWithValue("@id", currentUser)
+            Dim reader As MySqlDataReader = sqlGetNavn.ExecuteReader
+            If reader.HasRows Then
+                reader.Read()
+                fornavn = reader("fornavn")
+            End If
+        Catch ex As MySqlException
+            MsgBox(ex)
+        Finally
+            connection.Close()
+        End Try
+        Return fornavn
+    End Function
 End Class
