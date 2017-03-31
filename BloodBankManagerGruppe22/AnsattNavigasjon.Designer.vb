@@ -29,12 +29,13 @@ Partial Class AnsattNavigasjon
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
+        Me.Button3 = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'Statistikk
         '
         Me.Statistikk.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Statistikk.Location = New System.Drawing.Point(198, 230)
+        Me.Statistikk.Location = New System.Drawing.Point(204, 262)
         Me.Statistikk.Name = "Statistikk"
         Me.Statistikk.Size = New System.Drawing.Size(376, 90)
         Me.Statistikk.TabIndex = 39
@@ -44,7 +45,7 @@ Partial Class AnsattNavigasjon
         'Logg_ut
         '
         Me.Logg_ut.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Logg_ut.Location = New System.Drawing.Point(619, 435)
+        Me.Logg_ut.Location = New System.Drawing.Point(707, 483)
         Me.Logg_ut.Name = "Logg_ut"
         Me.Logg_ut.Size = New System.Drawing.Size(138, 31)
         Me.Logg_ut.TabIndex = 37
@@ -55,7 +56,7 @@ Partial Class AnsattNavigasjon
         '
         Me.Bestill_Ny_BlodTime.BackColor = System.Drawing.Color.Transparent
         Me.Bestill_Ny_BlodTime.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Bestill_Ny_BlodTime.Location = New System.Drawing.Point(198, 86)
+        Me.Bestill_Ny_BlodTime.Location = New System.Drawing.Point(204, 118)
         Me.Bestill_Ny_BlodTime.Name = "Bestill_Ny_BlodTime"
         Me.Bestill_Ny_BlodTime.Size = New System.Drawing.Size(376, 74)
         Me.Bestill_Ny_BlodTime.TabIndex = 36
@@ -69,14 +70,14 @@ Partial Class AnsattNavigasjon
         Me.Label1.Location = New System.Drawing.Point(294, 35)
         Me.Label1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(216, 39)
+        Me.Label1.Size = New System.Drawing.Size(337, 63)
         Me.Label1.TabIndex = 33
         Me.Label1.Text = "Velkommen "
         '
         'Button1
         '
         Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.Location = New System.Drawing.Point(198, 154)
+        Me.Button1.Location = New System.Drawing.Point(204, 186)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(376, 81)
         Me.Button1.TabIndex = 40
@@ -86,19 +87,29 @@ Partial Class AnsattNavigasjon
         'Button2
         '
         Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button2.Location = New System.Drawing.Point(198, 316)
+        Me.Button2.Location = New System.Drawing.Point(204, 348)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(376, 90)
         Me.Button2.TabIndex = 41
         Me.Button2.Text = "Motta Bestillinger"
         Me.Button2.UseVisualStyleBackColor = True
         '
+        'Button3
+        '
+        Me.Button3.Location = New System.Drawing.Point(204, 445)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(376, 89)
+        Me.Button3.TabIndex = 42
+        Me.Button3.Text = "Tappe blod"
+        Me.Button3.UseVisualStyleBackColor = True
+        '
         'AnsattNavigasjon
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(10.0!, 20.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(16.0!, 31.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(769, 478)
+        Me.ClientSize = New System.Drawing.Size(961, 674)
+        Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.Statistikk)
@@ -122,4 +133,5 @@ Partial Class AnsattNavigasjon
     Friend WithEvents Label1 As Label
     Friend WithEvents Button1 As Button
     Friend WithEvents Button2 As Button
+    Friend WithEvents Button3 As Button
 End Class
