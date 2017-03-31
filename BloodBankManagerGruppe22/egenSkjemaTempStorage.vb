@@ -132,11 +132,10 @@
         End If
         Dim tillatEpost As Integer = 0
         If CheckBoxEpost.Checked Then
-            tillatEpost = 0
+            tillatEpost = 1
         End If
         Dim evt As String = TextBoxEvt.Text
         Dim svarArray As New Hashtable()
-        Dim sortedArray As New ArrayList
         Dim finalArray As New Hashtable()
         For Each tab As TabPage In TabControlEgenskjema.TabPages
             For Each ctrl As Control In tab.Controls
@@ -152,16 +151,16 @@
         Next
         For i = 1 To 59 Step 1
             If svarArray(CStr(i)) = 0 Then
-                sortedArray.Add(1)
+                finalArray.Add(i, 1)
             ElseIf svarArray(CStr(i)) = 52 Then
-                sortedArray.Add(0)
+                finalArray.Add(i, 0)
             Else
-                sortedArray.Add("Feil hos radioknapp til spm nr: " & i)
+                finalArray.Add(i, -1)
             End If
         Next
-        sortedArray.Add(tillatEpost)
-        sortedArray.Add(tillatSms)
-        sql.SendSvar(Logginn.currentuser, sortedArray, evt)
+        finalArray.Add(60, tillatEpost)
+        finalArray.Add(61, tillatSms)
+        sql.SendSvar(Logginn.currentuser, finalArray, evt)
     End Sub
     Private Sub ButtonNeste_Click(sender As Object, e As EventArgs) Handles ButtonNeste.Click
         Dim feil As Boolean = valider()
