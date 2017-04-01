@@ -58,17 +58,17 @@ Partial Class Registrering
         Me.ComboBoxBlodType = New System.Windows.Forms.ComboBox()
         Me.Label17 = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.Label15 = New System.Windows.Forms.Label()
+        Me.LabelFeilPerson = New System.Windows.Forms.Label()
+        Me.ComboBoxKjonn = New System.Windows.Forms.ComboBox()
         Me.Label18 = New System.Windows.Forms.Label()
+        Me.Label15 = New System.Windows.Forms.Label()
         Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.LabelFeilKontakt = New System.Windows.Forms.Label()
         Me.Label19 = New System.Windows.Forms.Label()
         Me.Panel3 = New System.Windows.Forms.Panel()
-        Me.Label20 = New System.Windows.Forms.Label()
-        Me.ComboBoxKjonn = New System.Windows.Forms.ComboBox()
-        Me.Panel4 = New System.Windows.Forms.Panel()
-        Me.LabelFeilPerson = New System.Windows.Forms.Label()
-        Me.LabelFeilKontakt = New System.Windows.Forms.Label()
         Me.LabelFeilBlod = New System.Windows.Forms.Label()
+        Me.Label20 = New System.Windows.Forms.Label()
+        Me.Panel4 = New System.Windows.Forms.Panel()
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
         Me.Panel3.SuspendLayout()
@@ -389,14 +389,25 @@ Partial Class Registrering
         Me.Panel1.Size = New System.Drawing.Size(484, 283)
         Me.Panel1.TabIndex = 40
         '
-        'Label15
+        'LabelFeilPerson
         '
-        Me.Label15.AutoSize = True
-        Me.Label15.Location = New System.Drawing.Point(3, 3)
-        Me.Label15.Name = "Label15"
-        Me.Label15.Size = New System.Drawing.Size(93, 13)
-        Me.Label15.TabIndex = 36
-        Me.Label15.Text = "Personinformasjon"
+        Me.LabelFeilPerson.AutoSize = True
+        Me.LabelFeilPerson.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LabelFeilPerson.Location = New System.Drawing.Point(297, 259)
+        Me.LabelFeilPerson.Name = "LabelFeilPerson"
+        Me.LabelFeilPerson.Size = New System.Drawing.Size(180, 20)
+        Me.LabelFeilPerson.TabIndex = 42
+        Me.LabelFeilPerson.Text = "Vennligst fyll inn alle felt."
+        Me.LabelFeilPerson.Visible = False
+        '
+        'ComboBoxKjonn
+        '
+        Me.ComboBoxKjonn.FormattingEnabled = True
+        Me.ComboBoxKjonn.Items.AddRange(New Object() {"Mann", "Kvinne", "Annet"})
+        Me.ComboBoxKjonn.Location = New System.Drawing.Point(101, 225)
+        Me.ComboBoxKjonn.Name = "ComboBoxKjonn"
+        Me.ComboBoxKjonn.Size = New System.Drawing.Size(121, 21)
+        Me.ComboBoxKjonn.TabIndex = 41
         '
         'Label18
         '
@@ -406,6 +417,15 @@ Partial Class Registrering
         Me.Label18.Size = New System.Drawing.Size(37, 13)
         Me.Label18.TabIndex = 40
         Me.Label18.Text = "Kjønn:"
+        '
+        'Label15
+        '
+        Me.Label15.AutoSize = True
+        Me.Label15.Location = New System.Drawing.Point(3, 3)
+        Me.Label15.Name = "Label15"
+        Me.Label15.Size = New System.Drawing.Size(93, 13)
+        Me.Label15.TabIndex = 36
+        Me.Label15.Text = "Personinformasjon"
         '
         'Panel2
         '
@@ -428,6 +448,17 @@ Partial Class Registrering
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(484, 283)
         Me.Panel2.TabIndex = 41
+        '
+        'LabelFeilKontakt
+        '
+        Me.LabelFeilKontakt.AutoSize = True
+        Me.LabelFeilKontakt.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LabelFeilKontakt.Location = New System.Drawing.Point(297, 258)
+        Me.LabelFeilKontakt.Name = "LabelFeilKontakt"
+        Me.LabelFeilKontakt.Size = New System.Drawing.Size(180, 20)
+        Me.LabelFeilKontakt.TabIndex = 43
+        Me.LabelFeilKontakt.Text = "Vennligst fyll inn alle felt."
+        Me.LabelFeilKontakt.Visible = False
         '
         'Label19
         '
@@ -456,56 +487,6 @@ Partial Class Registrering
         Me.Panel3.Size = New System.Drawing.Size(484, 283)
         Me.Panel3.TabIndex = 42
         '
-        'Label20
-        '
-        Me.Label20.AutoSize = True
-        Me.Label20.Location = New System.Drawing.Point(3, 0)
-        Me.Label20.Name = "Label20"
-        Me.Label20.Size = New System.Drawing.Size(120, 13)
-        Me.Label20.TabIndex = 0
-        Me.Label20.Text = "Blodgivningsinformasjon"
-        '
-        'ComboBoxKjonn
-        '
-        Me.ComboBoxKjonn.FormattingEnabled = True
-        Me.ComboBoxKjonn.Items.AddRange(New Object() {"Mann", "Kvinne", "Annet"})
-        Me.ComboBoxKjonn.Location = New System.Drawing.Point(101, 225)
-        Me.ComboBoxKjonn.Name = "ComboBoxKjonn"
-        Me.ComboBoxKjonn.Size = New System.Drawing.Size(121, 21)
-        Me.ComboBoxKjonn.TabIndex = 41
-        '
-        'Panel4
-        '
-        Me.Panel4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.Panel4.Controls.Add(Me.Label14)
-        Me.Panel4.Controls.Add(Me.Label13)
-        Me.Panel4.Location = New System.Drawing.Point(501, 301)
-        Me.Panel4.Name = "Panel4"
-        Me.Panel4.Size = New System.Drawing.Size(484, 252)
-        Me.Panel4.TabIndex = 43
-        '
-        'LabelFeilPerson
-        '
-        Me.LabelFeilPerson.AutoSize = True
-        Me.LabelFeilPerson.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LabelFeilPerson.Location = New System.Drawing.Point(297, 259)
-        Me.LabelFeilPerson.Name = "LabelFeilPerson"
-        Me.LabelFeilPerson.Size = New System.Drawing.Size(180, 20)
-        Me.LabelFeilPerson.TabIndex = 42
-        Me.LabelFeilPerson.Text = "Vennligst fyll inn alle felt."
-        Me.LabelFeilPerson.Visible = False
-        '
-        'LabelFeilKontakt
-        '
-        Me.LabelFeilKontakt.AutoSize = True
-        Me.LabelFeilKontakt.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LabelFeilKontakt.Location = New System.Drawing.Point(297, 258)
-        Me.LabelFeilKontakt.Name = "LabelFeilKontakt"
-        Me.LabelFeilKontakt.Size = New System.Drawing.Size(180, 20)
-        Me.LabelFeilKontakt.TabIndex = 43
-        Me.LabelFeilKontakt.Text = "Vennligst fyll inn alle felt."
-        Me.LabelFeilKontakt.Visible = False
-        '
         'LabelFeilBlod
         '
         Me.LabelFeilBlod.AutoSize = True
@@ -516,6 +497,25 @@ Partial Class Registrering
         Me.LabelFeilBlod.TabIndex = 44
         Me.LabelFeilBlod.Text = "Vennligst fyll inn alle felt."
         Me.LabelFeilBlod.Visible = False
+        '
+        'Label20
+        '
+        Me.Label20.AutoSize = True
+        Me.Label20.Location = New System.Drawing.Point(3, 0)
+        Me.Label20.Name = "Label20"
+        Me.Label20.Size = New System.Drawing.Size(120, 13)
+        Me.Label20.TabIndex = 0
+        Me.Label20.Text = "Blodgivningsinformasjon"
+        '
+        'Panel4
+        '
+        Me.Panel4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.Panel4.Controls.Add(Me.Label14)
+        Me.Panel4.Controls.Add(Me.Label13)
+        Me.Panel4.Location = New System.Drawing.Point(501, 301)
+        Me.Panel4.Name = "Panel4"
+        Me.Panel4.Size = New System.Drawing.Size(484, 252)
+        Me.Panel4.TabIndex = 43
         '
         'Registrering
         '
@@ -531,6 +531,7 @@ Partial Class Registrering
         Me.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.Location = New System.Drawing.Point(100, 100)
         Me.Name = "Registrering"
         Me.Text = "Blood Bank Administrator 2k17™ - xTreme Edition"
         Me.Panel1.ResumeLayout(False)

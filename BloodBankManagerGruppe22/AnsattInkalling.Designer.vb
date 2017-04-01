@@ -90,6 +90,7 @@ Partial Class AnsattInkalling
         Me.Controls.Add(Me.ButtonTilbake)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.Location = New System.Drawing.Point(100, 100)
         Me.Name = "AnsattInkalling"
         Me.Text = "Blood Bank Administrator 2k17™ - xTreme Edition"
         CType(Me.GridBrukere, System.ComponentModel.ISupportInitialize).EndInit()

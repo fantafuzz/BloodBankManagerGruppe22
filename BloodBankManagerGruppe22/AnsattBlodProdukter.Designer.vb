@@ -49,7 +49,7 @@ Partial Class AnsattBlodProdukter
         Me.Label1.Font = New System.Drawing.Font("Georgia", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.Location = New System.Drawing.Point(7, 9)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(253, 24)
+        Me.Label1.Size = New System.Drawing.Size(204, 18)
         Me.Label1.TabIndex = 43
         Me.Label1.Text = "Lager av blodprodukter"
         '
@@ -88,13 +88,13 @@ Partial Class AnsattBlodProdukter
         Me.Label2.Font = New System.Drawing.Font("Georgia", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.Location = New System.Drawing.Point(586, 63)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(264, 24)
+        Me.Label2.Size = New System.Drawing.Size(213, 18)
         Me.Label2.TabIndex = 50
         Me.Label2.Text = "Hvor mye blod vil du ha?"
         '
         'AnsattBlodProdukter
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 17.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 14.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(931, 582)
@@ -107,6 +107,7 @@ Partial Class AnsattBlodProdukter
         Me.Font = New System.Drawing.Font("Georgia", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.Location = New System.Drawing.Point(100, 100)
         Me.Name = "AnsattBlodProdukter"
         Me.Text = "Blood Bank Administrator 2k17™ - xTreme Edition"
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()

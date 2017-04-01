@@ -93,6 +93,7 @@ Partial Class Form1
         Me.Controls.Add(Me.Label1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.Location = New System.Drawing.Point(100, 200)
         Me.Name = "Form1"
         Me.Text = "Blood Bank Administrator 2k17™ - xTreme Edition"
         Me.ResumeLayout(False)

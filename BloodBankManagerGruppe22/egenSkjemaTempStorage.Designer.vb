@@ -3805,6 +3805,7 @@ Partial Class egenSkjemaTempStorage
         Me.Controls.Add(Me.TabControlEgenskjema)
         Me.Controls.Add(Me.ButtonForrige)
         Me.Controls.Add(Me.ButtonNeste)
+        Me.Location = New System.Drawing.Point(100, 100)
         Me.Name = "egenSkjemaTempStorage"
         Me.Text = "egenSkjemaTempStorage"
         Me.TabControlEgenskjema.ResumeLayout(False)

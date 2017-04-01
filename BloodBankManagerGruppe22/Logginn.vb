@@ -122,6 +122,13 @@ Kriteriene for utvelgelse av blodgivere og en rekke av de laboratorieundersøkel
         'Registrering.Size = New System.Drawing.Size(1200, 700)
         'Logginn.Size = New System.Drawing.Size(1200, 700)
 
+
+
+
+
+    End Sub
+    Public Sub InitMyForm()
+        StartPosition = FormStartPosition.CenterScreen
     End Sub
 
     Private Sub Label8_Click(sender As Object, e As EventArgs) Handles Label8.Click

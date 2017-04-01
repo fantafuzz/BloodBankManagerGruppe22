@@ -24,7 +24,7 @@ Public Class AnsattTapping
 
 
         Dim searchQuery As String = "SELECT bruker.bruker_id, bruker.fornavn, bruker.etternavn, blodgiver.personnummer FROM bruker, blodgiver WHERE bruker.bruker_id = blodgiver.blodgiver_bruker_id AND CONCAT(bruker_id,fornavn, etternavn, personnummer, epost) like '%" & valueToSearch & "%';"
-        'Dim searchQuery As String = "Select * from bruker"
+
         Dim command As New MySqlCommand(searchQuery, MysqlConn)
         Dim adapter As New MySqlDataAdapter(command)
         Dim table As New DataTable()

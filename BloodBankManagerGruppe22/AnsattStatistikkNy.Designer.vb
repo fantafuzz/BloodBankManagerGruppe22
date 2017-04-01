@@ -69,6 +69,7 @@ Partial Class AnsattStatistikkNy
         Me.Font = New System.Drawing.Font("Georgia", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.Location = New System.Drawing.Point(100, 100)
         Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "AnsattStatistikkNy"
         Me.Text = "Blood Bank Administrator 2k17™ - xTreme Edition"

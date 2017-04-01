@@ -46,6 +46,7 @@ Partial Class hvaSkjerNårDuGirBlod
         Me.Controls.Add(Me.PictureBox1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.Location = New System.Drawing.Point(100, 100)
         Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "hvaSkjerNårDuGirBlod"
         Me.Text = "Blood Bank Administrator 2k17™ - xTreme Edition"

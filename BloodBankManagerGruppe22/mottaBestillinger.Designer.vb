@@ -49,13 +49,14 @@ Partial Class mottaBestillinger
         '
         'mottaBestillinger
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(1064, 742)
         Me.Controls.Add(Me.Button_tilbake_fra_motta_bestillinger)
         Me.Controls.Add(Me.motta_bestillinger_grid)
         Me.Font = New System.Drawing.Font("Georgia", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Location = New System.Drawing.Point(100, 100)
         Me.Name = "mottaBestillinger"
         Me.Text = "Blood Bank Administrator 2k17™ - xTreme Edition"
         CType(Me.motta_bestillinger_grid, System.ComponentModel.ISupportInitialize).EndInit()
