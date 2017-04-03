@@ -94,7 +94,7 @@ Kriteriene for utvelgelse av blodgivere og en rekke av de laboratorieundersøkel
 
 
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick 'live time update
-        Label8.Text = Date.Now.ToString("dd-MMM-yyyy hh:mm:ss tt")
+        Label8.Text = DateTime.Now.ToString("dd-MMM-yyyy hh:mm:ss tt")
     End Sub
 
 
@@ -263,6 +263,22 @@ Personer som har brukt narkotiske midler via sprøyter kan ikke være blodgivere
 Er du i tvil om regelverket, ikke nøl med å kontakte blodbanken!
 
 Telefon  72 57 31 00 eller 72 57 31 05")
+    End Sub
+
+    Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles PictureBox1.Click
+        Process.Start("https://www.facebook.com/blodbanken")
+    End Sub
+
+    Private Sub PictureBox3_Click(sender As Object, e As EventArgs) Handles PictureBox3.Click
+        Process.Start("https://stolav.no/fag-og-forskning/lab/blodgiver")
+    End Sub
+
+    Private Sub PictureBox4_Click(sender As Object, e As EventArgs) Handles PictureBox4.Click
+        Process.Start("https://twitter.com/giblod")
+    End Sub
+
+    Private Sub PictureBox5_Click(sender As Object, e As EventArgs) Handles PictureBox5.Click
+        Process.Start("https://www.instagram.com/giblod/")
     End Sub
 End Class
 

@@ -17,6 +17,7 @@ Public Class BrukerMinSide
 
     Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Lab_Svar.Click
         BrukerLabSvar.Show()
+        Me.Hide()
     End Sub
 
     Private Sub Statistikk_Click(sender As Object, e As EventArgs)
@@ -36,5 +37,10 @@ Public Class BrukerMinSide
     Private Sub Button1_Click_1(sender As Object, e As EventArgs) Handles Button1.Click
         Me.Hide()
         egenSkjemaTempStorage.Show()
+    End Sub
+
+    Private Sub Button2_Click_1(sender As Object, e As EventArgs) Handles Button2.Click
+        helseSjekkBlodgiver.Show()
+        Me.Hide()
     End Sub
 End Class

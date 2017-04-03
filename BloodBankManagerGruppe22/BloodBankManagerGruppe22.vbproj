@@ -183,6 +183,18 @@
     <Compile Include="Form1.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="AnsattHelseSjekk.Designer.vb">
+      <DependentUpon>AnsattHelseSjekk.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AnsattHelseSjekk.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="helseSjekkBlodgiver.Designer.vb">
+      <DependentUpon>helseSjekkBlodgiver.vb</DependentUpon>
+    </Compile>
+    <Compile Include="helseSjekkBlodgiver.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="hvaSkjerNårDuGirBlod.Designer.vb">
       <DependentUpon>hvaSkjerNårDuGirBlod.vb</DependentUpon>
     </Compile>
@@ -310,6 +322,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AnsattHelseSjekk.resx">
+      <DependentUpon>AnsattHelseSjekk.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="helseSjekkBlodgiver.resx">
+      <DependentUpon>helseSjekkBlodgiver.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="hvaSkjerNårDuGirBlod.resx">
       <DependentUpon>hvaSkjerNårDuGirBlod.vb</DependentUpon>
