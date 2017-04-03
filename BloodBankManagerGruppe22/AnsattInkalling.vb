@@ -91,6 +91,20 @@ Public Class AnsattInkalling
 
     End Sub
 
+    Private Sub checkIfMonthValueIsAfterThreeMonths(ByVal dateValue As String)
+
+
+        'forslag 
+        Dim months As String = 3
+
+
+        If MonthCalendar1.Text > 3 Then
+            MsgBox("Du kan ikke bestille neste blodtapping før det har gått mer enn 3 måneder fra den aktuelle blodgiver har gitt blod.")
+        ElseIf MonthCalendar1.text < 3 Then
+            MsgBox("Bestilling av neste blodtapping er tilgjenglig for denne blodgiveren.")
+        End If
+    End Sub
+
 
 
 End Class

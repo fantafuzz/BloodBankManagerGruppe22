@@ -56,9 +56,9 @@ Partial Class AnsattNavigasjon
         '
         Me.Bestill_Ny_BlodTime.BackColor = System.Drawing.Color.Transparent
         Me.Bestill_Ny_BlodTime.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Bestill_Ny_BlodTime.Location = New System.Drawing.Point(279, 142)
+        Me.Bestill_Ny_BlodTime.Location = New System.Drawing.Point(279, 131)
         Me.Bestill_Ny_BlodTime.Name = "Bestill_Ny_BlodTime"
-        Me.Bestill_Ny_BlodTime.Size = New System.Drawing.Size(376, 74)
+        Me.Bestill_Ny_BlodTime.Size = New System.Drawing.Size(376, 85)
         Me.Bestill_Ny_BlodTime.TabIndex = 36
         Me.Bestill_Ny_BlodTime.Text = "Bestill ny blodgivning"
         Me.Bestill_Ny_BlodTime.UseVisualStyleBackColor = False
