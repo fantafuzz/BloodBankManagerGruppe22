@@ -49,14 +49,14 @@ Partial Class AnsattBlodProdukter
         Me.Label1.Font = New System.Drawing.Font("Georgia", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.Location = New System.Drawing.Point(7, 9)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(204, 18)
+        Me.Label1.Size = New System.Drawing.Size(253, 24)
         Me.Label1.TabIndex = 43
         Me.Label1.Text = "Lager av blodprodukter"
         '
         'Button_utlevering_av_blodprodukter
         '
         Me.Button_utlevering_av_blodprodukter.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button_utlevering_av_blodprodukter.Location = New System.Drawing.Point(590, 149)
+        Me.Button_utlevering_av_blodprodukter.Location = New System.Drawing.Point(612, 122)
         Me.Button_utlevering_av_blodprodukter.Margin = New System.Windows.Forms.Padding(2)
         Me.Button_utlevering_av_blodprodukter.Name = "Button_utlevering_av_blodprodukter"
         Me.Button_utlevering_av_blodprodukter.Size = New System.Drawing.Size(260, 60)
@@ -75,7 +75,7 @@ Partial Class AnsattBlodProdukter
         '
         'TextBox_mengde_blod
         '
-        Me.TextBox_mengde_blod.Location = New System.Drawing.Point(590, 98)
+        Me.TextBox_mengde_blod.Location = New System.Drawing.Point(612, 71)
         Me.TextBox_mengde_blod.Margin = New System.Windows.Forms.Padding(2)
         Me.TextBox_mengde_blod.Multiline = True
         Me.TextBox_mengde_blod.Name = "TextBox_mengde_blod"
@@ -86,15 +86,15 @@ Partial Class AnsattBlodProdukter
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Georgia", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(586, 63)
+        Me.Label2.Location = New System.Drawing.Point(608, 36)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(213, 18)
+        Me.Label2.Size = New System.Drawing.Size(264, 24)
         Me.Label2.TabIndex = 50
         Me.Label2.Text = "Hvor mye blod vil du ha?"
         '
         'AnsattBlodProdukter
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 14.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 17.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(931, 582)

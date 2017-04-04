@@ -105,6 +105,12 @@
     <Compile Include="AnsattBlodProdukter.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="AnsattHelseSjekk.Designer.vb">
+      <DependentUpon>AnsattHelseSjekk.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AnsattHelseSjekk.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="AnsattTapping.Designer.vb">
       <DependentUpon>AnsattTapping.vb</DependentUpon>
     </Compile>
@@ -121,12 +127,6 @@
       <DependentUpon>Form1.vb</DependentUpon>
     </Compile>
     <Compile Include="Form1.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="AnsattHelseSjekk.Designer.vb">
-      <DependentUpon>AnsattHelseSjekk.vb</DependentUpon>
-    </Compile>
-    <Compile Include="AnsattHelseSjekk.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="helseSjekkBlodgiver.Designer.vb">
@@ -224,6 +224,9 @@
     <EmbeddedResource Include="AnsattBlodProdukter.resx">
       <DependentUpon>AnsattBlodProdukter.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AnsattHelseSjekk.resx">
+      <DependentUpon>AnsattHelseSjekk.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AnsattTapping.resx">
       <DependentUpon>AnsattTapping.vb</DependentUpon>
     </EmbeddedResource>
@@ -232,9 +235,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="AnsattHelseSjekk.resx">
-      <DependentUpon>AnsattHelseSjekk.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="helseSjekkBlodgiver.resx">
       <DependentUpon>helseSjekkBlodgiver.vb</DependentUpon>
