@@ -111,10 +111,10 @@
     <Compile Include="AnsattTapping.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="egenSkjemaTempStorage.Designer.vb">
-      <DependentUpon>egenSkjemaTempStorage.vb</DependentUpon>
+    <Compile Include="BrukerEgenskjema.Designer.vb">
+      <DependentUpon>BrukerEgenskjema.vb</DependentUpon>
     </Compile>
-    <Compile Include="egenSkjemaTempStorage.vb">
+    <Compile Include="BrukerEgenskjema.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.vb">
@@ -227,8 +227,8 @@
     <EmbeddedResource Include="AnsattTapping.resx">
       <DependentUpon>AnsattTapping.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="egenSkjemaTempStorage.resx">
-      <DependentUpon>egenSkjemaTempStorage.vb</DependentUpon>
+    <EmbeddedResource Include="BrukerEgenskjema.resx">
+      <DependentUpon>BrukerEgenskjema.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.vb</DependentUpon>

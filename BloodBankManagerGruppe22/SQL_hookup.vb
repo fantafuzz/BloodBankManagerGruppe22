@@ -14,11 +14,11 @@ Public Class SQL_hookup
     Private connstring As String
     Private connection As New MySqlConnection()
 
-    Public Sub New()
+    Public Sub New() 'Default connecter den til databasen.
         connstring = "Server=" & server & ";" & "Database=" & databasename & ";" & "Uid=" & username & ";" & "Pwd=" & password & ";"
         connection.ConnectionString = connstring
     End Sub
-    Public Sub New(ByVal uname As String, pword As String, dbname As String, sv As String)
+    Public Sub New(ByVal uname As String, pword As String, dbname As String, sv As String) 'Eller så kan du koble til en ny database
         username = uname
         password = pword
         databasename = dbname
@@ -29,6 +29,7 @@ Public Class SQL_hookup
     End Sub
 
     Private Function hash(passord As String, salt As String) As String
+        'Hash for å sikre passord
         Dim hashObject = New Security.Cryptography.SHA256Managed()
         Dim bytes = System.Text.Encoding.ASCII.GetBytes(passord & salt)
         bytes = hashObject.ComputeHash(bytes)
@@ -65,7 +66,7 @@ Public Class SQL_hookup
         Dim p = hash(passord, salt)
         Dim fail As Boolean = False
 
-        Select Case type
+        Select Case type 'Forskjell mellom å logge inn som ansatt eller som blodgiver.
             Case "ansatt"
                 Try
                     connection.Open()
@@ -77,7 +78,7 @@ Public Class SQL_hookup
                         reader.Read()
                         Dim bruker_id As Integer = reader("bruker_id")
                         Dim ansatt_type As String = CStr(reader("ansatt_type"))
-                        Return Tuple.Create(bruker_id, ansatt_type)
+                        Return Tuple.Create(bruker_id, ansatt_type) 'Returnerer en tuple, som har (bruker_id, ansatt_type). Dette er for å kunne spesifisere hvilken bruker_id, og om det er administrasjon eller vanlig ansatt.
                     Else
                         fail = True
                     End If
@@ -288,5 +289,24 @@ Public Class SQL_hookup
             connection.Close()
         End Try
         Return fornavn
+    End Function
+
+    Public Function getKjonn(ByVal currentUser As Integer) As String
+        Dim kjonn As String = "Error"
+        Try
+            connection.Open()
+            Dim sqlGetKjonn As New MySqlCommand("SELECT kjonn FROM blodgiver WHERE blodgiver_bruker_id = @id", connection)
+            sqlGetKjonn.Parameters.AddWithValue("@id", currentUser)
+            Dim reader As MySqlDataReader = sqlGetKjonn.ExecuteReader
+            If reader.HasRows Then
+                reader.Read()
+                kjonn = reader("kjonn")
+            End If
+        Catch ex As Exception
+            MsgBox(ex)
+        Finally
+            connection.Close()
+        End Try
+        Return kjonn
     End Function
 End Class

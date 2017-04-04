@@ -36,7 +36,7 @@ Public Class BrukerMinSide
 
     Private Sub Button1_Click_1(sender As Object, e As EventArgs) Handles Button1.Click
         Me.Hide()
-        egenSkjemaTempStorage.Show()
+        BrukerEgenskjema.Show()
     End Sub
 
     Private Sub Button2_Click_1(sender As Object, e As EventArgs) Handles Button2.Click
