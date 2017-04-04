@@ -269,6 +269,7 @@ Telefon  72 57 31 00 eller 72 57 31 05")
         Process.Start("https://www.facebook.com/blodbanken")
     End Sub
 
+
     Private Sub PictureBox3_Click(sender As Object, e As EventArgs) Handles PictureBox3.Click
         Process.Start("https://stolav.no/fag-og-forskning/lab/blodgiver")
     End Sub
@@ -279,6 +280,18 @@ Telefon  72 57 31 00 eller 72 57 31 05")
 
     Private Sub PictureBox5_Click(sender As Object, e As EventArgs) Handles PictureBox5.Click
         Process.Start("https://www.instagram.com/giblod/")
+    End Sub
+
+
+
+    Private Sub ToolTip1_Popup(sender As Object, e As PopupEventArgs) Handles ToolTip1.Popup
+
+    End Sub
+
+    Sub PictureBox1_MouseHover(sender As Object, e As EventArgs) Handles PictureBox1.MouseHover
+        Dim test As ToolTip = New ToolTip()
+        test.Show("test", Me)
+
     End Sub
 End Class
 
