@@ -39,5 +39,8 @@ Public Class AnsattStatistikkNy
 
     End Sub
 
-
+    Private Sub Button_tilbake_fra_lab_svar_Click(sender As Object, e As EventArgs) Handles Button_tilbake_fra_lab_svar.Click
+        AnsattNavigasjon.Show()
+        Me.Hide()
+    End Sub
 End Class

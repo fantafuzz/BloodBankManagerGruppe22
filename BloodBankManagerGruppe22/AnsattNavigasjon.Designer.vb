@@ -27,10 +27,10 @@ Partial Class AnsattNavigasjon
         Me.Logg_ut = New System.Windows.Forms.Button()
         Me.Bestill_Ny_BlodTime = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.Button4 = New System.Windows.Forms.Button()
-        Me.Button3 = New System.Windows.Forms.Button()
+        Me.Button_blodprodukter = New System.Windows.Forms.Button()
+        Me.Button_motta_bestillinger = New System.Windows.Forms.Button()
+        Me.Button_tapping_blod = New System.Windows.Forms.Button()
+        Me.Button_helsesjekk = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'Statistikk
@@ -71,60 +71,60 @@ Partial Class AnsattNavigasjon
         Me.Label1.Location = New System.Drawing.Point(276, 33)
         Me.Label1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(490, 91)
+        Me.Label1.Size = New System.Drawing.Size(398, 73)
         Me.Label1.TabIndex = 33
         Me.Label1.Text = "Velkommen "
         '
-        'Button1
+        'Button_blodprodukter
         '
-        Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.Location = New System.Drawing.Point(250, 218)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(516, 81)
-        Me.Button1.TabIndex = 40
-        Me.Button1.Text = "Blodprodukter"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.Button_blodprodukter.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button_blodprodukter.Location = New System.Drawing.Point(250, 218)
+        Me.Button_blodprodukter.Name = "Button_blodprodukter"
+        Me.Button_blodprodukter.Size = New System.Drawing.Size(516, 81)
+        Me.Button_blodprodukter.TabIndex = 40
+        Me.Button_blodprodukter.Text = "Blodprodukter"
+        Me.Button_blodprodukter.UseVisualStyleBackColor = True
         '
-        'Button2
+        'Button_motta_bestillinger
         '
-        Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button2.Location = New System.Drawing.Point(250, 380)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(516, 90)
-        Me.Button2.TabIndex = 41
-        Me.Button2.Text = "Motta Bestillinger"
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.Button_motta_bestillinger.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button_motta_bestillinger.Location = New System.Drawing.Point(250, 380)
+        Me.Button_motta_bestillinger.Name = "Button_motta_bestillinger"
+        Me.Button_motta_bestillinger.Size = New System.Drawing.Size(516, 90)
+        Me.Button_motta_bestillinger.TabIndex = 41
+        Me.Button_motta_bestillinger.Text = "Motta Bestillinger"
+        Me.Button_motta_bestillinger.UseVisualStyleBackColor = True
         '
-        'Button4
+        'Button_tapping_blod
         '
-        Me.Button4.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button4.Location = New System.Drawing.Point(250, 461)
-        Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(516, 90)
-        Me.Button4.TabIndex = 43
-        Me.Button4.Text = "Tapping Av Blod"
-        Me.Button4.UseVisualStyleBackColor = True
+        Me.Button_tapping_blod.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button_tapping_blod.Location = New System.Drawing.Point(250, 461)
+        Me.Button_tapping_blod.Name = "Button_tapping_blod"
+        Me.Button_tapping_blod.Size = New System.Drawing.Size(516, 90)
+        Me.Button_tapping_blod.TabIndex = 43
+        Me.Button_tapping_blod.Text = "Tapping Av Blod"
+        Me.Button_tapping_blod.UseVisualStyleBackColor = True
         '
-        'Button3
+        'Button_helsesjekk
         '
-        Me.Button3.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button3.Location = New System.Drawing.Point(250, 544)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(516, 90)
-        Me.Button3.TabIndex = 44
-        Me.Button3.Text = "Helsesjekk"
-        Me.Button3.UseVisualStyleBackColor = True
+        Me.Button_helsesjekk.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button_helsesjekk.Location = New System.Drawing.Point(250, 544)
+        Me.Button_helsesjekk.Name = "Button_helsesjekk"
+        Me.Button_helsesjekk.Size = New System.Drawing.Size(516, 90)
+        Me.Button_helsesjekk.TabIndex = 44
+        Me.Button_helsesjekk.Text = "Helsesjekk"
+        Me.Button_helsesjekk.UseVisualStyleBackColor = True
         '
         'AnsattNavigasjon
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(10.0!, 20.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 17.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(1083, 734)
-        Me.Controls.Add(Me.Button3)
-        Me.Controls.Add(Me.Button4)
-        Me.Controls.Add(Me.Button2)
-        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.Button_helsesjekk)
+        Me.Controls.Add(Me.Button_tapping_blod)
+        Me.Controls.Add(Me.Button_motta_bestillinger)
+        Me.Controls.Add(Me.Button_blodprodukter)
         Me.Controls.Add(Me.Statistikk)
         Me.Controls.Add(Me.Logg_ut)
         Me.Controls.Add(Me.Bestill_Ny_BlodTime)
@@ -145,8 +145,8 @@ Partial Class AnsattNavigasjon
     Friend WithEvents Logg_ut As Button
     Friend WithEvents Bestill_Ny_BlodTime As Button
     Friend WithEvents Label1 As Label
-    Friend WithEvents Button1 As Button
-    Friend WithEvents Button2 As Button
-    Friend WithEvents Button4 As Button
-    Friend WithEvents Button3 As Button
+    Friend WithEvents Button_blodprodukter As Button
+    Friend WithEvents Button_motta_bestillinger As Button
+    Friend WithEvents Button_tapping_blod As Button
+    Friend WithEvents Button_helsesjekk As Button
 End Class
