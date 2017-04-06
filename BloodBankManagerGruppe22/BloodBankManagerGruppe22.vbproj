@@ -117,6 +117,7 @@
     <Compile Include="AnsattTapping.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="ApplicationEvents.vb" />
     <Compile Include="egenSkjemaTempStorage.Designer.vb">
       <DependentUpon>egenSkjemaTempStorage.vb</DependentUpon>
     </Compile>

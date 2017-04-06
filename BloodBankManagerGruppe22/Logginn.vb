@@ -5,7 +5,7 @@ Public Class Logginn
 
     Public currentuser As Integer = -1
     Public currentuserType As Integer = -1
-    Dim sql As New SQL_hookup("g_oops_22", "BtUDpVoR", "g_oops_22", "mysql.stud.iie.ntnu.no")
+    Dim sql As New SQL_hookup("g_oops_22", "BtUDpVoR", "g_oops_22", "mysql.stud.iie.ntnu.no") 'Tilkobling til vår gruppe 22 database
 
     Private Sub ButtonLogInn_Click(sender As Object, e As EventArgs) Handles ButtonLogInn.Click
         Dim sjekkLog As Tuple(Of Integer, String) = sql.logInnSql(TextBoxEpost.Text, TextBoxPassword.Text, "bruker")
@@ -22,25 +22,17 @@ Public Class Logginn
 
     End Sub
 
-    'Public Function validateEmail(emailAddress) As Boolean 'VALIDERING AV EMAIL?
-    '    ' Dim email As New Regex("^(?<user>[^@]+)@(?<host>.+)$")
-    '    Dim email As New Regex("([\w-+]+(?:\.[\w-+]+)*@(?:[\w-]+\.)+[a-zA-Z]{2,7})")
-    '    If email.IsMatch(emailAddress) Then
-    '        Return True
-    '    Else
-    '        Return False
-    '    End If
-    'End Function
+
 
     Private Sub ButtonRegistrer_Click(sender As Object, e As EventArgs) Handles ButtonRegistrer.Click
-        Registrering.Show()
+        Registrering.Show() 'Ved klikking av registering knappen så blir registering formen vist frem og denne formen vi er nå blir lukket.
         Me.Hide()
     End Sub
 
 
     Private Sub OmOssToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles OmOssToolStripMenuItem.Click
         MessageBox.Show("Blodbanken produserer blodprodukt og utfører transfusjonsmedisinske analyser. I tillegg blir det utført en rekke immunologiske analyser, diagnostikk av blodkreft og stamcelletransplantasjoner. Det finst ingen erstatning for blod. Blod er et levende materiale, og selv med moderne og avansert teknologi kan ikke blod framstillest kunstig. Det kan heller ikke lagres lenge. Derfor trenger vi jevnt påfyll for at Blodbanken ikke ​skal gå tom. Blodet frå blodgiverene våre blir bearbeidet og delt i ulike blodprodukt; røde blodceller, blodplater og plasma. Blodbank Register Applikasjonen er utviklet av Charlotte Halmrast, Marius Myhre og Naren Yogarajah.")
-        'Huske å programmere i objekt orientert form.
+        'Her har vi brukt Menustrip, ved hjelp av dette når brukeren klikker på den aktuelle delmenyen skal det vises ulike informasjoner.
 
     End Sub
 
@@ -62,6 +54,8 @@ Blodplatene stopper blødninger
 Plasma
 
 Dette er væsken som blodlegemene og blodplatene flyter i. Plasma inneholder blant annet livsviktige proteiner og stoffer som er nødvendige for å stanse blødninger.    ")
+
+        'Her har vi brukt Menustrip, ved hjelp av dette når brukeren klikker på den aktuelle delmenyen skal det vises ulike informasjoner.
     End Sub
 
     Private Sub RetningslinjerToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles RetningslinjerToolStripMenuItem.Click
@@ -74,6 +68,8 @@ Transfusjonstjenesten har et ansvar overfor de som melder seg som blodgivere, at
 Transfusjonstjenesten har et overordnet ansvar overfor blodmottakere, at behandling med blod og blodprodukter er trygt og hensiktsmessig.
 
 Kriteriene for utvelgelse av blodgivere og en rekke av de laboratorieundersøkelser som anbefales, har til hensikt å beskytte både blodgiveren om han/hun heller burde beholde blodet sitt selv, og blodmottakerne mot infeksjonssykdommer som kan overføres med blod eller blodprodukter.")
+
+        'Her har vi brukt Menustrip i toolbox, ved hjelp av dette når brukeren klikker på den aktuelle delmenyen skal det vises ulike informasjoner.
     End Sub
 
     Private Sub ButtonLogInnAnsatt_Click(sender As Object, e As EventArgs) Handles ButtonLogInnAnsatt.Click
@@ -95,6 +91,8 @@ Kriteriene for utvelgelse av blodgivere og en rekke av de laboratorieundersøkel
 
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick 'live time update
         Label8.Text = DateTime.Now.ToString("dd-MMM-yyyy hh:mm:ss tt")
+
+        'Her har vi en label som printer ut live dato og tid ved hjelp av en timer som er deklarert i logginn form load.
     End Sub
 
 
@@ -103,37 +101,21 @@ Kriteriene for utvelgelse av blodgivere og en rekke av de laboratorieundersøkel
         Me.Hide()
         AnsattNavigasjon.Show()
 
+
+
     End Sub
 
     Private Sub hovedForside_Innlogging_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Timer1.Enabled = True
 
-        ''setting standard form size
-        ''format:(width,height)
-        'AnsattMinSide.Size = New System.Drawing.Size(775, 425)
-        'BrukerMinSide.Size = New System.Drawing.Size(775, 425)
-        'AnsattBlodProdukter.Size = New System.Drawing.Size(775, 425)
-        'AnsattInkalling.Size = New System.Drawing.Size(775, 425)
-        'AnsattStatistikkNy.Size = New System.Drawing.Size(900, 600)
-        'BrukerAllInfo.Size = New System.Drawing.Size(775, 425)
-        'BrukerBestill.Size = New System.Drawing.Size(775, 425)
-        'BrukerLabSvar.Size = New System.Drawing.Size(775, 425)
-        'egenSkjemaBolk1.Size = New System.Drawing.Size(775, 425)
-        'Registrering.Size = New System.Drawing.Size(1200, 700)
-        'Logginn.Size = New System.Drawing.Size(1200, 700)
-
-
-
-
+        'her er den aktuelle timeren deklarert til den aktuelle labelen som printer ut live dato og tid.
 
     End Sub
     Public Sub InitMyForm()
         StartPosition = FormStartPosition.CenterScreen
     End Sub
 
-    Private Sub Label8_Click(sender As Object, e As EventArgs) Handles Label8.Click
 
-    End Sub
 
     Private Sub ÅpninstiderToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ÅpninstiderToolStripMenuItem.Click
         MessageBox.Show("Mandag:	0730 - 1530
@@ -165,6 +147,8 @@ Url:
 www.stolav.no/blodgiver
 
 ")
+
+        'Her har vi brukt Menustrip i toolbox, ved hjelp av dette når brukeren klikker på den aktuelle delmenyen skal det vises ulike informasjoner.
     End Sub
 
     Private Sub Button4_Click(sender As Object, e As EventArgs)
@@ -185,10 +169,12 @@ www.stolav.no/blodgiver
 
     Private Sub HvaSkjerNårDuGirBlodToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles HvaSkjerNårDuGirBlodToolStripMenuItem.Click
         hvaSkjerNårDuGirBlod.Show()
+
+        'Her har vi brukt Menustrip i toolbox, ved hjelp av dette når brukeren klikker på den aktuelle delmenyen skal det vises ulike informasjoner.
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        Me.Hide()
+        Me.Hide() 'test knapp
         egenSkjemaTempStorage.Show()
     End Sub
 
@@ -196,6 +182,8 @@ www.stolav.no/blodgiver
         MessageBox.Show("Dersom du etter blodgivningen kommer på viktig informasjon som du har glemt å gi, er det viktig at du tar kontakt med blodbanken og informerer om dette. Gi beskjed så fort som mulig, helst innen 48 timer etter blodgivning, om du skulle bli syk med enten oppkast, diaré eller høy feber.
 
 Du kan når som helst ringe blodbanken og gi beskjed om at blodet ikke skal brukes uten å oppgi årsak.")
+
+        'Her har vi brukt Menustrip i toolbox, ved hjelp av dette når brukeren klikker på den aktuelle delmenyen skal det vises ulike informasjoner.
     End Sub
 
     Private Sub NårKanDuIkkeGiBlodToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles NårKanDuIkkeGiBlodToolStripMenuItem.Click
@@ -263,36 +251,40 @@ Personer som har brukt narkotiske midler via sprøyter kan ikke være blodgivere
 Er du i tvil om regelverket, ikke nøl med å kontakte blodbanken!
 
 Telefon  72 57 31 00 eller 72 57 31 05")
+
+        'Her har vi brukt Menustrip i toolbox, ved hjelp av dette når brukeren klikker på den aktuelle delmenyen skal det vises ulike informasjoner.
     End Sub
 
     Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles PictureBox1.Click
         Process.Start("https://www.facebook.com/blodbanken")
+
+        'her har vi valgt å koble den aktuelle sosial media knappen til blodbankens sosiale medier 
     End Sub
 
 
     Private Sub PictureBox3_Click(sender As Object, e As EventArgs) Handles PictureBox3.Click
         Process.Start("https://stolav.no/fag-og-forskning/lab/blodgiver")
+
+        'her har vi valgt å koble den aktuelle sosial media til hjemmesiden til blodbanken og st.olavs hospital.
     End Sub
 
     Private Sub PictureBox4_Click(sender As Object, e As EventArgs) Handles PictureBox4.Click
         Process.Start("https://twitter.com/giblod")
+
+        'her har vi valgt å koble den aktuelle sosial media knappen til blodbankens sosiale medier 
     End Sub
 
     Private Sub PictureBox5_Click(sender As Object, e As EventArgs) Handles PictureBox5.Click
         Process.Start("https://www.instagram.com/giblod/")
+
+        'her har vi valgt å koble den aktuelle sosial media knappen til blodbankens sosiale medier 
     End Sub
 
 
 
-    Private Sub ToolTip1_Popup(sender As Object, e As PopupEventArgs) Handles ToolTip1.Popup
 
-    End Sub
 
-    Sub PictureBox1_MouseHover(sender As Object, e As EventArgs) Handles PictureBox1.MouseHover
-        Dim test As ToolTip = New ToolTip()
-        test.Show("test", Me)
 
-    End Sub
 End Class
 
 
