@@ -67,7 +67,23 @@
 
     Dim sql As New SQL_hookup()
 
-
+    Private Sub kjonnCheck()
+        Dim kjonn As String = sql.getKjonn(Logginn.currentuser)
+        Select Case kjonn
+            Case "Mann"
+                RadioButton64.Enabled = False
+                RadioButton63.Enabled = False
+                RadioButton60.Enabled = False
+                RadioButton59.Enabled = False
+                RadioButton65.Enabled = False
+                RadioButton66.Enabled = False
+                RadioButton61.Enabled = False
+                RadioButton62.Enabled = False
+            Case "Kvinne"
+                RadioButton67.Enabled = False
+                RadioButton68.Enabled = False
+        End Select
+    End Sub
     Private Function valider() As Boolean 'Sjekker at hvert spørsmål er svart på
         Dim anyError As Boolean = False
         Dim errors As New ArrayList
@@ -77,7 +93,7 @@
                 For Each ctrl As Control In tab.Controls
                     If ctrl.GetType() Is GetType(System.Windows.Forms.Panel) Then 'Itererer gjennom hvert panel, og finner ut hvor mange unchecked radioknapper som finnes
                         Dim uncheckedRadios = From radio In ctrl.Controls.OfType(Of RadioButton)()
-                                              Where Not radio.Checked
+                                              Where Not radio.Checked And radio.Enabled
                                               Select radio.Name
                         Dim anyUnchecked As Integer = uncheckedRadios.Count
                         If anyUnchecked > 1 Then ' Om det er mere enn 1 unchecked radioknapp (1 unchecked er bra, 2 er dårlig)
@@ -150,7 +166,9 @@
             Next
         Next
         For i = 1 To 59 Step 1
-            If svarArray(CStr(i)) = 0 Then
+            If svarArray.ContainsKey(CStr(i)) = False Then
+                finalArray.Add(i, -1)
+            ElseIf svarArray(CStr(i)) = 0 Then
                 finalArray.Add(i, 1)
             ElseIf svarArray(CStr(i)) = 52 Then
                 finalArray.Add(i, 0)
@@ -178,6 +196,7 @@
     End Sub
 
     Private Sub egenSkjemaTempStorage_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        kjonnCheck()
         For i = 1 To 59
             changeToDefault(i)
         Next
@@ -256,7 +275,7 @@
             Next
         Next 'Denne sparer masse skriving, der alternativet er å skriver private sub x(sender as object, e as eventargs) handles radiobutton1, radiobutton2 ... radiobutton 120.
 
-        Label1.Text = sql.getNavn(Logginn.currentuser)
+        Label1.Text = sql.getKjonn(Logginn.currentuser)
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click

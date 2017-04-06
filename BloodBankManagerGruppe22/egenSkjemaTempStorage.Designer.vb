@@ -24,7 +24,6 @@ Partial Class egenSkjemaTempStorage
     Private Sub InitializeComponent()
         Me.TabControlEgenskjema = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
-        Me.Button2 = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
         Me.PanelSpm2 = New System.Windows.Forms.Panel()
@@ -398,7 +397,6 @@ Partial Class egenSkjemaTempStorage
         '
         'TabPage1
         '
-        Me.TabPage1.Controls.Add(Me.Button2)
         Me.TabPage1.Controls.Add(Me.Label1)
         Me.TabPage1.Location = New System.Drawing.Point(4, 22)
         Me.TabPage1.Name = "TabPage1"
@@ -407,15 +405,6 @@ Partial Class egenSkjemaTempStorage
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "Informasjon"
         Me.TabPage1.UseVisualStyleBackColor = True
-        '
-        'Button2
-        '
-        Me.Button2.Location = New System.Drawing.Point(369, 211)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(75, 23)
-        Me.Button2.TabIndex = 1
-        Me.Button2.Text = "Button2"
-        Me.Button2.UseVisualStyleBackColor = True
         '
         'Label1
         '
@@ -4235,5 +4224,4 @@ Partial Class egenSkjemaTempStorage
     Friend WithEvents Label79 As Label
     Friend WithEvents Button1 As Button
     Friend WithEvents Label1 As Label
-    Friend WithEvents Button2 As Button
 End Class

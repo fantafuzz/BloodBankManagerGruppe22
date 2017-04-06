@@ -179,22 +179,6 @@ Public Class SQL_hookup
 
         End Try
     End Sub
-    Public Sub test()
-        Dim please As Int32 = 1
-        Dim currDate As Date = Date.Today()
-        Dim currDateString As String = currDate.ToString("YYYY-mm-dd")
-        Try
-            connection.Open()
-            Dim sqltest As New MySqlCommand("INSERT INTO testtabell (test_dato, test_data) VALUES (@test_dato, @test_data)", connection)
-            sqltest.Parameters.AddWithValue("@test_data", please)
-            sqltest.Parameters.AddWithValue("@test_dato", currDate)
-            sqltest.ExecuteNonQuery()
-        Catch ex As MySqlException
-            MsgBox(ex)
-        Finally
-            connection.Close()
-        End Try
-    End Sub
     Public Sub SendSvar(ByVal currentUser As Integer, ByVal svar As Hashtable, ByVal evt As String)
         Dim currDate As Date = Date.Now
         Try
@@ -288,5 +272,43 @@ Public Class SQL_hookup
             connection.Close()
         End Try
         Return fornavn
+    End Function
+    Public Function getKjonn(ByVal currentuser As Integer) As String
+        Dim kjonn As String = "Hvis du ser dette, har noe galt hendt."
+        Try
+            connection.Open()
+            Dim sqlGetKjonn As New MySqlCommand("SELECT kjonn FROM blodgiver WHERE blodgiver_bruker_id = @id", connection)
+            sqlGetKjonn.Parameters.AddWithValue("@id", currentuser)
+            Dim reader As MySqlDataReader = sqlGetKjonn.ExecuteReader
+            If reader.HasRows Then
+                reader.Read()
+                kjonn = reader("kjonn")
+            End If
+        Catch ex As MySqlException
+            MsgBox(ex)
+        Finally
+            connection.Close()
+        End Try
+        Return kjonn
+    End Function
+
+    Public Function getByBlodgiverId(ByVal currentuser As Integer, ByVal what As String) As String
+        Dim returnstring As String = "Noe galt har skjedd"
+        Try
+            connection.Open()
+            Dim sqlGet As New MySqlCommand("SELECT @what FROM blodgiver WHERE blodgiver_bruker_id = @id")
+            sqlGet.Parameters.AddWithValue("@what", what)
+            sqlGet.Parameters.AddWithValue("@id", currentuser)
+            Dim reader As MySqlDataReader = sqlGet.ExecuteReader
+            If reader.HasRows Then
+                reader.Read()
+                returnstring = reader(what)
+            End If
+        Catch ex As MySqlException
+            MsgBox(ex)
+        Finally
+            connection.Close()
+        End Try
+        Return returnstring
     End Function
 End Class
