@@ -41,13 +41,12 @@ Public Class AnsattInkalling
 
         GridBrukere.DataSource = table
 
+        'her får vi hentet ut database verdier fra databasen vår gruppe 22 inn til applikasjonen vår ved hjelp av SQL Syntax ovenfor
+
 
     End Sub
 
-    Private Sub ButtonLogUt_Click(sender As Object, e As EventArgs) Handles ButtonTilbake.Click
-        AnsattNavigasjon.Show()
-        Me.Close()
-    End Sub 'logg ut
+
 
     Private Sub ButtonInnkall_Click(sender As Object, e As EventArgs) Handles ButtonInnkall.Click
         Dim bruker_id As Integer
@@ -89,22 +88,9 @@ Public Class AnsattInkalling
         End Try
 
 
+        'her legger vi inn måndekalender value i databasen vår ved hjelp av sql syntax.
+
+
     End Sub
-
-    Private Sub checkIfMonthValueIsAfterThreeMonths(ByVal dateValue As String)
-
-
-        'forslag 
-        Dim months As String = 3
-
-
-        If MonthCalendar1.Text > 3 Then
-            MsgBox("Du kan ikke bestille neste blodtapping før det har gått mer enn 3 måneder fra den aktuelle blodgiver har gitt blod.")
-        ElseIf MonthCalendar1.text < 3 Then
-            MsgBox("Bestilling av neste blodtapping er tilgjenglig for denne blodgiveren.")
-        End If
-    End Sub
-
-
 
 End Class
