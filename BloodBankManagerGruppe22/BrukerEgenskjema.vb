@@ -1,4 +1,4 @@
-﻿Public Class egenSkjemaTempStorage
+﻿Public Class BrukerEgenskjema
     Dim spm1 As New Sporsmaal("Har du fått informasjon om blodgivning?", "1_1")
     Dim spm2 As New Sporsmaal("Føler du deg frisk nå?", "1_2")
     Dim spm3 As New Sporsmaal("Hvis du har gitt blod tidligere, har du vært frisk i perioden fra forrige blodgivning og til nå?", "1_3")
@@ -61,7 +61,6 @@
     Dim spm60 As New Sporsmaal("Samtykker du til epost-forbindelse", "tillat_epost")
     Dim spm61 As New Sporsmaal("Samtykker du til sms-forbindelse", "tillat_sms")
     Dim spm62 As New Sporsmaal("evt", "evt_info")
-
     '45-48 KVINNER
     '49 MENN
 
@@ -95,7 +94,7 @@
                 For Each ctrl As Control In tab.Controls
                     If ctrl.GetType() Is GetType(System.Windows.Forms.Label) Then 'Itererer gjennom hver label, og ser om tag-en til label er i error-listen
                         If errors.Contains(ctrl.Tag) Then
-                            Select Case ctrl.Tag Mod 2
+                            Select Case ctrl.Tag Mod 2 'Setter fargen til alle labels som har en tag i error-listen til enten litt eller litt mere rød.
                                 Case 1
                                     ctrl.BackColor = Color.FromArgb(255, 200, 200)
                                 Case 0
@@ -136,35 +135,46 @@
         End If
         Dim evt As String = TextBoxEvt.Text
         Dim svarArray As New Hashtable()
-        Dim finalArray As New Hashtable()
+        Dim finalArray As New Hashtable() 'Bruker to tabeller, en for å hente svarene, og en for å skrive de om til 0 eller 1
         For Each tab As TabPage In TabControlEgenskjema.TabPages
             For Each ctrl As Control In tab.Controls
                 If ctrl.GetType Is GetType(Panel) Then
                     Dim checkedRadios = From radio In ctrl.Controls.OfType(Of RadioButton)()
                                         Where radio.Checked
-                                        Select radio.Location.X, radio.Tag
+                                        Select radio.Location.X, radio.Tag 'Finner hver eneste valgte radioknapp. Siden hvert spørsmål sine radioknapper er grupperte, 
                     For Each item In checkedRadios
-                        svarArray.Add(item.Tag, item.X.ToString)
+                        svarArray.Add(item.Tag, item.X.ToString) 'Bruker taggen til radioknappen som key i arrayet, og x-kordinaten til knappen som value
                     Next
                 End If
             Next
         Next
-        For i = 1 To 59 Step 1
+        For i = 1 To 59 Step 1 'Denne gudsforlatte loopen er grusom, men den gjør jobben. Den ser hva valuen til hver entry i svarArray er, og om den er 0, legger den inn 1, om value er 52, legger den inn 0. Dette er fordi vi bruker x-posisjonen til radioknappene for å bestemme om det er ja eller nei brukeren har svart.
             If svarArray(CStr(i)) = 0 Then
                 finalArray.Add(i, 1)
             ElseIf svarArray(CStr(i)) = 52 Then
                 finalArray.Add(i, 0)
             Else
-                finalArray.Add(i, -1)
+                finalArray.Add(i, -1) 'En feilmelding om noe har skjedd feil med x-posisjonen til en av knappene.
             End If
         Next
         finalArray.Add(60, tillatEpost)
-        finalArray.Add(61, tillatSms)
+        finalArray.Add(61, tillatSms) 'Det unødvendig å sortere et hashtable, men denne biten henger igjen fra alle forsøkene på å få det til å funke.
         sql.SendSvar(Logginn.currentuser, finalArray, evt)
     End Sub
+
+    Private Sub endreForKjonn()
+        Dim kjonn As String = sql.getKjonn(Logginn.currentuser)
+        Select Case kjonn.ToLower
+            Case "annet"
+                RadioButton67.Enabled = False
+                RadioButton68.Enabled = False
+            Case "kvinne"
+                RadioButton68.Enabled = False
+                RadioButton67.Enabled = False
+        End Select
+    End Sub
     Private Sub ButtonNeste_Click(sender As Object, e As EventArgs) Handles ButtonNeste.Click
-        Dim feil As Boolean = valider()
-        If feil Then
+        If valider() Then
             LabelFeilMelding.Show()
         Else
             If TabControlEgenskjema.SelectedIndex < 9 Then
@@ -174,13 +184,14 @@
     End Sub
 
     Private Sub RadioButtonAll_CheckedChanged(sender As Object, e As EventArgs)
-        changeToDefault(DirectCast(sender, RadioButton).Tag)
+        changeToDefault(DirectCast(sender, RadioButton).Tag) 'Her bruker vi directcast. Vet ikke hvorfor. Det fungerte.
     End Sub
 
     Private Sub egenSkjemaTempStorage_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         For i = 1 To 59
             changeToDefault(i)
         Next
+
 
         LabelSpm1.Text = spm1.getText
         LabelSpm2.Text = spm2.getText
@@ -256,10 +267,9 @@
             Next
         Next 'Denne sparer masse skriving, der alternativet er å skriver private sub x(sender as object, e as eventargs) handles radiobutton1, radiobutton2 ... radiobutton 120.
 
-        Label1.Text = sql.getNavn(Logginn.currentuser)
     End Sub
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+    Private Sub ButtonSend_Click(sender As Object, e As EventArgs) Handles ButtonSend.Click
         sendInn()
     End Sub
 End Class

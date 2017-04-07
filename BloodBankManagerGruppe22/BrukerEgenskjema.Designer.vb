@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
-Partial Class egenSkjemaTempStorage
+Partial Class BrukerEgenskjema
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -22,9 +22,9 @@ Partial Class egenSkjemaTempStorage
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(BrukerEgenskjema))
         Me.TabControlEgenskjema = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
-        Me.Button2 = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
         Me.PanelSpm2 = New System.Windows.Forms.Panel()
@@ -298,7 +298,7 @@ Partial Class egenSkjemaTempStorage
         Me.LabelSpm50 = New System.Windows.Forms.Label()
         Me.Label78 = New System.Windows.Forms.Label()
         Me.TabPage10 = New System.Windows.Forms.TabPage()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.ButtonSend = New System.Windows.Forms.Button()
         Me.CheckBoxSms = New System.Windows.Forms.CheckBox()
         Me.CheckBoxEpost = New System.Windows.Forms.CheckBox()
         Me.TextBoxEvt = New System.Windows.Forms.TextBox()
@@ -398,7 +398,6 @@ Partial Class egenSkjemaTempStorage
         '
         'TabPage1
         '
-        Me.TabPage1.Controls.Add(Me.Button2)
         Me.TabPage1.Controls.Add(Me.Label1)
         Me.TabPage1.Location = New System.Drawing.Point(4, 22)
         Me.TabPage1.Name = "TabPage1"
@@ -408,23 +407,14 @@ Partial Class egenSkjemaTempStorage
         Me.TabPage1.Text = "Informasjon"
         Me.TabPage1.UseVisualStyleBackColor = True
         '
-        'Button2
-        '
-        Me.Button2.Location = New System.Drawing.Point(369, 211)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(75, 23)
-        Me.Button2.TabIndex = 1
-        Me.Button2.Text = "Button2"
-        Me.Button2.UseVisualStyleBackColor = True
-        '
         'Label1
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(155, 90)
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(6, 3)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(39, 13)
+        Me.Label1.Size = New System.Drawing.Size(717, 399)
         Me.Label1.TabIndex = 0
-        Me.Label1.Text = "Label1"
+        Me.Label1.Text = resources.GetString("Label1.Text")
         '
         'TabPage2
         '
@@ -766,7 +756,7 @@ Partial Class egenSkjemaTempStorage
         '
         Me.Label12.AutoSize = True
         Me.Label12.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label12.Location = New System.Drawing.Point(728, 8)
+        Me.Label12.Location = New System.Drawing.Point(730, 8)
         Me.Label12.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
         Me.Label12.Name = "Label12"
         Me.Label12.Size = New System.Drawing.Size(23, 13)
@@ -777,7 +767,7 @@ Partial Class egenSkjemaTempStorage
         '
         Me.Label13.AutoSize = True
         Me.Label13.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label13.Location = New System.Drawing.Point(677, 8)
+        Me.Label13.Location = New System.Drawing.Point(678, 8)
         Me.Label13.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
         Me.Label13.Name = "Label13"
         Me.Label13.Size = New System.Drawing.Size(18, 13)
@@ -789,7 +779,7 @@ Partial Class egenSkjemaTempStorage
         Me.Panel9.BackColor = System.Drawing.Color.White
         Me.Panel9.Controls.Add(Me.RadioButton1)
         Me.Panel9.Controls.Add(Me.RadioButton2)
-        Me.Panel9.Location = New System.Drawing.Point(679, 52)
+        Me.Panel9.Location = New System.Drawing.Point(681, 52)
         Me.Panel9.Margin = New System.Windows.Forms.Padding(6)
         Me.Panel9.Name = "Panel9"
         Me.Panel9.Size = New System.Drawing.Size(66, 25)
@@ -825,7 +815,7 @@ Partial Class egenSkjemaTempStorage
         Me.Panel5.BackColor = System.Drawing.Color.White
         Me.Panel5.Controls.Add(Me.RadioButton3)
         Me.Panel5.Controls.Add(Me.RadioButton4)
-        Me.Panel5.Location = New System.Drawing.Point(679, 102)
+        Me.Panel5.Location = New System.Drawing.Point(681, 102)
         Me.Panel5.Margin = New System.Windows.Forms.Padding(6)
         Me.Panel5.Name = "Panel5"
         Me.Panel5.Size = New System.Drawing.Size(66, 25)
@@ -861,7 +851,7 @@ Partial Class egenSkjemaTempStorage
         Me.Panel4.BackColor = System.Drawing.Color.WhiteSmoke
         Me.Panel4.Controls.Add(Me.RadioButton5)
         Me.Panel4.Controls.Add(Me.RadioButton6)
-        Me.Panel4.Location = New System.Drawing.Point(679, 127)
+        Me.Panel4.Location = New System.Drawing.Point(681, 127)
         Me.Panel4.Margin = New System.Windows.Forms.Padding(6)
         Me.Panel4.Name = "Panel4"
         Me.Panel4.Size = New System.Drawing.Size(66, 25)
@@ -897,7 +887,7 @@ Partial Class egenSkjemaTempStorage
         Me.Panel2.BackColor = System.Drawing.Color.WhiteSmoke
         Me.Panel2.Controls.Add(Me.RadioButton7)
         Me.Panel2.Controls.Add(Me.RadioButton8)
-        Me.Panel2.Location = New System.Drawing.Point(679, 27)
+        Me.Panel2.Location = New System.Drawing.Point(681, 27)
         Me.Panel2.Margin = New System.Windows.Forms.Padding(6)
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(66, 25)
@@ -933,7 +923,7 @@ Partial Class egenSkjemaTempStorage
         Me.Panel3.BackColor = System.Drawing.Color.WhiteSmoke
         Me.Panel3.Controls.Add(Me.RadioButton9)
         Me.Panel3.Controls.Add(Me.RadioButton10)
-        Me.Panel3.Location = New System.Drawing.Point(679, 77)
+        Me.Panel3.Location = New System.Drawing.Point(681, 77)
         Me.Panel3.Margin = New System.Windows.Forms.Padding(6)
         Me.Panel3.Name = "Panel3"
         Me.Panel3.Size = New System.Drawing.Size(66, 25)
@@ -1067,7 +1057,7 @@ Partial Class egenSkjemaTempStorage
         '
         Me.Label10.AutoSize = True
         Me.Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
-        Me.Label10.Location = New System.Drawing.Point(621, 6)
+        Me.Label10.Location = New System.Drawing.Point(730, 8)
         Me.Label10.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(23, 13)
@@ -1078,7 +1068,7 @@ Partial Class egenSkjemaTempStorage
         '
         Me.Label11.AutoSize = True
         Me.Label11.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
-        Me.Label11.Location = New System.Drawing.Point(569, 6)
+        Me.Label11.Location = New System.Drawing.Point(678, 8)
         Me.Label11.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(18, 13)
@@ -1090,7 +1080,7 @@ Partial Class egenSkjemaTempStorage
         Me.Panel1.BackColor = System.Drawing.Color.WhiteSmoke
         Me.Panel1.Controls.Add(Me.RadioButtonN7dd)
         Me.Panel1.Controls.Add(Me.RadioButtonJ7dd)
-        Me.Panel1.Location = New System.Drawing.Point(572, 175)
+        Me.Panel1.Location = New System.Drawing.Point(681, 177)
         Me.Panel1.Margin = New System.Windows.Forms.Padding(6)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(66, 25)
@@ -1126,7 +1116,7 @@ Partial Class egenSkjemaTempStorage
         Me.Panel6.BackColor = System.Drawing.Color.White
         Me.Panel6.Controls.Add(Me.RadioButton11)
         Me.Panel6.Controls.Add(Me.RadioButton12)
-        Me.Panel6.Location = New System.Drawing.Point(572, 50)
+        Me.Panel6.Location = New System.Drawing.Point(681, 52)
         Me.Panel6.Margin = New System.Windows.Forms.Padding(6)
         Me.Panel6.Name = "Panel6"
         Me.Panel6.Size = New System.Drawing.Size(66, 25)
@@ -1162,7 +1152,7 @@ Partial Class egenSkjemaTempStorage
         Me.Panel7.BackColor = System.Drawing.Color.White
         Me.Panel7.Controls.Add(Me.RadioButton13)
         Me.Panel7.Controls.Add(Me.RadioButton14)
-        Me.Panel7.Location = New System.Drawing.Point(572, 100)
+        Me.Panel7.Location = New System.Drawing.Point(681, 102)
         Me.Panel7.Margin = New System.Windows.Forms.Padding(6)
         Me.Panel7.Name = "Panel7"
         Me.Panel7.Size = New System.Drawing.Size(66, 25)
@@ -1198,7 +1188,7 @@ Partial Class egenSkjemaTempStorage
         Me.Panel8.BackColor = System.Drawing.Color.WhiteSmoke
         Me.Panel8.Controls.Add(Me.RadioButton15)
         Me.Panel8.Controls.Add(Me.RadioButton16)
-        Me.Panel8.Location = New System.Drawing.Point(572, 125)
+        Me.Panel8.Location = New System.Drawing.Point(681, 127)
         Me.Panel8.Margin = New System.Windows.Forms.Padding(6)
         Me.Panel8.Name = "Panel8"
         Me.Panel8.Size = New System.Drawing.Size(66, 25)
@@ -1234,7 +1224,7 @@ Partial Class egenSkjemaTempStorage
         Me.Panel10.BackColor = System.Drawing.Color.WhiteSmoke
         Me.Panel10.Controls.Add(Me.RadioButton17)
         Me.Panel10.Controls.Add(Me.RadioButton18)
-        Me.Panel10.Location = New System.Drawing.Point(572, 25)
+        Me.Panel10.Location = New System.Drawing.Point(681, 27)
         Me.Panel10.Margin = New System.Windows.Forms.Padding(6)
         Me.Panel10.Name = "Panel10"
         Me.Panel10.Size = New System.Drawing.Size(66, 25)
@@ -1270,7 +1260,7 @@ Partial Class egenSkjemaTempStorage
         Me.Panel11.BackColor = System.Drawing.Color.WhiteSmoke
         Me.Panel11.Controls.Add(Me.RadioButton19)
         Me.Panel11.Controls.Add(Me.RadioButton20)
-        Me.Panel11.Location = New System.Drawing.Point(572, 75)
+        Me.Panel11.Location = New System.Drawing.Point(681, 77)
         Me.Panel11.Margin = New System.Windows.Forms.Padding(6)
         Me.Panel11.Name = "Panel11"
         Me.Panel11.Size = New System.Drawing.Size(66, 25)
@@ -1306,7 +1296,7 @@ Partial Class egenSkjemaTempStorage
         Me.Panel12.BackColor = System.Drawing.Color.White
         Me.Panel12.Controls.Add(Me.RadioButton21)
         Me.Panel12.Controls.Add(Me.RadioButton22)
-        Me.Panel12.Location = New System.Drawing.Point(572, 150)
+        Me.Panel12.Location = New System.Drawing.Point(681, 152)
         Me.Panel12.Margin = New System.Windows.Forms.Padding(6)
         Me.Panel12.Name = "Panel12"
         Me.Panel12.Size = New System.Drawing.Size(66, 25)
@@ -1341,10 +1331,10 @@ Partial Class egenSkjemaTempStorage
         '
         Me.LabelSpm18.BackColor = System.Drawing.Color.WhiteSmoke
         Me.LabelSpm18.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
-        Me.LabelSpm18.Location = New System.Drawing.Point(6, 175)
+        Me.LabelSpm18.Location = New System.Drawing.Point(3, 177)
         Me.LabelSpm18.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
         Me.LabelSpm18.Name = "LabelSpm18"
-        Me.LabelSpm18.Size = New System.Drawing.Size(642, 25)
+        Me.LabelSpm18.Size = New System.Drawing.Size(753, 25)
         Me.LabelSpm18.TabIndex = 86
         Me.LabelSpm18.Tag = "18"
         Me.LabelSpm18.Text = "spm18"
@@ -1354,10 +1344,10 @@ Partial Class egenSkjemaTempStorage
         '
         Me.LabelSpm12.BackColor = System.Drawing.Color.WhiteSmoke
         Me.LabelSpm12.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
-        Me.LabelSpm12.Location = New System.Drawing.Point(6, 25)
+        Me.LabelSpm12.Location = New System.Drawing.Point(3, 27)
         Me.LabelSpm12.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
         Me.LabelSpm12.Name = "LabelSpm12"
-        Me.LabelSpm12.Size = New System.Drawing.Size(642, 25)
+        Me.LabelSpm12.Size = New System.Drawing.Size(753, 25)
         Me.LabelSpm12.TabIndex = 80
         Me.LabelSpm12.Tag = "12"
         Me.LabelSpm12.Text = "spm12"
@@ -1366,10 +1356,10 @@ Partial Class egenSkjemaTempStorage
         'LabelSpm13
         '
         Me.LabelSpm13.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
-        Me.LabelSpm13.Location = New System.Drawing.Point(6, 50)
+        Me.LabelSpm13.Location = New System.Drawing.Point(3, 52)
         Me.LabelSpm13.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
         Me.LabelSpm13.Name = "LabelSpm13"
-        Me.LabelSpm13.Size = New System.Drawing.Size(642, 25)
+        Me.LabelSpm13.Size = New System.Drawing.Size(753, 25)
         Me.LabelSpm13.TabIndex = 81
         Me.LabelSpm13.Tag = "13"
         Me.LabelSpm13.Text = "spm13"
@@ -1379,10 +1369,10 @@ Partial Class egenSkjemaTempStorage
         '
         Me.LabelSpm14.BackColor = System.Drawing.Color.WhiteSmoke
         Me.LabelSpm14.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
-        Me.LabelSpm14.Location = New System.Drawing.Point(6, 75)
+        Me.LabelSpm14.Location = New System.Drawing.Point(3, 77)
         Me.LabelSpm14.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
         Me.LabelSpm14.Name = "LabelSpm14"
-        Me.LabelSpm14.Size = New System.Drawing.Size(642, 25)
+        Me.LabelSpm14.Size = New System.Drawing.Size(753, 25)
         Me.LabelSpm14.TabIndex = 82
         Me.LabelSpm14.Tag = "14"
         Me.LabelSpm14.Text = "spm14"
@@ -1392,10 +1382,10 @@ Partial Class egenSkjemaTempStorage
         '
         Me.LabelSpm16.BackColor = System.Drawing.Color.WhiteSmoke
         Me.LabelSpm16.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
-        Me.LabelSpm16.Location = New System.Drawing.Point(6, 125)
+        Me.LabelSpm16.Location = New System.Drawing.Point(3, 127)
         Me.LabelSpm16.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
         Me.LabelSpm16.Name = "LabelSpm16"
-        Me.LabelSpm16.Size = New System.Drawing.Size(642, 25)
+        Me.LabelSpm16.Size = New System.Drawing.Size(753, 25)
         Me.LabelSpm16.TabIndex = 85
         Me.LabelSpm16.Tag = "16"
         Me.LabelSpm16.Text = "spm16"
@@ -1404,10 +1394,10 @@ Partial Class egenSkjemaTempStorage
         'LabelSpm15
         '
         Me.LabelSpm15.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
-        Me.LabelSpm15.Location = New System.Drawing.Point(6, 100)
+        Me.LabelSpm15.Location = New System.Drawing.Point(3, 102)
         Me.LabelSpm15.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
         Me.LabelSpm15.Name = "LabelSpm15"
-        Me.LabelSpm15.Size = New System.Drawing.Size(642, 25)
+        Me.LabelSpm15.Size = New System.Drawing.Size(753, 25)
         Me.LabelSpm15.TabIndex = 83
         Me.LabelSpm15.Tag = "15"
         Me.LabelSpm15.Text = "spm15"
@@ -1416,10 +1406,10 @@ Partial Class egenSkjemaTempStorage
         'LabelSpm17
         '
         Me.LabelSpm17.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
-        Me.LabelSpm17.Location = New System.Drawing.Point(6, 150)
+        Me.LabelSpm17.Location = New System.Drawing.Point(3, 152)
         Me.LabelSpm17.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
         Me.LabelSpm17.Name = "LabelSpm17"
-        Me.LabelSpm17.Size = New System.Drawing.Size(642, 25)
+        Me.LabelSpm17.Size = New System.Drawing.Size(753, 25)
         Me.LabelSpm17.TabIndex = 84
         Me.LabelSpm17.Tag = "17"
         Me.LabelSpm17.Text = "spm17"
@@ -1471,7 +1461,7 @@ Partial Class egenSkjemaTempStorage
         '
         Me.Label22.AutoSize = True
         Me.Label22.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
-        Me.Label22.Location = New System.Drawing.Point(620, 9)
+        Me.Label22.Location = New System.Drawing.Point(730, 8)
         Me.Label22.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
         Me.Label22.Name = "Label22"
         Me.Label22.Size = New System.Drawing.Size(23, 13)
@@ -1482,7 +1472,7 @@ Partial Class egenSkjemaTempStorage
         '
         Me.Label23.AutoSize = True
         Me.Label23.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
-        Me.Label23.Location = New System.Drawing.Point(569, 9)
+        Me.Label23.Location = New System.Drawing.Point(678, 8)
         Me.Label23.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
         Me.Label23.Name = "Label23"
         Me.Label23.Size = New System.Drawing.Size(18, 13)
@@ -1494,7 +1484,7 @@ Partial Class egenSkjemaTempStorage
         Me.Panel13.BackColor = System.Drawing.Color.White
         Me.Panel13.Controls.Add(Me.RadioButtonN8)
         Me.Panel13.Controls.Add(Me.RadioButtonJ8)
-        Me.Panel13.Location = New System.Drawing.Point(571, 203)
+        Me.Panel13.Location = New System.Drawing.Point(681, 202)
         Me.Panel13.Margin = New System.Windows.Forms.Padding(6)
         Me.Panel13.Name = "Panel13"
         Me.Panel13.Size = New System.Drawing.Size(66, 25)
@@ -1530,7 +1520,7 @@ Partial Class egenSkjemaTempStorage
         Me.Panel14.BackColor = System.Drawing.Color.WhiteSmoke
         Me.Panel14.Controls.Add(Me.RadioButtonN9)
         Me.Panel14.Controls.Add(Me.RadioButtonJ9)
-        Me.Panel14.Location = New System.Drawing.Point(571, 228)
+        Me.Panel14.Location = New System.Drawing.Point(681, 227)
         Me.Panel14.Margin = New System.Windows.Forms.Padding(6)
         Me.Panel14.Name = "Panel14"
         Me.Panel14.Size = New System.Drawing.Size(66, 25)
@@ -1566,7 +1556,7 @@ Partial Class egenSkjemaTempStorage
         Me.Panel15.BackColor = System.Drawing.Color.White
         Me.Panel15.Controls.Add(Me.RadioButtonN10)
         Me.Panel15.Controls.Add(Me.RadioButtonJ10)
-        Me.Panel15.Location = New System.Drawing.Point(571, 253)
+        Me.Panel15.Location = New System.Drawing.Point(681, 252)
         Me.Panel15.Margin = New System.Windows.Forms.Padding(6)
         Me.Panel15.Name = "Panel15"
         Me.Panel15.Size = New System.Drawing.Size(66, 25)
@@ -1602,7 +1592,7 @@ Partial Class egenSkjemaTempStorage
         Me.Panel16.BackColor = System.Drawing.Color.WhiteSmoke
         Me.Panel16.Controls.Add(Me.RadioButton23)
         Me.Panel16.Controls.Add(Me.RadioButton24)
-        Me.Panel16.Location = New System.Drawing.Point(571, 178)
+        Me.Panel16.Location = New System.Drawing.Point(681, 177)
         Me.Panel16.Margin = New System.Windows.Forms.Padding(6)
         Me.Panel16.Name = "Panel16"
         Me.Panel16.Size = New System.Drawing.Size(66, 25)
@@ -1638,7 +1628,7 @@ Partial Class egenSkjemaTempStorage
         Me.Panel17.BackColor = System.Drawing.Color.White
         Me.Panel17.Controls.Add(Me.RadioButton25)
         Me.Panel17.Controls.Add(Me.RadioButton26)
-        Me.Panel17.Location = New System.Drawing.Point(571, 53)
+        Me.Panel17.Location = New System.Drawing.Point(681, 52)
         Me.Panel17.Margin = New System.Windows.Forms.Padding(6)
         Me.Panel17.Name = "Panel17"
         Me.Panel17.Size = New System.Drawing.Size(66, 25)
@@ -1674,7 +1664,7 @@ Partial Class egenSkjemaTempStorage
         Me.Panel18.BackColor = System.Drawing.Color.White
         Me.Panel18.Controls.Add(Me.RadioButton27)
         Me.Panel18.Controls.Add(Me.RadioButton28)
-        Me.Panel18.Location = New System.Drawing.Point(571, 103)
+        Me.Panel18.Location = New System.Drawing.Point(681, 102)
         Me.Panel18.Margin = New System.Windows.Forms.Padding(6)
         Me.Panel18.Name = "Panel18"
         Me.Panel18.Size = New System.Drawing.Size(66, 25)
@@ -1710,7 +1700,7 @@ Partial Class egenSkjemaTempStorage
         Me.Panel19.BackColor = System.Drawing.Color.WhiteSmoke
         Me.Panel19.Controls.Add(Me.RadioButton29)
         Me.Panel19.Controls.Add(Me.RadioButton30)
-        Me.Panel19.Location = New System.Drawing.Point(571, 128)
+        Me.Panel19.Location = New System.Drawing.Point(681, 127)
         Me.Panel19.Margin = New System.Windows.Forms.Padding(6)
         Me.Panel19.Name = "Panel19"
         Me.Panel19.Size = New System.Drawing.Size(66, 25)
@@ -1746,7 +1736,7 @@ Partial Class egenSkjemaTempStorage
         Me.Panel20.BackColor = System.Drawing.Color.WhiteSmoke
         Me.Panel20.Controls.Add(Me.RadioButton31)
         Me.Panel20.Controls.Add(Me.RadioButton32)
-        Me.Panel20.Location = New System.Drawing.Point(571, 28)
+        Me.Panel20.Location = New System.Drawing.Point(681, 27)
         Me.Panel20.Margin = New System.Windows.Forms.Padding(6)
         Me.Panel20.Name = "Panel20"
         Me.Panel20.Size = New System.Drawing.Size(66, 25)
@@ -1782,7 +1772,7 @@ Partial Class egenSkjemaTempStorage
         Me.Panel21.BackColor = System.Drawing.Color.WhiteSmoke
         Me.Panel21.Controls.Add(Me.RadioButton33)
         Me.Panel21.Controls.Add(Me.RadioButton34)
-        Me.Panel21.Location = New System.Drawing.Point(571, 78)
+        Me.Panel21.Location = New System.Drawing.Point(681, 77)
         Me.Panel21.Margin = New System.Windows.Forms.Padding(6)
         Me.Panel21.Name = "Panel21"
         Me.Panel21.Size = New System.Drawing.Size(66, 25)
@@ -1818,7 +1808,7 @@ Partial Class egenSkjemaTempStorage
         Me.Panel22.BackColor = System.Drawing.Color.White
         Me.Panel22.Controls.Add(Me.RadioButton35)
         Me.Panel22.Controls.Add(Me.RadioButton36)
-        Me.Panel22.Location = New System.Drawing.Point(571, 153)
+        Me.Panel22.Location = New System.Drawing.Point(681, 152)
         Me.Panel22.Margin = New System.Windows.Forms.Padding(6)
         Me.Panel22.Name = "Panel22"
         Me.Panel22.Size = New System.Drawing.Size(66, 25)
@@ -1852,10 +1842,10 @@ Partial Class egenSkjemaTempStorage
         'LabelSpm26
         '
         Me.LabelSpm26.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
-        Me.LabelSpm26.Location = New System.Drawing.Point(6, 203)
+        Me.LabelSpm26.Location = New System.Drawing.Point(3, 202)
         Me.LabelSpm26.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
         Me.LabelSpm26.Name = "LabelSpm26"
-        Me.LabelSpm26.Size = New System.Drawing.Size(642, 25)
+        Me.LabelSpm26.Size = New System.Drawing.Size(753, 25)
         Me.LabelSpm26.TabIndex = 137
         Me.LabelSpm26.Tag = "26"
         Me.LabelSpm26.Text = "spm26"
@@ -1865,10 +1855,10 @@ Partial Class egenSkjemaTempStorage
         '
         Me.LabelSpm27.BackColor = System.Drawing.Color.WhiteSmoke
         Me.LabelSpm27.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
-        Me.LabelSpm27.Location = New System.Drawing.Point(6, 228)
+        Me.LabelSpm27.Location = New System.Drawing.Point(3, 227)
         Me.LabelSpm27.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
         Me.LabelSpm27.Name = "LabelSpm27"
-        Me.LabelSpm27.Size = New System.Drawing.Size(642, 25)
+        Me.LabelSpm27.Size = New System.Drawing.Size(753, 25)
         Me.LabelSpm27.TabIndex = 138
         Me.LabelSpm27.Tag = "27"
         Me.LabelSpm27.Text = "spm27"
@@ -1877,10 +1867,10 @@ Partial Class egenSkjemaTempStorage
         'LabelSpm28
         '
         Me.LabelSpm28.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
-        Me.LabelSpm28.Location = New System.Drawing.Point(6, 253)
+        Me.LabelSpm28.Location = New System.Drawing.Point(3, 252)
         Me.LabelSpm28.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
         Me.LabelSpm28.Name = "LabelSpm28"
-        Me.LabelSpm28.Size = New System.Drawing.Size(642, 25)
+        Me.LabelSpm28.Size = New System.Drawing.Size(753, 25)
         Me.LabelSpm28.TabIndex = 139
         Me.LabelSpm28.Tag = "28"
         Me.LabelSpm28.Text = "spm28"
@@ -1890,10 +1880,10 @@ Partial Class egenSkjemaTempStorage
         '
         Me.LabelSpm19.BackColor = System.Drawing.Color.WhiteSmoke
         Me.LabelSpm19.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
-        Me.LabelSpm19.Location = New System.Drawing.Point(6, 28)
+        Me.LabelSpm19.Location = New System.Drawing.Point(3, 27)
         Me.LabelSpm19.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
         Me.LabelSpm19.Name = "LabelSpm19"
-        Me.LabelSpm19.Size = New System.Drawing.Size(642, 25)
+        Me.LabelSpm19.Size = New System.Drawing.Size(753, 25)
         Me.LabelSpm19.TabIndex = 136
         Me.LabelSpm19.Tag = "19"
         Me.LabelSpm19.Text = "spm19"
@@ -1903,10 +1893,10 @@ Partial Class egenSkjemaTempStorage
         '
         Me.LabelSpm25.BackColor = System.Drawing.Color.WhiteSmoke
         Me.LabelSpm25.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
-        Me.LabelSpm25.Location = New System.Drawing.Point(6, 178)
+        Me.LabelSpm25.Location = New System.Drawing.Point(3, 177)
         Me.LabelSpm25.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
         Me.LabelSpm25.Name = "LabelSpm25"
-        Me.LabelSpm25.Size = New System.Drawing.Size(642, 25)
+        Me.LabelSpm25.Size = New System.Drawing.Size(753, 25)
         Me.LabelSpm25.TabIndex = 130
         Me.LabelSpm25.Tag = "25"
         Me.LabelSpm25.Text = "spm25"
@@ -1915,10 +1905,10 @@ Partial Class egenSkjemaTempStorage
         'LabelSpm20
         '
         Me.LabelSpm20.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LabelSpm20.Location = New System.Drawing.Point(6, 53)
+        Me.LabelSpm20.Location = New System.Drawing.Point(3, 52)
         Me.LabelSpm20.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
         Me.LabelSpm20.Name = "LabelSpm20"
-        Me.LabelSpm20.Size = New System.Drawing.Size(642, 25)
+        Me.LabelSpm20.Size = New System.Drawing.Size(753, 25)
         Me.LabelSpm20.TabIndex = 131
         Me.LabelSpm20.Tag = "20"
         Me.LabelSpm20.Text = "spm20"
@@ -1928,10 +1918,10 @@ Partial Class egenSkjemaTempStorage
         '
         Me.LabelSpm21.BackColor = System.Drawing.Color.WhiteSmoke
         Me.LabelSpm21.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
-        Me.LabelSpm21.Location = New System.Drawing.Point(6, 78)
+        Me.LabelSpm21.Location = New System.Drawing.Point(3, 77)
         Me.LabelSpm21.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
         Me.LabelSpm21.Name = "LabelSpm21"
-        Me.LabelSpm21.Size = New System.Drawing.Size(642, 25)
+        Me.LabelSpm21.Size = New System.Drawing.Size(753, 25)
         Me.LabelSpm21.TabIndex = 132
         Me.LabelSpm21.Tag = "21"
         Me.LabelSpm21.Text = "spm21"
@@ -1941,10 +1931,10 @@ Partial Class egenSkjemaTempStorage
         '
         Me.LabelSpm23.BackColor = System.Drawing.Color.WhiteSmoke
         Me.LabelSpm23.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
-        Me.LabelSpm23.Location = New System.Drawing.Point(6, 128)
+        Me.LabelSpm23.Location = New System.Drawing.Point(3, 127)
         Me.LabelSpm23.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
         Me.LabelSpm23.Name = "LabelSpm23"
-        Me.LabelSpm23.Size = New System.Drawing.Size(642, 25)
+        Me.LabelSpm23.Size = New System.Drawing.Size(753, 25)
         Me.LabelSpm23.TabIndex = 135
         Me.LabelSpm23.Tag = "23"
         Me.LabelSpm23.Text = "spm23"
@@ -1953,10 +1943,10 @@ Partial Class egenSkjemaTempStorage
         'LabelSpm22
         '
         Me.LabelSpm22.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
-        Me.LabelSpm22.Location = New System.Drawing.Point(6, 103)
+        Me.LabelSpm22.Location = New System.Drawing.Point(3, 102)
         Me.LabelSpm22.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
         Me.LabelSpm22.Name = "LabelSpm22"
-        Me.LabelSpm22.Size = New System.Drawing.Size(642, 25)
+        Me.LabelSpm22.Size = New System.Drawing.Size(753, 25)
         Me.LabelSpm22.TabIndex = 133
         Me.LabelSpm22.Tag = "22"
         Me.LabelSpm22.Text = "spm22"
@@ -1965,10 +1955,10 @@ Partial Class egenSkjemaTempStorage
         'LabelSpm24
         '
         Me.LabelSpm24.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
-        Me.LabelSpm24.Location = New System.Drawing.Point(6, 153)
+        Me.LabelSpm24.Location = New System.Drawing.Point(3, 152)
         Me.LabelSpm24.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
         Me.LabelSpm24.Name = "LabelSpm24"
-        Me.LabelSpm24.Size = New System.Drawing.Size(642, 25)
+        Me.LabelSpm24.Size = New System.Drawing.Size(753, 25)
         Me.LabelSpm24.TabIndex = 134
         Me.LabelSpm24.Tag = "24"
         Me.LabelSpm24.Text = "spm24"
@@ -2001,7 +1991,7 @@ Partial Class egenSkjemaTempStorage
         'Label34
         '
         Me.Label34.AutoSize = True
-        Me.Label34.Location = New System.Drawing.Point(614, 7)
+        Me.Label34.Location = New System.Drawing.Point(730, 8)
         Me.Label34.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
         Me.Label34.Name = "Label34"
         Me.Label34.Size = New System.Drawing.Size(23, 13)
@@ -2013,7 +2003,7 @@ Partial Class egenSkjemaTempStorage
         Me.Panel23.BackColor = System.Drawing.Color.WhiteSmoke
         Me.Panel23.Controls.Add(Me.RadioButton37)
         Me.Panel23.Controls.Add(Me.RadioButton38)
-        Me.Panel23.Location = New System.Drawing.Point(571, 26)
+        Me.Panel23.Location = New System.Drawing.Point(681, 27)
         Me.Panel23.Margin = New System.Windows.Forms.Padding(5, 6, 5, 6)
         Me.Panel23.Name = "Panel23"
         Me.Panel23.Size = New System.Drawing.Size(66, 25)
@@ -2047,7 +2037,7 @@ Partial Class egenSkjemaTempStorage
         'Label35
         '
         Me.Label35.AutoSize = True
-        Me.Label35.Location = New System.Drawing.Point(568, 7)
+        Me.Label35.Location = New System.Drawing.Point(678, 8)
         Me.Label35.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
         Me.Label35.Name = "Label35"
         Me.Label35.Size = New System.Drawing.Size(18, 13)
@@ -2057,10 +2047,10 @@ Partial Class egenSkjemaTempStorage
         'LabelSpm29
         '
         Me.LabelSpm29.BackColor = System.Drawing.Color.WhiteSmoke
-        Me.LabelSpm29.Location = New System.Drawing.Point(5, 26)
+        Me.LabelSpm29.Location = New System.Drawing.Point(3, 27)
         Me.LabelSpm29.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
         Me.LabelSpm29.Name = "LabelSpm29"
-        Me.LabelSpm29.Size = New System.Drawing.Size(642, 25)
+        Me.LabelSpm29.Size = New System.Drawing.Size(753, 25)
         Me.LabelSpm29.TabIndex = 128
         Me.LabelSpm29.Tag = "29"
         Me.LabelSpm29.Text = "spm29"
@@ -2122,7 +2112,7 @@ Partial Class egenSkjemaTempStorage
         '
         Me.Label38.AutoSize = True
         Me.Label38.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
-        Me.Label38.Location = New System.Drawing.Point(621, 4)
+        Me.Label38.Location = New System.Drawing.Point(730, 8)
         Me.Label38.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
         Me.Label38.Name = "Label38"
         Me.Label38.Size = New System.Drawing.Size(23, 13)
@@ -2133,7 +2123,7 @@ Partial Class egenSkjemaTempStorage
         '
         Me.Label39.AutoSize = True
         Me.Label39.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
-        Me.Label39.Location = New System.Drawing.Point(569, 4)
+        Me.Label39.Location = New System.Drawing.Point(678, 8)
         Me.Label39.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
         Me.Label39.Name = "Label39"
         Me.Label39.Size = New System.Drawing.Size(18, 13)
@@ -2145,7 +2135,7 @@ Partial Class egenSkjemaTempStorage
         Me.Panel24.BackColor = System.Drawing.Color.White
         Me.Panel24.Controls.Add(Me.RadioButtonN14)
         Me.Panel24.Controls.Add(Me.RadioButtonJ14)
-        Me.Panel24.Location = New System.Drawing.Point(572, 348)
+        Me.Panel24.Location = New System.Drawing.Point(681, 352)
         Me.Panel24.Margin = New System.Windows.Forms.Padding(6)
         Me.Panel24.Name = "Panel24"
         Me.Panel24.Size = New System.Drawing.Size(66, 25)
@@ -2181,7 +2171,7 @@ Partial Class egenSkjemaTempStorage
         Me.Panel25.BackColor = System.Drawing.Color.WhiteSmoke
         Me.Panel25.Controls.Add(Me.RadioButtonN15)
         Me.Panel25.Controls.Add(Me.RadioButtonJ15)
-        Me.Panel25.Location = New System.Drawing.Point(572, 373)
+        Me.Panel25.Location = New System.Drawing.Point(681, 377)
         Me.Panel25.Margin = New System.Windows.Forms.Padding(6)
         Me.Panel25.Name = "Panel25"
         Me.Panel25.Size = New System.Drawing.Size(66, 25)
@@ -2217,7 +2207,7 @@ Partial Class egenSkjemaTempStorage
         Me.Panel26.BackColor = System.Drawing.Color.WhiteSmoke
         Me.Panel26.Controls.Add(Me.RadioButtonN13)
         Me.Panel26.Controls.Add(Me.RadioButtonJ13)
-        Me.Panel26.Location = New System.Drawing.Point(572, 323)
+        Me.Panel26.Location = New System.Drawing.Point(681, 327)
         Me.Panel26.Margin = New System.Windows.Forms.Padding(6)
         Me.Panel26.Name = "Panel26"
         Me.Panel26.Size = New System.Drawing.Size(66, 25)
@@ -2253,7 +2243,7 @@ Partial Class egenSkjemaTempStorage
         Me.Panel27.BackColor = System.Drawing.Color.WhiteSmoke
         Me.Panel27.Controls.Add(Me.RadioButtonN11)
         Me.Panel27.Controls.Add(Me.RadioButtonJ11)
-        Me.Panel27.Location = New System.Drawing.Point(572, 273)
+        Me.Panel27.Location = New System.Drawing.Point(681, 277)
         Me.Panel27.Margin = New System.Windows.Forms.Padding(6)
         Me.Panel27.Name = "Panel27"
         Me.Panel27.Size = New System.Drawing.Size(66, 25)
@@ -2289,7 +2279,7 @@ Partial Class egenSkjemaTempStorage
         Me.Panel28.BackColor = System.Drawing.Color.White
         Me.Panel28.Controls.Add(Me.RadioButtonN12)
         Me.Panel28.Controls.Add(Me.RadioButtonJ12)
-        Me.Panel28.Location = New System.Drawing.Point(572, 298)
+        Me.Panel28.Location = New System.Drawing.Point(681, 302)
         Me.Panel28.Margin = New System.Windows.Forms.Padding(6)
         Me.Panel28.Name = "Panel28"
         Me.Panel28.Size = New System.Drawing.Size(66, 25)
@@ -2325,7 +2315,7 @@ Partial Class egenSkjemaTempStorage
         Me.Panel29.BackColor = System.Drawing.Color.White
         Me.Panel29.Controls.Add(Me.RadioButton39)
         Me.Panel29.Controls.Add(Me.RadioButton40)
-        Me.Panel29.Location = New System.Drawing.Point(572, 198)
+        Me.Panel29.Location = New System.Drawing.Point(681, 202)
         Me.Panel29.Margin = New System.Windows.Forms.Padding(6)
         Me.Panel29.Name = "Panel29"
         Me.Panel29.Size = New System.Drawing.Size(66, 25)
@@ -2361,7 +2351,7 @@ Partial Class egenSkjemaTempStorage
         Me.Panel30.BackColor = System.Drawing.Color.WhiteSmoke
         Me.Panel30.Controls.Add(Me.RadioButton41)
         Me.Panel30.Controls.Add(Me.RadioButton42)
-        Me.Panel30.Location = New System.Drawing.Point(572, 223)
+        Me.Panel30.Location = New System.Drawing.Point(681, 227)
         Me.Panel30.Margin = New System.Windows.Forms.Padding(6)
         Me.Panel30.Name = "Panel30"
         Me.Panel30.Size = New System.Drawing.Size(66, 25)
@@ -2397,7 +2387,7 @@ Partial Class egenSkjemaTempStorage
         Me.Panel31.BackColor = System.Drawing.Color.White
         Me.Panel31.Controls.Add(Me.RadioButton43)
         Me.Panel31.Controls.Add(Me.RadioButton44)
-        Me.Panel31.Location = New System.Drawing.Point(572, 248)
+        Me.Panel31.Location = New System.Drawing.Point(681, 252)
         Me.Panel31.Margin = New System.Windows.Forms.Padding(6)
         Me.Panel31.Name = "Panel31"
         Me.Panel31.Size = New System.Drawing.Size(66, 25)
@@ -2433,7 +2423,7 @@ Partial Class egenSkjemaTempStorage
         Me.Panel32.BackColor = System.Drawing.Color.WhiteSmoke
         Me.Panel32.Controls.Add(Me.RadioButton45)
         Me.Panel32.Controls.Add(Me.RadioButton46)
-        Me.Panel32.Location = New System.Drawing.Point(572, 173)
+        Me.Panel32.Location = New System.Drawing.Point(681, 177)
         Me.Panel32.Margin = New System.Windows.Forms.Padding(6)
         Me.Panel32.Name = "Panel32"
         Me.Panel32.Size = New System.Drawing.Size(66, 25)
@@ -2469,7 +2459,7 @@ Partial Class egenSkjemaTempStorage
         Me.Panel33.BackColor = System.Drawing.Color.White
         Me.Panel33.Controls.Add(Me.RadioButton47)
         Me.Panel33.Controls.Add(Me.RadioButton48)
-        Me.Panel33.Location = New System.Drawing.Point(572, 48)
+        Me.Panel33.Location = New System.Drawing.Point(681, 52)
         Me.Panel33.Margin = New System.Windows.Forms.Padding(6)
         Me.Panel33.Name = "Panel33"
         Me.Panel33.Size = New System.Drawing.Size(66, 25)
@@ -2505,7 +2495,7 @@ Partial Class egenSkjemaTempStorage
         Me.Panel34.BackColor = System.Drawing.Color.White
         Me.Panel34.Controls.Add(Me.RadioButton49)
         Me.Panel34.Controls.Add(Me.RadioButton50)
-        Me.Panel34.Location = New System.Drawing.Point(572, 98)
+        Me.Panel34.Location = New System.Drawing.Point(681, 102)
         Me.Panel34.Margin = New System.Windows.Forms.Padding(6)
         Me.Panel34.Name = "Panel34"
         Me.Panel34.Size = New System.Drawing.Size(66, 25)
@@ -2541,7 +2531,7 @@ Partial Class egenSkjemaTempStorage
         Me.Panel35.BackColor = System.Drawing.Color.WhiteSmoke
         Me.Panel35.Controls.Add(Me.RadioButton51)
         Me.Panel35.Controls.Add(Me.RadioButton52)
-        Me.Panel35.Location = New System.Drawing.Point(572, 123)
+        Me.Panel35.Location = New System.Drawing.Point(681, 127)
         Me.Panel35.Margin = New System.Windows.Forms.Padding(6)
         Me.Panel35.Name = "Panel35"
         Me.Panel35.Size = New System.Drawing.Size(66, 25)
@@ -2577,7 +2567,7 @@ Partial Class egenSkjemaTempStorage
         Me.Panel36.BackColor = System.Drawing.Color.WhiteSmoke
         Me.Panel36.Controls.Add(Me.RadioButton53)
         Me.Panel36.Controls.Add(Me.RadioButton54)
-        Me.Panel36.Location = New System.Drawing.Point(572, 23)
+        Me.Panel36.Location = New System.Drawing.Point(681, 27)
         Me.Panel36.Margin = New System.Windows.Forms.Padding(6)
         Me.Panel36.Name = "Panel36"
         Me.Panel36.Size = New System.Drawing.Size(66, 25)
@@ -2613,7 +2603,7 @@ Partial Class egenSkjemaTempStorage
         Me.Panel37.BackColor = System.Drawing.Color.WhiteSmoke
         Me.Panel37.Controls.Add(Me.RadioButton55)
         Me.Panel37.Controls.Add(Me.RadioButton56)
-        Me.Panel37.Location = New System.Drawing.Point(572, 73)
+        Me.Panel37.Location = New System.Drawing.Point(681, 77)
         Me.Panel37.Margin = New System.Windows.Forms.Padding(6)
         Me.Panel37.Name = "Panel37"
         Me.Panel37.Size = New System.Drawing.Size(66, 25)
@@ -2649,7 +2639,7 @@ Partial Class egenSkjemaTempStorage
         Me.Panel38.BackColor = System.Drawing.Color.White
         Me.Panel38.Controls.Add(Me.RadioButton57)
         Me.Panel38.Controls.Add(Me.RadioButton58)
-        Me.Panel38.Location = New System.Drawing.Point(572, 148)
+        Me.Panel38.Location = New System.Drawing.Point(681, 152)
         Me.Panel38.Margin = New System.Windows.Forms.Padding(6)
         Me.Panel38.Name = "Panel38"
         Me.Panel38.Size = New System.Drawing.Size(66, 25)
@@ -2684,10 +2674,10 @@ Partial Class egenSkjemaTempStorage
         '
         Me.LabelSpm44.BackColor = System.Drawing.Color.WhiteSmoke
         Me.LabelSpm44.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
-        Me.LabelSpm44.Location = New System.Drawing.Point(6, 373)
+        Me.LabelSpm44.Location = New System.Drawing.Point(3, 377)
         Me.LabelSpm44.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
         Me.LabelSpm44.Name = "LabelSpm44"
-        Me.LabelSpm44.Size = New System.Drawing.Size(642, 25)
+        Me.LabelSpm44.Size = New System.Drawing.Size(753, 25)
         Me.LabelSpm44.TabIndex = 159
         Me.LabelSpm44.Tag = "44"
         Me.LabelSpm44.Text = "spm44"
@@ -2697,10 +2687,10 @@ Partial Class egenSkjemaTempStorage
         '
         Me.LabelSpm43.BackColor = System.Drawing.Color.White
         Me.LabelSpm43.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
-        Me.LabelSpm43.Location = New System.Drawing.Point(6, 348)
+        Me.LabelSpm43.Location = New System.Drawing.Point(3, 352)
         Me.LabelSpm43.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
         Me.LabelSpm43.Name = "LabelSpm43"
-        Me.LabelSpm43.Size = New System.Drawing.Size(642, 25)
+        Me.LabelSpm43.Size = New System.Drawing.Size(753, 25)
         Me.LabelSpm43.TabIndex = 158
         Me.LabelSpm43.Tag = "43"
         Me.LabelSpm43.Text = "spm43"
@@ -2710,10 +2700,10 @@ Partial Class egenSkjemaTempStorage
         '
         Me.LabelSpm41.BackColor = System.Drawing.Color.White
         Me.LabelSpm41.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
-        Me.LabelSpm41.Location = New System.Drawing.Point(6, 298)
+        Me.LabelSpm41.Location = New System.Drawing.Point(3, 302)
         Me.LabelSpm41.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
         Me.LabelSpm41.Name = "LabelSpm41"
-        Me.LabelSpm41.Size = New System.Drawing.Size(642, 25)
+        Me.LabelSpm41.Size = New System.Drawing.Size(753, 25)
         Me.LabelSpm41.TabIndex = 157
         Me.LabelSpm41.Tag = "41"
         Me.LabelSpm41.Text = "spm41"
@@ -2723,10 +2713,10 @@ Partial Class egenSkjemaTempStorage
         '
         Me.LabelSpm42.BackColor = System.Drawing.Color.WhiteSmoke
         Me.LabelSpm42.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
-        Me.LabelSpm42.Location = New System.Drawing.Point(6, 323)
+        Me.LabelSpm42.Location = New System.Drawing.Point(3, 327)
         Me.LabelSpm42.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
         Me.LabelSpm42.Name = "LabelSpm42"
-        Me.LabelSpm42.Size = New System.Drawing.Size(642, 25)
+        Me.LabelSpm42.Size = New System.Drawing.Size(753, 25)
         Me.LabelSpm42.TabIndex = 156
         Me.LabelSpm42.Tag = "42"
         Me.LabelSpm42.Text = "spm42"
@@ -2736,10 +2726,10 @@ Partial Class egenSkjemaTempStorage
         '
         Me.LabelSpm40.BackColor = System.Drawing.Color.WhiteSmoke
         Me.LabelSpm40.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
-        Me.LabelSpm40.Location = New System.Drawing.Point(6, 273)
+        Me.LabelSpm40.Location = New System.Drawing.Point(3, 277)
         Me.LabelSpm40.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
         Me.LabelSpm40.Name = "LabelSpm40"
-        Me.LabelSpm40.Size = New System.Drawing.Size(642, 25)
+        Me.LabelSpm40.Size = New System.Drawing.Size(753, 25)
         Me.LabelSpm40.TabIndex = 155
         Me.LabelSpm40.Tag = "40"
         Me.LabelSpm40.Text = "spm40"
@@ -2749,10 +2739,10 @@ Partial Class egenSkjemaTempStorage
         '
         Me.LabelSpm33.BackColor = System.Drawing.Color.White
         Me.LabelSpm33.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
-        Me.LabelSpm33.Location = New System.Drawing.Point(6, 98)
+        Me.LabelSpm33.Location = New System.Drawing.Point(3, 102)
         Me.LabelSpm33.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
         Me.LabelSpm33.Name = "LabelSpm33"
-        Me.LabelSpm33.Size = New System.Drawing.Size(642, 25)
+        Me.LabelSpm33.Size = New System.Drawing.Size(753, 25)
         Me.LabelSpm33.TabIndex = 154
         Me.LabelSpm33.Tag = "33"
         Me.LabelSpm33.Text = "spm33"
@@ -2762,10 +2752,10 @@ Partial Class egenSkjemaTempStorage
         '
         Me.LabelSpm35.BackColor = System.Drawing.Color.White
         Me.LabelSpm35.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
-        Me.LabelSpm35.Location = New System.Drawing.Point(6, 148)
+        Me.LabelSpm35.Location = New System.Drawing.Point(3, 152)
         Me.LabelSpm35.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
         Me.LabelSpm35.Name = "LabelSpm35"
-        Me.LabelSpm35.Size = New System.Drawing.Size(642, 25)
+        Me.LabelSpm35.Size = New System.Drawing.Size(753, 25)
         Me.LabelSpm35.TabIndex = 153
         Me.LabelSpm35.Tag = "35"
         Me.LabelSpm35.Text = "spm35"
@@ -2775,10 +2765,10 @@ Partial Class egenSkjemaTempStorage
         '
         Me.LabelSpm37.BackColor = System.Drawing.Color.White
         Me.LabelSpm37.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
-        Me.LabelSpm37.Location = New System.Drawing.Point(6, 198)
+        Me.LabelSpm37.Location = New System.Drawing.Point(3, 202)
         Me.LabelSpm37.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
         Me.LabelSpm37.Name = "LabelSpm37"
-        Me.LabelSpm37.Size = New System.Drawing.Size(642, 25)
+        Me.LabelSpm37.Size = New System.Drawing.Size(753, 25)
         Me.LabelSpm37.TabIndex = 152
         Me.LabelSpm37.Tag = "37"
         Me.LabelSpm37.Text = "spm37"
@@ -2788,10 +2778,10 @@ Partial Class egenSkjemaTempStorage
         '
         Me.LabelSpm39.BackColor = System.Drawing.Color.White
         Me.LabelSpm39.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
-        Me.LabelSpm39.Location = New System.Drawing.Point(6, 248)
+        Me.LabelSpm39.Location = New System.Drawing.Point(3, 252)
         Me.LabelSpm39.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
         Me.LabelSpm39.Name = "LabelSpm39"
-        Me.LabelSpm39.Size = New System.Drawing.Size(642, 25)
+        Me.LabelSpm39.Size = New System.Drawing.Size(753, 25)
         Me.LabelSpm39.TabIndex = 151
         Me.LabelSpm39.Tag = "39"
         Me.LabelSpm39.Text = "spm39"
@@ -2801,10 +2791,10 @@ Partial Class egenSkjemaTempStorage
         '
         Me.LabelSpm31.BackColor = System.Drawing.Color.White
         Me.LabelSpm31.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
-        Me.LabelSpm31.Location = New System.Drawing.Point(6, 48)
+        Me.LabelSpm31.Location = New System.Drawing.Point(3, 52)
         Me.LabelSpm31.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
         Me.LabelSpm31.Name = "LabelSpm31"
-        Me.LabelSpm31.Size = New System.Drawing.Size(642, 25)
+        Me.LabelSpm31.Size = New System.Drawing.Size(753, 25)
         Me.LabelSpm31.TabIndex = 150
         Me.LabelSpm31.Tag = "31"
         Me.LabelSpm31.Text = "spm31"
@@ -2814,10 +2804,10 @@ Partial Class egenSkjemaTempStorage
         '
         Me.LabelSpm32.BackColor = System.Drawing.Color.WhiteSmoke
         Me.LabelSpm32.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
-        Me.LabelSpm32.Location = New System.Drawing.Point(6, 73)
+        Me.LabelSpm32.Location = New System.Drawing.Point(3, 77)
         Me.LabelSpm32.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
         Me.LabelSpm32.Name = "LabelSpm32"
-        Me.LabelSpm32.Size = New System.Drawing.Size(642, 25)
+        Me.LabelSpm32.Size = New System.Drawing.Size(753, 25)
         Me.LabelSpm32.TabIndex = 149
         Me.LabelSpm32.Tag = "32"
         Me.LabelSpm32.Text = "spm32"
@@ -2827,10 +2817,10 @@ Partial Class egenSkjemaTempStorage
         '
         Me.LabelSpm38.BackColor = System.Drawing.Color.WhiteSmoke
         Me.LabelSpm38.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
-        Me.LabelSpm38.Location = New System.Drawing.Point(6, 223)
+        Me.LabelSpm38.Location = New System.Drawing.Point(3, 227)
         Me.LabelSpm38.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
         Me.LabelSpm38.Name = "LabelSpm38"
-        Me.LabelSpm38.Size = New System.Drawing.Size(642, 25)
+        Me.LabelSpm38.Size = New System.Drawing.Size(753, 25)
         Me.LabelSpm38.TabIndex = 148
         Me.LabelSpm38.Tag = "38"
         Me.LabelSpm38.Text = "spm38"
@@ -2840,10 +2830,10 @@ Partial Class egenSkjemaTempStorage
         '
         Me.LabelSpm36.BackColor = System.Drawing.Color.WhiteSmoke
         Me.LabelSpm36.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
-        Me.LabelSpm36.Location = New System.Drawing.Point(6, 173)
+        Me.LabelSpm36.Location = New System.Drawing.Point(3, 177)
         Me.LabelSpm36.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
         Me.LabelSpm36.Name = "LabelSpm36"
-        Me.LabelSpm36.Size = New System.Drawing.Size(642, 25)
+        Me.LabelSpm36.Size = New System.Drawing.Size(753, 25)
         Me.LabelSpm36.TabIndex = 147
         Me.LabelSpm36.Tag = "36"
         Me.LabelSpm36.Text = "spm36"
@@ -2853,10 +2843,10 @@ Partial Class egenSkjemaTempStorage
         '
         Me.LabelSpm34.BackColor = System.Drawing.Color.WhiteSmoke
         Me.LabelSpm34.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
-        Me.LabelSpm34.Location = New System.Drawing.Point(6, 123)
+        Me.LabelSpm34.Location = New System.Drawing.Point(3, 127)
         Me.LabelSpm34.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
         Me.LabelSpm34.Name = "LabelSpm34"
-        Me.LabelSpm34.Size = New System.Drawing.Size(642, 25)
+        Me.LabelSpm34.Size = New System.Drawing.Size(753, 25)
         Me.LabelSpm34.TabIndex = 146
         Me.LabelSpm34.Tag = "34"
         Me.LabelSpm34.Text = "spm34"
@@ -2866,10 +2856,10 @@ Partial Class egenSkjemaTempStorage
         '
         Me.LabelSpm30.BackColor = System.Drawing.Color.WhiteSmoke
         Me.LabelSpm30.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
-        Me.LabelSpm30.Location = New System.Drawing.Point(6, 23)
+        Me.LabelSpm30.Location = New System.Drawing.Point(3, 27)
         Me.LabelSpm30.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
         Me.LabelSpm30.Name = "LabelSpm30"
-        Me.LabelSpm30.Size = New System.Drawing.Size(642, 25)
+        Me.LabelSpm30.Size = New System.Drawing.Size(753, 25)
         Me.LabelSpm30.TabIndex = 145
         Me.LabelSpm30.Tag = "30"
         Me.LabelSpm30.Text = "spm30"
@@ -2913,7 +2903,7 @@ Partial Class egenSkjemaTempStorage
         'Label62
         '
         Me.Label62.AutoSize = True
-        Me.Label62.Location = New System.Drawing.Point(620, 143)
+        Me.Label62.Location = New System.Drawing.Point(730, 146)
         Me.Label62.Name = "Label62"
         Me.Label62.Size = New System.Drawing.Size(23, 13)
         Me.Label62.TabIndex = 148
@@ -2922,7 +2912,7 @@ Partial Class egenSkjemaTempStorage
         'Label63
         '
         Me.Label63.AutoSize = True
-        Me.Label63.Location = New System.Drawing.Point(568, 143)
+        Me.Label63.Location = New System.Drawing.Point(678, 143)
         Me.Label63.Name = "Label63"
         Me.Label63.Size = New System.Drawing.Size(18, 13)
         Me.Label63.TabIndex = 147
@@ -2933,7 +2923,7 @@ Partial Class egenSkjemaTempStorage
         Me.Panel43.BackColor = System.Drawing.Color.WhiteSmoke
         Me.Panel43.Controls.Add(Me.RadioButton67)
         Me.Panel43.Controls.Add(Me.RadioButton68)
-        Me.Panel43.Location = New System.Drawing.Point(571, 162)
+        Me.Panel43.Location = New System.Drawing.Point(681, 162)
         Me.Panel43.Name = "Panel43"
         Me.Panel43.Size = New System.Drawing.Size(66, 25)
         Me.Panel43.TabIndex = 146
@@ -2966,7 +2956,7 @@ Partial Class egenSkjemaTempStorage
         Me.LabelSpm49.BackColor = System.Drawing.Color.WhiteSmoke
         Me.LabelSpm49.Location = New System.Drawing.Point(5, 162)
         Me.LabelSpm49.Name = "LabelSpm49"
-        Me.LabelSpm49.Size = New System.Drawing.Size(642, 25)
+        Me.LabelSpm49.Size = New System.Drawing.Size(753, 25)
         Me.LabelSpm49.TabIndex = 145
         Me.LabelSpm49.Tag = "49"
         Me.LabelSpm49.Text = "spm49"
@@ -2987,7 +2977,7 @@ Partial Class egenSkjemaTempStorage
         Me.Panel39.BackColor = System.Drawing.Color.White
         Me.Panel39.Controls.Add(Me.RadioButton59)
         Me.Panel39.Controls.Add(Me.RadioButton60)
-        Me.Panel39.Location = New System.Drawing.Point(571, 51)
+        Me.Panel39.Location = New System.Drawing.Point(681, 52)
         Me.Panel39.Margin = New System.Windows.Forms.Padding(5, 6, 5, 6)
         Me.Panel39.Name = "Panel39"
         Me.Panel39.Size = New System.Drawing.Size(66, 25)
@@ -3023,7 +3013,7 @@ Partial Class egenSkjemaTempStorage
         Me.Panel40.BackColor = System.Drawing.Color.White
         Me.Panel40.Controls.Add(Me.RadioButton61)
         Me.Panel40.Controls.Add(Me.RadioButton62)
-        Me.Panel40.Location = New System.Drawing.Point(571, 101)
+        Me.Panel40.Location = New System.Drawing.Point(681, 102)
         Me.Panel40.Margin = New System.Windows.Forms.Padding(5, 6, 5, 6)
         Me.Panel40.Name = "Panel40"
         Me.Panel40.Size = New System.Drawing.Size(66, 25)
@@ -3059,7 +3049,7 @@ Partial Class egenSkjemaTempStorage
         Me.Panel41.BackColor = System.Drawing.Color.WhiteSmoke
         Me.Panel41.Controls.Add(Me.RadioButton63)
         Me.Panel41.Controls.Add(Me.RadioButton64)
-        Me.Panel41.Location = New System.Drawing.Point(571, 26)
+        Me.Panel41.Location = New System.Drawing.Point(681, 27)
         Me.Panel41.Margin = New System.Windows.Forms.Padding(5, 6, 5, 6)
         Me.Panel41.Name = "Panel41"
         Me.Panel41.Size = New System.Drawing.Size(66, 25)
@@ -3095,7 +3085,7 @@ Partial Class egenSkjemaTempStorage
         Me.Panel42.BackColor = System.Drawing.Color.WhiteSmoke
         Me.Panel42.Controls.Add(Me.RadioButton65)
         Me.Panel42.Controls.Add(Me.RadioButton66)
-        Me.Panel42.Location = New System.Drawing.Point(571, 76)
+        Me.Panel42.Location = New System.Drawing.Point(681, 77)
         Me.Panel42.Margin = New System.Windows.Forms.Padding(5, 6, 5, 6)
         Me.Panel42.Name = "Panel42"
         Me.Panel42.Size = New System.Drawing.Size(66, 25)
@@ -3129,7 +3119,7 @@ Partial Class egenSkjemaTempStorage
         'Label55
         '
         Me.Label55.AutoSize = True
-        Me.Label55.Location = New System.Drawing.Point(614, 7)
+        Me.Label55.Location = New System.Drawing.Point(730, 8)
         Me.Label55.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
         Me.Label55.Name = "Label55"
         Me.Label55.Size = New System.Drawing.Size(23, 13)
@@ -3139,7 +3129,7 @@ Partial Class egenSkjemaTempStorage
         'Label56
         '
         Me.Label56.AutoSize = True
-        Me.Label56.Location = New System.Drawing.Point(568, 7)
+        Me.Label56.Location = New System.Drawing.Point(678, 8)
         Me.Label56.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
         Me.Label56.Name = "Label56"
         Me.Label56.Size = New System.Drawing.Size(18, 13)
@@ -3149,10 +3139,10 @@ Partial Class egenSkjemaTempStorage
         'LabelSpm48
         '
         Me.LabelSpm48.BackColor = System.Drawing.Color.White
-        Me.LabelSpm48.Location = New System.Drawing.Point(5, 101)
+        Me.LabelSpm48.Location = New System.Drawing.Point(3, 102)
         Me.LabelSpm48.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
         Me.LabelSpm48.Name = "LabelSpm48"
-        Me.LabelSpm48.Size = New System.Drawing.Size(642, 25)
+        Me.LabelSpm48.Size = New System.Drawing.Size(753, 25)
         Me.LabelSpm48.TabIndex = 137
         Me.LabelSpm48.Tag = "48"
         Me.LabelSpm48.Text = "spm48"
@@ -3161,10 +3151,10 @@ Partial Class egenSkjemaTempStorage
         'LabelSpm46
         '
         Me.LabelSpm46.BackColor = System.Drawing.Color.White
-        Me.LabelSpm46.Location = New System.Drawing.Point(5, 51)
+        Me.LabelSpm46.Location = New System.Drawing.Point(3, 52)
         Me.LabelSpm46.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
         Me.LabelSpm46.Name = "LabelSpm46"
-        Me.LabelSpm46.Size = New System.Drawing.Size(642, 25)
+        Me.LabelSpm46.Size = New System.Drawing.Size(753, 25)
         Me.LabelSpm46.TabIndex = 136
         Me.LabelSpm46.Tag = "46"
         Me.LabelSpm46.Text = "spm46"
@@ -3173,10 +3163,10 @@ Partial Class egenSkjemaTempStorage
         'LabelSpm47
         '
         Me.LabelSpm47.BackColor = System.Drawing.Color.WhiteSmoke
-        Me.LabelSpm47.Location = New System.Drawing.Point(5, 76)
+        Me.LabelSpm47.Location = New System.Drawing.Point(3, 77)
         Me.LabelSpm47.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
         Me.LabelSpm47.Name = "LabelSpm47"
-        Me.LabelSpm47.Size = New System.Drawing.Size(642, 25)
+        Me.LabelSpm47.Size = New System.Drawing.Size(753, 25)
         Me.LabelSpm47.TabIndex = 135
         Me.LabelSpm47.Tag = "47"
         Me.LabelSpm47.Text = "spm47"
@@ -3185,10 +3175,10 @@ Partial Class egenSkjemaTempStorage
         'LabelSpm45
         '
         Me.LabelSpm45.BackColor = System.Drawing.Color.WhiteSmoke
-        Me.LabelSpm45.Location = New System.Drawing.Point(5, 26)
+        Me.LabelSpm45.Location = New System.Drawing.Point(3, 27)
         Me.LabelSpm45.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
         Me.LabelSpm45.Name = "LabelSpm45"
-        Me.LabelSpm45.Size = New System.Drawing.Size(642, 25)
+        Me.LabelSpm45.Size = New System.Drawing.Size(753, 25)
         Me.LabelSpm45.TabIndex = 134
         Me.LabelSpm45.Tag = "45"
         Me.LabelSpm45.Text = "spm45"
@@ -3239,7 +3229,7 @@ Partial Class egenSkjemaTempStorage
         'Label66
         '
         Me.Label66.AutoSize = True
-        Me.Label66.Location = New System.Drawing.Point(605, 5)
+        Me.Label66.Location = New System.Drawing.Point(730, 8)
         Me.Label66.Name = "Label66"
         Me.Label66.Size = New System.Drawing.Size(23, 13)
         Me.Label66.TabIndex = 147
@@ -3248,7 +3238,7 @@ Partial Class egenSkjemaTempStorage
         'Label67
         '
         Me.Label67.AutoSize = True
-        Me.Label67.Location = New System.Drawing.Point(566, 5)
+        Me.Label67.Location = New System.Drawing.Point(678, 8)
         Me.Label67.Name = "Label67"
         Me.Label67.Size = New System.Drawing.Size(18, 13)
         Me.Label67.TabIndex = 146
@@ -3259,7 +3249,7 @@ Partial Class egenSkjemaTempStorage
         Me.Panel44.BackColor = System.Drawing.Color.White
         Me.Panel44.Controls.Add(Me.RadioButton69)
         Me.Panel44.Controls.Add(Me.RadioButton70)
-        Me.Panel44.Location = New System.Drawing.Point(569, 199)
+        Me.Panel44.Location = New System.Drawing.Point(681, 202)
         Me.Panel44.Name = "Panel44"
         Me.Panel44.Size = New System.Drawing.Size(66, 25)
         Me.Panel44.TabIndex = 145
@@ -3292,7 +3282,7 @@ Partial Class egenSkjemaTempStorage
         Me.Panel45.BackColor = System.Drawing.Color.White
         Me.Panel45.Controls.Add(Me.RadioButton71)
         Me.Panel45.Controls.Add(Me.RadioButton72)
-        Me.Panel45.Location = New System.Drawing.Point(569, 249)
+        Me.Panel45.Location = New System.Drawing.Point(681, 252)
         Me.Panel45.Name = "Panel45"
         Me.Panel45.Size = New System.Drawing.Size(66, 25)
         Me.Panel45.TabIndex = 143
@@ -3325,7 +3315,7 @@ Partial Class egenSkjemaTempStorage
         Me.Panel46.BackColor = System.Drawing.Color.WhiteSmoke
         Me.Panel46.Controls.Add(Me.RadioButton73)
         Me.Panel46.Controls.Add(Me.RadioButton74)
-        Me.Panel46.Location = New System.Drawing.Point(569, 224)
+        Me.Panel46.Location = New System.Drawing.Point(681, 227)
         Me.Panel46.Name = "Panel46"
         Me.Panel46.Size = New System.Drawing.Size(66, 25)
         Me.Panel46.TabIndex = 144
@@ -3358,7 +3348,7 @@ Partial Class egenSkjemaTempStorage
         Me.Panel47.BackColor = System.Drawing.Color.WhiteSmoke
         Me.Panel47.Controls.Add(Me.RadioButton75)
         Me.Panel47.Controls.Add(Me.RadioButton76)
-        Me.Panel47.Location = New System.Drawing.Point(569, 174)
+        Me.Panel47.Location = New System.Drawing.Point(681, 177)
         Me.Panel47.Name = "Panel47"
         Me.Panel47.Size = New System.Drawing.Size(66, 25)
         Me.Panel47.TabIndex = 142
@@ -3391,7 +3381,7 @@ Partial Class egenSkjemaTempStorage
         Me.Panel48.BackColor = System.Drawing.Color.White
         Me.Panel48.Controls.Add(Me.RadioButton77)
         Me.Panel48.Controls.Add(Me.RadioButton78)
-        Me.Panel48.Location = New System.Drawing.Point(569, 49)
+        Me.Panel48.Location = New System.Drawing.Point(681, 52)
         Me.Panel48.Name = "Panel48"
         Me.Panel48.Size = New System.Drawing.Size(66, 25)
         Me.Panel48.TabIndex = 140
@@ -3424,7 +3414,7 @@ Partial Class egenSkjemaTempStorage
         Me.Panel49.BackColor = System.Drawing.Color.White
         Me.Panel49.Controls.Add(Me.RadioButton79)
         Me.Panel49.Controls.Add(Me.RadioButton80)
-        Me.Panel49.Location = New System.Drawing.Point(569, 99)
+        Me.Panel49.Location = New System.Drawing.Point(681, 102)
         Me.Panel49.Name = "Panel49"
         Me.Panel49.Size = New System.Drawing.Size(66, 25)
         Me.Panel49.TabIndex = 137
@@ -3457,7 +3447,7 @@ Partial Class egenSkjemaTempStorage
         Me.Panel50.BackColor = System.Drawing.Color.WhiteSmoke
         Me.Panel50.Controls.Add(Me.RadioButton81)
         Me.Panel50.Controls.Add(Me.RadioButton82)
-        Me.Panel50.Location = New System.Drawing.Point(569, 124)
+        Me.Panel50.Location = New System.Drawing.Point(681, 127)
         Me.Panel50.Name = "Panel50"
         Me.Panel50.Size = New System.Drawing.Size(66, 25)
         Me.Panel50.TabIndex = 138
@@ -3490,7 +3480,7 @@ Partial Class egenSkjemaTempStorage
         Me.Panel51.BackColor = System.Drawing.Color.WhiteSmoke
         Me.Panel51.Controls.Add(Me.RadioButton83)
         Me.Panel51.Controls.Add(Me.RadioButton84)
-        Me.Panel51.Location = New System.Drawing.Point(569, 74)
+        Me.Panel51.Location = New System.Drawing.Point(681, 77)
         Me.Panel51.Name = "Panel51"
         Me.Panel51.Size = New System.Drawing.Size(66, 25)
         Me.Panel51.TabIndex = 139
@@ -3523,7 +3513,7 @@ Partial Class egenSkjemaTempStorage
         Me.Panel52.BackColor = System.Drawing.Color.WhiteSmoke
         Me.Panel52.Controls.Add(Me.RadioButton85)
         Me.Panel52.Controls.Add(Me.RadioButton86)
-        Me.Panel52.Location = New System.Drawing.Point(569, 24)
+        Me.Panel52.Location = New System.Drawing.Point(681, 27)
         Me.Panel52.Name = "Panel52"
         Me.Panel52.Size = New System.Drawing.Size(66, 25)
         Me.Panel52.TabIndex = 136
@@ -3556,7 +3546,7 @@ Partial Class egenSkjemaTempStorage
         Me.Panel53.BackColor = System.Drawing.Color.White
         Me.Panel53.Controls.Add(Me.RadioButton87)
         Me.Panel53.Controls.Add(Me.RadioButton88)
-        Me.Panel53.Location = New System.Drawing.Point(569, 149)
+        Me.Panel53.Location = New System.Drawing.Point(681, 152)
         Me.Panel53.Name = "Panel53"
         Me.Panel53.Size = New System.Drawing.Size(66, 25)
         Me.Panel53.TabIndex = 141
@@ -3587,9 +3577,9 @@ Partial Class egenSkjemaTempStorage
         'LabelSpm53
         '
         Me.LabelSpm53.BackColor = System.Drawing.Color.White
-        Me.LabelSpm53.Location = New System.Drawing.Point(3, 99)
+        Me.LabelSpm53.Location = New System.Drawing.Point(3, 102)
         Me.LabelSpm53.Name = "LabelSpm53"
-        Me.LabelSpm53.Size = New System.Drawing.Size(642, 25)
+        Me.LabelSpm53.Size = New System.Drawing.Size(753, 25)
         Me.LabelSpm53.TabIndex = 135
         Me.LabelSpm53.Tag = "53"
         Me.LabelSpm53.Text = "spm53"
@@ -3598,9 +3588,9 @@ Partial Class egenSkjemaTempStorage
         'LabelSpm55
         '
         Me.LabelSpm55.BackColor = System.Drawing.Color.White
-        Me.LabelSpm55.Location = New System.Drawing.Point(3, 149)
+        Me.LabelSpm55.Location = New System.Drawing.Point(3, 152)
         Me.LabelSpm55.Name = "LabelSpm55"
-        Me.LabelSpm55.Size = New System.Drawing.Size(642, 25)
+        Me.LabelSpm55.Size = New System.Drawing.Size(753, 25)
         Me.LabelSpm55.TabIndex = 134
         Me.LabelSpm55.Tag = "55"
         Me.LabelSpm55.Text = "spm55"
@@ -3609,9 +3599,9 @@ Partial Class egenSkjemaTempStorage
         'LabelSpm57
         '
         Me.LabelSpm57.BackColor = System.Drawing.Color.White
-        Me.LabelSpm57.Location = New System.Drawing.Point(3, 199)
+        Me.LabelSpm57.Location = New System.Drawing.Point(3, 202)
         Me.LabelSpm57.Name = "LabelSpm57"
-        Me.LabelSpm57.Size = New System.Drawing.Size(642, 25)
+        Me.LabelSpm57.Size = New System.Drawing.Size(753, 25)
         Me.LabelSpm57.TabIndex = 133
         Me.LabelSpm57.Tag = "57"
         Me.LabelSpm57.Text = "spm57"
@@ -3620,9 +3610,9 @@ Partial Class egenSkjemaTempStorage
         'LabelSpm59
         '
         Me.LabelSpm59.BackColor = System.Drawing.Color.White
-        Me.LabelSpm59.Location = New System.Drawing.Point(3, 249)
+        Me.LabelSpm59.Location = New System.Drawing.Point(3, 252)
         Me.LabelSpm59.Name = "LabelSpm59"
-        Me.LabelSpm59.Size = New System.Drawing.Size(642, 25)
+        Me.LabelSpm59.Size = New System.Drawing.Size(753, 25)
         Me.LabelSpm59.TabIndex = 132
         Me.LabelSpm59.Tag = "59"
         Me.LabelSpm59.Text = "spm59"
@@ -3631,9 +3621,9 @@ Partial Class egenSkjemaTempStorage
         'LabelSpm51
         '
         Me.LabelSpm51.BackColor = System.Drawing.Color.White
-        Me.LabelSpm51.Location = New System.Drawing.Point(3, 49)
+        Me.LabelSpm51.Location = New System.Drawing.Point(3, 52)
         Me.LabelSpm51.Name = "LabelSpm51"
-        Me.LabelSpm51.Size = New System.Drawing.Size(642, 25)
+        Me.LabelSpm51.Size = New System.Drawing.Size(753, 25)
         Me.LabelSpm51.TabIndex = 131
         Me.LabelSpm51.Tag = "51"
         Me.LabelSpm51.Text = "spm51"
@@ -3642,9 +3632,9 @@ Partial Class egenSkjemaTempStorage
         'LabelSpm52
         '
         Me.LabelSpm52.BackColor = System.Drawing.Color.WhiteSmoke
-        Me.LabelSpm52.Location = New System.Drawing.Point(3, 74)
+        Me.LabelSpm52.Location = New System.Drawing.Point(3, 77)
         Me.LabelSpm52.Name = "LabelSpm52"
-        Me.LabelSpm52.Size = New System.Drawing.Size(642, 25)
+        Me.LabelSpm52.Size = New System.Drawing.Size(753, 25)
         Me.LabelSpm52.TabIndex = 130
         Me.LabelSpm52.Tag = "52"
         Me.LabelSpm52.Text = "spm52"
@@ -3653,9 +3643,9 @@ Partial Class egenSkjemaTempStorage
         'LabelSpm58
         '
         Me.LabelSpm58.BackColor = System.Drawing.Color.WhiteSmoke
-        Me.LabelSpm58.Location = New System.Drawing.Point(3, 224)
+        Me.LabelSpm58.Location = New System.Drawing.Point(3, 227)
         Me.LabelSpm58.Name = "LabelSpm58"
-        Me.LabelSpm58.Size = New System.Drawing.Size(642, 25)
+        Me.LabelSpm58.Size = New System.Drawing.Size(753, 25)
         Me.LabelSpm58.TabIndex = 129
         Me.LabelSpm58.Tag = "58"
         Me.LabelSpm58.Text = "spm58"
@@ -3664,9 +3654,9 @@ Partial Class egenSkjemaTempStorage
         'LabelSpm56
         '
         Me.LabelSpm56.BackColor = System.Drawing.Color.WhiteSmoke
-        Me.LabelSpm56.Location = New System.Drawing.Point(3, 174)
+        Me.LabelSpm56.Location = New System.Drawing.Point(3, 177)
         Me.LabelSpm56.Name = "LabelSpm56"
-        Me.LabelSpm56.Size = New System.Drawing.Size(642, 25)
+        Me.LabelSpm56.Size = New System.Drawing.Size(753, 25)
         Me.LabelSpm56.TabIndex = 128
         Me.LabelSpm56.Tag = "56"
         Me.LabelSpm56.Text = "spm56"
@@ -3675,9 +3665,9 @@ Partial Class egenSkjemaTempStorage
         'LabelSpm54
         '
         Me.LabelSpm54.BackColor = System.Drawing.Color.WhiteSmoke
-        Me.LabelSpm54.Location = New System.Drawing.Point(3, 124)
+        Me.LabelSpm54.Location = New System.Drawing.Point(3, 127)
         Me.LabelSpm54.Name = "LabelSpm54"
-        Me.LabelSpm54.Size = New System.Drawing.Size(642, 25)
+        Me.LabelSpm54.Size = New System.Drawing.Size(753, 25)
         Me.LabelSpm54.TabIndex = 127
         Me.LabelSpm54.Tag = "54"
         Me.LabelSpm54.Text = "spm54"
@@ -3686,9 +3676,9 @@ Partial Class egenSkjemaTempStorage
         'LabelSpm50
         '
         Me.LabelSpm50.BackColor = System.Drawing.Color.WhiteSmoke
-        Me.LabelSpm50.Location = New System.Drawing.Point(3, 24)
+        Me.LabelSpm50.Location = New System.Drawing.Point(3, 27)
         Me.LabelSpm50.Name = "LabelSpm50"
-        Me.LabelSpm50.Size = New System.Drawing.Size(642, 25)
+        Me.LabelSpm50.Size = New System.Drawing.Size(753, 25)
         Me.LabelSpm50.TabIndex = 126
         Me.LabelSpm50.Tag = "50"
         Me.LabelSpm50.Text = "spm50"
@@ -3706,7 +3696,7 @@ Partial Class egenSkjemaTempStorage
         '
         'TabPage10
         '
-        Me.TabPage10.Controls.Add(Me.Button1)
+        Me.TabPage10.Controls.Add(Me.ButtonSend)
         Me.TabPage10.Controls.Add(Me.CheckBoxSms)
         Me.TabPage10.Controls.Add(Me.CheckBoxEpost)
         Me.TabPage10.Controls.Add(Me.TextBoxEvt)
@@ -3718,14 +3708,14 @@ Partial Class egenSkjemaTempStorage
         Me.TabPage10.Text = "Side 9"
         Me.TabPage10.UseVisualStyleBackColor = True
         '
-        'Button1
+        'ButtonSend
         '
-        Me.Button1.Location = New System.Drawing.Point(477, 302)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 23)
-        Me.Button1.TabIndex = 9
-        Me.Button1.Text = "Button1"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.ButtonSend.Location = New System.Drawing.Point(14, 171)
+        Me.ButtonSend.Name = "ButtonSend"
+        Me.ButtonSend.Size = New System.Drawing.Size(105, 23)
+        Me.ButtonSend.TabIndex = 9
+        Me.ButtonSend.Text = "Send inn skjema"
+        Me.ButtonSend.UseVisualStyleBackColor = True
         '
         'CheckBoxSms
         '
@@ -3796,7 +3786,7 @@ Partial Class egenSkjemaTempStorage
         Me.LabelFeilMelding.Text = "Du må svare på alle spørsmål"
         Me.LabelFeilMelding.Visible = False
         '
-        'egenSkjemaTempStorage
+        'BrukerEgenskjema
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -3806,11 +3796,10 @@ Partial Class egenSkjemaTempStorage
         Me.Controls.Add(Me.ButtonForrige)
         Me.Controls.Add(Me.ButtonNeste)
         Me.Location = New System.Drawing.Point(100, 100)
-        Me.Name = "egenSkjemaTempStorage"
+        Me.Name = "BrukerEgenskjema"
         Me.Text = "egenSkjemaTempStorage"
         Me.TabControlEgenskjema.ResumeLayout(False)
         Me.TabPage1.ResumeLayout(False)
-        Me.TabPage1.PerformLayout()
         Me.TabPage2.ResumeLayout(False)
         Me.TabPage2.PerformLayout()
         Me.PanelSpm2.ResumeLayout(False)
@@ -4233,7 +4222,6 @@ Partial Class egenSkjemaTempStorage
     Friend WithEvents CheckBoxEpost As CheckBox
     Friend WithEvents TextBoxEvt As TextBox
     Friend WithEvents Label79 As Label
-    Friend WithEvents Button1 As Button
+    Friend WithEvents ButtonSend As Button
     Friend WithEvents Label1 As Label
-    Friend WithEvents Button2 As Button
 End Class
