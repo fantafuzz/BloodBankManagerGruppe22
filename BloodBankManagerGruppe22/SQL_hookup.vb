@@ -290,23 +290,42 @@ Public Class SQL_hookup
         End Try
         Return fornavn
     End Function
-
-    Public Function getKjonn(ByVal currentUser As Integer) As String
-        Dim kjonn As String = "Error"
+    Public Function getKjonn(ByVal currentuser As Integer) As String
+        Dim kjonn As String = "Hvis du ser dette, har noe galt hendt."
         Try
             connection.Open()
             Dim sqlGetKjonn As New MySqlCommand("SELECT kjonn FROM blodgiver WHERE blodgiver_bruker_id = @id", connection)
-            sqlGetKjonn.Parameters.AddWithValue("@id", currentUser)
+            sqlGetKjonn.Parameters.AddWithValue("@id", currentuser)
             Dim reader As MySqlDataReader = sqlGetKjonn.ExecuteReader
             If reader.HasRows Then
                 reader.Read()
                 kjonn = reader("kjonn")
             End If
-        Catch ex As Exception
+        Catch ex As MySqlException
             MsgBox(ex)
         Finally
             connection.Close()
         End Try
         Return kjonn
+    End Function
+
+    Public Function getByBlodgiverId(ByVal currentuser As Integer, ByVal what As String) As String
+        Dim returnstring As String = "Noe galt har skjedd"
+        Try
+            connection.Open()
+            Dim sqlGet As New MySqlCommand("SELECT @what FROM blodgiver WHERE blodgiver_bruker_id = @id")
+            sqlGet.Parameters.AddWithValue("@what", what)
+            sqlGet.Parameters.AddWithValue("@id", currentuser)
+            Dim reader As MySqlDataReader = sqlGet.ExecuteReader
+            If reader.HasRows Then
+                reader.Read()
+                returnstring = reader(what)
+            End If
+        Catch ex As MySqlException
+            MsgBox(ex)
+        Finally
+            connection.Close()
+        End Try
+        Return returnstring
     End Function
 End Class

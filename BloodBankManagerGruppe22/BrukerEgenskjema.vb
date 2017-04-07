@@ -76,7 +76,7 @@
                 For Each ctrl As Control In tab.Controls
                     If ctrl.GetType() Is GetType(System.Windows.Forms.Panel) Then 'Itererer gjennom hvert panel, og finner ut hvor mange unchecked radioknapper som finnes
                         Dim uncheckedRadios = From radio In ctrl.Controls.OfType(Of RadioButton)()
-                                              Where Not radio.Checked
+                                              Where Not radio.Checked And radio.Enabled
                                               Select radio.Name
                         Dim anyUnchecked As Integer = uncheckedRadios.Count
                         If anyUnchecked > 1 Then ' Om det er mere enn 1 unchecked radioknapp (1 unchecked er bra, 2 er dårlig)
@@ -94,7 +94,7 @@
                 For Each ctrl As Control In tab.Controls
                     If ctrl.GetType() Is GetType(System.Windows.Forms.Label) Then 'Itererer gjennom hver label, og ser om tag-en til label er i error-listen
                         If errors.Contains(ctrl.Tag) Then
-                            Select Case ctrl.Tag Mod 2 'Setter fargen til alle labels som har en tag i error-listen til enten litt eller litt mere rød.
+                            Select Case ctrl.Tag Mod 2
                                 Case 1
                                     ctrl.BackColor = Color.FromArgb(255, 200, 200)
                                 Case 0
@@ -107,6 +107,23 @@
         Next
         Return anyError 'Returnerer true om det er funnet et spørsmål som ikke er svart på.
     End Function
+    Private Sub kjonnCheck()
+        Dim kjonn As String = sql.getKjonn(Logginn.currentuser)
+        Select Case kjonn
+            Case "Mann"
+                RadioButton64.Enabled = False
+                RadioButton63.Enabled = False
+                RadioButton60.Enabled = False
+                RadioButton59.Enabled = False
+                RadioButton65.Enabled = False
+                RadioButton66.Enabled = False
+                RadioButton61.Enabled = False
+                RadioButton62.Enabled = False
+            Case "Kvinne"
+                RadioButton67.Enabled = False
+                RadioButton68.Enabled = False
+        End Select
+    End Sub
     Private Sub changeToDefault(ByVal tag As Integer) ' Endrer fargene tilbake til white og whitesmoke når du svarer.
         For Each tab As TabPage In TabControlEgenskjema.TabPages
             For Each ctrl As Control In tab.Controls
@@ -123,7 +140,6 @@
             Next
         Next
     End Sub
-
     Private Sub sendInn()
         Dim tillatSms As Integer = 0
         If CheckBoxSms.Checked Then
@@ -135,33 +151,34 @@
         End If
         Dim evt As String = TextBoxEvt.Text
         Dim svarArray As New Hashtable()
-        Dim finalArray As New Hashtable() 'Bruker to tabeller, en for å hente svarene, og en for å skrive de om til 0 eller 1
+        Dim finalArray As New Hashtable()
         For Each tab As TabPage In TabControlEgenskjema.TabPages
             For Each ctrl As Control In tab.Controls
                 If ctrl.GetType Is GetType(Panel) Then
                     Dim checkedRadios = From radio In ctrl.Controls.OfType(Of RadioButton)()
                                         Where radio.Checked
-                                        Select radio.Location.X, radio.Tag 'Finner hver eneste valgte radioknapp. Siden hvert spørsmål sine radioknapper er grupperte, 
+                                        Select radio.Location.X, radio.Tag
                     For Each item In checkedRadios
-                        svarArray.Add(item.Tag, item.X.ToString) 'Bruker taggen til radioknappen som key i arrayet, og x-kordinaten til knappen som value
+                        svarArray.Add(item.Tag, item.X.ToString)
                     Next
                 End If
             Next
         Next
-        For i = 1 To 59 Step 1 'Denne gudsforlatte loopen er grusom, men den gjør jobben. Den ser hva valuen til hver entry i svarArray er, og om den er 0, legger den inn 1, om value er 52, legger den inn 0. Dette er fordi vi bruker x-posisjonen til radioknappene for å bestemme om det er ja eller nei brukeren har svart.
-            If svarArray(CStr(i)) = 0 Then
+        For i = 1 To 59 Step 1
+            If svarArray.ContainsKey(CStr(i)) = False Then
+                finalArray.Add(i, -1)
+            ElseIf svarArray(CStr(i)) = 0 Then
                 finalArray.Add(i, 1)
             ElseIf svarArray(CStr(i)) = 52 Then
                 finalArray.Add(i, 0)
             Else
-                finalArray.Add(i, -1) 'En feilmelding om noe har skjedd feil med x-posisjonen til en av knappene.
+                finalArray.Add(i, -1)
             End If
         Next
         finalArray.Add(60, tillatEpost)
-        finalArray.Add(61, tillatSms) 'Det unødvendig å sortere et hashtable, men denne biten henger igjen fra alle forsøkene på å få det til å funke.
+        finalArray.Add(61, tillatSms)
         sql.SendSvar(Logginn.currentuser, finalArray, evt)
     End Sub
-
     Private Sub endreForKjonn()
         Dim kjonn As String = sql.getKjonn(Logginn.currentuser)
         Select Case kjonn.ToLower
