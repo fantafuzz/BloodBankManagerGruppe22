@@ -4,6 +4,8 @@ Public Class mottaBestillinger
     Dim MysqlConn As MySqlConnection
     Dim COMMAND As MySqlCommand
     Private Sub mottaBestillinger_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+        'Her deklareres tilkoblingen til vår database gruppe 22.
         MysqlConn = New MySqlConnection
         MysqlConn.ConnectionString =
             "Server=mysql.stud.iie.ntnu.no;Database=g_oops_22;Uid=g_oops_22;Pwd=BtUDpVoR"
@@ -11,6 +13,8 @@ Public Class mottaBestillinger
 
         FilterData("")
 
+
+        'Her vil vi forme om størrelsen på de ulike kolonnene i datagridview funksjonen.
         Dim column As DataGridViewColumn = motta_bestillinger_grid.Columns(0)
         column.Width = 150
 

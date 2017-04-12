@@ -1,4 +1,5 @@
 ﻿Public Class BrukerEgenskjema
+    'her har vi deklarert alle egenskjema spørsmålene i en class som kalles for BrukerEgenskjema.
     Dim spm1 As New Sporsmaal("Har du fått informasjon om blodgivning?", "1_1")
     Dim spm2 As New Sporsmaal("Føler du deg frisk nå?", "1_2")
     Dim spm3 As New Sporsmaal("Hvis du har gitt blod tidligere, har du vært frisk i perioden fra forrige blodgivning og til nå?", "1_3")

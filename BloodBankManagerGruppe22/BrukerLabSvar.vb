@@ -18,6 +18,8 @@ Public Class BrukerLabSvar
     'End Function
 
     Private Sub labSvar_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+        'dette er en form hvor vi mottar lab svar fra databasen vår fra MySQL direkte inn til datagridview som vi har satt i form brukerlabsvar.
         MysqlConn = New MySqlConnection
         MysqlConn.ConnectionString = "server=mysql.stud.iie.ntnu.no; database=g_oops_22; Uid=g_oops_22; password=BtUDpVoR"
         Dim READER As MySqlDataReader

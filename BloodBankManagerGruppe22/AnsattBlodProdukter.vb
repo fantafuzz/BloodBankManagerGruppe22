@@ -1,7 +1,7 @@
 ﻿Imports MySql.Data.MySqlClient
 Public Class AnsattBlodProdukter
-    Dim MysqlConn As MySqlConnection
-    Dim COMMAND As MySqlCommand
+    Public MysqlConn As MySqlConnection
+    Public COMMAND As MySqlCommand
 
     Private Sub Statistikk_Click(sender As Object, e As EventArgs) Handles Button_Tilbake_AnsattMinSide.Click
         Me.Close()

@@ -4,6 +4,7 @@ Public Class BrukerBestill
     Dim COMMAND As MySqlCommand
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button_bestill_ny_time_blod_bruker_blodgiver.Click
 
+        'under deklarer vi tilkoblingen til databasen vår til MySQL.
 
         Dim selectedDate As Date = MonthCalendar1.Text
 
@@ -17,16 +18,10 @@ Public Class BrukerBestill
         Try
             MysqlConn.Open()
             Dim Query As String
+            'under legger vi inn month calender verdien som blir valgt inn i databasen vår ved hjelp av SQL Syntax.
             Query = "insert into g_oops_22.test(test1,test2) values (1, '" & MonthCalendar1.SelectionStart.Date.ToString("yyyy-MM-dd") & "')"
             COMMAND = New MySqlCommand(Query, MysqlConn)
             READER = COMMAND.ExecuteReader
-
-            If MonthCalendar1.Text > 3 Then
-                MessageBox.Show("Du kan ikke gi blod før 3 måneder har passert fra siste blodgivning.")
-            Else
-                MessageBox.Show("Ny time er bestilt.")
-                MessageBox.Show("Tusen Takk for din interesse til blod donasjon. Vi i blodbanken setter stor pris på ditt bidrag og håper du forsetter med det!")
-            End If
 
 
 
@@ -42,6 +37,8 @@ Public Class BrukerBestill
     End Sub
 
     Private Sub kalender_bestilling_blodgiver_tilbake__Click(sender As Object, e As EventArgs) Handles kalender_bestilling_blodgiver_tilbake_.Click
+
+        'her kan man navigere seg tilbake til minside for brukere. Og da blir automatisk kalender bestilling blodgiver formen avsluttet.
         BrukerMinSide.Show()
         Me.Close()
     End Sub

@@ -84,6 +84,14 @@ Public Class Registrering
             CheckBoxPrevGet.Enabled = True
         End If
     End Sub
+
+    Private Sub Panel4_Paint(sender As Object, e As PaintEventArgs) Handles Panel4.Paint
+
+    End Sub
+
+    Private Sub Registrering_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+    End Sub
 End Class
 
 

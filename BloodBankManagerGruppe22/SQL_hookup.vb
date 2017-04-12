@@ -1,6 +1,8 @@
 ﻿Imports MySql.Data.MySqlClient
 'This class is used for all SQL-interaction.
 'Spørsmål? Skal vi bruke en "public" versjon av denne, som vi lager i form1? Eller skal vi konstruere en egen i hver?
+
+'Dette er en klasse for all SQL tilkobling. Vi har valgt å ha en klasse for SQL tilkobling siden det gir en god oversikt for alle sql deklareringer istedenfor å deklarere hver og en sql syntax i hver og en form.
 Public Class SQL_hookup
     Private salt As String = "detteErEnVeldigLangHashSomGjorAtVaarePassordBlirMyeSikrere"
     Private username As String = "g_oops_22"

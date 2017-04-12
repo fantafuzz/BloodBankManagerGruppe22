@@ -26,20 +26,29 @@ Public Class BrukerMinSide
     End Sub
 
     Private Sub MINSIDENAVIGASJON_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+
         Dim navn As String = sql.getNavn(Logginn.currentuser)
         LabelOverskrift.Text = "Velkommen " & navn & "!"
     End Sub
 
     Private Sub Hvor_Mye_Blod_Har_jeg_gitt_til_blodbanken_Click(sender As Object, e As EventArgs)
         AnsattStatistikkNy.Show()
+        Me.Hide()
+
+        'ansatt statistikk form blir vist fram. Minside blir avsluttet.
     End Sub
 
     Private Sub Button1_Click_1(sender As Object, e As EventArgs) Handles Button1.Click
         Me.Hide()
         BrukerEgenskjema.Show()
+        'Brukeregenskjema formen blir vist fram. Minside bruker blir avsluttet.
+
     End Sub
 
     Private Sub Button2_Click_1(sender As Object, e As EventArgs) Handles Button2.Click
+
+        'Helsesjekkblodgiver formen blir vist fram. Minside bruker blir avsluttet.
         helseSjekkBlodgiver.Show()
         Me.Hide()
     End Sub
