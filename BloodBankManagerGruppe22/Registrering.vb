@@ -66,7 +66,7 @@ Public Class Registrering
 
         sql.registrerNy(fornavn, etternavn, epost, passord, fodselsdato, personnummer, adresse, postnummer, poststed, telefonnummerEn, telefonnummerTo, kjonn, blodtype, blodgivningLokasjon, blodBefore, hvilkenBlodbank, samtykke, infoRodekors)
 
-        egenSkjemaTempStorage.Show()
+        'egenSkjemaTempStorage.Show()
         Me.Close()
     End Sub
 
