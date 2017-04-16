@@ -31,7 +31,7 @@ Public Class AnsattInkalling
 
 
 
-        'Dim searchQuery As String = "SELECT bruker.bruker_id, bruker.fornavn, bruker.etternavn, bruker.epost, blodgiver.personnummer FROM bruker, blodgiver WHERE bruker.bruker_id = blodgiver.blodgiver_bruker_id AND CONCAT(bruker_id,fornavn, etternavn, epost) like '%" & valueToSearch & "%';"
+        'sql syntax feil
         Dim searchQuery As String = "Select * from bruker"
         Dim command As New MySqlCommand(searchQuery, MysqlConn)
         Dim adapter As New MySqlDataAdapter(command)
@@ -93,4 +93,8 @@ Public Class AnsattInkalling
 
     End Sub
 
+    Private Sub ButtonTilbake_Click(sender As Object, e As EventArgs) Handles ButtonTilbake.Click
+        AnsattNavigasjon.Show()
+        Me.Hide()
+    End Sub
 End Class

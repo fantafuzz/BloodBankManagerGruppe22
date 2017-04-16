@@ -85,6 +85,8 @@ Public Class AnsattTapping
         End Try
     End Sub
 
-
-
+    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button_Ansatt_Tilbake_fra_BlodtappingAnsatt_.Click
+        AnsattNavigasjon.Show()
+        Me.Hide()
+    End Sub
 End Class

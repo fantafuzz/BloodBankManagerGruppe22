@@ -34,9 +34,9 @@ Partial Class AnsattInkalling
         'ButtonTilbake
         '
         Me.ButtonTilbake.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ButtonTilbake.Location = New System.Drawing.Point(814, 574)
+        Me.ButtonTilbake.Location = New System.Drawing.Point(760, 625)
         Me.ButtonTilbake.Name = "ButtonTilbake"
-        Me.ButtonTilbake.Size = New System.Drawing.Size(85, 34)
+        Me.ButtonTilbake.Size = New System.Drawing.Size(140, 40)
         Me.ButtonTilbake.TabIndex = 25
         Me.ButtonTilbake.Text = "Tilbake"
         Me.ButtonTilbake.UseVisualStyleBackColor = True

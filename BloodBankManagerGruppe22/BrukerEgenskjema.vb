@@ -206,6 +206,8 @@
     End Sub
 
     Private Sub egenSkjemaTempStorage_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        'side 3 spm 15 //feil skriftstørrelse, får ikke vist hele spørsmål
+
         For i = 1 To 59
             changeToDefault(i)
         Next

@@ -36,7 +36,7 @@ Public Class AnsattHelseSjekk
         'her kan man navigere seg tilbake til navigasjonform ansatte
     End Sub
 
-    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+    Private Sub Button3_Click(sender As Object, e As EventArgs) 
         Logginn.Show()
         Me.Close()
         'her kan man logge ut av ansatthelsesjekk

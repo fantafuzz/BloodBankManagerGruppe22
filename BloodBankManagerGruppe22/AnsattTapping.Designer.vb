@@ -27,6 +27,7 @@ Partial Class AnsattTapping
         Me.Button2 = New System.Windows.Forms.Button()
         Me.GridBruker = New System.Windows.Forms.DataGridView()
         Me.CheckBox1 = New System.Windows.Forms.CheckBox()
+        Me.Button_Ansatt_Tilbake_fra_BlodtappingAnsatt_ = New System.Windows.Forms.Button()
         CType(Me.GridBruker, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -53,7 +54,7 @@ Partial Class AnsattTapping
         'Button2
         '
         Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button2.Location = New System.Drawing.Point(15, 480)
+        Me.Button2.Location = New System.Drawing.Point(15, 498)
         Me.Button2.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(344, 62)
@@ -68,7 +69,7 @@ Partial Class AnsattTapping
         Me.GridBruker.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.GridBruker.Name = "GridBruker"
         Me.GridBruker.RowTemplate.Height = 33
-        Me.GridBruker.Size = New System.Drawing.Size(756, 366)
+        Me.GridBruker.Size = New System.Drawing.Size(828, 366)
         Me.GridBruker.TabIndex = 7
         '
         'CheckBox1
@@ -78,17 +79,29 @@ Partial Class AnsattTapping
         Me.CheckBox1.Location = New System.Drawing.Point(15, 428)
         Me.CheckBox1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.CheckBox1.Name = "CheckBox1"
-        Me.CheckBox1.Size = New System.Drawing.Size(171, 33)
+        Me.CheckBox1.Size = New System.Drawing.Size(137, 28)
         Me.CheckBox1.TabIndex = 8
         Me.CheckBox1.Text = "400 ml blod"
         Me.CheckBox1.UseVisualStyleBackColor = True
         '
+        'Button_Ansatt_Tilbake_fra_BlodtappingAnsatt_
+        '
+        Me.Button_Ansatt_Tilbake_fra_BlodtappingAnsatt_.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button_Ansatt_Tilbake_fra_BlodtappingAnsatt_.Location = New System.Drawing.Point(694, 498)
+        Me.Button_Ansatt_Tilbake_fra_BlodtappingAnsatt_.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.Button_Ansatt_Tilbake_fra_BlodtappingAnsatt_.Name = "Button_Ansatt_Tilbake_fra_BlodtappingAnsatt_"
+        Me.Button_Ansatt_Tilbake_fra_BlodtappingAnsatt_.Size = New System.Drawing.Size(149, 62)
+        Me.Button_Ansatt_Tilbake_fra_BlodtappingAnsatt_.TabIndex = 9
+        Me.Button_Ansatt_Tilbake_fra_BlodtappingAnsatt_.Text = "Tilbake"
+        Me.Button_Ansatt_Tilbake_fra_BlodtappingAnsatt_.UseVisualStyleBackColor = True
+        '
         'AnsattTapping
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(855, 571)
+        Me.Controls.Add(Me.Button_Ansatt_Tilbake_fra_BlodtappingAnsatt_)
         Me.Controls.Add(Me.CheckBox1)
         Me.Controls.Add(Me.GridBruker)
         Me.Controls.Add(Me.Button2)
@@ -110,4 +123,5 @@ Partial Class AnsattTapping
     Friend WithEvents Button2 As Button
     Friend WithEvents GridBruker As DataGridView
     Friend WithEvents CheckBox1 As CheckBox
+    Friend WithEvents Button_Ansatt_Tilbake_fra_BlodtappingAnsatt_ As Button
 End Class

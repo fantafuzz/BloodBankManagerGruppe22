@@ -3710,9 +3710,10 @@ Partial Class BrukerEgenskjema
         '
         'ButtonSend
         '
+        Me.ButtonSend.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ButtonSend.Location = New System.Drawing.Point(14, 171)
         Me.ButtonSend.Name = "ButtonSend"
-        Me.ButtonSend.Size = New System.Drawing.Size(105, 23)
+        Me.ButtonSend.Size = New System.Drawing.Size(324, 42)
         Me.ButtonSend.TabIndex = 9
         Me.ButtonSend.Text = "Send inn skjema"
         Me.ButtonSend.UseVisualStyleBackColor = True

@@ -7,22 +7,6 @@ Public Class Logginn
     Public currentuserType As Integer = -1
     Dim sql As New SQL_hookup("g_oops_22", "BtUDpVoR", "g_oops_22", "mysql.stud.iie.ntnu.no") 'Tilkobling til vår gruppe 22 database
 
-    Private Sub ButtonLogInn_Click(sender As Object, e As EventArgs)
-        Dim sjekkLog As Tuple(Of Integer, String) = sql.logInnSql(TextBoxEpost.Text, TextBoxPassword.Text, "bruker")
-        currentuser = sjekkLog.Item1
-
-
-        If currentuser = -1 Then
-            MsgBox("Feil brukernavn eller passord", MsgBoxStyle.Critical, MsgBoxStyle.OkOnly)
-        Else
-
-            BrukerMinSide.Show()
-            Me.Hide()
-        End If
-
-
-    End Sub
-
 
 
     Private Sub ButtonRegistrer_Click(sender As Object, e As EventArgs)
@@ -73,18 +57,7 @@ Kriteriene for utvelgelse av blodgivere og en rekke av de laboratorieundersøkel
         'Her har vi brukt Menustrip i toolbox, ved hjelp av dette når brukeren klikker på den aktuelle delmenyen skal det vises ulike informasjoner.
     End Sub
 
-    Private Sub ButtonLogInnAnsatt_Click(sender As Object, e As EventArgs)
-        Dim sjekkLog As Tuple(Of Integer, String) = sql.logInnSql(TextBoxEpost.Text, TextBoxPassword.Text, "ansatt")
-        currentuser = sjekkLog.Item1
-        currentuserType = CInt(sjekkLog.Item2)
-        If currentuser = -1 Then
-            MsgBox("Feil brukernavn eller passord", MsgBoxStyle.Critical, MsgBoxStyle.OkOnly)
-        Else
 
-            AnsattNavigasjon.Show()
-            Me.Hide()
-        End If
-    End Sub
 
     Private Sub Button3_Click(sender As Object, e As EventArgs)
         BrukerMinSide.Show()
@@ -164,10 +137,6 @@ www.stolav.no/blodgiver
     Private Sub Button4_Click_1(sender As Object, e As EventArgs) Handles Button4.Click
         BrukerMinSide.Show()
     End Sub
-
-    'Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Button5.Click
-    '    egenSkjemaBolk1.Show()
-    'End Sub
 
     Private Sub HvaSkjerNårDuGirBlodToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles HvaSkjerNårDuGirBlodToolStripMenuItem.Click
         hvaSkjerNårDuGirBlod.Show()
@@ -282,20 +251,43 @@ Telefon  72 57 31 00 eller 72 57 31 05")
         'her har vi valgt å koble den aktuelle sosial media knappen til blodbankens sosiale medier 
     End Sub
 
-    Private Sub Panel2_Paint(sender As Object, e As PaintEventArgs)
-
-    End Sub
-
-    Private Sub Panel1_Paint(sender As Object, e As PaintEventArgs)
-
-    End Sub
-
-    Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Button5.Click
-
-    End Sub
 
     Private Sub ButtonRegistrer_Click_1(sender As Object, e As EventArgs)
         Registrering.Show()
+    End Sub
+
+    Private Sub ButtonRegistrer_Click_2(sender As Object, e As EventArgs) Handles ButtonRegistrer.Click
+        Registrering.Show()
+        Me.Hide()
+    End Sub
+
+    Private Sub ButtonLogInn_Click_1(sender As Object, e As EventArgs) Handles ButtonLogInn.Click
+        Dim sjekkLog As Tuple(Of Integer, String) = sql.logInnSql(TextBoxEpost.Text, TextBoxPassword.Text, "bruker")
+        currentuser = sjekkLog.Item1
+
+
+        If currentuser = -1 Then
+            MsgBox("Feil brukernavn eller passord", MsgBoxStyle.Critical, MsgBoxStyle.OkOnly)
+        Else
+
+            BrukerMinSide.Show()
+            Me.Hide()
+        End If
+
+
+    End Sub
+
+    Private Sub ButtonLogInnAnsatt_Click_1(sender As Object, e As EventArgs) Handles ButtonLogInnAnsatt.Click
+        Dim sjekkLog As Tuple(Of Integer, String) = sql.logInnSql(TextBoxEpost.Text, TextBoxPassword.Text, "ansatt")
+        currentuser = sjekkLog.Item1
+        currentuserType = CInt(sjekkLog.Item2)
+        If currentuser = -1 Then
+            MsgBox("Feil brukernavn eller passord", MsgBoxStyle.Critical, MsgBoxStyle.OkOnly)
+        Else
+
+            AnsattNavigasjon.Show()
+            Me.Hide()
+        End If
     End Sub
 End Class
 

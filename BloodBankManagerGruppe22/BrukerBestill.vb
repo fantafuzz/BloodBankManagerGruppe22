@@ -6,8 +6,10 @@ Public Class BrukerBestill
 
         'under deklarer vi tilkoblingen til databasen vår til MySQL.
 
-        Dim selectedDate As Date = MonthCalendar1.Text
 
+
+
+        'vi må fikse sql syntaxen under
 
 
         MysqlConn = New MySqlConnection
@@ -19,7 +21,7 @@ Public Class BrukerBestill
             MysqlConn.Open()
             Dim Query As String
             'under legger vi inn month calender verdien som blir valgt inn i databasen vår ved hjelp av SQL Syntax.
-            Query = "insert into g_oops_22.test(test1,test2) values (1, '" & MonthCalendar1.SelectionStart.Date.ToString("yyyy-MM-dd") & "')"
+            Query = "insert into g_oops_22.time_bestilling(bestilling_id,dato) values (1, '" & MonthCalendar1.SelectionStart.Date.ToString("yyyy-MM-dd") & "')"
             COMMAND = New MySqlCommand(Query, MysqlConn)
             READER = COMMAND.ExecuteReader
 
@@ -43,7 +45,4 @@ Public Class BrukerBestill
         Me.Close()
     End Sub
 
-    Private Sub BrukerBestill_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
-    End Sub
 End Class
