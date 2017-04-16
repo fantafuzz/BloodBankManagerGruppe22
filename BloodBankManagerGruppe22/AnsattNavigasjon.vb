@@ -57,5 +57,7 @@
         'her viderekobler man seg til ansatt helsesjekk form og avslutter ansatt navigasjon form
     End Sub
 
+    Private Sub AnsattNavigasjon_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
+    End Sub
 End Class
