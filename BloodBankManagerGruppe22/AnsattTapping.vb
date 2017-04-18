@@ -62,7 +62,6 @@ Public Class AnsattTapping
 
     Public Sub SendSvar(ByVal bruker As Integer)
         Dim currDate As Date = Date.Now
-        Dim currDateString As String = currDate.ToString("YYYY-mm-dd")
         Try
             MysqlConn.Open()
 

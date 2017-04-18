@@ -34,7 +34,7 @@ Partial Class AnsattInkalling
         'ButtonTilbake
         '
         Me.ButtonTilbake.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ButtonTilbake.Location = New System.Drawing.Point(760, 625)
+        Me.ButtonTilbake.Location = New System.Drawing.Point(632, 509)
         Me.ButtonTilbake.Name = "ButtonTilbake"
         Me.ButtonTilbake.Size = New System.Drawing.Size(140, 40)
         Me.ButtonTilbake.TabIndex = 25
@@ -48,13 +48,13 @@ Partial Class AnsattInkalling
         Me.GridBrukere.Margin = New System.Windows.Forms.Padding(2)
         Me.GridBrukere.Name = "GridBrukere"
         Me.GridBrukere.RowTemplate.Height = 24
-        Me.GridBrukere.Size = New System.Drawing.Size(888, 429)
+        Me.GridBrukere.Size = New System.Drawing.Size(760, 336)
         Me.GridBrukere.TabIndex = 30
         '
         'Button4
         '
         Me.Button4.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button4.Location = New System.Drawing.Point(1128, 122)
+        Me.Button4.Location = New System.Drawing.Point(391, 436)
         Me.Button4.Name = "Button4"
         Me.Button4.Size = New System.Drawing.Size(85, 34)
         Me.Button4.TabIndex = 33
@@ -73,7 +73,7 @@ Partial Class AnsattInkalling
         '
         'MonthCalendar1
         '
-        Me.MonthCalendar1.Location = New System.Drawing.Point(12, 451)
+        Me.MonthCalendar1.Location = New System.Drawing.Point(18, 358)
         Me.MonthCalendar1.Name = "MonthCalendar1"
         Me.MonthCalendar1.TabIndex = 40
         '
@@ -82,7 +82,7 @@ Partial Class AnsattInkalling
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(932, 692)
+        Me.ClientSize = New System.Drawing.Size(784, 561)
         Me.Controls.Add(Me.MonthCalendar1)
         Me.Controls.Add(Me.ButtonInnkall)
         Me.Controls.Add(Me.Button4)

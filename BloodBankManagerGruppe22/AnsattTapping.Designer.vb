@@ -54,7 +54,7 @@ Partial Class AnsattTapping
         'Button2
         '
         Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button2.Location = New System.Drawing.Point(15, 498)
+        Me.Button2.Location = New System.Drawing.Point(12, 488)
         Me.Button2.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(344, 62)
@@ -69,7 +69,7 @@ Partial Class AnsattTapping
         Me.GridBruker.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.GridBruker.Name = "GridBruker"
         Me.GridBruker.RowTemplate.Height = 33
-        Me.GridBruker.Size = New System.Drawing.Size(828, 366)
+        Me.GridBruker.Size = New System.Drawing.Size(757, 366)
         Me.GridBruker.TabIndex = 7
         '
         'CheckBox1
@@ -87,7 +87,7 @@ Partial Class AnsattTapping
         'Button_Ansatt_Tilbake_fra_BlodtappingAnsatt_
         '
         Me.Button_Ansatt_Tilbake_fra_BlodtappingAnsatt_.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button_Ansatt_Tilbake_fra_BlodtappingAnsatt_.Location = New System.Drawing.Point(694, 498)
+        Me.Button_Ansatt_Tilbake_fra_BlodtappingAnsatt_.Location = New System.Drawing.Point(623, 488)
         Me.Button_Ansatt_Tilbake_fra_BlodtappingAnsatt_.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Button_Ansatt_Tilbake_fra_BlodtappingAnsatt_.Name = "Button_Ansatt_Tilbake_fra_BlodtappingAnsatt_"
         Me.Button_Ansatt_Tilbake_fra_BlodtappingAnsatt_.Size = New System.Drawing.Size(149, 62)
@@ -100,7 +100,7 @@ Partial Class AnsattTapping
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(855, 571)
+        Me.ClientSize = New System.Drawing.Size(784, 561)
         Me.Controls.Add(Me.Button_Ansatt_Tilbake_fra_BlodtappingAnsatt_)
         Me.Controls.Add(Me.CheckBox1)
         Me.Controls.Add(Me.GridBruker)
