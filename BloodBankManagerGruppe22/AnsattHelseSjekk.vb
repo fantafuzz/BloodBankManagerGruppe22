@@ -26,7 +26,23 @@ Public Class AnsattHelseSjekk
 
         DataGridView1.DataSource = table
 
-        'I denne koden henter vi ut database verdier med SQL Syntax fra databasen vår
+        'I denne koden ovenfor henter vi ut database verdier med SQL Syntax fra databasen vår
+
+
+
+        Dim column As DataGridViewColumn = DataGridView1.Columns(0)
+        column.Width = 160
+
+        Dim column1 As DataGridViewColumn = DataGridView1.Columns(1)
+        column1.Width = 160
+
+        Dim column2 As DataGridViewColumn = DataGridView1.Columns(2)
+        column2.Width = 160
+
+        Dim column3 As DataGridViewColumn = DataGridView1.Columns(3)
+        column3.Width = 250
+
+
     End Sub
 
     Private Sub Logg_ut_Click(sender As Object, e As EventArgs) Handles Logg_ut.Click

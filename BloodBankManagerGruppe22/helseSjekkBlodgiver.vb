@@ -10,6 +10,9 @@ Public Class helseSjekkBlodgiver
 
         FilterData("")
 
+
+
+
     End Sub
 
     Public Sub FilterData(valueToSearch As String)
@@ -22,6 +25,18 @@ Public Class helseSjekkBlodgiver
         adapter.Fill(table)
 
         DataGridView1.DataSource = table
+
+        Dim column As DataGridViewColumn = DataGridView1.Columns(0)
+        column.Width = 160
+
+        Dim column1 As DataGridViewColumn = DataGridView1.Columns(1)
+        column1.Width = 160
+
+        Dim column2 As DataGridViewColumn = DataGridView1.Columns(2)
+        column2.Width = 160
+
+        Dim column3 As DataGridViewColumn = DataGridView1.Columns(3)
+        column3.Width = 250
     End Sub
 
     Private Sub HvaErHemoglobinToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles HvaErHemoglobinToolStripMenuItem.Click

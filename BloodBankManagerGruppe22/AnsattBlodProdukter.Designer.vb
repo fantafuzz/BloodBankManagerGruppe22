@@ -56,7 +56,7 @@ Partial Class AnsattBlodProdukter
         'Button_utlevering_av_blodprodukter
         '
         Me.Button_utlevering_av_blodprodukter.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button_utlevering_av_blodprodukter.Location = New System.Drawing.Point(16, 522)
+        Me.Button_utlevering_av_blodprodukter.Location = New System.Drawing.Point(16, 519)
         Me.Button_utlevering_av_blodprodukter.Margin = New System.Windows.Forms.Padding(2)
         Me.Button_utlevering_av_blodprodukter.Name = "Button_utlevering_av_blodprodukter"
         Me.Button_utlevering_av_blodprodukter.Size = New System.Drawing.Size(260, 60)
@@ -75,7 +75,7 @@ Partial Class AnsattBlodProdukter
         '
         'TextBox_mengde_blod
         '
-        Me.TextBox_mengde_blod.Location = New System.Drawing.Point(16, 471)
+        Me.TextBox_mengde_blod.Location = New System.Drawing.Point(16, 469)
         Me.TextBox_mengde_blod.Margin = New System.Windows.Forms.Padding(2)
         Me.TextBox_mengde_blod.Multiline = True
         Me.TextBox_mengde_blod.Name = "TextBox_mengde_blod"
@@ -86,7 +86,7 @@ Partial Class AnsattBlodProdukter
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Georgia", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(12, 436)
+        Me.Label2.Location = New System.Drawing.Point(13, 436)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(213, 18)
         Me.Label2.TabIndex = 50
