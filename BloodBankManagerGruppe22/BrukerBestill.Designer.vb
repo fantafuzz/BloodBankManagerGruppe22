@@ -32,7 +32,7 @@ Partial Class BrukerBestill
         'Button_bestill_ny_time_blod_bruker_blodgiver
         '
         Me.Button_bestill_ny_time_blod_bruker_blodgiver.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button_bestill_ny_time_blod_bruker_blodgiver.Location = New System.Drawing.Point(18, 526)
+        Me.Button_bestill_ny_time_blod_bruker_blodgiver.Location = New System.Drawing.Point(18, 535)
         Me.Button_bestill_ny_time_blod_bruker_blodgiver.Name = "Button_bestill_ny_time_blod_bruker_blodgiver"
         Me.Button_bestill_ny_time_blod_bruker_blodgiver.Size = New System.Drawing.Size(376, 56)
         Me.Button_bestill_ny_time_blod_bruker_blodgiver.TabIndex = 29
@@ -59,7 +59,7 @@ Partial Class BrukerBestill
         'kalender_bestilling_blodgiver_tilbake_
         '
         Me.kalender_bestilling_blodgiver_tilbake_.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.kalender_bestilling_blodgiver_tilbake_.Location = New System.Drawing.Point(1064, 682)
+        Me.kalender_bestilling_blodgiver_tilbake_.Location = New System.Drawing.Point(888, 621)
         Me.kalender_bestilling_blodgiver_tilbake_.Name = "kalender_bestilling_blodgiver_tilbake_"
         Me.kalender_bestilling_blodgiver_tilbake_.Size = New System.Drawing.Size(138, 31)
         Me.kalender_bestilling_blodgiver_tilbake_.TabIndex = 33
@@ -71,7 +71,7 @@ Partial Class BrukerBestill
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 14.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(1214, 754)
+        Me.ClientSize = New System.Drawing.Size(1038, 664)
         Me.Controls.Add(Me.kalender_bestilling_blodgiver_tilbake_)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.MonthCalendar1)
