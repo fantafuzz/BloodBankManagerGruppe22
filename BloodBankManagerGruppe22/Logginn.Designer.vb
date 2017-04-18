@@ -60,6 +60,7 @@ Partial Class Logginn
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.ButtonRegistrer = New System.Windows.Forms.Button()
+        Me.ToolTip5 = New System.Windows.Forms.ToolTip(Me.components)
         Me.MenuStrip1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -255,6 +256,7 @@ Partial Class Logginn
         Me.PictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.PictureBox6.TabIndex = 39
         Me.PictureBox6.TabStop = False
+        Me.ToolTip5.SetToolTip(Me.PictureBox6, "Klikk her for å komme til St.Olavs Hospitals hjemmeside")
         '
         'ToolTip1
         '
@@ -467,4 +469,5 @@ Partial Class Logginn
     Friend WithEvents Label1 As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents ButtonRegistrer As Button
+    Friend WithEvents ToolTip5 As ToolTip
 End Class

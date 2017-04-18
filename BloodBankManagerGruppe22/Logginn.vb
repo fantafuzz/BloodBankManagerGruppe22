@@ -289,6 +289,10 @@ Telefon  72 57 31 00 eller 72 57 31 05")
             Me.Hide()
         End If
     End Sub
+
+    Private Sub PictureBox6_Click(sender As Object, e As EventArgs) Handles PictureBox6.Click
+        Process.Start("https://stolav.no/")
+    End Sub
 End Class
 
 

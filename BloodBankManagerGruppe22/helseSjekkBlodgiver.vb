@@ -46,7 +46,7 @@ Frisk frukt, appelsin og kiwi
 Jernholdig kost er ikke tilstrekkelig for alle blodgivere. Ved behov får man jerntabletter ved blodbanken.")
     End Sub
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) 
+    Private Sub Button1_Click(sender As Object, e As EventArgs)
         Logginn.Show()
         Me.Close()
     End Sub
