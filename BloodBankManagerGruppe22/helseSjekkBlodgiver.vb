@@ -14,7 +14,7 @@ Public Class helseSjekkBlodgiver
 
     Public Sub FilterData(valueToSearch As String)
         'sql id kan endres slik at brukerid = blodgiver bruker id //tror det er litt feil i sql syntax forsatt
-        Dim searchQuery As String = "select * from helsesjekk,blodgiver where bruker_id = blodgiver_bruker_id"
+        Dim searchQuery As String = "select * from helsesjekk"
         Dim command As New MySqlCommand(searchQuery, MysqlConn)
         Dim adapter As New MySqlDataAdapter(command)
         Dim table As New DataTable()
@@ -46,7 +46,7 @@ Frisk frukt, appelsin og kiwi
 Jernholdig kost er ikke tilstrekkelig for alle blodgivere. Ved behov får man jerntabletter ved blodbanken.")
     End Sub
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+    Private Sub Button1_Click(sender As Object, e As EventArgs) 
         Logginn.Show()
         Me.Close()
     End Sub

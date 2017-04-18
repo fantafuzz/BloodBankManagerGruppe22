@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class helseSjekkBlodgiver
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,14 +20,13 @@ Partial Class helseSjekkBlodgiver
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.HvaErHemoglobinToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.Logg_ut = New System.Windows.Forms.Button()
-        Me.Button1 = New System.Windows.Forms.Button()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
@@ -73,22 +72,12 @@ Partial Class helseSjekkBlodgiver
         'Logg_ut
         '
         Me.Logg_ut.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Logg_ut.Location = New System.Drawing.Point(1009, 722)
+        Me.Logg_ut.Location = New System.Drawing.Point(1132, 722)
         Me.Logg_ut.Name = "Logg_ut"
         Me.Logg_ut.Size = New System.Drawing.Size(203, 42)
         Me.Logg_ut.TabIndex = 31
         Me.Logg_ut.Text = "Tilbake til minside"
         Me.Logg_ut.UseVisualStyleBackColor = True
-        '
-        'Button1
-        '
-        Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.Location = New System.Drawing.Point(1218, 722)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(118, 42)
-        Me.Button1.TabIndex = 32
-        Me.Button1.Text = "Logg Ut"
-        Me.Button1.UseVisualStyleBackColor = True
         '
         'helseSjekkBlodgiver
         '
@@ -96,7 +85,6 @@ Partial Class helseSjekkBlodgiver
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(1347, 776)
-        Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.Logg_ut)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.DataGridView1)
@@ -119,5 +107,4 @@ Partial Class helseSjekkBlodgiver
     Friend WithEvents MenuStrip1 As MenuStrip
     Friend WithEvents HvaErHemoglobinToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents Logg_ut As Button
-    Friend WithEvents Button1 As Button
 End Class
