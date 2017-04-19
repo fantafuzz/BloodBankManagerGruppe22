@@ -382,15 +382,33 @@ Public Class SQL_hookup
         Return returnRow
     End Function
 
-    Public Function FilterData(valueToSearch As String) As DataTable
-        Dim returntable As New DataTable()
+    Public Function FilterData(ByVal valueToSearch As String) As DataTable
+        Dim returntable As New DataTable
+        Dim value As String = "%" & valueToSearch & "%"
         Try
             connection.Open()
-            Dim sqlFilterData As New MySqlCommand("SELECT bruker.bruker_id, bruker.fornavn, bruker.etternavn, blodgiver.personnummer FROM bruker, blodgiver WHERE bruker.bruker_id = blodgiver.blodgiver_bruker_id AND CONCAT(bruker_id,fornavn, etternavn, personnummer, epost) like %@value%;", connection)
-            sqlFilterData.Parameters.AddWithValue("@value", valueToSearch)
+            Dim sqlFilterData As New MySqlCommand("SELECT bruker.bruker_id, bruker.fornavn, bruker.etternavn, blodgiver.personnummer FROM bruker, blodgiver WHERE bruker.bruker_id = blodgiver.blodgiver_bruker_id AND CONCAT(bruker.bruker_id, bruker.fornavn, bruker.etternavn, blodgiver.personnummer, bruker.epost) LIKE @value;", connection)
+            sqlFilterData.Parameters.AddWithValue("@value", value)
             Dim adapter As New MySqlDataAdapter(sqlFilterData)
             adapter.Fill(returntable)
         Catch ex As MySqlException
+            MsgBox(ex)
+        Finally
+            connection.Close()
+        End Try
+
+        Return returntable
+    End Function
+
+    Public Function getLabSvar(ByVal bruker_id As Integer)
+        Dim returntable As New DataTable
+        Try
+            connection.Open()
+            Dim sqlgetLab As New MySqlCommand("SELECT test_utfort, svar FROM lab_svar WHERE svar_bruker_id = @bruker_id", connection)
+            sqlgetLab.Parameters.AddWithValue("@bruker_id", bruker_id)
+            Dim adapter As New MySqlDataAdapter(sqlgetLab)
+            adapter.Fill(returntable)
+        Catch ex As mysqlException
             MsgBox(ex)
         Finally
             connection.Close()

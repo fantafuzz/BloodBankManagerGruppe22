@@ -23,21 +23,11 @@ Partial Class BrukerLabSvar
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(BrukerLabSvar))
-        Me.ListBox1 = New System.Windows.Forms.ListBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Button_tilbake_fra_lab_svar = New System.Windows.Forms.Button()
+        Me.GridSvar = New System.Windows.Forms.DataGridView()
+        CType(Me.GridSvar, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
-        '
-        'ListBox1
-        '
-        Me.ListBox1.Font = New System.Drawing.Font("Georgia", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ListBox1.FormattingEnabled = True
-        Me.ListBox1.ItemHeight = 23
-        Me.ListBox1.Location = New System.Drawing.Point(12, 42)
-        Me.ListBox1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.ListBox1.Name = "ListBox1"
-        Me.ListBox1.Size = New System.Drawing.Size(1003, 602)
-        Me.ListBox1.TabIndex = 0
         '
         'Label1
         '
@@ -59,15 +49,23 @@ Partial Class BrukerLabSvar
         Me.Button_tilbake_fra_lab_svar.Text = "Tilbake"
         Me.Button_tilbake_fra_lab_svar.UseVisualStyleBackColor = True
         '
+        'GridSvar
+        '
+        Me.GridSvar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.GridSvar.Location = New System.Drawing.Point(12, 43)
+        Me.GridSvar.Name = "GridSvar"
+        Me.GridSvar.Size = New System.Drawing.Size(898, 661)
+        Me.GridSvar.TabIndex = 3
+        '
         'BrukerLabSvar
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 14.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(1037, 716)
+        Me.Controls.Add(Me.GridSvar)
         Me.Controls.Add(Me.Button_tilbake_fra_lab_svar)
         Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.ListBox1)
         Me.Font = New System.Drawing.Font("Georgia", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
@@ -75,12 +73,12 @@ Partial Class BrukerLabSvar
         Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Name = "BrukerLabSvar"
         Me.Text = "Blood Bank Administrator 2k17™ - xTreme Edition"
+        CType(Me.GridSvar, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
-
-    Friend WithEvents ListBox1 As ListBox
     Friend WithEvents Label1 As Label
     Friend WithEvents Button_tilbake_fra_lab_svar As Button
+    Friend WithEvents GridSvar As DataGridView
 End Class

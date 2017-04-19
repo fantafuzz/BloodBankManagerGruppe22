@@ -3,16 +3,20 @@
 Public Class AnsattInkalling
     Dim sql As New SQL_hookup()
     Private Sub minSideAnsatte_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        GridBrukere.DataSource = sql.FilterData("")
+        Dim brukerData As DataTable = sql.FilterData("")
+        If Not brukerData Is Nothing Then
+            GridBrukere.DataSource = brukerData
+            Dim column As DataGridViewColumn = GridBrukere.Columns(0)
+            column.Width = 160
 
-        Dim column As DataGridViewColumn = GridBrukere.Columns(0)
-        column.Width = 160
+            Dim column1 As DataGridViewColumn = GridBrukere.Columns(1)
+            column1.Width = 160
 
-        Dim column1 As DataGridViewColumn = GridBrukere.Columns(1)
-        column1.Width = 160
+            Dim column2 As DataGridViewColumn = GridBrukere.Columns(2)
+            column2.Width = 160
+        End If
 
-        Dim column2 As DataGridViewColumn = GridBrukere.Columns(2)
-        column2.Width = 160
+
 
     End Sub
     Private Sub ButtonInnkall_Click(sender As Object, e As EventArgs) Handles ButtonInnkall.Click
