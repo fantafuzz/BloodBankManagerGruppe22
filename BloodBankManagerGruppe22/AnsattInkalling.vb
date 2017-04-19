@@ -46,10 +46,11 @@ Public Class AnsattInkalling
         Me.Hide()
     End Sub
 
-    Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
-
-        MsgBox(sql.getSisteBlodgivning(bruker_id))
-
+    Private Sub Button4_Click(sender As Object, e As EventArgs) Handles btnSok.Click
+        Dim value As String = tbSok.Text
+        If value <> "" Then
+            GridBrukere.DataSource = sql.FilterData(value)
+        End If
     End Sub
     '21.04.2017
     Private Sub GridBrukere_SelectionChanged(sender As Object, e As EventArgs) Handles GridBrukere.SelectionChanged

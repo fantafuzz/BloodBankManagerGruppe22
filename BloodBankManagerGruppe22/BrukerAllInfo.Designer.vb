@@ -24,123 +24,137 @@ Partial Class BrukerAllInfo
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(BrukerAllInfo))
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.TextBox_epost = New System.Windows.Forms.TextBox()
+        Me.tbEpost = New System.Windows.Forms.TextBox()
         Me.Label11 = New System.Windows.Forms.Label()
-        Me.TextBox_tlf2 = New System.Windows.Forms.TextBox()
-        Me.TextBox_Tlf1 = New System.Windows.Forms.TextBox()
+        Me.tbTlf2 = New System.Windows.Forms.TextBox()
+        Me.tbTlf1 = New System.Windows.Forms.TextBox()
         Me.Label9 = New System.Windows.Forms.Label()
-        Me.TextBox_poststed = New System.Windows.Forms.TextBox()
-        Me.TextBox_postnr = New System.Windows.Forms.TextBox()
+        Me.tbPoststed = New System.Windows.Forms.TextBox()
+        Me.tbPostnr = New System.Windows.Forms.TextBox()
         Me.Label8 = New System.Windows.Forms.Label()
-        Me.TextBox_adresse = New System.Windows.Forms.TextBox()
+        Me.tbAdr = New System.Windows.Forms.TextBox()
         Me.Label7 = New System.Windows.Forms.Label()
-        Me.TextBox_etternavn = New System.Windows.Forms.TextBox()
+        Me.tbEtternavn = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.TextBox_fornavn = New System.Windows.Forms.TextBox()
+        Me.tbFornavn = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.TextBox_Brukerid = New System.Windows.Forms.TextBox()
+        Me.btnOppdater = New System.Windows.Forms.Button()
+        Me.tbID = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.btnEndreFornavn = New System.Windows.Forms.Button()
+        Me.btnEndreEtternavn = New System.Windows.Forms.Button()
+        Me.btnEndreAdresse = New System.Windows.Forms.Button()
+        Me.btnEndrePostnr = New System.Windows.Forms.Button()
+        Me.btnEndreTelefon = New System.Windows.Forms.Button()
+        Me.btnEndreEpost = New System.Windows.Forms.Button()
+        Me.Button1 = New System.Windows.Forms.Button()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Comic Sans MS", 19.8!)
+        Me.Label1.Font = New System.Drawing.Font("Calibri", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.Location = New System.Drawing.Point(6, 24)
         Me.Label1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(293, 38)
+        Me.Label1.Size = New System.Drawing.Size(263, 33)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Velkommen til minside"
         '
-        'TextBox_epost
+        'tbEpost
         '
-        Me.TextBox_epost.Location = New System.Drawing.Point(103, 291)
-        Me.TextBox_epost.Name = "TextBox_epost"
-        Me.TextBox_epost.Size = New System.Drawing.Size(333, 20)
-        Me.TextBox_epost.TabIndex = 41
+        Me.tbEpost.Location = New System.Drawing.Point(94, 245)
+        Me.tbEpost.Name = "tbEpost"
+        Me.tbEpost.ReadOnly = True
+        Me.tbEpost.Size = New System.Drawing.Size(342, 20)
+        Me.tbEpost.TabIndex = 41
         '
         'Label11
         '
         Me.Label11.AutoSize = True
         Me.Label11.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
-        Me.Label11.Location = New System.Drawing.Point(14, 291)
+        Me.Label11.Location = New System.Drawing.Point(14, 248)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(37, 13)
         Me.Label11.TabIndex = 40
         Me.Label11.Text = "Epost:"
         '
-        'TextBox_tlf2
+        'tbTlf2
         '
-        Me.TextBox_tlf2.Location = New System.Drawing.Point(295, 250)
-        Me.TextBox_tlf2.Name = "TextBox_tlf2"
-        Me.TextBox_tlf2.Size = New System.Drawing.Size(141, 20)
-        Me.TextBox_tlf2.TabIndex = 38
+        Me.tbTlf2.Location = New System.Drawing.Point(295, 217)
+        Me.tbTlf2.Name = "tbTlf2"
+        Me.tbTlf2.ReadOnly = True
+        Me.tbTlf2.Size = New System.Drawing.Size(141, 20)
+        Me.tbTlf2.TabIndex = 38
         '
-        'TextBox_Tlf1
+        'tbTlf1
         '
-        Me.TextBox_Tlf1.Location = New System.Drawing.Point(124, 250)
-        Me.TextBox_Tlf1.Name = "TextBox_Tlf1"
-        Me.TextBox_Tlf1.Size = New System.Drawing.Size(156, 20)
-        Me.TextBox_Tlf1.TabIndex = 37
+        Me.tbTlf1.Location = New System.Drawing.Point(125, 217)
+        Me.tbTlf1.Name = "tbTlf1"
+        Me.tbTlf1.ReadOnly = True
+        Me.tbTlf1.Size = New System.Drawing.Size(156, 20)
+        Me.tbTlf1.TabIndex = 37
         '
         'Label9
         '
         Me.Label9.AutoSize = True
-        Me.Label9.Location = New System.Drawing.Point(13, 250)
+        Me.Label9.Location = New System.Drawing.Point(14, 220)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(105, 14)
         Me.Label9.TabIndex = 36
         Me.Label9.Text = "Telefonnummer:"
         '
-        'TextBox_poststed
+        'tbPoststed
         '
-        Me.TextBox_poststed.Location = New System.Drawing.Point(207, 212)
-        Me.TextBox_poststed.Name = "TextBox_poststed"
-        Me.TextBox_poststed.Size = New System.Drawing.Size(179, 20)
-        Me.TextBox_poststed.TabIndex = 35
+        Me.tbPoststed.Location = New System.Drawing.Point(190, 185)
+        Me.tbPoststed.Name = "tbPoststed"
+        Me.tbPoststed.ReadOnly = True
+        Me.tbPoststed.Size = New System.Drawing.Size(246, 20)
+        Me.tbPoststed.TabIndex = 35
         '
-        'TextBox_postnr
+        'tbPostnr
         '
-        Me.TextBox_postnr.Location = New System.Drawing.Point(95, 212)
-        Me.TextBox_postnr.Name = "TextBox_postnr"
-        Me.TextBox_postnr.Size = New System.Drawing.Size(90, 20)
-        Me.TextBox_postnr.TabIndex = 34
+        Me.tbPostnr.Location = New System.Drawing.Point(94, 185)
+        Me.tbPostnr.Name = "tbPostnr"
+        Me.tbPostnr.ReadOnly = True
+        Me.tbPostnr.Size = New System.Drawing.Size(90, 20)
+        Me.tbPostnr.TabIndex = 34
         '
         'Label8
         '
         Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(13, 212)
+        Me.Label8.Location = New System.Drawing.Point(11, 188)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(76, 14)
         Me.Label8.TabIndex = 33
         Me.Label8.Text = "Postnr/sted:"
         '
-        'TextBox_adresse
+        'tbAdr
         '
-        Me.TextBox_adresse.Location = New System.Drawing.Point(94, 174)
-        Me.TextBox_adresse.Name = "TextBox_adresse"
-        Me.TextBox_adresse.Size = New System.Drawing.Size(342, 20)
-        Me.TextBox_adresse.TabIndex = 32
+        Me.tbAdr.Location = New System.Drawing.Point(94, 159)
+        Me.tbAdr.Name = "tbAdr"
+        Me.tbAdr.ReadOnly = True
+        Me.tbAdr.Size = New System.Drawing.Size(342, 20)
+        Me.tbAdr.TabIndex = 32
         '
         'Label7
         '
         Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(13, 174)
+        Me.Label7.Location = New System.Drawing.Point(11, 162)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(55, 14)
         Me.Label7.TabIndex = 31
         Me.Label7.Text = "Adresse:"
         '
-        'TextBox_etternavn
+        'tbEtternavn
         '
-        Me.TextBox_etternavn.Location = New System.Drawing.Point(94, 136)
-        Me.TextBox_etternavn.Name = "TextBox_etternavn"
-        Me.TextBox_etternavn.Size = New System.Drawing.Size(342, 20)
-        Me.TextBox_etternavn.TabIndex = 25
+        Me.tbEtternavn.Location = New System.Drawing.Point(94, 133)
+        Me.tbEtternavn.Name = "tbEtternavn"
+        Me.tbEtternavn.ReadOnly = True
+        Me.tbEtternavn.Size = New System.Drawing.Size(342, 20)
+        Me.tbEtternavn.TabIndex = 25
         '
         'Label3
         '
@@ -151,12 +165,13 @@ Partial Class BrukerAllInfo
         Me.Label3.TabIndex = 24
         Me.Label3.Text = "Etternavn:"
         '
-        'TextBox_fornavn
+        'tbFornavn
         '
-        Me.TextBox_fornavn.Location = New System.Drawing.Point(93, 107)
-        Me.TextBox_fornavn.Name = "TextBox_fornavn"
-        Me.TextBox_fornavn.Size = New System.Drawing.Size(342, 20)
-        Me.TextBox_fornavn.TabIndex = 23
+        Me.tbFornavn.Location = New System.Drawing.Point(94, 107)
+        Me.tbFornavn.Name = "tbFornavn"
+        Me.tbFornavn.ReadOnly = True
+        Me.tbFornavn.Size = New System.Drawing.Size(342, 20)
+        Me.tbFornavn.TabIndex = 23
         '
         'Label2
         '
@@ -167,21 +182,22 @@ Partial Class BrukerAllInfo
         Me.Label2.TabIndex = 22
         Me.Label2.Text = "Fornavn:"
         '
-        'Button2
+        'btnOppdater
         '
-        Me.Button2.Location = New System.Drawing.Point(103, 351)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(342, 25)
-        Me.Button2.TabIndex = 51
-        Me.Button2.Text = "Oppdater Personalia"
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.btnOppdater.Location = New System.Drawing.Point(94, 271)
+        Me.btnOppdater.Name = "btnOppdater"
+        Me.btnOppdater.Size = New System.Drawing.Size(342, 25)
+        Me.btnOppdater.TabIndex = 51
+        Me.btnOppdater.Text = "Oppdater Personalia"
+        Me.btnOppdater.UseVisualStyleBackColor = True
         '
-        'TextBox_Brukerid
+        'tbID
         '
-        Me.TextBox_Brukerid.Location = New System.Drawing.Point(94, 81)
-        Me.TextBox_Brukerid.Name = "TextBox_Brukerid"
-        Me.TextBox_Brukerid.Size = New System.Drawing.Size(99, 20)
-        Me.TextBox_Brukerid.TabIndex = 53
+        Me.tbID.Location = New System.Drawing.Point(94, 81)
+        Me.tbID.Name = "tbID"
+        Me.tbID.ReadOnly = True
+        Me.tbID.Size = New System.Drawing.Size(99, 20)
+        Me.tbID.TabIndex = 53
         '
         'Label4
         '
@@ -202,29 +218,99 @@ Partial Class BrukerAllInfo
         Me.PictureBox1.TabIndex = 54
         Me.PictureBox1.TabStop = False
         '
+        'btnEndreFornavn
+        '
+        Me.btnEndreFornavn.Location = New System.Drawing.Point(442, 106)
+        Me.btnEndreFornavn.Name = "btnEndreFornavn"
+        Me.btnEndreFornavn.Size = New System.Drawing.Size(75, 23)
+        Me.btnEndreFornavn.TabIndex = 56
+        Me.btnEndreFornavn.Text = "Endre"
+        Me.btnEndreFornavn.UseVisualStyleBackColor = True
+        '
+        'btnEndreEtternavn
+        '
+        Me.btnEndreEtternavn.Location = New System.Drawing.Point(442, 132)
+        Me.btnEndreEtternavn.Name = "btnEndreEtternavn"
+        Me.btnEndreEtternavn.Size = New System.Drawing.Size(75, 23)
+        Me.btnEndreEtternavn.TabIndex = 57
+        Me.btnEndreEtternavn.Text = "Endre"
+        Me.btnEndreEtternavn.UseVisualStyleBackColor = True
+        '
+        'btnEndreAdresse
+        '
+        Me.btnEndreAdresse.Location = New System.Drawing.Point(442, 159)
+        Me.btnEndreAdresse.Name = "btnEndreAdresse"
+        Me.btnEndreAdresse.Size = New System.Drawing.Size(75, 23)
+        Me.btnEndreAdresse.TabIndex = 58
+        Me.btnEndreAdresse.Text = "Endre"
+        Me.btnEndreAdresse.UseVisualStyleBackColor = True
+        '
+        'btnEndrePostnr
+        '
+        Me.btnEndrePostnr.Location = New System.Drawing.Point(442, 184)
+        Me.btnEndrePostnr.Name = "btnEndrePostnr"
+        Me.btnEndrePostnr.Size = New System.Drawing.Size(75, 23)
+        Me.btnEndrePostnr.TabIndex = 59
+        Me.btnEndrePostnr.Text = "Endre"
+        Me.btnEndrePostnr.UseVisualStyleBackColor = True
+        '
+        'btnEndreTelefon
+        '
+        Me.btnEndreTelefon.Location = New System.Drawing.Point(442, 216)
+        Me.btnEndreTelefon.Name = "btnEndreTelefon"
+        Me.btnEndreTelefon.Size = New System.Drawing.Size(75, 23)
+        Me.btnEndreTelefon.TabIndex = 60
+        Me.btnEndreTelefon.Text = "Endre"
+        Me.btnEndreTelefon.UseVisualStyleBackColor = True
+        '
+        'btnEndreEpost
+        '
+        Me.btnEndreEpost.Location = New System.Drawing.Point(442, 244)
+        Me.btnEndreEpost.Name = "btnEndreEpost"
+        Me.btnEndreEpost.Size = New System.Drawing.Size(75, 23)
+        Me.btnEndreEpost.TabIndex = 61
+        Me.btnEndreEpost.Text = "Endre"
+        Me.btnEndreEpost.UseVisualStyleBackColor = True
+        '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(718, 442)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(75, 23)
+        Me.Button1.TabIndex = 62
+        Me.Button1.Text = "Tilbake"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
         'BrukerAllInfo
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 14.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(805, 477)
+        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.btnEndreEpost)
+        Me.Controls.Add(Me.btnEndreTelefon)
+        Me.Controls.Add(Me.btnEndrePostnr)
+        Me.Controls.Add(Me.btnEndreAdresse)
+        Me.Controls.Add(Me.btnEndreEtternavn)
+        Me.Controls.Add(Me.btnEndreFornavn)
         Me.Controls.Add(Me.PictureBox1)
-        Me.Controls.Add(Me.TextBox_Brukerid)
+        Me.Controls.Add(Me.tbID)
         Me.Controls.Add(Me.Label4)
-        Me.Controls.Add(Me.Button2)
-        Me.Controls.Add(Me.TextBox_epost)
+        Me.Controls.Add(Me.btnOppdater)
+        Me.Controls.Add(Me.tbEpost)
         Me.Controls.Add(Me.Label11)
-        Me.Controls.Add(Me.TextBox_tlf2)
-        Me.Controls.Add(Me.TextBox_Tlf1)
+        Me.Controls.Add(Me.tbTlf2)
+        Me.Controls.Add(Me.tbTlf1)
         Me.Controls.Add(Me.Label9)
-        Me.Controls.Add(Me.TextBox_poststed)
-        Me.Controls.Add(Me.TextBox_postnr)
+        Me.Controls.Add(Me.tbPoststed)
+        Me.Controls.Add(Me.tbPostnr)
         Me.Controls.Add(Me.Label8)
-        Me.Controls.Add(Me.TextBox_adresse)
+        Me.Controls.Add(Me.tbAdr)
         Me.Controls.Add(Me.Label7)
-        Me.Controls.Add(Me.TextBox_etternavn)
+        Me.Controls.Add(Me.tbEtternavn)
         Me.Controls.Add(Me.Label3)
-        Me.Controls.Add(Me.TextBox_fornavn)
+        Me.Controls.Add(Me.tbFornavn)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.Font = New System.Drawing.Font("Georgia", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -240,22 +326,29 @@ Partial Class BrukerAllInfo
     End Sub
 
     Friend WithEvents Label1 As Label
-    Friend WithEvents TextBox_epost As TextBox
+    Friend WithEvents tbEpost As TextBox
     Friend WithEvents Label11 As Label
-    Friend WithEvents TextBox_tlf2 As TextBox
-    Friend WithEvents TextBox_Tlf1 As TextBox
+    Friend WithEvents tbTlf2 As TextBox
+    Friend WithEvents tbTlf1 As TextBox
     Friend WithEvents Label9 As Label
-    Friend WithEvents TextBox_poststed As TextBox
-    Friend WithEvents TextBox_postnr As TextBox
+    Friend WithEvents tbPoststed As TextBox
+    Friend WithEvents tbPostnr As TextBox
     Friend WithEvents Label8 As Label
-    Friend WithEvents TextBox_adresse As TextBox
+    Friend WithEvents tbAdr As TextBox
     Friend WithEvents Label7 As Label
-    Friend WithEvents TextBox_etternavn As TextBox
+    Friend WithEvents tbEtternavn As TextBox
     Friend WithEvents Label3 As Label
-    Friend WithEvents TextBox_fornavn As TextBox
+    Friend WithEvents tbFornavn As TextBox
     Friend WithEvents Label2 As Label
-    Friend WithEvents Button2 As Button
-    Friend WithEvents TextBox_Brukerid As TextBox
+    Friend WithEvents btnOppdater As Button
+    Friend WithEvents tbID As TextBox
     Friend WithEvents Label4 As Label
     Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents btnEndreFornavn As Button
+    Friend WithEvents btnEndreEtternavn As Button
+    Friend WithEvents btnEndreAdresse As Button
+    Friend WithEvents btnEndrePostnr As Button
+    Friend WithEvents btnEndreTelefon As Button
+    Friend WithEvents btnEndreEpost As Button
+    Friend WithEvents Button1 As Button
 End Class

@@ -437,4 +437,45 @@ Public Class SQL_hookup
         End Try
         Return returnstring
     End Function
+
+    Public Function getAllinfo(ByVal bruker_id As Integer)
+        Dim returntable As New DataTable
+        Dim returnrow As DataRow
+        Try
+            connection.Open()
+            Dim sqlgetAll As New MySqlCommand("SELECT bruker.bruker_id, bruker.fornavn, bruker.etternavn, bruker.epost, blodgiver.adresse, blodgiver.postnr, blodgiver.poststed, blodgiver.telefon_1, blodgiver.telefon_2 FROM blodgiver, bruker WHERE blodgiver.blodgiver_bruker_id = bruker.bruker_id AND bruker.bruker_id = @bruker_id", connection)
+            sqlgetAll.Parameters.AddWithValue("@bruker_id", bruker_id)
+            Dim adapter As New MySqlDataAdapter(sqlgetAll)
+            adapter.Fill(returntable)
+            returnrow = returntable.Rows(0)
+        Catch ex As MySqlException
+            MsgBox(ex)
+        Finally
+            connection.Close()
+        End Try
+        Return returnrow
+    End Function
+    Public Sub endreSingleBruker(ByVal bruker_id As Integer, ByVal field As String, ByVal value As String)
+        Try
+            connection.Open()
+            Dim sqlendre As New MySqlCommand("UPDATE TABLE @table SET @field = @value WHERE blodgiver_bruker_id = @bruker_id", connection)
+            If field = "adresse" Or field = "postnr" Or field = "poststed" Or field = "telefon_1" Or field = "telefon_2" Then
+                sqlendre.Parameters.AddWithValue("@table", "blodgiver")
+            ElseIf field = "fornavn" Or field = "etternavn" Or field = "epost" Then
+                sqlendre.Parameters.AddWithValue("@table", "bruker")
+            Else
+                MsgBox("What")
+                connection.Close()
+                Exit Sub
+            End If
+            sqlendre.Parameters.AddWithValue("@field", field)
+            sqlendre.Parameters.AddWithValue("@value", value)
+            sqlendre.Parameters.AddWithValue("@bruker_id", bruker_id)
+            sqlendre.ExecuteNonQuery()
+        Catch ex As MySqlException
+            MsgBox(ex)
+        Finally
+            connection.Close()
+        End Try
+    End Sub
 End Class

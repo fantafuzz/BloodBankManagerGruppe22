@@ -25,7 +25,7 @@ Partial Class AnsattInkalling
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(AnsattInkalling))
         Me.ButtonTilbake = New System.Windows.Forms.Button()
         Me.GridBrukere = New System.Windows.Forms.DataGridView()
-        Me.Button4 = New System.Windows.Forms.Button()
+        Me.btnSok = New System.Windows.Forms.Button()
         Me.ButtonInnkall = New System.Windows.Forms.Button()
         Me.Kalender1 = New System.Windows.Forms.MonthCalendar()
         Me.tbSok = New System.Windows.Forms.TextBox()
@@ -52,15 +52,15 @@ Partial Class AnsattInkalling
         Me.GridBrukere.Size = New System.Drawing.Size(760, 292)
         Me.GridBrukere.TabIndex = 30
         '
-        'Button4
+        'btnSok
         '
-        Me.Button4.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button4.Location = New System.Drawing.Point(318, 11)
-        Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(85, 40)
-        Me.Button4.TabIndex = 33
-        Me.Button4.Text = "Søk"
-        Me.Button4.UseVisualStyleBackColor = True
+        Me.btnSok.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnSok.Location = New System.Drawing.Point(318, 11)
+        Me.btnSok.Name = "btnSok"
+        Me.btnSok.Size = New System.Drawing.Size(85, 40)
+        Me.btnSok.TabIndex = 33
+        Me.btnSok.Text = "Søk"
+        Me.btnSok.UseVisualStyleBackColor = True
         '
         'ButtonInnkall
         '
@@ -96,7 +96,7 @@ Partial Class AnsattInkalling
         Me.Controls.Add(Me.tbSok)
         Me.Controls.Add(Me.Kalender1)
         Me.Controls.Add(Me.ButtonInnkall)
-        Me.Controls.Add(Me.Button4)
+        Me.Controls.Add(Me.btnSok)
         Me.Controls.Add(Me.GridBrukere)
         Me.Controls.Add(Me.ButtonTilbake)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
@@ -111,7 +111,7 @@ Partial Class AnsattInkalling
     End Sub
     Friend WithEvents ButtonTilbake As Button
     Friend WithEvents GridBrukere As DataGridView
-    Friend WithEvents Button4 As Button
+    Friend WithEvents btnSok As Button
     Friend WithEvents ButtonInnkall As Button
     Friend WithEvents Kalender1 As MonthCalendar
     Friend WithEvents tbSok As TextBox
