@@ -182,6 +182,23 @@ Public Class SQL_hookup
 
         End Try
     End Sub
+
+    Public Sub sendHelsesjekk(ByVal bruker_id As Integer, ByVal status As Boolean)
+        Dim currDate As Date = Date.Today
+
+        Try
+            connection.Open()
+            Dim sqlSend As New MySqlCommand("INSERT INTO helsesjekk (godkjent_status, dato, helsesjekk_bruker_id) VALUES (@status, @dato, (SELECT blodgiver_bruker_id FROM blodgiver WHERE blodgiver_bruker_id = @bruker_id))", connection)
+            sqlSend.Parameters.AddWithValue("@status", status)
+            sqlSend.Parameters.AddWithValue("@dato", currDate)
+            sqlSend.Parameters.AddWithValue("@bruker_id", bruker_id)
+            sqlSend.ExecuteNonQuery()
+        Catch ex As MySqlException
+            MsgBox(ex)
+        Finally
+            connection.Close()
+        End Try
+    End Sub
     Public Sub test()
         Dim please As Int32 = 1
         Dim currDate As Date = Date.Today()
@@ -329,5 +346,23 @@ Public Class SQL_hookup
             connection.Close()
         End Try
         Return returnstring
+    End Function
+
+    Public Function getSisteEgenerklaering(ByVal bruker_id As Integer) As DataRow
+        Dim returnTable As New DataTable()
+        Dim returnRow As DataRow
+        Try
+            connection.Open()
+            Dim sqlGet As New MySqlCommand("SELECT * FROM egenerklaeringsskjema WHERE skjema_bruker_id = @id AND skjema_id = (SELECT MAX(skjema_id) FROM egenerklaeringsskjema WHERE skjema_bruker_id = @id)", connection)
+            sqlGet.Parameters.AddWithValue("@id", bruker_id)
+            Dim adapter As New MySqlDataAdapter(sqlGet)
+            adapter.Fill(returnTable)
+            returnRow = returnTable.Rows(0)
+        Catch ex As MySqlException
+            MsgBox(ex)
+        Finally
+            connection.Close()
+        End Try
+        Return returnRow
     End Function
 End Class
