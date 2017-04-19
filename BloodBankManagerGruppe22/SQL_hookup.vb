@@ -163,19 +163,19 @@ Public Class SQL_hookup
         Dim currdate As Date = Date.Today()
         Try
             connection.Open()
-            Dim sqlendring As New MySqlCommand("INSERT INTO blodbeholdning_endring (dato, endring_aarsak, endring_mengde, endring_blodbeholdning_id) VALUES (@dato, @aarsak, @mengde, (SELECT blodbeholdning_id FROM blodbeholdning, blodgiver, blodtype WHERE blodbeholdning.beholdningstype_navn = blodtype.blodtype_navn AND blodgiver.blodgiver_blodtype_id = blodtype.blodtype_id AND blodgiver.blodgiver_bruker_id = @bruker))")
+            Dim sqlendring As New MySqlCommand("INSERT INTO blodbeholdning_endring (dato, endring_aarsak, endring_mengde, endring_blodbeholdning_id) VALUES (@dato, @aarsak, @mengde, (SELECT blodbeholdning_id FROM blodbeholdning, blodgiver, blodtype WHERE blodbeholdning.beholdningstype_navn = blodtype.blodtype_navn AND blodgiver.blodgiver_blodtype_id = blodtype.blodtype_id AND blodgiver.blodgiver_bruker_id = @bruker))", connection)
             sqlendring.Parameters.AddWithValue("@dato", currdate)
             sqlendring.Parameters.AddWithValue("@aarsak", "Blodtapping")
             sqlendring.Parameters.AddWithValue("@mengde", 400)
             sqlendring.Parameters.AddWithValue("@bruker", bruker)
 
-            Dim sqltapping As New MySqlCommand("INSERT INTO blodtapping (tapping_bruker_id, tapping_endring_id) VALUES ((SELECT bruker_id FROM bruker WHERE bruker_id = @bruker),(SELECT endring_id FROM blodbeholdning_endring WHERE endring_aarsak = @aarsak AND endring_mengde = @mengde AND dato = @dato AND endring_beholdning_id = (SELECT beholdningstype_id FROM blodbeholdning, blodgiver, blodtype WHERE blodbeholdning.beholdningstype_navn = blodtype.blodtype_navn AND blodgiver.blodgiver_blodtype_id = blodtype.blodtype_id AND blodgiver.blodgiver_bruker_id = @bruker)))")
+            Dim sqltapping As New MySqlCommand("INSERT INTO blodtapping (tapping_bruker_id, tapping_endring_id) VALUES ((SELECT bruker_id FROM bruker WHERE bruker_id = @bruker),(SELECT endring_id FROM blodbeholdning_endring WHERE endring_aarsak = @aarsak AND endring_mengde = @mengde AND dato = @dato AND endring_beholdning_id = (SELECT beholdningstype_id FROM blodbeholdning, blodgiver, blodtype WHERE blodbeholdning.beholdningstype_navn = blodtype.blodtype_navn AND blodgiver.blodgiver_blodtype_id = blodtype.blodtype_id AND blodgiver.blodgiver_bruker_id = @bruker)))", connection)
             sqltapping.Parameters.AddWithValue("@aarsak", "Blodtapping")
             sqltapping.Parameters.AddWithValue("@mengde", 400)
             sqltapping.Parameters.AddWithValue("@dato", currdate)
             sqltapping.Parameters.AddWithValue("@bruker", bruker)
 
-            Dim sqlbeholdning As New MySqlCommand("UPDATE blodbeholdning SET beholdningstype_mengde = beholdningstype_mengde + @mengde WHERE beholdningstype_id = (SELECT beholdningstype_id FROM blodbeholdning, blodgiver, blodtype WHERE blodbeholdning.beholdningstype_navn = blodtype.blodtype_navn AND blodgiver.blodgiver_blodtype_id = blodtype.blodtype_id AND blodgiver.blodgiver_bruker_id = @bruker)")
+            Dim sqlbeholdning As New MySqlCommand("UPDATE blodbeholdning SET beholdningstype_mengde = beholdningstype_mengde + @mengde WHERE beholdningstype_id = (SELECT beholdningstype_id FROM blodbeholdning, blodgiver, blodtype WHERE blodbeholdning.beholdningstype_navn = blodtype.blodtype_navn AND blodgiver.blodgiver_blodtype_id = blodtype.blodtype_id AND blodgiver.blodgiver_bruker_id = @bruker)", connection)
             sqlbeholdning.Parameters.AddWithValue("@mengde", 400)
             sqlbeholdning.Parameters.AddWithValue("@bruker", bruker)
         Catch ex As Exception
@@ -199,6 +199,22 @@ Public Class SQL_hookup
             connection.Close()
         End Try
     End Sub
+
+    Public Sub bestillTime(ByVal bruker_id As Integer, ByVal info As String)
+        Dim currDate As Date = Date.Today
+        Try
+            connection.Open()
+            Dim sqlBestill As New MySqlCommand("INSERT INTO time_bestilling (bestilling_bruker_id, dato, info) values ((SELECT blodgiver_bruker_id FROM blodgiver WHERE blodgiver_bruker_id = @bruker_id), @dato, @info)", connection)
+            sqlBestill.Parameters.AddWithValue("@bruker_id", bruker_id)
+            sqlBestill.Parameters.AddWithValue("@dato", currDate)
+            sqlBestill.Parameters.AddWithValue("@info", info)
+        Catch ex As MySqlException
+            MsgBox(ex)
+        Finally
+            connection.Close()
+        End Try
+    End Sub
+
     Public Sub test()
         Dim please As Int32 = 1
         Dim currDate As Date = Date.Today()
@@ -332,7 +348,7 @@ Public Class SQL_hookup
         Dim returnstring As String = "Noe galt har skjedd"
         Try
             connection.Open()
-            Dim sqlGet As New MySqlCommand("SELECT @what FROM blodgiver WHERE blodgiver_bruker_id = @id")
+            Dim sqlGet As New MySqlCommand("SELECT @what FROM blodgiver WHERE blodgiver_bruker_id = @id", connection)
             sqlGet.Parameters.AddWithValue("@what", what)
             sqlGet.Parameters.AddWithValue("@id", currentuser)
             Dim reader As MySqlDataReader = sqlGet.ExecuteReader
@@ -364,5 +380,22 @@ Public Class SQL_hookup
             connection.Close()
         End Try
         Return returnRow
+    End Function
+
+    Public Function FilterData(valueToSearch As String) As DataTable
+        Dim returntable As New DataTable()
+        Try
+            connection.Open()
+            Dim sqlFilterData As New MySqlCommand("SELECT bruker.bruker_id, bruker.fornavn, bruker.etternavn, blodgiver.personnummer FROM bruker, blodgiver WHERE bruker.bruker_id = blodgiver.blodgiver_bruker_id AND CONCAT(bruker_id,fornavn, etternavn, personnummer, epost) like %@value%;", connection)
+            sqlFilterData.Parameters.AddWithValue("@value", valueToSearch)
+            Dim adapter As New MySqlDataAdapter(sqlFilterData)
+            adapter.Fill(returntable)
+        Catch ex As MySqlException
+            MsgBox(ex)
+        Finally
+            connection.Close()
+        End Try
+
+        Return returntable
     End Function
 End Class

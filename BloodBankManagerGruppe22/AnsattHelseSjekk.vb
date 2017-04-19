@@ -1,9 +1,6 @@
 ﻿Imports MySql.Data.MySqlClient
 
 Public Class AnsattHelseSjekk
-    Dim MysqlConn As MySqlConnection
-    Dim COMMAND As MySqlCommand
-
     Dim bruker_id As Integer
     Dim fornavn As String
     Dim etternavn As String
@@ -14,14 +11,9 @@ Public Class AnsattHelseSjekk
     Dim spm As New Sporsmaal()
 
     Private Sub AnsattHelseSjekk_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        MysqlConn = New MySqlConnection
-        MysqlConn.ConnectionString =
-            "Server=mysql.stud.iie.ntnu.no;Database=g_oops_22;Uid=g_oops_22;Pwd=BtUDpVoR"
-
-
         'Her får vi deklarert vår database detaljer slik at man får tilkoblet seg til databasen via applikasjonen
 
-        FilterData("")
+        gridBruker.DataSource = sql.FilterData("")
 
         Dim column As DataGridViewColumn = gridBruker.Columns(0)
         column.Width = 100
@@ -36,20 +28,6 @@ Public Class AnsattHelseSjekk
         column3.Width = 100
 
     End Sub
-    Public Sub FilterData(valueToSearch As String)
-
-
-
-        Dim searchQuery As String = "SELECT bruker.bruker_id, bruker.fornavn, bruker.etternavn, blodgiver.personnummer FROM bruker, blodgiver WHERE bruker.bruker_id = blodgiver.blodgiver_bruker_id AND CONCAT(bruker_id,fornavn, etternavn, personnummer, epost) like '%" & valueToSearch & "%';"
-
-        Dim command As New MySqlCommand(searchQuery, MysqlConn)
-        Dim adapter As New MySqlDataAdapter(command)
-        Dim table As New DataTable()
-
-        adapter.Fill(table)
-
-        gridBruker.DataSource = table
-    End Sub
 
     Private Sub Logg_ut_Click(sender As Object, e As EventArgs) Handles Logg_ut.Click
         AnsattNavigasjon.Show()
@@ -58,7 +36,7 @@ Public Class AnsattHelseSjekk
         'her kan man navigere seg tilbake til navigasjonform ansatte
     End Sub
 
-    Private Sub Button3_Click(sender As Object, e As EventArgs) 
+    Private Sub Button3_Click(sender As Object, e As EventArgs)
         Logginn.Show()
         Me.Close()
         'her kan man logge ut av ansatthelsesjekk
@@ -67,7 +45,7 @@ Public Class AnsattHelseSjekk
     Private Sub btnSok_Click(sender As Object, e As EventArgs) Handles btnSok.Click
         Dim value As String = tbSok.Text
         If value <> "" Then
-            FilterData(value)
+            gridBruker.DataSource = sql.FilterData(value)
         End If
     End Sub
 

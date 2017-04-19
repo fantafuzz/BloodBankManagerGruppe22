@@ -1,18 +1,9 @@
 ﻿Imports MySql.Data.MySqlClient
 
 Public Class AnsattInkalling
-    Dim MysqlConn As MySqlConnection
-    Dim COMMAND As MySqlCommand
+    Dim sql As New SQL_hookup()
     Private Sub minSideAnsatte_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        MysqlConn = New MySqlConnection
-        MysqlConn.ConnectionString =
-            "Server=mysql.stud.iie.ntnu.no;Database=g_oops_22;Uid=g_oops_22;Pwd=BtUDpVoR"
-
-
-
-
-        FilterData("")
-
+        GridBrukere.DataSource = sql.FilterData("")
 
         Dim column As DataGridViewColumn = GridBrukere.Columns(0)
         column.Width = 160
@@ -23,31 +14,7 @@ Public Class AnsattInkalling
         Dim column2 As DataGridViewColumn = GridBrukere.Columns(2)
         column2.Width = 160
 
-
-
-
     End Sub
-    Public Sub FilterData(valueToSearch As String)
-
-
-
-        'sql syntax feil
-        Dim searchQuery As String = "Select * from bruker"
-        Dim command As New MySqlCommand(searchQuery, MysqlConn)
-        Dim adapter As New MySqlDataAdapter(command)
-        Dim table As New DataTable()
-
-        adapter.Fill(table)
-
-        GridBrukere.DataSource = table
-
-        'her får vi hentet ut database verdier fra databasen vår gruppe 22 inn til applikasjonen vår ved hjelp av SQL Syntax ovenfor
-
-
-    End Sub
-
-
-
     Private Sub ButtonInnkall_Click(sender As Object, e As EventArgs) Handles ButtonInnkall.Click
         Dim bruker_id As Integer
         Dim fornavn As String = ""
@@ -68,25 +35,7 @@ Public Class AnsattInkalling
 
         MsgBox(bruker_id & " " & fornavn & " " & etternavn & " " & epost & " " & personnummer)
 
-        Dim READER As MySqlDataReader
-        Try
-            MysqlConn.Open()
-            Dim Query As String
-            Query = "insert into g_oops_22.time_bestilling(bestilling_bruker_id, dato, info) values ('" & bruker_id & "', '" & currDateString & "', '" & info & "')"
-            COMMAND = New MySqlCommand(Query, MysqlConn)
-            READER = COMMAND.ExecuteReader
-
-
-
-            MessageBox.Show("Ny time er bestilt.")
-            MysqlConn.Close()
-
-        Catch ex As Exception
-            MessageBox.Show(ex.Message)
-        Finally
-            MysqlConn.Dispose()
-        End Try
-
+        sql.bestillTime(bruker_id, info)
 
         'her legger vi inn måndekalender value i databasen vår ved hjelp av sql syntax.
 

@@ -2,12 +2,14 @@
 Public Class AnsattTapping
     Dim MysqlConn As MySqlConnection
     Dim COMMAND As MySqlCommand
+
+    Dim sql As New SQL_hookup()
     Private Sub AnsattTapping_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         MysqlConn = New MySqlConnection
         MysqlConn.ConnectionString =
         "Server=mysql.stud.iie.ntnu.no;Database=g_oops_22;Uid=g_oops_22;Pwd=BtUDpVoR"
 
-        FilterData("")
+        GridBruker.DataSource = sql.FilterData("")
 
 
         Dim column As DataGridViewColumn = GridBruker.Columns(0)
@@ -19,23 +21,6 @@ Public Class AnsattTapping
         Dim column2 As DataGridViewColumn = GridBruker.Columns(2)
         column2.Width = 100
     End Sub
-    Public Sub FilterData(valueToSearch As String)
-
-
-
-        Dim searchQuery As String = "SELECT bruker.bruker_id, bruker.fornavn, bruker.etternavn, blodgiver.personnummer FROM bruker, blodgiver WHERE bruker.bruker_id = blodgiver.blodgiver_bruker_id AND CONCAT(bruker_id,fornavn, etternavn, personnummer, epost) like '%" & valueToSearch & "%';"
-
-        Dim command As New MySqlCommand(searchQuery, MysqlConn)
-        Dim adapter As New MySqlDataAdapter(command)
-        Dim table As New DataTable()
-
-        adapter.Fill(table)
-
-        GridBruker.DataSource = table
-
-
-    End Sub
-
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
 
         Dim nyttBlod = 400
