@@ -408,12 +408,33 @@ Public Class SQL_hookup
             sqlgetLab.Parameters.AddWithValue("@bruker_id", bruker_id)
             Dim adapter As New MySqlDataAdapter(sqlgetLab)
             adapter.Fill(returntable)
-        Catch ex As mysqlException
+        Catch ex As MySqlException
             MsgBox(ex)
         Finally
             connection.Close()
         End Try
 
         Return returntable
+    End Function
+
+    Public Function getSisteBlodgivning(ByVal bruker_id As Integer)
+        Dim returnstring As String = ""
+        Try
+            connection.Open()
+            Dim sqlgetTapping As New MySqlCommand("SELECT MAX(dato) FROM blodtapping WHERE tapping_bruker_id = @bruker_id", connection)
+            sqlgetTapping.Parameters.AddWithValue("bruker_id", bruker_id)
+            Dim reader As MySqlDataReader = sqlgetTapping.ExecuteReader
+            If reader.HasRows Then
+                reader.Read()
+                If Not reader("MAX(dato)").GetType Is GetType(DBNull) Then
+                    returnstring = reader("MAX(dato)")
+                End If
+            End If
+        Catch ex As MySqlException
+            MsgBox(ex)
+        Finally
+            connection.Close()
+        End Try
+        Return returnstring
     End Function
 End Class

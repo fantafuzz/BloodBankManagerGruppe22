@@ -27,7 +27,8 @@ Partial Class AnsattInkalling
         Me.GridBrukere = New System.Windows.Forms.DataGridView()
         Me.Button4 = New System.Windows.Forms.Button()
         Me.ButtonInnkall = New System.Windows.Forms.Button()
-        Me.MonthCalendar1 = New System.Windows.Forms.MonthCalendar()
+        Me.Kalender1 = New System.Windows.Forms.MonthCalendar()
+        Me.tbSok = New System.Windows.Forms.TextBox()
         CType(Me.GridBrukere, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -44,19 +45,19 @@ Partial Class AnsattInkalling
         'GridBrukere
         '
         Me.GridBrukere.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.GridBrukere.Location = New System.Drawing.Point(12, 11)
+        Me.GridBrukere.Location = New System.Drawing.Point(12, 55)
         Me.GridBrukere.Margin = New System.Windows.Forms.Padding(2)
         Me.GridBrukere.Name = "GridBrukere"
         Me.GridBrukere.RowTemplate.Height = 24
-        Me.GridBrukere.Size = New System.Drawing.Size(760, 336)
+        Me.GridBrukere.Size = New System.Drawing.Size(760, 292)
         Me.GridBrukere.TabIndex = 30
         '
         'Button4
         '
         Me.Button4.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button4.Location = New System.Drawing.Point(391, 436)
+        Me.Button4.Location = New System.Drawing.Point(318, 11)
         Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(85, 34)
+        Me.Button4.Size = New System.Drawing.Size(85, 40)
         Me.Button4.TabIndex = 33
         Me.Button4.Text = "Søk"
         Me.Button4.UseVisualStyleBackColor = True
@@ -71,11 +72,20 @@ Partial Class AnsattInkalling
         Me.ButtonInnkall.Text = "Innkall til ny blodgivningstime"
         Me.ButtonInnkall.UseVisualStyleBackColor = True
         '
-        'MonthCalendar1
+        'Kalender1
         '
-        Me.MonthCalendar1.Location = New System.Drawing.Point(18, 358)
-        Me.MonthCalendar1.Name = "MonthCalendar1"
-        Me.MonthCalendar1.TabIndex = 40
+        Me.Kalender1.Location = New System.Drawing.Point(18, 358)
+        Me.Kalender1.Name = "Kalender1"
+        Me.Kalender1.TabIndex = 40
+        '
+        'tbSok
+        '
+        Me.tbSok.Location = New System.Drawing.Point(12, 11)
+        Me.tbSok.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.tbSok.Multiline = True
+        Me.tbSok.Name = "tbSok"
+        Me.tbSok.Size = New System.Drawing.Size(300, 40)
+        Me.tbSok.TabIndex = 41
         '
         'AnsattInkalling
         '
@@ -83,7 +93,8 @@ Partial Class AnsattInkalling
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(784, 561)
-        Me.Controls.Add(Me.MonthCalendar1)
+        Me.Controls.Add(Me.tbSok)
+        Me.Controls.Add(Me.Kalender1)
         Me.Controls.Add(Me.ButtonInnkall)
         Me.Controls.Add(Me.Button4)
         Me.Controls.Add(Me.GridBrukere)
@@ -95,11 +106,13 @@ Partial Class AnsattInkalling
         Me.Text = "Blood Bank Administrator 2k17™ - xTreme Edition"
         CType(Me.GridBrukere, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
     Friend WithEvents ButtonTilbake As Button
     Friend WithEvents GridBrukere As DataGridView
     Friend WithEvents Button4 As Button
     Friend WithEvents ButtonInnkall As Button
-    Friend WithEvents MonthCalendar1 As MonthCalendar
+    Friend WithEvents Kalender1 As MonthCalendar
+    Friend WithEvents tbSok As TextBox
 End Class

@@ -222,7 +222,7 @@ Partial Class AnsattHelseSjekk
         Me.PanelVelg.Controls.Add(Me.gridBruker)
         Me.PanelVelg.Location = New System.Drawing.Point(12, 12)
         Me.PanelVelg.Name = "PanelVelg"
-        Me.PanelVelg.Size = New System.Drawing.Size(770, 10)
+        Me.PanelVelg.Size = New System.Drawing.Size(770, 486)
         Me.PanelVelg.TabIndex = 43
         '
         'AnsattHelseSjekk

@@ -1,6 +1,12 @@
 ﻿Imports MySql.Data.MySqlClient
 
 Public Class AnsattInkalling
+    Dim bruker_id As Integer
+    Dim fornavn As String = ""
+    Dim etternavn As String = ""
+    Dim epost As String = ""
+    Dim personnummer As String = ""
+    Dim info As String = "Dette var en test"
     Dim sql As New SQL_hookup()
     Private Sub minSideAnsatte_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Dim brukerData As DataTable = sql.FilterData("")
@@ -20,24 +26,13 @@ Public Class AnsattInkalling
 
     End Sub
     Private Sub ButtonInnkall_Click(sender As Object, e As EventArgs) Handles ButtonInnkall.Click
-        Dim bruker_id As Integer
-        Dim fornavn As String = ""
-        Dim etternavn As String = ""
-        Dim epost As String = ""
-        Dim personnummer As String = ""
-        Dim currDate As Date = Date.Now
-        Dim currDateString As String = currDate.ToString("yyyy-MM-dd")
-        Dim info As String = "Dette var en test"
+
 
         If Not GridBrukere.CurrentRow Is Nothing Then
             bruker_id = GridBrukere.CurrentRow.Cells("bruker_id").Value
             fornavn = GridBrukere.CurrentRow.Cells("fornavn").Value
             etternavn = GridBrukere.CurrentRow.Cells("etternavn").Value
-            epost = GridBrukere.CurrentRow.Cells("epost").Value
-            'personnummer = GridBrukere.CurrentRow.Cells("personnummer").Value
         End If
-
-        MsgBox(bruker_id & " " & fornavn & " " & etternavn & " " & epost & " " & personnummer)
 
         sql.bestillTime(bruker_id, info)
 
@@ -49,5 +44,31 @@ Public Class AnsattInkalling
     Private Sub ButtonTilbake_Click(sender As Object, e As EventArgs) Handles ButtonTilbake.Click
         AnsattNavigasjon.Show()
         Me.Hide()
+    End Sub
+
+    Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
+
+        MsgBox(sql.getSisteBlodgivning(bruker_id))
+
+    End Sub
+    '21.04.2017
+    Private Sub GridBrukere_SelectionChanged(sender As Object, e As EventArgs) Handles GridBrukere.SelectionChanged
+        If Not GridBrukere.CurrentRow Is Nothing Then
+            bruker_id = GridBrukere.CurrentRow.Cells("bruker_id").Value
+            fornavn = GridBrukere.CurrentRow.Cells("fornavn").Value
+            etternavn = GridBrukere.CurrentRow.Cells("etternavn").Value
+
+            Dim datestring As String = sql.getSisteBlodgivning(bruker_id)
+            If datestring <> "" Then
+                Dim d As String = datestring.Substring(0, 2)
+                Dim m As String = datestring.Substring(3, 2)
+                Dim y As String = datestring.Substring(6, 4)
+                Dim sisteDato As DateTime = New DateTime(CInt(y), CInt(m), CInt(d))
+                Dim forsteDato As DateTime = sisteDato.AddMonths(3)
+                Kalender1.MinDate = forsteDato
+            Else
+                Kalender1.MinDate = DateTime.Today
+            End If
+        End If
     End Sub
 End Class
