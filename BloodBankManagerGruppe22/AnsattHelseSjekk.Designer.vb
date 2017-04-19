@@ -29,6 +29,8 @@ Partial Class AnsattHelseSjekk
         Me.rbGodkjent = New System.Windows.Forms.RadioButton()
         Me.rbIkkeGodkjent = New System.Windows.Forms.RadioButton()
         Me.PanelUtfor = New System.Windows.Forms.Panel()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.ListView1 = New System.Windows.Forms.ListView()
         Me.tbEtternavn = New System.Windows.Forms.TextBox()
         Me.tbSisteE = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
@@ -38,8 +40,6 @@ Partial Class AnsattHelseSjekk
         Me.btnReg = New System.Windows.Forms.Button()
         Me.btnVelg = New System.Windows.Forms.Button()
         Me.PanelVelg = New System.Windows.Forms.Panel()
-        Me.ListView1 = New System.Windows.Forms.ListView()
-        Me.Button1 = New System.Windows.Forms.Button()
         CType(Me.gridBruker, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.PanelUtfor.SuspendLayout()
         Me.PanelVelg.SuspendLayout()
@@ -127,6 +127,24 @@ Partial Class AnsattHelseSjekk
         Me.PanelUtfor.TabIndex = 41
         Me.PanelUtfor.Visible = False
         '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(6, 448)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(104, 23)
+        Me.Button1.TabIndex = 51
+        Me.Button1.Text = "Velg ny blodgiver"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
+        'ListView1
+        '
+        Me.ListView1.Location = New System.Drawing.Point(6, 35)
+        Me.ListView1.Name = "ListView1"
+        Me.ListView1.Size = New System.Drawing.Size(750, 356)
+        Me.ListView1.TabIndex = 44
+        Me.ListView1.UseCompatibleStateImageBehavior = False
+        Me.ListView1.View = System.Windows.Forms.View.Details
+        '
         'tbEtternavn
         '
         Me.tbEtternavn.Location = New System.Drawing.Point(245, 9)
@@ -206,24 +224,6 @@ Partial Class AnsattHelseSjekk
         Me.PanelVelg.Name = "PanelVelg"
         Me.PanelVelg.Size = New System.Drawing.Size(770, 486)
         Me.PanelVelg.TabIndex = 43
-        '
-        'ListView1
-        '
-        Me.ListView1.Location = New System.Drawing.Point(6, 35)
-        Me.ListView1.Name = "ListView1"
-        Me.ListView1.Size = New System.Drawing.Size(750, 356)
-        Me.ListView1.TabIndex = 44
-        Me.ListView1.UseCompatibleStateImageBehavior = False
-        Me.ListView1.View = System.Windows.Forms.View.Details
-        '
-        'Button1
-        '
-        Me.Button1.Location = New System.Drawing.Point(6, 448)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(104, 23)
-        Me.Button1.TabIndex = 51
-        Me.Button1.Text = "Velg ny blodgiver"
-        Me.Button1.UseVisualStyleBackColor = True
         '
         'AnsattHelseSjekk
         '
