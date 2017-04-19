@@ -45,10 +45,10 @@ Partial Class BrukerMinSide
         'ButtonEndre
         '
         Me.ButtonEndre.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ButtonEndre.Location = New System.Drawing.Point(209, 172)
+        Me.ButtonEndre.Location = New System.Drawing.Point(245, 188)
         Me.ButtonEndre.Margin = New System.Windows.Forms.Padding(2)
         Me.ButtonEndre.Name = "ButtonEndre"
-        Me.ButtonEndre.Size = New System.Drawing.Size(389, 75)
+        Me.ButtonEndre.Size = New System.Drawing.Size(389, 122)
         Me.ButtonEndre.TabIndex = 25
         Me.ButtonEndre.Text = "Endre Mine Opplysninger"
         Me.ButtonEndre.UseVisualStyleBackColor = True
@@ -67,10 +67,10 @@ Partial Class BrukerMinSide
         'ButtonBestill
         '
         Me.ButtonBestill.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ButtonBestill.Location = New System.Drawing.Point(209, 242)
+        Me.ButtonBestill.Location = New System.Drawing.Point(245, 294)
         Me.ButtonBestill.Margin = New System.Windows.Forms.Padding(2)
         Me.ButtonBestill.Name = "ButtonBestill"
-        Me.ButtonBestill.Size = New System.Drawing.Size(389, 76)
+        Me.ButtonBestill.Size = New System.Drawing.Size(389, 124)
         Me.ButtonBestill.TabIndex = 28
         Me.ButtonBestill.Text = "Bestill ny blodgivning"
         Me.ButtonBestill.UseVisualStyleBackColor = True
@@ -78,10 +78,10 @@ Partial Class BrukerMinSide
         'ButtonLabSvar
         '
         Me.ButtonLabSvar.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ButtonLabSvar.Location = New System.Drawing.Point(209, 318)
+        Me.ButtonLabSvar.Location = New System.Drawing.Point(245, 392)
         Me.ButtonLabSvar.Margin = New System.Windows.Forms.Padding(2)
         Me.ButtonLabSvar.Name = "ButtonLabSvar"
-        Me.ButtonLabSvar.Size = New System.Drawing.Size(389, 87)
+        Me.ButtonLabSvar.Size = New System.Drawing.Size(389, 127)
         Me.ButtonLabSvar.TabIndex = 31
         Me.ButtonLabSvar.Text = "Labaratorie Svar"
         Me.ButtonLabSvar.UseVisualStyleBackColor = True
@@ -89,10 +89,10 @@ Partial Class BrukerMinSide
         'ButtonEgenerklering
         '
         Me.ButtonEgenerklering.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ButtonEgenerklering.Location = New System.Drawing.Point(209, 104)
+        Me.ButtonEgenerklering.Location = New System.Drawing.Point(245, 108)
         Me.ButtonEgenerklering.Margin = New System.Windows.Forms.Padding(2)
         Me.ButtonEgenerklering.Name = "ButtonEgenerklering"
-        Me.ButtonEgenerklering.Size = New System.Drawing.Size(389, 71)
+        Me.ButtonEgenerklering.Size = New System.Drawing.Size(389, 95)
         Me.ButtonEgenerklering.TabIndex = 32
         Me.ButtonEgenerklering.Text = "Lever Egenerklæring"
         Me.ButtonEgenerklering.UseVisualStyleBackColor = True
