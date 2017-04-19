@@ -11,9 +11,7 @@ Public Class AnsattHelseSjekk
     Dim spm As New Sporsmaal()
 
     Private Sub AnsattHelseSjekk_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        'Her får vi deklarert vår database detaljer slik at man får tilkoblet seg til databasen via applikasjonen
-
-        gridBruker.DataSource = sql.FilterData("")
+        gridBruker.DataSource = sql.FilterData("") 'Henter data fra databasen via SQL_hookup
 
         Dim column As DataGridViewColumn = gridBruker.Columns(0)
         column.Width = 100
@@ -29,20 +27,12 @@ Public Class AnsattHelseSjekk
 
     End Sub
 
-    Private Sub Logg_ut_Click(sender As Object, e As EventArgs) Handles Logg_ut.Click
+    Private Sub btnTilbake_Click(sender As Object, e As EventArgs) Handles btnTilbake.Click
         AnsattNavigasjon.Show()
         Me.Close()
-
-        'her kan man navigere seg tilbake til navigasjonform ansatte
     End Sub
 
-    Private Sub Button3_Click(sender As Object, e As EventArgs)
-        Logginn.Show()
-        Me.Close()
-        'her kan man logge ut av ansatthelsesjekk
-    End Sub
-
-    Private Sub btnSok_Click(sender As Object, e As EventArgs) Handles btnSok.Click
+    Private Sub btnSok_Click(sender As Object, e As EventArgs) Handles btnSok.Click 'Oppdaterer datagrid til å kun vise brukere som matcher søket.
         Dim value As String = tbSok.Text
         If value <> "" Then
             gridBruker.DataSource = sql.FilterData(value)
@@ -63,30 +53,29 @@ Public Class AnsattHelseSjekk
         End If
     End Sub
 
-    Private Sub byttModus()
+    Private Sub byttModus() 'Bytter visible-propertien til panelene
         PanelUtfor.Visible = Not (PanelUtfor.Visible)
         PanelVelg.Visible = Not (PanelVelg.Visible)
     End Sub
 
-    Private Sub fyllInn()
+    Private Sub fyllInn() 'Fyller inn listview med alle spørsmål som bør forklares. Spørsmål som ikke følger standarden "ja = dårlig" eller "nei = bra" er hardkodet inn.
         tbFornavn.Text = fornavn
         tbEtternavn.Text = etternavn
         tbSisteE.Text = siste_egenerklaering.Item("dato").ToString.Substring(0, 10)
         ListView1.Clear()
         ListView1.Columns.Add("Spørsmål", 700)
         ListView1.Columns.Add("Svar", 50)
-        ListView1.LabelWrap = True
 
-        For Each spmnr In spm.getListofSpmNr
-            If spmnr Like "?_?" Then
-                If siste_egenerklaering.Item(spmnr) = True Then
-                    If spmnr <> "1_1" And spmnr <> "1_2" And spmnr <> "1_3" And spmnr <> "1_4" And spmnr <> "9_8" And spmnr <> "9_10" Then
+        For Each spmnr In spm.getListofSpmNr 'Går gjennom alle spørsmålsnummerene til spørsmålene som er lagt inn i sporsmal-klassen.
+            If spmnr Like "?_?" Then 'Vi er kun interesert i spørsmålene som har nummer som er formatert ?_?
+                If siste_egenerklaering.Item(spmnr) = True Then 'Sjekker om brukeren svarte ja på spørsmålet, i sin siste egenerklæring
+                    If spmnr <> "1_1" And spmnr <> "1_2" And spmnr <> "1_3" And spmnr <> "1_4" And spmnr <> "9_8" And spmnr <> "9_10" Then 'utelukker noen spørsmål som det ikke er et problem om de svarte ja på.
                         Dim LVitem As ListViewItem = New ListViewItem(spm.getAnySpm(spmnr))
                         LVitem.SubItems.Add("Ja")
                         ListView1.Items.Add(LVitem)
                     End If
-                ElseIf siste_egenerklaering.Item(spmnr) = False Then
-                    If spmnr = "1_3" Or spmnr = "1_4" Then
+                ElseIf siste_egenerklaering.Item(spmnr) = False Then 'Om brukeren svarte nei på disse
+                    If spmnr = "1_3" Or spmnr = "1_4" Then 'Og det er et av disse spørsmålene, er det et problem.
                         Dim LVitem As ListViewItem = New ListViewItem(spm.getAnySpm(spmnr))
                         LVitem.SubItems.Add("Nei")
                         ListView1.Items.Add(LVitem)
@@ -98,7 +87,7 @@ Public Class AnsattHelseSjekk
 
     End Sub
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+    Private Sub ButtonVelgNy_Click(sender As Object, e As EventArgs) Handles btnVelgNy.Click
         byttModus()
     End Sub
 

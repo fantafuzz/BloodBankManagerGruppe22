@@ -1,5 +1,4 @@
 ﻿Public Class BrukerEgenskjema
-    'her har vi deklarert alle egenskjema spørsmålene i en class som kalles for BrukerEgenskjema.
     Dim spm1 As New Sporsmaal("1_1")
     Dim spm2 As New Sporsmaal("1_2")
     Dim spm3 As New Sporsmaal("1_3")
@@ -62,6 +61,7 @@
     Dim spm60 As New Sporsmaal("tillat_epost")
     Dim spm61 As New Sporsmaal("tillat_sms")
     Dim spm62 As New Sporsmaal("evt_info")
+    'Initialiserer alle spørsmålene som sporsmal-objekter.
 
     Dim sql As New SQL_hookup()
 
@@ -107,7 +107,7 @@
         Return anyError 'Returnerer true om det er funnet et spørsmål som ikke er svart på.
     End Function
     Private Sub kjonnCheck()
-        Dim kjonn As String = sql.getKjonn(Logginn.currentuser)
+        Dim kjonn As String = sql.getKjonn(Logginn.currentuser) 'disabler noen av spørsmålene basert på kjønnet til brukeren. Om brukeren har kjønnet "annet" vil begge bolkene komme opp og må bli svart på.
         Select Case kjonn
             Case "Mann"
                 RadioButton64.Enabled = False
@@ -124,11 +124,11 @@
         End Select
     End Sub
     Private Sub changeToDefault(ByVal tag As Integer) ' Endrer fargene tilbake til white og whitesmoke når du svarer.
-        For Each tab As TabPage In TabControlEgenskjema.TabPages
-            For Each ctrl As Control In tab.Controls
-                If ctrl.GetType() Is GetType(System.Windows.Forms.Label) Or ctrl.GetType() Is GetType(System.Windows.Forms.Panel) Then
-                    If ctrl.Tag = tag Then
-                        Select Case ctrl.Tag Mod 2
+        For Each tab As TabPage In TabControlEgenskjema.TabPages 'Itererer gjennom hver tabpage
+            For Each ctrl As Control In tab.Controls 'Går gjennom hver control i hver tab
+                If ctrl.GetType() Is GetType(System.Windows.Forms.Label) Or ctrl.GetType() Is GetType(System.Windows.Forms.Panel) Then 'Om controlen er en label eller et panel
+                    If ctrl.Tag = tag Then 'Om panelet eller labelen har taggen lik input-tag
+                        Select Case ctrl.Tag Mod 2 'Setter fargen til enten whitesmoke eller white, etter om taggen er 0 eller 1 mod 2.
                             Case 1
                                 ctrl.BackColor = Color.WhiteSmoke
                             Case 0
@@ -139,51 +139,57 @@
             Next
         Next
     End Sub
-    Private Sub sendInn()
-        Dim tillatSms As Integer = 0
+    Private Sub sendInn() 'Formaterer alle svar til en hashtable, som sendsvar i sql_hookup bruker til å legge det inn i databasen.
+        Dim tillatSms As Integer = 0 'Default er 0, om den er checked, blir den 1
         If CheckBoxSms.Checked Then
             tillatSms = 1
         End If
-        Dim tillatEpost As Integer = 0
+        Dim tillatEpost As Integer = 0 'Samme som tillatsms
         If CheckBoxEpost.Checked Then
             tillatEpost = 1
         End If
         Dim evt As String = TextBoxEvt.Text
         Dim svarArray As New Hashtable()
-        Dim finalArray As New Hashtable()
-        For Each tab As TabPage In TabControlEgenskjema.TabPages
-            For Each ctrl As Control In tab.Controls
-                If ctrl.GetType Is GetType(Panel) Then
+        Dim finalArray As New Hashtable() 'Initialiserer hashtablene
+        For Each tab As TabPage In TabControlEgenskjema.TabPages 'Itererer gjennom hver tabpage
+            For Each ctrl As Control In tab.Controls 'Går gjennom hver control i nåværende tabpage
+                If ctrl.GetType Is GetType(Panel) Then 'Hvis controllen er av typen panel
                     Dim checkedRadios = From radio In ctrl.Controls.OfType(Of RadioButton)()
                                         Where radio.Checked
-                                        Select radio.Location.X, radio.Tag
-                    For Each item In checkedRadios
+                                        Select radio.Location.X, radio.Tag 'Bruker lynq black magick for å gå gjennom panelet og hente ut x-kordinat og tag til radioknappene som er checked. Det blir i praksis max 1 radioknapp per panel, siden det ikke er mulig å velge begge knappene. Legger x-kordinaten og tag i checkedradios, som er IEnumerable(Of 'a), som vi ikke vet helt hvordan funker, men det funker.
+                    For Each item In checkedRadios 'Går gjennom hver (of 'a) som ligger i checkedradios, og legger inn x-kordinaten til radioknappen inn i hashtable med key tag. Taggen til hver radioknapp er spørsmålsnummeret til spørsmålet, og siden det kun er to radioknapper for hvert spørsmål, som ikke begge kan være checked, blir det ikke lagt inn noen duplicate keys.
                         svarArray.Add(item.Tag, item.X.ToString)
                     Next
                 End If
             Next
         Next
-        For i = 1 To 59 Step 1
-            If svarArray.ContainsKey(CStr(i)) = False Then
+        For i = 1 To 59 Step 1 'Går gjennom hvert spørsmål (altså spørsmål 1 til spørsmål 59). Disse nummerene er keys i hashtablen som heter svarArray. Legger inn svarene inn i finalArray, med key som samsvarer med spørsmålsnummer, og verdi som er 1 for ja, 0 for nei, og -1 for ikke besvart. Ikke besvart er relevant for spørmålene som er kjønnsbaserte.
+            If svarArray.ContainsKey(CStr(i)) = False Then 'Om key-en ikke finnes i svarArray, altså spørsmålet ikke ble svart på, legges -1 inn.
                 finalArray.Add(i, -1)
-            ElseIf svarArray(CStr(i)) = 0 Then
+            ElseIf svarArray(CStr(i)) = 0 Then 'Om x-kordinaten til radioknappen var 0, var det "ja" knappen som ble valgt, og 1 legges inn i finalArray.
                 finalArray.Add(i, 1)
-            ElseIf svarArray(CStr(i)) = 52 Then
+            ElseIf svarArray(CStr(i)) = 52 Then 'Om x-kordinaten til radioknappen var 52, var det "nei" knappen som ble valgt, og 0 legges inn i finalArray.
                 finalArray.Add(i, 0)
             Else
-                finalArray.Add(i, -1)
+                finalArray.Add(i, -1) 'Om noe annet har sjedd, legges -1 inn. Dette vil ikke skje i runtime, men er viktig for feilsjekking. Siden vi bruker x-kordinaten til radioknappene til å finne ut om det var ja eller nei, er denne formen veldig følsom for små endringer i gui. For å finne disse bruker vi denne.
             End If
         Next
-        finalArray.Add(60, tillatEpost)
+        finalArray.Add(60, tillatEpost) 'Til slutt legges epost og sms inn i finalarray
         finalArray.Add(61, tillatSms)
-        sql.SendSvar(Logginn.currentuser, finalArray, evt)
+        sql.SendSvar(Logginn.currentuser, finalArray, evt) 'Finalarray og bruker-id til den innloggede brukeren blir sendt til sql_hookup-klassen, og svarene sendes til databasen.
     End Sub
     Private Sub endreForKjonn()
         Dim kjonn As String = sql.getKjonn(Logginn.currentuser)
         Select Case kjonn.ToLower
-            Case "annet"
-                RadioButton67.Enabled = False
-                RadioButton68.Enabled = False
+            Case "mann"
+                RadioButton64.Enabled = False
+                RadioButton63.Enabled = False
+                RadioButton60.Enabled = False
+                RadioButton59.Enabled = False
+                RadioButton66.Enabled = False
+                RadioButton65.Enabled = False
+                RadioButton62.Enabled = False
+                RadioButton61.Enabled = False
             Case "kvinne"
                 RadioButton68.Enabled = False
                 RadioButton67.Enabled = False
@@ -200,11 +206,10 @@
     End Sub
 
     Private Sub RadioButtonAll_CheckedChanged(sender As Object, e As EventArgs)
-        changeToDefault(DirectCast(sender, RadioButton).Tag) 'Her bruker vi directcast. Vet ikke hvorfor. Det fungerte.
+        changeToDefault(DirectCast(sender, RadioButton).Tag) 'Her bruker vi directcast. Vet ikke hvorfor. Det fungerte. Takk stackoverflow.
     End Sub
 
     Private Sub egenSkjemaTempStorage_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        'side 3 spm 15 //feil skriftstørrelse, får ikke vist hele spørsmål
 
         For i = 1 To 59
             changeToDefault(i)
@@ -276,7 +281,7 @@
         For Each tab As TabPage In TabControlEgenskjema.TabPages 'Itererer gjennom hver tab
             For Each ctrl As Control In tab.Controls
                 If ctrl.GetType() Is GetType(System.Windows.Forms.Panel) Then 'For hvert panel i hver tab
-                    Dim radios = From radio In ctrl.Controls.OfType(Of RadioButton)() 'Legg alle radioknapper inn i radios
+                    Dim radios = From radio In ctrl.Controls.OfType(Of RadioButton)() 'Legg alle radioknapper inn i radios (mere lynq black magicks)
                                  Select radio
                     For Each x In radios 'for hver radioknapp i radios
                         AddHandler DirectCast(x, RadioButton).CheckedChanged, AddressOf RadioButtonAll_CheckedChanged 'Legg til radioknapp.checkedchanged som en eventhandler for radiobuttonall_checkedchanged sub-en
@@ -289,5 +294,8 @@
 
     Private Sub ButtonSend_Click(sender As Object, e As EventArgs) Handles ButtonSend.Click
         sendInn()
+        MsgBox("Skjema er sendt inn.")
+        Me.Hide()
+        BrukerMinSide.Show()
     End Sub
 End Class

@@ -30,8 +30,7 @@ Public Class SQL_hookup
         connection.ConnectionString = connstring
     End Sub
 
-    Private Function hash(passord As String, salt As String) As String
-        'Hash for å sikre passord
+    Private Function hash(passord As String, salt As String) As String 'outputter hashed passord.
         Dim hashObject = New Security.Cryptography.SHA256Managed()
         Dim bytes = System.Text.Encoding.ASCII.GetBytes(passord & salt)
         bytes = hashObject.ComputeHash(bytes)
@@ -42,25 +41,6 @@ Public Class SQL_hookup
         Next
 
         Return hexString
-    End Function
-    Public Function Query(ByVal sql As String) As DataTable
-        Dim table As New DataTable
-        Try
-            connection.Open()
-
-
-            Dim command As New MySqlCommand(sql, connection)
-
-            Dim da As New MySqlDataAdapter
-            da.SelectCommand = command
-            da.Fill(table)
-
-            connection.Close()
-
-        Catch ex As MySqlException
-            MsgBox("En feil oppstått i 'Public Function Query', i 'SQL-hookub.vb' klassen: " & ex.Message)
-        End Try
-        Return table
     End Function
 
     Public Function logInnSql(ByVal epost As String, ByVal passord As String, ByVal type As String) As Tuple(Of Integer, String)
@@ -115,13 +95,13 @@ Public Class SQL_hookup
         End Select
 
         If fail Then
-            Return Tuple.Create(-1, "feil")
+            Return Tuple.Create(-1, "feil") 'Om noe har gått feil returneres -1 og "feil", som logginn.vb bruker til å gi tilbakemelding.
         End If
 #Disable Warning BC42105 ' Function doesn't return a value on all code paths
     End Function
 #Enable Warning BC42105 ' Function doesn't return a value on all code paths
 
-    Public Sub registrerNy(ByVal fornavn As String, ByVal etternavn As String, ByVal epost As String, ByVal passord As String, ByVal fodselsdato As String, ByVal personnummer As String, ByVal adresse As String, ByVal postnummer As Integer, ByVal poststed As String, ByVal telefonnummerEn As String, ByVal telefonnummerTo As String, ByVal kjonn As String, ByVal blodtype As Integer, ByVal blodgivningLokasjon As String, ByVal blodbefore As Boolean, ByVal hvilkenBlodbank As String, ByVal samtykke As Boolean, ByVal infoRodekors As Boolean)
+    Public Sub registrerNy(ByVal fornavn As String, ByVal etternavn As String, ByVal epost As String, ByVal passord As String, ByVal fodselsdato As String, ByVal personnummer As String, ByVal adresse As String, ByVal postnummer As Integer, ByVal poststed As String, ByVal telefonnummerEn As String, ByVal telefonnummerTo As String, ByVal kjonn As String, ByVal blodtype As Integer, ByVal blodgivningLokasjon As String, ByVal blodbefore As Boolean, ByVal hvilkenBlodbank As String, ByVal samtykke As Boolean, ByVal infoRodekors As Boolean) 'Ikke mye å forklare, bruker standard prepared statements for å legge inn nye brukere i databasen. All relevant info legges inn i bruker- og blodgiver-tabellene.
         Dim hashedPassord = hash(passord, salt)
 
         Try
@@ -231,7 +211,7 @@ Public Class SQL_hookup
             connection.Close()
         End Try
     End Sub
-    Public Sub SendSvar(ByVal currentUser As Integer, ByVal svar As Hashtable, ByVal evt As String)
+    Public Sub SendSvar(ByVal currentUser As Integer, ByVal svar As Hashtable, ByVal evt As String) 'Veldig veldig mye som skal legges inn her, bruker en hashtable for å gjøre det mer oversiktlig.
         Dim currDate As Date = Date.Now
         Try
             connection.Open()
@@ -364,7 +344,7 @@ Public Class SQL_hookup
         Return returnstring
     End Function
 
-    Public Function getSisteEgenerklaering(ByVal bruker_id As Integer) As DataRow
+    Public Function getSisteEgenerklaering(ByVal bruker_id As Integer) As DataRow 'Brukes av helsesjekk
         Dim returnTable As New DataTable()
         Dim returnRow As DataRow
         Try
@@ -379,10 +359,10 @@ Public Class SQL_hookup
         Finally
             connection.Close()
         End Try
-        Return returnRow
+        Return returnRow 'visual studio sier at det kan bli en null reference exception, men dette vil aldri forekomme om programmet og databasen er installert riktig.
     End Function
 
-    Public Function FilterData(ByVal valueToSearch As String) As DataTable
+    Public Function FilterData(ByVal valueToSearch As String) As DataTable 'brukes til datagrids som skal hente ut alle brukere.
         Dim returntable As New DataTable
         Dim value As String = "%" & valueToSearch & "%"
         Try
@@ -400,7 +380,7 @@ Public Class SQL_hookup
         Return returntable
     End Function
 
-    Public Function getLabSvar(ByVal bruker_id As Integer)
+    Public Function getLabSvar(ByVal bruker_id As Integer) 'Brukes av labsvar
         Dim returntable As New DataTable
         Try
             connection.Open()
@@ -417,7 +397,7 @@ Public Class SQL_hookup
         Return returntable
     End Function
 
-    Public Function getSisteBlodgivning(ByVal bruker_id As Integer)
+    Public Function getSisteBlodgivning(ByVal bruker_id As Integer) 'Brukes av ansattbestill og brukerbestill
         Dim returnstring As String = ""
         Try
             connection.Open()
@@ -438,7 +418,7 @@ Public Class SQL_hookup
         Return returnstring
     End Function
 
-    Public Function getAllinfo(ByVal bruker_id As Integer)
+    Public Function getAllinfo(ByVal bruker_id As Integer) 'Brukes av brukerallinfo
         Dim returntable As New DataTable
         Dim returnrow As DataRow
         Try
@@ -453,9 +433,9 @@ Public Class SQL_hookup
         Finally
             connection.Close()
         End Try
-        Return returnrow
+        Return returnrow 'Her og sier visual studio at en null reference exception kan forekomme, men dette skjer ikke om programmet og databasen er installert korrekt.
     End Function
-    Public Sub endreSingleBruker(ByVal bruker_id As Integer, ByVal field As String, ByVal value As String)
+    Public Sub endreSingleBruker(ByVal bruker_id As Integer, ByVal field As String, ByVal value As String) 'Brukes av brukerallinfo, for å endre enten blodgiver- eller bruker-tabellen. 
         Try
             connection.Open()
             Dim sqlendre As New MySqlCommand("UPDATE TABLE @table SET @field = @value WHERE blodgiver_bruker_id = @bruker_id", connection)
