@@ -82,7 +82,7 @@ Partial Class AnsattInkalling
         'btnInkall
         '
         Me.btnInkall.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnInkall.Location = New System.Drawing.Point(201, 442)
+        Me.btnInkall.Location = New System.Drawing.Point(271, 442)
         Me.btnInkall.Name = "btnInkall"
         Me.btnInkall.Size = New System.Drawing.Size(241, 78)
         Me.btnInkall.TabIndex = 42
@@ -91,7 +91,8 @@ Partial Class AnsattInkalling
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(664, 481)
+        Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1.Location = New System.Drawing.Point(664, 511)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(108, 39)
         Me.Button1.TabIndex = 43
