@@ -198,6 +198,11 @@
             End If
         End If
     End Sub
+    Private Sub ButtonForrige_Click(sender As Object, e As EventArgs) Handles ButtonForrige.Click
+        If TabControlEgenskjema.SelectedIndex > 0 Then
+            TabControlEgenskjema.SelectedIndex -= 1
+        End If
+    End Sub
 
     Private Sub RadioButtonAll_CheckedChanged(sender As Object, e As EventArgs)
         changeToDefault(DirectCast(sender, RadioButton).Tag) 'Her bruker vi directcast. Vet ikke hvorfor. Det fungerte.
@@ -289,5 +294,8 @@
 
     Private Sub ButtonSend_Click(sender As Object, e As EventArgs) Handles ButtonSend.Click
         sendInn()
+        MsgBox("Skjema er lagret i vår database.")
+        Me.Close()
+        BrukerMinSide.Show()
     End Sub
 End Class

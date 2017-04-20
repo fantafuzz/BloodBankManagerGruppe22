@@ -26,10 +26,10 @@ Partial Class AnsattInkalling
         Me.ButtonTilbake = New System.Windows.Forms.Button()
         Me.GridBrukere = New System.Windows.Forms.DataGridView()
         Me.btnSok = New System.Windows.Forms.Button()
-        Me.ButtonInnkall = New System.Windows.Forms.Button()
         Me.Kalender1 = New System.Windows.Forms.MonthCalendar()
         Me.tbSok = New System.Windows.Forms.TextBox()
-        Me.Button_inkall_inn_til_time = New System.Windows.Forms.Button()
+        Me.btnInkall = New System.Windows.Forms.Button()
+        Me.Button1 = New System.Windows.Forms.Button()
         CType(Me.GridBrukere, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -63,19 +63,10 @@ Partial Class AnsattInkalling
         Me.btnSok.Text = "Søk"
         Me.btnSok.UseVisualStyleBackColor = True
         '
-        'ButtonInnkall
-        '
-        Me.ButtonInnkall.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ButtonInnkall.Location = New System.Drawing.Point(12, 625)
-        Me.ButtonInnkall.Name = "ButtonInnkall"
-        Me.ButtonInnkall.Size = New System.Drawing.Size(242, 40)
-        Me.ButtonInnkall.TabIndex = 39
-        Me.ButtonInnkall.Text = "Innkall til ny blodgivningstime"
-        Me.ButtonInnkall.UseVisualStyleBackColor = True
-        '
         'Kalender1
         '
         Me.Kalender1.Location = New System.Drawing.Point(18, 358)
+        Me.Kalender1.MaxSelectionCount = 1
         Me.Kalender1.Name = "Kalender1"
         Me.Kalender1.TabIndex = 40
         '
@@ -88,26 +79,35 @@ Partial Class AnsattInkalling
         Me.tbSok.Size = New System.Drawing.Size(300, 40)
         Me.tbSok.TabIndex = 41
         '
-        'Button_inkall_inn_til_time
+        'btnInkall
         '
-        Me.Button_inkall_inn_til_time.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button_inkall_inn_til_time.Location = New System.Drawing.Point(18, 532)
-        Me.Button_inkall_inn_til_time.Name = "Button_inkall_inn_til_time"
-        Me.Button_inkall_inn_til_time.Size = New System.Drawing.Size(241, 78)
-        Me.Button_inkall_inn_til_time.TabIndex = 42
-        Me.Button_inkall_inn_til_time.Text = "Innkall til time"
-        Me.Button_inkall_inn_til_time.UseVisualStyleBackColor = True
+        Me.btnInkall.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnInkall.Location = New System.Drawing.Point(201, 442)
+        Me.btnInkall.Name = "btnInkall"
+        Me.btnInkall.Size = New System.Drawing.Size(241, 78)
+        Me.btnInkall.TabIndex = 42
+        Me.btnInkall.Text = "Innkall til time"
+        Me.btnInkall.UseVisualStyleBackColor = True
+        '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(664, 481)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(108, 39)
+        Me.Button1.TabIndex = 43
+        Me.Button1.Text = "Tilbake"
+        Me.Button1.UseVisualStyleBackColor = True
         '
         'AnsattInkalling
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(784, 622)
-        Me.Controls.Add(Me.Button_inkall_inn_til_time)
+        Me.ClientSize = New System.Drawing.Size(784, 562)
+        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.btnInkall)
         Me.Controls.Add(Me.tbSok)
         Me.Controls.Add(Me.Kalender1)
-        Me.Controls.Add(Me.ButtonInnkall)
         Me.Controls.Add(Me.btnSok)
         Me.Controls.Add(Me.GridBrukere)
         Me.Controls.Add(Me.ButtonTilbake)
@@ -124,8 +124,8 @@ Partial Class AnsattInkalling
     Friend WithEvents ButtonTilbake As Button
     Friend WithEvents GridBrukere As DataGridView
     Friend WithEvents btnSok As Button
-    Friend WithEvents ButtonInnkall As Button
     Friend WithEvents Kalender1 As MonthCalendar
     Friend WithEvents tbSok As TextBox
-    Friend WithEvents Button_inkall_inn_til_time As Button
+    Friend WithEvents btnInkall As Button
+    Friend WithEvents Button1 As Button
 End Class
