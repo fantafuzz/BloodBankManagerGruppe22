@@ -3348,6 +3348,10 @@
         AAA7
 </value>
   </data>
+  <data name="Label5.Text" xml:space="preserve">
+    <value>For å endre din informasjon, trykk knappen "Endre" ved siden av informasjonen som er feil, skriv inn korrekt informasjon, og trykk på den tilhørende "Lagre" knappen, som vil komme opp når du har startet endring.
+</value>
+  </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         AAABAAYAEBAAAAEAIABoBAAAZgAAAAAAAAABACAAwzEAAM4EAAAwMAAAAQAgAKglAACRNgAAICAAAAEA

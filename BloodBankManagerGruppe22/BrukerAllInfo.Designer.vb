@@ -38,7 +38,6 @@ Partial Class BrukerAllInfo
         Me.Label3 = New System.Windows.Forms.Label()
         Me.tbFornavn = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.btnOppdater = New System.Windows.Forms.Button()
         Me.tbID = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
@@ -49,7 +48,10 @@ Partial Class BrukerAllInfo
         Me.btnEndreTelefon = New System.Windows.Forms.Button()
         Me.btnEndreEpost = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.Panel1 = New System.Windows.Forms.Panel()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
         'Label1
@@ -182,15 +184,6 @@ Partial Class BrukerAllInfo
         Me.Label2.TabIndex = 22
         Me.Label2.Text = "Fornavn:"
         '
-        'btnOppdater
-        '
-        Me.btnOppdater.Location = New System.Drawing.Point(94, 271)
-        Me.btnOppdater.Name = "btnOppdater"
-        Me.btnOppdater.Size = New System.Drawing.Size(342, 25)
-        Me.btnOppdater.TabIndex = 51
-        Me.btnOppdater.Text = "Oppdater Personalia"
-        Me.btnOppdater.UseVisualStyleBackColor = True
-        '
         'tbID
         '
         Me.tbID.Location = New System.Drawing.Point(94, 81)
@@ -281,12 +274,30 @@ Partial Class BrukerAllInfo
         Me.Button1.Text = "Tilbake"
         Me.Button1.UseVisualStyleBackColor = True
         '
+        'Label5
+        '
+        Me.Label5.Location = New System.Drawing.Point(3, 0)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(178, 114)
+        Me.Label5.TabIndex = 63
+        Me.Label5.Text = resources.GetString("Label5.Text")
+        '
+        'Panel1
+        '
+        Me.Panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Panel1.Controls.Add(Me.Label5)
+        Me.Panel1.Location = New System.Drawing.Point(555, 12)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(186, 121)
+        Me.Panel1.TabIndex = 64
+        '
         'BrukerAllInfo
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 14.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(805, 477)
+        Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.btnEndreEpost)
         Me.Controls.Add(Me.btnEndreTelefon)
@@ -297,7 +308,6 @@ Partial Class BrukerAllInfo
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.tbID)
         Me.Controls.Add(Me.Label4)
-        Me.Controls.Add(Me.btnOppdater)
         Me.Controls.Add(Me.tbEpost)
         Me.Controls.Add(Me.Label11)
         Me.Controls.Add(Me.tbTlf2)
@@ -320,6 +330,7 @@ Partial Class BrukerAllInfo
         Me.Name = "BrukerAllInfo"
         Me.Text = "Blood Bank Administrator 2k17™ - xTreme Edition"
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Panel1.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -340,7 +351,6 @@ Partial Class BrukerAllInfo
     Friend WithEvents Label3 As Label
     Friend WithEvents tbFornavn As TextBox
     Friend WithEvents Label2 As Label
-    Friend WithEvents btnOppdater As Button
     Friend WithEvents tbID As TextBox
     Friend WithEvents Label4 As Label
     Friend WithEvents PictureBox1 As PictureBox
@@ -351,4 +361,6 @@ Partial Class BrukerAllInfo
     Friend WithEvents btnEndreTelefon As Button
     Friend WithEvents btnEndreEpost As Button
     Friend WithEvents Button1 As Button
+    Friend WithEvents Label5 As Label
+    Friend WithEvents Panel1 As Panel
 End Class

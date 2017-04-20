@@ -458,17 +458,28 @@ Public Class SQL_hookup
     Public Sub endreSingleBruker(ByVal bruker_id As Integer, ByVal field As String, ByVal value As String)
         Try
             connection.Open()
-            Dim sqlendre As New MySqlCommand("UPDATE TABLE @table SET @field = @value WHERE blodgiver_bruker_id = @bruker_id", connection)
-            If field = "adresse" Or field = "postnr" Or field = "poststed" Or field = "telefon_1" Or field = "telefon_2" Then
-                sqlendre.Parameters.AddWithValue("@table", "blodgiver")
-            ElseIf field = "fornavn" Or field = "etternavn" Or field = "epost" Then
-                sqlendre.Parameters.AddWithValue("@table", "bruker")
+            Dim sqlendre As MySqlCommand
+            If field = "adresse" Then
+                sqlendre = New MySqlCommand("UPDATE blodgiver SET adresse = @value WHERE blodgiver_bruker_id = @bruker_id;", connection)
+            ElseIf field = "postnr" Then
+                sqlendre = New MySqlCommand("UPDATE blodgiver SET postnr = @value WHERE blodgiver_bruker_id = @bruker_id;", connection)
+            ElseIf field = "poststed" Then
+                sqlendre = New MySqlCommand("UPDATE blodgiver SET poststed = @value WHERE blodgiver_bruker_id = @bruker_id;", connection)
+            ElseIf field = "telefon_1" Then
+                sqlendre = New MySqlCommand("UPDATE blodgiver SET telefon_1 = @value WHERE blodgiver_bruker_id = @bruker_id;", connection)
+            ElseIf field = "telefon_2" Then
+                sqlendre = New MySqlCommand("UPDATE blodgiver SET telefon_2 = @value WHERE blodgiver_bruker_id = @bruker_id;", connection)
+            ElseIf field = "fornavn" Then
+                sqlendre = New MySqlCommand("UPDATE bruker SET fornavn = @value WHERE bruker_id = @bruker_id;", connection)
+            ElseIf field = "etternavn" Then
+                sqlendre = New MySqlCommand("UPDATE bruker SET etternavn = @value WHERE bruker_id = @bruker_id;", connection)
+            ElseIf field = "epost" Then
+                sqlendre = New MySqlCommand("UPDATE bruker SET epost = @value WHERE bruker_id = @bruker_id;", connection)
             Else
                 MsgBox("What")
                 connection.Close()
                 Exit Sub
             End If
-            sqlendre.Parameters.AddWithValue("@field", field)
             sqlendre.Parameters.AddWithValue("@value", value)
             sqlendre.Parameters.AddWithValue("@bruker_id", bruker_id)
             sqlendre.ExecuteNonQuery()
