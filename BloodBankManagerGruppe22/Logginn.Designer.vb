@@ -36,10 +36,6 @@ Partial Class Logginn
         Me.OmOssToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
-        Me.Button3 = New System.Windows.Forms.Button()
-        Me.Button4 = New System.Windows.Forms.Button()
-        Me.Button5 = New System.Windows.Forms.Button()
-        Me.Button1 = New System.Windows.Forms.Button()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.PictureBox4 = New System.Windows.Forms.PictureBox()
@@ -61,6 +57,10 @@ Partial Class Logginn
         Me.Label3 = New System.Windows.Forms.Label()
         Me.ButtonRegistrer = New System.Windows.Forms.Button()
         Me.ToolTip5 = New System.Windows.Forms.ToolTip(Me.components)
+        Me.Button3 = New System.Windows.Forms.Button()
+        Me.Button4 = New System.Windows.Forms.Button()
+        Me.Button5 = New System.Windows.Forms.Button()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.MenuStrip1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -159,44 +159,6 @@ Partial Class Logginn
         '
         'Timer1
         '
-        '
-        'Button3
-        '
-        Me.Button3.Location = New System.Drawing.Point(0, 479)
-        Me.Button3.Margin = New System.Windows.Forms.Padding(2)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(56, 19)
-        Me.Button3.TabIndex = 31
-        Me.Button3.Text = "Ansatte"
-        Me.Button3.UseVisualStyleBackColor = True
-        '
-        'Button4
-        '
-        Me.Button4.Location = New System.Drawing.Point(0, 456)
-        Me.Button4.Margin = New System.Windows.Forms.Padding(2)
-        Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(56, 19)
-        Me.Button4.TabIndex = 32
-        Me.Button4.Text = "Brukere"
-        Me.Button4.UseVisualStyleBackColor = True
-        '
-        'Button5
-        '
-        Me.Button5.Location = New System.Drawing.Point(0, 401)
-        Me.Button5.Name = "Button5"
-        Me.Button5.Size = New System.Drawing.Size(75, 23)
-        Me.Button5.TabIndex = 33
-        Me.Button5.Text = "Registrering"
-        Me.Button5.UseVisualStyleBackColor = True
-        '
-        'Button1
-        '
-        Me.Button1.Location = New System.Drawing.Point(0, 428)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 23)
-        Me.Button1.TabIndex = 34
-        Me.Button1.Text = "Egenskjema"
-        Me.Button1.UseVisualStyleBackColor = True
         '
         'PictureBox1
         '
@@ -387,12 +349,50 @@ Partial Class Logginn
         Me.ButtonRegistrer.Text = "Register"
         Me.ButtonRegistrer.UseVisualStyleBackColor = False
         '
+        'Button3
+        '
+        Me.Button3.Location = New System.Drawing.Point(12, 727)
+        Me.Button3.Margin = New System.Windows.Forms.Padding(2)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(56, 19)
+        Me.Button3.TabIndex = 31
+        Me.Button3.Text = "Ansatte"
+        Me.Button3.UseVisualStyleBackColor = True
+        '
+        'Button4
+        '
+        Me.Button4.Location = New System.Drawing.Point(12, 704)
+        Me.Button4.Margin = New System.Windows.Forms.Padding(2)
+        Me.Button4.Name = "Button4"
+        Me.Button4.Size = New System.Drawing.Size(56, 19)
+        Me.Button4.TabIndex = 32
+        Me.Button4.Text = "Brukere"
+        Me.Button4.UseVisualStyleBackColor = True
+        '
+        'Button5
+        '
+        Me.Button5.Location = New System.Drawing.Point(12, 649)
+        Me.Button5.Name = "Button5"
+        Me.Button5.Size = New System.Drawing.Size(75, 23)
+        Me.Button5.TabIndex = 33
+        Me.Button5.Text = "Registrering"
+        Me.Button5.UseVisualStyleBackColor = True
+        '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(12, 676)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(75, 23)
+        Me.Button1.TabIndex = 34
+        Me.Button1.Text = "Egenskjema"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
         'Logginn
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(1254, 648)
+        Me.ClientSize = New System.Drawing.Size(1254, 625)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.ButtonRegistrer)
         Me.Controls.Add(Me.Label1)
@@ -442,11 +442,7 @@ Partial Class Logginn
     Friend WithEvents Timer1 As Timer
     Friend WithEvents ÅpninstiderToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents KontaktOssToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents Button3 As Button
-    Friend WithEvents Button4 As Button
-    Friend WithEvents Button5 As Button
     Friend WithEvents HvaSkjerNårDuGirBlodToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents Button1 As Button
     Friend WithEvents HarDuNettoppGittBlodToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents NårKanDuIkkeGiBlodToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents PictureBox1 As PictureBox
@@ -470,4 +466,8 @@ Partial Class Logginn
     Friend WithEvents Label3 As Label
     Friend WithEvents ButtonRegistrer As Button
     Friend WithEvents ToolTip5 As ToolTip
+    Friend WithEvents Button3 As Button
+    Friend WithEvents Button4 As Button
+    Friend WithEvents Button5 As Button
+    Friend WithEvents Button1 As Button
 End Class

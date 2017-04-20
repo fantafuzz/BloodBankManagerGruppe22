@@ -3796,9 +3796,10 @@ Partial Class BrukerEgenskjema
         Me.Controls.Add(Me.TabControlEgenskjema)
         Me.Controls.Add(Me.ButtonForrige)
         Me.Controls.Add(Me.ButtonNeste)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Location = New System.Drawing.Point(100, 100)
         Me.Name = "BrukerEgenskjema"
-        Me.Text = "egenSkjemaTempStorage"
+        Me.Text = "Egenerklæringskjema"
         Me.TabControlEgenskjema.ResumeLayout(False)
         Me.TabPage1.ResumeLayout(False)
         Me.TabPage2.ResumeLayout(False)
