@@ -22,45 +22,45 @@ Partial Class AnsattTapping
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
+        Me.tbSok = New System.Windows.Forms.TextBox()
+        Me.btnSok = New System.Windows.Forms.Button()
+        Me.btnRegistrer = New System.Windows.Forms.Button()
         Me.GridBruker = New System.Windows.Forms.DataGridView()
-        Me.CheckBox1 = New System.Windows.Forms.CheckBox()
-        Me.Button_Ansatt_Tilbake_fra_BlodtappingAnsatt_ = New System.Windows.Forms.Button()
+        Me.chkBlod = New System.Windows.Forms.CheckBox()
+        Me.btnTilbake = New System.Windows.Forms.Button()
         CType(Me.GridBruker, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'TextBox1
+        'tbSok
         '
-        Me.TextBox1.Location = New System.Drawing.Point(15, 14)
-        Me.TextBox1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.TextBox1.Multiline = True
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(308, 37)
-        Me.TextBox1.TabIndex = 0
+        Me.tbSok.Location = New System.Drawing.Point(15, 14)
+        Me.tbSok.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.tbSok.Multiline = True
+        Me.tbSok.Name = "tbSok"
+        Me.tbSok.Size = New System.Drawing.Size(308, 37)
+        Me.tbSok.TabIndex = 0
         '
-        'Button1
+        'btnSok
         '
-        Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.Location = New System.Drawing.Point(344, 12)
-        Me.Button1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(139, 39)
-        Me.Button1.TabIndex = 5
-        Me.Button1.Text = "Søk"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.btnSok.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnSok.Location = New System.Drawing.Point(344, 12)
+        Me.btnSok.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.btnSok.Name = "btnSok"
+        Me.btnSok.Size = New System.Drawing.Size(139, 39)
+        Me.btnSok.TabIndex = 5
+        Me.btnSok.Text = "Søk"
+        Me.btnSok.UseVisualStyleBackColor = True
         '
-        'Button2
+        'btnRegistrer
         '
-        Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button2.Location = New System.Drawing.Point(12, 488)
-        Me.Button2.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(344, 62)
-        Me.Button2.TabIndex = 6
-        Me.Button2.Text = "Registrer Tapping"
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.btnRegistrer.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnRegistrer.Location = New System.Drawing.Point(12, 488)
+        Me.btnRegistrer.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.btnRegistrer.Name = "btnRegistrer"
+        Me.btnRegistrer.Size = New System.Drawing.Size(344, 62)
+        Me.btnRegistrer.TabIndex = 6
+        Me.btnRegistrer.Text = "Registrer Tapping"
+        Me.btnRegistrer.UseVisualStyleBackColor = True
         '
         'GridBruker
         '
@@ -72,28 +72,28 @@ Partial Class AnsattTapping
         Me.GridBruker.Size = New System.Drawing.Size(757, 366)
         Me.GridBruker.TabIndex = 7
         '
-        'CheckBox1
+        'chkBlod
         '
-        Me.CheckBox1.AutoSize = True
-        Me.CheckBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.CheckBox1.Location = New System.Drawing.Point(15, 428)
-        Me.CheckBox1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.CheckBox1.Name = "CheckBox1"
-        Me.CheckBox1.Size = New System.Drawing.Size(137, 28)
-        Me.CheckBox1.TabIndex = 8
-        Me.CheckBox1.Text = "400 ml blod"
-        Me.CheckBox1.UseVisualStyleBackColor = True
+        Me.chkBlod.AutoSize = True
+        Me.chkBlod.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.chkBlod.Location = New System.Drawing.Point(15, 428)
+        Me.chkBlod.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.chkBlod.Name = "chkBlod"
+        Me.chkBlod.Size = New System.Drawing.Size(137, 28)
+        Me.chkBlod.TabIndex = 8
+        Me.chkBlod.Text = "400 ml blod"
+        Me.chkBlod.UseVisualStyleBackColor = True
         '
-        'Button_Ansatt_Tilbake_fra_BlodtappingAnsatt_
+        'btnTilbake
         '
-        Me.Button_Ansatt_Tilbake_fra_BlodtappingAnsatt_.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button_Ansatt_Tilbake_fra_BlodtappingAnsatt_.Location = New System.Drawing.Point(623, 488)
-        Me.Button_Ansatt_Tilbake_fra_BlodtappingAnsatt_.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.Button_Ansatt_Tilbake_fra_BlodtappingAnsatt_.Name = "Button_Ansatt_Tilbake_fra_BlodtappingAnsatt_"
-        Me.Button_Ansatt_Tilbake_fra_BlodtappingAnsatt_.Size = New System.Drawing.Size(149, 62)
-        Me.Button_Ansatt_Tilbake_fra_BlodtappingAnsatt_.TabIndex = 9
-        Me.Button_Ansatt_Tilbake_fra_BlodtappingAnsatt_.Text = "Tilbake"
-        Me.Button_Ansatt_Tilbake_fra_BlodtappingAnsatt_.UseVisualStyleBackColor = True
+        Me.btnTilbake.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnTilbake.Location = New System.Drawing.Point(623, 488)
+        Me.btnTilbake.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.btnTilbake.Name = "btnTilbake"
+        Me.btnTilbake.Size = New System.Drawing.Size(149, 62)
+        Me.btnTilbake.TabIndex = 9
+        Me.btnTilbake.Text = "Tilbake"
+        Me.btnTilbake.UseVisualStyleBackColor = True
         '
         'AnsattTapping
         '
@@ -101,12 +101,12 @@ Partial Class AnsattTapping
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(784, 561)
-        Me.Controls.Add(Me.Button_Ansatt_Tilbake_fra_BlodtappingAnsatt_)
-        Me.Controls.Add(Me.CheckBox1)
+        Me.Controls.Add(Me.btnTilbake)
+        Me.Controls.Add(Me.chkBlod)
         Me.Controls.Add(Me.GridBruker)
-        Me.Controls.Add(Me.Button2)
-        Me.Controls.Add(Me.Button1)
-        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.btnRegistrer)
+        Me.Controls.Add(Me.btnSok)
+        Me.Controls.Add(Me.tbSok)
         Me.Font = New System.Drawing.Font("Georgia", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Location = New System.Drawing.Point(100, 100)
         Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
@@ -118,10 +118,10 @@ Partial Class AnsattTapping
 
     End Sub
 
-    Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents Button1 As Button
-    Friend WithEvents Button2 As Button
+    Friend WithEvents tbSok As TextBox
+    Friend WithEvents btnSok As Button
+    Friend WithEvents btnRegistrer As Button
     Friend WithEvents GridBruker As DataGridView
-    Friend WithEvents CheckBox1 As CheckBox
-    Friend WithEvents Button_Ansatt_Tilbake_fra_BlodtappingAnsatt_ As Button
+    Friend WithEvents chkBlod As CheckBox
+    Friend WithEvents btnTilbake As Button
 End Class

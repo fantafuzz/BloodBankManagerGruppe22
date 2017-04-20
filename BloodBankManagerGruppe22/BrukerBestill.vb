@@ -1,51 +1,33 @@
 ﻿Imports MySql.Data.MySqlClient
 Public Class BrukerBestill
-    Dim MysqlConn As MySqlConnection
-    Dim COMMAND As MySqlCommand
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button_bestill_ny_time_blod_bruker_blodgiver.Click
+    Dim sql As New SQL_hookup()
+    Private Sub btnBestill_Click(sender As Object, e As EventArgs) Handles btnBestill.Click
+        Dim dato As DateTime = kalender1.SelectionRange.Start
+        Dim y As Integer = dato.Year
+        Dim m As Integer = dato.Month
+        Dim d As Integer = dato.Day
+        Dim usedate As String = y & "-" & m & "-" & d
 
-        'under deklarer vi tilkoblingen til databasen vår til MySQL.
-
-
-
-
-
-
-
-        MysqlConn = New MySqlConnection
-        MysqlConn.ConnectionString =
-            "Server=mysql.stud.iie.ntnu.no;Database=g_oops_22;Uid=g_oops_22;Pwd=BtUDpVoR"
-        Dim READER As MySqlDataReader
-
-        Try
-            MysqlConn.Open()
-            Dim Query As String
-            'under legger vi inn month calender verdien som blir valgt inn i databasen vår ved hjelp av SQL Syntax.
-            Query = "insert into g_oops_22.time_bestilling(bestilling_id,dato,info,bestilling_bruker_id) values (1, '" & MonthCalendar1.SelectionStart.Date.ToString("yyyy-MM-dd") & "')"
-            COMMAND = New MySqlCommand(Query, MysqlConn)
-            READER = COMMAND.ExecuteReader
-
-
-
-
-            MysqlConn.Close()
-
-        Catch ex As Exception
-
-            MessageBox.Show(ex.Message)
-        Finally
-            MysqlConn.Dispose()
-        End Try
+        sql.bestillTime(Logginn.currentuser, "Time bestillt av blodgiver", usedate)
+        MsgBox("Time er bestilt!")
     End Sub
 
-    Private Sub kalender_bestilling_blodgiver_tilbake__Click(sender As Object, e As EventArgs) Handles kalender_bestilling_blodgiver_tilbake_.Click
-
-        'her kan man navigere seg tilbake til minside for brukere. Og da blir automatisk kalender bestilling blodgiver formen avsluttet.
+    Private Sub btnTilbake_Click(sender As Object, e As EventArgs) Handles btnTilbake.Click
         BrukerMinSide.Show()
         Me.Close()
     End Sub
 
     Private Sub BrukerBestill_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
+        Dim datestring As String = sql.getSisteBlodgivning(Logginn.currentuser)
+        If datestring <> "" Then
+            Dim d As String = datestring.Substring(0, 2)
+            Dim m As String = datestring.Substring(3, 2)
+            Dim y As String = datestring.Substring(6, 4)
+            Dim sisteDato As DateTime = New DateTime(CInt(y), CInt(m), CInt(d))
+            Dim forsteDato As DateTime = sisteDato.AddMonths(3)
+            kalender1.MinDate = forsteDato
+        Else
+            kalender1.MinDate = DateTime.Today
+        End If
     End Sub
 End Class

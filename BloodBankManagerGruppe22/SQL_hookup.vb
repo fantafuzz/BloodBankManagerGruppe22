@@ -163,21 +163,24 @@ Public Class SQL_hookup
         Dim currdate As Date = Date.Today()
         Try
             connection.Open()
-            Dim sqlendring As New MySqlCommand("INSERT INTO blodbeholdning_endring (dato, endring_aarsak, endring_mengde, endring_blodbeholdning_id) VALUES (@dato, @aarsak, @mengde, (SELECT blodbeholdning_id FROM blodbeholdning, blodgiver, blodtype WHERE blodbeholdning.beholdningstype_navn = blodtype.blodtype_navn AND blodgiver.blodgiver_blodtype_id = blodtype.blodtype_id AND blodgiver.blodgiver_bruker_id = @bruker))", connection)
+            Dim sqlendring As New MySqlCommand("INSERT INTO blodbeholdning_endring (dato, endring_aarsak, endring_mengde, endring_blodbeholdning_id) VALUES (@dato, @aarsak, @mengde, (SELECT beholdningstype_id FROM blodbeholdning, blodgiver, blodtype WHERE blodbeholdning.beholdningstype_id = blodtype.blodtype_id AND blodgiver.blodgiver_blodtype_id = blodtype.blodtype_id AND blodgiver.blodgiver_bruker_id = @bruker))", connection)
             sqlendring.Parameters.AddWithValue("@dato", currdate)
             sqlendring.Parameters.AddWithValue("@aarsak", "Blodtapping")
             sqlendring.Parameters.AddWithValue("@mengde", 400)
             sqlendring.Parameters.AddWithValue("@bruker", bruker)
+            sqlendring.ExecuteNonQuery()
 
-            Dim sqltapping As New MySqlCommand("INSERT INTO blodtapping (tapping_bruker_id, tapping_endring_id) VALUES ((SELECT bruker_id FROM bruker WHERE bruker_id = @bruker),(SELECT endring_id FROM blodbeholdning_endring WHERE endring_aarsak = @aarsak AND endring_mengde = @mengde AND dato = @dato AND endring_beholdning_id = (SELECT beholdningstype_id FROM blodbeholdning, blodgiver, blodtype WHERE blodbeholdning.beholdningstype_navn = blodtype.blodtype_navn AND blodgiver.blodgiver_blodtype_id = blodtype.blodtype_id AND blodgiver.blodgiver_bruker_id = @bruker)))", connection)
+            Dim sqltapping As New MySqlCommand("INSERT INTO blodtapping (tapping_bruker_id, tapping_endring_id) VALUES ((SELECT bruker_id FROM bruker WHERE bruker_id = @bruker),(SELECT MAX(endring_id) FROM blodbeholdning_endring WHERE endring_aarsak = @aarsak AND endring_mengde = @mengde AND dato = @dato AND endring_blodbeholdning_id = (SELECT beholdningstype_id FROM blodbeholdning, blodgiver, blodtype WHERE blodbeholdning.beholdningstype_navn = blodtype.blodtype_navn AND blodgiver.blodgiver_blodtype_id = blodtype.blodtype_id AND blodgiver.blodgiver_bruker_id = @bruker)))", connection)
             sqltapping.Parameters.AddWithValue("@aarsak", "Blodtapping")
             sqltapping.Parameters.AddWithValue("@mengde", 400)
             sqltapping.Parameters.AddWithValue("@dato", currdate)
             sqltapping.Parameters.AddWithValue("@bruker", bruker)
+            sqltapping.ExecuteNonQuery()
 
             Dim sqlbeholdning As New MySqlCommand("UPDATE blodbeholdning SET beholdningstype_mengde = beholdningstype_mengde + @mengde WHERE beholdningstype_id = (SELECT beholdningstype_id FROM blodbeholdning, blodgiver, blodtype WHERE blodbeholdning.beholdningstype_navn = blodtype.blodtype_navn AND blodgiver.blodgiver_blodtype_id = blodtype.blodtype_id AND blodgiver.blodgiver_bruker_id = @bruker)", connection)
             sqlbeholdning.Parameters.AddWithValue("@mengde", 400)
             sqlbeholdning.Parameters.AddWithValue("@bruker", bruker)
+            sqlbeholdning.ExecuteNonQuery()
         Catch ex As Exception
 
         End Try
@@ -200,14 +203,14 @@ Public Class SQL_hookup
         End Try
     End Sub
 
-    Public Sub bestillTime(ByVal bruker_id As Integer, ByVal info As String)
-        Dim currDate As Date = Date.Today
+    Public Sub bestillTime(ByVal bruker_id As Integer, ByVal info As String, ByVal dato As String)
         Try
             connection.Open()
             Dim sqlBestill As New MySqlCommand("INSERT INTO time_bestilling (bestilling_bruker_id, dato, info) values ((SELECT blodgiver_bruker_id FROM blodgiver WHERE blodgiver_bruker_id = @bruker_id), @dato, @info)", connection)
             sqlBestill.Parameters.AddWithValue("@bruker_id", bruker_id)
-            sqlBestill.Parameters.AddWithValue("@dato", currDate)
+            sqlBestill.Parameters.AddWithValue("@dato", dato)
             sqlBestill.Parameters.AddWithValue("@info", info)
+            sqlBestill.ExecuteNonQuery()
         Catch ex As MySqlException
             MsgBox(ex)
         Finally
@@ -379,7 +382,9 @@ Public Class SQL_hookup
         Finally
             connection.Close()
         End Try
+#Disable Warning BC42104 ' Variable is used before it has been assigned a value
         Return returnRow
+#Enable Warning BC42104 ' Variable is used before it has been assigned a value
     End Function
 
     Public Function FilterData(ByVal valueToSearch As String) As DataTable
@@ -430,8 +435,6 @@ Public Class SQL_hookup
                     returnstring = reader("MAX(dato)")
                 End If
             End If
-        Catch ex As MySqlException
-            MsgBox(ex)
         Finally
             connection.Close()
         End Try
@@ -453,7 +456,9 @@ Public Class SQL_hookup
         Finally
             connection.Close()
         End Try
+#Disable Warning BC42104 ' Variable is used before it has been assigned a value
         Return returnrow
+#Enable Warning BC42104 ' Variable is used before it has been assigned a value
     End Function
     Public Sub endreSingleBruker(ByVal bruker_id As Integer, ByVal field As String, ByVal value As String)
         Try

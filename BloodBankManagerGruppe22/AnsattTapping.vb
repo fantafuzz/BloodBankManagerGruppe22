@@ -1,14 +1,8 @@
 ﻿Imports MySql.Data.MySqlClient
 Public Class AnsattTapping
-    Dim MysqlConn As MySqlConnection
-    Dim COMMAND As MySqlCommand
 
     Dim sql As New SQL_hookup()
     Private Sub AnsattTapping_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        MysqlConn = New MySqlConnection
-        MysqlConn.ConnectionString =
-        "Server=mysql.stud.iie.ntnu.no;Database=g_oops_22;Uid=g_oops_22;Pwd=BtUDpVoR"
-
         GridBruker.DataSource = sql.FilterData("")
 
 
@@ -21,56 +15,26 @@ Public Class AnsattTapping
         Dim column2 As DataGridViewColumn = GridBruker.Columns(2)
         column2.Width = 100
     End Sub
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-
-        Dim nyttBlod = 400
-        Dim dato As Date = Date.Today
-
-        Dim bruker_id As Integer
-        Dim fornavn As String = ""
-        Dim etternavn As String = ""
-        Dim personnummer As String = ""
-        Dim currDate As Date = Date.Now
-        Dim currDateString As String = currDate.ToString("yyyy-MM-dd")
-
-        If Not GridBruker.CurrentRow Is Nothing Then
-            bruker_id = GridBruker.CurrentRow.Cells("bruker_id").Value
-            fornavn = GridBruker.CurrentRow.Cells("fornavn").Value
-            etternavn = GridBruker.CurrentRow.Cells("etternavn").Value
-            personnummer = GridBruker.CurrentRow.Cells("personnummer").Value
+    Private Sub btnSok_Click(sender As Object, e As EventArgs) Handles btnSok.Click
+        Dim value As String = tbSok.Text
+        If value <> "" Then
+            GridBruker.DataSource = sql.FilterData(value)
         End If
-
-        SendSvar(bruker_id)
-
-
     End Sub
 
-    Public Sub SendSvar(ByVal bruker As Integer)
-        Dim currDate As Date = Date.Now
-        Try
-            MysqlConn.Open()
-
-            Dim sqlendring As New MySqlCommand("INSERT INTO blodbeholdning_endring (dato, endring_aarsak, endring_mengde, endring_blodbeholdning_id) VALUES (@dato, @aarsak, @mengde, (SELECT blodbeholdning_id FROM blodbeholdning, blodgiver, blodtype WHERE blodbeholdning.beholdningstype_navn = blodtype.blodtype_navn AND blodgiver.blodgiver_blodtype_id = blodtype.blodtype_id AND blodgiver.blodgiver_bruker_id = @bruker))")
-            sqlendring.Parameters.AddWithValue("@dato", currDate)
-            sqlendring.Parameters.AddWithValue("@aarsak", "Blodtapping")
-            sqlendring.Parameters.AddWithValue("@mengde", 400)
-            sqlendring.Parameters.AddWithValue("@bruker", bruker)
-
-            Dim sqltapping As New MySqlCommand("INSERT INTO blodtapping (tapping_bruker_id, tapping_endring_id) VALUES ((SELECT bruker_id FROM bruker WHERE bruker_id = @bruker),(SELECT endring_id FROM blodbeholdning_endring WHERE endring_aarsak = @aarsak AND endring_mengde = @mengde AND dato = @dato AND endring_beholdning_id = (SELECT beholdning_id FROM blodbeholdning, blodgiver, blodtype WHERE blodbeholdning.beholdningstype_navn = blodtype.blodtype_navn AND blodgiver.blodgiver_blodtype_id = blodtype.blodtype_id AND blodgiver.blodgiver_bruker_id = @bruker)))")
-            sqltapping.Parameters.AddWithValue("@aarsak", "Blodtapping")
-            sqltapping.Parameters.AddWithValue("@mengde", 400)
-            sqltapping.Parameters.AddWithValue("@dato", currDate)
-            sqltapping.Parameters.AddWithValue("@bruker", bruker)
-
-        Catch ex As MySqlException
-            MsgBox("Feil ved tilkobling til databasen: " & ex.Message)
-        Finally
-            MysqlConn.Close()
-        End Try
-    End Sub
-
-    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button_Ansatt_Tilbake_fra_BlodtappingAnsatt_.Click
+    Private Sub btnTilbake_Click(sender As Object, e As EventArgs) Handles btnTilbake.Click
         AnsattNavigasjon.Show()
         Me.Hide()
+    End Sub
+
+    Private Sub btnRegistrer_Click(sender As Object, e As EventArgs) Handles btnRegistrer.Click
+        Dim bruker_id As Integer
+        If Not GridBruker.CurrentRow Is Nothing Then
+            If Not GridBruker.CurrentRow.Cells("bruker_id").Value.GetType Is GetType(DBNull) Then
+                bruker_id = GridBruker.CurrentRow.Cells("bruker_id").Value
+            End If
+        End If
+
+        sql.tapping(bruker_id)
     End Sub
 End Class
