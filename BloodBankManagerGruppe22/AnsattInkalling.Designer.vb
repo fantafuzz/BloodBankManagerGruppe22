@@ -29,13 +29,14 @@ Partial Class AnsattInkalling
         Me.ButtonInnkall = New System.Windows.Forms.Button()
         Me.Kalender1 = New System.Windows.Forms.MonthCalendar()
         Me.tbSok = New System.Windows.Forms.TextBox()
+        Me.Button_inkall_inn_til_time = New System.Windows.Forms.Button()
         CType(Me.GridBrukere, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'ButtonTilbake
         '
         Me.ButtonTilbake.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ButtonTilbake.Location = New System.Drawing.Point(632, 509)
+        Me.ButtonTilbake.Location = New System.Drawing.Point(632, 570)
         Me.ButtonTilbake.Name = "ButtonTilbake"
         Me.ButtonTilbake.Size = New System.Drawing.Size(140, 40)
         Me.ButtonTilbake.TabIndex = 25
@@ -87,12 +88,23 @@ Partial Class AnsattInkalling
         Me.tbSok.Size = New System.Drawing.Size(300, 40)
         Me.tbSok.TabIndex = 41
         '
+        'Button_inkall_inn_til_time
+        '
+        Me.Button_inkall_inn_til_time.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button_inkall_inn_til_time.Location = New System.Drawing.Point(18, 532)
+        Me.Button_inkall_inn_til_time.Name = "Button_inkall_inn_til_time"
+        Me.Button_inkall_inn_til_time.Size = New System.Drawing.Size(241, 78)
+        Me.Button_inkall_inn_til_time.TabIndex = 42
+        Me.Button_inkall_inn_til_time.Text = "Innkall til time"
+        Me.Button_inkall_inn_til_time.UseVisualStyleBackColor = True
+        '
         'AnsattInkalling
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(784, 561)
+        Me.ClientSize = New System.Drawing.Size(784, 622)
+        Me.Controls.Add(Me.Button_inkall_inn_til_time)
         Me.Controls.Add(Me.tbSok)
         Me.Controls.Add(Me.Kalender1)
         Me.Controls.Add(Me.ButtonInnkall)
@@ -115,4 +127,5 @@ Partial Class AnsattInkalling
     Friend WithEvents ButtonInnkall As Button
     Friend WithEvents Kalender1 As MonthCalendar
     Friend WithEvents tbSok As TextBox
+    Friend WithEvents Button_inkall_inn_til_time As Button
 End Class

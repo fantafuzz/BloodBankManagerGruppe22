@@ -72,4 +72,8 @@ Public Class AnsattInkalling
             End If
         End If
     End Sub
+
+    Private Sub Button_inkall_inn_til_time_Click(sender As Object, e As EventArgs) Handles Button_inkall_inn_til_time.Click
+
+    End Sub
 End Class
