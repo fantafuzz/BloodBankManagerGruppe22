@@ -28,7 +28,6 @@ Partial Class AnsattNavigasjon
         Me.Bestill_Ny_BlodTime = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Button_blodprodukter = New System.Windows.Forms.Button()
-        Me.Button_motta_bestillinger = New System.Windows.Forms.Button()
         Me.Button_tapping_blod = New System.Windows.Forms.Button()
         Me.Button_helsesjekk = New System.Windows.Forms.Button()
         Me.SuspendLayout()
@@ -36,7 +35,7 @@ Partial Class AnsattNavigasjon
         'Statistikk
         '
         Me.Statistikk.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Statistikk.Location = New System.Drawing.Point(250, 294)
+        Me.Statistikk.Location = New System.Drawing.Point(250, 454)
         Me.Statistikk.Name = "Statistikk"
         Me.Statistikk.Size = New System.Drawing.Size(516, 90)
         Me.Statistikk.TabIndex = 39
@@ -82,23 +81,13 @@ Partial Class AnsattNavigasjon
         Me.Button_blodprodukter.Name = "Button_blodprodukter"
         Me.Button_blodprodukter.Size = New System.Drawing.Size(516, 81)
         Me.Button_blodprodukter.TabIndex = 40
-        Me.Button_blodprodukter.Text = "Blodprodukter"
+        Me.Button_blodprodukter.Text = "Utlevering av blodprodukter"
         Me.Button_blodprodukter.UseVisualStyleBackColor = True
-        '
-        'Button_motta_bestillinger
-        '
-        Me.Button_motta_bestillinger.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button_motta_bestillinger.Location = New System.Drawing.Point(250, 380)
-        Me.Button_motta_bestillinger.Name = "Button_motta_bestillinger"
-        Me.Button_motta_bestillinger.Size = New System.Drawing.Size(516, 90)
-        Me.Button_motta_bestillinger.TabIndex = 41
-        Me.Button_motta_bestillinger.Text = "Motta Bestillinger"
-        Me.Button_motta_bestillinger.UseVisualStyleBackColor = True
         '
         'Button_tapping_blod
         '
         Me.Button_tapping_blod.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button_tapping_blod.Location = New System.Drawing.Point(250, 461)
+        Me.Button_tapping_blod.Location = New System.Drawing.Point(250, 289)
         Me.Button_tapping_blod.Name = "Button_tapping_blod"
         Me.Button_tapping_blod.Size = New System.Drawing.Size(516, 90)
         Me.Button_tapping_blod.TabIndex = 43
@@ -108,7 +97,7 @@ Partial Class AnsattNavigasjon
         'Button_helsesjekk
         '
         Me.Button_helsesjekk.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button_helsesjekk.Location = New System.Drawing.Point(250, 544)
+        Me.Button_helsesjekk.Location = New System.Drawing.Point(250, 372)
         Me.Button_helsesjekk.Name = "Button_helsesjekk"
         Me.Button_helsesjekk.Size = New System.Drawing.Size(516, 90)
         Me.Button_helsesjekk.TabIndex = 44
@@ -123,7 +112,6 @@ Partial Class AnsattNavigasjon
         Me.ClientSize = New System.Drawing.Size(1083, 734)
         Me.Controls.Add(Me.Button_helsesjekk)
         Me.Controls.Add(Me.Button_tapping_blod)
-        Me.Controls.Add(Me.Button_motta_bestillinger)
         Me.Controls.Add(Me.Button_blodprodukter)
         Me.Controls.Add(Me.Statistikk)
         Me.Controls.Add(Me.Logg_ut)
@@ -146,7 +134,6 @@ Partial Class AnsattNavigasjon
     Friend WithEvents Bestill_Ny_BlodTime As Button
     Friend WithEvents Label1 As Label
     Friend WithEvents Button_blodprodukter As Button
-    Friend WithEvents Button_motta_bestillinger As Button
     Friend WithEvents Button_tapping_blod As Button
     Friend WithEvents Button_helsesjekk As Button
 End Class

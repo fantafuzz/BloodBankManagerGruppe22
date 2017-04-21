@@ -33,8 +33,10 @@ Public Class AnsattTapping
             If Not GridBruker.CurrentRow.Cells("bruker_id").Value.GetType Is GetType(DBNull) Then
                 bruker_id = GridBruker.CurrentRow.Cells("bruker_id").Value
             End If
+            sql.tapping(bruker_id)
+        Else
+            MsgBox("Vennligst velg en blodgiver.")
         End If
-
-        sql.tapping(bruker_id)
+        MsgBox("Tapping er registrert!")
     End Sub
 End Class

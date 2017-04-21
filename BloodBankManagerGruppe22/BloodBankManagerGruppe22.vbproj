@@ -178,12 +178,6 @@
     <Compile Include="AnsattNavigasjon.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="mottaBestillinger.Designer.vb">
-      <DependentUpon>mottaBestillinger.vb</DependentUpon>
-    </Compile>
-    <Compile Include="mottaBestillinger.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="Registrering.Designer.vb">
       <DependentUpon>Registrering.vb</DependentUpon>
     </Compile>
@@ -256,9 +250,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AnsattNavigasjon.resx">
       <DependentUpon>AnsattNavigasjon.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="mottaBestillinger.resx">
-      <DependentUpon>mottaBestillinger.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>

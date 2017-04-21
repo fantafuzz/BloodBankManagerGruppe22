@@ -31,12 +31,6 @@
         'her viderekobler man seg til statistikk ansatt form og avslutter ansatt navigasjon form
     End Sub
 
-    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button_motta_bestillinger.Click
-        mottaBestillinger.Show()
-        Me.Close()
-        'her viderekobler man seg til motta bestillinger ansatt form og avslutter ansatt navigasjon form
-    End Sub
-
     Private Sub Button3_Click(sender As Object, e As EventArgs)
         AnsattTapping.Show()
         Me.Close()

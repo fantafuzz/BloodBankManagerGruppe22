@@ -163,26 +163,22 @@ Public Class SQL_hookup
         Dim currdate As Date = Date.Today()
         Try
             connection.Open()
-            Dim sqlendring As New MySqlCommand("INSERT INTO blodbeholdning_endring (dato, endring_aarsak, endring_mengde, endring_blodbeholdning_id) VALUES (@dato, @aarsak, @mengde, (SELECT beholdningstype_id FROM blodbeholdning, blodgiver, blodtype WHERE blodbeholdning.beholdningstype_id = blodtype.blodtype_id AND blodgiver.blodgiver_blodtype_id = blodtype.blodtype_id AND blodgiver.blodgiver_bruker_id = @bruker))", connection)
+            Dim sqlendring As New MySqlCommand("INSERT INTO blodbeholdning_endring (dato, endring_aarsak, endring_mengde, endring_blodbeholdning_id) VALUES (@dato, @aarsak, @mengde, (SELECT blodbeholdning.beholdningstype_id FROM blodbeholdning, blodgiver WHERE blodbeholdning.beholdningstype_id = blodgiver.blodgiver_blodtype_id AND blodgiver.blodgiver_bruker_id = @bruker))", connection)
             sqlendring.Parameters.AddWithValue("@dato", currdate)
             sqlendring.Parameters.AddWithValue("@aarsak", "Blodtapping")
             sqlendring.Parameters.AddWithValue("@mengde", 400)
             sqlendring.Parameters.AddWithValue("@bruker", bruker)
             sqlendring.ExecuteNonQuery()
 
-            Dim sqltapping As New MySqlCommand("INSERT INTO blodtapping (tapping_bruker_id, tapping_endring_id) VALUES ((SELECT bruker_id FROM bruker WHERE bruker_id = @bruker),(SELECT MAX(endring_id) FROM blodbeholdning_endring WHERE endring_aarsak = @aarsak AND endring_mengde = @mengde AND dato = @dato AND endring_blodbeholdning_id = (SELECT beholdningstype_id FROM blodbeholdning, blodgiver, blodtype WHERE blodbeholdning.beholdningstype_navn = blodtype.blodtype_navn AND blodgiver.blodgiver_blodtype_id = blodtype.blodtype_id AND blodgiver.blodgiver_bruker_id = @bruker)))", connection)
+            Dim sqltapping As New MySqlCommand("INSERT INTO blodtapping (tapping_bruker_id, tapping_endring_id) VALUES ((SELECT bruker_id FROM bruker WHERE bruker_id = @bruker),(SELECT MAX(endring_id) FROM blodbeholdning_endring WHERE endring_aarsak = @aarsak AND endring_mengde = @mengde AND dato = @dato AND endring_blodbeholdning_id = (SELECT blodbeholdning.beholdningstype_id FROM blodbeholdning, blodgiver WHERE blodgiver.blodgiver_blodtype_id = blodbeholdning.beholdningstype_id AND blodgiver.blodgiver_bruker_id = @bruker)))", connection)
             sqltapping.Parameters.AddWithValue("@aarsak", "Blodtapping")
             sqltapping.Parameters.AddWithValue("@mengde", 400)
             sqltapping.Parameters.AddWithValue("@dato", currdate)
             sqltapping.Parameters.AddWithValue("@bruker", bruker)
             sqltapping.ExecuteNonQuery()
-
-            Dim sqlbeholdning As New MySqlCommand("UPDATE blodbeholdning SET beholdningstype_mengde = beholdningstype_mengde + @mengde WHERE beholdningstype_id = (SELECT beholdningstype_id FROM blodbeholdning, blodgiver, blodtype WHERE blodbeholdning.beholdningstype_navn = blodtype.blodtype_navn AND blodgiver.blodgiver_blodtype_id = blodtype.blodtype_id AND blodgiver.blodgiver_bruker_id = @bruker)", connection)
-            sqlbeholdning.Parameters.AddWithValue("@mengde", 400)
-            sqlbeholdning.Parameters.AddWithValue("@bruker", bruker)
-            sqlbeholdning.ExecuteNonQuery()
         Catch ex As Exception
-
+        Finally
+            connection.Close()
         End Try
     End Sub
 
@@ -197,7 +193,6 @@ Public Class SQL_hookup
             sqlSend.Parameters.AddWithValue("@bruker_id", bruker_id)
             sqlSend.ExecuteNonQuery()
         Catch ex As MySqlException
-            MsgBox(ex)
         Finally
             connection.Close()
         End Try
@@ -212,24 +207,22 @@ Public Class SQL_hookup
             sqlBestill.Parameters.AddWithValue("@info", info)
             sqlBestill.ExecuteNonQuery()
         Catch ex As MySqlException
-            MsgBox(ex)
         Finally
             connection.Close()
         End Try
     End Sub
 
-    Public Sub test()
-        Dim please As Int32 = 1
+    Public Sub MottaUtleverBlod(ByVal mengde As Integer, id As Integer)
         Dim currDate As Date = Date.Today()
-        Dim currDateString As String = currDate.ToString("YYYY-mm-dd")
         Try
             connection.Open()
-            Dim sqltest As New MySqlCommand("INSERT INTO testtabell (test_dato, test_data) VALUES (@test_dato, @test_data)", connection)
-            sqltest.Parameters.AddWithValue("@test_data", please)
-            sqltest.Parameters.AddWithValue("@test_dato", currDate)
-            sqltest.ExecuteNonQuery()
-        Catch ex As MySqlException
-            MsgBox(ex)
+            Dim sqlUtlever As New MySqlCommand("INSERT INTO blodbeholdning_endring (dato, endring_aarsak, endring_mengde, endring_blodbeholdning_id) VALUES (@dato, @aarsak, @mengde, (SELECT beholdningstype_id FROM blodbeholdning WHERE beholdningstype_id = @id))", connection)
+            sqlUtlever.Parameters.AddWithValue("@dato", currDate)
+            sqlUtlever.Parameters.AddWithValue("@aarsak", "Utlevering")
+            sqlUtlever.Parameters.AddWithValue("@mengde", mengde)
+            sqlUtlever.Parameters.AddWithValue("@id", id)
+            sqlUtlever.ExecuteNonQuery()
+        Catch ex As Exception
         Finally
             connection.Close()
         End Try
@@ -322,7 +315,6 @@ Public Class SQL_hookup
                 fornavn = reader("fornavn")
             End If
         Catch ex As MySqlException
-            MsgBox(ex)
         Finally
             connection.Close()
         End Try
@@ -340,7 +332,6 @@ Public Class SQL_hookup
                 kjonn = reader("kjonn")
             End If
         Catch ex As MySqlException
-            MsgBox(ex)
         Finally
             connection.Close()
         End Try
@@ -360,7 +351,6 @@ Public Class SQL_hookup
                 returnstring = reader(what)
             End If
         Catch ex As MySqlException
-            MsgBox(ex)
         Finally
             connection.Close()
         End Try
@@ -378,7 +368,6 @@ Public Class SQL_hookup
             adapter.Fill(returnTable)
             returnRow = returnTable.Rows(0)
         Catch ex As MySqlException
-            MsgBox(ex)
         Finally
             connection.Close()
         End Try
@@ -397,14 +386,26 @@ Public Class SQL_hookup
             Dim adapter As New MySqlDataAdapter(sqlFilterData)
             adapter.Fill(returntable)
         Catch ex As MySqlException
-            MsgBox(ex)
         Finally
             connection.Close()
         End Try
 
         Return returntable
     End Function
+    Public Function getBlodprodukter() As DataTable
+        Dim returntable As New DataTable
+        Try
+            connection.Open()
+            Dim sqlGet As New MySqlCommand("SELECT blodbeholdning.beholdningstype_id AS id, blodbeholdning.beholdningstype_navn AS Type, SUM(blodbeholdning_endring.endring_mengde) AS Mengde FROM blodbeholdning JOIN blodbeholdning_endring ON blodbeholdning.beholdningstype_id = blodbeholdning_endring.endring_blodbeholdning_id GROUP BY blodbeholdning.beholdningstype_id, blodbeholdning.beholdningstype_navn", connection)
+            Dim adapter As New MySqlDataAdapter(sqlGet)
+            adapter.Fill(returntable)
+        Catch ex As Exception
 
+        Finally
+            connection.Close()
+        End Try
+        Return returntable
+    End Function
     Public Function getLabSvar(ByVal bruker_id As Integer)
         Dim returntable As New DataTable
         Try
@@ -414,7 +415,6 @@ Public Class SQL_hookup
             Dim adapter As New MySqlDataAdapter(sqlgetLab)
             adapter.Fill(returntable)
         Catch ex As MySqlException
-            MsgBox(ex)
         Finally
             connection.Close()
         End Try
@@ -426,13 +426,13 @@ Public Class SQL_hookup
         Dim returnstring As String = ""
         Try
             connection.Open()
-            Dim sqlgetTapping As New MySqlCommand("SELECT MAX(dato) FROM blodtapping WHERE tapping_bruker_id = @bruker_id", connection)
+            Dim sqlgetTapping As New MySqlCommand("SELECT MAX(blodbeholdning_endring.dato) AS Dato FROM blodbeholdning_endring, blodtapping WHERE blodtapping.tapping_bruker_id = @bruker_id AND blodtapping.tapping_endring_id = blodbeholdning_endring.dato", connection)
             sqlgetTapping.Parameters.AddWithValue("bruker_id", bruker_id)
             Dim reader As MySqlDataReader = sqlgetTapping.ExecuteReader
             If reader.HasRows Then
                 reader.Read()
-                If Not reader("MAX(dato)").GetType Is GetType(DBNull) Then
-                    returnstring = reader("MAX(dato)")
+                If Not reader("Dato").GetType Is GetType(DBNull) Then
+                    returnstring = reader("Dato")
                 End If
             End If
         Finally
@@ -452,7 +452,6 @@ Public Class SQL_hookup
             adapter.Fill(returntable)
             returnrow = returntable.Rows(0)
         Catch ex As MySqlException
-            MsgBox(ex)
         Finally
             connection.Close()
         End Try
@@ -489,7 +488,6 @@ Public Class SQL_hookup
             sqlendre.Parameters.AddWithValue("@bruker_id", bruker_id)
             sqlendre.ExecuteNonQuery()
         Catch ex As MySqlException
-            MsgBox(ex)
         Finally
             connection.Close()
         End Try
