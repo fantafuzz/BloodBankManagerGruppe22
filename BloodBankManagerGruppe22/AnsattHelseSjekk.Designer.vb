@@ -23,13 +23,13 @@ Partial Class AnsattHelseSjekk
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.gridBruker = New System.Windows.Forms.DataGridView()
-        Me.Logg_ut = New System.Windows.Forms.Button()
+        Me.btnTilbake = New System.Windows.Forms.Button()
         Me.tbSok = New System.Windows.Forms.TextBox()
         Me.btnSok = New System.Windows.Forms.Button()
         Me.rbGodkjent = New System.Windows.Forms.RadioButton()
         Me.rbIkkeGodkjent = New System.Windows.Forms.RadioButton()
         Me.PanelUtfor = New System.Windows.Forms.Panel()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.btnVelgNy = New System.Windows.Forms.Button()
         Me.ListView1 = New System.Windows.Forms.ListView()
         Me.tbEtternavn = New System.Windows.Forms.TextBox()
         Me.tbSisteE = New System.Windows.Forms.TextBox()
@@ -55,16 +55,16 @@ Partial Class AnsattHelseSjekk
         Me.gridBruker.Size = New System.Drawing.Size(761, 409)
         Me.gridBruker.TabIndex = 1
         '
-        'Logg_ut
+        'btnTilbake
         '
-        Me.Logg_ut.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Logg_ut.Location = New System.Drawing.Point(556, 503)
-        Me.Logg_ut.Margin = New System.Windows.Forms.Padding(2)
-        Me.Logg_ut.Name = "Logg_ut"
-        Me.Logg_ut.Size = New System.Drawing.Size(217, 47)
-        Me.Logg_ut.TabIndex = 33
-        Me.Logg_ut.Text = "Tilbake "
-        Me.Logg_ut.UseVisualStyleBackColor = True
+        Me.btnTilbake.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnTilbake.Location = New System.Drawing.Point(556, 503)
+        Me.btnTilbake.Margin = New System.Windows.Forms.Padding(2)
+        Me.btnTilbake.Name = "btnTilbake"
+        Me.btnTilbake.Size = New System.Drawing.Size(217, 47)
+        Me.btnTilbake.TabIndex = 33
+        Me.btnTilbake.Text = "Tilbake "
+        Me.btnTilbake.UseVisualStyleBackColor = True
         '
         'tbSok
         '
@@ -110,7 +110,7 @@ Partial Class AnsattHelseSjekk
         '
         'PanelUtfor
         '
-        Me.PanelUtfor.Controls.Add(Me.Button1)
+        Me.PanelUtfor.Controls.Add(Me.btnVelgNy)
         Me.PanelUtfor.Controls.Add(Me.ListView1)
         Me.PanelUtfor.Controls.Add(Me.tbEtternavn)
         Me.PanelUtfor.Controls.Add(Me.tbSisteE)
@@ -127,14 +127,14 @@ Partial Class AnsattHelseSjekk
         Me.PanelUtfor.TabIndex = 41
         Me.PanelUtfor.Visible = False
         '
-        'Button1
+        'btnVelgNy
         '
-        Me.Button1.Location = New System.Drawing.Point(6, 448)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(104, 23)
-        Me.Button1.TabIndex = 51
-        Me.Button1.Text = "Velg ny blodgiver"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.btnVelgNy.Location = New System.Drawing.Point(6, 448)
+        Me.btnVelgNy.Name = "btnVelgNy"
+        Me.btnVelgNy.Size = New System.Drawing.Size(104, 23)
+        Me.btnVelgNy.TabIndex = 51
+        Me.btnVelgNy.Text = "Velg ny blodgiver"
+        Me.btnVelgNy.UseVisualStyleBackColor = True
         '
         'ListView1
         '
@@ -232,7 +232,7 @@ Partial Class AnsattHelseSjekk
         Me.ClientSize = New System.Drawing.Size(784, 561)
         Me.Controls.Add(Me.PanelVelg)
         Me.Controls.Add(Me.PanelUtfor)
-        Me.Controls.Add(Me.Logg_ut)
+        Me.Controls.Add(Me.btnTilbake)
         Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "AnsattHelseSjekk"
         Me.Text = "AnsattHelseSjekk"
@@ -245,7 +245,7 @@ Partial Class AnsattHelseSjekk
 
     End Sub
     Friend WithEvents gridBruker As DataGridView
-    Friend WithEvents Logg_ut As Button
+    Friend WithEvents btnTilbake As Button
     Friend WithEvents tbSok As TextBox
     Friend WithEvents btnSok As Button
     Friend WithEvents rbGodkjent As RadioButton
@@ -261,5 +261,5 @@ Partial Class AnsattHelseSjekk
     Friend WithEvents btnVelg As Button
     Friend WithEvents PanelVelg As Panel
     Friend WithEvents ListView1 As ListView
-    Friend WithEvents Button1 As Button
+    Friend WithEvents btnVelgNy As Button
 End Class
