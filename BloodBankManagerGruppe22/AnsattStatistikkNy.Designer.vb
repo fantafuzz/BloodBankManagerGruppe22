@@ -22,11 +22,14 @@ Partial Class AnsattStatistikkNy
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim ChartArea1 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
+        Dim Legend1 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
+        Dim Series1 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(AnsattStatistikkNy))
         Me.Button_tilbake_fra_lab_svar = New System.Windows.Forms.Button()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.Label1 = New System.Windows.Forms.Label()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.chartStat = New System.Windows.Forms.DataVisualization.Charting.Chart()
+        CType(Me.chartStat, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Button_tilbake_fra_lab_svar
@@ -39,14 +42,6 @@ Partial Class AnsattStatistikkNy
         Me.Button_tilbake_fra_lab_svar.Text = "Tilbake"
         Me.Button_tilbake_fra_lab_svar.UseVisualStyleBackColor = True
         '
-        'DataGridView1
-        '
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(17, 62)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(684, 350)
-        Me.DataGridView1.TabIndex = 4
-        '
         'Label1
         '
         Me.Label1.AutoSize = True
@@ -57,14 +52,30 @@ Partial Class AnsattStatistikkNy
         Me.Label1.TabIndex = 5
         Me.Label1.Text = "Statistikk over antall blodgivere som har gitt blod de siste årene"
         '
+        'chartStat
+        '
+        ChartArea1.Name = "ChartArea1"
+        Me.chartStat.ChartAreas.Add(ChartArea1)
+        Legend1.Name = "Legend1"
+        Me.chartStat.Legends.Add(Legend1)
+        Me.chartStat.Location = New System.Drawing.Point(20, 50)
+        Me.chartStat.Name = "chartStat"
+        Series1.ChartArea = "ChartArea1"
+        Series1.Legend = "Legend1"
+        Series1.Name = "Series1"
+        Me.chartStat.Series.Add(Series1)
+        Me.chartStat.Size = New System.Drawing.Size(740, 374)
+        Me.chartStat.TabIndex = 6
+        Me.chartStat.Text = "Chart1"
+        '
         'AnsattStatistikkNy
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(96.0!, 96.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(1069, 570)
+        Me.Controls.Add(Me.chartStat)
         Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.Button_tilbake_fra_lab_svar)
         Me.Font = New System.Drawing.Font("Georgia", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
@@ -73,12 +84,12 @@ Partial Class AnsattStatistikkNy
         Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "AnsattStatistikkNy"
         Me.Text = "Blood Bank Administrator 2k17™ - xTreme Edition"
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.chartStat, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
     Friend WithEvents Button_tilbake_fra_lab_svar As Button
-    Friend WithEvents DataGridView1 As DataGridView
     Friend WithEvents Label1 As Label
+    Friend WithEvents chartStat As DataVisualization.Charting.Chart
 End Class

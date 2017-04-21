@@ -118,5 +118,6 @@ Public Class AnsattBlodProdukter
         pnlUtlever.Hide()
         pnlMottak.Hide()
         btnTilbakeSame.Hide()
+        btnTilbake.Show()
     End Sub
 End Class

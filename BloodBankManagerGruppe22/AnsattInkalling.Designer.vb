@@ -45,7 +45,10 @@ Partial Class AnsattInkalling
         '
         'GridBrukere
         '
+        Me.GridBrukere.AllowUserToAddRows = False
+        Me.GridBrukere.AllowUserToDeleteRows = False
         Me.GridBrukere.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.GridBrukere.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically
         Me.GridBrukere.Location = New System.Drawing.Point(12, 55)
         Me.GridBrukere.Margin = New System.Windows.Forms.Padding(2)
         Me.GridBrukere.Name = "GridBrukere"

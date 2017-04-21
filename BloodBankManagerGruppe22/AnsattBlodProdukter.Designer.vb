@@ -33,9 +33,9 @@ Partial Class AnsattBlodProdukter
         Me.pnlLager = New System.Windows.Forms.Panel()
         Me.pnlUtlever = New System.Windows.Forms.Panel()
         Me.pnlMottak = New System.Windows.Forms.Panel()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.tbMottak = New System.Windows.Forms.TextBox()
         Me.btnMottak = New System.Windows.Forms.Button()
+        Me.tbMottak = New System.Windows.Forms.TextBox()
+        Me.Label3 = New System.Windows.Forms.Label()
         Me.btnTilMottak = New System.Windows.Forms.Button()
         Me.btnTilUtlevering = New System.Windows.Forms.Button()
         Me.btnTilbakeSame = New System.Windows.Forms.Button()
@@ -81,8 +81,11 @@ Partial Class AnsattBlodProdukter
         '
         'dataGridProdukt
         '
+        Me.dataGridProdukt.AllowUserToAddRows = False
+        Me.dataGridProdukt.AllowUserToDeleteRows = False
         Me.dataGridProdukt.BackgroundColor = System.Drawing.SystemColors.ActiveCaption
         Me.dataGridProdukt.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dataGridProdukt.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically
         Me.dataGridProdukt.Location = New System.Drawing.Point(6, 23)
         Me.dataGridProdukt.Name = "dataGridProdukt"
         Me.dataGridProdukt.Size = New System.Drawing.Size(761, 383)
@@ -146,25 +149,6 @@ Partial Class AnsattBlodProdukter
         Me.pnlMottak.Size = New System.Drawing.Size(397, 133)
         Me.pnlMottak.TabIndex = 54
         '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Georgia", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(3, 3)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(270, 18)
-        Me.Label3.TabIndex = 52
-        Me.Label3.Text = "Hvor mange Ml har kommet inn"
-        '
-        'tbMottak
-        '
-        Me.tbMottak.Location = New System.Drawing.Point(6, 24)
-        Me.tbMottak.Margin = New System.Windows.Forms.Padding(2)
-        Me.tbMottak.Multiline = True
-        Me.tbMottak.Name = "tbMottak"
-        Me.tbMottak.Size = New System.Drawing.Size(260, 35)
-        Me.tbMottak.TabIndex = 52
-        '
         'btnMottak
         '
         Me.btnMottak.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -175,6 +159,25 @@ Partial Class AnsattBlodProdukter
         Me.btnMottak.TabIndex = 52
         Me.btnMottak.Text = "Registrer mottak"
         Me.btnMottak.UseVisualStyleBackColor = True
+        '
+        'tbMottak
+        '
+        Me.tbMottak.Location = New System.Drawing.Point(6, 24)
+        Me.tbMottak.Margin = New System.Windows.Forms.Padding(2)
+        Me.tbMottak.Multiline = True
+        Me.tbMottak.Name = "tbMottak"
+        Me.tbMottak.Size = New System.Drawing.Size(260, 35)
+        Me.tbMottak.TabIndex = 52
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Font = New System.Drawing.Font("Georgia", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Location = New System.Drawing.Point(3, 3)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(270, 18)
+        Me.Label3.TabIndex = 52
+        Me.Label3.Text = "Hvor mange Ml har kommet inn"
         '
         'btnTilMottak
         '

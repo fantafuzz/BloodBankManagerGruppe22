@@ -357,7 +357,7 @@ Public Class SQL_hookup
         Return returnstring
     End Function
 
-    Public Function getSisteEgenerklaering(ByVal bruker_id As Integer) As DataRow
+    Public Function getSisteEgenerklaering(ByVal bruker_id As Integer)
         Dim returnTable As New DataTable()
         Dim returnRow As DataRow
         Try
@@ -366,14 +366,13 @@ Public Class SQL_hookup
             sqlGet.Parameters.AddWithValue("@id", bruker_id)
             Dim adapter As New MySqlDataAdapter(sqlGet)
             adapter.Fill(returnTable)
-            returnRow = returnTable.Rows(0)
+            If returnTable IsNot Nothing AndAlso returnTable.Rows.Count > 0 Then
+                returnRow = returnTable.Rows(0)
+            End If
         Catch ex As MySqlException
         Finally
             connection.Close()
         End Try
-#Disable Warning BC42104 ' Variable is used before it has been assigned a value
-        Return returnRow
-#Enable Warning BC42104 ' Variable is used before it has been assigned a value
     End Function
 
     Public Function FilterData(ByVal valueToSearch As String) As DataTable

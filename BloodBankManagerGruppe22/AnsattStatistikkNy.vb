@@ -1,43 +1,24 @@
 ﻿Imports MySql.Data.MySqlClient
 Public Class AnsattStatistikkNy
-    Dim MysqlConn As MySqlConnection
-    Dim COMMAND As MySqlCommand
+    Dim sql As New SQL_hookup()
     Private Sub hvorMyeBlodGitt_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        MysqlConn = New MySqlConnection
-        MysqlConn.ConnectionString =
-            "Server=mysql.stud.iie.ntnu.no;Database=g_oops_22;Uid=g_oops_22;Pwd=BtUDpVoR"
+        Dim dSource As DataTable = sql.FilterData("")
+
+        Dim s As New DataVisualization.Charting.Series
+        s.ChartType = DataVisualization.Charting.SeriesChartType.Line
+        s.Points.AddXY(10, 10)
+        s.Points.AddXY(20, 20)
+        s.Points.AddXY(30, 10)
+
+        chartStat.Series.Add(s)
 
 
 
-
-        FilterData("")
-
-
-
-
-
-        Dim column1 As DataGridViewColumn = DataGridView1.Columns(0)
-        column1.Width = 255
-
-        Dim column2 As DataGridViewColumn = DataGridView1.Columns(1)
-        column2.Width = 255
-    End Sub
-    Public Sub FilterData(valueToSearch As String)
-
-
-
-
-        Dim searchQuery As String = "SELECT Year, Blodgivere FROM statistikk;"
-        Dim command As New MySqlCommand(searchQuery, MysqlConn)
-        Dim adapter As New MySqlDataAdapter(command)
-        Dim table As New DataTable()
-
-        adapter.Fill(table)
-
-        DataGridView1.DataSource = table
 
 
     End Sub
+
+
 
     Private Sub Button_tilbake_fra_lab_svar_Click(sender As Object, e As EventArgs) Handles Button_tilbake_fra_lab_svar.Click
         AnsattNavigasjon.Show()

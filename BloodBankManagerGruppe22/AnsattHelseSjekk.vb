@@ -46,10 +46,11 @@ Public Class AnsattHelseSjekk
             etternavn = gridBruker.CurrentRow.Cells("etternavn").Value
             personnummer = gridBruker.CurrentRow.Cells("personnummer").Value
             siste_egenerklaering = sql.getSisteEgenerklaering(bruker_id)
-            byttModus()
-            fyllInn()
-        Else
-            MsgBox("Velg blodgiveren du utfører helsesjekk på.")
+            If fyllInn() Then
+                byttModus()
+            Else
+                MsgBox("Velg blodgiveren du utfører helsesjekk på.")
+            End If
         End If
     End Sub
 
@@ -58,34 +59,39 @@ Public Class AnsattHelseSjekk
         PanelVelg.Visible = Not (PanelVelg.Visible)
     End Sub
 
-    Private Sub fyllInn() 'Fyller inn listview med alle spørsmål som bør forklares. Spørsmål som ikke følger standarden "ja = dårlig" eller "nei = bra" er hardkodet inn.
-        tbFornavn.Text = fornavn
-        tbEtternavn.Text = etternavn
-        tbSisteE.Text = siste_egenerklaering.Item("dato").ToString.Substring(0, 10)
-        ListView1.Clear()
-        ListView1.Columns.Add("Spørsmål", 700)
-        ListView1.Columns.Add("Svar", 50)
+    Private Function fyllInn() As Boolean 'Fyller inn listview med alle spørsmål som bør forklares. Spørsmål som ikke følger standarden "ja = dårlig" eller "nei = bra" er hardkodet inn.
+        Dim returnbool As Boolean = True
+        Try
+            tbFornavn.Text = fornavn
+            tbEtternavn.Text = etternavn
+            tbSisteE.Text = siste_egenerklaering.Item("dato").ToString.Substring(0, 10)
+            ListView1.Clear()
+            ListView1.Columns.Add("Spørsmål", 700)
+            ListView1.Columns.Add("Svar", 50)
 
-        For Each spmnr In spm.getListofSpmNr 'Går gjennom alle spørsmålsnummerene til spørsmålene som er lagt inn i sporsmal-klassen.
-            If spmnr Like "?_?" Then 'Vi er kun interesert i spørsmålene som har nummer som er formatert ?_?
-                If siste_egenerklaering.Item(spmnr) = True Then 'Sjekker om brukeren svarte ja på spørsmålet, i sin siste egenerklæring
-                    If spmnr <> "1_1" And spmnr <> "1_2" And spmnr <> "1_3" And spmnr <> "1_4" And spmnr <> "9_8" And spmnr <> "9_10" Then 'utelukker noen spørsmål som det ikke er et problem om de svarte ja på.
-                        Dim LVitem As ListViewItem = New ListViewItem(spm.getAnySpm(spmnr))
-                        LVitem.SubItems.Add("Ja")
-                        ListView1.Items.Add(LVitem)
-                    End If
-                ElseIf siste_egenerklaering.Item(spmnr) = False Then 'Om brukeren svarte nei på disse
-                    If spmnr = "1_3" Or spmnr = "1_4" Then 'Og det er et av disse spørsmålene, er det et problem.
-                        Dim LVitem As ListViewItem = New ListViewItem(spm.getAnySpm(spmnr))
-                        LVitem.SubItems.Add("Nei")
-                        ListView1.Items.Add(LVitem)
+            For Each spmnr In spm.getListofSpmNr 'Går gjennom alle spørsmålsnummerene til spørsmålene som er lagt inn i sporsmal-klassen.
+                If spmnr Like "?_?" Then 'Vi er kun interesert i spørsmålene som har nummer som er formatert ?_?
+                    If siste_egenerklaering.Item(spmnr) = True Then 'Sjekker om brukeren svarte ja på spørsmålet, i sin siste egenerklæring
+                        If spmnr <> "1_1" And spmnr <> "1_2" And spmnr <> "1_3" And spmnr <> "1_4" And spmnr <> "9_8" And spmnr <> "9_10" Then 'utelukker noen spørsmål som det ikke er et problem om de svarte ja på.
+                            Dim LVitem As ListViewItem = New ListViewItem(spm.getAnySpm(spmnr))
+                            LVitem.SubItems.Add("Ja")
+                            ListView1.Items.Add(LVitem)
+                        End If
+                    ElseIf siste_egenerklaering.Item(spmnr) = False Then 'Om brukeren svarte nei på disse
+                        If spmnr = "1_3" Or spmnr = "1_4" Then 'Og det er et av disse spørsmålene, er det et problem.
+                            Dim LVitem As ListViewItem = New ListViewItem(spm.getAnySpm(spmnr))
+                            LVitem.SubItems.Add("Nei")
+                            ListView1.Items.Add(LVitem)
+                        End If
                     End If
                 End If
-            End If
-        Next
-
-
-    End Sub
+            Next
+        Catch ex As Exception
+            MsgBox("Brukeren har ikke skrevet egenerklæring.")
+            returnbool = False
+        End Try
+        Return returnbool
+    End Function
 
     Private Sub ButtonVelgNy_Click(sender As Object, e As EventArgs) Handles btnVelgNy.Click
         byttModus()
