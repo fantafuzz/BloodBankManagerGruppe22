@@ -42,7 +42,7 @@ Partial Class BrukerLabSvar
         'Button_tilbake_fra_lab_svar
         '
         Me.Button_tilbake_fra_lab_svar.Font = New System.Drawing.Font("Georgia", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button_tilbake_fra_lab_svar.Location = New System.Drawing.Point(916, 661)
+        Me.Button_tilbake_fra_lab_svar.Location = New System.Drawing.Point(673, 507)
         Me.Button_tilbake_fra_lab_svar.Name = "Button_tilbake_fra_lab_svar"
         Me.Button_tilbake_fra_lab_svar.Size = New System.Drawing.Size(99, 43)
         Me.Button_tilbake_fra_lab_svar.TabIndex = 2
@@ -51,10 +51,13 @@ Partial Class BrukerLabSvar
         '
         'GridSvar
         '
+        Me.GridSvar.AllowUserToAddRows = False
+        Me.GridSvar.AllowUserToDeleteRows = False
         Me.GridSvar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.GridSvar.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically
         Me.GridSvar.Location = New System.Drawing.Point(12, 43)
         Me.GridSvar.Name = "GridSvar"
-        Me.GridSvar.Size = New System.Drawing.Size(898, 661)
+        Me.GridSvar.Size = New System.Drawing.Size(760, 458)
         Me.GridSvar.TabIndex = 3
         '
         'BrukerLabSvar
@@ -62,7 +65,7 @@ Partial Class BrukerLabSvar
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 14.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(1037, 716)
+        Me.ClientSize = New System.Drawing.Size(784, 562)
         Me.Controls.Add(Me.GridSvar)
         Me.Controls.Add(Me.Button_tilbake_fra_lab_svar)
         Me.Controls.Add(Me.Label1)
@@ -72,6 +75,7 @@ Partial Class BrukerLabSvar
         Me.Location = New System.Drawing.Point(100, 100)
         Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Name = "BrukerLabSvar"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Blood Bank Administrator 2k17™ - xTreme Edition"
         CType(Me.GridSvar, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)

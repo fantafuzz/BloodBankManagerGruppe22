@@ -64,7 +64,10 @@ Partial Class AnsattTapping
         '
         'GridBruker
         '
+        Me.GridBruker.AllowUserToAddRows = False
+        Me.GridBruker.AllowUserToDeleteRows = False
         Me.GridBruker.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.GridBruker.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically
         Me.GridBruker.Location = New System.Drawing.Point(15, 58)
         Me.GridBruker.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.GridBruker.Name = "GridBruker"
@@ -100,7 +103,7 @@ Partial Class AnsattTapping
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(784, 561)
+        Me.ClientSize = New System.Drawing.Size(784, 562)
         Me.Controls.Add(Me.btnTilbake)
         Me.Controls.Add(Me.chkBlod)
         Me.Controls.Add(Me.GridBruker)
@@ -111,6 +114,7 @@ Partial Class AnsattTapping
         Me.Location = New System.Drawing.Point(100, 100)
         Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Name = "AnsattTapping"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "AnsattTapping"
         CType(Me.GridBruker, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)

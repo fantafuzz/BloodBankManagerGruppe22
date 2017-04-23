@@ -56,7 +56,7 @@ Partial Class BrukerMinSide
         'Logg_ut
         '
         Me.Logg_ut.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Logg_ut.Location = New System.Drawing.Point(761, 512)
+        Me.Logg_ut.Location = New System.Drawing.Point(685, 519)
         Me.Logg_ut.Margin = New System.Windows.Forms.Padding(2)
         Me.Logg_ut.Name = "Logg_ut"
         Me.Logg_ut.Size = New System.Drawing.Size(88, 32)
@@ -102,7 +102,7 @@ Partial Class BrukerMinSide
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(859, 554)
+        Me.ClientSize = New System.Drawing.Size(784, 562)
         Me.Controls.Add(Me.ButtonEgenerklering)
         Me.Controls.Add(Me.ButtonLabSvar)
         Me.Controls.Add(Me.Logg_ut)
@@ -115,6 +115,7 @@ Partial Class BrukerMinSide
         Me.Location = New System.Drawing.Point(100, 100)
         Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "BrukerMinSide"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Blood Bank Administrator 2k17™ - xTreme Edition"
         Me.ResumeLayout(False)
         Me.PerformLayout()

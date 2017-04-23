@@ -47,7 +47,10 @@ Partial Class AnsattHelseSjekk
         '
         'gridBruker
         '
+        Me.gridBruker.AllowUserToAddRows = False
+        Me.gridBruker.AllowUserToDeleteRows = False
         Me.gridBruker.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.gridBruker.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically
         Me.gridBruker.Location = New System.Drawing.Point(3, 46)
         Me.gridBruker.Margin = New System.Windows.Forms.Padding(2)
         Me.gridBruker.Name = "gridBruker"
@@ -229,12 +232,13 @@ Partial Class AnsattHelseSjekk
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(784, 561)
+        Me.ClientSize = New System.Drawing.Size(784, 562)
         Me.Controls.Add(Me.PanelVelg)
         Me.Controls.Add(Me.PanelUtfor)
         Me.Controls.Add(Me.btnTilbake)
         Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "AnsattHelseSjekk"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "AnsattHelseSjekk"
         CType(Me.gridBruker, System.ComponentModel.ISupportInitialize).EndInit()
         Me.PanelUtfor.ResumeLayout(False)

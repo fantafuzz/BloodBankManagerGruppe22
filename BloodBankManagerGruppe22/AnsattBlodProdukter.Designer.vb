@@ -226,7 +226,7 @@ Partial Class AnsattBlodProdukter
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 14.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(784, 561)
+        Me.ClientSize = New System.Drawing.Size(784, 562)
         Me.Controls.Add(Me.pnlNav)
         Me.Controls.Add(Me.btnTilbakeSame)
         Me.Controls.Add(Me.pnlUtlever)
@@ -238,6 +238,7 @@ Partial Class AnsattBlodProdukter
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Location = New System.Drawing.Point(100, 100)
         Me.Name = "AnsattBlodProdukter"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Blood Bank Administrator 2k17™ - xTreme Edition"
         CType(Me.dataGridProdukt, System.ComponentModel.ISupportInitialize).EndInit()
         Me.pnlLager.ResumeLayout(False)

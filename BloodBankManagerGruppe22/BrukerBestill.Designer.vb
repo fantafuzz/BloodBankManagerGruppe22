@@ -59,7 +59,7 @@ Partial Class BrukerBestill
         'btnTilbake
         '
         Me.btnTilbake.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnTilbake.Location = New System.Drawing.Point(850, 519)
+        Me.btnTilbake.Location = New System.Drawing.Point(570, 507)
         Me.btnTilbake.Name = "btnTilbake"
         Me.btnTilbake.Size = New System.Drawing.Size(138, 31)
         Me.btnTilbake.TabIndex = 33
@@ -71,7 +71,7 @@ Partial Class BrukerBestill
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 14.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(1000, 562)
+        Me.ClientSize = New System.Drawing.Size(784, 562)
         Me.Controls.Add(Me.btnTilbake)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.kalender1)
@@ -82,6 +82,7 @@ Partial Class BrukerBestill
         Me.Location = New System.Drawing.Point(100, 100)
         Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "BrukerBestill"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Blood Bank Administrator 2k17™ - xTreme Edition"
         Me.ResumeLayout(False)
         Me.PerformLayout()

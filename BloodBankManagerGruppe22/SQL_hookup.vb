@@ -121,6 +121,29 @@ Public Class SQL_hookup
     End Function
 #Enable Warning BC42105 ' Function doesn't return a value on all code paths
 
+    Public Sub registrerAnsatt(ByVal fornavn As String, ByVal etternavn As String, ByVal epost As String, ByVal passord As String, ByVal ansatttype As Integer)
+        Dim hashedPassord = hash(passord, salt)
+        Try
+            connection.Open()
+            Dim sqlAddBruker As New MySqlCommand("INSERT INTO bruker (fornavn, etternavn, epost, passord) VALUES (@fornavn, @etternavn, @epost, @passord)", connection)
+            sqlAddBruker.Parameters.AddWithValue("@fornavn", fornavn)
+            sqlAddBruker.Parameters.AddWithValue("@etternavn", etternavn)
+            sqlAddBruker.Parameters.AddWithValue("@epost", epost)
+            sqlAddBruker.Parameters.AddWithValue("@passord", hashedPassord)
+            sqlAddBruker.ExecuteNonQuery()
+
+            Dim sqlAddAnsatt As New MySqlCommand("INSERT INTO ansatt (ansatt_type, ansatt_bruker_id) VALUES (@ansatt_type, (SELECT MAX(bruker_id) FROM bruker WHERE fornavn = @fornavn AND etternavn = @etternavn AND epost = @epost))", connection)
+            sqlAddAnsatt.Parameters.AddWithValue("@fornavn", fornavn)
+            sqlAddAnsatt.Parameters.AddWithValue("@etternavn", etternavn)
+            sqlAddAnsatt.Parameters.AddWithValue("@epost", epost)
+            sqlAddAnsatt.Parameters.AddWithValue("@ansatt_type", ansatttype)
+            sqlAddAnsatt.ExecuteNonQuery()
+        Catch ex As mysqlException
+        Finally
+            connection.Close()
+        End Try
+    End Sub
+
     Public Sub registrerNy(ByVal fornavn As String, ByVal etternavn As String, ByVal epost As String, ByVal passord As String, ByVal fodselsdato As String, ByVal personnummer As String, ByVal adresse As String, ByVal postnummer As Integer, ByVal poststed As String, ByVal telefonnummerEn As String, ByVal telefonnummerTo As String, ByVal kjonn As String, ByVal blodtype As Integer, ByVal blodgivningLokasjon As String, ByVal blodbefore As Boolean, ByVal hvilkenBlodbank As String, ByVal samtykke As Boolean, ByVal infoRodekors As Boolean)
         Dim hashedPassord = hash(passord, salt)
 
@@ -458,6 +481,65 @@ Public Class SQL_hookup
         Return returnrow
 #Enable Warning BC42104 ' Variable is used before it has been assigned a value
     End Function
+
+    Public Function getAntallTapp() As DataTable
+        Dim returntable As New DataTable
+        Try
+            connection.Open()
+            Dim sqlgetTapp As New MySqlCommand("SELECT dato, count(endring_id) AS 'Antall tappinger' FROM blodbeholdning_endring WHERE endring_aarsak = 'Blodtapping' GROUP BY dato ORDER BY dato DESC", connection)
+            Dim adapter As New MySqlDataAdapter(sqlgetTapp)
+            adapter.Fill(returntable)
+        Catch ex As MySqlException
+        Finally
+            connection.Close()
+        End Try
+        Return returntable
+    End Function
+
+    Public Function getTappByBlodgiver() As DataTable
+        Dim returntable As New DataTable
+        Try
+            connection.Open()
+            Dim sqlGetByBlodgiver As New MySqlCommand("SELECT tapping_bruker_id AS 'Bruker ID', COUNT(tapping_bruker_id) AS 'Antall tappinger' FROM blodtapping GROUP BY tapping_bruker_id", connection)
+            Dim adapter As New MySqlDataAdapter(sqlGetByBlodgiver)
+            adapter.Fill(returntable)
+        Catch ex As mysqlException
+        Finally
+            connection.Close()
+        End Try
+        Return returntable
+    End Function
+
+    Public Function getAnsatte(ByVal valueToSearch As String) As DataTable
+        Dim returntable As New DataTable
+        Dim value As String = "%" & valueToSearch & "%"
+        Try
+            connection.Open()
+            Dim sqlgetAnsatte As New MySqlCommand("SELECT bruker.bruker_id, bruker.fornavn, bruker.etternavn, ansatt.ansatt_type FROM bruker, ansatt WHERE bruker.bruker_id = ansatt.ansatt_bruker_id AND CONCAT(bruker.fornavn, bruker.etternavn, bruker.epost) LIKE @value;", connection)
+            sqlgetAnsatte.Parameters.AddWithValue("@value", value)
+            Dim adapter As New MySqlDataAdapter(sqlgetAnsatte)
+            adapter.Fill(returntable)
+        Catch ex As MySqlException
+        Finally
+            connection.Close()
+        End Try
+
+        Return returntable
+
+    End Function
+    'DELETE FROM ansatt WHERE ansatt_bruker_id = 1; DELETE FROM bruker WHERE bruker_id = 1;
+
+    Public Sub fjernAnsatt(ByVal bruker_id As Integer)
+        Try
+            connection.Open()
+            Dim sqlFjernAnsatt As New MySqlCommand("DELETE FROM ansatt WHERE ansatt_bruker_id = @bruker_id; DELETE FROM bruker WHERE bruker_id = @bruker_id;", connection)
+            sqlFjernAnsatt.Parameters.AddWithValue("bruker_id", bruker_id)
+            sqlFjernAnsatt.ExecuteNonQuery()
+        Catch ex As mysqlException
+        Finally
+            connection.Close()
+        End Try
+    End Sub
     Public Sub endreSingleBruker(ByVal bruker_id As Integer, ByVal field As String, ByVal value As String)
         Try
             connection.Open()

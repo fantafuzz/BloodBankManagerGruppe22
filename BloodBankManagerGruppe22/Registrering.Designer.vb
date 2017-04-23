@@ -94,9 +94,9 @@ Partial Class Registrering
         '
         Me.ComboBoxLok.FormattingEnabled = True
         Me.ComboBoxLok.Items.AddRange(New Object() {"St. Olavs Hospital Orkdal", "St. Olavs Hospital Trondheim"})
-        Me.ComboBoxLok.Location = New System.Drawing.Point(138, 24)
+        Me.ComboBoxLok.Location = New System.Drawing.Point(132, 24)
         Me.ComboBoxLok.Name = "ComboBoxLok"
-        Me.ComboBoxLok.Size = New System.Drawing.Size(206, 21)
+        Me.ComboBoxLok.Size = New System.Drawing.Size(198, 21)
         Me.ComboBoxLok.TabIndex = 2
         '
         'Label2
@@ -261,9 +261,9 @@ Partial Class Registrering
         'TextBoxPrevBank
         '
         Me.TextBoxPrevBank.Enabled = False
-        Me.TextBoxPrevBank.Location = New System.Drawing.Point(138, 145)
+        Me.TextBoxPrevBank.Location = New System.Drawing.Point(95, 145)
         Me.TextBoxPrevBank.Name = "TextBoxPrevBank"
-        Me.TextBoxPrevBank.Size = New System.Drawing.Size(249, 20)
+        Me.TextBoxPrevBank.Size = New System.Drawing.Size(240, 20)
         Me.TextBoxPrevBank.TabIndex = 24
         '
         'Label12
@@ -280,7 +280,7 @@ Partial Class Registrering
         Me.CheckBoxPrevGet.Enabled = False
         Me.CheckBoxPrevGet.Location = New System.Drawing.Point(6, 173)
         Me.CheckBoxPrevGet.Name = "CheckBoxPrevGet"
-        Me.CheckBoxPrevGet.Size = New System.Drawing.Size(381, 32)
+        Me.CheckBoxPrevGet.Size = New System.Drawing.Size(324, 32)
         Me.CheckBoxPrevGet.TabIndex = 25
         Me.CheckBoxPrevGet.Text = "Jeg samtykker i at blodbanken kan hendvende seg til min tidligere blodbank for å " &
     "innhente opplysninger."
@@ -288,10 +288,9 @@ Partial Class Registrering
         '
         'Label13
         '
-        Me.Label13.AutoSize = True
-        Me.Label13.Location = New System.Drawing.Point(9, 64)
+        Me.Label13.Location = New System.Drawing.Point(5, 68)
         Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(363, 13)
+        Me.Label13.Size = New System.Drawing.Size(301, 61)
         Me.Label13.TabIndex = 26
         Me.Label13.Text = "Har du spørsmål av medisinsk karakter, ta direkte kontakt med blodbanken."
         '
@@ -307,7 +306,7 @@ Partial Class Registrering
         '
         'ButtonSend
         '
-        Me.ButtonSend.Location = New System.Drawing.Point(910, 561)
+        Me.ButtonSend.Location = New System.Drawing.Point(697, 527)
         Me.ButtonSend.Name = "ButtonSend"
         Me.ButtonSend.Size = New System.Drawing.Size(75, 23)
         Me.ButtonSend.TabIndex = 28
@@ -319,7 +318,7 @@ Partial Class Registrering
         Me.Label14.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label14.Location = New System.Drawing.Point(5, 6)
         Me.Label14.Name = "Label14"
-        Me.Label14.Size = New System.Drawing.Size(389, 71)
+        Me.Label14.Size = New System.Drawing.Size(325, 58)
         Me.Label14.TabIndex = 29
         Me.Label14.Text = "Ved å sende inn dette skjema samtykker jeg i at BloodBank Manager kan lagre min i" &
     "nformasjon i 3 måneder og at min blodbank registerer meg i sitt system."
@@ -352,7 +351,7 @@ Partial Class Registrering
         '
         Me.ComboBoxBlodType.FormattingEnabled = True
         Me.ComboBoxBlodType.Items.AddRange(New Object() {"A+", "O+", "B+", "AB+", "A-", "O-", "B-", "AB-"})
-        Me.ComboBoxBlodType.Location = New System.Drawing.Point(138, 64)
+        Me.ComboBoxBlodType.Location = New System.Drawing.Point(133, 64)
         Me.ComboBoxBlodType.Name = "ComboBoxBlodType"
         Me.ComboBoxBlodType.Size = New System.Drawing.Size(121, 21)
         Me.ComboBoxBlodType.TabIndex = 36
@@ -386,14 +385,14 @@ Partial Class Registrering
         Me.Panel1.Controls.Add(Me.TextBoxPersonNum)
         Me.Panel1.Location = New System.Drawing.Point(12, 12)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(484, 283)
+        Me.Panel1.Size = New System.Drawing.Size(411, 283)
         Me.Panel1.TabIndex = 40
         '
         'LabelFeilPerson
         '
         Me.LabelFeilPerson.AutoSize = True
         Me.LabelFeilPerson.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LabelFeilPerson.Location = New System.Drawing.Point(297, 259)
+        Me.LabelFeilPerson.Location = New System.Drawing.Point(227, 259)
         Me.LabelFeilPerson.Name = "LabelFeilPerson"
         Me.LabelFeilPerson.Size = New System.Drawing.Size(180, 20)
         Me.LabelFeilPerson.TabIndex = 42
@@ -446,14 +445,14 @@ Partial Class Registrering
         Me.Panel2.Controls.Add(Me.Label10)
         Me.Panel2.Location = New System.Drawing.Point(12, 301)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(484, 283)
+        Me.Panel2.Size = New System.Drawing.Size(411, 252)
         Me.Panel2.TabIndex = 41
         '
         'LabelFeilKontakt
         '
         Me.LabelFeilKontakt.AutoSize = True
         Me.LabelFeilKontakt.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LabelFeilKontakt.Location = New System.Drawing.Point(297, 258)
+        Me.LabelFeilKontakt.Location = New System.Drawing.Point(224, 204)
         Me.LabelFeilKontakt.Name = "LabelFeilKontakt"
         Me.LabelFeilKontakt.Size = New System.Drawing.Size(180, 20)
         Me.LabelFeilKontakt.TabIndex = 43
@@ -482,16 +481,16 @@ Partial Class Registrering
         Me.Panel3.Controls.Add(Me.Label12)
         Me.Panel3.Controls.Add(Me.TextBoxPrevBank)
         Me.Panel3.Controls.Add(Me.CheckBoxPrevGet)
-        Me.Panel3.Location = New System.Drawing.Point(501, 12)
+        Me.Panel3.Location = New System.Drawing.Point(430, 12)
         Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(484, 283)
+        Me.Panel3.Size = New System.Drawing.Size(342, 283)
         Me.Panel3.TabIndex = 42
         '
         'LabelFeilBlod
         '
         Me.LabelFeilBlod.AutoSize = True
         Me.LabelFeilBlod.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LabelFeilBlod.Location = New System.Drawing.Point(297, 259)
+        Me.LabelFeilBlod.Location = New System.Drawing.Point(155, 247)
         Me.LabelFeilBlod.Name = "LabelFeilBlod"
         Me.LabelFeilBlod.Size = New System.Drawing.Size(180, 20)
         Me.LabelFeilBlod.TabIndex = 44
@@ -512,9 +511,9 @@ Partial Class Registrering
         Me.Panel4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.Panel4.Controls.Add(Me.Label14)
         Me.Panel4.Controls.Add(Me.Label13)
-        Me.Panel4.Location = New System.Drawing.Point(501, 301)
+        Me.Panel4.Location = New System.Drawing.Point(430, 301)
         Me.Panel4.Name = "Panel4"
-        Me.Panel4.Size = New System.Drawing.Size(484, 252)
+        Me.Panel4.Size = New System.Drawing.Size(342, 220)
         Me.Panel4.TabIndex = 43
         '
         'Registrering
@@ -522,7 +521,7 @@ Partial Class Registrering
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(997, 596)
+        Me.ClientSize = New System.Drawing.Size(784, 562)
         Me.Controls.Add(Me.Panel4)
         Me.Controls.Add(Me.Panel3)
         Me.Controls.Add(Me.Panel1)
@@ -533,6 +532,7 @@ Partial Class Registrering
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Location = New System.Drawing.Point(100, 100)
         Me.Name = "Registrering"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Blood Bank Administrator 2k17™ - xTreme Edition"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
@@ -541,7 +541,6 @@ Partial Class Registrering
         Me.Panel3.ResumeLayout(False)
         Me.Panel3.PerformLayout()
         Me.Panel4.ResumeLayout(False)
-        Me.Panel4.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub

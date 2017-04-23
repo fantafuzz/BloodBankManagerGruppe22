@@ -51,7 +51,16 @@
         'her viderekobler man seg til ansatt helsesjekk form og avslutter ansatt navigasjon form
     End Sub
 
-    Private Sub AnsattNavigasjon_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+    Private Sub Button1_Click_1(sender As Object, e As EventArgs) Handles btnAdmin.Click
+        Me.Hide()
+        AdminPanel.Show()
+    End Sub
 
+    Private Sub AnsattNavigasjon_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        If Logginn.currentuserType = 0 Then
+            btnAdmin.Hide()
+        ElseIf Logginn.currentusertype = 1 Then
+            btnAdmin.Show()
+        End If
     End Sub
 End Class

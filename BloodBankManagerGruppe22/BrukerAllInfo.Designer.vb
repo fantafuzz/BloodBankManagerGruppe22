@@ -267,7 +267,7 @@ Partial Class BrukerAllInfo
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(718, 442)
+        Me.Button1.Location = New System.Drawing.Point(697, 527)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(75, 23)
         Me.Button1.TabIndex = 62
@@ -296,7 +296,7 @@ Partial Class BrukerAllInfo
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 14.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(805, 477)
+        Me.ClientSize = New System.Drawing.Size(784, 562)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.btnEndreEpost)
@@ -328,6 +328,7 @@ Partial Class BrukerAllInfo
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Location = New System.Drawing.Point(100, 100)
         Me.Name = "BrukerAllInfo"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Blood Bank Administrator 2k17™ - xTreme Edition"
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel1.ResumeLayout(False)

@@ -119,6 +119,7 @@ Partial Class AnsattInkalling
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Location = New System.Drawing.Point(100, 100)
         Me.Name = "AnsattInkalling"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Blood Bank Administrator 2k17™ - xTreme Edition"
         CType(Me.GridBrukere, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
